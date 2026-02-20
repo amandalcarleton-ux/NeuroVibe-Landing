@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroVibe – Support for Neurodivergent Parenting</title>
+    <!-- Import a friendly sans‑serif typeface for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome icons for section illustrations and UI elements -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-6z6nLW2KvV1kqFIhzQNJGjKWEO9oxF+4jMrRc7VwFGSwE5h6JOOuZ0bgPLhOS2YqMGDHOaJ1O5HmZc+7tkRizg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Site styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="light">
+    <!-- Header with brand, banner and dark mode toggle -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="https://neurodivergentparentingwarriors.blogspot.com" class="brand">
+                <!-- Use the uploaded logo filename; spaces must be encoded with %20 -->
+                <img src="Untitled%20design.PNG" alt="NeuroVibe logo" class="logo">
+                <span class="brand-name">NeuroVibe</span>
+            </a>
+            <button id="theme-toggle" aria-label="Toggle dark mode" class="theme-toggle">
+                <i class="fa-solid fa-sun"></i>
+            </button>
+        </div>
+        <!-- Optional banner with a tagline and navigation links -->
+        <div class="header-banner">
+            <h2>Supporting Neurodivergent Parents Everywhere</h2>
+            <nav class="main-nav">
+                <a href="#features">Highlights</a>
+                <a href="#join">Join Us</a>
+                <a href="https://neurodivergentparentingwarriors.blogspot.com">Blog</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <h1>Welcome to <span class="highlight">NeuroVibe</span></h1>
+                <p class="tagline">Empowering and uplifting neurodivergent parents through shared stories, guides and community.</p>
+                <!-- Primary call‑to‑action button linking to the community blog -->
+                <a href="https://neurodivergentparentingwarriors.blogspot.com" class="cta-button">Visit the Blog</a>
+                <!-- Secondary call‑to‑action directing visitors to the user's “link in bio” Beacons page. Using the same button styling keeps the layout cohesive. -->
+                <a href="https://beacons.ai/npwbyvibingthroughart" class="cta-button" target="_blank" rel="noopener">Find me everywhere</a>
+            </div>
+            <div class="hero-image">
+                <!-- Use the same logo image in the hero section -->
+                <img src="Untitled%20design.PNG" alt="NeuroVibe decorative logo with abstract shapes">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features section -->
+    <section class="features" id="features">
+        <div class="container features-inner">
+            <h2 class="section-title">Discover our highlights</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fa-solid fa-users feature-icon"></i>
+                    <h3>Community Support</h3>
+                    <p>Connect with other neurodivergent parents, share experiences and find solidarity in our growing community.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-book-open feature-icon"></i>
+                    <h3>Guides & Resources</h3>
+                    <p>Explore practical guides, curated articles and expert insights to help navigate parenting with confidence.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fa-solid fa-heart feature-icon"></i>
+                    <h3>Personal Stories</h3>
+                    <p>Read heartfelt stories from fellow parents, celebrating diverse experiences and the strength of neurodivergent families.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action section -->
+    <section class="cta-section" id="join">
+        <div class="container cta-inner">
+            <h2>Join our vibrant community</h2>
+            <p>Stay up‑to‑date with new posts and resources by visiting our blog and becoming part of the NeuroVibe family.</p>
+            <a href="https://neurodivergentparentingwarriors.blogspot.com" class="cta-button large">Explore the Blog</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 NeuroVibe. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://neurodivergentparentingwarriors.blogspot.com" aria-label="Visit blog">
+                    <i class="fa-solid fa-blog"></i>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to toggle between light and dark mode
+        const toggleBtn = document.getElementById('theme-toggle');
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        // Load stored theme preference or system preference
+        let currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
+        document.body.setAttribute('data-theme', currentTheme);
+        updateToggleIcon(currentTheme);
+
+        function updateToggleIcon(theme) {
+            const icon = toggleBtn.querySelector('i');
+            if (theme === 'dark') {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            const current = document.body.getAttribute('data-theme');
+            const newTheme = current === 'dark' ? 'light' : 'dark';
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateToggleIcon(newTheme);
+        });
+    </script>
+</body>
+</html>

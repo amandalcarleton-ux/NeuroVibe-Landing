@@ -188,6 +188,11 @@ a {
     transform: translateY(-2px);
 }
 
+/* When multiple CTA buttons appear adjacent (e.g., in the hero section), add a small gap between them */
+.cta-button + .cta-button {
+    margin-left: 0.75rem;
+}
+
 /* For large call‑to‑action variant */
 .cta-button.large {
     font-size: 1.1rem;

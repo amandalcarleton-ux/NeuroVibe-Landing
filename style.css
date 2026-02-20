@@ -313,6 +313,38 @@ a {
     color: var(--color-green);
 }
 
+/* Header banner styles */
+.header-banner {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.header-banner h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.main-nav {
+    margin-top: 0.4rem;
+}
+
+.main-nav a {
+    margin: 0 0.75rem;
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--color-yellow);
+    text-decoration: underline;
+}
+
 /* Responsive tweaks */
 @media (max-width: 768px) {
     .hero-content h1 {
@@ -341,31 +373,4 @@ a {
     .theme-toggle {
         align-self: flex-end;
     }
-}/* Header banner styles */
-.header-banner {
-    background-color: var(--color-orange);
-    color: var(--color-white);
-    padding: 0.5rem 1rem;
-    text-align: center;
-}
-
-.header-banner h2 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 400;
-}
-
-.main-nav {
-    margin-top: 0.5rem;
-}
-
-.main-nav a {
-    margin: 0 0.5rem;
-    color: var(--color-white);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.main-nav a:hover {
-    text-decoration: underline;
 }

@@ -67,6 +67,18 @@ body {
     color: var(--text-dark);
 }
 
+/* Header image styling */
+.image-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-header {
+    margin: 0;
+    /* ensures the header image sits flush with adjacent sections */
+}
+
 /* Hero section */
 .hero {
     display: flex;

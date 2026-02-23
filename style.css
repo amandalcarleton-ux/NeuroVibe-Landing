@@ -183,10 +183,9 @@ body {
 }
 
 .hero-left {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: var(--hero-min-height); /* prevents collapse */
+  min-height: 620px; /* was 520px */
+  background-position: center 20%;
+}
 
   background-image:
     linear-gradient(90deg, rgba(0,0,0,0.20), rgba(0,0,0,0.05)),

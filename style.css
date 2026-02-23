@@ -1,35 +1,50 @@
 /*
- * New template styling for NeuroVibe
- *
- * This stylesheet defines a bold, modern colour palette inspired by the provided design
- * and implements a responsive layout for the navigation and hero section.
+ * NeuroVibe — Modern Responsive Template
+ * Fixes oversized header/hero on desktop + keeps mobile clean.
  */
 
 :root {
-    /* Primary brand colours */
-    --purple: #6b5cff;
-    --purple-dark: #513cbc;
-    --green: #b2fa70;
-    --text-dark: #000000;
-    --text-light: #ffffff;
-    /* Gradients for the hero columns */
-    --gradient-left: linear-gradient(135deg, #6b5cff, #a288f7);
-    --gradient-right: linear-gradient(135deg, #7ed6df, #22a6b3);
+  /* Brand colors */
+  --purple: #6b5cff;
+  --purple-dark: #513cbc;
+  --green: #b2fa70;
+  --text-dark: #000000;
+  --text-light: #ffffff;
+
+  /* Hero gradients */
+  --gradient-left: linear-gradient(135deg, #6b5cff, #a288f7);
+  --gradient-right: linear-gradient(135deg, #7ed6df, #22a6b3);
+
+  /* Hero sizing controls */
+  --hero-min-height: 520px;
+  --hero-max-height: 760px;
+  --hero-desktop-vh: 68vh;
+
+  /* Container width */
+  --container: 1200px;
 }
 
-/* Reset and base styles */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fdfdfd;
-    color: var(--text-dark);
-    line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdfd;
+  color: var(--text-dark);
+  line-height: 1.6;
 }
+
+/* -----------------------------------
+   Twitch spot section
+----------------------------------- */
 .twitch-spot {
   text-align: center;
   padding: 40px 20px;
@@ -66,164 +81,263 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-/* Navigation bar styling */
+
+/* -----------------------------------
+   Navigation
+----------------------------------- */
 .navbar {
-    background-color: var(--purple-dark);
-    padding: 0.5rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: var(--purple-dark);
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .nav-item {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--text-dark);
-    background-color: var(--text-light);
-    border: 2px solid var(--text-dark);
-    border-radius: 0.4rem;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-decoration: none;
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.55rem 1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background-color: var(--text-light);
+  border: 2px solid var(--text-dark);
+  border-radius: 0.45rem;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  text-decoration: none;
 }
 
 .nav-item:hover {
-    background-color: var(--green);
-    color: var(--text-dark);
+  background-color: var(--green);
+  color: var(--text-dark);
+  transform: translateY(-1px);
 }
-/* LiveGood gradient CTA */
-CTA */
+
+/* -----------------------------------
+   LiveGood CTA Button (FIXED)
+----------------------------------- */
+.livegood-button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--text-dark);
+  border: 2px solid rgba(0,0,0,0.9);
+  background: linear-gradient(135deg, #b2fa70, #7ed6df);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
 
 .livegood-button:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+  filter: brightness(1.03);
 }
 
 .livegood-button:active {
   transform: translateY(0) scale(0.98);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
-/* Header image styling */
-.image-header img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
 
+/* -----------------------------------
+   Header Image (if you use .image-header)
+   This prevents "too big" by forcing a banner ratio.
+----------------------------------- */
 .image-header {
-    margin: 0;
-    /* ensures the header image sits flush with adjacent sections */
+  width: 100%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Hero section */
+/* If your header is an <img> tag, this keeps it banner-shaped */
+.image-header img {
+  width: 100%;
+  height: clamp(220px, 38vw, 420px); /* responsive banner height */
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
+
+/* -----------------------------------
+   HERO SECTION (Responsive + not oversized)
+   Two-column hybrid style:
+   Left = image/visual
+   Right = copy + CTA
+----------------------------------- */
 .hero {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  /* This is the KEY to stopping the “giant hero” issue */
+  min-height: var(--hero-min-height);
+  height: var(--hero-desktop-vh);
+  max-height: var(--hero-max-height);
 }
 
+/* LEFT: Use your image here as a background */
+/* Replace the URL below with your hero image path */
 .hero-left {
-    flex: 1 1 50%;
-    background: var(--gradient-left);
-    /* To replace with a custom image, uncomment the next line and set your image URL */
-    /* background-image: url('path/to/your/image.jpg'); */
-    background-size: cover;
-    background-position: center;
+  flex: 1 1 50%;
+  position: relative;
+
+  background-image:
+    linear-gradient(90deg, rgba(0,0,0,0.20), rgba(0,0,0,0.05)),
+    url('8BC3B611-6C27-4AE0-A981-C7C6906A0D25.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 35%;
 }
 
+/* OPTIONAL: If you want a softer edge fade into the right column */
+.hero-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.18));
+  pointer-events: none;
+}
+
+/* RIGHT: Your content column */
 .hero-right {
-    flex: 1 1 50%;
-    background: var(--gradient-right);
-    padding: 2rem 2.5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  flex: 1 1 50%;
+  background: var(--gradient-right);
+  padding: 2.25rem 2.5rem;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
 }
 
+/* Brand label top-right */
 .hero-brand {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-weight: 700;
-    font-size: 1.1rem;
-    text-transform: uppercase;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .hero-brand a {
-    color: var(--text-dark);
-    text-decoration: none;
+  color: var(--text-dark);
+  text-decoration: none;
 }
 
 .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    line-height: 1.2;
+  font-size: 2.1rem;
+  margin-bottom: 0.35rem;
+  font-weight: 800;
+  line-height: 1.15;
 }
 
 .tagline-highlight {
-    background-color: var(--green);
-    border: 2px solid var(--text-dark);
-    padding: 0.5rem 1rem;
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 1rem;
+  background-color: var(--green);
+  border: 2px solid var(--text-dark);
+  padding: 0.55rem 1rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 0.5rem;
+  width: fit-content;
 }
 
 .hero p {
-    font-size: 1rem;
-    max-width: 90%;
+  font-size: 1.05rem;
+  max-width: 42ch;
 }
 
-/* Footer styles */
+/* -----------------------------------
+   Footer
+----------------------------------- */
 .footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #f1f1f1;
-    color: var(--text-dark);
-    font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #f1f1f1;
+  color: var(--text-dark);
+  font-size: 0.9rem;
 }
 
 .footer a {
-    color: var(--purple-dark);
-    text-decoration: none;
-    font-weight: 600;
+  color: var(--purple-dark);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Responsive tweaks */
+/* -----------------------------------
+   Responsive tweaks
+----------------------------------- */
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+    max-height: none;
+  }
+
+  .hero-left {
+    min-height: 320px;
+    background-position: center 25%;
+  }
+}
+
 @media (max-width: 768px) {
-    .nav-item {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
-    .hero {
-        flex-direction: column;
-    }
-    .hero-left,
-    .hero-right {
-        flex: 1 1 100%;
-    }
-    .hero h1 {
-        font-size: 1.6rem;
-    }
-    .tagline-highlight {
-        font-size: 0.9rem;
-    }
+  .nav-item {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.85rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: 1 1 100%;
+  }
+
+  .hero-left {
+    height: 38vh;       /* keeps image visible but not huge */
+    min-height: 260px;
+    max-height: 420px;
+    background-position: center 20%;
+  }
+
+  .hero-right {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .tagline-highlight {
+    font-size: 0.85rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
 }

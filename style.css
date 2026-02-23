@@ -30,7 +30,42 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
 }
+.twitch-spot {
+  text-align: center;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 700px;
+  background: linear-gradient(135deg, #9146FF, #ff66c4);
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
 
+.twitch-spot h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.twitch-spot p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.twitch-button {
+  display: inline-block;
+  background: #ffffff;
+  color: #9146FF;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.twitch-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 /* Navigation bar styling */
 .navbar {
     background-color: var(--purple-dark);

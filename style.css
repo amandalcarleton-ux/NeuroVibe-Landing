@@ -165,14 +165,9 @@ body {
   width: 100%;
   height: clamp(220px, 38vw, 420px); /* responsive banner height */
   object-fit: cover;
-  object-position: center 35%;
+  object-position: center 20%;
   display: block;
 }
-
-/* -----------------------------------
-/* -----------------------------------
-   HERO OVERLAY (Text on Image)
------------------------------------ */
 
 /* -----------------------------------
    HERO OVERLAY (Text on Image)

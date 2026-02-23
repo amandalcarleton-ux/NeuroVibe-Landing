@@ -103,10 +103,10 @@ body {
 }
 /* LiveGood gradient CTA */
 .livegood-button {
-  display: block;
+  display: inline-block;           /* allows centering */
   text-align: center;
-  padding: 14px 18px;
-  margin: 12px 0 6px 0;
+  padding: 14px 28px;
+  margin: 12px auto 6px auto;       /* centers horizontally */
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
@@ -117,9 +117,15 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* Hover / tap animation */
 .livegood-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.02);
   box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+.livegood-button:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 /* Header image styling */
 .image-header img {

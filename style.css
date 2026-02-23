@@ -102,21 +102,8 @@ body {
     color: var(--text-dark);
 }
 /* LiveGood gradient CTA */
-.livegood-button {
-  display: block;
-  width: min(520px, 92%);
-  margin: 12px auto 6px auto;   /* centers horizontally */
-  text-align: center;
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #ffffff;
-  background: linear-gradient(135deg, #4facfe, #8f5bff);
-  border: 2px solid #000;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+CTA */
+
 .livegood-button:hover {
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 10px 22px rgba(0,0,0,0.25);

@@ -173,11 +173,136 @@ body {
    /* -----------------------------------
    HERO OVERLAY (Text on Image)
    Use with HTML:
+   /* -----------------------------------
+   HERO OVERLAY (Text on Image)
+   Use with HTML:
    <section class="hero hero-overlay">
      <div class="hero-left">
        <div class="hero-overlay-content">...</div>
      </div>
    </section>
+----------------------------------- */
+
+.hero.hero-overlay {
+  display: block;
+  width: 100%;
+  min-height: var(--hero-min-height);
+  height: var(--hero-desktop-vh);
+  max-height: var(--hero-max-height);
+}
+
+.hero-left {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: var(--hero-min-height); /* prevents collapse */
+
+  background-image:
+    linear-gradient(90deg, rgba(0,0,0,0.20), rgba(0,0,0,0.05)),
+    url('BF150CEC-481F-40CA-BC4D-1A5438D33FD9.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 35%;
+}
+
+/* Dark overlay for readability */
+.hero-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,0.62),
+    rgba(0,0,0,0.32),
+    rgba(0,0,0,0.10)
+  );
+  z-index: 1;
+}
+
+/* Text container sitting on top of image */
+.hero-overlay-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  padding: 3rem;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+}
+
+/* Brand label */
+.hero-overlay-content .hero-brand a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  opacity: 0.95;
+}
+
+/* Headline */
+.hero-overlay-content h1 {
+  font-size: 2.6rem;
+  line-height: 1.1;
+  margin: 0.75rem 0 1rem;
+  font-weight: 800;
+}
+
+/* Body text */
+.hero-overlay-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 56ch;
+  margin-bottom: 1.25rem;
+}
+
+/* Buttons / links row */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Secondary link style */
+.hero-link {
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* -----------------------------------
+   Responsive tweaks
+----------------------------------- */
+@media (max-width: 900px) {
+  .hero.hero-overlay {
+    height: auto;
+    max-height: none;
+  }
+
+  .hero-left {
+    min-height: 380px;
+    background-position: center 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-overlay-content {
+    padding: 1.75rem 1.25rem;
+    max-width: 100%;
+  }
+
+  .hero-overlay-content h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero-overlay-content p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
 ----------------------------------- */
 
 .hero.hero-overlay {

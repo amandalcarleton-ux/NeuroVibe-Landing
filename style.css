@@ -103,10 +103,11 @@ body {
 }
 /* LiveGood gradient CTA */
 .livegood-button {
-  display: inline-block;           /* allows centering */
+  display: block;
+  width: min(520px, 92%);
+  margin: 12px auto 6px auto;   /* centers horizontally */
   text-align: center;
   padding: 14px 28px;
-  margin: 12px auto 6px auto;       /* centers horizontally */
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;

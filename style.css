@@ -189,17 +189,13 @@ body {
 /* LEFT: Use your image here as a background */
 /* Replace the URL below with your hero image path */
 .hero-left {
-  flex: 1 1 50%;
-  position: relative;
-
   background-image:
     linear-gradient(90deg, rgba(0,0,0,0.20), rgba(0,0,0,0.05)),
-    url('8BC3B611-6C27-4AE0-A981-C7C6906A0D25.png');
+    url('BF150CEC-481F-40CA-BC4D-1A5438D33FD9.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 35%;
 }
-
 /* OPTIONAL: If you want a softer edge fade into the right column */
 .hero-left::after {
   content: "";

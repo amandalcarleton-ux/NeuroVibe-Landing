@@ -564,4 +564,35 @@ body {
     font-size: 1rem;
     max-width: 100%;
   }
+}.beauty-extension {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff5f8;
+}
+
+.beauty-extension h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.beauty-extension p {
+  max-width: 500px;
+  margin: 0 auto 25px;
+  font-size: 16px;
+}
+
+.redaspen-button {
+  display: inline-block;
+  padding: 14px 26px;
+  background: linear-gradient(135deg, #ff6fa5, #ff3d7f);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.redaspen-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 61, 127, 0.3);
 }

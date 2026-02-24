@@ -687,4 +687,27 @@ body {
 .chip:hover{
   background: #ffe6f1;
   transform: translateY(-2px);
+}.beauty-extension .beauty-chips{
+  margin-top: 16px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+}
+
+.beauty-extension a.chip{
+  text-decoration: none !important;
+  color: #222 !important;
+  background: rgba(255,255,255,0.9) !important;
+  border: 2px solid rgba(255, 105, 180, 0.35) !important;
+  padding: 10px 14px !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.beauty-extension a.chip:hover{
+  background: #ffe6f1 !important;
+  transform: translateY(-2px);
 }

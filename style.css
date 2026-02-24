@@ -710,4 +710,39 @@ body {
 .beauty-extension a.chip:hover{
   background: #ffe6f1 !important;
   transform: translateY(-2px);
+}.side-ad-card {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  width: 260px;
+  z-index: 9999;
+}
+
+.side-ad-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.side-ad-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.side-ad-content p {
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  color: #444;
+}
+
+.side-ad-content a {
+  display: inline-block;
+  padding: 10px 14px;
+  background: #6b5cff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
 }

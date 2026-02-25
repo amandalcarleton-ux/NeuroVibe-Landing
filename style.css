@@ -785,3 +785,28 @@ body {
   color:#000;
   text-transform:uppercase;
 }
+.about-block{
+  max-width:900px;
+  margin:60px auto;
+  padding:28px 22px;
+  background:rgba(255,255,255,0.12); /* subtle separation */
+  border:1px solid rgba(255,255,255,0.25);
+  border-radius:18px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.about-block h2{
+  margin-top:0;
+}
+
+.about-cta{
+  display:inline-block;
+  margin-top:10px;
+  padding:12px 16px;
+  border-radius:12px;
+  background:#6b5cff;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+}

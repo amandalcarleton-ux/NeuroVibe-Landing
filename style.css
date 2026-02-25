@@ -759,4 +759,13 @@ body {
   padding: 16px 18px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   text-align: center;
+}/* FORCE hide promo card on phones */
+@media (max-width: 900px) {
+  .side-ad-card,
+  .side-ad-content {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
 }

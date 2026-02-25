@@ -769,3 +769,9 @@ body {
     pointer-events: none !important;
   }
 }
+/* FORCE hide promo card on phones / small screens */
+@media (max-width: 900px) {
+  .side-ad-card {
+    display: none !important;
+  }
+}

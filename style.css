@@ -942,4 +942,24 @@ body {
   .about-grid {
     grid-template-columns: 1fr;
   }
+}.community-hero img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0 0 18px 18px;
+}
+
+.community-callout{
+  max-width: 980px;
+  margin: 24px auto 40px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.community-buttons{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
 }

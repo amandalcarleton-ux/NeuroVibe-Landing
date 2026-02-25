@@ -809,4 +809,15 @@ body {
   color:#fff;
   text-decoration:none;
   font-weight:700;
+}.journey-strip{
+  max-width: 900px;
+  margin: 26px auto 10px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.journey-kicker{
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 18px;
 }

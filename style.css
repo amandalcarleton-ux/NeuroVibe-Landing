@@ -323,3 +323,10 @@ body {
     font-size: 1rem;
   }
 }
+.community-buttons{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}

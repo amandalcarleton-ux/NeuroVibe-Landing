@@ -240,8 +240,10 @@ body {
   z-index: 2;
   max-width: 720px;
   padding: 3rem;
+  margin: 0 auto;              /* 👈 centers the whole block */
   color: #ffffff;
   text-shadow: 0 2px 10px rgba(0,0,0,0.35);
+  text-align: center;          /* 👈 centers the text */
 }
 
 /* Brand label */
@@ -253,6 +255,7 @@ body {
   text-transform: uppercase;
   font-size: 0.85rem;
   opacity: 0.95;
+  display: inline-block;
 }
 
 /* Headline */

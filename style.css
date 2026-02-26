@@ -331,4 +331,58 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 12px;
+}/* -----------------------------------
+   New Mobile Nav (clean sticky bar)
+----------------------------------- */
+
+/* Base (desktop/tablet can keep your current look if you want) */
+.nav-link{
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Mobile-only styling */
+@media (max-width: 700px){
+  .navbar{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--purple-dark);
+    padding: 10px 0;
+  }
+
+  .nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 0 12px;
+    overflow-x: auto;          /* allows smooth scroll if needed */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-menu::-webkit-scrollbar{
+    display: none;
+  }
+
+  .nav-link{
+    color: #ffffff;
+    font-size: 13px;
+    padding: 10px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  /* Contact CTA button */
+  .nav-cta{
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+  }
+
+  .nav-link:active{
+    transform: scale(0.98);
+  }
 }

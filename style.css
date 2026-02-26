@@ -172,7 +172,25 @@ body {
 /* -----------------------------------
    HERO OVERLAY (Text on Image)
 ----------------------------------- */
+<style>
+.nv-cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #6b5cff, #a288f7);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(107, 92, 255, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
 
+.nv-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(107, 92, 255, 0.45);
+}
+</style>
 .hero.hero-overlay {
   display: block;
   width: 100%;

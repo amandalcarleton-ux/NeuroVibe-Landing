@@ -92,12 +92,13 @@ body {
 
   background-image:
     linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15)),
-    url('community-header.jpg.JPG'); /* 👈 your family photo */
+    url('BF150CEC-481F-40CA-BC4D-1A5438D33FD9.png'); /* 👈 your FAMILY photo */
 
   background-size: cover;        /* prevents stretching */
   background-repeat: no-repeat;
-  background-position: center 25%; /* adjust up/down if needed */
+  background-position: center 25%; /* tweak up/down if needed */
 }
+
 /* Dark overlay */
 .hero-left::before {
   content: "";
@@ -206,7 +207,7 @@ body {
 }
 
 /* -----------------------------------
-   Twitch Section (unchanged)
+   Twitch Section
 ----------------------------------- */
 .twitch-spot {
   text-align: center;
@@ -230,33 +231,13 @@ body {
 }
 
 /* -----------------------------------
-   Responsive
+   Beauty Picks
 ----------------------------------- */
-@media (max-width: 900px) {
-  .hero.hero-overlay {
-    height: auto;
-    max-height: none;
-  }
-
-  .hero-left {
-    min-height: 480px;
-    background-position: center 25%;
-  }
-
-  .hero-overlay-content h1 {
-    font-size: 1.9rem;
-  }
-
-  .hero-overlay-content p {
-    font-size: 1rem;
-  }
-}/* ===== BEAUTY PICKS (force styling) ===== */
 .beauty-extension{
   margin: 28px auto;
   max-width: 980px;
   padding: 28px 18px;
   text-align: left;
-
   background: linear-gradient(135deg, rgba(255, 233, 243, 0.95), rgba(255, 245, 250, 0.95));
   border: 1px solid rgba(255, 143, 193, 0.35);
   border-radius: 28px;
@@ -281,12 +262,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   padding: 14px 22px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 800;
-
   color: #1a1a1a;
   background: linear-gradient(135deg, #ff6fb3, #ff3d8a);
   border: 3px solid rgba(0,0,0,0.85);
@@ -295,12 +274,6 @@ body {
 
 .redaspen-button:hover{
   transform: translateY(-2px);
-}
-
-.beauty-sub{
-  margin-top: 12px;
-  font-size: 14px;
-  opacity: 0.75;
 }
 
 .beauty-chips{
@@ -328,71 +301,25 @@ body {
   transform: translateY(-2px);
 }
 
-/* Mobile tweaks */
-@media (max-width: 520px){
-  .beauty-extension{
-    margin: 18px 12px;
-    padding: 22px 16px;
+/* -----------------------------------
+   Responsive
+----------------------------------- */
+@media (max-width: 900px) {
+  .hero.hero-overlay {
+    height: auto;
+    max-height: none;
   }
-  .beauty-extension h2{
-    font-size: 28px;
+
+  .hero-left {
+    min-height: 480px;
+    background-position: center 25%;
   }
-  .redaspen-button{
-    width: 100%;
+
+  .hero-overlay-content h1 {
+    font-size: 1.9rem;
   }
-}/* ===== Center the hero buttons/links row ===== */
-.hero-actions{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-/* ===== CLEAN HERO BACKGROUND (FAMILY PHOTO) ===== */
 
-.hero-left{
-  position: relative;
-  width: 100%;
-  min-height: 520px;          /* controls hero height */
-  background-image:
-    linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15)),
-    url('BF150CEC-481F-40CA-BC4D-1A5438D33FD9.png'); /* <-- your FAMILY image */
-  background-size: cover;     /* fills area without stretching */
-  background-repeat: no-repeat;
-  background-position: center 20%; /* tweak this to move image up/down */
-}
-
-/* ===== CENTER HERO CONTENT ===== */
-
-.hero-overlay-content{
-  text-align: center;
-  margin: 0 auto;
-}
-
-.hero-actions{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}/* ===== Remove any leftover spacing from the old “My Links & Resources” pill ===== */
-.links-pill-wrap,
-.links-header,
-.links-title,
-.resources-pill {
-  display: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.hero-overlay-content {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.hero-overlay-content h1,
-.hero-overlay-content p {
-  margin-left: auto;
-  margin-right: auto;
+  .hero-overlay-content p {
+    font-size: 1rem;
+  }
 }

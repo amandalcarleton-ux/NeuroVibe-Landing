@@ -278,6 +278,8 @@ body {
   flex-wrap: wrap;
   gap: 12px;
   align-items: center;
+  justify-content: center;   /* 👈 centers horizontally */
+  text-align: center;        /* 👈 helps with text links */
 }
 
 /* Secondary link style */

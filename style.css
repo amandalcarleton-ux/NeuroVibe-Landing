@@ -66,6 +66,8 @@ body {
   color: #000;
   text-transform: uppercase;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
+}.nav-btn.contact-highlight {
+  background: linear-gradient(135deg, #b2fa70, #e8ffcc);
 }
 
 .nav-btn:hover {

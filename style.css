@@ -1000,3 +1000,31 @@ height: 100%;
   flex-wrap: wrap;
   margin-top: 12px;
 }
+/* ===== FORCE HERO CENTER + NO STRETCH (put at END of style.css) ===== */
+.hero-overlay-content{
+  text-align: center !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+.hero-overlay-content h1,
+.hero-overlay-content p{
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.hero-brand{
+  text-align: center !important;
+}
+
+.hero-brand a{
+  display: inline-block !important;
+}
+
+/* background image behavior */
+.hero-left{
+  height: auto !important;
+  background-size: cover !important;       /* no stretching */
+  background-repeat: no-repeat !important;
+  background-position: center 20% !important; /* adjust if needed */
+}

@@ -385,4 +385,31 @@ body {
   .nav-link:active{
     transform: scale(0.98);
   }
+}/* -----------------------------------
+   Mobile Button Grid Nav
+----------------------------------- */
+@media (max-width: 700px){
+
+  .nav-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .nav-btn{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 14px 10px;
+    border-radius: 18px;
+  }
+
+  /* Make BLOG full width */
+  .nav-wide{
+    grid-column: 1 / -1;
+  }
+
+}.navbar{
+  padding-bottom: 10px;
 }

@@ -386,3 +386,13 @@ body {
   margin: 0 !important;
   padding: 0 !important;
 }
+.hero-overlay-content {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hero-overlay-content h1,
+.hero-overlay-content p {
+  margin-left: auto;
+  margin-right: auto;
+}

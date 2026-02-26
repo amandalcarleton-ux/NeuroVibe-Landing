@@ -378,4 +378,12 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+}/* ===== Remove any leftover spacing from the old “My Links & Resources” pill ===== */
+.links-pill-wrap,
+.links-header,
+.links-title,
+.resources-pill {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }

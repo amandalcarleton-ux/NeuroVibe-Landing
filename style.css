@@ -362,4 +362,33 @@ body {
   .nav-btn{
     font-size: 16px;
   }
+}/* -----------------------------------
+   Community Buttons (mobile + desktop)
+----------------------------------- */
+.about-primary-btn,
+.about-secondary-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 3px solid rgba(0,0,0,0.85);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+.about-primary-btn{
+  background: linear-gradient(135deg, #b2fa70, #e8ffcc);
+  color: #000;
+}
+
+.about-secondary-btn{
+  background: #ffffff;
+  color: #000;
+}
+
+.about-primary-btn:hover,
+.about-secondary-btn:hover{
+  transform: translateY(-2px);
 }

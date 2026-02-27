@@ -358,9 +358,12 @@ body {
   color: #000;
 }
 
-.about-secondary-btn{
-  background: #ffffff;
-  color: #000;
+.nv-btn-secondary{
+  background: rgba(255,255,255,0.35);
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.6);
+  box-shadow: 0 10px 30px rgba(255,255,255,0.25);
+}
 }
 
 .about-primary-btn:hover,

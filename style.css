@@ -296,3 +296,57 @@ filter: brightness(1.02) contrast(1.02)
   text-align: center;
   color: rgba(255,255,255,0.92);
 }
+/* ==========================
+   HOMEPAGE 2-COLUMN HERO
+   ========================== */
+
+.nv-page .nv-wrap{
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero.hero-overlay{
+  padding: 3.5rem 0;
+}
+
+.hero-grid{
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 899px){
+  .hero-grid{ grid-template-columns: 1fr; }
+}
+
+@media (min-width: 900px){
+  .hero-grid{ grid-template-columns: 1.15fr 0.85fr; }
+}
+
+.hero-left{
+  min-width: 0;
+}
+
+.hero-right{
+  min-width: 0;
+}
+
+.cps-guide-mockup{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+}
+
+.hero-actions{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1.25rem;
+}
+
+.twitch-spot{
+  border-radius: 18px;
+  padding: 1.25rem;
+}

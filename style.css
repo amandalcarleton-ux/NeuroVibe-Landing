@@ -403,7 +403,233 @@ body {
     grid-column: 1 / -1;
   }
 }
+/* =========================
+   NeuroVibe — Dreamy Y2K About
+   ========================= */
 
+:root{
+  --nv-purple: #6b5cff;
+  --nv-lilac: #c8b5ff;
+  --nv-pink: #ffb6e1;
+  --nv-teal: #7ee6ff;
+  --nv-lime: #b2fa70;
+
+  --nv-ink: #101018;
+  --nv-white: #ffffff;
+
+  --nv-radius: 22px;
+  --nv-border: rgba(255,255,255,0.45);
+  --nv-glass: rgba(255,255,255,0.18);
+  --nv-shadow: 0 18px 55px rgba(60, 30, 120, 0.22);
+}
+
+/* Section wrapper */
+.nv-about{
+  position: relative;
+  overflow: hidden;
+  padding: 22px 14px 34px;
+  color: var(--nv-ink);
+}
+
+/* Dreamy background */
+.nv-y2k{
+  background:
+    radial-gradient(900px 600px at 20% 10%, rgba(255,182,225,0.65), transparent 60%),
+    radial-gradient(900px 650px at 80% 0%, rgba(126,230,255,0.55), transparent 55%),
+    radial-gradient(900px 700px at 50% 85%, rgba(200,181,255,0.65), transparent 60%),
+    linear-gradient(135deg, #5a48ff 0%, #a78bfa 35%, #7ee6ff 70%, #ffb6e1 100%);
+}
+
+/* Sparkles / bokeh (no images needed) */
+.nv-y2k-bg{
+  position:absolute; inset:0;
+  pointer-events:none;
+  opacity: 0.55;
+  filter: blur(0.2px);
+}
+
+.nv-sparkle{
+  position:absolute;
+  width: 140px; height: 140px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.10) 35%, transparent 70%);
+  mix-blend-mode: screen;
+}
+
+.nv-s1{ top: 8%; left: -30px; transform: scale(0.9); }
+.nv-s2{ top: 22%; right: -40px; transform: scale(1.15); }
+.nv-s3{ bottom: 18%; left: 14%; transform: scale(1.05); }
+.nv-s4{ bottom: -30px; right: 10%; transform: scale(1.25); }
+
+/* Layout container */
+.nv-wrap{
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+/* Glass card */
+.glass{
+  background: var(--nv-glass);
+  border: 1px solid var(--nv-border);
+  border-radius: var(--nv-radius);
+  box-shadow: var(--nv-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Hero */
+.nv-hero{
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.nv-kicker{
+  margin: 0 0 6px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(16,16,24,0.75);
+  font-size: 12px;
+}
+
+.nv-title{
+  margin: 0 0 10px;
+  font-size: 34px;
+  line-height: 1.08;
+  letter-spacing: 0.02em;
+  color: #fff;
+  text-shadow: 0 10px 30px rgba(30, 10, 80, 0.35);
+}
+
+.nv-subtitle{
+  margin: 0 auto 14px;
+  max-width: 52ch;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.92);
+}
+
+/* Buttons */
+.nv-cta-row{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0 8px;
+}
+
+.nv-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  border: 2px solid rgba(0,0,0,0.15);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+  min-width: 180px;
+}
+
+.nv-btn:hover{ transform: translateY(-1px); }
+.nv-btn:active{ transform: translateY(0px); opacity: 0.95; }
+
+.nv-btn-primary{
+  background: var(--nv-lime);
+  color: #101018;
+  box-shadow: 0 14px 30px rgba(178,250,112,0.25);
+}
+
+.nv-btn-secondary{
+  background: rgba(255,255,255,0.26);
+  color: #fff;
+  border-color: rgba(255,255,255,0.40);
+}
+
+/* Links */
+.nv-link{
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.nv-link.big{
+  display:inline-block;
+  margin: 6px 0 2px;
+  font-weight: 800;
+  word-break: break-word;
+}
+
+/* Cards grid */
+.nv-grid{
+  display: grid;
+  gap: 14px;
+}
+
+.nv-card{
+  padding: 16px;
+  color: rgba(255,255,255,0.92);
+}
+
+.nv-h2{
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-shadow: 0 10px 30px rgba(30, 10, 80, 0.30);
+}
+
+.nv-list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+  line-height: 1.55;
+}
+
+.nv-bold{ font-weight: 800; margin-top: 10px; }
+
+.nv-pill-row{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0 8px;
+}
+
+.nv-pill{
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.24);
+  border: 1px solid rgba(255,255,255,0.40);
+  color: #fff;
+  font-weight: 800;
+}
+
+.nv-note{
+  margin: 10px 0 0;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Footer card */
+.nv-footer{
+  padding: 16px;
+  text-align: center;
+  color: rgba(255,255,255,0.92);
+}
+
+/* Desktop enhancements */
+@media (min-width: 860px){
+  .nv-title{ font-size: 44px; }
+  .nv-hero{ padding: 26px 22px; }
+  .nv-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+  .nv-start{
+    grid-column: 1 / -1;
+  }
+}
 /* -----------------------------------
    Hero links -> Buttons
 ----------------------------------- */
@@ -426,4 +652,12 @@ body {
 .hero-actions .hero-link:hover{
   transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+}
+.nv-logo{
+  width: 180px;
+  max-width: 70%;
+  height: auto;
+  margin: 6px auto 10px;
+  display: block;
+  filter: drop-shadow(0 10px 25px rgba(20,10,60,0.35));
 }

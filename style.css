@@ -779,4 +779,11 @@ img{
   .nv-grid{
     grid-template-columns: 1fr 1fr;
   }
+}@media (max-width: 860px){
+  .nv-grid{
+    grid-template-columns: 1fr !important;
+  }
+  .nv-card{
+    width: 100% !important;
+  }
 }

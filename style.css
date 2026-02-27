@@ -692,9 +692,13 @@ img{
   margin: 8px auto 10px !important;
   object-fit: contain;
 }
-@media (min-width: 860px){
+@media (min-width: 120px){
   .nv-hero .nv-logo{
     max-width: 280px !important;
     width: 280px !important;
   }
+}.nv-hero .nv-logo{
+  width: 120px !important;
+  max-width: 150px !important;
+  height: auto !important;
 }

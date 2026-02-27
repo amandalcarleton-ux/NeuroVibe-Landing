@@ -666,12 +666,17 @@ body {
   object-fit: contain;
   filter: drop-shadow(0 10px 25px rgba(20,10,60,0.35));
 }
-
+/* Default = stacked (mobile first) */
+.nv-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
 /* Optional: make it a bit bigger on desktop */
 @media (min-width: 860px){
-  .nv-logo{
-    width: 280px;
-    max-width: 280px;
+  .nv-grid{
+    grid-template-columns: 1fr 1fr;
+  }
   }
 }img{
   max-width: 100%;
@@ -760,4 +765,6 @@ img{
   .nv-grid{
     grid-template-columns: 1fr;
   }
+}.nv-card{
+  width: 100%;
 }

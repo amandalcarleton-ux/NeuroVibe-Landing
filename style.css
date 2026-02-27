@@ -271,7 +271,8 @@ body{
 }
 
 .nv-bold{ font-weight: 800; margin-top: 10px; }
-
+filter: brightness(1.02) contrast(1.02)
+        drop-shadow(0 0 25px rgba(200,181,255,0.4));
 /* Pills row (Start Here / CPS / Links) */
 .nv-pill-row{
   display:flex;

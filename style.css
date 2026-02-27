@@ -69,9 +69,8 @@ body {
 }.nav-btn.contact-highlight {
   }
 
-.nav-btn.contact-highlight {
+.nav-btn.contact-highlight{
   background: linear-gradient(135deg, #b2fa70, #e8ffcc);
-}
 }
 
 .nav-btn:hover {
@@ -328,6 +327,7 @@ body {
   .hero-overlay-content p {
     font-size: 1rem;
   }
+}
 /* -----------------------------------
    Community Buttons
 ----------------------------------- */
@@ -676,4 +676,25 @@ body {
 }.nv-hero .nv-logo{
   width: min(240px, 78vw) !important;
   max-width: 240px !important;
+}
+/* Global: prevent giant images */
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* NeuroVibe logo sizing */
+.nv-hero .nv-logo{
+  display:block;
+  width: min(240px, 78vw) !important;
+  max-width: 240px !important;
+  height: auto !important;
+  margin: 8px auto 10px !important;
+  object-fit: contain;
+}
+@media (min-width: 860px){
+  .nv-hero .nv-logo{
+    max-width: 280px !important;
+    width: 280px !important;
+  }
 }

@@ -34,9 +34,12 @@ body{
   font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--nv-ink);
   line-height: 1.6;
-  background: #f7f7fb;
 }
 
+/* Default light background only when NOT using nv-y2k */
+body:not(.nv-y2k){
+  background: #f7f7fb;
+}
 /* Background used across site */
 .nv-y2k{
   background:

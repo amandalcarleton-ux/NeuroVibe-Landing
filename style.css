@@ -767,4 +767,16 @@ img{
   }
 }.nv-card{
   width: 100%;
+  
+}/* ===== Mobile stacking fix (force) ===== */
+.nv-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 860px){
+  .nv-grid{
+    grid-template-columns: 1fr 1fr;
+  }
 }

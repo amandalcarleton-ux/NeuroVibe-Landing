@@ -695,4 +695,10 @@ img{
     drop-shadow(0 0 28px rgba(255,182,225,0.5));  /* pink haze */
 
   transition: all 0.3s ease;
+}/* PROOF: if this doesn't change, CSS isn't loading */
+.nv-about{ border: 6px solid hotpink !important; }
+
+/* Y2K background */
+.nv-y2k{
+  background: linear-gradient(135deg, #5a48ff, #a78bfa, #7ee6ff, #ffb6e1) !important;
 }

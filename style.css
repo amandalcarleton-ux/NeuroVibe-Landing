@@ -673,4 +673,7 @@ body {
 }img{
   max-width: 100%;
   height: auto;
+}.nv-hero .nv-logo{
+  width: min(240px, 78vw) !important;
+  max-width: 240px !important;
 }

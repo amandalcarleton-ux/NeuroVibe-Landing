@@ -241,7 +241,22 @@ body{
   padding: 16px;
   color: rgba(255,255,255,0.92);
 }
+/* =========================
+   Family Section
+   ========================= */
 
+.nv-family{
+  text-align: center;
+}
+
+.nv-family-photo{
+  width: 100%;
+  max-width: 520px;
+  margin: 16px auto 18px;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(40, 20, 100, 0.35);
+  border: 2px solid rgba(255,255,255,0.45);
+}
 .nv-h2{
   margin: 0 0 10px;
   font-size: 18px;

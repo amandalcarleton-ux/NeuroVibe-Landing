@@ -682,23 +682,17 @@ img{
   max-width: 100%;
   height: auto;
 }
-
-/* NeuroVibe logo sizing */
 .nv-hero .nv-logo{
-  display:block;
-  width: min(240px, 78vw) !important;
-  max-width: 240px !important;
-  height: auto !important;
-  margin: 8px auto 10px !important;
-  object-fit: contain;
-}
-@media (min-width: 120px){
-  .nv-hero .nv-logo{
-    max-width: 280px !important;
-    width: 280px !important;
-  }
-}.nv-hero .nv-logo{
-  width: 120px !important;
-  max-width: 150px !important;
-  height: auto !important;
+  display: block;
+  width: 150px;              /* adjust size here */
+  height: auto;
+  margin: 8px auto 10px;
+
+  opacity: 0.85;             /* soft translucency */
+
+  filter:
+    drop-shadow(0 0 18px rgba(200,181,255,0.6))   /* lilac glow */
+    drop-shadow(0 0 28px rgba(255,182,225,0.5));  /* pink haze */
+
+  transition: all 0.3s ease;
 }

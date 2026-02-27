@@ -653,11 +653,24 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 12px 26px rgba(0,0,0,0.18);
 }
+/* NeuroVibe logo sizing (fixes giant logo on mobile) */
 .nv-logo{
-  width: 180px;
-  max-width: 70%;
-  height: auto;
-  margin: 6px auto 10px;
   display: block;
+  width: min(240px, 78vw);   /* <- controls size */
+  max-width: 240px;          /* <- hard cap */
+  height: auto;
+  margin: 8px auto 10px;
+  object-fit: contain;
   filter: drop-shadow(0 10px 25px rgba(20,10,60,0.35));
+}
+
+/* Optional: make it a bit bigger on desktop */
+@media (min-width: 860px){
+  .nv-logo{
+    width: 280px;
+    max-width: 280px;
+  }
+}img{
+  max-width: 100%;
+  height: auto;
 }

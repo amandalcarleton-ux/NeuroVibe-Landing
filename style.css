@@ -1,29 +1,15 @@
-/*
- * NeuroVibe — Clean Stable Stylesheet
- * Hero fixed, centered, no stretching, CPS mockup centered
- */
-
 /* =========================
-   Base / Variables
+   NeuroVibe — Single Clean Theme (Use on ALL pages)
    ========================= */
-:root {
-  --purple: #6b5cff;
-  --purple-dark: #513cbc;
-  --green: #b2fa70;
-  --text-dark: #000000;
-  --text-light: #ffffff;
 
-  --hero-min-height: 520px;
-  --hero-max-height: 760px;
-  --hero-desktop-vh: 68vh;
-
-  --container: 1200px;
-
-  /* Y2K About vars */
+/* Root tokens */
+:root{
   --nv-purple: #6b5cff;
-  --nv-lilac: #c8b5ff;
-  --nv-pink: #ffb6e1;
+  --nv-purple-deep: #4b2e83;
+  --nv-lilac: #c6a8ff;
+  --nv-blue: #9ccaff;
   --nv-teal: #7ee6ff;
+  --nv-pink: #ffb6e1;
   --nv-lime: #b2fa70;
 
   --nv-ink: #101018;
@@ -33,460 +19,42 @@
   --nv-border: rgba(255,255,255,0.45);
   --nv-glass: rgba(255,255,255,0.18);
   --nv-shadow: 0 18px 55px rgba(60, 30, 120, 0.22);
+
+  --container: 1000px;
 }
 
-/* =========================
-   Reset
-   ========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Reset */
+*{ margin:0; padding:0; box-sizing:border-box; }
+html, body{ width:100%; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color: inherit; }
 
-html, body { width: 100%; }
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fdfdfd;
-  color: var(--text-dark);
-  line-height: 1.6;
-}
-
-/* Global: prevent giant images */
-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* =========================
-   Navigation
-   ========================= */
-.navbar {
-  background-color: var(--purple-dark);
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.nav-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* Shared Button Base */
-.nv-btn {
-  padding: 14px 26px;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.25s ease;
-}
-
-/* Primary Button – Lilac Gradient */
-.nv-btn-primary {
-  background: linear-gradient(135deg, #c6a8ff, #9ccaff);
-  color: #2e1a47;
-  border: 2px solid #4b2e83; /* Dark Purple Outline */
-  box-shadow: 0 8px 20px rgba(75, 46, 131, 0.25);
-}
-
-.nv-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(75, 46, 131, 0.35);
-}
-
-/* Secondary Button – Outline Only */
-.nv-btn-secondary {
-  background: transparent;
-  color: #4b2e83;
-  border: 2px solid #4b2e83;
-}
-
-.nv-btn-secondary:hover {
-  background: rgba(75, 46, 131, 0.08);
-  transform: translateY(-2px);
-}
-/* FAMILY PHOTO BACKGROUND */
-.hero-left {
-  position: relative;
-  width: 100%;
-  min-height: 520px;
-
-  background-image:
-    linear-gradient(90deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15)),
-    url('BF150CEC-481F-40CA-BC4D-1A5438D33FD9.png');
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 25%;
-}
-
-/* Dark overlay */
-.hero-left::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.30),
-    rgba(0,0,0,0.10)
-  );
-  z-index: 1;
-}
-
-/* HERO CONTENT */
-.hero-overlay-content {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-  padding: 3rem 1.5rem;
-  margin: 0 auto;
-  color: #ffffff;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
-  text-align: center;
-}
-
-/* Brand */
-.hero-brand a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  opacity: 0.95;
-}
-
-/* Headline */
-.hero-overlay-content h1 {
-  font-size: 2.6rem;
-  line-height: 1.1;
-  margin: 0.75rem 0 1rem;
-  font-weight: 800;
-}
-
-/* Body */
-.hero-overlay-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 56ch;
-  margin: 0 auto 1.25rem;
-}
-
-/* CPS GUIDE MOCKUP IMAGE */
-.cps-guide-mockup{
-  margin: 16px auto 12px;
-  width: min(320px, 88vw);
-  height: auto;
-  border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.28);
-  border: 2px solid rgba(255,255,255,0.22);
-}
-
-@media (min-width: 900px){
-  .cps-guide-mockup{ width: 340px; }
-}
-
-/* HERO BUTTONS / LINKS */
-.hero-actions{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 12px;
-}
-
-/* Main CTA */
-.nv-cta-button {
-  display: inline-block;
-  padding: 14px 28px;
-  background: linear-gradient(135deg, #6b5cff, #a288f7);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.05rem;
-  border-radius: 999px;
-  box-shadow: 0 8px 20px rgba(107, 92, 255, 0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.nv-cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(107, 92, 255, 0.45);
-}
-
-/* Secondary links */
-.hero-link {
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-/* Hero links -> Buttons */
-.hero-actions .hero-link{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 18px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 800;
-  border: 2px solid rgba(255,255,255,0.35);
-  background: rgba(0,0,0,0.25);
-  color: #fff;
-  text-shadow: none;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.hero-actions .hero-link:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.18);
-}
-
-/* =========================
-   Twitch Section
-   ========================= */
-.twitch-spot {
-  text-align: center;
-  padding: 40px 20px;
-  margin: 40px auto;
-  max-width: 700px;
-  background: linear-gradient(135deg, #9146FF, #ff66c4);
-  border-radius: 16px;
-  color: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.twitch-button {
-  display: inline-block;
-  background: #ffffff;
-  color: #9146FF;
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* =========================
-   Beauty Picks
-   ========================= */
-.beauty-extension{
-  margin: 28px auto;
-  max-width: 980px;
-  padding: 28px 18px;
-  text-align: left;
-  background: linear-gradient(135deg, rgba(255, 233, 243, 0.95), rgba(255, 245, 250, 0.95));
-  border: 1px solid rgba(255, 143, 193, 0.35);
-  border-radius: 28px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
-}
-
-.beauty-extension h2{
-  margin: 0 0 10px 0;
-  font-size: 34px;
-  line-height: 1.1;
-}
-
-.beauty-extension p{
-  margin: 0 0 18px 0;
-  font-size: 16px;
-  line-height: 1.5;
-  opacity: 0.9;
-}
-
-.redaspen-button{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 22px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 800;
-  color: #1a1a1a;
-  background: linear-gradient(135deg, #ff6fb3, #ff3d8a);
-  border: 3px solid rgba(0,0,0,0.85);
-  box-shadow: 0 14px 26px rgba(255, 61, 138, 0.25);
-}
-
-.redaspen-button:hover{ transform: translateY(-2px); }
-
-.beauty-chips{
-  margin-top: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.beauty-extension a.chip{
-  text-decoration: none;
-  color: #222;
-  background: rgba(255,255,255,0.9);
-  border: 2px solid rgba(255, 105, 180, 0.35);
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.beauty-extension a.chip:hover{
-  background: #ffe6f1;
-  transform: translateY(-2px);
-}
-
-/* =========================
-   Responsive (Hero)
-   ========================= */
-@media (max-width: 900px) {
-  .hero.hero-overlay {
-    height: auto;
-    max-height: none;
-  }
-
-  .hero-left {
-    min-height: 480px;
-    background-position: center 25%;
-  }
-
-  .hero-overlay-content h1 {
-    font-size: 1.9rem;
-  }
-
-  .hero-overlay-content p {
-    font-size: 1rem;
-  }
-}
-
-/* =========================
-   Community Buttons (older pages)
-   ========================= */
-.community-buttons{
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-
-.about-primary-btn,
-.about-secondary-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 18px;
-  border-radius: 999px;
-  font-weight: 800;
-  text-decoration: none;
-  border: 3px solid rgba(0,0,0,0.85);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.about-primary-btn{
-  background: linear-gradient(135deg, #b2fa70, #e8ffcc);
-  color: #000;
-}
-
-.about-secondary-btn{
-  background: #ffffff;
-  color: #000;
-}
-
-.about-primary-btn:hover,
-.about-secondary-btn:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 26px rgba(0,0,0,0.22);
-}
-
-/* =========================
-   Mobile Nav - Structured Grid
-   ========================= */
-@media (max-width: 700px){
-  .navbar{ padding: 14px 0 18px; }
-
-  .nav-menu{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    padding: 0 16px;
-    max-width: 520px;
-    margin: 0 auto;
-  }
-
-  .nav-btn{
-    width: 100%;
-    margin: 0 !important;
-    text-align: center;
-    padding: 12px 10px;
-    border-radius: 18px;
-    font-size: 15px;
-    line-height: 1;
-    letter-spacing: 0.04em;
-    white-space: nowrap;
-  }
-
-  .nav-btn.nav-wide{ grid-column: 1 / -1; }
-}
-
-/* =========================
-   NeuroVibe — Dreamy Y2K About
-   ========================= */
-
-/* Section wrapper */
-.nv-about{
-  position: relative;
-  overflow: hidden;
-  padding: 22px 14px 34px;
+/* Base */
+body{
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--nv-ink);
+  line-height: 1.6;
+  background: #f7f7fb;
 }
 
-/* Dreamy background */
+/* Background used across site */
 .nv-y2k{
   background:
-    radial-gradient(900px 600px at 20% 10%, rgba(255,182,225,0.65), transparent 60%),
-    radial-gradient(900px 650px at 80% 0%, rgba(126,230,255,0.55), transparent 55%),
-    radial-gradient(900px 700px at 50% 85%, rgba(200,181,255,0.65), transparent 60%),
+    radial-gradient(900px 600px at 20% 10%, rgba(255,182,225,0.55), transparent 60%),
+    radial-gradient(900px 650px at 80% 0%, rgba(126,230,255,0.45), transparent 55%),
+    radial-gradient(900px 700px at 50% 85%, rgba(200,181,255,0.55), transparent 60%),
     linear-gradient(135deg, #5a48ff 0%, #a78bfa 35%, #7ee6ff 70%, #ffb6e1 100%);
 }
 
-/* Sparkles / bokeh */
-.nv-y2k-bg{
-  position:absolute; inset:0;
-  pointer-events:none;
-  opacity: 0.55;
-  filter: blur(0.2px);
+/* Use this wrapper on every page body content */
+.nv-page{
+  min-height: 100vh;
+  padding: 18px 14px 34px;
 }
 
-.nv-sparkle{
-  position:absolute;
-  width: 140px; height: 140px;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.10) 35%, transparent 70%);
-  mix-blend-mode: screen;
-}
-.nv-s1{ top: 8%; left: -30px; transform: scale(0.9); }
-.nv-s2{ top: 22%; right: -40px; transform: scale(1.15); }
-.nv-s3{ bottom: 18%; left: 14%; transform: scale(1.05); }
-.nv-s4{ bottom: -30px; right: 10%; transform: scale(1.25); }
-
-/* Layout container */
+/* Container */
 .nv-wrap{
-  position: relative;
-  max-width: 980px;
+  max-width: var(--container);
   margin: 0 auto;
   display: grid;
   gap: 14px;
@@ -502,7 +70,94 @@ img{
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Hero */
+/* =========================
+   NAVBAR (same across pages)
+   ========================= */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(81,60,188,0.80);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.nav-menu{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 12px 14px;
+  display:flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.12);
+  transition: transform .15s ease, background .15s ease;
+}
+.nav-btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,0.18); }
+
+@media (max-width: 700px){
+  .nav-menu{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 520px;
+  }
+  .nav-btn.nav-wide{ grid-column: 1 / -1; }
+}
+
+/* =========================
+   BUTTONS (your lilac + dark purple outline)
+   ========================= */
+.nv-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  min-width: 190px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nv-btn-primary{
+  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue));
+  color: #2e1a47;
+  border: 2px solid var(--nv-purple-deep);
+  box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
+}
+
+.nv-btn-secondary{
+  background: rgba(255,255,255,0.18);
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.55);
+}
+
+.nv-btn:hover{ transform: translateY(-2px); }
+
+/* Make buttons full width on small screens */
+@media (max-width: 520px){
+  .nv-btn{ width: 100%; min-width: 0; }
+}
+
+/* =========================
+   ABOUT HERO + CARDS (works everywhere)
+   ========================= */
 .nv-hero{
   padding: 18px 16px;
   text-align: center;
@@ -517,112 +172,72 @@ img{
   font-size: 12px;
 }
 
-/* Logo (soft pastel haze) */
-.nv-hero .nv-logo{
-  margin: 8px auto 10px;
-  width: 150px;
-  height: auto;
-  opacity: 0.85;
-  object-fit: contain;
-  filter: drop-shadow(0 0 18px rgba(200,181,255,0.6)) drop-shadow(0 0 28px rgba(255,182,225,0.5));
-  transition: all 0.3s ease;
+.nv-logo{
+  width: min(220px, 70vw);
+  max-width: 220px;
+  margin: 10px auto 10px;
+  opacity: 0.9;
+  filter:
+    drop-shadow(0 0 18px rgba(200,181,255,0.55))
+    drop-shadow(0 0 28px rgba(255,182,225,0.40));
 }
 
 .nv-title{
   margin: 0 0 10px;
   font-size: 34px;
   line-height: 1.08;
-  letter-spacing: 0.02em;
   color: #fff;
   text-shadow: 0 10px 30px rgba(30, 10, 80, 0.35);
 }
 
 .nv-subtitle{
   margin: 0 auto 14px;
-  max-width: 52ch;
+  max-width: 56ch;
   font-size: 16px;
-  line-height: 1.5;
   color: rgba(255,255,255,0.92);
 }
 
-/* CTA row */
 .nv-cta-row{
-  display: flex;
+  display:flex;
   gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 10px 0 8px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin: 12px 0 8px;
 }
 
-/* Buttons (glossy Y2K) */
-.nv-btn{
-  position: relative;
-  overflow: hidden;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 18px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 900;
-  letter-spacing: 0.01em;
-  border: 1px solid rgba(255,255,255,0.45);
-  box-shadow: 0 14px 30px rgba(30, 10, 80, 0.18);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  min-width: 190px;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
-}
-
-.nv-btn:hover{ transform: translateY(-1px); }
-.nv-btn:active{ transform: translateY(0px); opacity: 0.95; }
-
-.nv-btn-primary{
-  background: linear-gradient(180deg, rgba(178,250,112,1) 0%, rgba(178,250,112,0.75) 100%);
-  color: #101018;
-  border-color: rgba(0,0,0,0.15);
-}
-
-.nv-btn-secondary{
-  background: linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.16) 100%);
-  color: #ffffff;
-  border-color: rgba(255,255,255,0.55);
-}
-
-.nv-btn::before{
-  content:"";
-  position:absolute;
-  inset: 2px 10px auto 10px;
-  height: 40%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.35), rgba(255,255,255,0));
-  pointer-events:none;
-  opacity: 0.65;
-}
-
-/* Links */
 .nv-link{
-  color: #ffffff;
+  color:#ffffff;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 .nv-link.big{
   display:inline-block;
-  margin: 6px 0 2px;
+  margin-top: 6px;
   font-weight: 800;
   word-break: break-word;
 }
 
-/* Cards grid — MOBILE FIRST (stacked) */
-.nv-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
+.nv-micro{
+  margin-top: 10px;
+  color: rgba(255,255,255,0.9);
 }
 
+/* Grid for content cards */
+.nv-grid{
+  display:grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 860px){
+  .nv-grid{ grid-template-columns: 1fr 1fr; }
+  .nv-title{ font-size: 44px; }
+  .nv-hero{ padding: 26px 22px; }
+}
+
+/* Cards */
 .nv-card{
-  width: 100%;
   padding: 16px;
   color: rgba(255,255,255,0.92);
 }
@@ -631,7 +246,6 @@ img{
   margin: 0 0 10px;
   font-size: 18px;
   color: #ffffff;
-  letter-spacing: 0.02em;
   text-shadow: 0 10px 30px rgba(30, 10, 80, 0.30);
 }
 
@@ -643,26 +257,21 @@ img{
 
 .nv-bold{ font-weight: 800; margin-top: 10px; }
 
+/* Pills row (Start Here / CPS / Links) */
 .nv-pill-row{
   display:flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin: 10px 0 8px;
 }
 
 .nv-pill{
-  text-decoration: none;
   padding: 10px 14px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.24);
-  border: 1px solid rgba(255,255,255,0.40);
+  background: rgba(255,255,255,0.20);
+  border: 1px solid rgba(255,255,255,0.45);
   color: #fff;
+  text-decoration: none;
   font-weight: 800;
-}
-
-.nv-note{
-  margin: 10px 0 0;
-  color: rgba(255,255,255,0.9);
 }
 
 /* Footer card */
@@ -670,22 +279,4 @@ img{
   padding: 16px;
   text-align: center;
   color: rgba(255,255,255,0.92);
-}
-
-/* Mobile: buttons full width */
-@media (max-width: 520px){
-  .nv-btn{ width: 100%; min-width: 0; }
-}
-
-/* Desktop enhancements */
-@media (min-width: 860px){
-  .nv-title{ font-size: 44px; }
-  .nv-hero{ padding: 26px 22px; }
-
-  .nv-grid{
-    grid-template-columns: 1fr 1fr;
-  }
-  .nv-start{
-    grid-column: 1 / -1;
-  }
 }

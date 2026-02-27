@@ -753,4 +753,8 @@ img{
 /* Mobile: buttons full width */
 @media (max-width: 520px){
   .nv-btn{ width: 100%; min-width: 0; }
+}@media (max-width: 860px){
+  .nv-grid{
+    grid-template-columns: 1fr;
+  }
 }

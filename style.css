@@ -570,7 +570,8 @@ body:not(.nv-y2k){
   box-shadow:
     0 0 35px rgba(156,202,255,0.9),
     0 0 60px rgba(198,168,255,0.5);
-}/* ✨ Floating Moon Sparkles */
+}
+/* ✨ Floating Moon Sparkles */
 
 .rotm-container {
   position: relative;

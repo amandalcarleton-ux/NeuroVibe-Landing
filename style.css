@@ -390,79 +390,38 @@ body:not(.nv-y2k){
   font-size: 14px;
   font-weight: 800;
   opacity: 0.85;
-  letter-spacing: 0.05em;
-}/* 🌙 Rhythm of the Moon Feature */
-.rotm-feature {
-  margin: 60px 0;
-  padding: 50px 30px;
-}
-
+  letter-spacing: /* 🌙 Rhythm of the Moon Feature */
 .rotm-container {
   max-width: var(--container);
   margin: 0 auto;
   display: flex;
+  flex-direction: column; /* stacks image + text */
   align-items: center;
-  gap: 50px;
+  text-align: center;     /* centers text */
+  gap: 25px;
+
   background: var(--nv-glass);
   backdrop-filter: blur(18px);
-  border-radius: var(--nv-radius);
-  border: 1px solid var(--nv-border);
+
+  border-radius: 22px;
+  border: 2px solid rgba(255,255,255,0.5); /* 👈 visible border */
+
   box-shadow: var(--nv-shadow);
-  padding: 40px;
+  padding: 40px 25px;
+}.rotm-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .rotm-image img {
   width: 100%;
-  max-width: 380px;
+  max-width: 420px;
   border-radius: 18px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-
-.rotm-content {
-  flex: 1;
-}
-
-.rotm-eyebrow {
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--nv-purple-deep);
-  margin-bottom: 15px;
-  opacity: 0.8;
-}
-
-.rotm-quote {
-  font-size: 1.3rem;
+}.rotm-quote {
+  font-size: 1.4rem;
   line-height: 1.6;
-  font-weight: 500;
-  color: var(--nv-ink);
-  margin-bottom: 25px;
-}
-
-.rotm-button {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--nv-purple), var(--nv-blue));
-  color: var(--nv-white);
-  text-decoration: none;
   font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.rotm-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* 📱 Mobile */
-@media (max-width: 768px) {
-  .rotm-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .rotm-image img {
-    max-width: 100%;
-  }
+  color: var(--nv-ink);
+  margin-bottom: 20px;
 }

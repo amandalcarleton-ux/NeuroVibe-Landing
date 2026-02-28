@@ -354,6 +354,25 @@ body:not(.nv-y2k){
   border-radius: 18px;
   padding: 1.25rem;
 }
+/* ===== NeuroVibe Email Signup Section ===== */
+
+.nv-signup {
+  margin-top: 24px;
+}
+
+.nv-signup #mlb2-37803972.ml-form-embedContainer {
+  margin: 0 auto;
+}
+
+.nv-signup #mlb2-37803972 .ml-form-embedWrapper {
+  border-radius: 22px !important; /* match your glass radius */
+  box-shadow: var(--nv-shadow);
+}
+
+.nv-signup #mlb2-37803972 .ml-form-embedContent h4 {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 600 !important;
+}
 /* =========================
    Homepage Quote Block
    ========================= */

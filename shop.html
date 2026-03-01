@@ -1,4 +1,3 @@
-<!-- Save as: shop.html  (or picks.html) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +6,24 @@
   <title>NeuroVibe Shop | Top Picks for Real-Life Wellness</title>
   <meta name="description" content="The NeuroVibe Shop — curated tools for calm homes, supported moms, and functional everyday wellness. Updated weekly." />
   <link rel="canonical" href="https://neurovibe.site/shop.html" />
-
-  <!-- Your existing site stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- (Optional) If you already have a navbar include it here.
-       Otherwise, keep this simple header. -->
+  <!-- NAV (keep consistent across pages) -->
+  <header class="navbar">
+    <nav class="nav-menu">
+      <a href="about.html" class="nav-btn">ABOUT</a>
+      <a href="shop.html" class="nav-btn">SHOP</a>
+      <a href="https://neurovibes.gumroad.com" target="_blank" rel="noopener" class="nav-btn">GUIDES</a>
+      <a href="links.html" class="nav-btn">REFERRALS</a>
+      <a href="https://blog.neurovibe.site" target="_blank" rel="noopener" class="nav-btn nav-wide">BLOG</a>
+      <a href="contact.html" class="nav-btn">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- SHOP HERO -->
   <header class="nv-shop-hero">
     <div class="nv-container">
       <p class="nv-kicker">NeuroVibe</p>
@@ -29,23 +37,21 @@
         I only share products I genuinely recommend.
       </p>
 
-    <header class="navbar">
-  <nav class="nav-menu">
-    <a href="about.html" class="nav-btn">ABOUT</a>
-    <a href="shop.html" class="nav-btn">SHOP</a>
-    <a href="https://neurovibes.gumroad.com" target="_blank" rel="noopener" class="nav-btn">GUIDES</a>
-    <a href="links.html" class="nav-btn">REFERRALS</a>
-    <a href="https://blog.neurovibe.site" target="_blank" rel="noopener" class="nav-btn nav-wide">BLOG</a>
-    <a href="contact.html" class="nav-btn">CONTACT</a>
-  </nav>
-</header>
+      <nav class="nv-shop-nav" aria-label="Shop sections">
+        <a href="#featured">Featured This Week</a>
+        <a href="#calm-workspaces">Calm Workspaces</a>
+        <a href="#mom-essentials">Mom Life Essentials</a>
+        <a href="#renter-home">Renter-Friendly Home</a>
+        <a href="#smart-savings">Smart Savings</a>
+        <a href="#wellness-staples">Wellness Staples</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="nv-shop-main">
     <div class="nv-container">
 
-      <!-- =======================
-           FEATURED THIS WEEK
-      ======================== -->
+      <!-- FEATURED -->
       <section id="featured" class="nv-section">
         <div class="nv-section-head">
           <h2>Featured This Week</h2>
@@ -53,17 +59,13 @@
         </div>
 
         <div class="nv-grid">
-          <!-- Product Card (copy/paste more) -->
           <article class="nv-card">
             <div class="nv-card-media">
-              <!-- Replace src with your own uploaded image OR brand image URL (if allowed) -->
               <img src="images/placeholder-product.jpg" alt="Product name" loading="lazy" />
             </div>
             <div class="nv-card-body">
               <h3 class="nv-card-title">Product Name</h3>
-              <p class="nv-card-text">
-                One sentence WHY it matters (calm + practical). Example: “Makes morning routines smoother without adding extra steps.”
-              </p>
+              <p class="nv-card-text">One sentence WHY it matters (calm + practical).</p>
               <a class="nv-btn" href="https://example.com" target="_blank" rel="noopener sponsored">View Product</a>
               <p class="nv-card-note">Tip: keep descriptions benefit-based, not feature-heavy.</p>
             </div>
@@ -95,15 +97,11 @@
         </div>
       </section>
 
-      <!-- =======================
-           CALM WORKSPACES
-      ======================== -->
+      <!-- CALM WORKSPACES -->
       <section id="calm-workspaces" class="nv-section">
         <div class="nv-section-head">
           <h2>Calm Workspaces</h2>
-          <p class="nv-muted">
-            Your environment affects focus and stress. These are renter-friendly tools that support executive function without overwhelm.
-          </p>
+          <p class="nv-muted">Your environment affects focus and stress. These are renter-friendly tools that support executive function without overwhelm.</p>
         </div>
 
         <div class="nv-grid">
@@ -120,39 +118,31 @@
         </div>
       </section>
 
-      <!-- =======================
-     MOM LIFE ESSENTIALS
-======================== -->
-<section id="mom-essentials" class="nv-section">
-  <div class="nv-section-head">
-    <h2>Mom Life Essentials</h2>
-    <p class="nv-muted">Practical picks that reduce friction (especially on busy mornings).</p>
-  </div>
+      <!-- MOM LIFE ESSENTIALS -->
+      <section id="mom-essentials" class="nv-section">
+        <div class="nv-section-head">
+          <h2>Mom Life Essentials</h2>
+          <p class="nv-muted">Practical picks that reduce friction (especially on busy mornings).</p>
+        </div>
 
-  <article class="nv-card">
-  <div class="nv-card-media">
-    <img src="images/Bento.JPG"
-         alt="Bentgo rocket-themed kids lunch kit with lunch bag, bento box, and matching water bottle"
-         loading="lazy" />
-  </div>
-  <div class="nv-card-body">
-    <h3 class="nv-card-title">Bentgo Kids Lunch Kit (Rocket)</h3>
-    <p class="nv-card-text">A fun, organized lunch setup that makes school mornings smoother and less chaotic.</p>
-    <a class="nv-btn" href="https://fromrebel.pxf.io/jRWYzb" target="_blank" rel="noopener sponsored">View Pick</a>
-    <p class="nv-card-note">Affiliate link • prices may vary</p>
-  </div>
-</article>
-      <div class="nv-card-body">
-        <h3 class="nv-card-title">Bentgo Kids Lunch Kit (Rocket)</h3>
-        <p class="nv-card-text">A fun, organized lunch setup that makes school mornings smoother and less chaotic.</p>
-        <a class="nv-btn" href="https://fromrebel.pxf.io/jRWYzb" target="_blank" rel="noopener sponsored">View Pick</a>
-        <p class="nv-card-note">Affiliate link • prices may vary</p>
-      </div>
-    </article>
-i
-      <!-- =======================
-           RENTER-FRIENDLY HOME
-      ======================== -->
+        <div class="nv-grid">
+          <article class="nv-card">
+            <div class="nv-card-media">
+              <img src="images/Bento.JPG"
+                   alt="Bentgo rocket-themed kids lunch kit with lunch bag, bento box, and matching water bottle"
+                   loading="lazy" />
+            </div>
+            <div class="nv-card-body">
+              <h3 class="nv-card-title">Bentgo Kids Lunch Kit (Rocket)</h3>
+              <p class="nv-card-text">A fun, organized lunch setup that makes school mornings smoother and less chaotic.</p>
+              <a class="nv-btn" href="https://fromrebel.pxf.io/jRWYzb" target="_blank" rel="noopener sponsored">View Pick</a>
+              <p class="nv-card-note">Affiliate link • prices may vary</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- RENTER-FRIENDLY HOME -->
       <section id="renter-home" class="nv-section">
         <div class="nv-section-head">
           <h2>Renter-Friendly Home</h2>
@@ -173,9 +163,7 @@ i
         </div>
       </section>
 
-      <!-- =======================
-           SMART SAVINGS
-      ======================== -->
+      <!-- SMART SAVINGS -->
       <section id="smart-savings" class="nv-section">
         <div class="nv-section-head">
           <h2>Smart Savings</h2>
@@ -189,16 +177,14 @@ i
             </div>
             <div class="nv-card-body">
               <h3 class="nv-card-title">REBEL Top Pick</h3>
-              <p class="nv-card-text">Explain the value: “Same brand, better price — perfect for growing families.”</p>
+              <p class="nv-card-text">Same trusted brand, better price — perfect for growing families.</p>
               <a class="nv-btn" href="https://example.com" target="_blank" rel="noopener sponsored">View Product</a>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- =======================
-           WELLNESS STAPLES
-      ======================== -->
+      <!-- WELLNESS STAPLES -->
       <section id="wellness-staples" class="nv-section">
         <div class="nv-section-head">
           <h2>Wellness Staples</h2>
@@ -219,25 +205,18 @@ i
         </div>
       </section>
 
+      <!-- Return Block -->
       <section class="nv-return">
-  <div class="nv-container nv-return-inner">
-
-    <img src="images/logo.png" alt="NeuroVibe Logo" class="nv-return-logo" />
-
-    <h2 class="nv-return-title">Back to NeuroVibe</h2>
-
-    <p class="nv-return-text">
-      Gentle growth. Nervous system safety. Real-life wellness.
-    </p>
-
-    <div class="nv-return-actions">
-      <a href="index.html" class="nv-return-btn">Return to Home</a>
-      <a href="https://neurovibes.gumroad.com" class="nv-return-btn nv-return-secondary" target="_blank" rel="noopener">Explore Guides</a>
-    </div>
-
-  </div>
-</section>
-</section>
+        <div class="nv-container nv-return-inner">
+          <img src="images/logo.png" alt="NeuroVibe Logo" class="nv-return-logo" />
+          <h2 class="nv-return-title">Back to NeuroVibe</h2>
+          <p class="nv-return-text">Gentle growth. Nervous system safety. Real-life wellness.</p>
+          <div class="nv-return-actions">
+            <a href="index.html" class="nv-return-btn">Return to Home</a>
+            <a href="https://neurovibes.gumroad.com" class="nv-return-btn nv-return-secondary" target="_blank" rel="noopener">Explore Guides</a>
+          </div>
+        </div>
+      </section>
 
     </div>
   </main>

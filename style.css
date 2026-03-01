@@ -830,3 +830,32 @@ body:not(.nv-y2k){
 .nv-footer-text{ color: rgba(255,255,255,0.95); margin: 0 0 10px; }
 .nv-footer-mini{ color: rgba(255,255,255,0.82); font-size: 13px; margin: 0 0 10px; }
 .nv-footer-links a{ color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+/* ===== POP Footer Links ===== */
+
+.nv-footer-links {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.nv-footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(6px);
+}
+
+.nv-footer-links a:hover {
+  background: linear-gradient(
+    135deg,
+    var(--nv-lilac),
+    var(--nv-blue)
+  );
+  color: #2e1a47;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(156,202,255,0.5);
+}

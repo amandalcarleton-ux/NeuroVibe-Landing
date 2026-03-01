@@ -256,7 +256,20 @@ body{
   margin-top: 10px;
   color: rgba(255,255,255,0.9);
 }
+/* Shop Sections */
+.nv-section{
+  margin: 28px 0;
+  padding: 24px 18px;
+  border-radius: var(--nv-radius);
 
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.35);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 14px 40px rgba(60,30,120,0.18);
+}
 /* =========================
    GRID / CARDS
    ========================= */

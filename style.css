@@ -500,7 +500,27 @@ body{
     0 18px 34px rgba(60,30,120,0.32);
   filter: saturate(1.05);
 }
+/* Featured section styling */
+.nv-featured-card{
+  position: relative;
+}
 
+.nv-featured-badge{
+  display: inline-block;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .2px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+
+  background: rgba(178, 250, 112, 0.95);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+#featured .nv-grid{
+  align-items: stretch;
+}
 /* =========================
    FOOTER NAV (pretty buttons)
    ========================= */

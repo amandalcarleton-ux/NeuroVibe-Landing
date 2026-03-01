@@ -624,4 +624,144 @@ body:not(.nv-y2k){
   0%   { transform: translateY(0px); }
   50%  { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
+}/* =========================
+   SHOP PAGE (shop.html)
+   Clean Modern Layout
+   ========================= */
+
+.nv-container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.nv-shop-hero{
+  padding: 34px 0 18px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(16,16,24,0.08);
+}
+
+.nv-shop-title{
+  font-size: 34px;
+  line-height: 1.1;
+  margin: 6px 0 10px;
+  color: var(--nv-ink);
+}
+
+.nv-shop-subtitle{
+  max-width: 65ch;
+  color: rgba(16,16,24,0.78);
+  margin-bottom: 10px;
+}
+
+.nv-disclosure{
+  font-size: 13px;
+  color: rgba(16,16,24,0.72);
+  margin: 10px 0 14px;
+}
+
+.nv-shop-nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.nv-shop-nav a{
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(107,92,255,0.10);
+  border: 1px solid rgba(107,92,255,0.22);
+  color: rgba(16,16,24,0.9);
+}
+
+.nv-shop-nav a:hover{
+  background: rgba(107,92,255,0.16);
+}
+
+.nv-shop-main{
+  padding: 20px 0 60px;
+}
+
+.nv-section{
+  padding: 26px 0;
+}
+
+.nv-section-head h2{
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: var(--nv-ink);
+}
+
+.nv-muted{
+  color: rgba(16,16,24,0.70);
+}
+
+/* Cards: clean modern */
+.nv-card{
+  background: #ffffff;
+  border: 1px solid rgba(16,16,24,0.10);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(16,16,24,0.08);
+  overflow: hidden;
+  padding: 0;              /* override your global nv-card padding */
+  color: var(--nv-ink);    /* override white text */
+}
+
+.nv-card-media{
+  background: #f6f6fb;
+}
+
+.nv-card-media img{
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.nv-card-body{
+  padding: 16px 16px 18px;
+}
+
+.nv-card-title{
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.nv-card-text{
+  color: rgba(16,16,24,0.75);
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.nv-card-note{
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(16,16,24,0.55);
+}
+
+/* Button for shop */
+.nv-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  background: var(--nv-purple);
+  color: #fff;
+  border: 1px solid rgba(16,16,24,0.08);
+  box-shadow: 0 10px 22px rgba(107,92,255,0.25);
+  transition: transform .15s ease, background .15s ease;
+}
+
+.nv-btn:hover{
+  transform: translateY(-1px);
+  background: #513cbc;
+}
+
+@media (min-width: 860px){
+  .nv-grid{ grid-template-columns: repeat(3, 1fr); }
 }

@@ -458,4 +458,90 @@ body{
     border-radius: 999px;
     text-align: center;
   }
+}/* =========================
+   SHOP PAGE STYLES (missing)
+   ========================= */
+.nv-shop-title{
+  font-size: 34px;
+  line-height: 1.1;
+  margin: 6px 0 10px;
+  color: #fff;
+  text-shadow: 0 10px 30px rgba(30, 10, 80, 0.35);
+}
+
+.nv-shop-subtitle{
+  color: rgba(255,255,255,0.92);
+  max-width: 60ch;
+  margin: 0 auto 14px;
+}
+
+.nv-disclosure{
+  margin: 12px auto 16px;
+  max-width: 70ch;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 14px;
+  padding: 12px 12px;
+}
+
+.nv-shop-nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 14px 0 6px;
+}
+
+.nv-shop-nav a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition: transform .15s ease, background .15s ease;
+}
+
+.nv-shop-nav a:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.18);
+}
+
+.nv-shop-main{
+  padding: 18px 0 30px;
+}
+
+.nv-card-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Shop footer text */
+.nv-shop-footer{
+  margin-top: 24px;
+  padding: 18px;
+}
+
+.nv-footer-text{
+  color: rgba(255,255,255,0.95);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.nv-footer-mini{
+  color: rgba(255,255,255,0.82);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 14px;
 }

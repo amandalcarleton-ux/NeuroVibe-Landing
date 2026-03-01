@@ -811,6 +811,16 @@ body:not(.nv-y2k){
   color: #2e1a47;
   border: 2px solid var(--nv-purple-deep);
   text-decoration: none;
+}.nv-return-btn {
+  background: linear-gradient(
+    135deg,
+    var(--nv-lilac),
+    var(--nv-blue),
+    var(--nv-pink)
+  );
+  box-shadow:
+    0 0 18px rgba(198,168,255,0.6),
+    0 12px 28px rgba(60,30,120,0.3);
 }
 
 .nv-return-btn.nv-return-secondary{

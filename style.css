@@ -52,12 +52,19 @@ body{
   padding: 18px 14px 34px;
 }
 
-/* Container */
+/* Container helpers */
 .nv-wrap{
   max-width: var(--container);
   margin: 0 auto;
   display: grid;
   gap: 14px;
+}
+
+/* Your HTML uses nv-container (add it so centering works everywhere) */
+.nv-container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 14px;
 }
 
 /* Glass card */
@@ -76,6 +83,7 @@ body{
   border-bottom: 1px solid rgba(255,255,255,0.22);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  padding: 18px 0;
 }
 
 /* =========================
@@ -245,7 +253,6 @@ body{
 
 /* =========================
    SHOP: (OPTIONAL) RETURN BLOCK
-   If you remove the return section from HTML, this can stay harmless.
    ========================= */
 .nv-return{
   margin-top: 18px;
@@ -319,17 +326,14 @@ body{
 }
 
 /* =========================
-   FOOTER NAV (move your "pretty buttons" here)
+   FOOTER NAV (pretty buttons)
    ========================= */
-
-/* Footer container helper (won’t break if you don’t have it) */
 .nv-footer{
   margin-top: 22px;
   padding: 18px 14px 26px;
   text-align: center;
 }
 
-/* Gradient button style for bottom nav */
 .footer-nav{
   display:flex;
   justify-content:center;
@@ -356,9 +360,8 @@ body{
   filter: saturate(1.05);
 }
 
-/* Better mobile footer buttons */
+/* Better mobile footer buttons (✅ CLOSED MEDIA QUERY) */
 @media (max-width: 520px){
-
   .footer-nav{
     flex-direction: column;
     align-items: center;
@@ -371,7 +374,7 @@ body{
     padding: 12px 20px;
     font-size: 16px;
   }
-
+}
 
 /* Extra footer links (if you use them) */
 .nv-footer-links{

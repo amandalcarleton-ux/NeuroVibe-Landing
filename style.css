@@ -316,43 +316,22 @@ body{
   transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
 }
 
-.nv-return-btn:hover{
+.footer-nav a {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(135deg, #c6a8ff, #9ccaff, #ffb6e1);
+  color: #101018;
+  border: 3px solid #4b2e83;
+  box-shadow: 0 10px 30px rgba(75, 46, 131, 0.25);
+  transition: all 0.3s ease;
+}
+
+.footer-nav a:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 0 24px rgba(198,168,255,0.75),
-    0 18px 36px rgba(60,30,120,0.35);
-  filter: brightness(1.03);
-}
-
-.nv-return-btn.nv-return-secondary{
-  background: rgba(255,255,255,0.16);
-  color: #fff;
-  border: 2px solid rgba(255,255,255,0.55);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
-}
-
-.nv-return-btn.nv-return-secondary:hover{
-  background: rgba(255,255,255,0.22);
-}
-
-/* Footer block */
-.nv-shop-footer{
-  margin-top: 14px;
-  padding: 18px 16px;
-  text-align: center;
-  background: rgba(81,60,188,0.25);
-  border: 1px solid rgba(255,255,255,0.28);
-}
-
-.nv-footer-text{
-  color: rgba(255,255,255,0.95);
-  margin: 0 0 10px;
-}
-
-.nv-footer-mini{
-  color: rgba(255,255,255,0.82);
-  font-size: 13px;
-  margin: 0 0 12px;
+  box-shadow: 0 14px 35px rgba(75, 46, 131, 0.35);
 }
 
 /* ✅ Make bottom links REALLY pop */

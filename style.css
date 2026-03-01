@@ -1,5 +1,6 @@
 /* =========================
    NeuroVibe — Single Clean Theme (Use on ALL pages)
+   FIXED + CLEANED (no broken braces, better footer buttons)
    ========================= */
 
 /* Root tokens */
@@ -36,13 +37,6 @@ body{
   line-height: 1.6;
 }
 
-/* Default light background only when NOT using nv-y2k */
-.nv-shop-hero{
-  background: rgba(255,255,255,0.10);
-  border-bottom: 1px solid rgba(255,255,255,0.22);
-  backdrop-filter: blur(10px);
-}
-}
 /* Background used across site */
 .nv-y2k{
   background:
@@ -72,6 +66,14 @@ body{
   border: 1px solid var(--nv-border);
   border-radius: var(--nv-radius);
   box-shadow: var(--nv-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Light glass hero (used on shop pages when needed) */
+.nv-shop-hero{
+  background: rgba(255,255,255,0.10);
+  border-bottom: 1px solid rgba(255,255,255,0.22);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -106,7 +108,6 @@ body{
   padding: 12px 16px;
   border-radius: 999px;
   font-weight: 800;
-  text-decoration: none;
   color: #ffffff;
   border: 2px solid rgba(255,255,255,0.55);
   background: rgba(255,255,255,0.12);
@@ -125,7 +126,7 @@ body{
 }
 
 /* =========================
-   BUTTONS (your lilac + dark purple outline)
+   BUTTONS (primary/secondary)
    ========================= */
 .nv-btn{
   display:inline-flex;
@@ -134,7 +135,6 @@ body{
   padding: 14px 22px;
   border-radius: 999px;
   font-weight: 800;
-  text-decoration: none;
   transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
   min-width: 190px;
   position: relative;
@@ -156,13 +156,12 @@ body{
 
 .nv-btn:hover{ transform: translateY(-2px); }
 
-/* Make buttons full width on small screens */
 @media (max-width: 520px){
   .nv-btn{ width: 100%; min-width: 0; }
 }
 
 /* =========================
-   ABOUT HERO + CARDS (works everywhere)
+   HERO + TEXT (works everywhere)
    ========================= */
 .nv-hero{
   padding: 18px 16px;
@@ -229,16 +228,14 @@ body{
   color: rgba(255,255,255,0.9);
 }
 
-/* Grid for content cards */
+/* =========================
+   GRID / CARDS
+   ========================= */
 .nv-grid{
   display:grid;
   gap: 14px;
   grid-template-columns: 1fr;
 }
-
-/* =========================
-   SHOP GRID FIX (this was broken)
-   ========================= */
 
 @media (min-width: 860px){
   .nv-grid{
@@ -247,15 +244,16 @@ body{
 }
 
 /* =========================
-   SHOP: Return Block + Footer
+   SHOP: (OPTIONAL) RETURN BLOCK
+   If you remove the return section from HTML, this can stay harmless.
    ========================= */
-
 .nv-return{
   margin-top: 18px;
   padding: 22px 16px;
   text-align: center;
   background: rgba(255,255,255,0.14);
   border: 1px solid rgba(255,255,255,0.38);
+  border-radius: var(--nv-radius);
 }
 
 .nv-return-inner{
@@ -274,9 +272,7 @@ body{
   transition: transform 0.25s ease;
 }
 
-.nv-return-logo:hover{
-  transform: scale(1.05);
-}
+.nv-return-logo:hover{ transform: scale(1.05); }
 
 .nv-return-title{
   color: #fff;
@@ -296,7 +292,7 @@ body{
   flex-wrap: wrap;
 }
 
-/* Return buttons — glow + Y2K pop */
+/* Return buttons */
 .nv-return-btn{
   display: inline-flex;
   align-items: center;
@@ -304,7 +300,6 @@ body{
   padding: 12px 18px;
   border-radius: 999px;
   font-weight: 900;
-  text-decoration: none;
 
   background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
   color: #2e1a47;
@@ -315,26 +310,58 @@ body{
     0 14px 30px rgba(60,30,120,0.28);
   transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
 }
+.nv-return-btn:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 22px rgba(198,168,255,0.70),
+    0 18px 34px rgba(60,30,120,0.32);
+  filter: saturate(1.05);
+}
 
-.footer-nav a {
+/* =========================
+   FOOTER NAV (move your "pretty buttons" here)
+   ========================= */
+
+/* Footer container helper (won’t break if you don’t have it) */
+.nv-footer{
+  margin-top: 22px;
+  padding: 18px 14px 26px;
+  text-align: center;
+}
+
+/* Gradient button style for bottom nav */
+.footer-nav{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap: 12px;
+}
+
+.footer-nav a{
   display: inline-block;
   padding: 14px 28px;
   border-radius: 30px;
-  font-weight: 600;
+  font-weight: 800;
   text-decoration: none;
-  background: linear-gradient(135deg, #c6a8ff, #9ccaff, #ffb6e1);
-  color: #101018;
-  border: 3px solid #4b2e83;
+  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
+  color: var(--nv-ink);
+  border: 3px solid var(--nv-purple-deep);
   box-shadow: 0 10px 30px rgba(75, 46, 131, 0.25);
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
 
-.footer-nav a:hover {
+.footer-nav a:hover{
   transform: translateY(-2px);
   box-shadow: 0 14px 35px rgba(75, 46, 131, 0.35);
+  filter: saturate(1.05);
 }
 
-/* ✅ Make bottom links REALLY pop */
+/* Optional: make footer buttons full width on tiny phones */
+@media (max-width: 420px){
+  .footer-nav a{ width: 100%; }
+}
+
+/* Extra footer links (if you use them) */
 .nv-footer-links{
   margin-top: 12px;
   font-weight: 900;
@@ -347,13 +374,12 @@ body{
 
 .nv-footer-links a{
   color: #ffffff;
-  text-decoration: none;
   padding: 8px 14px;
   border-radius: 999px;
-
   background: rgba(255,255,255,0.12);
   border: 1px solid rgba(255,255,255,0.35);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 
   box-shadow:
     0 0 14px rgba(126,230,255,0.25),

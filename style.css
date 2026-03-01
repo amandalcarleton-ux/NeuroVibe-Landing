@@ -271,13 +271,103 @@ body{
   box-shadow: 0 14px 40px rgba(60,30,120,0.18);
 }
 .cps-guide-mockup {
-  max-width: 380px;   /* Adjust this number */
+  max-width: 380px;
   width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
+}.cps-guide-mockup{
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
 }
 /* =========================
+   INDEX HERO LAYOUT (centering + clean grid)
+   ========================= */
+
+/* Keep hero content centered inside the page wrapper */
+.hero{
+  width: 100%;
+}
+
+/* Make the hero grid behave like a real centered container */
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: start;
+
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 18px 16px;
+}
+
+/* Desktop: 2 columns */
+@media (min-width: 900px){
+  .hero-grid{
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 22px;
+    align-items: center;
+  }
+}
+
+/* Make inner hero content not span full width weirdly */
+.hero-overlay-content{
+  max-width: 680px;
+  margin: 0 auto; /* centers text block within its column */
+}
+
+/* Headings + paragraphs spacing (prevents "floating left" vibe) */
+.hero-overlay-content h1{
+  margin: 10px 0 12px;
+  line-height: 1.12;
+}
+
+.hero-overlay-content p{
+  margin: 0 0 12px;
+}
+
+/* Right column alignment */
+.hero-right{
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  justify-items: center;
+}
+
+/* Buttons under CPS mockup centered */
+.hero-actions{
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+/* Make callouts centered and not too wide */
+.community-callout{
+  margin-top: 14px;
+  padding: 16px 16px;
+  border-radius: var(--nv-radius);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.28);
+}
+
+.community-callout h2{
+  margin: 0 0 8px;
+}
+
+.community-callout p{
+  margin: 0 0 12px;
+}
+
+/* MailerLite embed wrapper */
+.nv-signup{
+  padding: 18px 0 0;
+}
+
+.nv-signup .ml-embedded{
+  max-width: 520px;
+  margin: 0 auto;
+}/* =========================
    GRID / CARDS
    ========================= */
 .nv-grid{
@@ -551,7 +641,7 @@ body{
   font-size: 13px;
   line-height: 1.5;
   margin-bottom: 14px;
-}.hero-logo{
+.hero-logo{
   display:flex;
   justify-content:flex-start;
   align-items:center;
@@ -559,12 +649,9 @@ body{
 }
 
 .site-logo{
-  width: min(260px, 70vw);
+  width: min(320px, 80vw);
   height: auto;
+  display:block;
   filter: drop-shadow(0 0 18px rgba(200,181,255,0.55))
           drop-shadow(0 0 28px rgba(255,182,225,0.35));
-}.site-logo{
-  width: 320px;
-  max-width: 80%;
-  height: auto;
 }

@@ -811,4 +811,24 @@ body:not(.nv-y2k){
 .nv-return-btn:hover{
   transform: translateY(-2px);
   box-shadow: 0 14px 30px rgba(0,0,0,0.2);
+}/* Return Logo + Actions */
+
+.nv-return-logo{
+  width: 160px;
+  margin: 0 auto 18px;
+  display: block;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
+}
+
+.nv-return-actions{
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nv-return-secondary{
+  background: rgba(255,255,255,0.18);
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.6);
 }

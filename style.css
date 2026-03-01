@@ -37,8 +37,11 @@ body{
 }
 
 /* Default light background only when NOT using nv-y2k */
-body:not(.nv-y2k){
-  background: #f7f7fb;
+.nv-shop-hero{
+  background: rgba(255,255,255,0.10);
+  border-bottom: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(10px);
+}
 }
 /* Background used across site */
 .nv-y2k{
@@ -233,537 +236,20 @@ body:not(.nv-y2k){
   grid-template-columns: 1fr;
 }
 
-@media (min-width: 860px){
-  .nv-grid{ grid-template-columns: 1fr 1fr; }
-  .nv-title{ font-size: 44px; }
-  .nv-hero{ padding: 26px 22px; }
-}
+/* =========================
+   SHOP GRID FIX (this was broken)
+   ========================= */
 
-/* Cards */
-.nv-card{
-  padding: 16px;
-  color: rgba(255,255,255,0.92);
+@media (min-width: 860px){
+  .nv-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* =========================
-   Family Section
-   ========================= */
-.nv-family{
-  text-align: center;
-}
-
-.nv-family-photo{
-  width: 100%;
-  max-width: 520px;
-  margin: 16px auto 18px;
-  border-radius: 18px;
-  box-shadow: 0 20px 45px rgba(40, 20, 100, 0.35);
-  border: 2px solid rgba(255,255,255,0.45);
-}
-
-.nv-h2{
-  margin: 0 0 10px;
-  font-size: 18px;
-  color: #ffffff;
-  text-shadow: 0 10px 30px rgba(30, 10, 80, 0.30);
-}
-
-.nv-list{
-  margin: 10px 0 0;
-  padding-left: 18px;
-  line-height: 1.55;
-}
-
-.nv-bold{
-  font-weight: 800;
-  margin-top: 10px;
-}
-
-/* Pills row (Start Here / CPS / Links) */
-.nv-pill-row{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.nv-pill{
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.20);
-  border: 1px solid rgba(255,255,255,0.45);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-/* Footer card */
-.nv-footer{
-  padding: 16px;
-  text-align: center;
-  color: rgba(255,255,255,0.92);
-}
-
-/* ==========================
-   HOMEPAGE 2-COLUMN HERO
-   ========================== */
-
-.nv-page .nv-wrap{
-  width: min(1120px, calc(100% - 2rem));
-  margin: 0 auto;
-}
-
-.hero.hero-overlay{
-  padding: 3.5rem 0;
-}
-
-.hero-grid{
-  display: grid;
-  gap: 2rem;
-  align-items: start;
-}
-
-@media (max-width: 899px){
-  .hero-grid{ grid-template-columns: 1fr; }
-}
-
-@media (min-width: 900px){
-  .hero-grid{ grid-template-columns: 1.15fr 0.85fr; }
-}
-
-.hero-left,
-.hero-right{
-  min-width: 0;
-}
-
-.cps-guide-mockup{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 18px;
-  margin-bottom: 1rem;
-}
-
-.hero-actions{
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin: 0.75rem 0 1.25rem;
-}
-
-.twitch-spot{
-  border-radius: 18px;
-  padding: 1.25rem;
-}
-/* ===== NeuroVibe Email Signup Section ===== */
-
-.nv-signup {
-  margin-top: 24px;
-}
-
-.nv-signup #mlb2-37803972.ml-form-embedContainer {
-  margin: 0 auto;
-}
-
-.nv-signup #mlb2-37803972 .ml-form-embedWrapper {
-  border-radius: 22px !important; /* match your glass radius */
-  box-shadow: var(--nv-shadow);
-}
-
-.nv-signup #mlb2-37803972 .ml-form-embedContent h4 {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 600 !important;
-}
-
-/* =========================
-   MailerLite Embed — NeuroVibe Polish
+   SHOP: Return Block + Footer
    ========================= */
 
-.nv-signup {
-  padding: 22px 14px !important;
-  margin-top: 18px;
-}
-
-/* Center + constrain nicely */
-.nv-signup #mlb2-37803972.ml-form-embedContainer {
-  width: 100% !important;
-  display: block !important;
-  margin: 0 auto !important;
-}
-
-/* Make the card feel like your site */
-.nv-signup #mlb2-37803972 .ml-form-embedWrapper {
-  width: 100% !important;
-  max-width: 520px !important;
-  border-radius: 22px !important;
-  overflow: hidden !important;
-
-  /* soft glassy look */
-  background: rgba(255, 255, 255, 0.16) !important;
-  border: 1px solid rgba(255, 255, 255, 0.38) !important;
-  box-shadow: 0 18px 55px rgba(60, 30, 120, 0.22) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-/* Give the inside breathing room */
-.nv-signup #mlb2-37803972 .ml-form-embedBody {
-  padding: 22px 22px 10px 22px !important;
-}
-
-/* Typography to match NeuroVibe */
-.nv-signup #mlb2-37803972 .ml-form-embedContent h4 {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 22px !important;
-  line-height: 1.2 !important;
-  margin: 0 0 10px 0 !important;
-  color: #101018 !important;
-}
-
-.nv-signup #mlb2-37803972 .ml-form-embedContent p {
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 14px !important;
-  line-height: 1.5 !important;
-  margin: 0 0 14px 0 !important;
-  color: rgba(16,16,24,0.85) !important;
-}
-
-/* Input styling */
-.nv-signup #mlb2-37803972 input[type="email"] {
-  border-radius: 14px !important;
-  border: 1px solid rgba(255,255,255,0.55) !important;
-  background: rgba(255,255,255,0.85) !important;
-  padding: 12px 12px !important;
-  font-family: 'Poppins', sans-serif !important;
-  outline: none !important;
-}
-
-.nv-signup #mlb2-37803972 input[type="email"]:focus {
-  border-color: rgba(107,92,255,0.8) !important;
-  box-shadow: 0 0 0 4px rgba(107,92,255,0.18) !important;
-}
-
-/* Button styling (pill + glow) */
-.nv-signup #mlb2-37803972 .ml-form-embedSubmit button {
-  border-radius: 999px !important;
-  padding: 12px 14px !important;
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.2px !important;
-  background: #6b5cff !important;
-  box-shadow: 0 10px 24px rgba(107,92,255,0.35) !important;
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease !important;
-}
-
-.nv-signup #mlb2-37803972 .ml-form-embedSubmit button:hover {
-  background: #513cbc !important;
-  transform: translateY(-1px);
-  box-shadow: 0 14px 28px rgba(107,92,255,0.42) !important;
-}
-
-/* Success message spacing */
-.nv-signup #mlb2-37803972 .ml-form-successBody {
-  padding: 22px !important;
-}/* =========================
-   Homepage Quote Block
-   ========================= */
-
-.nv-quote{
-  margin-top: 28px;
-  padding: 18px 22px;
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: 600;
-  color: #ffffff;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.35);
-  border-radius: 18px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 18px 45px rgba(40, 20, 100, 0.25);
-  position: relative;
-}
-
-.nv-quote::before{
-  content: "“";
-  position: absolute;
-  top: -18px;
-  left: 14px;
-  font-size: 48px;
-  font-weight: 800;
-  color: rgba(255,255,255,0.35);
-}
-
-.nv-quote-author{
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: 800;
-  opacity: 0.85;
-  letter-spacing: 0.06em;
-}
- .nv-quote-author{
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: 800;
-  opacity: 0.85;
-  letter-spacing: 0.06em;
-}
-
-/* =========================================
-   🌙 Rhythm of the Moon — Magical Glow + Sparkles
-   ========================================= */
-
-.rotm-container{
-  max-width: var(--container);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 25px;
-
-  padding: 45px 30px;
-  border-radius: 28px;
-
-  position: relative;
-  overflow: hidden;
-
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.25),
-    rgba(255,255,255,0.12)
-  );
-
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-
-  border: 1px solid rgba(255,255,255,0.6);
-
-  box-shadow:
-    0 0 60px rgba(156,202,255,0.45),
-    0 0 100px rgba(198,168,255,0.25),
-    0 25px 60px rgba(60,30,120,0.25);
-}
-
-.rotm-image,
-.rotm-content{
-  position: relative;
-  z-index: 1;
-}
-
-.rotm-image{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.rotm-image img{
-  width: 100%;
-  max-width: 420px;
-  border-radius: 22px;
-  box-shadow:
-    0 0 40px rgba(255,255,255,0.4),
-    0 0 60px rgba(156,202,255,0.3);
-}
-
-.rotm-quote{
-  font-size: 1.5rem;
-  line-height: 1.7;
-  font-weight: 600;
-  color: var(--nv-ink);
-  margin-bottom: 20px;
-}
-
-.rotm-button{
-  display: inline-block;
-  padding: 14px 28px;
-  border-radius: 999px;
-  background: linear-gradient(
-    135deg,
-    var(--nv-purple),
-    var(--nv-blue),
-    var(--nv-lilac)
-  );
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 0 25px rgba(156,202,255,0.6);
-  transition: 0.3s ease;
-}
-
-.rotm-button:hover{
-  transform: translateY(-3px);
-  box-shadow:
-    0 0 35px rgba(156,202,255,0.9),
-    0 0 60px rgba(198,168,255,0.5);
-}
-
-/* ✨ Floating Moon Sparkles */
-
-.moon-sparkles{
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.6;
-  mix-blend-mode: screen;
-
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 1px, transparent 2px),
-    radial-gradient(circle at 70% 60%, rgba(255,255,255,0.6) 1px, transparent 2px),
-    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.7) 1px, transparent 2px),
-    radial-gradient(circle at 85% 20%, rgba(255,255,255,0.5) 1px, transparent 2px),
-    radial-gradient(circle at 60% 40%, rgba(198,168,255,0.6) 1px, transparent 2px);
-
-  animation: sparkleFloat 18s linear infinite;
-}
-
-@keyframes sparkleFloat{
-  0%   { transform: translateY(0px); }
-  50%  { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
-}/* =========================
-   SHOP PAGE (shop.html)
-   Clean Modern Layout
-   ========================= */
-
-.nv-container{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 14px;
-}
-
-.nv-shop-hero{
-  padding: 34px 0 18px;
-  background: #ffffff;
-  border-bottom: 1px solid rgba(16,16,24,0.08);
-}
-
-.nv-shop-title{
-  font-size: 34px;
-  line-height: 1.1;
-  margin: 6px 0 10px;
-  color: var(--nv-ink);
-}
-
-.nv-shop-subtitle{
-  max-width: 65ch;
-  color: rgba(16,16,24,0.78);
-  margin-bottom: 10px;
-}
-
-.nv-disclosure{
-  font-size: 13px;
-  color: rgba(16,16,24,0.72);
-  margin: 10px 0 14px;
-}
-
-.nv-shop-nav{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.nv-shop-nav a{
-  font-weight: 700;
-  font-size: 13px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(107,92,255,0.10);
-  border: 1px solid rgba(107,92,255,0.22);
-  color: rgba(16,16,24,0.9);
-}
-
-.nv-shop-nav a:hover{
-  background: rgba(107,92,255,0.16);
-}
-
-.nv-shop-main{
-  padding: 20px 0 60px;
-}
-
-.nv-section{
-  padding: 26px 0;
-}
-
-.nv-section-head h2{
-  font-size: 22px;
-  margin-bottom: 6px;
-  color: var(--nv-ink);
-}
-
-.nv-muted{
-  color: rgba(16,16,24,0.70);
-}
-
-/* Cards: clean modern */
-.nv-card{
-  background: #ffffff;
-  border: 1px solid rgba(16,16,24,0.10);
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(16,16,24,0.08);
-  overflow: hidden;
-  padding: 0;              /* override your global nv-card padding */
-  color: var(--nv-ink);    /* override white text */
-}
-
-.nv-card-media{
-  background: #f6f6fb;
-}
-
-.nv-card-media img{
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-}
-
-.nv-card-body{
-  padding: 16px 16px 18px;
-}
-
-.nv-card-title{
-  font-size: 16px;
-  font-weight: 800;
-  margin-bottom: 6px;
-}
-
-.nv-card-text{
-  color: rgba(16,16,24,0.75);
-  margin-bottom: 12px;
-  font-size: 14px;
-}
-
-.nv-card-note{
-  margin-top: 10px;
-  font-size: 12px;
-  color: rgba(16,16,24,0.55);
-}
-
-/* Button for shop */
-.nv-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 16px;
-  border-radius: 999px;
-  font-weight: 800;
-  background: var(--nv-purple);
-  color: #fff;
-  border: 1px solid rgba(16,16,24,0.08);
-  box-shadow: 0 10px 22px rgba(107,92,255,0.25);
-  transition: transform .15s ease, background .15s ease;
-}
-
-.nv-btn:hover{
-  transform: translateY(-1px);
-  background: #513cbc;
-}
-
-@media (min-width: 860px){
-  .nv-grid{ grid-template-columns: repeat(3, /* Shop Return Block + Footer */
 .nv-return{
   margin-top: 18px;
   padding: 22px 16px;
@@ -772,14 +258,24 @@ body:not(.nv-y2k){
   border: 1px solid rgba(255,255,255,0.38);
 }
 
-.nv-return-inner{ max-width: var(--container); margin: 0 auto; }
+.nv-return-inner{
+  max-width: var(--container);
+  margin: 0 auto;
+}
 
 .nv-return-logo{
   width: 160px;
   max-width: 60%;
-  margin: 0 auto 12px;
+  margin: 0 auto 14px;
   display: block;
-  filter: drop-shadow(0 0 18px rgba(200,181,255,0.55));
+  filter:
+    drop-shadow(0 0 18px rgba(200,181,255,0.55))
+    drop-shadow(0 0 28px rgba(255,182,225,0.35));
+  transition: transform 0.25s ease;
+}
+
+.nv-return-logo:hover{
+  transform: scale(1.05);
 }
 
 .nv-return-title{
@@ -800,35 +296,46 @@ body:not(.nv-y2k){
   flex-wrap: wrap;
 }
 
+/* Return buttons — glow + Y2K pop */
 .nv-return-btn{
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 12px 18px;
   border-radius: 999px;
-  font-weight: 800;
-  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue));
+  font-weight: 900;
+  text-decoration: none;
+
+  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
   color: #2e1a47;
   border: 2px solid var(--nv-purple-deep);
-  text-decoration: none;
-}.nv-return-btn {
-  background: linear-gradient(
-    135deg,
-    var(--nv-lilac),
-    var(--nv-blue),
-    var(--nv-pink)
-  );
+
   box-shadow:
-    0 0 18px rgba(198,168,255,0.6),
-    0 12px 28px rgba(60,30,120,0.3);
+    0 0 18px rgba(198,168,255,0.55),
+    0 14px 30px rgba(60,30,120,0.28);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+
+.nv-return-btn:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 24px rgba(198,168,255,0.75),
+    0 18px 36px rgba(60,30,120,0.35);
+  filter: brightness(1.03);
 }
 
 .nv-return-btn.nv-return-secondary{
   background: rgba(255,255,255,0.16);
   color: #fff;
-  border: 2px solid rgba(255,255,255,0.50);
+  border: 2px solid rgba(255,255,255,0.55);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
 }
 
+.nv-return-btn.nv-return-secondary:hover{
+  background: rgba(255,255,255,0.22);
+}
+
+/* Footer block */
 .nv-shop-footer{
   margin-top: 14px;
   padding: 18px 16px;
@@ -837,45 +344,49 @@ body:not(.nv-y2k){
   border: 1px solid rgba(255,255,255,0.28);
 }
 
-.nv-footer-text{ color: rgba(255,255,255,0.95); margin: 0 0 10px; }
-.nv-footer-mini{ color: rgba(255,255,255,0.82); font-size: 13px; margin: 0 0 10px; }
-.nv-footer-links a{ color: #fff; text-decoration: underline; text-underline-offset: 3px; }
-/* ===== POP Footer Links ===== */
-
-.nv-footer-links {
-  margin-top: 12px;
-  font-weight: 700;
-  font-size: 16px;
+.nv-footer-text{
+  color: rgba(255,255,255,0.95);
+  margin: 0 0 10px;
 }
 
-.nv-footer-links a {
+.nv-footer-mini{
+  color: rgba(255,255,255,0.82);
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+/* ✅ Make bottom links REALLY pop */
+.nv-footer-links{
+  margin-top: 12px;
+  font-weight: 900;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nv-footer-links a{
   color: #ffffff;
   text-decoration: none;
-  padding: 6px 10px;
+  padding: 8px 14px;
   border-radius: 999px;
-  transition: all 0.2s ease;
+
   background: rgba(255,255,255,0.12);
   border: 1px solid rgba(255,255,255,0.35);
   backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 0 14px rgba(126,230,255,0.25),
+    0 10px 22px rgba(60,30,120,0.22);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
 }
 
-.nv-footer-links a:hover {
-  background: linear-gradient(
-    135deg,
-    var(--nv-lilac),
-    var(--nv-blue)
-  );
+.nv-footer-links a:hover{
+  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue));
   color: #2e1a47;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(156,202,255,0.5);
-}
-.nv-return-logo {
-  max-width: 180px;
-  margin-bottom: 18px;
-  filter: drop-shadow(0 0 14px rgba(198,168,255,0.6));
-  transition: transform 0.3s ease;
-}
-
-.nv-return-logo:hover {
-  transform: scale(1.05);
+  box-shadow:
+    0 0 18px rgba(126,230,255,0.55),
+    0 16px 30px rgba(60,30,120,0.30);
 }

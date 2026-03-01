@@ -270,6 +270,13 @@ body{
 
   box-shadow: 0 14px 40px rgba(60,30,120,0.18);
 }
+.cps-guide-mockup {
+  max-width: 380px;   /* Adjust this number */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 /* =========================
    GRID / CARDS
    ========================= */

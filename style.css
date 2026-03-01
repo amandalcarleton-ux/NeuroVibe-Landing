@@ -869,3 +869,13 @@ body:not(.nv-y2k){
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(156,202,255,0.5);
 }
+.nv-return-logo {
+  max-width: 180px;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 14px rgba(198,168,255,0.6));
+  transition: transform 0.3s ease;
+}
+
+.nv-return-logo:hover {
+  transform: scale(1.05);
+}

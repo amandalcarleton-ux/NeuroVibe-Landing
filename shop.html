@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -17,37 +17,39 @@
     ml('account', '2150381');
   </script>
   <!-- End MailerLite Universal -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('#digital-resources .nv-ml-inline');
-    if (!form) return;
 
-    const status = form.querySelector('.nv-ml-status');
-    const button = form.querySelector('button[type="submit"]');
+  <!-- Inline form handler (prevents subscribe.json download + shows success text) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('#digital-resources .nv-ml-inline');
+      if (!form) return;
 
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
+      const status = form.querySelector('.nv-ml-status');
+      const button = form.querySelector('button[type="submit"]');
 
-      if (status) status.textContent = 'Sending...';
-      if (button) button.disabled = true;
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
 
-      try {
-        await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          mode: 'no-cors'
-        });
+        if (status) status.textContent = 'Sending...';
+        if (button) button.disabled = true;
 
-        if (status) status.textContent = '✅ Check your email — your reset is on the way!';
-        form.reset();
-      } catch (err) {
-        if (status) status.textContent = 'Hmm — that didn’t go through. Try again in a moment.';
-      } finally {
-        if (button) button.disabled = false;
-      }
+        try {
+          await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            mode: 'no-cors'
+          });
+
+          if (status) status.textContent = '✅ Check your email — your reset is on the way!';
+          form.reset();
+        } catch (err) {
+          if (status) status.textContent = 'Hmm — that didn’t go through. Try again in a moment.';
+        } finally {
+          if (button) button.disabled = false;
+        }
+      });
     });
-  });
-</script>
+  </script>
 </head>
 
 <body class="nv-y2k">
@@ -77,17 +79,17 @@
         I only share products I genuinely recommend.
       </p>
 
-<nav class="nv-shop-nav" aria-label="Shop sections">
-  <a href="#featured">Featured This Week</a>
-  <a href="#neuro-support">Neurodivergent Support</a>
-  <a href="#calm-workspaces">Calm Workspaces</a>
-  <a href="#digital-resources">Digital Resources</a>
-  <a href="#creator-tools">Creator Tools</a>
-  <a href="#mom-essentials">Mom Life Essentials</a>
-  <a href="#renter-home">Renter-Friendly Home</a>
-  <a href="#smart-savings">Smart Savings</a>
-  <a href="#wellness-staples">Wellness Staples</a>
-</nav>
+      <nav class="nv-shop-nav" aria-label="Shop sections">
+        <a href="#featured">Featured This Week</a>
+        <a href="#neuro-support">Neurodivergent Support</a>
+        <a href="#calm-workspaces">Calm Workspaces</a>
+        <a href="#digital-resources">Digital Resources</a>
+        <a href="#creator-tools">Creator Tools</a>
+        <a href="#mom-essentials">Mom Life Essentials</a>
+        <a href="#renter-home">Renter-Friendly Home</a>
+        <a href="#smart-savings">Smart Savings</a>
+        <a href="#wellness-staples">Wellness Staples</a>
+      </nav>
     </div>
   </section>
 
@@ -208,9 +210,7 @@
             </div>
             <div class="nv-card-body">
               <h3 class="nv-card-title">Double-Head Anti-Blue Light Desk Lamp</h3>
-              <p class="nv-card-text">
-                Adjustable, wide-coverage lighting designed to reduce eye strain and harsh blue light.
-              </p>
+              <p class="nv-card-text">Adjustable, wide-coverage lighting designed to reduce eye strain and harsh blue light.</p>
               <a class="nv-btn" href="https://dhgate.sjv.io/L0P7O0" target="_blank" rel="noopener sponsored">View Pick</a>
               <p class="nv-card-note">Affiliate link • Availability and pricing may vary</p>
             </div>
@@ -218,7 +218,7 @@
         </div>
       </section>
 
-      <      <!-- DIGITAL RESOURCES -->
+      <!-- DIGITAL RESOURCES -->
       <section id="digital-resources" class="nv-section">
         <div class="nv-section-head">
           <h2>Digital Resources</h2>
@@ -228,7 +228,6 @@
         </div>
 
         <div class="nv-grid">
-
           <!-- FREE 1-PAGE RESET -->
           <article class="nv-card nv-featured-card">
             <div class="nv-card-media nv-logo-card">
@@ -261,7 +260,6 @@
                 <input type="hidden" name="anticsrf" value="true">
 
                 <button type="submit" class="nv-btn">Send Me The Reset 💜</button>
-
                 <div class="nv-ml-status" aria-live="polite" style="margin-top:10px;"></div>
               </form>
 
@@ -269,7 +267,7 @@
             </div>
           </article>
 
-          <!-- BUNDLE (Best option) -->
+          <!-- BUNDLE -->
           <article class="nv-card nv-featured-card nv-bundle-card">
             <div class="nv-card-media nv-logo-card">
               <div class="nv-coming-soon">
@@ -293,21 +291,13 @@
               <p class="nv-bundle-price"><strong>Bundle price:</strong> $21 <span>(Save $5)</span></p>
 
               <div class="nv-btn-row">
-                <a class="nv-btn nv-deal-btn"
-                   href="https://neurovibes.gumroad.com/l/wobmjl"
-                   target="_blank" rel="noopener">
+                <a class="nv-btn nv-deal-btn" href="https://neurovibes.gumroad.com/l/wobmjl" target="_blank" rel="noopener">
                   Get the Bundle ($21)
                 </a>
-
-                <a class="nv-btn"
-                   href="https://neurovibes.gumroad.com/l/cmuzy"
-                   target="_blank" rel="noopener">
+                <a class="nv-btn" href="https://neurovibes.gumroad.com/l/cmuzy" target="_blank" rel="noopener">
                   7-Page Reset ($7)
                 </a>
-
-                <a class="nv-btn"
-                   href="https://neurovibes.gumroad.com/l/xtwoe"
-                   target="_blank" rel="noopener">
+                <a class="nv-btn" href="https://neurovibes.gumroad.com/l/xtwoe" target="_blank" rel="noopener">
                   CPS Survival Guide ($19)
                 </a>
               </div>
@@ -315,9 +305,9 @@
               <p class="nv-card-note">Gumroad checkout • secure payment • instant download</p>
             </div>
           </article>
-
         </div>
       </section>
+
       <!-- CREATOR TOOLS -->
       <section id="creator-tools" class="nv-section">
         <div class="nv-section-head">
@@ -394,9 +384,7 @@
             </div>
             <div class="nv-card-body">
               <h3 class="nv-card-title">REBEL Modular Bookcase</h3>
-              <p class="nv-card-text">
-                A renter-friendly storage solution that adds structure without permanent installation.
-              </p>
+              <p class="nv-card-text">A renter-friendly storage solution that adds structure without permanent installation.</p>
               <a class="nv-btn" href="https://fromrebel.pxf.io/Pz07RN" target="_blank" rel="noopener sponsored">Explore Home Finds</a>
               <p class="nv-card-note">Affiliate link • availability and pricing may vary</p>
             </div>
@@ -417,7 +405,6 @@
               <img src="images/bright-starts-pop-n-sit.JPG" alt="Bright Starts Pop N Sit portable booster seat in teal" loading="lazy" />
             </div>
             <div class="nv-card-body">
-              <span class="nv-deal-badge">Family Favorite</span>
               <h3 class="nv-card-title">Bright Starts Pop ‘N Sit Booster Seat</h3>
               <p class="nv-card-text">Lightweight, foldable seating for travel, small spaces, or quick setup.</p>
               <a class="nv-btn nv-deal-btn" href="https://fromrebel.pxf.io/QYO70x" target="_blank" rel="noopener sponsored">View Deal</a>
@@ -491,6 +478,5 @@
 
     </div>
   </main>
-
 </body>
 </html>

@@ -126,6 +126,201 @@ body{
     font-size: 15px;
   }
   .nav-btn.nav-wide{ grid-column: 1 / -1; }
+}/* =========================
+   GUIDES PAGE (NeuroVibe)
+   ========================= */
+.nv-wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 16px 48px;
+}
+
+.nv-hero{
+  margin: 18px 0 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: linear-gradient(135deg, rgba(107,92,255,0.35), rgba(126,230,255,0.28), rgba(255,182,225,0.22));
+  box-shadow: 0 18px 55px rgba(60, 30, 120, 0.22);
+  overflow: hidden;
+}
+
+.nv-hero-inner{
+  padding: 22px 18px;
+}
+
+.nv-h1{
+  font-size: clamp(28px, 4.5vw, 44px);
+  line-height: 1.08;
+  margin-bottom: 10px;
+}
+
+.nv-sub{
+  font-size: 1.05rem;
+  opacity: 0.95;
+  max-width: 70ch;
+}
+
+.nv-hero-cta{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.nv-section{
+  margin-top: 26px;
+}
+
+.nv-section-head{
+  margin-bottom: 14px;
+}
+
+.nv-h2{
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.nv-sub2{
+  opacity: 0.9;
+}
+
+.nv-grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+}
+
+.nv-card{
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 18px 55px rgba(60, 30, 120, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.nv-card.featured{
+  grid-template-columns: 160px 1fr;
+}
+
+.nv-card.bundle{
+  border: 1px solid rgba(178,250,112,0.65);
+}
+
+.nv-card-media{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.12);
+  min-height: 140px;
+  display: grid;
+  place-items: center;
+}
+
+.nv-card-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.nv-placeholder{
+  font-size: 0.95rem;
+  opacity: 0.85;
+  padding: 10px;
+  text-align: center;
+}
+
+.nv-card-body{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nv-tag{
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.45);
+  border: 1px solid rgba(255,255,255,0.45);
+}
+
+.nv-h3{
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.nv-copy{
+  opacity: 0.95;
+}
+
+.nv-bullets{
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.nv-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.nv-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.45);
+}
+
+.nv-btn.primary{
+  background: rgba(107,92,255,0.95);
+  color: #fff;
+  border-color: rgba(255,255,255,0.25);
+}
+
+.nv-btn.ghost{
+  background: rgba(255,255,255,0.20);
+  color: #101018;
+}
+
+.nv-faq{
+  display: grid;
+  gap: 10px;
+}
+
+.nv-faq details{
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.16);
+}
+
+.nv-faq summary{
+  cursor: pointer;
+  font-weight: 800;
+}
+
+/* Responsive */
+@media (max-width: 720px){
+  .nv-card{
+    grid-template-columns: 1fr;
+  }
+  .nv-card-media{
+    min-height: 180px;
+  }
 }
 
 /* =========================

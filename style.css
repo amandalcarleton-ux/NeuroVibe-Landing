@@ -559,6 +559,51 @@ body{
 }
 
 /* =========================
+   GUIDES PAGE — Featured card mobile fix
+   ========================= */
+
+/* Base card layout (safe defaults) */
+.nv-card{
+  overflow: hidden;               /* prevents weird inner overflow */
+}
+
+/* Make featured card a 2-col grid on larger screens */
+.nv-card.featured{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Media should NOT stretch tall */
+.nv-card-media{
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  height: auto;
+  min-height: 0;                  /* key: prevents tall empty column */
+}
+
+/* Image should fill its box normally */
+.nv-card-media img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* MOBILE: stack image above content (eliminates giant empty block) */
+@media (max-width: 720px){
+  .nv-card.featured{
+    grid-template-columns: 1fr;
+  }
+
+  .nv-card.featured .nv-card-media{
+    max-width: 420px;             /* keeps it cute on mobile */
+    margin: 0 auto;
+  }
+}
+/* =========================
    DIGITAL RESOURCES (CENTER + CLEAN)
    ========================= */
 #digital-resources .nv-card-body,

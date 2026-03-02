@@ -689,12 +689,46 @@ body{
   font-weight: 700;
   margin-bottom: 10px;
 }
-
 .nv-footer-mini{
   color: rgba(255,255,255,0.82);
   font-size: 13px;
   line-height: 1.5;
   margin-bottom: 14px;
+}
+
+/* Logo area (this was accidentally inside nv-footer-mini) */
+.hero-logo{
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  margin-bottom: 10px;
+}
+
+.site-logo{
+  width: min(320px, 80vw);
+  height: auto;
+  display:block;
+  filter: drop-shadow(0 0 18px rgba(200,181,255,0.55))
+          drop-shadow(0 0 28px rgba(255,182,225,0.35));
+}
+
+.nv-coming-soon{
+  text-align:center;
+  padding: 28px 18px;
+  font-weight: 800;
+  opacity: .85;
+}
+
+.nv-coming-title{
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.nv-coming-sub{
+  font-size: 14px;
+  opacity: .7;
+  font-weight: 700;
+}
 .hero-logo{
   display:flex;
   justify-content:flex-start;
@@ -813,4 +847,26 @@ body{
 
 #digital-resources .nv-bundle-price{
   text-align: center;
+}/* Center Digital Resources card text + clean bullet indentation */
+#digital-resources .nv-card-body{
+  text-align: center;
+}
+
+#digital-resources .nv-card-text{
+  text-align: center;
+}
+
+#digital-resources ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 14px auto;
+  max-width: 420px;
+}
+
+#digital-resources ul li{
+  margin: 10px 0;
+}
+
+#digital-resources .nv-btn-row{
+  justify-content: center;
 }

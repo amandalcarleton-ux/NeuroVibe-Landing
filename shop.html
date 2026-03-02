@@ -7,48 +7,16 @@
   <meta name="description" content="The NeuroVibe Shop — curated tools for calm homes, supported moms, and functional everyday wellness. Updated weekly." />
   <link rel="canonical" href="https://neurovibe.site/shop.html" />
   <link rel="stylesheet" href="style.css" />
-<!-- MailerLite Universal -->
-<script>
-  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-  ml('account', '2150381');
-</script>
-<!-- End MailerLite Universal -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('.nv-ml-inline');
-    if (!form) return;
 
-    const status = form.querySelector('.nv-ml-status');
-    const button = form.querySelector('button[type="submit"]');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-
-      status.textContent = 'Sending...';
-      button.disabled = true;
-
-      try {
-        // MailerLite endpoint often won’t allow reading the response (CORS),
-        // but the request still succeeds. So we treat "no error" as success.
-        await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          mode: 'no-cors'
-        });
-
-        status.textContent = '✅ Check your email — your reset is on the way!';
-        form.reset();
-      } catch (err) {
-        status.textContent = 'Hmm — that didn’t go through. Try again in a moment.';
-      } finally {
-        button.disabled = false;
-      }
-    });
-  });
-</script>
+  <!-- MailerLite Universal (OK on free plan) -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2150381');
+  </script>
+  <!-- End MailerLite Universal -->
 </head>
 
 <body class="nv-y2k">
@@ -82,7 +50,7 @@
         <a href="#featured">Featured This Week</a>
         <a href="#neuro-support">Neurodivergent Support</a>
         <a href="#calm-workspaces">Calm Workspaces</a>
-       <a href="#free-resets">Free Digital Resets</a>
+        <a href="#free-resets">Free Digital Resets</a>
         <a href="#creator-tools">Creator Tools</a>
         <a href="#mom-essentials">Mom Life Essentials</a>
         <a href="#renter-home">Renter-Friendly Home</a>
@@ -167,7 +135,6 @@
         </div>
 
         <div class="nv-grid">
-
           <!-- Our Kids ASD -->
           <article class="nv-card nv-featured-card">
             <div class="nv-card-media nv-logo-card">
@@ -221,7 +188,6 @@
               <p class="nv-card-note">NeuroVibe digital tools + curated resources launching soon.</p>
             </div>
           </article>
-
         </div>
       </section>
 
@@ -261,218 +227,126 @@
           </article>
         </div>
       </section>
-<!-- FREE DIGITAL RESETS -->
-<section id="free-resets" class="nv-section">
-  <div class="nv-section-head">
-    <h2>Free Digital Resets</h2>
-    <p class="nv-muted">
-      Simple, nervous-system-friendly tools you can use immediately — created for real-life overwhelm.
-    </p>
-  </div>
 
-  <div class="nv-grid">
-
-    <!-- 1-Page Digital Reset -->
-    <article class="nv-card nv-featured-card">
-      <div class="nv-card-media nv-logo-card">
-        <div class="nv-coming-soon">
-          <div class="nv-coming-title">Free 1-Page Reset</div>
-          <div class="nv-coming-sub">Quick calm support ✨</div>
+      <!-- FREE DIGITAL RESETS -->
+      <section id="free-resets" class="nv-section">
+        <div class="nv-section-head">
+          <h2>Free Digital Resets</h2>
+          <p class="nv-muted">
+            Simple, nervous-system-friendly tools you can use immediately — created for real-life overwhelm.
+          </p>
         </div>
-      </div>
 
-      <div class="nv-card-body">
-        <span class="nv-featured-badge">Free Resource</span>
-        <h3 class="nv-card-title">The NeuroVibe 1-Page Digital Reset</h3>
-
-        <p class="nv-card-text">
-          A simple, nervous-system-friendly reset you can use when everything feels overwhelming —
-          fast, realistic, and designed for real life.
-        </p>
-
-        <form class="nv-ml-inline"
-              action="https://assets.mailerlite.com/jsonp/2150381/forms/180676720202876289/subscribe"
-              method="post">
-          <label class="sr-only" for="nv-ml-email">Email</label>
-          <input id="nv-ml-email"
-                 type="email"
-                 name="fields[email]"
-                 placeholder="Email address"
-                 autocomplete="email"
-                 required>
-
-          <input type="hidden" name="ml-submit" value="1">
-          <input type="hidden" name="anticsrf" value="true">
-
-          <button type="submit" class="nv-btn">Send Me The Reset 💜</button>
-
-          <div class="nv-ml-status" aria-live="polite" style="margin-top:10px;"></div>
-        </form>
-
-        <p class="nv-card-note">Delivered by email • Join the NeuroVibe list</p>
-      </div>
-    </article>
-
-    <!-- 7-Page Digital Reset -->
-    <article class="nv-card">
-      <div class="nv-card-media nv-logo-card">
-        <div class="nv-coming-soon">
-          <div class="nv-coming-title">Free 7-Page Reset</div>
-          <div class="nv-coming-sub">More depth + structure</div>
-        </div>
-      </div>
-
-      <div class="nv-card-body">
-        <h3 class="nv-card-title">The NeuroVibe 7-Page Digital Reset</h3>
-
-        <p class="nv-card-text">
-          A deeper version of the reset with extra steps, reflection prompts, and gentle structure —
-          great when you want more guidance.
-        </p>
-
-        <a class="nv-btn" href="links.html">Get the 7-Page Version</a>
-
-        <p class="nv-card-note">If your embedded form is on another page, this button can go there instead.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- MailerLite Embedded Form -->
-<div id="mlb2-37803972" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-37803972">
-  <div class="ml-form-align-center">
-    <div class="ml-form-embedWrapper embedForm">
-
-      <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-        <form class="ml-block-form"
-              action="https://assets.mailerlite.com/jsonp/2150381/forms/180676720202876289/subscribe"
-              method="post">
-
-          <div class="ml-form-formContent">
-            <div class="ml-form-fieldRow ml-last-item">
-              <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                <input aria-label="email"
-                       aria-required="true"
-                       type="email"
-                       class="form-control"
-                       name="fields[email]"
-                       placeholder="Email"
-                       autocomplete="email"
-                       required>
+        <div class="nv-grid">
+          <!-- 1-Page Digital Reset -->
+          <article class="nv-card nv-featured-card">
+            <div class="nv-card-media nv-logo-card">
+              <div class="nv-coming-soon">
+                <div class="nv-coming-title">Free 1-Page Reset</div>
+                <div class="nv-coming-sub">Quick calm support ✨</div>
               </div>
             </div>
-          </div>
 
-          <input type="hidden" name="ml-submit" value="1">
-          <input type="hidden" name="anticsrf" value="true">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Free Resource</span>
+              <h3 class="nv-card-title">The NeuroVibe 1-Page Digital Reset</h3>
 
-          <div class="ml-form-embedSubmit">
-            <button type="submit" class="primary">Send Me The Reset 💜</button>
-          </div>
-        </form>
-      </div>
+              <p class="nv-card-text">
+                A simple, nervous-system-friendly reset you can use when everything feels overwhelming —
+                fast, realistic, and designed for real life.
+              </p>
 
-      <div class="ml-form-successBody row-success" style="display:none;">
-        <div class="ml-form-successContent">
-          <h4>Thank you!</h4>
-          <p>Check your email for the reset.</p>
+              <!-- Inline MailerLite form (no pop-up needed) -->
+              <form class="nv-ml-inline"
+                    action="https://assets.mailerlite.com/jsonp/2150381/forms/180676720202876289/subscribe"
+                    method="post">
+                <label class="sr-only" for="nv-ml-email">Email</label>
+                <input id="nv-ml-email"
+                       type="email"
+                       name="fields[email]"
+                       placeholder="Email address"
+                       autocomplete="email"
+                       required>
+
+                <input type="hidden" name="ml-submit" value="1">
+                <input type="hidden" name="anticsrf" value="true">
+
+                <button type="submit" class="nv-btn">Send Me The Reset 💜</button>
+
+                <div class="nv-ml-status" aria-live="polite" style="margin-top:10px;"></div>
+              </form>
+
+              <p class="nv-card-note">Delivered by email • Join the NeuroVibe list</p>
+            </div>
+          </article>
+
+          <!-- 7-Page Digital Reset -->
+          <article class="nv-card">
+            <div class="nv-card-media nv-logo-card">
+              <div class="nv-coming-soon">
+                <div class="nv-coming-title">Free 7-Page Reset</div>
+                <div class="nv-coming-sub">More depth + structure</div>
+              </div>
+            </div>
+
+            <div class="nv-card-body">
+              <h3 class="nv-card-title">The NeuroVibe 7-Page Digital Reset</h3>
+
+              <p class="nv-card-text">
+                A deeper version of the reset with extra steps, reflection prompts, and gentle structure —
+                great when you want more guidance.
+              </p>
+
+              <a class="nv-btn" href="links.html">Get the 7-Page Version</a>
+
+              <p class="nv-card-note">If your embedded form is on another page, this button can go there instead.</p>
+            </div>
+          </article>
         </div>
-      </div>
+      </section>
 
-    </div>
-  </div>
-</div>
-
-<script>
-  function ml_webform_success_37803972() {
-    var $ = window.ml_jQuery || window.jQuery;
-    if ($) {
-      $('.ml-subscribe-form-37803972 .row-success').show();
-      $('.ml-subscribe-form-37803972 .row-form').hide();
-    } else {
-      document.querySelector('.ml-subscribe-form-37803972 .row-success').style.display = 'block';
-      document.querySelector('.ml-subscribe-form-37803972 .row-form').style.display = 'none';
-    }
-  }
-</script>
-
-<script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript"></script>
-
-        <p class="nv-card-note">Delivered by email • Join the NeuroVibe list</p>
-      </div>
-    </article>
-
-    <!-- 7-Page Digital Reset (matches your current widget) -->
-    <article class="nv-card">
-      <div class="nv-card-media nv-logo-card">
-        <div class="nv-coming-soon">
-          <div class="nv-coming-title">Free 7-Page Reset</div>
-          <div class="nv-coming-sub">More depth + structure</div>
-        </div>
-      </div>
-
-      <div class="nv-card-body">
-        <h3 class="nv-card-title">The NeuroVibe 7-Page Digital Reset</h3>
-
-        <p class="nv-card-text">
-          A deeper version of the reset with extra steps, reflection prompts, and gentle structure —
-          great when you want more guidance.
-        </p>
-
-        <a class="nv-btn" href="links.html">
-          Get the 7-Page Version
-        </a>
-
-        <p class="nv-card-note">If your embedded form is on another page, this button can go there instead.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
       <!-- CREATOR TOOLS -->
-<section id="creator-tools" class="nv-section">
-  <div class="nv-section-head">
-    <h2>Creator Tools</h2>
-    <p class="nv-muted">
-      Tools I use (or recommend) to make content faster, cleaner, and less overwhelming — especially from a phone.
-    </p>
-  </div>
+      <section id="creator-tools" class="nv-section">
+        <div class="nv-section-head">
+          <h2>Creator Tools</h2>
+          <p class="nv-muted">
+            Tools I use (or recommend) to make content faster, cleaner, and less overwhelming — especially from a phone.
+          </p>
+        </div>
 
-  <div class="nv-grid">
+        <div class="nv-grid">
+          <!-- CapCut -->
+          <article class="nv-card nv-featured-card">
+            <div class="nv-card-media nv-logo-card">
+              <img src="images/CapCut Logo.JPG"
+                   alt="CapCut video editing app logo"
+                   loading="lazy" />
+            </div>
 
-    <!-- CapCut -->
-    <article class="nv-card nv-featured-card">
-      <div class="nv-card-media nv-logo-card">
-        <img src="images/CapCut Logo.JPG"
-             alt="CapCut video editing app logo"
-             loading="lazy" />
-      </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Creator Pick</span>
+              <h3 class="nv-card-title">CapCut (Video Editing App)</h3>
 
-      <div class="nv-card-body">
-        <span class="nv-featured-badge">Creator Pick</span>
-        <h3 class="nv-card-title">CapCut (Video Editing App)</h3>
+              <p class="nv-card-text">
+                A beginner-friendly editor for Reels, TikTok, and short-form content — great for quick cuts, captions,
+                templates, and polishing your videos without the “too many steps” feeling.
+              </p>
 
-        <p class="nv-card-text">
-          A beginner-friendly editor for Reels, TikTok, and short-form content — great for quick cuts, captions,
-          templates, and polishing your videos without the “too many steps” feeling.
-        </p>
+              <a class="nv-btn"
+                 href="https://capcutaffiliateprogram.pxf.io/c/6974870/1876054/22474"
+                 target="_blank"
+                 rel="noopener sponsored">
+                Try CapCut
+              </a>
 
-        <a class="nv-btn"
-           href="https://capcutaffiliateprogram.pxf.io/c/6974870/1876054/22474"
-           target="_blank"
-           rel="noopener sponsored">
-          Try CapCut
-        </a>
+              <p class="nv-card-note">
+                Affiliate link • Digital tool (not a physical product)
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <p class="nv-card-note">
-          Affiliate link • Digital tool (not a physical product)
-        </p>
-      </div>
-    </article>
-
-  </div>
-</section>
       <!-- MOM LIFE ESSENTIALS -->
       <section id="mom-essentials" class="nv-section">
         <div class="nv-section-head">
@@ -652,6 +526,41 @@
 
     </div>
   </main>
+
+  <!-- Inline form handler (prevents "subscribe.json" download + shows success text) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('.nv-ml-inline');
+      if (!form) return;
+
+      const status = form.querySelector('.nv-ml-status');
+      const button = form.querySelector('button[type="submit"]');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        if (status) status.textContent = 'Sending...';
+        if (button) button.disabled = true;
+
+        try {
+          // MailerLite endpoint often blocks reading the response (CORS),
+          // but the request still succeeds. Treat "no error" as success.
+          await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            mode: 'no-cors'
+          });
+
+          if (status) status.textContent = '✅ Check your email — your reset is on the way!';
+          form.reset();
+        } catch (err) {
+          if (status) status.textContent = 'Hmm — that didn’t go through. Try again in a moment.';
+        } finally {
+          if (button) button.disabled = false;
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>

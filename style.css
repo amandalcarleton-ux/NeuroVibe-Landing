@@ -1,6 +1,6 @@
 /* =========================
    NeuroVibe — Single Clean Theme (Use on ALL pages)
-   CLEAN + FIXED + NO DUPLICATES
+   CLEAN + FIXED (no broken braces, no duplicates)
    ========================= */
 
 /* Root tokens */
@@ -11,7 +11,6 @@
   --nv-blue: #9ccaff;
   --nv-teal: #7ee6ff;
   --nv-pink: #ffb6e1;
-  --nv-lime: #b2fa70;
 
   --nv-ink: #101018;
   --nv-white: #ffffff;
@@ -46,26 +45,20 @@ body{
     linear-gradient(135deg, #5a48ff 0%, #a78bfa 35%, #7ee6ff 70%, #ffb6e1 100%);
 }
 
-/* Use this wrapper on every page body content */
+/* Page wrapper */
 .nv-page{
   min-height: 100vh;
   padding: 18px 14px 34px;
 }
 
-/* Container helpers */
-.nv-wrap{
-  max-width: var(--container);
-  margin: 0 auto;
-  display: grid;
-  gap: 14px;
-}
+/* Containers */
 .nv-container{
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 14px;
 }
 
-/* Glass card */
+/* Glass */
 .glass{
   background: var(--nv-glass);
   border: 1px solid var(--nv-border);
@@ -75,17 +68,8 @@ body{
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Light glass hero (used on shop pages) */
-.nv-shop-hero{
-  background: rgba(255,255,255,0.10);
-  border-bottom: 1px solid rgba(255,255,255,0.22);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 18px 0;
-}
-
 /* =========================
-   NAVBAR (same across pages)
+   NAVBAR
    ========================= */
 .navbar{
   position: sticky;
@@ -130,7 +114,6 @@ body{
   filter: saturate(1.05);
 }
 
-/* Mobile NAV layout stays 2 across, BLOG full width (if you add nav-wide class) */
 @media (max-width: 700px){
   .nav-menu{
     display:grid;
@@ -156,48 +139,45 @@ body{
   border-radius: 999px;
   font-weight: 800;
   min-width: 190px;
-  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
 
   background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
   color: var(--nv-ink);
   border: 2px solid var(--nv-purple-deep);
   box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
+
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
 }
 
-.nv-btn:hover{ transform: translateY(-2px); filter: saturate(1.05); }
-
-.nv-btn-primary{
-  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue));
-  color: #2e1a47;
-  border: 2px solid var(--nv-purple-deep);
-}
-
-.nv-btn-secondary{
-  background: rgba(255,255,255,0.18);
-  color: #ffffff;
-  border: 2px solid rgba(255,255,255,0.55);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-}
-
-.nv-deal-btn{
-  background: linear-gradient(135deg, #c6a8ff, #7a5cff);
-  color: #ffffff;
-  border: 2px solid #4b2e83;
-  box-shadow: 0 14px 30px rgba(75, 46, 131, 0.35);
-}
+.nv-btn:hover{ transform: translateY(-2px); filter:saturate(1.04); }
 
 @media (max-width: 520px){
   .nv-btn{ width: 100%; min-width: 0; }
 }
 
-/* =========================
-   HERO + TEXT
-   ========================= */
-.nv-hero{
-  padding: 18px 16px;
-  text-align: center;
+/* “Deal / Primary CTA” — changed to purple/teal (no neon green) */
+.nv-deal-btn{
+  background: linear-gradient(135deg, var(--nv-purple), var(--nv-teal));
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.35);
+  box-shadow: 0 14px 30px rgba(75, 46, 131, 0.35);
 }
 
+/* Button row helper */
+.nv-btn-row{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 520px){
+  .nv-btn-row{ display:grid; }
+}
+
+/* =========================
+   HERO TEXT HELPERS
+   ========================= */
 .nv-kicker{
   margin: 0 0 6px;
   font-weight: 700;
@@ -207,70 +187,82 @@ body{
   font-size: 12px;
 }
 
-.nv-logo{
-  width: min(220px, 70vw);
-  max-width: 220px;
-  margin: 10px auto 10px;
-  opacity: 0.9;
-  filter:
-    drop-shadow(0 0 18px rgba(200,181,255,0.55))
-    drop-shadow(0 0 28px rgba(255,182,225,0.40));
+/* =========================
+   SHOP HERO
+   ========================= */
+.nv-shop-hero{
+  background: rgba(255,255,255,0.10);
+  border-bottom: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 18px 0;
 }
 
-.nv-title{
-  margin: 0 0 10px;
+.nv-shop-title{
   font-size: 34px;
-  line-height: 1.08;
+  line-height: 1.1;
+  margin: 6px 0 10px;
   color: #fff;
   text-shadow: 0 10px 30px rgba(30, 10, 80, 0.35);
+  text-align: center;
 }
 
-.nv-subtitle{
-  margin: 0 auto 14px;
-  max-width: 56ch;
-  font-size: 16px;
+.nv-shop-subtitle{
   color: rgba(255,255,255,0.92);
+  max-width: 60ch;
+  margin: 0 auto 14px;
+  text-align: center;
 }
 
-.nv-cta-row{
-  display:flex;
-  gap: 12px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin: 12px 0 8px;
+.nv-disclosure{
+  margin: 12px auto 16px;
+  max-width: 70ch;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 14px;
+  padding: 12px 12px;
+  text-align: center;
 }
 
-.nv-link{
-  color:#ffffff;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
+.nv-shop-nav{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 14px 0 6px;
 }
-.nv-link.big{
-  display:inline-block;
-  margin-top: 6px;
+
+.nv-shop-nav a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
   font-weight: 800;
-  word-break: break-word;
-}
-.nv-micro{
-  margin-top: 10px;
-  color: rgba(255,255,255,0.9);
+
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition: transform .15s ease, background .15s ease;
 }
 
-/* Screen-reader only */
-.sr-only{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+.nv-shop-nav a:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.18);
+}
+
+.nv-shop-main{
+  padding: 18px 0 30px;
 }
 
 /* =========================
-   Shop sections
+   SECTIONS
    ========================= */
 .nv-section{
   margin: 28px 0;
@@ -288,73 +280,15 @@ body{
 
 .nv-section-head{
   margin-bottom: 22px;
+  text-align: center;
 }
+
 .nv-section-head h2{
   font-size: 28px;
   margin-bottom: 6px;
 }
-.nv-muted{
-  opacity: 0.85;
-}
 
-/* Shop page headings */
-.nv-shop-title{
-  font-size: 34px;
-  line-height: 1.1;
-  margin: 6px 0 10px;
-  color: #fff;
-  text-shadow: 0 10px 30px rgba(30, 10, 80, 0.35);
-}
-.nv-shop-subtitle{
-  color: rgba(255,255,255,0.92);
-  max-width: 60ch;
-  margin: 0 auto 14px;
-}
-.nv-disclosure{
-  margin: 12px auto 16px;
-  max-width: 70ch;
-  font-size: 13px;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.85);
-  background: rgba(255,255,255,0.10);
-  border: 1px solid rgba(255,255,255,0.28);
-  border-radius: 14px;
-  padding: 12px 12px;
-}
-
-/* Shop section nav pills */
-.nv-shop-nav{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin: 14px 0 6px;
-}
-.nv-shop-nav a{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 800;
-
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.28);
-  color: rgba(255,255,255,0.95);
-
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  transition: transform .15s ease, background .15s ease;
-}
-.nv-shop-nav a:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,0.18);
-}
-
-.nv-shop-main{
-  padding: 18px 0 30px;
-}
+.nv-muted{ opacity: 0.85; }
 
 /* =========================
    GRID / CARDS
@@ -364,6 +298,7 @@ body{
   gap: 14px;
   grid-template-columns: 1fr;
 }
+
 @media (min-width: 860px){
   .nv-grid{ grid-template-columns: repeat(3, 1fr); }
 }
@@ -377,29 +312,10 @@ body{
   box-shadow: 0 14px 30px rgba(60,30,120,0.18);
   transition: transform .2s ease, box-shadow .2s ease;
 }
+
 .nv-card:hover{
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(60,30,120,0.25);
-}
-
-.nv-card-body{
-  padding: 18px;
-}
-
-.nv-card-title{
-  margin-bottom: 8px;
-  font-size: 20px;
-  font-weight: 800;
-}
-
-.nv-card-text{
-  margin-bottom: 14px;
-}
-
-.nv-card-note{
-  margin-top: 12px;
-  font-size: 13px;
-  opacity: 0.8;
 }
 
 .nv-card-media img{
@@ -408,7 +324,30 @@ body{
   display: block;
 }
 
-/* Featured styling */
+.nv-logo-card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height: 160px;
+}
+
+.nv-card-body{ padding: 18px; }
+
+.nv-card-title{
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.nv-card-text{ margin-bottom: 14px; }
+
+.nv-card-note{
+  margin-top: 12px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* Featured badge */
 .nv-featured-card{ position: relative; }
 
 .nv-featured-badge{
@@ -420,71 +359,35 @@ body{
   border-radius: 999px;
   margin-bottom: 10px;
 
-  /* softened (no neon green) */
-  background: rgba(198,168,255,0.95);
-  color: #2e1a47;
-  border: 1px solid rgba(75,46,131,0.20);
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.08);
 }
 
 /* =========================
-   MailerLite inline mini form (Shop page)
+   DIGITAL RESOURCES (CENTER + CLEAN)
    ========================= */
-.nv-ml-inline{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 12px;
-}
-.nv-ml-inline input{
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.15);
-  color: var(--nv-white);
-  outline: none;
-}
-.nv-ml-inline input::placeholder{
-  color: rgba(255,255,255,0.85);
+#digital-resources .nv-card-body,
+#digital-resources .nv-card-text,
+#digital-resources .nv-card-note{
+  text-align: center;
 }
 
-/* =========================
-   “Coming soon” placeholder blocks
-   ========================= */
-.nv-coming-soon{
-  text-align:center;
-  padding: 28px 18px;
-  font-weight: 800;
-  opacity: .90;
-}
-.nv-coming-title{
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-.nv-coming-sub{
-  font-size: 14px;
-  opacity: .75;
-  font-weight: 700;
+#digital-resources .nv-bullets,
+#digital-resources ul{
+  list-style: none;
+  padding-left: 0;
+  margin: 14px auto;
+  max-width: 420px;
 }
 
-/* =========================
-   Button row helpers
-   ========================= */
-.nv-btn-row{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-@media (max-width: 520px){
-  .nv-btn-row{ display:grid; }
+#digital-resources .nv-bullets li,
+#digital-resources ul li{
+  margin: 10px 0;
 }
 
-/* =========================
-   Bundle card look (soft + premium)
-   ========================= */
+/* Bundle card styling (purple/teal/lilac, not green) */
 .nv-bundle-card{
-  border: 1px solid rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.45);
   box-shadow: 0 18px 45px rgba(60,30,120,0.26);
 }
 
@@ -496,48 +399,68 @@ body{
   border-radius: 999px;
   font-weight: 900;
   font-size: 12px;
-  background: rgba(184,224,196,0.95);
-  color: #2f3b2f;
-  border: 1px solid rgba(47,59,47,0.12);
-  margin: 8px auto 12px;
+  letter-spacing: .2px;
+
+  background: linear-gradient(135deg, rgba(198,168,255,0.85), rgba(126,230,255,0.75));
+  border: 1px solid rgba(255,255,255,0.45);
+  color: #1b1630;
+
+  margin: 0 auto 10px;
 }
 
-/* Center Digital Resources text + bullets + buttons */
-#digital-resources .nv-card-body,
-#digital-resources .nv-card-title,
-#digital-resources .nv-card-text,
-#digital-resources .nv-card-note{
-  text-align: center;
+/* Coming Soon block */
+.nv-coming-soon{
+  text-align:center;
+  padding: 28px 18px;
+  font-weight: 800;
+  opacity: .9;
 }
 
-#digital-resources .nv-bullets{
-  list-style: none;
-  padding-left: 0;
-  margin: 14px auto;
-  max-width: 460px;
+.nv-coming-title{
+  font-size: 18px;
+  margin-bottom: 6px;
 }
-#digital-resources .nv-bullets li{
-  margin: 10px 0;
-}
-#digital-resources .nv-btn-row{
-  justify-content: center;
-}
-#digital-resources .nv-btn-row a{
-  width: 100%;
-  max-width: 320px;
+
+.nv-coming-sub{
+  font-size: 14px;
+  opacity: .75;
+  font-weight: 700;
 }
 
 /* =========================
-   Optional: CPS mockup helper
+   MailerLite inline form (Shop)
    ========================= */
-.cps-guide-mockup{
-  max-width: 380px;
+.nv-ml-inline{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.nv-ml-inline input{
   width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 18px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.15);
+  color: var(--nv-white);
+  outline: none;
+}
+
+.nv-ml-inline input::placeholder{
+  color: rgba(255,255,255,0.85);
+}
+
+/* Screen-reader only */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 /* =========================
@@ -552,6 +475,7 @@ body{
   color: rgba(255,255,255,0.95);
   font-weight: 700;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .nv-footer-mini{
@@ -559,6 +483,7 @@ body{
   font-size: 13px;
   line-height: 1.5;
   margin-bottom: 14px;
+  text-align: center;
 }
 
 .footer-nav{
@@ -576,18 +501,19 @@ body{
 
   background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
   color: var(--nv-ink);
+
   border: 3px solid var(--nv-purple-deep);
   box-shadow: 0 10px 30px rgba(75, 46, 131, 0.25);
 
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
+
 .footer-nav a:hover{
   transform: translateY(-2px);
   box-shadow: 0 14px 35px rgba(75, 46, 131, 0.35);
   filter: saturate(1.05);
 }
 
-/* Footer buttons: 3 across on mobile */
 @media (max-width: 520px){
   .footer-nav{
     display: grid;
@@ -598,6 +524,7 @@ body{
     max-width: 520px;
     margin: 0 auto;
   }
+
   .footer-nav a{
     width: 100%;
     padding: 12px 10px;

@@ -17,6 +17,37 @@
     ml('account', '2150381');
   </script>
   <!-- End MailerLite Universal -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('#digital-resources .nv-ml-inline');
+    if (!form) return;
+
+    const status = form.querySelector('.nv-ml-status');
+    const button = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      if (status) status.textContent = 'Sending...';
+      if (button) button.disabled = true;
+
+      try {
+        await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          mode: 'no-cors'
+        });
+
+        if (status) status.textContent = '✅ Check your email — your reset is on the way!';
+        form.reset();
+      } catch (err) {
+        if (status) status.textContent = 'Hmm — that didn’t go through. Try again in a moment.';
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  });
+</script>
 </head>
 
 <body class="nv-y2k">
@@ -187,8 +218,8 @@
         </div>
       </section>
 
-      <!-- DIGITAL RESOURCES -->
-<article class="nv-card nv-featured-card nv-bundle-card">
+      <      <!-- DIGITAL RESOURCES -->
+      <section id="digital-resources" class="nv-section">
         <div class="nv-section-head">
           <h2>Digital Resources</h2>
           <p class="nv-muted">
@@ -217,8 +248,7 @@
 
               <form class="nv-ml-inline"
                     action="https://assets.mailerlite.com/jsonp/2150381/forms/180676720202876289/subscribe"
-                    method="post"
-                    target="_blank">
+                    method="post">
                 <label class="sr-only" for="nv-ml-email">Email</label>
                 <input id="nv-ml-email"
                        type="email"
@@ -226,63 +256,68 @@
                        placeholder="Email address"
                        autocomplete="email"
                        required>
+
                 <input type="hidden" name="ml-submit" value="1">
                 <input type="hidden" name="anticsrf" value="true">
+
                 <button type="submit" class="nv-btn">Send Me The Reset 💜</button>
+
+                <div class="nv-ml-status" aria-live="polite" style="margin-top:10px;"></div>
               </form>
 
               <p class="nv-card-note">Delivered by email • Join the NeuroVibe list</p>
             </div>
           </article>
-          <article class="nv-card nv-featured-card nv-bundle-card">
 
           <!-- BUNDLE (Best option) -->
-<article class="nv-card nv-featured-card nv-bundle-card">
-  <div class="nv-card-media nv-logo-card">
-    <div class="nv-coming-soon">
-      <div class="nv-coming-title">Bundle & Save</div>
-      <div class="nv-coming-sub">Reset + CPS Support</div>
-    </div>
-  </div>
+          <article class="nv-card nv-featured-card nv-bundle-card">
+            <div class="nv-card-media nv-logo-card">
+              <div class="nv-coming-soon">
+                <div class="nv-coming-title">Bundle &amp; Save</div>
+                <div class="nv-coming-sub">Reset + CPS Support</div>
+              </div>
+            </div>
 
-  <div class="nv-card-body">
-    <span class="nv-featured-badge">Best Value</span>
-    <div class="nv-savings-chip">💚 Save $5 • Bundle $21</div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Best Value</span>
+              <div class="nv-savings-chip">💚 Save $5 • Bundle $21</div>
 
-    <h3 class="nv-card-title">CPS + Calm Reset Bundle</h3>
+              <h3 class="nv-card-title">CPS + Calm Reset Bundle</h3>
 
-    <ul class="nv-bullets">
-      <li><strong>7-Page Calm Reset</strong> ($7) — gentle structure for overwhelm</li>
-      <li><strong>CPS Survival Guide</strong> ($19) — collaboration over conflict</li>
-      <li>Instant download • yours forever</li>
-    </ul>
+              <ul class="nv-bullets">
+                <li><strong>7-Page Calm Reset</strong> ($7) — gentle structure for overwhelm</li>
+                <li><strong>CPS Survival Guide</strong> ($19) — collaboration over conflict</li>
+                <li>Instant download • yours forever</li>
+              </ul>
 
-    <p class="nv-bundle-price"><strong>Bundle price:</strong> $21 <span>(Save $5)</span></p>
+              <p class="nv-bundle-price"><strong>Bundle price:</strong> $21 <span>(Save $5)</span></p>
 
-    <div class="nv-btn-row nv-btn-stack">
-      <a class="nv-btn nv-deal-btn"
-         href="https://neurovibes.gumroad.com/l/wobmjl"
-         target="_blank" rel="noopener">
-        Get the Bundle ($21)
-      </a>
+              <div class="nv-btn-row">
+                <a class="nv-btn nv-deal-btn"
+                   href="https://neurovibes.gumroad.com/l/wobmjl"
+                   target="_blank" rel="noopener">
+                  Get the Bundle ($21)
+                </a>
 
-      <a class="nv-btn"
-         href="https://neurovibes.gumroad.com/l/cmuzy"
-         target="_blank" rel="noopener">
-        7-Page Reset ($7)
-      </a>
+                <a class="nv-btn"
+                   href="https://neurovibes.gumroad.com/l/cmuzy"
+                   target="_blank" rel="noopener">
+                  7-Page Reset ($7)
+                </a>
 
-      <a class="nv-btn"
-         href="https://neurovibes.gumroad.com/l/xtwoe"
-         target="_blank" rel="noopener">
-        CPS Survival Guide ($19)
-      </a>
-    </div>
+                <a class="nv-btn"
+                   href="https://neurovibes.gumroad.com/l/xtwoe"
+                   target="_blank" rel="noopener">
+                  CPS Survival Guide ($19)
+                </a>
+              </div>
 
-    <p class="nv-card-note">Gumroad checkout • secure payment • instant download</p>
-  </div>
-</article>
+              <p class="nv-card-note">Gumroad checkout • secure payment • instant download</p>
+            </div>
+          </article>
 
+        </div>
+      </section>
       <!-- CREATOR TOOLS -->
       <section id="creator-tools" class="nv-section">
         <div class="nv-section-head">

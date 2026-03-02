@@ -930,3 +930,30 @@ body.resource-vault .nv-btn-row{
     height: auto !important;
   }
 }
+/* =========================
+   FIX: Featured "Start here" MUST stack in portrait
+   ========================= */
+
+/* Portrait phones/tablets: stack featured card */
+@media (orientation: portrait){
+  .guides-page .featured-reset{
+    grid-template-columns: 1fr !important;
+  }
+
+  .guides-page .featured-reset .nv-card-media{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto 14px !important;
+  }
+
+  .guides-page .featured-reset .nv-card-body{
+    width: 100% !important;
+  }
+}
+
+/* Also stack on smaller screens regardless of orientation (extra safety) */
+@media (max-width: 980px){
+  .guides-page .featured-reset{
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -532,4 +532,39 @@ body{
     border-radius: 999px;
     text-align: center;
   }
+}/* =========================
+   Resource Vault page tweaks
+   ========================= */
+
+body.resource-vault .nv-vault-hero{
+  /* slightly different tint from shop */
+  background: rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+/* Make section headers centered (fixes the “Eh” alignment vibe) */
+body.resource-vault .nv-section-head{
+  text-align: center;
+}
+
+body.resource-vault .nv-section-head p{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch;
+}
+
+/* Keep cards readable + consistent */
+body.resource-vault .nv-card-body{
+  text-align: center;
+}
+
+body.resource-vault .nv-card-text{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60ch;
+}
+
+/* Button row centered */
+body.resource-vault .nv-btn-row{
+  justify-content: center;
 }

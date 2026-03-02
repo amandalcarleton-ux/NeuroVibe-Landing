@@ -877,3 +877,33 @@ body.resource-vault .nv-btn-row{
     margin: 0 auto;
   }
 }
+/* =========================
+   GUIDES PAGE — MOBILE POLISH FIX
+   ========================= */
+
+@media (max-width: 720px){
+
+  /* Remove extra side padding so cards don't look cut */
+  .guides-page .nv-section{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  /* Make cards fully fluid */
+  .guides-page .nv-card{
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Ensure media never overflows container */
+  .guides-page .nv-card-media{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .guides-page .nv-card-media img{
+    width: 100%;
+    height: auto;
+  }
+
+}

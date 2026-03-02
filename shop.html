@@ -16,6 +16,39 @@
   ml('account', '2150381');
 </script>
 <!-- End MailerLite Universal -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.nv-ml-inline');
+    if (!form) return;
+
+    const status = form.querySelector('.nv-ml-status');
+    const button = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      status.textContent = 'Sending...';
+      button.disabled = true;
+
+      try {
+        // MailerLite endpoint often won’t allow reading the response (CORS),
+        // but the request still succeeds. So we treat "no error" as success.
+        await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          mode: 'no-cors'
+        });
+
+        status.textContent = '✅ Check your email — your reset is on the way!';
+        form.reset();
+      } catch (err) {
+        status.textContent = 'Hmm — that didn’t go through. Try again in a moment.';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  });
+</script>
 </head>
 
 <body class="nv-y2k">
@@ -231,7 +264,7 @@
 <!-- FREE DIGITAL RESETS -->
 <section id="free-resets" class="nv-section">
   <div class="nv-section-head">
-<h2>Free Digital Resets</h2>
+    <h2>Free Digital Resets</h2>
     <p class="nv-muted">
       Simple, nervous-system-friendly tools you can use immediately — created for real-life overwhelm.
     </p>
@@ -256,6 +289,55 @@
           A simple, nervous-system-friendly reset you can use when everything feels overwhelming —
           fast, realistic, and designed for real life.
         </p>
+
+        <form class="nv-ml-inline"
+              action="https://assets.mailerlite.com/jsonp/2150381/forms/180676720202876289/subscribe"
+              method="post">
+          <label class="sr-only" for="nv-ml-email">Email</label>
+          <input id="nv-ml-email"
+                 type="email"
+                 name="fields[email]"
+                 placeholder="Email address"
+                 autocomplete="email"
+                 required>
+
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+
+          <button type="submit" class="nv-btn">Send Me The Reset 💜</button>
+
+          <div class="nv-ml-status" aria-live="polite" style="margin-top:10px;"></div>
+        </form>
+
+        <p class="nv-card-note">Delivered by email • Join the NeuroVibe list</p>
+      </div>
+    </article>
+
+    <!-- 7-Page Digital Reset -->
+    <article class="nv-card">
+      <div class="nv-card-media nv-logo-card">
+        <div class="nv-coming-soon">
+          <div class="nv-coming-title">Free 7-Page Reset</div>
+          <div class="nv-coming-sub">More depth + structure</div>
+        </div>
+      </div>
+
+      <div class="nv-card-body">
+        <h3 class="nv-card-title">The NeuroVibe 7-Page Digital Reset</h3>
+
+        <p class="nv-card-text">
+          A deeper version of the reset with extra steps, reflection prompts, and gentle structure —
+          great when you want more guidance.
+        </p>
+
+        <a class="nv-btn" href="links.html">Get the 7-Page Version</a>
+
+        <p class="nv-card-note">If your embedded form is on another page, this button can go there instead.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
 
 <!-- MailerLite Embedded Form -->
 <div id="mlb2-37803972" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-37803972">

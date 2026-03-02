@@ -7,7 +7,7 @@
 :root{
   --nv-purple: #6b5cff;
   --nv-purple-deep: #4b2e83;
-  --nv-lilac: #c6a8ff;
+  --nv-lilac: #c6a8ff;u
   --nv-blue: #9ccaff;
   --nv-teal: #7ee6ff;
   --nv-pink: #ffb6e1;
@@ -820,4 +820,60 @@ body.resource-vault .nv-btn-row{
   filter:
     drop-shadow(0 0 22px rgba(200,181,255,0.65))
     drop-shadow(0 0 35px rgba(255,182,225,0.45));
+}
+/* =========================
+   GUIDES PAGE — FINAL CARD FIX (Paste at VERY BOTTOM)
+   ========================= */
+
+/* Make Guides cards use the “media + body” grid layout */
+.guides-page .nv-card{
+  display: grid !important;
+  grid-template-columns: 160px 1fr;
+  gap: 14px;
+  padding: 14px;
+
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 18px 55px rgba(60, 30, 120, 0.12);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* Featured card slightly wider media on desktop */
+.guides-page .nv-card.featured{
+  grid-template-columns: 220px 1fr !important;
+  align-items: start;
+}
+
+/* FIX: stop the media box from being tall/centered */
+.guides-page .nv-card-media{
+  display: block !important;
+  min-height: 0 !important;
+  height: auto !important;
+
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.12);
+}
+
+/* FIX: stop the image from stretching to 100% height */
+.guides-page .nv-card-media img{
+  width: 100% !important;
+  height: auto !important;      /* key fix */
+  display: block;
+  object-fit: cover;
+}
+
+/* Mobile: stack image on top (no empty left block) */
+@media (max-width: 720px){
+  .guides-page .nv-card{
+    grid-template-columns: 1fr !important;
+  }
+
+  .guides-page .nv-card-media{
+    max-width: 420px;
+    margin: 0 auto;
+  }
 }

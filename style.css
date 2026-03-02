@@ -906,4 +906,27 @@ body.resource-vault .nv-btn-row{
     height: auto;
   }
 
+}/* =========================
+   iPhone PORTRAIT FIX — breakpoint was too small
+   Put at VERY BOTTOM
+   ========================= */
+
+/* Use a higher breakpoint so portrait iPhones still get the stacked layout */
+@media (max-width: 900px){
+  .guides-page .nv-card.featured{
+    grid-template-columns: 1fr !important;
+  }
+
+  .guides-page .nv-card.featured .nv-card-media{
+    max-width: 520px !important;
+    width: 100% !important;
+    margin: 0 auto 14px !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .guides-page .nv-card.featured .nv-card-media img{
+    width: 100% !important;
+    height: auto !important;
+  }
 }

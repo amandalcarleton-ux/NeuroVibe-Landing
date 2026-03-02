@@ -1,6 +1,6 @@
 /* =========================
    NeuroVibe — Single Clean Theme (Use on ALL pages)
-   FIXED + CLEANED (no broken braces, better footer buttons)
+   CLEAN + FIXED + NO DUPLICATES
    ========================= */
 
 /* Root tokens */
@@ -59,8 +59,6 @@ body{
   display: grid;
   gap: 14px;
 }
-
-/* Your HTML uses nv-container (add it so centering works everywhere) */
 .nv-container{
   max-width: var(--container);
   margin: 0 auto;
@@ -77,7 +75,7 @@ body{
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Light glass hero (used on shop pages when needed) */
+/* Light glass hero (used on shop pages) */
 .nv-shop-hero{
   background: rgba(255,255,255,0.10);
   border-bottom: 1px solid rgba(255,255,255,0.22);
@@ -87,7 +85,7 @@ body{
 }
 
 /* =========================
-   NAVBAR (same across pages) — MATCHES FOOTER BUTTON STYLE
+   NAVBAR (same across pages)
    ========================= */
 .navbar{
   position: sticky;
@@ -109,7 +107,6 @@ body{
   flex-wrap: wrap;
 }
 
-/* NAV BUTTONS — now same vibe as footer buttons */
 .nav-btn{
   display:inline-flex;
   align-items:center;
@@ -117,13 +114,10 @@ body{
   padding: 12px 16px;
   border-radius: 999px;
   font-weight: 800;
-  text-decoration: none;
 
-  /* Match footer gradient */
   background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
   color: var(--nv-ink);
 
-  /* Match footer outline + shadow */
   border: 3px solid var(--nv-purple-deep);
   box-shadow: 0 10px 30px rgba(75, 46, 131, 0.20);
 
@@ -136,7 +130,7 @@ body{
   filter: saturate(1.05);
 }
 
-/* Mobile NAV layout stays 2 across, BLOG full width */
+/* Mobile NAV layout stays 2 across, BLOG full width (if you add nav-wide class) */
 @media (max-width: 700px){
   .nav-menu{
     display:grid;
@@ -144,17 +138,15 @@ body{
     gap: 12px;
     max-width: 520px;
   }
-
   .nav-btn{
     padding: 12px 12px;
     font-size: 15px;
   }
-
   .nav-btn.nav-wide{ grid-column: 1 / -1; }
 }
 
 /* =========================
-   BUTTONS (primary/secondary) — KEEP AS-IS
+   BUTTONS
    ========================= */
 .nv-btn{
   display:inline-flex;
@@ -163,34 +155,43 @@ body{
   padding: 14px 22px;
   border-radius: 999px;
   font-weight: 800;
-  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
   min-width: 190px;
-  position: relative;
-  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+
+  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
+  color: var(--nv-ink);
+  border: 2px solid var(--nv-purple-deep);
+  box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
 }
+
+.nv-btn:hover{ transform: translateY(-2px); filter: saturate(1.05); }
 
 .nv-btn-primary{
   background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue));
   color: #2e1a47;
   border: 2px solid var(--nv-purple-deep);
-  box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
 }
 
 .nv-btn-secondary{
   background: rgba(255,255,255,0.18);
   color: #ffffff;
   border: 2px solid rgba(255,255,255,0.55);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
 }
 
-.nv-btn:hover{ transform: translateY(-2px); }
+.nv-deal-btn{
+  background: linear-gradient(135deg, #c6a8ff, #7a5cff);
+  color: #ffffff;
+  border: 2px solid #4b2e83;
+  box-shadow: 0 14px 30px rgba(75, 46, 131, 0.35);
+}
 
-/* Make regular page buttons full width on small screens */
 @media (max-width: 520px){
   .nv-btn{ width: 100%; min-width: 0; }
 }
 
 /* =========================
-   HERO + TEXT (works everywhere)
+   HERO + TEXT
    ========================= */
 .nv-hero{
   padding: 18px 16px;
@@ -251,34 +252,12 @@ body{
   font-weight: 800;
   word-break: break-word;
 }
-
 .nv-micro{
   margin-top: 10px;
   color: rgba(255,255,255,0.9);
 }
-/* Inline MailerLite mini form (Shop page) */
-.nv-ml-inline{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 12px;
-}
 
-.nv-ml-inline input{
-  width: 100%;
-  padding: 12px 14px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.15);
-  color: var(--nv-white);
-  outline: none;
-}
-
-.nv-ml-inline input::placeholder{
-  color: rgba(255,255,255,0.85);
-}
-
-/* Screen-reader only label (if you don't already have this class) */
+/* Screen-reader only */
 .sr-only{
   position: absolute;
   width: 1px;
@@ -290,7 +269,9 @@ body{
   border: 0;
 }
 
-/* Shop Sections */
+/* =========================
+   Shop sections
+   ========================= */
 .nv-section{
   margin: 28px 0;
   padding: 24px 18px;
@@ -304,104 +285,78 @@ body{
 
   box-shadow: 0 14px 40px rgba(60,30,120,0.18);
 }
-.cps-guide-mockup {
-  max-width: 380px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}.cps-guide-mockup{
-  border-radius: 18px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-/* =========================
-   INDEX HERO LAYOUT (centering + clean grid)
-   ========================= */
 
-/* Keep hero content centered inside the page wrapper */
-.hero{
-  width: 100%;
+.nv-section-head{
+  margin-bottom: 22px;
+}
+.nv-section-head h2{
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+.nv-muted{
+  opacity: 0.85;
 }
 
-/* Make the hero grid behave like a real centered container */
-.hero-grid{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-  align-items: start;
-
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 18px 16px;
+/* Shop page headings */
+.nv-shop-title{
+  font-size: 34px;
+  line-height: 1.1;
+  margin: 6px 0 10px;
+  color: #fff;
+  text-shadow: 0 10px 30px rgba(30, 10, 80, 0.35);
+}
+.nv-shop-subtitle{
+  color: rgba(255,255,255,0.92);
+  max-width: 60ch;
+  margin: 0 auto 14px;
+}
+.nv-disclosure{
+  margin: 12px auto 16px;
+  max-width: 70ch;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 14px;
+  padding: 12px 12px;
 }
 
-/* Desktop: 2 columns */
-@media (min-width: 900px){
-  .hero-grid{
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 22px;
-    align-items: center;
-  }
-}
-
-/* Make inner hero content not span full width weirdly */
-.hero-overlay-content{
-  max-width: 680px;
-  margin: 0 auto; /* centers text block within its column */
-}
-
-/* Headings + paragraphs spacing (prevents "floating left" vibe) */
-.hero-overlay-content h1{
-  margin: 10px 0 12px;
-  line-height: 1.12;
-}
-
-.hero-overlay-content p{
-  margin: 0 0 12px;
-}
-
-/* Right column alignment */
-.hero-right{
-  display: grid;
-  gap: 14px;
-  align-content: start;
-  justify-items: center;
-}
-
-/* Buttons under CPS mockup centered */
-.hero-actions{
-  width: 100%;
-  display: grid;
+/* Shop section nav pills */
+.nv-shop-nav{
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  justify-items: center;
+  justify-content: center;
+  margin: 14px 0 6px;
 }
+.nv-shop-nav a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
 
-/* Make callouts centered and not too wide */
-.community-callout{
-  margin-top: 14px;
-  padding: 16px 16px;
-  border-radius: var(--nv-radius);
   background: rgba(255,255,255,0.12);
   border: 1px solid rgba(255,255,255,0.28);
+  color: rgba(255,255,255,0.95);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  transition: transform .15s ease, background .15s ease;
+}
+.nv-shop-nav a:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.18);
 }
 
-.community-callout h2{
-  margin: 0 0 8px;
+.nv-shop-main{
+  padding: 18px 0 30px;
 }
 
-.community-callout p{
-  margin: 0 0 12px;
-}
-
-/* MailerLite embed wrapper */
-.nv-signup{
-  padding: 18px 0 0;
-}
-
-.nv-signup .ml-embedded{
-  max-width: 520px;
-  margin: 0 auto;
-}/* =========================
+/* =========================
    GRID / CARDS
    ========================= */
 .nv-grid{
@@ -409,12 +364,10 @@ body{
   gap: 14px;
   grid-template-columns: 1fr;
 }
-
 @media (min-width: 860px){
-  .nv-grid{
-    grid-template-columns: repeat(3, 1fr);
-  }
-}/* PRODUCT CARDS */
+  .nv-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+
 .nv-card{
   background: rgba(255,255,255,0.18);
   border: 1px solid rgba(255,255,255,0.40);
@@ -424,7 +377,6 @@ body{
   box-shadow: 0 14px 30px rgba(60,30,120,0.18);
   transition: transform .2s ease, box-shadow .2s ease;
 }
-
 .nv-card:hover{
   transform: translateY(-4px);
   box-shadow: 0 18px 40px rgba(60,30,120,0.25);
@@ -449,95 +401,15 @@ body{
   font-size: 13px;
   opacity: 0.8;
 }
-.nv-section-head{
-  margin-bottom: 22px;
-}
 
-.nv-section-head h2{
-  font-size: 28px;
-  margin-bottom: 6px;
-}
-
-.nv-muted{
-  opacity: 0.85;
-}
-/* =========================
-   SHOP: (OPTIONAL) RETURN BLOCK
-   ========================= */
-.nv-return{
-  margin-top: 18px;
-  padding: 22px 16px;
-  text-align: center;
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.38);
-  border-radius: var(--nv-radius);
-}
-
-.nv-return-inner{
-  max-width: var(--container);
-  margin: 0 auto;
-}
-
-.nv-return-logo{
-  width: 160px;
-  max-width: 60%;
-  margin: 0 auto 14px;
+.nv-card-media img{
+  width: 100%;
+  height: auto;
   display: block;
-  filter:
-    drop-shadow(0 0 18px rgba(200,181,255,0.55))
-    drop-shadow(0 0 28px rgba(255,182,225,0.35));
-  transition: transform 0.25s ease;
 }
 
-.nv-return-logo:hover{ transform: scale(1.05); }
-
-.nv-return-title{
-  color: #fff;
-  margin: 0 0 6px;
-  text-shadow: 0 10px 30px rgba(30, 10, 80, 0.35);
-}
-
-.nv-return-text{
-  color: rgba(255,255,255,0.92);
-  margin: 0 0 14px;
-}
-
-.nv-return-actions{
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Return buttons */
-.nv-return-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 18px;
-  border-radius: 999px;
-  font-weight: 900;
-
-  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
-  color: #2e1a47;
-  border: 2px solid var(--nv-purple-deep);
-
-  box-shadow:
-    0 0 18px rgba(198,168,255,0.55),
-    0 14px 30px rgba(60,30,120,0.28);
-  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
-}
-.nv-return-btn:hover{
-  transform: translateY(-2px);
-  box-shadow:
-    0 0 22px rgba(198,168,255,0.70),
-    0 18px 34px rgba(60,30,120,0.32);
-  filter: saturate(1.05);
-}
-/* Featured section styling */
-.nv-featured-card{
-  position: relative;
-}
+/* Featured styling */
+.nv-featured-card{ position: relative; }
 
 .nv-featured-badge{
   display: inline-block;
@@ -548,20 +420,145 @@ body{
   border-radius: 999px;
   margin-bottom: 10px;
 
-  background: rgba(178, 250, 112, 0.95);
-  border: 1px solid rgba(0,0,0,0.08);
+  /* softened (no neon green) */
+  background: rgba(198,168,255,0.95);
+  color: #2e1a47;
+  border: 1px solid rgba(75,46,131,0.20);
 }
 
-#featured .nv-grid{
-  align-items: stretch;
-}
 /* =========================
-   FOOTER NAV (pretty buttons)
+   MailerLite inline mini form (Shop page)
    ========================= */
-.nv-footer{
-  margin-top: 22px;
-  padding: 18px 14px 26px;
+.nv-ml-inline{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+.nv-ml-inline input{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.15);
+  color: var(--nv-white);
+  outline: none;
+}
+.nv-ml-inline input::placeholder{
+  color: rgba(255,255,255,0.85);
+}
+
+/* =========================
+   “Coming soon” placeholder blocks
+   ========================= */
+.nv-coming-soon{
+  text-align:center;
+  padding: 28px 18px;
+  font-weight: 800;
+  opacity: .90;
+}
+.nv-coming-title{
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.nv-coming-sub{
+  font-size: 14px;
+  opacity: .75;
+  font-weight: 700;
+}
+
+/* =========================
+   Button row helpers
+   ========================= */
+.nv-btn-row{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (max-width: 520px){
+  .nv-btn-row{ display:grid; }
+}
+
+/* =========================
+   Bundle card look (soft + premium)
+   ========================= */
+.nv-bundle-card{
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 18px 45px rgba(60,30,120,0.26);
+}
+
+.nv-savings-chip{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  background: rgba(184,224,196,0.95);
+  color: #2f3b2f;
+  border: 1px solid rgba(47,59,47,0.12);
+  margin: 8px auto 12px;
+}
+
+/* Center Digital Resources text + bullets + buttons */
+#digital-resources .nv-card-body,
+#digital-resources .nv-card-title,
+#digital-resources .nv-card-text,
+#digital-resources .nv-card-note{
   text-align: center;
+}
+
+#digital-resources .nv-bullets{
+  list-style: none;
+  padding-left: 0;
+  margin: 14px auto;
+  max-width: 460px;
+}
+#digital-resources .nv-bullets li{
+  margin: 10px 0;
+}
+#digital-resources .nv-btn-row{
+  justify-content: center;
+}
+#digital-resources .nv-btn-row a{
+  width: 100%;
+  max-width: 320px;
+}
+
+/* =========================
+   Optional: CPS mockup helper
+   ========================= */
+.cps-guide-mockup{
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.nv-shop-footer{
+  margin-top: 24px;
+  padding: 18px;
+}
+
+.nv-footer-text{
+  color: rgba(255,255,255,0.95);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.nv-footer-mini{
+  color: rgba(255,255,255,0.82);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 14px;
 }
 
 .footer-nav{
@@ -576,14 +573,14 @@ body{
   padding: 14px 28px;
   border-radius: 30px;
   font-weight: 800;
-  text-decoration: none;
+
   background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
   color: var(--nv-ink);
   border: 3px solid var(--nv-purple-deep);
   box-shadow: 0 10px 30px rgba(75, 46, 131, 0.25);
+
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
 }
-
 .footer-nav a:hover{
   transform: translateY(-2px);
   box-shadow: 0 14px 35px rgba(75, 46, 131, 0.35);
@@ -601,7 +598,6 @@ body{
     max-width: 520px;
     margin: 0 auto;
   }
-
   .footer-nav a{
     width: 100%;
     padding: 12px 10px;
@@ -609,251 +605,4 @@ body{
     border-radius: 999px;
     text-align: center;
   }
-}/* =========================
-   SHOP PAGE STYLES (missing)
-   ========================= */
-.nv-shop-title{
-  font-size: 34px;
-  line-height: 1.1;
-  margin: 6px 0 10px;
-  color: #fff;
-  text-shadow: 0 10px 30px rgba(30, 10, 80, 0.35);
-}
-
-.nv-shop-subtitle{
-  color: rgba(255,255,255,0.92);
-  max-width: 60ch;
-  margin: 0 auto 14px;
-}
-
-.nv-disclosure{
-  margin: 12px auto 16px;
-  max-width: 70ch;
-  font-size: 13px;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.85);
-  background: rgba(255,255,255,0.10);
-  border: 1px solid rgba(255,255,255,0.28);
-  border-radius: 14px;
-  padding: 12px 12px;
-}
-
-.nv-shop-nav{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin: 14px 0 6px;
-}
-
-.nv-shop-nav a{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 800;
-
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.28);
-  color: rgba(255,255,255,0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
-  transition: transform .15s ease, background .15s ease;
-}
-
-.nv-shop-nav a:hover{
-  transform: translateY(-2px);
-  background: rgba(255,255,255,0.18);
-}
-
-.nv-shop-main{
-  padding: 18px 0 30px;
-}
-
-.nv-card-media img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Shop footer text */
-.nv-shop-footer{
-  margin-top: 24px;
-  padding: 18px;
-}
-
-.nv-footer-text{
-  color: rgba(255,255,255,0.95);
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-.nv-footer-mini{
-  color: rgba(255,255,255,0.82);
-  font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 14px;
-}
-
-/* Logo area (this was accidentally inside nv-footer-mini) */
-.hero-logo{
-  display:flex;
-  justify-content:flex-start;
-  align-items:center;
-  margin-bottom: 10px;
-}
-
-.site-logo{
-  width: min(320px, 80vw);
-  height: auto;
-  display:block;
-  filter: drop-shadow(0 0 18px rgba(200,181,255,0.55))
-          drop-shadow(0 0 28px rgba(255,182,225,0.35));
-}
-
-.nv-coming-soon{
-  text-align:center;
-  padding: 28px 18px;
-  font-weight: 800;
-  opacity: .85;
-}
-
-.nv-coming-title{
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.nv-coming-sub{
-  font-size: 14px;
-  opacity: .7;
-  font-weight: 700;
-}
-.hero-logo{
-  display:flex;
-  justify-content:flex-start;
-  align-items:center;
-  margin-bottom: 10px;
-}
-
-.site-logo{
-  width: min(320px, 80vw);
-  height: auto;
-  display:block;
-  filter: drop-shadow(0 0 18px rgba(200,181,255,0.55))
-          drop-shadow(0 0 28px rgba(255,182,225,0.35));
-}
-.nv-coming-soon{
-  text-align:center;
-  padding: 28px 18px;
-  font-weight: 800;
-  opacity: .85;
-}
-
-.nv-coming-title{
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.nv-coming-sub{
-  font-size: 14px;
-  opacity: .7;
-  font-weight: 700;
-}/* =========================
-   PATCH: Fix broken brace + improve shop CTAs + bundle styling
-   Paste at END of style.css
-   ========================= */
-
-/* FIX: your .nv-footer-mini block is missing a closing } */
-.nv-footer-mini{
-  color: rgba(255,255,255,0.82);
-  font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 14px;
-} /* <- IMPORTANT: closes the footer-mini rule */
-
-/* Give .nv-btn a default visible style (so buttons don't look blank) */
-.nv-btn{
-  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
-  color: var(--nv-ink);
-  border: 2px solid var(--nv-purple-deep);
-  box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
-}
-
-.nv-deal-btn{
-  background: linear-gradient(135deg, #c6a8ff, #7a5cff);
-  color: #ffffff;
-  border: 2px solid #4b2e83;
-  box-shadow: 0 14px 30px rgba(75, 46, 131, 0.35);
-}
-
-/* Button row helper (used in digital section) */
-.nv-btn-row{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-@media (max-width: 520px){
-  .nv-btn-row{ display:grid; }
-}
-
-.nv-bundle-card{
-  border: 1px solid rgba(255,255,255,0.35);
-  box-shadow: 0 18px 45px rgba(60,30,120,0.26);
-}
-
-/* small "Save $5" sticker */
-.nv-savings-chip{
-  background: #b8e0c4;
-  color: #2f3b2f;
-  border: none;
-}
-/* =========================
-   Center Digital Resources
-   ========================= */
-#digital-resources .nv-card-body{
-  text-align: center;
-}
-
-#digital-resources .nv-bullets{
-  list-style: none;
-  padding-left: 0;
-  margin: 14px auto;
-  max-width: 420px;
-}
-
-#digital-resources .nv-bullets li{
-  margin: 10px 0;
-}
-
-#digital-resources .nv-card-note{
-  text-align: center;
-}
-
-#digital-resources .nv-bundle-price{
-  text-align: center;
-}/* Center Digital Resources card text + clean bullet indentation */
-#digital-resources .nv-card-body{
-  text-align: center;
-}
-
-#digital-resources .nv-card-text{
-  text-align: center;
-}
-
-#digital-resources ul{
-  list-style: none;
-  padding-left: 0;
-  margin: 14px auto;
-  max-width: 420px;
-}
-
-#digital-resources ul li{
-  margin: 10px 0;
-}
-
-#digital-resources .nv-btn-row{
-  justify-content: center;
 }

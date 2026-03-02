@@ -780,12 +780,11 @@ body{
   box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
 }
 
-/* Optional: make "deal" buttons pop */
 .nv-deal-btn{
-  background: linear-gradient(135deg, var(--nv-lime), var(--nv-teal));
-  color: #1b1b20;
-  border: 2px solid rgba(0,0,0,0.12);
-  box-shadow: 0 12px 26px rgba(20, 10, 60, 0.22);
+  background: linear-gradient(135deg, #c6a8ff, #7a5cff);
+  color: #ffffff;
+  border: 2px solid #4b2e83;
+  box-shadow: 0 14px 30px rgba(75, 46, 131, 0.35);
 }
 
 /* Button row helper (used in digital section) */
@@ -800,28 +799,16 @@ body{
   .nv-btn-row{ display:grid; }
 }
 
-/* Premium bundle card look (use on the bundle article with an extra class) */
 .nv-bundle-card{
-  border: 2px solid rgba(178, 250, 112, 0.55);
-  box-shadow:
-    0 0 0 2px rgba(178,250,112,0.12) inset,
-    0 18px 45px rgba(60,30,120,0.26);
-  position: relative;
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 18px 45px rgba(60,30,120,0.26);
 }
 
 /* small "Save $5" sticker */
 .nv-savings-chip{
-  display:inline-flex;
-  align-items:center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-weight: 900;
-  font-size: 12px;
-  letter-spacing: .2px;
-  background: rgba(178,250,112,0.95);
-  border: 1px solid rgba(0,0,0,0.10);
-  margin-bottom: 10px;
+  background: #b8e0c4;
+  color: #2f3b2f;
+  border: none;
 }
 /* =========================
    Center Digital Resources

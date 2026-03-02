@@ -256,6 +256,40 @@ body{
   margin-top: 10px;
   color: rgba(255,255,255,0.9);
 }
+/* Inline MailerLite mini form (Shop page) */
+.nv-ml-inline{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.nv-ml-inline input{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.15);
+  color: var(--nv-white);
+  outline: none;
+}
+
+.nv-ml-inline input::placeholder{
+  color: rgba(255,255,255,0.85);
+}
+
+/* Screen-reader only label (if you don't already have this class) */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 /* Shop Sections */
 .nv-section{
   margin: 28px 0;

@@ -725,4 +725,67 @@ body{
   font-size: 14px;
   opacity: .7;
   font-weight: 700;
+}/* =========================
+   PATCH: Fix broken brace + improve shop CTAs + bundle styling
+   Paste at END of style.css
+   ========================= */
+
+/* FIX: your .nv-footer-mini block is missing a closing } */
+.nv-footer-mini{
+  color: rgba(255,255,255,0.82);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+} /* <- IMPORTANT: closes the footer-mini rule */
+
+/* Give .nv-btn a default visible style (so buttons don't look blank) */
+.nv-btn{
+  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
+  color: var(--nv-ink);
+  border: 2px solid var(--nv-purple-deep);
+  box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
+}
+
+/* Optional: make "deal" buttons pop */
+.nv-deal-btn{
+  background: linear-gradient(135deg, var(--nv-lime), var(--nv-teal));
+  color: #1b1b20;
+  border: 2px solid rgba(0,0,0,0.12);
+  box-shadow: 0 12px 26px rgba(20, 10, 60, 0.22);
+}
+
+/* Button row helper (used in digital section) */
+.nv-btn-row{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media (max-width: 520px){
+  .nv-btn-row{ display:grid; }
+}
+
+/* Premium bundle card look (use on the bundle article with an extra class) */
+.nv-bundle-card{
+  border: 2px solid rgba(178, 250, 112, 0.55);
+  box-shadow:
+    0 0 0 2px rgba(178,250,112,0.12) inset,
+    0 18px 45px rgba(60,30,120,0.26);
+  position: relative;
+}
+
+/* small "Save $5" sticker */
+.nv-savings-chip{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: .2px;
+  background: rgba(178,250,112,0.95);
+  border: 1px solid rgba(0,0,0,0.10);
+  margin-bottom: 10px;
 }

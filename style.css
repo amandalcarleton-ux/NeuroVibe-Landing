@@ -1056,4 +1056,94 @@ body.resource-vault .nv-btn-row{
   height: 1050px;
   border: 0;
   display: block;
+}/* =========================
+   ROTM TEASER (Rebuilt)
+   ========================= */
+
+.rotm-feature{
+  margin: 18px 0 0;
+}
+
+.rotm-container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.40);
+  box-shadow: 0 18px 55px rgba(60,30,120,0.18);
+}
+
+.rotm-media{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.10);
+}
+
+.rotm-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rotm-body{
+  padding: 14px 4px 4px;
+  text-align: center;
+}
+
+.rotm-eyebrow{
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: .85;
+  margin-bottom: 8px;
+}
+
+.rotm-eyebrow span{
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 1;
+}
+
+.rotm-title{
+  font-size: clamp(22px, 4.2vw, 32px);
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+.rotm-quote{
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 700;
+  opacity: .95;
+  margin: 0 auto 14px;
+  max-width: 55ch;
+}
+
+.rotm-actions{
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  margin-top: 6px;
+}
+
+.rotm-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  border: 2px solid rgba(75,46,131,0.55);
+  background: linear-gradient(135deg, rgba(198,168,255,0.95), rgba(156,202,255,0.9), rgba(255,182,225,0.85));
+  box-shadow: 0 14px 30px rgba(75,46,131,0.25);
+}
+
+.rotm-link{
+  font-weight: 800;
+  text-decoration: underline;
+  opacity: .95;
 }

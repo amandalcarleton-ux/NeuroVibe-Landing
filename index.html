@@ -38,10 +38,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG">
-<link rel="apple-touch-icon" href="/images/nv-favicon.PNG">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
-  <!-- MailerLite Universal (NEW - required for ml-embedded forms) -->
+  <!-- MailerLite Universal (required for ml-embedded forms) -->
   <script>
     (function(w,d,e,u,f,l,n){
       w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
@@ -51,74 +52,179 @@
     ml('account', '2150381');
   </script>
   <!-- End MailerLite Universal -->
-
 </head>
 
 <body class="nv-y2k">
 
-<!-- NAV (same across pages) -->
-<header class="navbar">
-  <nav class="nav-menu">
-    <a href="index.html" class="nav-btn">HOME</a>
-  <a href="start-here.html" class="nav-btn">START HERE</a>
-    <a href="about.html" class="nav-btn">ABOUT</a>
-    <a href="guides.html" class="nav-btn">GUIDES</a>
-    <a href="shop.html" class="nav-btn">SHOP</a>
-    <a href="links.html" class="nav-btn">RESOURCES</a>
-    <a href="https://blog.neurovibe.site" target="_blank" rel="noopener" class="nav-btn">BLOG</a>
-    <a href="contact.html" class="nav-btn">CONTACT</a>
-  </nav>
-</header>
+  <!-- NAV (same across pages) -->
+  <header class="navbar">
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-btn">HOME</a>
+      <a href="start-here.html" class="nav-btn">START HERE</a>
+      <a href="about.html" class="nav-btn">ABOUT</a>
+      <a href="guides.html" class="nav-btn">GUIDES</a>
+      <a href="shop.html" class="nav-btn">SHOP</a>
+      <a href="links.html" class="nav-btn">RESOURCES</a>
+      <a href="https://blog.neurovibe.site" target="_blank" rel="noopener" class="nav-btn">BLOG</a>
+      <a href="contact.html" class="nav-btn">CONTACT</a>
+    </nav>
+  </header>
+
   <main class="nv-page">
     <div class="nv-wrap">
 
       <!-- HERO (cleaner flow) -->
-<section class="hero hero-overlay glass">
-  <div class="hero-grid">
+      <section class="hero hero-overlay glass">
+        <div class="hero-grid">
 
-    <!-- LEFT: Identity + ONE clear first step -->
-    <div class="hero-left">
-      <div class="hero-overlay-content">
+          <!-- LEFT -->
+          <div class="hero-left">
+            <div class="hero-overlay-content">
 
-        <!-- LOGO -->
-        <div class="hero-logo">
-          <img
-            src="images/NeuroVibe-logo.PNG?v=8"
-            alt="NeuroVibe logo"
-            class="site-logo"
-          />
+              <div class="hero-logo">
+                <img
+                  src="images/NeuroVibe-logo.PNG?v=8"
+                  alt="NeuroVibe logo"
+                  class="site-logo"
+                />
+              </div>
+
+              <div class="hero-brand">
+                <a href="index.html">NeuroVibe Wellness Collective</a>
+              </div>
+
+              <h1>Calm, practical support for neurodivergent families.</h1>
+
+              <p>
+                NeuroVibe is a supportive space for executive function, emotional regulation,
+                and real-life routines — built for overwhelmed parents and neurodivergent homes.
+              </p>
+
+              <div class="nv-cta-row" style="margin-top:14px;">
+                <a href="start-here.html" class="nv-btn nv-btn-primary">
+                  Start Here (Free Reset + Best Next Steps)
+                </a>
+                <a href="guides.html" class="nv-btn nv-btn-secondary">
+                  Browse Guides
+                </a>
+              </div>
+
+              <!-- Community -->
+              <section class="community-callout" style="margin-top:18px;">
+                <h2>💬 Join the NeuroVibe Community</h2>
+                <p>
+                  A calm Facebook group for support, simple tools, and gentle routines — no pressure, no perfection.
+                </p>
+
+                <div class="nv-cta-row">
+                  <a href="https://www.facebook.com/share/g/1J1FtcAgHK/?mibextid=wwXIfr"
+                     target="_blank" rel="noopener"
+                     class="nv-btn nv-btn-primary">
+                    Join the Facebook Group
+                  </a>
+
+                  <a href="contact.html" class="nv-btn nv-btn-secondary">
+                    Send a Note
+                  </a>
+                </div>
+              </section>
+
+              <!-- MailerLite embed -->
+              <section class="nv-signup" style="margin-top:18px;">
+                <h2 class="nv-h2" style="margin-bottom:6px;">Get calm tools in your inbox ✨</h2>
+                <p class="nv-copy" style="margin-bottom:10px;">
+                  Short, supportive emails with real-life strategies (and free downloads).
+                </p>
+                <div class="ml-embedded" data-form="RC0a1w"></div>
+              </section>
+
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+          <div class="hero-right">
+            <img src="images/CPS-Guide.PNG" alt="CPS Parent Support Guide cover">
+
+            <div class="hero-actions">
+              <a href="https://neurovibes.gumroad.com/l/xtwoe" target="_blank" rel="noopener" class="nv-btn nv-btn-primary">
+                Get the CPS Parent Support Guide
+              </a>
+
+              <a href="start-here.html" class="nv-btn nv-btn-secondary">
+                Not sure? Start Here first
+              </a>
+            </div>
+
+            <section class="twitch-spot glass">
+              <h2>📅 Want 1:1 support?</h2>
+              <p>Book a calm, no-pressure call and we’ll figure out what would help most.</p>
+
+              <a href="https://calendly.com/amandalcarleton/30min" target="_blank" rel="noopener" class="nv-btn nv-btn-primary">
+                👉 Book a Call
+              </a>
+            </section>
+          </div>
+
         </div>
+      </section>
 
-        <div class="hero-brand">
-          <a href
+      <!-- ROTM TEASER -->
+      <section class="rotm-feature">
+        <div class="rotm-container glass">
 
-      <!-- Rhythm of the Moon Teaser (REBUILT) -->
-<section class="rotm-feature">
-  <div class="rotm-container glass">
-    
-    <div class="rotm-media">
-      <img
-  src="images/rotm-photo-teaser.PNG"
-  alt="Rhythm of the Moon teaser image"
-  loading="lazy"
-/>
+          <div class="rotm-media">
+            <img
+              src="images/rotm-photo-teaser.PNG"
+              alt="Rhythm of the Moon teaser image"
+              loading="lazy"
+            />
+          </div>
 
-    <div class="rotm-body">
-      <p class="rotm-eyebrow">From <span>The Rhythm of the Moon</span></p>
+          <div class="rotm-body">
+            <p class="rotm-eyebrow">From <span>The Rhythm of the Moon</span></p>
 
-      <h2 class="rotm-title">Finding your natural rhythm 🌙</h2>
+            <h2 class="rotm-title">Finding your natural rhythm 🌙</h2>
 
-      <p class="rotm-quote">
-        She wasn’t changing into someone new.<br />
-        She was learning her rhythm.<br />
-        She was growing — strong, steady, and magical.
-      </p>
+            <p class="rotm-quote">
+              She wasn’t changing into someone new.<br />
+              She was learning her rhythm.<br />
+              She was growing — strong, steady, and magical.
+            </p>
 
-      <div class="rotm-actions">
-        <a href="#" class="rotm-button">🌙 Coming Soon on Kindle</a>
-        <a href="start-here.html" class="rotm-link">Start here with free calm tools →</a>
-      </div>
+            <div class="rotm-actions">
+              <a href="#" class="rotm-button">🌙 Coming Soon on Kindle</a>
+              <a href="start-here.html" class="rotm-link">Start here with free calm tools →</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Wellness links (optional, lower-pressure placement) -->
+      <section class="glass nv-card" style="margin-top:18px; padding:18px;">
+        <h2 class="nv-h2">Wellness picks (optional support)</h2>
+        <p class="nv-copy">If you’re building a stronger foundation, these are tools I recommend.</p>
+
+        <div class="nv-actions" style="margin-top:10px;">
+          <a href="https://www.myfreehealthreport.com/NeuroVibe" target="_blank" rel="noopener" class="nv-btn ghost">
+            Get a free health report
+          </a>
+          <a href="https://www.livegood.com/clinic/index?enroller=NeuroVibe" target="_blank" rel="noopener" class="nv-btn ghost">
+            Explore wellness options
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer" style="margin-top:22px;">
+        <p>© <span id="year"></span> NeuroVibe</p>
+      </footer>
+
     </div>
+  </main>
 
-  </div>
-</section>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

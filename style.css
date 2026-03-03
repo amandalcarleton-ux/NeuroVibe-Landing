@@ -1216,4 +1216,17 @@ body.resource-vault .nv-btn-row{
   height: auto;
   display:block;
   filter: drop-shadow(0 14px 28px rgba(60,30,120,0.35));
+}/* Header image wrapper */
+.nv-page-header{
+  width: min(100%, 1000px);
+  margin: 14px auto 16px;
+  padding: 0 14px;
+}
+
+/* The actual header image */
+.nv-header-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;   /* never crop */
 }

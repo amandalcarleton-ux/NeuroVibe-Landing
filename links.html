@@ -2,14 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- PAGE LOGO -->
-  <img
-    src="images/neurovibe-resource-library-logo.PNG"
-    alt="NeuroVibe Resource Library Logo"
-    class="nv-page-logo"
-  />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <!-- Primary SEO -->
   <title>NeuroVibe | Resource Library</title>
   <meta name="description" content="A curated collection of tools, platforms, and partner links I personally use and recommend." />
@@ -22,8 +17,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css?v=302" />
 
-    <link rel="icon" type="image/png" href="/images/nv-favicon.PNG">
-<link rel="apple-touch-icon" href="/images/nv-favicon.PNG">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
   <!-- MailerLite Universal (kept) -->
   <script>
@@ -40,20 +36,27 @@
 <body class="nv-y2k resource-vault">
 
   <!-- NAV (same across pages) -->
-<header class="navbar">
-  <nav class="nav-menu">
-    <a href="index.html" class="nav-btn">HOME</a>
-   <a href="start-here.html" class="nav-btn">START HERE</a>
-    <a href="about.html" class="nav-btn">ABOUT</a>
-    <a href="guides.html" class="nav-btn">GUIDES</a>
-    <a href="shop.html" class="nav-btn">SHOP</a>
-    <a href="links.html" class="nav-btn">RESOURCES</a>
-    <a href="https://blog.neurovibe.site" target="_blank" rel="noopener" class="nav-btn">BLOG</a>
-    <a href="contact.html" class="nav-btn">CONTACT</a>
-  </nav>
-</header>
+  <header class="navbar">
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-btn">HOME</a>
+      <a href="start-here.html" class="nav-btn">START HERE</a>
+      <a href="about.html" class="nav-btn">ABOUT</a>
+      <a href="guides.html" class="nav-btn">GUIDES</a>
+      <a href="shop.html" class="nav-btn">SHOP</a>
+      <a href="links.html" class="nav-btn">RESOURCES</a>
+      <a href="https://blog.neurovibe.site" target="_blank" rel="noopener" class="nav-btn">BLOG</a>
+      <a href="contact.html" class="nav-btn">CONTACT</a>
+    </nav>
+  </header>
 
-  
+  <!-- PAGE LOGO (moved out of head) -->
+  <div class="nv-page-header">
+    <img
+      src="images/neurovibe-resource-library-logo.PNG"
+      alt="NeuroVibe Resource Library Logo"
+      class="nv-page-logo"
+    />
+  </div>
 
   <!-- HERO -->
   <section class="nv-shop-hero nv-vault-hero">
@@ -75,6 +78,7 @@
         <a href="#beauty">Beauty</a>
         <a href="#home-deals">Home + Deals</a>
         <a href="#apps-tools">Apps + Platforms</a>
+        <a href="#extra-income">Extra Income</a>
       </nav>
     </div>
   </section>
@@ -289,46 +293,56 @@
           </article>
         </div>
       </section>
-      <section class="nv-side-income">
-  <h2>✨ Extra Income Ideas</h2>
-  <p>Because regulated moms deserve financial breathing room too.</p>
 
-  <div class="resource-card">
-    <h3>GoBranded Surveys</h3>
-    <p>Earn rewards and cash just for sharing your opinions online.</p>
-    <a href="https://surveys.gobranded.com/users/register/ACA79662"
-       target="_blank"
-       rel="noopener sponsored"
-       class="resource-btn">
-       Start Earning
-    </a>
-  </div>
-</section>
-
-      <!-- FOOTER -->
-      <footer class="nv-shop-footer glass">
-        <div class="nv-container nv-footer-inner">
-          <p class="nv-footer-text">
-            Quick note: This page is a “partner links hub.” If you shop through these links, it helps support NeuroVibe 💜
-          </p>
-          <p class="nv-footer-mini">
-            Disclosure: Some links are affiliate/partner links. If you buy through them, I may earn a commission at no extra cost to you.
-          </p>
-
-          <div class="footer-nav" aria-label="Footer navigation">
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="contact.html">Contact</a>
-          </div>
-
-          <p style="margin-top:12px;">
-            <a class="nv-link big" href="index.html">← Back to NeuroVibe</a>
-          </p>
+      <!-- EXTRA INCOME -->
+      <section id="extra-income" class="nv-section">
+        <div class="nv-section-head">
+          <h2>✨ Extra Income Ideas</h2>
+          <p class="nv-muted">Because regulated moms deserve financial breathing room too.</p>
         </div>
-      </footer>
+
+        <div class="nv-grid">
+          <article class="nv-card nv-featured-card">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Quick Start</span>
+              <h3 class="nv-card-title">GoBranded Surveys</h3>
+              <p class="nv-card-text">Earn rewards and cash just for sharing your opinions online.</p>
+              <a class="nv-btn nv-deal-btn"
+                 href="https://surveys.gobranded.com/users/register/ACA79662"
+                 target="_blank"
+                 rel="noopener sponsored">
+                Start Earning
+              </a>
+              <p class="nv-card-note">Referral / affiliate link</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
     </div>
   </main>
+
+  <!-- FOOTER -->
+  <footer class="nv-shop-footer glass">
+    <div class="nv-container nv-footer-inner">
+      <p class="nv-footer-text">
+        Quick note: This page is a “partner links hub.” If you shop through these links, it helps support NeuroVibe 💜
+      </p>
+      <p class="nv-footer-mini">
+        Disclosure: Some links are affiliate/partner links. If you buy through them, I may earn a commission at no extra cost to you.
+      </p>
+
+      <div class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <p style="margin-top:12px;">
+        <a class="nv-link big" href="index.html">← Back to NeuroVibe</a>
+      </p>
+    </div>
+  </footer>
 
 </body>
 </html>

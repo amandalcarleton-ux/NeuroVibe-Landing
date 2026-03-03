@@ -190,15 +190,22 @@
       </a>
     </section>
 
-    <!-- Footer CTA -->
-    <footer class="glass nv-card" style="margin-top:20px; padding:20px; text-align:center;">
-      <p style="margin-bottom:14px;">Looking for something specific?</p>
-      <div class="nv-actions" style="justify-content:center;">
-        <a class="nv-btn ghost" href="shop.html">Shop</a>
-        <a class="nv-btn ghost" href="links.html">Resources</a>
-        <a class="nv-btn ghost" href="contact.html">Contact</a>
-      </div>
-    </footer>
+    <footer class="glass nv-card nv-footer-cta">
+  <h2 class="nv-h2">Want the free reset?</h2>
+  <p class="nv-copy">A quick calm tool for overwhelmed moments — delivered by email.</p>
 
+  <div class="nv-actions" style="justify-content:center;">
+    <a class="nv-btn primary" href="start-here.html">Get the free reset</a>
+    <a class="nv-btn ghost" href="https://www.facebook.com/share/g/1J1FtcAgHK/?mibextid=wwXIfr" target="_blank" rel="noopener">
+      Join the Facebook group
+    </a>
   </div>
-</main>
+
+  <p style="margin-top:14px; font-size:12px; opacity:.75;">
+    © <span id="year"></span> NeuroVibe Wellness Collective • Affiliate links may earn commission.
+  </p>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>

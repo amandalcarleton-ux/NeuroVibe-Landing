@@ -1230,7 +1230,8 @@ body.resource-vault .nv-btn-row{
   display: block;
   object-fit: contain;   /* never crop */
 }
-/* Light pink contact card */
+
+}/* Light pink contact card */
 .nv-contact-card{
   background: linear-gradient(
     135deg,

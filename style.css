@@ -1165,4 +1165,6 @@ body.resource-vault .nv-btn-row{
   filter: blur(18px);
   opacity: 0.85;
   border-radius: 50%;
+}.home-page .navbar{
+  position: static;
 }

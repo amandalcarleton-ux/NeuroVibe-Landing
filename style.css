@@ -1202,3 +1202,18 @@ body.resource-vault .nv-btn-row{
   0%{ left: -20%; }
   100%{ left: 120%; }
 }
+/* START HERE header logo */
+.nv-start-here-header{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin: 18px auto 8px;
+  padding: 6px 12px;
+}
+
+.nv-start-here-logo{
+  width: min(520px, 92vw);
+  height: auto;
+  display:block;
+  filter: drop-shadow(0 14px 28px rgba(60,30,120,0.35));
+}

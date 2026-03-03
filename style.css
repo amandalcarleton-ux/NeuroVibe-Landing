@@ -1230,21 +1230,24 @@ body.resource-vault .nv-btn-row{
   display: block;
   object-fit: contain;   /* never crop */
 }
-
-}/* Light pink contact card */
+/* Soft pink contact card - no border */
 .nv-contact-card{
   background: linear-gradient(
     135deg,
-    rgba(255, 210, 235, 0.55),
-    rgba(255, 180, 220, 0.45)
+    rgba(255, 220, 240, 0.65),
+    rgba(255, 190, 230, 0.55)
   );
+
   border-radius: 26px;
   padding: 28px;
   margin-top: 20px;
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-  border: 1px solid rgba(255,255,255,0.6);
-  box-shadow: 0 10px 30px rgba(255, 170, 210, 0.25);
+  border: none; /* remove border */
+
+  box-shadow: 
+    0 8px 30px rgba(255, 170, 210, 0.35),
+    0 0 25px rgba(255, 180, 230, 0.25);
 }

@@ -1168,3 +1168,37 @@ body.resource-vault .nv-btn-row{
 }.home-page .navbar{
   position: static;
 }
+/* ✨ Glitter Divider */
+.nv-glitter-divider{
+  height: 2px;
+  width: 100%;
+  margin: 60px auto;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c6a8ff,
+    #9ccaff,
+    #ffb6e1,
+    #c6a8ff,
+    transparent
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.nv-glitter-divider::after{
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -20%;
+  width: 40%;
+  height: 14px;
+  background: radial-gradient(circle, rgba(255,255,255,.9) 0%, transparent 70%);
+  animation: nv-sparkle 3s linear infinite;
+}
+
+@keyframes nv-sparkle{
+  0%{ left: -20%; }
+  100%{ left: 120%; }
+}

@@ -1146,4 +1146,23 @@ body.resource-vault .nv-btn-row{
   font-weight: 800;
   text-decoration: underline;
   opacity: .95;
+}/* =========================
+   Soft Glow Divider
+   ========================= */
+
+.nv-glow-divider{
+  height: 80px;
+  margin: 0 auto 10px;
+  max-width: 1000px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(200,181,255,0.55) 0%,
+      rgba(156,202,255,0.35) 40%,
+      rgba(255,182,225,0.25) 60%,
+      rgba(255,255,255,0) 75%
+    );
+  filter: blur(18px);
+  opacity: 0.85;
+  border-radius: 50%;
 }

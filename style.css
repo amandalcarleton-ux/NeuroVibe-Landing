@@ -1286,3 +1286,101 @@ body.resource-vault .nv-btn-row{
   transform:translateY(-3px) scale(1.02);
   box-shadow:0 18px 55px rgba(60,30,120,.35);
 }
+/* =========================
+   CLEANUP OVERRIDES (Paste at VERY BOTTOM)
+   Purpose: fix duplicates + unify styles safely
+   ========================= */
+
+/* --- Fix duplicate button definitions (choose ONE final style) --- */
+.nv-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid var(--nv-purple-deep);
+  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
+  color: var(--nv-ink);
+  box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+
+.nv-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(75, 46, 131, 0.30);
+  filter: saturate(1.05);
+}
+
+/* Primary / Ghost variants (keep consistent) */
+.nv-btn.primary{
+  background: linear-gradient(135deg, var(--nv-purple), var(--nv-teal));
+  color: #fff;
+  border-color: rgba(255,255,255,0.35);
+}
+
+.nv-btn.ghost{
+  background: rgba(255,255,255,0.18);
+  color: var(--nv-ink);
+  border-color: rgba(255,255,255,0.35);
+}
+
+/* Deal button stays teal/purple */
+.nv-btn.nv-deal-btn,
+.nv-deal-btn{
+  background: linear-gradient(135deg, var(--nv-purple), var(--nv-teal));
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.35);
+  box-shadow: 0 14px 30px rgba(75, 46, 131, 0.35);
+}
+
+/* --- Fix duplicate media image rules (stop stretching) --- */
+.nv-card-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* --- Fix duplicate contact card rules (choose ONE) --- */
+.nv-contact-card{
+  background: linear-gradient(
+    135deg,
+    rgba(255, 210, 235, 0.90),
+    rgba(255, 185, 225, 0.80)
+  );
+  border-radius: 32px;
+  padding: 34px 30px;
+  margin: 30px 14px 10px;
+  border: none;
+  box-shadow: 0 14px 45px rgba(255, 160, 210, 0.45);
+}
+
+/* =========================
+   SHOP: TEAL WELLNESS SECTION
+   ========================= */
+/* Your shop section id is: #wellness-staples */
+#wellness-staples{
+  background: linear-gradient(
+    135deg,
+    rgba(126,230,255,0.28),
+    rgba(156,202,255,0.18),
+    rgba(255,255,255,0.10)
+  ) !important;
+
+  border: 1px solid rgba(255,255,255,0.40) !important;
+  box-shadow: 0 16px 45px rgba(20, 120, 140, 0.18) !important;
+}
+
+/* Make the header text pop on teal */
+#wellness-staples .nv-section-head h2,
+#wellness-staples .nv-section-head p{
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 10px 22px rgba(30, 10, 80, 0.25);
+}
+
+#wellness-staples .nv-muted{
+  opacity: 0.95;
+}

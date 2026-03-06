@@ -1,6 +1,6 @@
 /* =========================
-   NeuroVibe — Single Clean Theme (Use on ALL pages)
-   CLEAN + FIXED (no broken braces, no duplicates)
+   NeuroVibe — Clean Master Theme
+   MailerLite-safe
    ========================= */
 
 /* Root tokens */
@@ -24,10 +24,27 @@
 }
 
 /* Reset */
-*{ margin:0; padding:0; box-sizing:border-box; }
-html, body{ width:100%; }
-img{ max-width:100%; height:auto; display:block; }
-a{ color: inherit; text-decoration: none; }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body{
+  width: 100%;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
 
 /* Base */
 body{
@@ -45,20 +62,18 @@ body{
     linear-gradient(135deg, #5a48ff 0%, #a78bfa 35%, #7ee6ff 70%, #ffb6e1 100%);
 }
 
-/* Page wrapper */
+/* Layout helpers */
 .nv-page{
   min-height: 100vh;
   padding: 18px 14px 34px;
 }
 
-/* Containers */
 .nv-container{
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 14px;
 }
 
-/* Glass */
 .glass{
   background: var(--nv-glass);
   border: 1px solid var(--nv-border);
@@ -81,53 +96,288 @@ body{
   border-bottom: 1px solid rgba(255,255,255,0.18);
 }
 
+.home-page .navbar{
+  position: static;
+}
+
 .nav-menu{
   max-width: var(--container);
   margin: 0 auto;
   padding: 12px 14px;
-  display:flex;
+  display: flex;
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .nav-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 16px;
   border-radius: 999px;
   font-weight: 800;
-
   background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
   color: var(--nv-ink);
-
   border: 3px solid var(--nv-purple-deep);
   box-shadow: 0 10px 30px rgba(75, 46, 131, 0.20);
-
   transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 .nav-btn:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.25),
+    0 14px 35px rgba(75, 46, 131, 0.30);
+  filter: saturate(1.05);
+}
+
+.nav-btn::before{
+  content:"";
+  position:absolute;
+  inset:-40% -60%;
+  background: linear-gradient(
+    110deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.10) 35%,
+    rgba(255,255,255,0.45) 50%,
+    rgba(255,255,255,0.10) 65%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: translateX(-80%) rotate(8deg);
+  filter: blur(0.5px);
+  opacity: 0.85;
+  z-index: 0;
+  animation: nvShimmer 4.5s linear infinite;
+  pointer-events: none;
+}
+
+.nav-btn::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 18% 35%, rgba(255,255,255,0.55) 0 1px, rgba(255,255,255,0) 2px),
+    radial-gradient(circle at 72% 28%, rgba(255,255,255,0.45) 0 1px, rgba(255,255,255,0) 2px),
+    radial-gradient(circle at 58% 70%, rgba(255,255,255,0.40) 0 1px, rgba(255,255,255,0) 2px),
+    radial-gradient(circle at 32% 78%, rgba(255,255,255,0.35) 0 1px, rgba(255,255,255,0) 2px);
+  opacity: 0.55;
+  z-index: 0;
+  animation: nvTwinkle 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes nvShimmer{
+  0%   { transform: translateX(-90%) rotate(8deg); }
+  100% { transform: translateX(90%) rotate(8deg); }
+}
+
+@keyframes nvTwinkle{
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%      { opacity: 0.75; transform: scale(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .nav-btn::before,
+  .nav-btn::after{
+    animation: none;
+  }
+}
+
+@media (max-width: 700px){
+  .nav-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    max-width: 520px;
+  }
+
+  .nav-btn{
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .nav-btn.nav-wide{
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================
+   BUTTONS
+   ========================= */
+.nv-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  border: 2px solid var(--nv-purple-deep);
+  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
+  color: var(--nv-ink);
+  box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+
+.nv-btn:hover{
   transform: translateY(-2px);
   box-shadow: 0 14px 35px rgba(75, 46, 131, 0.30);
   filter: saturate(1.05);
 }
 
-@media (max-width: 700px){
-  .nav-menu{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    max-width: 520px;
+.nv-btn.primary{
+  background: linear-gradient(135deg, var(--nv-purple), var(--nv-teal));
+  color: #fff;
+  border-color: rgba(255,255,255,0.35);
+}
+
+.nv-btn.ghost{
+  background: rgba(255,255,255,0.18);
+  color: var(--nv-ink);
+  border-color: rgba(255,255,255,0.35);
+}
+
+.nv-deal-btn,
+.nv-btn.nv-deal-btn{
+  background: linear-gradient(135deg, var(--nv-purple), var(--nv-teal));
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.35);
+  box-shadow: 0 14px 30px rgba(75, 46, 131, 0.35);
+}
+
+.nv-btn-row{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 520px){
+  .nv-btn{
+    width: 100%;
+    min-width: 0;
   }
-  .nav-btn{
-    padding: 12px 12px;
-    font-size: 15px;
+
+  .nv-btn-row{
+    display: grid;
   }
-  .nav-btn.nav-wide{ grid-column: 1 / -1; }
-}/* =========================
-   GUIDES PAGE (NeuroVibe)
+}
+
+/* =========================
+   TEXT HELPERS
+   ========================= */
+.nv-kicker{
+  margin: 0 0 6px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(16,16,24,0.75);
+  font-size: 12px;
+}
+
+.nv-h1{
+  font-size: clamp(28px, 4.5vw, 44px);
+  line-height: 1.08;
+  margin-bottom: 10px;
+}
+
+.nv-h2{
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.nv-h3{
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.nv-sub{
+  font-size: 1.05rem;
+  opacity: 0.95;
+  max-width: 70ch;
+}
+
+.nv-sub2,
+.nv-muted{
+  opacity: 0.85;
+}
+
+.nv-copy{
+  opacity: 0.95;
+}
+
+.nv-copy-narrow{
+  max-width: 70ch;
+}
+
+/* =========================
+   PAGE HEADERS / IMAGES
+   ========================= */
+.nv-page-header{
+  width: min(100%, 1000px);
+  margin: 14px auto 16px;
+  padding: 0 14px;
+}
+
+.nv-header-img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.nv-guides-header{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 10px;
+}
+
+.nv-guides-header img{
+  width: min(100%, 1100px);
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(60,30,120,0.35);
+}
+
+.nv-start-here-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 18px auto 8px;
+  padding: 6px 12px;
+}
+
+.nv-start-here-logo{
+  width: min(520px, 92vw);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 14px 28px rgba(60,30,120,0.35));
+}
+
+.nv-shop-logo{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.nv-shop-logo-img{
+  width: min(420px, 90vw);
+  max-width: 420px;
+  height: auto;
+  display: block;
+  filter:
+    drop-shadow(0 0 22px rgba(200,181,255,0.65))
+    drop-shadow(0 0 35px rgba(255,182,225,0.45));
+}
+
+/* =========================
+   HERO / WRAPS
    ========================= */
 .nv-wrap{
   max-width: 1100px;
@@ -148,234 +398,11 @@ body{
   padding: 22px 18px;
 }
 
-.nv-h1{
-  font-size: clamp(28px, 4.5vw, 44px);
-  line-height: 1.08;
-  margin-bottom: 10px;
-}
-
-.nv-sub{
-  font-size: 1.05rem;
-  opacity: 0.95;
-  max-width: 70ch;
-}
-
 .nv-hero-cta{
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   margin-top: 14px;
-}
-
-.nv-section{
-  margin-top: 26px;
-}
-
-.nv-section-head{
-  margin-bottom: 14px;
-}
-
-.nv-h2{
-  font-size: 1.6rem;
-  margin-bottom: 6px;
-}
-
-.nv-sub2{
-  opacity: 0.9;
-}
-
-.nv-grid{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 14px;
-}
-
-.nv-card{
-  grid-column: span 12;
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 14px;
-  padding: 14px;
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.45);
-  background: rgba(255,255,255,0.18);
-  box-shadow: 0 18px 55px rgba(60, 30, 120, 0.12);
-  backdrop-filter: blur(10px);
-}
-
-.nv-card.featured{
-  grid-template-columns: 160px 1fr;
-}
-
-.nv-card.bundle{
-  border: 1px solid rgba(178,250,112,0.65);
-}
-
-.nv-card-media img{
-  width: 100%;
-  height: auto;          /* key fix */
-  display: block;
-  object-fit: cover;
-}
-.nv-card-media img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.nv-placeholder{
-  font-size: 0.95rem;
-  opacity: 0.85;
-  padding: 10px;
-  text-align: center;
-}
-
-.nv-card-body{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.nv-tag{
-  width: fit-content;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-weight: 700;
-  background: rgba(255,255,255,0.45);
-  border: 1px solid rgba(255,255,255,0.45);
-}
-
-.nv-h3{
-  font-size: 1.2rem;
-  line-height: 1.2;
-}
-
-.nv-copy{
-  opacity: 0.95;
-}
-
-.nv-bullets{
-  margin: 0;
-  padding-left: 18px;
-  display: grid;
-  gap: 6px;
-}
-
-.nv-actions{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-top: 6px;
-}
-
-.nv-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 800;
-  text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.45);
-}
-
-.nv-btn.primary{
-  background: rgba(107,92,255,0.95);
-  color: #fff;
-  border-color: rgba(255,255,255,0.25);
-}
-
-.nv-btn.ghost{
-  background: rgba(255,255,255,0.20);
-  color: #101018;
-}
-
-.nv-faq{
-  display: grid;
-  gap: 10px;
-}
-
-.nv-faq details{
-  padding: 12px 14px;
-  border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.45);
-  background: rgba(255,255,255,0.16);
-}
-
-.nv-faq summary{
-  cursor: pointer;
-  font-weight: 800;
-}
-
-/* Responsive */
-@media (max-width: 720px){
-  .nv-card{
-    grid-template-columns: 1fr;
-  }
-  .nv-card-media{
-    min-height: 180px;
-  }
-}
-
-/* =========================
-   BUTTONS
-   ========================= */
-.nv-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 14px 22px;
-  border-radius: 999px;
-  font-weight: 800;
-  min-width: 190px;
-
-  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
-  color: var(--nv-ink);
-  border: 2px solid var(--nv-purple-deep);
-  box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
-
-  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
-}
-
-.nv-btn:hover{ transform: translateY(-2px); filter:saturate(1.04); }
-
-@media (max-width: 520px){
-  .nv-btn{ width: 100%; min-width: 0; }
-}
-
-/* “Deal / Primary CTA” — changed to purple/teal (no neon green) */
-.nv-deal-btn{
-  background: linear-gradient(135deg, var(--nv-purple), var(--nv-teal));
-  color: #ffffff;
-  border: 2px solid rgba(255,255,255,0.35);
-  box-shadow: 0 14px 30px rgba(75, 46, 131, 0.35);
-}
-
-/* Button row helper */
-.nv-btn-row{
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (max-width: 520px){
-  .nv-btn-row{ display:grid; }
-}
-
-/* =========================
-   HERO TEXT HELPERS
-   ========================= */
-.nv-kicker{
-  margin: 0 0 6px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(16,16,24,0.75);
-  font-size: 12px;
 }
 
 /* =========================
@@ -414,7 +441,7 @@ body{
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.28);
   border-radius: 14px;
-  padding: 12px 12px;
+  padding: 12px;
   text-align: center;
 }
 
@@ -433,13 +460,11 @@ body{
   padding: 10px 14px;
   border-radius: 999px;
   font-weight: 800;
-
   background: rgba(255,255,255,0.12);
   border: 1px solid rgba(255,255,255,0.28);
   color: rgba(255,255,255,0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-
   transition: transform .15s ease, background .15s ease;
 }
 
@@ -452,20 +477,34 @@ body{
   padding: 18px 0 30px;
 }
 
+.nv-digital-track{
+  padding: 18px;
+  margin: 8px 0 16px;
+}
+
+.nv-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.nv-actions-wrap{
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
 /* =========================
-   SECTIONS
+   SECTIONS / CARDS / GRID
    ========================= */
 .nv-section{
   margin: 28px 0;
   padding: 24px 18px;
   border-radius: var(--nv-radius);
-
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.35);
-
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-
   box-shadow: 0 14px 40px rgba(60,30,120,0.18);
 }
 
@@ -474,32 +513,36 @@ body{
   text-align: center;
 }
 
+.nv-section-head-center{
+  text-align: center;
+}
+
 .nv-section-head h2{
   font-size: 28px;
   margin-bottom: 6px;
 }
 
-.nv-muted{ opacity: 0.85; }
-
-/* =========================
-   GRID / CARDS
-   ========================= */
 .nv-grid{
-  display:grid;
+  display: grid;
   gap: 14px;
   grid-template-columns: 1fr;
 }
 
 @media (min-width: 860px){
-  .nv-grid{ grid-template-columns: repeat(3, 1fr); }
+  .nv-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .nv-card{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 14px;
+  padding: 14px;
   background: rgba(255,255,255,0.18);
   border: 1px solid rgba(255,255,255,0.40);
   border-radius: 18px;
   overflow: hidden;
-
   box-shadow: 0 14px 30px rgba(60,30,120,0.18);
   transition: transform .2s ease, box-shadow .2s ease;
 }
@@ -509,20 +552,42 @@ body{
   box-shadow: 0 18px 40px rgba(60,30,120,0.25);
 }
 
+.nv-card.featured{
+  grid-template-columns: 160px 1fr;
+}
+
+.nv-card.bundle{
+  border: 1px solid rgba(178,250,112,0.65);
+}
+
+.nv-card-media{
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  height: auto;
+  min-height: 0;
+}
+
 .nv-card-media img{
   width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
 }
 
 .nv-logo-card{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 160px;
 }
 
-.nv-card-body{ padding: 18px; }
+.nv-card-body{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+}
 
 .nv-card-title{
   margin-bottom: 8px;
@@ -530,7 +595,9 @@ body{
   font-weight: 800;
 }
 
-.nv-card-text{ margin-bottom: 14px; }
+.nv-card-text{
+  margin-bottom: 14px;
+}
 
 .nv-card-note{
   margin-top: 12px;
@@ -538,8 +605,9 @@ body{
   opacity: 0.8;
 }
 
-/* Featured badge */
-.nv-featured-card{ position: relative; }
+.nv-featured-card{
+  position: relative;
+}
 
 .nv-featured-badge{
   display: inline-block;
@@ -549,56 +617,45 @@ body{
   padding: 6px 10px;
   border-radius: 999px;
   margin-bottom: 10px;
-
   background: rgba(255,255,255,0.75);
   border: 1px solid rgba(0,0,0,0.08);
 }
 
-/* =========================
-   GUIDES PAGE — Featured card mobile fix
-   ========================= */
-
-/* Base card layout (safe defaults) */
-.nv-card{
-  overflow: hidden;               /* prevents weird inner overflow */
+.nv-tag{
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  background: rgba(255,255,255,0.45);
+  border: 1px solid rgba(255,255,255,0.45);
 }
 
-/* Make featured card a 2-col grid on larger screens */
-.nv-card.featured{
+.nv-bullets{
+  margin: 0;
+  padding-left: 18px;
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 16px;
-  align-items: start;
+  gap: 6px;
 }
 
-/* Media should NOT stretch tall */
-.nv-card-media{
-  display: block;
-  border-radius: 18px;
-  overflow: hidden;
-  height: auto;
-  min-height: 0;                  /* key: prevents tall empty column */
+.nv-placeholder{
+  font-size: 0.95rem;
+  opacity: 0.85;
+  padding: 10px;
+  text-align: center;
 }
 
-/* Image should fill its box normally */
-.nv-card-media img{
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
 @media (max-width: 720px){
   .nv-card{
     grid-template-columns: 1fr;
   }
 
-  /* don't force tall media boxes on mobile */
   .nv-card-media{
     min-height: 0;
   }
 }
+
 /* =========================
-   DIGITAL RESOURCES (CENTER + CLEAN)
+   DIGITAL RESOURCES
    ========================= */
 #digital-resources .nv-card-body,
 #digital-resources .nv-card-text,
@@ -619,32 +676,28 @@ body{
   margin: 10px 0;
 }
 
-/* Bundle card styling (purple/teal/lilac, not green) */
 .nv-bundle-card{
   border: 1px solid rgba(255,255,255,0.45);
   box-shadow: 0 18px 45px rgba(60,30,120,0.26);
 }
 
 .nv-savings-chip{
-  display:inline-flex;
-  align-items:center;
+  display: inline-flex;
+  align-items: center;
   gap: 8px;
   padding: 8px 12px;
   border-radius: 999px;
   font-weight: 900;
   font-size: 12px;
   letter-spacing: .2px;
-
   background: linear-gradient(135deg, rgba(198,168,255,0.85), rgba(126,230,255,0.75));
   border: 1px solid rgba(255,255,255,0.45);
   color: #1b1630;
-
   margin: 0 auto 10px;
 }
 
-/* Coming Soon block */
 .nv-coming-soon{
-  text-align:center;
+  text-align: center;
   padding: 28px 18px;
   font-weight: 800;
   opacity: .9;
@@ -662,7 +715,7 @@ body{
 }
 
 /* =========================
-   MailerLite inline form (Shop)
+   MAILERLITE SAFE STYLES
    ========================= */
 .nv-ml-inline{
   display: grid;
@@ -685,364 +738,7 @@ body{
   color: rgba(255,255,255,0.85);
 }
 
-/* Screen-reader only */
-.sr-only{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
-/* =========================
-   FOOTER
-   ========================= */
-.nv-shop-footer{
-  margin-top: 24px;
-  padding: 18px;
-}
-
-.nv-footer-text{
-  color: rgba(255,255,255,0.95);
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.nv-footer-mini{
-  color: rgba(255,255,255,0.82);
-  font-size: 13px;
-  line-height: 1.5;
-  margin-bottom: 14px;
-  text-align: center;
-}
-
-.footer-nav{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap: 12px;
-}
-
-.footer-nav a{
-  display: inline-block;
-  padding: 14px 28px;
-  border-radius: 30px;
-  font-weight: 800;
-
-  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
-  color: var(--nv-ink);
-
-  border: 3px solid var(--nv-purple-deep);
-  box-shadow: 0 10px 30px rgba(75, 46, 131, 0.25);
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-}
-
-.footer-nav a:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 35px rgba(75, 46, 131, 0.35);
-  filter: saturate(1.05);
-}
-
-@media (max-width: 520px){
-  .footer-nav{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    align-items: stretch;
-    width: 100%;
-    max-width: 520px;
-    margin: 0 auto;
-  }
-
-  .footer-nav a{
-    width: 100%;
-    padding: 12px 10px;
-    font-size: 15px;
-    border-radius: 999px;
-    text-align: center;
-  }
-}/* =========================
-   Resource Vault page tweaks
-   ========================= */
-
-body.resource-vault .nv-vault-hero{
-  /* slightly different tint from shop */
-  background: rgba(255,255,255,0.08);
-  border-bottom: 1px solid rgba(255,255,255,0.18);
-}
-
-/* Make section headers centered (fixes the “Eh” alignment vibe) */
-body.resource-vault .nv-section-head{
-  text-align: center;
-}
-
-body.resource-vault .nv-section-head p{
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70ch;
-}
-
-/* Keep cards readable + consistent */
-body.resource-vault .nv-card-body{
-  text-align: center;
-}
-
-body.resource-vault .nv-card-text{
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 60ch;
-}
-
-/* Button row centered */
-body.resource-vault .nv-btn-row{
-  justify-content: center;
-}/* =========================
-   Shop Logo Image Header
-   ========================= */
-
-.nv-shop-logo{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 14px;
-}
-
-.nv-shop-logo-img{
-  width: min(420px, 90vw);
-  max-width: 420px;
-  height: auto;
-  display: block;
-
-  filter:
-    drop-shadow(0 0 22px rgba(200,181,255,0.65))
-    drop-shadow(0 0 35px rgba(255,182,225,0.45));
-}
-/* =========================
-   GUIDES PAGE — FINAL CARD FIX (Paste at VERY BOTTOM)
-   ========================= */
-
-/* Make Guides cards use the “media + body” grid layout */
-.guides-page .nv-card{
-  display: grid !important;
-  grid-template-columns: 160px 1fr;
-  gap: 14px;
-  padding: 14px;
-
-  border-radius: 22px;
-  border: 1px solid rgba(255,255,255,0.45);
-  background: rgba(255,255,255,0.18);
-  box-shadow: 0 18px 55px rgba(60, 30, 120, 0.12);
-  backdrop-filter: blur(10px);
-  overflow: hidden;
-}
-
-/* Featured card slightly wider media on desktop */
-.guides-page .nv-card.featured{
-  grid-template-columns: 220px 1fr !important;
-  align-items: start;
-}
-
-/* FIX: stop the media box from being tall/centered */
-.guides-page .nv-card-media{
-  display: block !important;
-  min-height: 0 !important;
-  height: auto !important;
-
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.12);
-}
-
-/* FIX: stop the image from stretching to 100% height */
-.guides-page .nv-card-media img{
-  width: 100% !important;
-  height: auto !important;      /* key fix */
-  display: block;
-  object-fit: cover;
-}
-
-/* Mobile: stack image on top (no empty left block) */
-@media (max-width: 720px){
-  .guides-page .nv-card{
-    grid-template-columns: 1fr !important;
-  }
-
-  .guides-page .nv-card-media{
-    max-width: 420px;
-    margin: 0 auto;
-  }
-}
-/* =========================
-   GUIDES PAGE — MOBILE POLISH FIX
-   ========================= */
-
-@media (max-width: 720px){
-
-  /* Remove extra side padding so cards don't look cut */
-  .guides-page .nv-section{
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  /* Make cards fully fluid */
-  .guides-page .nv-card{
-    width: 100%;
-    margin: 0;
-  }
-
-  /* Ensure media never overflows container */
-  .guides-page .nv-card-media{
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .guides-page .nv-card-media img{
-    width: 100%;
-    height: auto;
-  }
-
-}/* =========================
-   iPhone PORTRAIT FIX — breakpoint was too small
-   Put at VERY BOTTOM
-   ========================= */
-
-/* Use a higher breakpoint so portrait iPhones still get the stacked layout */
-@media (max-width: 900px){
-  .guides-page .nv-card.featured{
-    grid-template-columns: 1fr !important;
-  }
-
-  .guides-page .nv-card.featured .nv-card-media{
-    max-width: 520px !important;
-    width: 100% !important;
-    margin: 0 auto 14px !important;
-    min-height: 0 !important;
-    height: auto !important;
-  }
-
-  .guides-page .nv-card.featured .nv-card-media img{
-    width: 100% !important;
-    height: auto !important;
-  }
-}
-/* =========================
-   FIX: Featured "Start here" MUST stack in portrait
-   ========================= */
-
-/* Portrait phones/tablets: stack featured card */
-@media (orientation: portrait){
-  .guides-page .featured-reset{
-    grid-template-columns: 1fr !important;
-  }
-
-  .guides-page .featured-reset .nv-card-media{
-    width: 100% !important;
-    max-width: 520px !important;
-    margin: 0 auto 14px !important;
-  }
-
-  .guides-page .featured-reset .nv-card-body{
-    width: 100% !important;
-  }
-}
-
-/* Also stack on smaller screens regardless of orientation (extra safety) */
-@media (max-width: 980px){
-  .guides-page .featured-reset{
-    grid-template-columns: 1fr !important;
-  }
-}/* Guides Header Image */
-.nv-guides-header{
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 10px;
-}
-
-.nv-guides-header img{
-  width: min(100%, 1100px);
-  height: auto;
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(60,30,120,0.35);
-}/* =========================
-   NAV SPARKLE EFFECT (Y2K)
-   ========================= */
-
-.nav-btn{
-  position: relative;
-  overflow: hidden;
-  isolation: isolate; /* keeps pseudo layers contained */
-}
-
-/* Shimmer sweep */
-.nav-btn::before{
-  content:"";
-  position:absolute;
-  inset:-40% -60%;
-  background: linear-gradient(
-    110deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.10) 35%,
-    rgba(255,255,255,0.45) 50%,
-    rgba(255,255,255,0.10) 65%,
-    rgba(255,255,255,0) 100%
-  );
-  transform: translateX(-80%) rotate(8deg);
-  filter: blur(0.5px);
-  opacity: 0.85;
-  z-index: 0;
-  animation: nvShimmer 4.5s linear infinite;
-  pointer-events: none;
-}
-
-/* Tiny twinkles */
-.nav-btn::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 18% 35%, rgba(255,255,255,0.55) 0 1px, rgba(255,255,255,0) 2px),
-    radial-gradient(circle at 72% 28%, rgba(255,255,255,0.45) 0 1px, rgba(255,255,255,0) 2px),
-    radial-gradient(circle at 58% 70%, rgba(255,255,255,0.40) 0 1px, rgba(255,255,255,0) 2px),
-    radial-gradient(circle at 32% 78%, rgba(255,255,255,0.35) 0 1px, rgba(255,255,255,0) 2px);
-  opacity: 0.55;
-  z-index: 0;
-  animation: nvTwinkle 3.2s ease-in-out infinite;
-  pointer-events: none;
-}
-
-/* Make sure text stays above sparkles */
-.nav-btn span,
-.nav-btn{
-  z-index: 1;
-}
-
-/* Optional: a little extra glow on hover */
-.nav-btn:hover{
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.25), 0 10px 30px rgba(126,230,255,0.18);
-}
-
-@keyframes nvShimmer{
-  0%   { transform: translateX(-90%) rotate(8deg); }
-  100% { transform: translateX(90%) rotate(8deg); }
-}
-
-@keyframes nvTwinkle{
-  0%, 100% { opacity: 0.35; transform: scale(1); }
-  50%      { opacity: 0.75; transform: scale(1.02); }
-}
-
-/* Accessibility: reduce motion */
-@media (prefers-reduced-motion: reduce){
-  .nav-btn::before,
-  .nav-btn::after{
-    animation: none;
-  }
-}.nv-form-embed{
+.nv-form-embed{
   margin-top: 20px;
   border-radius: var(--nv-radius);
   overflow: hidden;
@@ -1056,339 +752,58 @@ body.resource-vault .nv-btn-row{
   height: 1050px;
   border: 0;
   display: block;
-}/* =========================
-   ROTM TEASER (Rebuilt)
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* =========================
+   RESOURCE VAULT
    ========================= */
-
-.rotm-feature{
-  margin: 18px 0 0;
+body.resource-vault .nv-vault-hero{
+  background: rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.18);
 }
 
-.rotm-container{
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 16px;
-  border-radius: 24px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.16);
-  border: 1px solid rgba(255,255,255,0.40);
-  box-shadow: 0 18px 55px rgba(60,30,120,0.18);
-}
-
-.rotm-media{
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.35);
-  background: rgba(255,255,255,0.10);
-}
-
-.rotm-media img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.rotm-body{
-  padding: 14px 4px 4px;
+body.resource-vault .nv-section-head{
   text-align: center;
 }
 
-.rotm-eyebrow{
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  font-size: 12px;
-  opacity: .85;
-  margin-bottom: 8px;
+body.resource-vault .nv-section-head p{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch;
 }
 
-.rotm-eyebrow span{
-  letter-spacing: 0;
-  text-transform: none;
-  opacity: 1;
+body.resource-vault .nv-card-body{
+  text-align: center;
 }
 
-.rotm-title{
-  font-size: clamp(22px, 4.2vw, 32px);
-  line-height: 1.15;
-  margin: 0 0 10px;
+body.resource-vault .nv-card-text{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60ch;
 }
 
-.rotm-quote{
-  font-size: 18px;
-  line-height: 1.55;
-  font-weight: 700;
-  opacity: .95;
-  margin: 0 auto 14px;
-  max-width: 55ch;
-}
-
-.rotm-actions{
-  display: grid;
-  gap: 10px;
-  justify-items: center;
-  margin-top: 6px;
-}
-
-.rotm-button{
-  display: inline-flex;
-  align-items: center;
+body.resource-vault .nv-btn-row{
   justify-content: center;
-  padding: 14px 18px;
-  border-radius: 999px;
-  font-weight: 900;
-  border: 2px solid rgba(75,46,131,0.55);
-  background: linear-gradient(135deg, rgba(198,168,255,0.95), rgba(156,202,255,0.9), rgba(255,182,225,0.85));
-  box-shadow: 0 14px 30px rgba(75,46,131,0.25);
-}
-
-.rotm-link{
-  font-weight: 800;
-  text-decoration: underline;
-  opacity: .95;
-}/* =========================
-   Soft Glow Divider
-   ========================= */
-
-.nv-glow-divider{
-  height: 80px;
-  margin: 0 auto 10px;
-  max-width: 1000px;
-  background:
-    radial-gradient(
-      ellipse at center,
-      rgba(200,181,255,0.55) 0%,
-      rgba(156,202,255,0.35) 40%,
-      rgba(255,182,225,0.25) 60%,
-      rgba(255,255,255,0) 75%
-    );
-  filter: blur(18px);
-  opacity: 0.85;
-  border-radius: 50%;
-}.home-page .navbar{
-  position: static;
-}
-/* ✨ Glitter Divider */
-.nv-glitter-divider{
-  height: 2px;
-  width: 100%;
-  margin: 60px auto;
-  border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #c6a8ff,
-    #9ccaff,
-    #ffb6e1,
-    #c6a8ff,
-    transparent
-  );
-  position: relative;
-  overflow: hidden;
-}
-
-.nv-glitter-divider::after{
-  content: "";
-  position: absolute;
-  top: -6px;
-  left: -20%;
-  width: 40%;
-  height: 14px;
-  background: radial-gradient(circle, rgba(255,255,255,.9) 0%, transparent 70%);
-  animation: nv-sparkle 3s linear infinite;
-}
-
-@keyframes nv-sparkle{
-  0%{ left: -20%; }
-  100%{ left: 120%; }
-}
-/* START HERE header logo */
-.nv-start-here-header{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  margin: 18px auto 8px;
-  padding: 6px 12px;
-}
-
-.nv-start-here-logo{
-  width: min(520px, 92vw);
-  height: auto;
-  display:block;
-  filter: drop-shadow(0 14px 28px rgba(60,30,120,0.35));
-}/* Header image wrapper */
-.nv-page-header{
-  width: min(100%, 1000px);
-  margin: 14px auto 16px;
-  padding: 0 14px;
-}
-
-/* The actual header image */
-.nv-header-img{
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;   /* never crop */
-}
-/* Stronger soft pink card */
-.nv-contact-card{
-  background: linear-gradient(
-    135deg,
-    rgba(255, 210, 235, 0.85),
-    rgba(255, 180, 220, 0.75)
-  );
-
-  border-radius: 28px;
-  padding: 30px;
-  margin-top: 20px;
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  border: none;
-
-  box-shadow: 
-    0 12px 40px rgba(255, 160, 210, 0.45);
-}.nv-contact-card{
-  background: linear-gradient(
-    135deg,
-    rgba(255, 210, 235, 0.9),
-    rgba(255, 185, 225, 0.8)
-  );
-
-  border-radius: 32px;
-  padding: 34px 30px;
-  margin: 30px 14px 10px;
-
-  border: none;
-
-  box-shadow: 
-    0 14px 45px rgba(255, 160, 210, 0.45);
-}.nv-contact-card h2{
-  margin-top: 0;
-  margin-bottom: 12px;
-}
-
-.nv-contact-card p{
-  margin-bottom: 12px;
-}
-.nv-reset-button{
-  width:100%;
-  max-width:520px;
-  display:block;
-  margin:20px auto;
-  border-radius:22px;
-  box-shadow:0 12px 40px rgba(60,30,120,.25);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-
-.nv-reset-button:hover{
-  transform:translateY(-3px) scale(1.02);
-  box-shadow:0 18px 55px rgba(60,30,120,.35);
-}
-/* =========================
-   CLEANUP OVERRIDES (Paste at VERY BOTTOM)
-   Purpose: fix duplicates + unify styles safely
-   ========================= */
-
-/* --- Fix duplicate button definitions (choose ONE final style) --- */
-.nv-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap: 8px;
-  padding: 12px 18px;
-  border-radius: 999px;
-  font-weight: 800;
-  text-decoration: none;
-  border: 2px solid var(--nv-purple-deep);
-  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
-  color: var(--nv-ink);
-  box-shadow: 0 10px 22px rgba(75, 46, 131, 0.22);
-  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
-}
-
-.nv-btn:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 35px rgba(75, 46, 131, 0.30);
-  filter: saturate(1.05);
-}
-
-/* Primary / Ghost variants (keep consistent) */
-.nv-btn.primary{
-  background: linear-gradient(135deg, var(--nv-purple), var(--nv-teal));
-  color: #fff;
-  border-color: rgba(255,255,255,0.35);
-}
-
-.nv-btn.ghost{
-  background: rgba(255,255,255,0.18);
-  color: var(--nv-ink);
-  border-color: rgba(255,255,255,0.35);
-}
-
-/* Deal button stays teal/purple */
-.nv-btn.nv-deal-btn,
-.nv-deal-btn{
-  background: linear-gradient(135deg, var(--nv-purple), var(--nv-teal));
-  color: #ffffff;
-  border: 2px solid rgba(255,255,255,0.35);
-  box-shadow: 0 14px 30px rgba(75, 46, 131, 0.35);
-}
-
-/* --- Fix duplicate media image rules (stop stretching) --- */
-.nv-card-media img{
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* --- Fix duplicate contact card rules (choose ONE) --- */
-.nv-contact-card{
-  background: linear-gradient(
-    135deg,
-    rgba(255, 210, 235, 0.90),
-    rgba(255, 185, 225, 0.80)
-  );
-  border-radius: 32px;
-  padding: 34px 30px;
-  margin: 30px 14px 10px;
-  border: none;
-  box-shadow: 0 14px 45px rgba(255, 160, 210, 0.45);
 }
 
 /* =========================
-   SHOP: TEAL WELLNESS SECTION
+   LINKS PAGE
    ========================= */
-/* Your shop section id is: #wellness-staples */
-#wellness-staples{
-  background: linear-gradient(
-    135deg,
-    rgba(126,230,255,0.28),
-    rgba(156,202,255,0.18),
-    rgba(255,255,255,0.10)
-  ) !important;
-
-  border: 1px solid rgba(255,255,255,0.40) !important;
-  box-shadow: 0 16px 45px rgba(20, 120, 140, 0.18) !important;
-}
-
-/* Make the header text pop on teal */
-#wellness-staples .nv-section-head h2,
-#wellness-staples .nv-section-head p{
-  color: rgba(255,255,255,0.95);
-  text-shadow: 0 10px 22px rgba(30, 10, 80, 0.25);
-}
-
-#wellness-staples .nv-muted{
-  opacity: 0.95;
-}
-/* Links page card */
 .nv-link-card{
   display: block;
   text-decoration: none;
-  color: var(--nv-ink, #101018);
+  color: var(--nv-ink);
   border-radius: 22px;
   border: 1px solid rgba(255,255,255,0.45);
   background: rgba(255,255,255,0.18);
@@ -1403,9 +818,9 @@ body.resource-vault .nv-btn-row{
 }
 
 .nv-link-card-top{
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 18px 18px 8px;
 }
 
@@ -1413,7 +828,7 @@ body.resource-vault .nv-btn-row{
   max-width: 260px;
   width: 78%;
   height: auto;
-  display:block;
+  display: block;
   opacity: .95;
 }
 
@@ -1433,120 +848,22 @@ body.resource-vault .nv-btn-row{
 }
 
 .nv-link-card-btn{
-  display:inline-block;
+  display: inline-block;
   padding: 10px 14px;
   border-radius: 999px;
   background: rgba(255,255,255,0.35);
   border: 1px solid rgba(255,255,255,0.45);
   font-weight: 700;
-}/* NeuroVibeWell logo */
+}
+
+/* =========================
+   PRODUCT CARD SYSTEM
+   ========================= */
 .nv-section-header{
-  text-align:center;
-  margin-bottom:20px;
-}
-
-.nv-well-logo{
-  width:260px;
-  max-width:85%;
-  margin-bottom:10px;
-}
-
-/* Grid */
-.nv-card-grid{
-  display:grid;
-  gap:18px;
-}
-
-/* Product card */
-.nv-product-card{
-  display:grid;
-  grid-template-columns:140px 1fr;
-  gap:16px;
-
-  padding:16px;
-  text-decoration:none;
-  color:var(--nv-ink);
-
-  border-radius:22px;
-  border:1px solid rgba(255,255,255,0.4);
-  background:rgba(255,255,255,0.18);
-
-  box-shadow:0 18px 55px rgba(60,30,120,0.22);
-}
-
-/* Product image */
-.nv-product-img{
-  width:100%;
-  height:auto;
-  max-height:180px;
-  object-fit:contain;
-}
-
-/* Product body */
-.nv-product-title{
-  font-weight:800;
-  margin-bottom:6px;
-}
-
-.nv-product-desc{
-  font-size:.95rem;
-  margin-bottom:10px;
-}
-
-.nv-product-points{
-  padding-left:18px;
-  font-size:.9rem;
-  margin-bottom:10px;
-}
-
-.nv-product-price{
-  display:flex;
-  gap:10px;
-  margin-bottom:10px;
-}
-
-.nv-price{
-  font-weight:800;
-}
-
-.nv-btn{
-  display:inline-block;
-  padding:8px 14px;
-  border-radius:999px;
-
-  background:rgba(255,255,255,0.35);
-  border:1px solid rgba(255,255,255,0.4);
-
-  font-weight:700;
-}
-
-/* Shop: remove inline style clutter */
-.nv-digital-track{
-  padding: 18px;
-  margin: 8px 0 16px;
-}
-
-.nv-copy-narrow{
-  max-width: 70ch;
-}
-
-.nv-actions{
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.nv-actions-wrap{
-  flex-wrap: wrap;
-  margin-top: 10px;
-}
-
-/* Centered section head option */
-.nv-section-head-center{
   text-align: center;
+  margin-bottom: 20px;
 }
 
-/* NeuroVibeWell logo */
 .nv-well-logo{
   width: 280px;
   max-width: 90%;
@@ -1554,22 +871,25 @@ body.resource-vault .nv-btn-row{
   display: block;
 }
 
-/* Product card grid variant */
+.nv-card-grid{
+  display: grid;
+  gap: 18px;
+}
+
 .nv-grid-product{
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
 }
 
-/* Product card */
 .nv-product-card{
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 16px;
   padding: 16px;
   text-decoration: none;
-  color: var(--nv-ink, #101018);
-  border-radius: var(--nv-radius, 22px);
+  color: var(--nv-ink);
+  border-radius: var(--nv-radius);
   border: 1px solid rgba(255,255,255,0.45);
   background: rgba(255,255,255,0.18);
   box-shadow: 0 18px 55px rgba(60, 30, 120, 0.22);
@@ -1624,6 +944,17 @@ body.resource-vault .nv-btn-row{
   opacity: .92;
 }
 
+.nv-product-price{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.nv-price{
+  font-weight: 800;
+}
+
 .nv-product-footnote{
   margin: 10px 0 0;
   font-size: .78rem;
@@ -1640,7 +971,9 @@ body.resource-vault .nv-btn-row{
   }
 }
 
-/* WELLCO SECTION */
+/* =========================
+   WELLCO SECTION
+   ========================= */
 .wellco-section{
   background: #DFF7E8;
   padding: 70px 20px;
@@ -1739,5 +1072,385 @@ body.resource-vault .nv-btn-row{
 
   .wellco-card{
     padding: 22px;
+  }
+}
+
+/* =========================
+   CONTACT / SPECIAL CARDS
+   ========================= */
+.nv-contact-card{
+  background: linear-gradient(
+    135deg,
+    rgba(255, 210, 235, 0.90),
+    rgba(255, 185, 225, 0.80)
+  );
+  border-radius: 32px;
+  padding: 34px 30px;
+  margin: 30px 14px 10px;
+  border: none;
+  box-shadow: 0 14px 45px rgba(255, 160, 210, 0.45);
+}
+
+.nv-contact-card h2{
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.nv-contact-card p{
+  margin-bottom: 12px;
+}
+
+.nv-reset-button{
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(60,30,120,.25);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.nv-reset-button:hover{
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 18px 55px rgba(60,30,120,.35);
+}
+
+/* =========================
+   DIVIDERS / GLOW
+   ========================= */
+.nv-glow-divider{
+  height: 80px;
+  margin: 0 auto 10px;
+  max-width: 1000px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(200,181,255,0.55) 0%,
+      rgba(156,202,255,0.35) 40%,
+      rgba(255,182,225,0.25) 60%,
+      rgba(255,255,255,0) 75%
+    );
+  filter: blur(18px);
+  opacity: 0.85;
+  border-radius: 50%;
+}
+
+.nv-glitter-divider{
+  height: 2px;
+  width: 100%;
+  margin: 60px auto;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #c6a8ff,
+    #9ccaff,
+    #ffb6e1,
+    #c6a8ff,
+    transparent
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.nv-glitter-divider::after{
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -20%;
+  width: 40%;
+  height: 14px;
+  background: radial-gradient(circle, rgba(255,255,255,.9) 0%, transparent 70%);
+  animation: nv-sparkle 3s linear infinite;
+}
+
+@keyframes nv-sparkle{
+  0%{ left: -20%; }
+  100%{ left: 120%; }
+}
+
+/* =========================
+   ROTM TEASER
+   ========================= */
+.rotm-feature{
+  margin: 18px 0 0;
+}
+
+.rotm-container{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.16);
+  border: 1px solid rgba(255,255,255,0.40);
+  box-shadow: 0 18px 55px rgba(60,30,120,0.18);
+}
+
+.rotm-media{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.10);
+}
+
+.rotm-media img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rotm-body{
+  padding: 14px 4px 4px;
+  text-align: center;
+}
+
+.rotm-eyebrow{
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: .85;
+  margin-bottom: 8px;
+}
+
+.rotm-eyebrow span{
+  letter-spacing: 0;
+  text-transform: none;
+  opacity: 1;
+}
+
+.rotm-title{
+  font-size: clamp(22px, 4.2vw, 32px);
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+.rotm-quote{
+  font-size: 18px;
+  line-height: 1.55;
+  font-weight: 700;
+  opacity: .95;
+  margin: 0 auto 14px;
+  max-width: 55ch;
+}
+
+.rotm-actions{
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  margin-top: 6px;
+}
+
+.rotm-button{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  border: 2px solid rgba(75,46,131,0.55);
+  background: linear-gradient(135deg, rgba(198,168,255,0.95), rgba(156,202,255,0.9), rgba(255,182,225,0.85));
+  box-shadow: 0 14px 30px rgba(75,46,131,0.25);
+}
+
+.rotm-link{
+  font-weight: 800;
+  text-decoration: underline;
+  opacity: .95;
+}
+
+/* =========================
+   GUIDES PAGE FIXES
+   ========================= */
+.guides-page .nv-card{
+  display: grid !important;
+  grid-template-columns: 160px 1fr;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 18px 55px rgba(60, 30, 120, 0.12);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.guides-page .nv-card.featured{
+  grid-template-columns: 220px 1fr !important;
+  align-items: start;
+}
+
+.guides-page .nv-card-media{
+  display: block !important;
+  min-height: 0 !important;
+  height: auto !important;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.12);
+}
+
+.guides-page .nv-card-media img{
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 720px){
+  .guides-page .nv-section{
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .guides-page .nv-card{
+    grid-template-columns: 1fr !important;
+    width: 100%;
+    margin: 0;
+  }
+
+  .guides-page .nv-card-media{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .guides-page .nv-card-media img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 900px){
+  .guides-page .nv-card.featured{
+    grid-template-columns: 1fr !important;
+  }
+
+  .guides-page .nv-card.featured .nv-card-media{
+    max-width: 520px !important;
+    width: 100% !important;
+    margin: 0 auto 14px !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .guides-page .nv-card.featured .nv-card-media img{
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+@media (orientation: portrait){
+  .guides-page .featured-reset{
+    grid-template-columns: 1fr !important;
+  }
+
+  .guides-page .featured-reset .nv-card-media{
+    width: 100% !important;
+    max-width: 520px !important;
+    margin: 0 auto 14px !important;
+  }
+
+  .guides-page .featured-reset .nv-card-body{
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 980px){
+  .guides-page .featured-reset{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* =========================
+   OPTIONAL SHOP TEAL SECTION
+   ========================= */
+#wellness-staples{
+  background: linear-gradient(
+    135deg,
+    rgba(126,230,255,0.28),
+    rgba(156,202,255,0.18),
+    rgba(255,255,255,0.10)
+  ) !important;
+  border: 1px solid rgba(255,255,255,0.40) !important;
+  box-shadow: 0 16px 45px rgba(20, 120, 140, 0.18) !important;
+}
+
+#wellness-staples .nv-section-head h2,
+#wellness-staples .nv-section-head p{
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 10px 22px rgba(30, 10, 80, 0.25);
+}
+
+#wellness-staples .nv-muted{
+  opacity: 0.95;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.nv-shop-footer{
+  margin-top: 24px;
+  padding: 18px;
+}
+
+.nv-footer-text{
+  color: rgba(255,255,255,0.95);
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.nv-footer-mini{
+  color: rgba(255,255,255,0.82);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.footer-nav{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-nav a{
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--nv-lilac), var(--nv-blue), var(--nv-pink));
+  color: var(--nv-ink);
+  border: 3px solid var(--nv-purple-deep);
+  box-shadow: 0 10px 30px rgba(75, 46, 131, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.footer-nav a:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px rgba(75, 46, 131, 0.35);
+  filter: saturate(1.05);
+}
+
+@media (max-width: 520px){
+  .footer-nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    align-items: stretch;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .footer-nav a{
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 15px;
+    border-radius: 999px;
+    text-align: center;
   }
 }

@@ -1648,4 +1648,141 @@ body.resource-vault .nv-btn-row{
   .beauty-grid {
     grid-template-columns: 1fr;
   }
+}/* =========================
+   NEUROVIBE HAMBURGER NAV
+   ========================= */
+
+.nv-header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.45);
+  box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
+}
+
+.nv-header-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nv-brand{
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.nv-brand-main{
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--nv-purple-deep);
+}
+
+.nv-brand-sub{
+  margin-top: 2px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--nv-purple);
+}
+
+.nv-menu-toggle{
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.34);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.nv-menu-toggle:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
+}
+
+.nv-menu-toggle span{
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  border-radius: 999px;
+  background: var(--nv-purple-deep);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nv-menu-toggle.active span:nth-child(1){
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nv-menu-toggle.active span:nth-child(2){
+  opacity: 0;
+}
+
+.nv-menu-toggle.active span:nth-child(3){
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nv-mobile-menu{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease, padding-bottom 0.25s ease;
+}
+
+.nv-mobile-menu.open{
+  max-height: 700px;
+  opacity: 1;
+  padding-bottom: 18px;
+}
+
+.nv-mobile-menu a{
+  display: block;
+  text-decoration: none;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--nv-purple-deep);
+  padding: 18px 4px;
+  border-bottom: 1px solid rgba(75, 46, 131, 0.14);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.nv-mobile-menu a:hover{
+  color: var(--nv-purple);
+  padding-left: 10px;
+}
+
+/* Optional desktop horizontal menu later if you want */
+@media (min-width: 992px){
+  .nv-header-inner{
+    padding: 18px 24px;
+  }
+
+  .nv-brand-main{
+    font-size: 2rem;
+  }
+
+  .nv-mobile-menu a{
+    font-size: 1.6rem;
+  }
 }

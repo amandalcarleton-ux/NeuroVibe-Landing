@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>BeautyHub | NeuroVibe</title>
+  <meta
+    name="description"
+    content="BeautyHub by NeuroVibe — beauty, self-care, and everyday favorites curated with softness and real life in mind."
+  />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css?v=101" />
+
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
+</head>
+
+<body class="nv-y2k">
+
+  <header class="navbar">
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-btn">HOME</a>
+      <a href="about.html" class="nav-btn">ABOUT</a>
+      <a href="start-here.html" class="nav-btn">START HERE</a>
+      <a href="guides.html" class="nav-btn">GUIDES</a>
+      <a href="shop.html" class="nav-btn">SHOP</a>
+      <a href="wellco.html" class="nav-btn">WELLCO</a>
+      <a href="beautyhub.html" class="nav-btn">BEAUTY</a>
+      <a href="links.html" class="nav-btn">RESOURCES</a>
+      <a href="https://blog.neurovibe.site" target="_blank" rel="noopener" class="nav-btn">BLOG</a>
+    </nav>
+  </header>
+
+  <div class="nv-start-here-header">
+    <img
+      src="images/beautyhub-logo.PNG"
+      alt="BeautyHub | NeuroVibe"
+      class="nv-start-here-logo"
+    />
+  </div>
+
+  <main class="nv-page">
+    <div class="nv-wrap">
+
+      <section class="glass nv-card" style="padding:22px; margin-bottom:18px; text-align:center;">
+        <p class="nv-kicker">Beauty • Self-Care • Everyday Favorites</p>
+        <h1 class="nv-h1" style="margin:8px 0 10px;">Welcome to BeautyHub ✨</h1>
+        <p class="nv-sub" style="max-width:72ch; margin:0 auto;">
+          A curated space for beauty favorites, self-care finds, and everyday products that add a little softness, confidence, and glow to real life.
+        </p>
+      </section>
+
+      <section class="glass nv-card" style="padding:20px; margin-bottom:18px;">
+        <p class="nv-kicker">A softer side of NeuroVibe</p>
+        <h2 class="nv-h2" style="margin:6px 0 10px;">What BeautyHub is all about</h2>
+        <p class="nv-copy">
+          BeautyHub is my space for sharing beauty, self-care, and feel-good favorites I genuinely enjoy. This page is all about simple products, pretty finds, and everyday little things that help life feel lighter.
+        </p>
+        <p class="nv-copy" style="margin-top:10px;">
+          It’s not about perfection. It’s about finding routines and favorites that help you feel a little more refreshed, confident, and cared for.
+        </p>
+      </section>
+
+      <section class="nv-section">
+        <div class="nv-section-head">
+          <h2 class="nv-h2">Browse by category</h2>
+          <p class="nv-sub2">
+            Explore the beauty and self-care categories you want most.
+          </p>
+        </div>
+
+        <div class="nv-grid">
+          <article class="nv-card">
+            <div class="nv-card-body">
+              <div class="nv-tag">CATEGORY</div>
+              <h3 class="nv-h3">Skincare</h3>
+              <p class="nv-copy">Gentle skincare favorites for a fresh, glowy routine.</p>
+              <div class="nv-actions">
+                <a class="nv-btn primary" href="#">Shop Skincare</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="nv-card">
+            <div class="nv-card-body">
+              <div class="nv-tag">CATEGORY</div>
+              <h3 class="nv-h3">Makeup</h3>
+              <p class="nv-copy">Easy beauty favorites that fit real everyday life.</p>
+              <div class="nv-actions">
+                <a class="nv-btn primary" href="#">Shop Makeup</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="nv-card">
+            <div class="nv-card-body">
+              <div class="nv-tag">CATEGORY</div>
+              <h3 class="nv-h3">Self-Care</h3>
+              <p class="nv-copy">Little luxuries and calming favorites for your routine.</p>
+              <div class="nv-actions">
+                <a class="nv-btn primary" href="#">Shop Self-Care</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="glass nv-card" style="padding:20px; margin-top:18px; text-align:center;">
+        <p class="nv-kicker">Curated with love</p>
+        <h2 class="nv-h2" style="margin:6px 0 10px;">Beauty that feels good in real life</h2>
+        <p class="nv-copy" style="max-width:70ch; margin:0 auto;">
+          I share favorites that feel simple, pretty, and realistic for everyday life — little things that help you feel more like yourself.
+        </p>
+
+        <div class="nv-actions" style="margin-top:14px; justify-content:center;">
+          <a class="nv-btn primary" href="#">Shop Favorites</a>
+          <a class="nv-btn ghost" href="links.html">More Resources</a>
+        </div>
+      </section>
+
+      <footer class="footer" style="margin-top:22px;">
+        <p>© <span id="year"></span> NeuroVibe</p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

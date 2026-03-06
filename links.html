@@ -372,6 +372,17 @@ Bravenly Supplements</h3>
       </p>
     </div>
   </footer>
+<script>
+  const nvMenuToggle = document.getElementById('nvMenuToggle');
+  const nvMobileMenu = document.getElementById('nvMobileMenu');
 
+  nvMenuToggle.addEventListener('click', () => {
+    nvMenuToggle.classList.toggle('active');
+    nvMobileMenu.classList.toggle('open');
+
+    const expanded = nvMenuToggle.classList.contains('active');
+    nvMenuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+  });
+</script>
 </body>
 </html>

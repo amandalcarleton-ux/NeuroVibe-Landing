@@ -1491,4 +1491,19 @@ body.resource-vault .nv-btn-row{
   color:#101018;
   font-weight:600;
   text-decoration:none;
+}.wellco-store-logo{
+  max-width:220px;
+  opacity:.92;
+  transition:transform .25s ease, filter .25s ease, opacity .25s ease;
+}
+
+.wellco-store-logo:hover{
+  transform:scale(1.06);
+  opacity:1;
+  filter:drop-shadow(0 12px 20px rgba(140,120,255,.35));
+}
+
+.wellco-store-link{
+  text-align:center;
+  padding:50px 20px 20px;
 }

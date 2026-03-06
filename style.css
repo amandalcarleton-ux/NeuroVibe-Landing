@@ -1454,3 +1454,11 @@ body.resource-vault .nv-btn-row{
     text-align: center;
   }
 }
+.wellco-routine-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.wellco-routine-list li {
+  margin: 10px 0;
+}

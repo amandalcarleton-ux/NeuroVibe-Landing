@@ -31,7 +31,19 @@ margin-top:30px;
 .nv-preview-card{
 transition:transform .25s ease, box-shadow .25s ease;
 }
+.nv-publisher-label{
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+  color:#6b5cff;
+  margin-bottom:12px;
+}
 
+.nv-presents{
+  font-size:14px;
+  font-weight:400;
+  opacity:0.7;
+}
 .nv-preview-card:hover{
 transform:translateY(-6px);
 box-shadow:0 20px 45px rgba(0,0,0,0.15);
@@ -98,15 +110,23 @@ min-width:220px;
 
 
 <body>
+
 <header class="nv-header">
+  <div class="nv-nav-container">
 
-<div class="nv-nav-container">
+    <div class="nv-logo">NeuroVibe</div>
 
-<a href="/" class="nv-logo">NeuroVibe</a>
+    <button class="nv-hamburger" id="nv-menu-toggle">
+      ☰
+    </button>
 
-<button class="nv-hamburger" id="nv-menu-toggle">
-☰
-</button>
+  </div>
+</header>
+
+<div class="nv-publisher-label">
+  NeuroVibe Publishing<br>
+  <span class="nv-presents">presents</span>
+</div>
 
 <nav class="nv-nav-menu" id="nv-nav">
 

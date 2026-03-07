@@ -3,264 +3,607 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Rhythm of the Moon | NeuroVibe Publishing</title>
+  <meta name="description" content="A gentle bedtime story from NeuroVibe Publishing that helps children slow down, breathe, and settle into the peaceful rhythm of night." />
+  <style>
+    :root{
+      --nv-purple:#6b5cff;
+      --nv-purple-deep:#4b2e83;
+      --nv-lilac:#c6a8ff;
+      --nv-blue:#9ccaff;
+      --nv-teal:#7ee6ff;
+      --nv-pink:#ffb6e1;
+      --nv-ink:#101018;
+      --nv-white:#ffffff;
+      --nv-cream:#fffaf6;
+      --nv-shadow:0 18px 55px rgba(60,30,120,0.18);
+      --nv-radius:26px;
+      --container:1120px;
+    }
 
-  <title>Rhythm of the Moon | NeuroVibe WellCo</title>
-  <meta name="description" content="A gentle story series from NeuroVibe WellCo helping children understand emotions, body changes, and growing up with confidence." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://neurovibe.site/rhythm-of-the-moon.html" />
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--nv-ink);
+      background:
+        radial-gradient(circle at top left, rgba(198,168,255,.35), transparent 35%),
+        radial-gradient(circle at top right, rgba(126,230,255,.28), transparent 30%),
+        linear-gradient(180deg, #faf7ff 0%, #fffdf8 45%, #f6fbff 100%);
+      line-height:1.6;
+    }
 
-  <meta property="og:title" content="Rhythm of the Moon | NeuroVibe WellCo" />
-  <meta property="og:description" content="A gentle story series helping children understand growing up, emotions, and the rhythm of their bodies." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://neurovibe.site/rhythm-of-the-moon.html" />
-  <meta property="og:image" content="https://neurovibe.site/images/rhythm-of-the-moon-cover.png" />
+    img{max-width:100%;display:block;}
+    a{text-decoration:none;}
 
-  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
-  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
+    .nv-container{
+      width:min(calc(100% - 32px), var(--container));
+      margin:0 auto;
+    }
 
-  <link rel="stylesheet" href="/style.css?v=101" />
+    .nv-topbar{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:blur(14px);
+      background:rgba(255,255,255,.72);
+      border-bottom:1px solid rgba(107,92,255,.08);
+    }
+
+    .nv-nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      padding:14px 0;
+    }
+
+    .nv-brand{
+      font-weight:800;
+      letter-spacing:.3px;
+      color:var(--nv-purple-deep);
+      font-size:1rem;
+    }
+
+    .nv-brand span{
+      display:block;
+      font-size:.78rem;
+      font-weight:600;
+      color:#766e95;
+      letter-spacing:.5px;
+      text-transform:uppercase;
+    }
+
+    .nv-nav-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .nv-nav-links a{
+      color:var(--nv-purple-deep);
+      font-weight:600;
+      padding:10px 14px;
+      border-radius:999px;
+    }
+
+    .nv-nav-links a:hover{
+      background:rgba(107,92,255,.08);
+    }
+
+    .nv-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:700;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .nv-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 28px rgba(75,46,131,.16);
+    }
+
+    .nv-btn-primary{
+      background:linear-gradient(135deg, var(--nv-purple) 0%, var(--nv-purple-deep) 100%);
+      color:white;
+      box-shadow:0 14px 32px rgba(75,46,131,.20);
+    }
+
+    .nv-btn-secondary{
+      background:white;
+      color:var(--nv-purple-deep);
+      border:1px solid rgba(107,92,255,.14);
+    }
+
+    .nv-hero{
+      padding:64px 0 30px;
+    }
+
+    .nv-hero-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .nv-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(107,92,255,.10);
+      color:var(--nv-purple-deep);
+      font-weight:700;
+      box-shadow:var(--nv-shadow);
+      margin-bottom:18px;
+    }
+
+    .nv-hero h1{
+      margin:0 0 14px;
+      font-size:clamp(2.3rem, 5vw, 4.4rem);
+      line-height:1.02;
+      color:#2b1b55;
+    }
+
+    .nv-hero p{
+      font-size:1.08rem;
+      color:#4d4762;
+      max-width:640px;
+      margin:0 0 26px;
+    }
+
+    .nv-hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:22px;
+    }
+
+    .nv-mini-note{
+      color:#6d6688;
+      font-size:.96rem;
+      font-weight:600;
+    }
+
+    .nv-cover-wrap{
+      position:relative;
+      padding:18px;
+      border-radius:32px;
+      background:linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.58));
+      border:1px solid rgba(107,92,255,.10);
+      box-shadow:var(--nv-shadow);
+    }
+
+    .nv-cover{
+      aspect-ratio:2 / 3;
+      border-radius:24px;
+      overflow:hidden;
+      position:relative;
+      background:linear-gradient(180deg, #31215f 0%, #5d48b8 30%, #ffb6e1 100%);
+      box-shadow:0 20px 44px rgba(44,26,91,.24);
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      min-height:620px;
+    }
+
+    .nv-moon-art{
+      position:absolute;
+      inset:0;
+      overflow:hidden;
+    }
+
+    .nv-moon-art:before,
+    .nv-moon-art:after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      filter:blur(2px);
+    }
+
+    .nv-moon-art:before{
+      width:160px;
+      height:160px;
+      right:42px;
+      top:48px;
+      background:radial-gradient(circle at 35% 35%, #fffef8 0%, #f4ecce 45%, rgba(244,236,206,.65) 70%, transparent 72%);
+      box-shadow:0 0 40px rgba(255,245,202,.45);
+    }
+
+    .nv-moon-art:after{
+      width:400px;
+      height:220px;
+      left:-70px;
+      bottom:-40px;
+      background:radial-gradient(circle at 50% 10%, rgba(255,255,255,.35), rgba(255,182,225,.20), transparent 70%);
+    }
+
+    .nv-stars{
+      position:absolute;
+      inset:0;
+      background-image:
+        radial-gradient(circle at 8% 18%, rgba(255,255,255,.9) 0 2px, transparent 3px),
+        radial-gradient(circle at 16% 40%, rgba(255,255,255,.85) 0 1.8px, transparent 3px),
+        radial-gradient(circle at 28% 14%, rgba(255,255,255,.8) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 41% 27%, rgba(255,255,255,.78) 0 2px, transparent 3px),
+        radial-gradient(circle at 59% 17%, rgba(255,255,255,.86) 0 1.8px, transparent 3px),
+        radial-gradient(circle at 73% 31%, rgba(255,255,255,.8) 0 1.7px, transparent 3px),
+        radial-gradient(circle at 88% 16%, rgba(255,255,255,.92) 0 2px, transparent 3px),
+        radial-gradient(circle at 76% 56%, rgba(255,255,255,.68) 0 1.8px, transparent 3px),
+        radial-gradient(circle at 23% 62%, rgba(255,255,255,.7) 0 1.7px, transparent 3px);
+      opacity:.95;
+    }
+
+    .nv-cover-copy{
+      position:relative;
+      z-index:1;
+      text-align:center;
+      color:white;
+      padding-top:18px;
+    }
+
+    .nv-cover-copy .eyebrow{
+      font-size:.92rem;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-weight:700;
+      opacity:.9;
+      margin-bottom:10px;
+    }
+
+    .nv-cover-copy h2{
+      font-size:clamp(2rem, 4vw, 3.2rem);
+      line-height:1.02;
+      margin:0;
+      text-shadow:0 4px 22px rgba(15,10,36,.28);
+    }
+
+    .nv-cover-copy p{
+      margin:16px auto 0;
+      max-width:300px;
+      color:rgba(255,255,255,.9);
+      font-size:1rem;
+    }
+
+    .nv-cover-foot{
+      position:relative;
+      z-index:1;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      color:white;
+      font-weight:700;
+      gap:12px;
+    }
+
+    .nv-author-chip{
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.20);
+      padding:10px 14px;
+      border-radius:16px;
+      backdrop-filter:blur(8px);
+    }
+
+    .nv-section{
+      padding:34px 0;
+    }
+
+    .nv-card{
+      background:rgba(255,255,255,.74);
+      border:1px solid rgba(107,92,255,.10);
+      border-radius:var(--nv-radius);
+      box-shadow:var(--nv-shadow);
+    }
+
+    .nv-blurb{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      padding:28px;
+    }
+
+    .nv-blurb h3,
+    .nv-section h2{
+      margin:0 0 14px;
+      color:#2b1b55;
+      font-size:clamp(1.6rem, 3vw, 2.2rem);
+      line-height:1.08;
+    }
+
+    .nv-blurb p,
+    .nv-section p{
+      color:#4f4968;
+      margin:0 0 14px;
+      font-size:1rem;
+    }
+
+    .nv-pill-list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+
+    .nv-pill{
+      padding:14px 16px;
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(247,242,255,.95));
+      border:1px solid rgba(107,92,255,.10);
+      font-weight:700;
+      color:var(--nv-purple-deep);
+    }
+
+    .nv-preview-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+      margin-top:20px;
+    }
+
+    .nv-preview{
+      padding:16px;
+      border-radius:24px;
+      min-height:300px;
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(180deg, #f8f4ff 0%, #eef8ff 100%);
+      border:1px solid rgba(107,92,255,.10);
+      box-shadow:var(--nv-shadow);
+    }
+
+    .nv-preview .sky{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, #473493 0%, #8d7ce3 48%, #ffd8eb 100%);
+      opacity:.95;
+    }
+
+    .nv-preview .hill{
+      position:absolute;
+      bottom:-10px;
+      left:-10px;
+      right:-10px;
+      height:96px;
+      background:radial-gradient(circle at 50% 0%, #9fe6cf 0%, #68b79d 55%, #4f8f7a 100%);
+      border-radius:50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .nv-preview .moon{
+      position:absolute;
+      width:80px;
+      height:80px;
+      top:24px;
+      right:28px;
+      border-radius:50%;
+      background:radial-gradient(circle at 35% 35%, #fffef8 0%, #f3ebca 52%, rgba(243,235,202,.8) 72%, transparent 74%);
+      box-shadow:0 0 26px rgba(255,248,218,.42);
+    }
+
+    .nv-preview .caption{
+      position:absolute;
+      left:18px;
+      right:18px;
+      bottom:18px;
+      z-index:1;
+      padding:14px;
+      border-radius:18px;
+      background:rgba(255,255,255,.18);
+      color:white;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,.18);
+      backdrop-filter:blur(8px);
+    }
+
+    .nv-two-up{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .nv-panel{
+      padding:28px;
+    }
+
+    .nv-panel ul{
+      margin:0;
+      padding-left:18px;
+      color:#4f4968;
+    }
+
+    .nv-panel li{margin-bottom:10px;}
+
+    .nv-cta{
+      text-align:center;
+      padding:36px 28px;
+      background:
+        radial-gradient(circle at top left, rgba(198,168,255,.42), transparent 35%),
+        linear-gradient(135deg, rgba(255,255,255,.96), rgba(245,248,255,.96));
+    }
+
+    .nv-cta p{
+      max-width:690px;
+      margin:0 auto 18px;
+    }
+
+    .nv-footer{
+      padding:34px 0 52px;
+      text-align:center;
+      color:#6d6688;
+      font-size:.95rem;
+    }
+
+    @media (max-width: 980px){
+      .nv-hero-grid,
+      .nv-blurb,
+      .nv-two-up,
+      .nv-preview-grid{
+        grid-template-columns:1fr;
+      }
+      .nv-cover{min-height:520px;}
+    }
+
+    @media (max-width: 720px){
+      .nv-nav{align-items:flex-start;flex-direction:column;}
+      .nv-pill-list{grid-template-columns:1fr;}
+      .nv-hero{padding-top:42px;}
+      .nv-cover{min-height:460px;padding:18px;}
+      .nv-btn{width:100%;}
+      .nv-hero-actions{flex-direction:column;}
+    }
+  </style>
 </head>
 <body>
+  <div class="nv-topbar">
+    <div class="nv-container nv-nav">
+      <div class="nv-brand">
+        NeuroVibe
+        <span>Publishing</span>
+      </div>
+      <div class="nv-nav-links">
+        <a href="#about">About</a>
+        <a href="#inside">Inside the Book</a>
+        <a href="#author">Author</a>
+        <a href="#buy">Buy</a>
+      </div>
+    </div>
+  </div>
 
-  <!-- NAV -->
-  <header class="nv-site-header">
-    <div class="nv-nav-wrap">
-      <a href="/index.html" class="nv-logo">NeuroVibe WellCo</a>
+  <header class="nv-hero">
+    <div class="nv-container nv-hero-grid">
+      <div>
+        <div class="nv-badge">🌙 Gentle bedtime story · NeuroVibe Publishing</div>
+        <h1>The Rhythm of the Moon</h1>
+        <p>
+          A calming children’s bedtime story created to help little ones slow down, settle in, and drift into the soft rhythm of night.
+        </p>
+        <div class="nv-hero-actions">
+          <a class="nv-btn nv-btn-primary" href="#buy">Buy on Amazon</a>
+          <a class="nv-btn nv-btn-secondary" href="#inside">Preview the Vibe</a>
+        </div>
+        <div class="nv-mini-note">Perfect for bedtime routines, quiet evenings, and gentle wind-down moments.</div>
+      </div>
 
-      <nav class="nv-nav">
-        <a href="/index.html">Home</a>
-        <a href="/start-here.html">Start Here</a>
-        <a href="/shop.html">Guides</a>
-        <a href="/beautyhub.html">Beauty Hub</a>
-        <a href="/wellco.html">WellCo</a>
-        <a href="/rhythm-of-the-moon.html" class="active">Rhythm of the Moon</a>
-      </nav>
+      <div class="nv-cover-wrap">
+        <div class="nv-cover">
+          <div class="nv-moon-art"></div>
+          <div class="nv-stars"></div>
+          <div class="nv-cover-copy">
+            <div class="eyebrow">NeuroVibe Publishing</div>
+            <h2>The Rhythm<br>of the Moon</h2>
+            <p>A soothing bedtime story for children and families who want to end the day with calm connection.</p>
+          </div>
+          <div class="nv-cover-foot">
+            <div class="nv-author-chip">Amanda Carleton</div>
+            <div>Bedtime · Calm · Connection</div>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
-<div class="nv-publishing-header">
 
-<img 
-src="/images/logos/NeuroVibe Publishing.png"
-alt="NeuroVibe Publishing logo"
-class="nv-publishing-logo">
-
-<h1>The Rhythm of the Moon</h1>
-
-<p>A gentle bedtime story for calm nights and connected families.</p>
-
-</div>
-  <!-- HERO -->
-  <section class="moon-hero">
-    <div class="moon-hero-inner">
-      <p class="moon-kicker">A NeuroVibe Story Series</p>
-      <h1>The Rhythm of the Moon</h1>
-      <p class="moon-subtext">
-        A gentle story series created to help children understand their bodies,
-        emotions, and the rhythm of growing up.
-      </p>
-
-      <div class="moon-hero-buttons">
-        <a href="#about" class="nv-btn">Learn More</a>
-        <a href="#book" class="nv-btn nv-btn-secondary">See the Book</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="moon-section" id="about">
-    <div class="moon-content">
-      <div class="moon-text-card">
-        <p class="moon-label">About the Series</p>
-        <h2>A story with heart, comfort, and understanding</h2>
-        <p>
-          <strong>The Rhythm of the Moon</strong> was created as a gentle,
-          supportive story for children learning about body changes, emotions,
-          and growing up.
-        </p>
-        <p>
-          This series is especially meaningful for families raising
-          neurodivergent children, where new experiences, sensory changes,
-          and emotional shifts can feel extra big.
-        </p>
-        <p>
-          It is a story about reassurance, confidence, and helping children feel
-          safe in their own bodies.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- STORY HIGHLIGHTS -->
-  <section class="moon-section moon-section-glow">
-    <div class="moon-content">
-      <p class="moon-label">Inside the Story</p>
-      <h2>What makes this book special</h2>
-
-      <div class="moon-grid">
-        <div class="moon-card">
-          <h3>🌙 Gentle Education</h3>
+  <section class="nv-section" id="about">
+    <div class="nv-container">
+      <div class="nv-card nv-blurb">
+        <div>
+          <h3>A gentle story for the end of the day</h3>
           <p>
-            Introduces growing-up changes in a calm, child-friendly way that
-            feels comforting instead of overwhelming.
+            When the stars begin to glow and the world grows still, the moon rises to guide children into a softer pace. This story was created to feel peaceful, warm, and comforting from the very first page.
+          </p>
+          <p>
+            The Rhythm of the Moon blends dreamy imagery with gentle language to support a calm bedtime atmosphere for little readers and their grownups.
           </p>
         </div>
-
-        <div class="moon-card">
-          <h3>🧠 Neurodivergent-Affirming</h3>
-          <p>
-            Honors the way some children feel things deeply, including
-            sensory experiences, routines, and emotional intensity.
-          </p>
-        </div>
-
-        <div class="moon-card">
-          <h3>💗 Parent Support</h3>
-          <p>
-            Encourages safe conversations between parent and child with warmth,
-            patience, and understanding.
-          </p>
-        </div>
-
-        <div class="moon-card">
-          <h3>✨ Future Series Potential</h3>
-          <p>
-            This page can grow into a full story hub with updates, excerpts,
-            new releases, and weekly Rhythm of the Moon segments.
-          </p>
+        <div>
+          <h3>Why families will love it</h3>
+          <div class="nv-pill-list">
+            <div class="nv-pill">Helps set a calm bedtime tone</div>
+            <div class="nv-pill">Soft, soothing nighttime imagery</div>
+            <div class="nv-pill">Great for ages 3–8</div>
+            <div class="nv-pill">Beautiful fit for read-aloud routines</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MAIN CHARACTER / MESSAGE -->
-  <section class="moon-section">
-    <div class="moon-content moon-split">
-      <div class="moon-text-card">
-        <p class="moon-label">Meet the Heart of the Story</p>
-        <h2>Growing with confidence</h2>
-        <p>
-          In the story, Elara is a child who feels the world very deeply.
-          She loves routine, comfort, and predictability, and learns that
-          growing up does not have to be scary when she is supported with love
-          and understanding.
-        </p>
-        <p>
-          Through reassurance, sensory-friendly support, and gentle guidance,
-          she begins to understand that her body is not working against her —
-          it is growing with its own rhythm.
-        </p>
-      </div>
-
-      <div class="moon-quote-card">
-        <p>
-          “A gentle story series helping children understand their bodies,
-          emotions, and the rhythm of growing up.”
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BOOK SECTION -->
-  <section class="moon-section moon-section-glow" id="book">
-    <div class="moon-content moon-book-wrap">
-      <div class="moon-book-cover">
-        <img
-          src="/images/rhythm-of-the-moon-cover.png"
-          alt="The Rhythm of the Moon book cover"
-          onerror="this.style.display='none';"
-        />
-      </div>
-
-      <div class="moon-book-info">
-        <p class="moon-label">The First Book</p>
-        <h2>The Rhythm of the Moon</h2>
-        <p>
-          The first story in what can become a beautiful NeuroVibe book series
-          for children and families navigating emotions, body awareness, and
-          growth with compassion.
-        </p>
-
-        <div class="moon-book-buttons">
-          <a href="#" class="nv-btn">Kindle Coming Soon</a>
-          <a href="#" class="nv-btn nv-btn-secondary">Read a Preview</a>
+  <section class="nv-section" id="inside">
+    <div class="nv-container">
+      <h2>Inside the book</h2>
+      <p>Use these preview cards as placeholders for your real page images until your final screenshots are ready.</p>
+      <div class="nv-preview-grid">
+        <div class="nv-preview">
+          <div class="sky"></div>
+          <div class="moon"></div>
+          <div class="hill"></div>
+          <div class="caption">Soft skies, glowing stars, and a peaceful nighttime mood.</div>
         </div>
-
-        <p class="moon-note">
-          Update these buttons when your Kindle listing and preview are ready.
-        </p>
+        <div class="nv-preview">
+          <div class="sky"></div>
+          <div class="moon" style="right:auto; left:32px; top:32px;"></div>
+          <div class="hill" style="height:110px;"></div>
+          <div class="caption">Gentle page design that invites children to slow down and listen.</div>
+        </div>
+        <div class="nv-preview">
+          <div class="sky"></div>
+          <div class="moon" style="top:60px; right:50%; transform:translateX(50%);"></div>
+          <div class="hill" style="height:92px;"></div>
+          <div class="caption">A dreamy read-aloud feel for quiet evenings and bedtime connection.</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- AUTHOR NOTE -->
-  <section class="moon-section">
-    <div class="moon-content">
-      <div class="moon-text-card">
-        <p class="moon-label">From the Author</p>
-        <h2>Written with love</h2>
+  <section class="nv-section" id="author">
+    <div class="nv-container nv-two-up">
+      <div class="nv-card nv-panel">
+        <h2>About the author</h2>
         <p>
-          This story was written from a place of deep love, with the hope that
-          children feel seen, reassured, and empowered as they grow.
+          Amanda Carleton is the creator of NeuroVibe and NeuroVibe Publishing. She creates resources, stories, and supportive tools for families who want calmer routines, meaningful connection, and gentle encouragement in everyday life.
         </p>
         <p>
-          It is also a reminder to parents that support, regulation, and gentle
-          guidance matter — especially during big transitions.
+          The Rhythm of the Moon reflects the same soft, supportive heart behind the NeuroVibe brand: helping families feel seen, soothed, and supported.
         </p>
+      </div>
+      <div class="nv-card nv-panel">
+        <h2>Perfect for</h2>
+        <ul>
+          <li>Families building a calmer bedtime routine</li>
+          <li>Children who enjoy soft and soothing nighttime stories</li>
+          <li>Parents looking for a gentle read-aloud</li>
+          <li>Gift-givers searching for a sweet bedtime ebook</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- WEEKLY SEGMENT PREVIEW -->
-  <section class="moon-section moon-section-glow">
-    <div class="moon-content">
-      <p class="moon-label">Coming Soon</p>
-      <h2>Rhythm of the Moon Moments</h2>
-      <p class="moon-center-text">
-        A weekly social media segment sharing short reflections on growing up,
-        emotions, neurodivergent support, and gentle parenting conversations.
-      </p>
+  <section class="nv-section" id="buy">
+    <div class="nv-container">
+      <div class="nv-card nv-cta">
+        <h2>Bring the moonlight to bedtime</h2>
+        <p>
+          Add your Amazon book link here once your Kindle listing is live. You can also duplicate this page later for future titles under NeuroVibe Publishing.
+        </p>
+        <div class="nv-hero-actions" style="justify-content:center; margin-bottom:0;">
+          <a class="nv-btn nv-btn-primary" href="#">Buy The Rhythm of the Moon</a>
+          <a class="nv-btn nv-btn-secondary" href="#">Read More from NeuroVibe</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- EXPLORE MORE -->
-  <section class="nv-ecosystem">
-    <h2>Explore More from NeuroVibe</h2>
-    <p>Different paths for different needs — explore what supports you most.</p>
-
-    <div class="nv-ecosystem-grid">
-      <a href="/start-here.html" class="nv-eco-card">
-        <h3>🌿 Start Here</h3>
-        <p>Begin with the core of NeuroVibe and explore what fits your family best.</p>
-        <span>Visit Start Here →</span>
-      </a>
-
-      <a href="/shop.html" class="nv-eco-card">
-        <h3>📚 NeuroVibe Guides</h3>
-        <p>Browse digital guides for nervous system support and ND parenting.</p>
-        <span>Browse Guides →</span>
-      </a>
-
-      <a href="/wellco.html" class="nv-eco-card">
-        <h3>✨ WellCo</h3>
-        <p>Explore wellness tools and routines that support everyday life.</p>
-        <span>Visit WellCo →</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer class="nv-footer">
-    <div class="nv-footer-inner">
-      <p>© 2026 NeuroVibe WellCo. All rights reserved.</p>
-      <div class="nv-footer-links">
-        <a href="/index.html">Home</a>
-        <a href="/start-here.html">Start Here</a>
-        <a href="/shop.html">Guides</a>
-        <a href="/beautyhub.html">Beauty Hub</a>
-        <a href="/wellco.html">WellCo</a>
-      </div>
+    <div class="nv-container">
+      NeuroVibe Publishing · The Rhythm of the Moon · Amanda Carleton
     </div>
   </footer>
-
 </body>
 </html>

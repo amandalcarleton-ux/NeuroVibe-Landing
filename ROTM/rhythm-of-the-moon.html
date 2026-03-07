@@ -1,522 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Rhythm of the Moon | NeuroVibe Publishing</title>
-  <meta
-    name="description"
-    content="A gentle children's story from NeuroVibe Publishing about growing up, big feelings, body changes, and finding calm through the rhythm of the moon."
-  />
-  <style>
-    :root{
-      --nv-purple:#6b5cff;
-      --nv-purple-deep:#4b2e83;
-      --nv-lilac:#c6a8ff;
-      --nv-blue:#9ccaff;
-      --nv-teal:#7ee6ff;
-      --nv-pink:#ffb6e1;
-      --nv-ink:#101018;
-      --nv-white:#ffffff;
-      --nv-cream:#fffaf6;
-      --nv-shadow:0 18px 55px rgba(60,30,120,0.18);
-      --nv-radius:26px;
-      --container:1120px;
-    }
 
-    *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      color:var(--nv-ink);
-      background:
-        radial-gradient(circle at top left, rgba(198,168,255,.35), transparent 35%),
-        radial-gradient(circle at top right, rgba(126,230,255,.28), transparent 30%),
-        linear-gradient(180deg, #faf7ff 0%, #fffdf8 45%, #f6fbff 100%);
-      line-height:1.6;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    img{max-width:100%;display:block;}
-    a{text-decoration:none;}
+<title>The Rhythm of the Moon | NeuroVibe Publishing</title>
 
-    .nv-container{
-      width:min(calc(100% - 32px), var(--container));
-      margin:0 auto;
-    }
+<meta name="description" content="A gentle story about growing up, big feelings, and understanding your body. Follow Elara as she learns the natural rhythm of change just like the moon.">
 
-    .nv-topbar{
-      position:sticky;
-      top:0;
-      z-index:10;
-      backdrop-filter:blur(14px);
-      background:rgba(255,255,255,.72);
-      border-bottom:1px solid rgba(107,92,255,.08);
-    }
+<link rel="stylesheet" href="/style.css?v=101">
 
-    .nv-nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:18px;
-      padding:14px 0;
-    }
+<style>
 
-    .nv-brand{
-      font-weight:800;
-      letter-spacing:.3px;
-      color:var(--nv-purple-deep);
-      font-size:1rem;
-    }
+.nv-preview-card img{
+width:100%;
+border-radius:18px;
+box-shadow:0 12px 32px rgba(0,0,0,0.12);
+}
 
-    .nv-brand span{
-      display:block;
-      font-size:.78rem;
-      font-weight:600;
-      color:#766e95;
-      letter-spacing:.5px;
-      text-transform:uppercase;
-    }
+.rotm-cover{
+width:100%;
+max-width:420px;
+border-radius:24px;
+box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
 
-    .nv-nav-links{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
+</style>
 
-    .nv-nav-links a{
-      color:var(--nv-purple-deep);
-      font-weight:600;
-      padding:10px 14px;
-      border-radius:999px;
-    }
-
-    .nv-nav-links a:hover{
-      background:rgba(107,92,255,.08);
-    }
-
-    .nv-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:14px 22px;
-      border-radius:999px;
-      font-weight:700;
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-
-    .nv-btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 12px 28px rgba(75,46,131,.16);
-    }
-
-    .nv-btn-primary{
-      background:linear-gradient(135deg, var(--nv-purple) 0%, var(--nv-purple-deep) 100%);
-      color:white;
-      box-shadow:0 14px 32px rgba(75,46,131,.20);
-    }
-
-    .nv-btn-secondary{
-      background:white;
-      color:var(--nv-purple-deep);
-      border:1px solid rgba(107,92,255,.14);
-    }
-
-    .nv-hero{
-      padding:64px 0 30px;
-    }
-
-    .nv-hero-grid{
-      display:grid;
-      grid-template-columns:1.08fr .92fr;
-      gap:34px;
-      align-items:center;
-    }
-
-    .nv-badge{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,.72);
-      border:1px solid rgba(107,92,255,.10);
-      color:var(--nv-purple-deep);
-      font-weight:700;
-      box-shadow:var(--nv-shadow);
-      margin-bottom:18px;
-    }
-
-    .nv-hero h1{
-      margin:0 0 14px;
-      font-size:clamp(2.3rem, 5vw, 4.4rem);
-      line-height:1.02;
-      color:#2b1b55;
-    }
-
-    .nv-hero p{
-      font-size:1.08rem;
-      color:#4d4762;
-      max-width:640px;
-      margin:0 0 26px;
-    }
-
-    .nv-hero-actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-bottom:22px;
-    }
-
-    .nv-mini-note{
-      color:#6d6688;
-      font-size:.96rem;
-      font-weight:600;
-    }
-
-    .nv-cover-wrap{
-      position:relative;
-      padding:18px;
-      border-radius:32px;
-      background:linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.58));
-      border:1px solid rgba(107,92,255,.10);
-      box-shadow:var(--nv-shadow);
-    }
-
-    .nv-cover{
-      aspect-ratio:2 / 3;
-      border-radius:24px;
-      overflow:hidden;
-      position:relative;
-      background:linear-gradient(180deg, #31215f 0%, #5d48b8 30%, #ffb6e1 100%);
-      box-shadow:0 20px 44px rgba(44,26,91,.24);
-      min-height:620px;
-    }
-
-    .nv-cover img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .nv-section{
-      padding:34px 0;
-    }
-
-    .nv-card{
-      background:rgba(255,255,255,.74);
-      border:1px solid rgba(107,92,255,.10);
-      border-radius:var(--nv-radius);
-      box-shadow:var(--nv-shadow);
-    }
-
-    .nv-blurb{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
-      padding:28px;
-    }
-
-    .nv-blurb h3,
-    .nv-section h2{
-      margin:0 0 14px;
-      color:#2b1b55;
-      font-size:clamp(1.6rem, 3vw, 2.2rem);
-      line-height:1.08;
-    }
-
-    .nv-blurb p,
-    .nv-section p{
-      color:#4f4968;
-      margin:0 0 14px;
-      font-size:1rem;
-    }
-
-    .nv-pill-list{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:12px;
-      margin-top:14px;
-    }
-
-    .nv-pill{
-      padding:14px 16px;
-      border-radius:18px;
-      background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(247,242,255,.95));
-      border:1px solid rgba(107,92,255,.10);
-      font-weight:700;
-      color:var(--nv-purple-deep);
-    }
-
-    .nv-preview-grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:18px;
-      margin-top:20px;
-    }
-
-    .nv-preview-card{
-      background:rgba(255,255,255,.86);
-      border:1px solid rgba(107,92,255,.10);
-      border-radius:24px;
-      overflow:hidden;
-      box-shadow:var(--nv-shadow);
-    }
-
-    .nv-preview-card img{
-      width:100%;
-      aspect-ratio:4 / 5;
-      object-fit:cover;
-      background:#efe9ff;
-    }
-
-    .nv-preview-caption{
-      padding:16px;
-      color:#4f4968;
-      font-weight:700;
-    }
-
-    .nv-two-up{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:22px;
-      align-items:stretch;
-    }
-
-    .nv-panel{
-      padding:28px;
-    }
-
-    .nv-panel ul{
-      margin:0;
-      padding-left:18px;
-      color:#4f4968;
-    }
-
-    .nv-panel li{margin-bottom:10px;}
-
-    .nv-cta{
-      text-align:center;
-      padding:36px 28px;
-      background:
-        radial-gradient(circle at top left, rgba(198,168,255,.42), transparent 35%),
-        linear-gradient(135deg, rgba(255,255,255,.96), rgba(245,248,255,.96));
-    }
-
-    .nv-cta p{
-      max-width:690px;
-      margin:0 auto 18px;
-    }
-
-    .nv-footer{
-      padding:34px 0 52px;
-      text-align:center;
-      color:#6d6688;
-      font-size:.95rem;
-    }
-
-    @media (max-width: 980px){
-      .nv-hero-grid,
-      .nv-blurb,
-      .nv-two-up,
-      .nv-preview-grid{
-        grid-template-columns:1fr;
-      }
-      .nv-cover{min-height:520px;}
-    }
-
-    @media (max-width: 720px){
-      .nv-nav{align-items:flex-start;flex-direction:column;}
-      .nv-pill-list{grid-template-columns:1fr;}
-      .nv-hero{padding-top:42px;}
-      .nv-cover{min-height:460px;}
-      .nv-btn{width:100%;}
-      .nv-hero-actions{flex-direction:column;}
-    }
-  </style>
 </head>
+
+
 <body>
-  <div class="nv-topbar">
-    <div class="nv-container nv-nav">
-      <div class="nv-brand">
-        NeuroVibe
-        <span>Publishing</span>
-      </div>
-      <div class="nv-nav-links">
-        <a href="#about">About</a>
-        <a href="#inside">Inside the Book</a>
-        <a href="#author">Author</a>
-        <a href="#buy">Buy</a>
-      </div>
-    </div>
-  </div>
 
-  <header class="nv-hero">
-    <div class="nv-container nv-hero-grid">
-      <div>
-        <div class="nv-badge">🌙 NeuroVibe Publishing · Gentle story about growing up</div>
-        <h1>The Rhythm of the Moon</h1>
-        <p>
-          A gentle story about growing up, big feelings, and understanding your body.
-          Follow Elara as she learns that the changes she is experiencing are part of a natural rhythm — just like the phases of the moon.
-        </p>
-        <div class="nv-hero-actions">
-          <a class="nv-btn nv-btn-primary" href="#buy">Buy on Amazon</a>
-          <a class="nv-btn nv-btn-secondary" href="#inside">Look Inside</a>
-        </div>
-        <div class="nv-mini-note">
-          A supportive story for families navigating puberty, emotions, and sensory-sensitive experiences.
-        </div>
-      </div>
+<section class="nv-page-hero">
 
-      <div class="nv-cover-wrap">
-        <div class="nv-cover">
-          <!-- Replace with your real cover image -->
-          <img src="/images/rotm/rotm-cover.jpg" alt="The Rhythm of the Moon book cover" />
-        </div>
-      </div>
-    </div>
-  </header>
+<div class="nv-container">
 
-  <section class="nv-section" id="about">
-    <div class="nv-container">
-      <div class="nv-card nv-blurb">
-        <div>
-          <h3>A gentle story about growing up</h3>
-          <p>
-            In <em>The Rhythm of the Moon</em>, we meet Elara — a girl who feels the world very deeply.
-            Sometimes sounds feel too loud, emotions feel overwhelming, and changes can feel scary.
-          </p>
-          <p>
-            One day Elara experiences something new — her first period. With the loving guidance
-            of her mother Sylvia, she begins to understand that her body is changing in a natural way.
-            Through patience, reassurance, and simple calming tools, Elara learns that her body has
-            its own rhythm — just like the moon in the sky.
-          </p>
-        </div>
-        <div>
-          <h3>Why families will love it</h3>
-          <div class="nv-pill-list">
-            <div class="nv-pill">Introduces body changes in a gentle way</div>
-            <div class="nv-pill">Supports emotional regulation</div>
-            <div class="nv-pill">Helpful for sensitive or neurodivergent kids</div>
-            <div class="nv-pill">Teaches the 5-4-3-2-1 calming method</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<h1>The Rhythm of the Moon</h1>
 
-  <section class="nv-section" id="inside">
-    <div class="nv-container">
-      <h2>Inside the book</h2>
-      <p>
-        Inside the story, children follow Elara as she learns about body changes,
-        big emotions, and the calming rhythm of her own cycle. These pages introduce
-        the moon cycle metaphor, comfort tools, and the 5-4-3-2-1 grounding method.
-      </p>
+<p>
+A gentle story about growing up, big feelings, and understanding your body.
+Follow Elara as she learns that the changes she is experiencing are part of a
+natural rhythm — just like the phases of the moon.
+</p>
 
-      <div class="nv-preview-grid">
-        <div class="nv-preview-card">
-          <img src="/images/rotm/rotm-preview-1.jpg" alt="Elara in her room" />
-          <div class="nv-preview-caption">
-            Elara learns that her body changes just like the phases of the moon.
-          </div>
-        </div>
+<img 
+src="/images/rotm/rotm-cover.png"
+alt="The Rhythm of the Moon Book Cover"
+class="rotm-cover"
+/>
 
-        <div class="nv-preview-card">
-          <img src="/images/rotm/rotm-preview-2.jpg" alt="Sylvia explaining the moon cycle" />
-          <div class="nv-preview-caption">
-            Sylvia helps Elara understand periods in a calm and loving way.
-          </div>
-        </div>
+</div>
 
-        <div class="nv-preview-card">
-          <img src="/images/rotm/rotm-preview-3.jpg" alt="Elara using the 5-4-3-2-1 calm method" />
-          <div class="nv-preview-caption">
-            Elara discovers the 5-4-3-2-1 calm method to settle big feelings.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+</section>
 
-  <section class="nv-section">
-    <div class="nv-container nv-two-up">
-      <div class="nv-card nv-panel">
-        <h2>What children will learn</h2>
-        <ul>
-          <li>That body changes are natural and nothing to be ashamed of</li>
-          <li>How the menstrual cycle can be explained in a child-friendly way</li>
-          <li>That big feelings can happen during change and growth</li>
-          <li>Simple grounding tools to help the body feel calm again</li>
-        </ul>
-      </div>
 
-      <div class="nv-card nv-panel">
-        <h2>Perfect for</h2>
-        <ul>
-          <li>Children beginning puberty or body changes</li>
-          <li>Sensitive or neurodivergent children</li>
-          <li>Parents explaining menstruation in a gentle way</li>
-          <li>Families teaching emotional regulation tools</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+<section class="nv-section">
 
-  <section class="nv-section" id="author">
-    <div class="nv-container nv-two-up">
-      <div class="nv-card nv-panel">
-        <h2>About the author</h2>
-        <p>
-          Amanda Carleton is the creator of NeuroVibe and NeuroVibe Publishing.
-          She creates supportive resources, stories, and tools for families who want
-          more understanding, encouragement, and calm through everyday challenges.
-        </p>
-        <p>
-          I wrote this book for my daughters, Liana and Althea. My hope is that this story helps
-          children understand their bodies, their feelings, and the journey of growing up a little
-          more with confidence and kindness.
-        </p>
-      </div>
+<div class="nv-container">
 
-      <div class="nv-card nv-panel">
-        <h2>A story with heart</h2>
-        <p>
-          <em>The Rhythm of the Moon</em> combines gentle parenting, neurodivergent support,
-          body literacy, and emotional regulation into a warm, approachable story children can understand.
-        </p>
-        <p>
-          It reminds young readers that their feelings are real, their bodies are amazing,
-          and they are never alone while growing through change.
-        </p>
-      </div>
-    </div>
-  </section>
+<h2>About the Story</h2>
 
-  <section class="nv-section" id="buy">
-    <div class="nv-container">
-      <div class="nv-card nv-cta">
-        <h2>Help your child grow with confidence</h2>
-        <p>
-          Help your child understand growing up with confidence, calm, and support.
-          <em>The Rhythm of the Moon</em> gives families a gentle way to talk about body changes,
-          emotions, and the natural rhythm of growing up.
-        </p>
-        <div class="nv-hero-actions" style="justify-content:center; margin-bottom:0;">
-          <a class="nv-btn nv-btn-primary" href="#">Buy The Rhythm of the Moon</a>
-          <a class="nv-btn nv-btn-secondary" href="/start-here.html">Explore NeuroVibe</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<p>
+In <strong>The Rhythm of the Moon</strong>, we meet Elara — a girl who feels the world very deeply.
+Sometimes sounds feel too loud, emotions feel overwhelming, and change can feel scary.
+</p>
 
-  <footer class="nv-footer">
-    <div class="nv-container">
-      NeuroVibe Publishing · The Rhythm of the Moon · Amanda Carleton
-    </div>
-  </footer>
+<p>
+One day Elara experiences something new — her first period. With the loving guidance
+of her mother Sylvia, she begins to understand that her body is changing in a natural way.
+Through patience, reassurance, and simple calming tools, Elara learns that her body has
+its own rhythm — just like the moon in the sky.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section class="nv-section">
+
+<div class="nv-container">
+
+<h2>Inside the Book</h2>
+
+<p>
+Inside the story, children follow Elara as she learns about body changes,
+big emotions, and the calming rhythm of her own cycle.
+</p>
+
+<div class="nv-grid">
+
+<div class="nv-preview-card">
+
+<img
+src="/images/rotm/rotm-preview-1.png"
+alt="Elara learning about the moon phases"
+/>
+
+<p>
+Elara learns that her body changes just like the phases of the moon.
+</p>
+
+</div>
+
+
+
+<div class="nv-preview-card">
+
+<img
+src="/images/rotm/rotm-preview-2.png"
+alt="Sylvia explaining the moon cycle"
+/>
+
+<p>
+Sylvia gently explains how our bodies have their own rhythm.
+</p>
+
+</div>
+
+
+
+<div class="nv-preview-card">
+
+<img
+src="/images/rotm/rotm-preview-3.png"
+alt="Elara using the calm method"
+/>
+
+<p>
+Elara practices the 5-4-3-2-1 calm method to settle big feelings.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="nv-section">
+
+<div class="nv-container">
+
+<h2>What Children Will Learn</h2>
+
+<ul>
+
+<li>That body changes are natural and nothing to fear</li>
+<li>How the menstrual cycle can be explained in a child-friendly way</li>
+<li>How emotions can feel bigger during times of change</li>
+<li>Simple grounding tools to calm the nervous system</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<section class="nv-section">
+
+<div class="nv-container">
+
+<h2>About the Author</h2>
+
+<p>
+Amanda Carleton is the creator of NeuroVibe and NeuroVibe Publishing.
+She creates supportive resources, stories, and tools for families who
+want more understanding and encouragement in everyday life.
+</p>
+
+<p>
+This book was written for her daughters, Liana and Althea,
+with the hope that it helps children understand their bodies,
+their feelings, and the journey of growing up with confidence.
+</p>
+
+</div>
+
+</section>
+
+
+
+<section class="nv-section">
+
+<div class="nv-container">
+
+<h2>Get the Book</h2>
+
+<p>
+Help your child understand growing up with confidence,
+calm, and support.
+</p>
+
+<a href="#" class="nv-btn">
+Buy The Rhythm of the Moon
+</a>
+
+</div>
+
+</section>
+
+
 </body>
 </html>

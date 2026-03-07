@@ -1785,4 +1785,27 @@ body.resource-vault .nv-btn-row{
   .nv-mobile-menu a{
     font-size: 1.6rem;
   }
+}.product-img-wrap{
+  position:relative;
+}
+
+.product-img-wrap img{
+  width:100%;
+  border-radius:16px;
+  transition:opacity .3s ease;
+}
+
+.img-hover{
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+}
+
+.product-card:hover .img-hover{
+  opacity:1;
+}
+
+.product-card:hover .img-main{
+  opacity:0;
 }

@@ -12,7 +12,72 @@
 <link rel="stylesheet" href="/style.css?v=101">
 
 <style>
+.nv-header{
+position:sticky;
+top:0;
+background:white;
+z-index:999;
+border-bottom:1px solid rgba(0,0,0,0.06);
+}
 
+.nv-nav-container{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 20px;
+}
+
+.nv-logo{
+font-weight:700;
+font-size:20px;
+color:#4b2e83;
+text-decoration:none;
+}
+
+.nv-hamburger{
+font-size:26px;
+background:none;
+border:none;
+cursor:pointer;
+display:none;
+}
+
+.nv-nav-menu{
+display:flex;
+gap:20px;
+}
+
+.nv-nav-menu a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+@media(max-width:768px){
+
+.nv-hamburger{
+display:block;
+}
+
+.nv-nav-menu{
+display:none;
+flex-direction:column;
+position:absolute;
+top:60px;
+right:20px;
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.nv-nav-menu.active{
+display:flex;
+}
+
+}
 .nv-preview-card img{
 width:100%;
 border-radius:18px;

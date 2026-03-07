@@ -1809,3 +1809,194 @@ body.resource-vault .nv-btn-row{
 .product-card:hover .img-main{
   opacity:0;
 }
+/* =========================
+   BEAUTY HUB PRODUCT CARDS
+   ========================= */
+
+.march-edit{
+  margin: 18px auto 34px;
+  padding: 28px 20px;
+  max-width: 1100px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(176,255,203,0.40), transparent 35%),
+    linear-gradient(180deg, rgba(244,255,247,0.96) 0%, rgba(255,255,255,0.92) 100%);
+  border: 1px solid rgba(255,255,255,0.55);
+  box-shadow: 0 18px 40px rgba(20, 70, 35, 0.10);
+}
+
+.section-heading{
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-kicker{
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #18794e;
+  margin-bottom: 8px;
+}
+
+.section-heading h2{
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: var(--nv-purple-deep);
+}
+
+.section-heading p{
+  color: #4b5563;
+}
+
+.beauty-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.product-card{
+  position: relative;
+  background: rgba(255,255,255,0.38);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(75, 46, 131, 0.16);
+  padding: 18px;
+  text-align: center;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  overflow: hidden;
+}
+
+.product-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 42px rgba(75, 46, 131, 0.22);
+}
+
+.featured-stpatty{
+  grid-column: span 2;
+  background: linear-gradient(180deg, rgba(236,255,241,0.96), rgba(255,255,255,0.92));
+  border: 1px solid rgba(80, 170, 120, 0.22);
+  box-shadow: 0 18px 40px rgba(24,121,78,0.14);
+}
+
+.product-badge{
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 3;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #e7fff0;
+  color: #18794e;
+  box-shadow: 0 6px 18px rgba(24,121,78,0.12);
+}
+
+.product-gallery{
+  margin-bottom: 14px;
+}
+
+.main-img{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  margin-bottom: 10px;
+  background: #f5f5f5;
+}
+
+.thumb-row{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.thumb-row img{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #f5f5f5;
+}
+
+.product-title{
+  font-size: 1.15rem;
+  color: var(--nv-purple-deep);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.product-price{
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--nv-purple);
+  margin-bottom: 6px;
+}
+
+.product-type{
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #5b5568;
+  margin-bottom: 10px;
+}
+
+.product-desc{
+  font-size: 0.95rem;
+  color: var(--nv-ink);
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.product-note{
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #6b7280;
+  margin-bottom: 14px;
+}
+
+.product-btn{
+  display: inline-block;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, var(--nv-purple), var(--nv-teal));
+  box-shadow: 0 10px 25px rgba(107, 92, 255, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(107, 92, 255, 0.34);
+}
+
+@media (max-width: 980px){
+  .beauty-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-stpatty{
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px){
+  .beauty-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .featured-stpatty{
+    grid-column: span 1;
+  }
+
+  .march-edit{
+    padding: 22px 14px;
+  }
+}

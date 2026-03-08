@@ -14,6 +14,31 @@
 
   <style>
     /* ABOUT PAGE NAV FIX */
+    /* ABOUT PAGE MOBILE FIX */
+@media (max-width: 768px){
+  .nv-about .nv-card,
+  .nv-about .nv-card.featured{
+    grid-template-columns: 1fr !important;
+  }
+
+  .nv-about .nv-card-media{
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto 14px;
+  }
+
+  .nv-about .nv-card-body{
+    padding: 16px;
+  }
+
+  .nv-about .nv-h2,
+  .nv-about .nv-copy,
+  .nv-about p,
+  .nv-about li{
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+}
     .nv-header{
       position: sticky;
       top: 0;

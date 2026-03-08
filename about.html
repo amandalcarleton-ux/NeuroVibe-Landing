@@ -189,19 +189,15 @@
     </div>
   </main>
 
-  <script>
-    const nvMenuToggle = document.getElementById('nvMenuToggle');
-    const nvMobileMenu = document.getElementById('nvMobileMenu');
+ <script>
+  const toggle = document.getElementById("nv-menu-toggle");
+  const nav = document.getElementById("nv-nav");
 
-    if (nvMenuToggle && nvMobileMenu) {
-      nvMenuToggle.addEventListener('click', () => {
-        nvMenuToggle.classList.toggle('active');
-        nvMobileMenu.classList.toggle('open');
-
-        const expanded = nvMenuToggle.classList.contains('active');
-        nvMenuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-      });
-    }
-  </script>
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  }
+</script>
 </body>
 </html>

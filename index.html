@@ -146,7 +146,21 @@
 .nv-nav-menu a:hover{
   background: rgba(198,168,255,0.18);
   color: #4b2e83;
-}</style>
+}.ml-form-popupOverlay,
+.ml-form-popupWrapper,
+.ml-form-embedContainer,
+.ml-form-popupBody{
+  z-index: 99999 !important;
+}
+.ml-form-popupBody{
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+}
+
+body.ml-form-popup-open{
+  overflow: hidden;
+}
+  </style>
 </head>
 
 <body class="nv-y2k">

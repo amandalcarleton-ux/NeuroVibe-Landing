@@ -61,7 +61,73 @@ display:block;
 margin:60px auto;
 max-width:260px;
 }
+.nv-ecosystem-wrap{
+  margin-top: 28px;
+}
 
+.nv-ecosystem-box{
+  background: rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 28px;
+  padding: 24px;
+  box-shadow: 0 18px 40px rgba(75,46,131,0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nv-ecosystem-box h2{
+  margin: 0 0 8px;
+  color: #101018;
+}
+
+.nv-ecosystem-box > p{
+  margin: 0 0 18px;
+  color: #101018;
+}
+
+.nv-ecosystem-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.nv-eco-card{
+  display: block;
+  text-decoration: none;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 12px 28px rgba(75,46,131,0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nv-eco-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(75,46,131,0.18);
+}
+
+.nv-eco-card h3{
+  margin: 0 0 10px;
+  color: #4b2e83;
+}
+
+.nv-eco-card p{
+  margin: 0 0 14px;
+  color: #101018;
+  line-height: 1.5;
+}
+
+.nv-eco-card span{
+  font-weight: 700;
+  color: #4b2e83;
+}
+
+@media (max-width: 900px){
+  .nv-ecosystem-grid{
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 
 </head>

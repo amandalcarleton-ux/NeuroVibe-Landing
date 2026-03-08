@@ -18,36 +18,33 @@
   <!-- HEADER / MOBILE NAV -->
   <header class="nv-header">
     <div class="nv-header-inner">
-      <a href="index.html" class="nv-brand">
+      <a href="/index.html" class="nv-brand">
         <span class="nv-brand-main">NeuroVibe</span>
         <span class="nv-brand-sub">WellCo</span>
       </a>
 
-      <button class="nv-menu-toggle" id="nvMenuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nvMobileMenu">
+      <button
+        class="nv-menu-toggle"
+        id="nvMenuToggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nvMobileMenu"
+        type="button"
+      >
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
-<button class="nv-hamburger" id="nv-menu-toggle">
-☰
-</button>
 
-<nav class="nv-nav-menu" id="nv-nav">
-
-    <nav class="nv-nav-menu" id="nv-nav">
-
-<a href="/">index.html</a>Home<\a>
-
-<a href="/start-here.html">Start Here</a>
-
-<a href="/guides.html">NeuroVibe Guides</a>
-
-<a href="/beautyhub.html">Beauty Hub</a>
-
-<a href="ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
-
-<a href="/shop.html">Shop</a>
+    <nav class="nv-nav-menu" id="nvMobileMenu">
+      <a href="/index.html">Home</a>
+      <a href="/start-here.html">Start Here</a>
+      <a href="/guides.html">NeuroVibe Guides</a>
+      <a href="/beautyhub.html">Beauty Hub</a>
+      <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
+      <a href="/shop.html">Shop</a>
+    </nav>
   </header>
 
   <!-- PAGE HEADER BANNER -->
@@ -94,7 +91,7 @@
             </div>
 
             <div class="nv-actions" style="justify-content:center;">
-              <a class="nv-btn primary" href="shop.html#digital-resources">
+              <a class="nv-btn primary" href="/shop.html#digital-resources">
                 Get the Free Reset
               </a>
 
@@ -194,7 +191,7 @@
         <section class="glass" style="padding:22px; text-align:center; margin-top:18px;">
           <h2 class="nv-h2">Ready for calmer + clearer?</h2>
           <p>Explore everything here:</p>
-          <a href="links.html">
+          <a href="/links.html">
             Visit the Resource Vault
           </a>
         </section>
@@ -208,13 +205,15 @@
     const nvMenuToggle = document.getElementById('nvMenuToggle');
     const nvMobileMenu = document.getElementById('nvMobileMenu');
 
-    nvMenuToggle.addEventListener('click', () => {
-      nvMenuToggle.classList.toggle('active');
-      nvMobileMenu.classList.toggle('open');
+    if (nvMenuToggle && nvMobileMenu) {
+      nvMenuToggle.addEventListener('click', () => {
+        nvMenuToggle.classList.toggle('active');
+        nvMobileMenu.classList.toggle('open');
 
-      const expanded = nvMenuToggle.classList.contains('active');
-      nvMenuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    });
+        const expanded = nvMenuToggle.classList.contains('active');
+        nvMenuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      });
+    }
   </script>
 </body>
 </html>

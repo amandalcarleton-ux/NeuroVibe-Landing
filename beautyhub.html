@@ -16,37 +16,124 @@
 
   <link rel="icon" type="image/png" href="/images/logos/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/logos/nv-favicon.PNG" />
+
+  <style>
+    .nv-header{
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.45);
+      box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
+    }
+
+    .nv-nav-container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .nv-logo{
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #4b2e83;
+      text-decoration: none;
+    }
+
+    .nv-hamburger{
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.34);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      line-height: 1;
+      color: #4b2e83;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-hamburger:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
+    }
+
+    .nv-nav-menu{
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 18px;
+      min-width: 240px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 20px;
+      padding: 14px;
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nv-nav-menu.active{
+      display: flex;
+    }
+
+    .nv-nav-menu a{
+      display: block;
+      padding: 12px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #101018;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nv-nav-menu a:hover{
+      background: rgba(198,168,255,0.18);
+      color: #4b2e83;
+    }
+  </style>
 </head>
 
 <body class="nv-y2k">
 
-  <!-- HEADER -->
- 
+  <header class="nv-header">
+    <div class="nv-nav-container">
+      <a href="/index.html" class="nv-logo">NeuroVibe</a>
 
-    <header class="nv-header">
-  <div class="nv-nav-container">
+      <button class="nv-hamburger" id="nv-menu-toggle" type="button" aria-label="Open menu">
+        ☰
+      </button>
 
-    <a href="/index.html" class="nv-logo">NeuroVibe</a>
+      <nav class="nv-nav-menu" id="nv-nav">
+        <a href="/index.html">Home</a>
+        <a href="/start-here.html">Start Here</a>
+        <a href="/guides.html">NeuroVibe Guides</a>
+        <a href="/beautyhub.html">Beauty Hub</a>
+        <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
+        <a href="/links.html">Resources</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
-    <button class="nv-hamburger" id="nv-menu-toggle" type="button">
-      ☰
-    </button>
-
-    <nav class="nv-nav-menu" id="nv-nav">
-      <a href="/index.html">Home</a>
-      <a href="/start-here.html">Start Here</a>
-      <a href="/guides.html">NeuroVibe Guides</a>
-      <a href="/beautyhub.html">Beauty Hub</a>
-      <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
-      <a href="/links.html">Resources</a>
-      <a href="/shop.html">Shop</a>
-      <a href="/about.html">About</a>
-    </nav>
-
-  </div>
-</header>
-
-  <!-- PAGE HEADER BANNER -->
   <div class="nv-page-header">
     <img
       src="images/logos/beautyhub-logo.PNG"
@@ -57,7 +144,7 @@
 
   <main class="nv-page">
     <div class="nv-wrap">
-      <!-- INTRO -->
+
       <section class="glass" style="padding:22px; margin-bottom:18px; text-align:center;">
         <p class="nv-kicker">Beauty • Self-Care • Everyday Favorites</p>
 
@@ -70,7 +157,6 @@
         </p>
       </section>
 
-      <!-- ABOUT -->
       <section class="glass" style="padding:20px; margin-bottom:18px;">
         <p class="nv-kicker">A softer side of NeuroVibe</p>
 
@@ -87,7 +173,6 @@
         </p>
       </section>
 
-      <!-- MARCH FEATURE -->
       <section class="march-edit">
         <div class="section-heading">
           <p class="section-kicker">March Beauty Edit</p>
@@ -135,7 +220,6 @@
         </div>
       </section>
 
-      <!-- MONTHLY MANI -->
       <section class="glass" style="padding:22px; margin-bottom:22px; text-align:center;">
         <p class="nv-kicker">Kleo Kolor</p>
 
@@ -157,7 +241,6 @@
         </div>
       </section>
 
-      <!-- SPRING BOLDS BUNDLE -->
       <section class="nv-section">
         <div class="nv-section-head">
           <h2 class="nv-h2">Spring Bolds Intro Set 💐</h2>
@@ -206,7 +289,6 @@
         </div>
       </section>
 
-      <!-- AMANDA'S CURRENT PICKS -->
       <section class="beauty-section">
         <h2 class="beauty-section-title">Amanda’s Current Mani Picks 💅</h2>
 
@@ -282,7 +364,6 @@
         </div>
       </section>
 
-      <!-- PRESS-ON NAILS -->
       <section class="beauty-section">
         <h2 class="beauty-section-title">Press-On Nails</h2>
 
@@ -325,7 +406,6 @@
         </div>
       </section>
 
-      <!-- CATEGORY SECTION -->
       <section class="nv-section">
         <div class="nv-section-head">
           <h2 class="nv-h2">Browse by category</h2>
@@ -417,16 +497,20 @@
   </script>
 
   <script>
-    const nvMenuToggle = document.getElementById('nvMenuToggle');
-    const nvMobileMenu = document.getElementById('nvMobileMenu');
+    const toggle = document.getElementById("nv-menu-toggle");
+    const nav = document.getElementById("nv-nav");
 
-    nvMenuToggle.addEventListener('click', () => {
-      nvMenuToggle.classList.toggle('active');
-      nvMobileMenu.classList.toggle('open');
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
 
-      const expanded = nvMenuToggle.classList.contains('active');
-      nvMenuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    });
+      document.addEventListener("click", (e) => {
+        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+          nav.classList.remove("active");
+        }
+      });
+    }
   </script>
 
 </body>

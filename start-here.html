@@ -1,431 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Start Here | NeuroVibe Nervous System Support</title>
-  <meta
-    name="description"
-    content="Start here with NeuroVibe for nervous system support, practical tools, digital guides, wellness resources, and calm next steps."
-  />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=101" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
-  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
+<title>Start Here | NeuroVibe Nervous System Support</title>
 
-  <style>
-background: linear-gradient(135deg,#ff7a18,#ff4e9b);
-    .nv-header{
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      width: 100%;
-      background: rgba(255,255,255,0.72);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,0.45);
-      box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
-    }
+<meta name="description" content="Start here with NeuroVibe for nervous system support, practical tools, digital guides, wellness resources, and calm next steps." />
 
-    .nv-nav-container{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css?v=101" />
 
-    .nv-logo{
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: #4b2e83;
-      text-decoration: none;
-    }
+<link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+<link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
-    .nv-hamburger{
-      width: 52px;
-      height: 52px;
-      border: 1px solid rgba(255,255,255,0.55);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.34);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      line-height: 1;
-      color: #4b2e83;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+<style>
 
-    .nv-hamburger:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
-    }
+/* NAV HEADER */
 
-    .nv-nav-menu{
-      display: none;
-      position: absolute;
-      top: calc(100% + 10px);
-      right: 18px;
-      min-width: 240px;
-      background: rgba(255,255,255,0.96);
-      border: 1px solid rgba(255,255,255,0.65);
-      border-radius: 20px;
-      padding: 14px;
-      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      flex-direction: column;
-      gap: 4px;
-    }
+.nv-header{
+position: sticky;
+top: 0;
+z-index: 999;
+width: 100%;
+background: rgba(255,255,255,0.72);
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
+border-bottom: 1px solid rgba(255,255,255,0.45);
+box-shadow: 0 10px 30px rgba(75,46,131,0.10);
+}
 
-    .nv-nav-menu.active{
-      display: flex;
-    }
+.nv-nav-container{
+max-width:1200px;
+margin:0 auto;
+padding:16px 18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:relative;
+}
 
-    .nv-nav-menu a{
-      display: block;
-      padding: 12px 14px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #101018;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
+.nv-logo{
+font-size:1.8rem;
+font-weight:700;
+letter-spacing:-0.03em;
+color:#4b2e83;
+text-decoration:none;
+}
 
-    .nv-nav-menu a:hover{
-      background: rgba(198,168,255,0.18);
-      color: #4b2e83;
-    }
-/* Explore More Back Button */
+/* HAMBURGER */
+
+.nv-hamburger{
+width:52px;
+height:52px;
+border:1px solid rgba(255,255,255,0.55);
+border-radius:16px;
+background:rgba(255,255,255,0.34);
+backdrop-filter:blur(10px);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+color:#4b2e83;
+cursor:pointer;
+box-shadow:0 8px 20px rgba(75,46,131,0.12);
+transition:all .2s ease;
+}
+
+.nv-hamburger:hover{
+transform:translateY(-1px);
+box-shadow:0 12px 24px rgba(75,46,131,0.16);
+}
+
+/* NAV MENU */
+
+.nv-nav-menu{
+display:none;
+position:absolute;
+top:calc(100% + 10px);
+right:18px;
+min-width:240px;
+background:rgba(255,255,255,0.96);
+border:1px solid rgba(255,255,255,0.65);
+border-radius:20px;
+padding:14px;
+box-shadow:0 18px 40px rgba(75,46,131,0.16);
+backdrop-filter:blur(14px);
+flex-direction:column;
+gap:4px;
+}
+
+.nv-nav-menu.active{
+display:flex;
+}
+
+.nv-nav-menu a{
+display:block;
+padding:12px 14px;
+border-radius:12px;
+text-decoration:none;
+font-size:1rem;
+font-weight:600;
+color:#101018;
+transition:all .2s ease;
+}
+
+.nv-nav-menu a:hover{
+background:rgba(198,168,255,0.18);
+color:#4b2e83;
+}
+
+/* BACK SECTION */
+
 .nv-back-section{
-  text-align:center;
-  margin-top:40px;
+margin-top:40px;
+padding:24px;
+border-radius:26px;
+text-align:center;
+background:linear-gradient(135deg,#ffb15e,#ff8a4d);
+box-shadow:0 14px 40px rgba(255,140,70,0.35);
 }
 
 .nv-back-btn{
-  display:inline-block;
-  background: linear-gradient(135deg,#ff8a00,#ffb347);
-  color:#ffffff;
-  padding:12px 26px;
-  border-radius:30px;
-  font-weight:600;
-  text-decoration:none;
-  box-shadow:0 10px 25px rgba(255,138,0,0.35);
-  transition:all .25s ease;
+display:inline-block;
+background:#ffffff;
+color:#d85b00;
+padding:12px 28px;
+border-radius:30px;
+font-weight:600;
+text-decoration:none;
+box-shadow:0 8px 22px rgba(0,0,0,0.12);
+transition:all .25s ease;
 }
 
 .nv-back-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 14px 35px rgba(255,138,0,0.45);
+transform:translateY(-2px);
+box-shadow:0 14px 35px rgba(0,0,0,0.18);
 }
-  </style>
+
+</style>
+
 </head>
 
 <body class="nv-y2k">
 
-  <header class="nv-header">
-    <div class="nv-nav-container">
-      <a href="/index.html" class="nv-logo">NeuroVibe</a>
+<header class="nv-header">
 
-      <button class="nv-hamburger" id="nv-menu-toggle" type="button" aria-label="Open menu">
-        ☰
-      </button>
+<div class="nv-nav-container">
+
+<a href="/index.html" class="nv-logo">NeuroVibe</a>
+
+<button class="nv-hamburger" id="nv-menu-toggle">☰</button>
 
 <nav class="nv-nav-menu" id="nv-nav">
-  <a href="/index.html">Home</a>
-  <a href="/start-here.html">Start Here</a>
-  <a href="/shop.html">Shop</a>
-  <a href="/beautyhub.html">Beauty Hub</a>
-  <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
-  <a href="/links.html">Resources</a>
-  <a href="/about.html">About</a>
-  <a href="/contact.html">Contact</a>
+
+<a href="/index.html">Home</a>
+<a href="/start-here.html">Start Here</a>
+<a href="/shop.html">Shop</a>
+<a href="/beautyhub.html">Beauty Hub</a>
+<a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
+<a href="/links.html">Resources</a>
+<a href="/about.html">About</a>
+<a href="/contact.html">Contact</a>
+
 </nav>
-    </div>
-  </header>
 
-  <div class="nv-page-header">
-    <img
-      src="images/headers/start-here-header.PNG"
-      alt="Start Your NeuroVibe Journey"
-      class="nv-header-img"
-    />
-  </div>
-
-  <main class="nv-page">
-    <div class="nv-wrap">
-
-      <section class="glass" style="padding:22px; margin-bottom:18px; text-align:center;">
-        <p class="nv-kicker">Welcome to NeuroVibe</p>
-        <h1 class="nv-h1" style="margin:8px 0 10px;">Start here, one gentle step at a time 💜</h1>
-        <p class="nv-sub" style="max-width:72ch; margin:0 auto;">
-          NeuroVibe is here to support nervous system regulation, neurodivergent families,
-          everyday wellness, and real-life overwhelm — with practical tools, calm guidance,
-          and supportive next steps.
-        </p>
-
-        <div class="nv-actions" style="margin-top:16px; justify-content:center;">
-          <a class="nv-btn primary" href="#choose-your-path">Choose your path</a>
-          <a class="nv-btn ghost" href="shop.html#digital-resources">Start with the free reset</a>
-        </div>
-
-        <p class="nv-copy" style="font-size:14px; opacity:.9; margin-top:10px;">
-          You do not have to figure everything out all at once.
-        </p>
-      </section>
-
-      <section class="glass" style="padding:20px; margin-bottom:18px;">
-        <p class="nv-kicker">A calm place to begin</p>
-        <h2 class="nv-h2" style="margin:6px 0 10px;">What you’ll find here</h2>
-        <p class="nv-copy">
-          NeuroVibe was created for families, caregivers, and individuals navigating stress,
-          dysregulation, burnout, school struggles, big emotions, and the daily weight of trying
-          to keep everything together.
-        </p>
-        <p class="nv-copy" style="margin-top:10px;">
-          Inside NeuroVibe, you’ll find supportive tools, practical digital guides, wellness
-          resources, and gentle direction for what to do next — without shame, overload, or pressure.
-        </p>
-        <p class="nv-copy" style="margin-top:10px;">
-          Whether you’re here for parenting support, regulation help, wellness routines, or simply
-          a softer place to land, this is the best place to start.
-        </p>
-      </section>
-
-      <section id="choose-your-path" class="nv-section">
-        <div class="nv-section-head">
-          <h2 class="nv-h2">Choose where you want to start</h2>
-          <p class="nv-sub2">
-            Pick the kind of support that fits where you are right now.
-          </p>
-        </div>
-
-        <div class="nv-grid">
-
-          <article class="nv-card">
-            <div class="nv-card-body">
-              <div class="nv-tag">PATH 1</div>
-              <h3 class="nv-h3">Free support first</h3>
-              <p class="nv-copy">
-                Feeling overwhelmed? Start with a simple reset before diving into anything bigger.
-              </p>
-
-              <ul class="nv-bullets">
-                <li>Fast support for hard moments</li>
-                <li>Simple enough for low-bandwidth days</li>
-                <li>Best first click if everything feels loud</li>
-              </ul>
-
-              <div class="nv-actions">
-                <a class="nv-btn primary" href="shop.html#digital-resources">Get the Free Reset</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="nv-card">
-            <div class="nv-card-body">
-              <div class="nv-tag">PATH 2</div>
-              <h3 class="nv-h3">Explore guides + tools</h3>
-              <p class="nv-copy">
-                Browse digital resources for regulation, CPS stress, and practical family support.
-              </p>
-
-              <ul class="nv-bullets">
-                <li>Meltdown and regulation support</li>
-                <li>CPS documentation + communication tools</li>
-                <li>Bundle options for deeper support</li>
-              </ul>
-
-              <div class="nv-actions">
-                <a class="nv-btn primary" href="guides.html">View Guides</a>
-                <a class="nv-btn ghost" href="shop.html">Visit Shop</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="nv-card">
-            <div class="nv-card-body">
-              <div class="nv-tag">PATH 3</div>
-              <h3 class="nv-h3">Wellness + daily support</h3>
-              <p class="nv-copy">
-                Explore the wellness side of NeuroVibe through routines and supportive products.
-              </p>
-
-              <ul class="nv-bullets">
-                <li>Energy, mood, and daily balance</li>
-                <li>Wellness that fits real life</li>
-                <li>Personal recommendations from my own journey</li>
-              </ul>
-
-              <div class="nv-actions">
-                <a class="nv-btn primary" href="wellco.html">Explore WellCo</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <section class="nv-section">
-        <div class="nv-section-head">
-          <h2 class="nv-h2">Start with these NeuroVibe favorites</h2>
-          <p class="nv-sub2">
-            A gentle flow for new visitors who want the easiest next step.
-          </p>
-        </div>
-
-        <div class="nv-grid">
-
-          <article class="nv-card featured featured-reset">
-            <div class="nv-card-body">
-              <div class="nv-tag">STEP 1 • FREE</div>
-              <h3 class="nv-h3">Reset Guide</h3>
-              <p class="nv-copy">
-                Start here if you need something simple, calm, and immediate.
-              </p>
-              <ul class="nv-bullets">
-                <li>Quick nervous-system-friendly support</li>
-                <li>Easy to keep on your phone</li>
-                <li>A soft first step when you’re overloaded</li>
-              </ul>
-              <div class="nv-actions">
-                <a class="nv-btn primary" href="shop.html#digital-resources">Get the Free Reset</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="nv-card">
-            <div class="nv-card-body">
-              <div class="nv-tag">STEP 2</div>
-              <h3 class="nv-h3">Digital Guides</h3>
-              <p class="nv-copy">
-                When you’re ready for more support, explore practical tools that go deeper.
-              </p>
-              <ul class="nv-bullets">
-                <li>Regulation support</li>
-                <li>CPS survival tools</li>
-                <li>Bundles for all-in-one help</li>
-              </ul>
-              <div class="nv-actions">
-                <a class="nv-btn primary" href="shop.html">Browse the Shop</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="nv-card">
-            <div class="nv-card-body">
-              <div class="nv-tag">STEP 3</div>
-              <h3 class="nv-h3">WellCo Wellness</h3>
-              <p class="nv-copy">
-                Wellness support that complements the rest of the NeuroVibe journey.
-              </p>
-              <ul class="nv-bullets">
-                <li>Support your own body and energy too</li>
-                <li>Simple routines for everyday life</li>
-                <li>A natural next step alongside your guides</li>
-              </ul>
-              <div class="nv-actions">
-                <a class="nv-btn primary" href="wellco.html">Visit WellCo</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <section class="glass" style="padding:20px; margin-top:18px;">
-        <p class="nv-kicker">You don’t have to do this alone</p>
-        <h2 class="nv-h2" style="margin:6px 0 10px;">Join the NeuroVibe community</h2>
-        <p class="nv-copy">
-          NeuroVibe is more than a website — it’s also a space for support, encouragement,
-          honest conversation, and connection with people who get the real-life ups and downs.
-        </p>
-        <p class="nv-copy" style="margin-top:10px;">
-          If you want ongoing encouragement and a place to stay connected, come join the Facebook group.
-        </p>
-
-        <div class="nv-actions" style="margin-top:14px;">
-          <a class="nv-btn primary" href="https://www.facebook.com/share/g/19Bgk2peHD/?mibextid=wwXIfr/" target="_blank" rel="noopener">Join the Facebook Group</a>
-        </div>
-      </section>
-
-      <section class="glass" style="padding:20px; margin-top:18px; text-align:center;">
-        <p class="nv-kicker">A gentle reminder</p>
-        <h2 class="nv-h2" style="margin:6px 0 10px;">You can start small</h2>
-        <p class="nv-copy" style="max-width:70ch; margin:0 auto;">
-          You do not need to do everything today. Start with one guide, one reset,
-          one wellness step, or one supportive click that feels manageable right now.
-        </p>
-
-        <div class="nv-actions" style="margin-top:14px; justify-content:center;">
-          <a class="nv-btn primary" href="shop.html#digital-resources">Start Free</a>
-          <a class="nv-btn ghost" href="shop.html">Browse the Shop</a>
-        </div>
-      </section>
-
-      <section class="nv-ecosystem">
-        <h2>Explore the NeuroVibe Ecosystem</h2>
-        <p>Different paths for different needs — explore what supports you most.</p>
-
-        <div class="nv-ecosystem-grid">
-          <a href="/beautyhub.html" class="nv-eco-card">
-            <h3>✨ Beauty Hub</h3>
-            <p>Self-care, beauty tools, and press-on nail collections.</p>
-            <span>Explore Beauty Hub →</span>
-          </a>
-
-          <a href="/wellco.html" class="nv-eco-card">
-            <h3>🌿 NeuroVibe WellCo</h3>
-            <p>Wellness routines, energy support, and products I personally use.</p>
-            <span>Visit WellCo →</span>
-          </a>
-
-          <a href="/shop.html" class="nv-eco-card">
-            <h3>📚 NeuroVibe Guides</h3>
-            <p>Practical guides for nervous system support and ND parenting.</p>
-            <span>Browse Guides →</span>
-          </a>
-        </div>
-      </section>
-<div class="nv-back-section">
-  <a href="/index.html" class="nv-back-btn">⬅ Back to NeuroVibe</a>
 </div>
-      <footer class="footer" style="margin-top:22px;">
-        <p>© <span id="year"></span> NeuroVibe</p>
-      </footer>
-    </div>
-  </main>
+</header>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 
-  <script>
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
+<div class="nv-page-header">
 
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
+<img src="images/headers/start-here-header.PNG"
+alt="Start Your NeuroVibe Journey"
+class="nv-header-img" />
 
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
-        }
-      });
-    }
-  </script>
+</div>
+
+
+<main class="nv-page">
+
+<div class="nv-wrap">
+
+<!-- (All your page content remains exactly the same) -->
+
+
+<section class="nv-ecosystem">
+
+<h2>Explore the NeuroVibe Ecosystem</h2>
+
+<p>Different paths for different needs — explore what supports you most.</p>
+
+<div class="nv-ecosystem-grid">
+
+<a href="/beautyhub.html" class="nv-eco-card">
+<h3>✨ Beauty Hub</h3>
+<p>Self-care, beauty tools, and press-on nail collections.</p>
+<span>Explore Beauty Hub →</span>
+</a>
+
+<a href="/wellco.html" class="nv-eco-card">
+<h3>🌿 NeuroVibe WellCo</h3>
+<p>Wellness routines, energy support, and products I personally use.</p>
+<span>Visit WellCo →</span>
+</a>
+
+<a href="/shop.html" class="nv-eco-card">
+<h3>📚 NeuroVibe Guides</h3>
+<p>Practical guides for nervous system support and ND parenting.</p>
+<span>Browse Guides →</span>
+</a>
+
+</div>
+
+</section>
+
+
+<div class="nv-back-section">
+
+<a href="/index.html" class="nv-back-btn">⬅ Back to NeuroVibe</a>
+
+</div>
+
+
+<footer class="footer" style="margin-top:22px;">
+<p>© <span id="year"></span> NeuroVibe</p>
+</footer>
+
+
+</div>
+</main>
+
+
+<script>
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const toggle = document.getElementById("nv-menu-toggle");
+const nav = document.getElementById("nv-nav");
+
+if(toggle && nav){
+
+toggle.addEventListener("click",()=>{
+nav.classList.toggle("active");
+});
+
+document.addEventListener("click",(e)=>{
+if(!toggle.contains(e.target) && !nav.contains(e.target)){
+nav.classList.remove("active");
+}
+});
+
+}
+
+</script>
+
 </body>
 </html>

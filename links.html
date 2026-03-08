@@ -4,23 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Primary SEO -->
   <title>NeuroVibe | Resource Library</title>
   <meta name="description" content="A curated collection of tools, platforms, and partner links I personally use and recommend." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://neurovibe.site/links.html" />
 
-  <!-- Fonts + Site CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css?v=302" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
-  <!-- MailerLite Universal -->
   <script>
     (function(w,d,e,u,f,l,n){
       w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
@@ -29,36 +25,124 @@
     })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2150381');
   </script>
+
+  <style>
+    .nv-header{
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.45);
+      box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
+    }
+
+    .nv-nav-container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .nv-logo{
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #4b2e83;
+      text-decoration: none;
+    }
+
+    .nv-hamburger{
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.34);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      line-height: 1;
+      color: #4b2e83;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-hamburger:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
+    }
+
+    .nv-nav-menu{
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 18px;
+      min-width: 240px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 20px;
+      padding: 14px;
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nv-nav-menu.active{
+      display: flex;
+    }
+
+    .nv-nav-menu a{
+      display: block;
+      padding: 12px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #101018;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nv-nav-menu a:hover{
+      background: rgba(198,168,255,0.18);
+      color: #4b2e83;
+    }
+  </style>
 </head>
 
 <body class="nv-y2k resource-vault">
 
-  <!-- HEADER / MOBILE NAV -->
+  <header class="nv-header">
+    <div class="nv-nav-container">
+      <a href="/index.html" class="nv-logo">NeuroVibe</a>
 
-   <header class="nv-header">
-  <div class="nv-nav-container">
+      <button class="nv-hamburger" id="nv-menu-toggle" type="button" aria-label="Open menu">
+        ☰
+      </button>
 
-    <a href="/index.html" class="nv-logo">NeuroVibe</a>
+      <nav class="nv-nav-menu" id="nv-nav">
+        <a href="/index.html">Home</a>
+        <a href="/start-here.html">Start Here</a>
+        <a href="/guides.html">NeuroVibe Guides</a>
+        <a href="/beautyhub.html">Beauty Hub</a>
+        <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
+        <a href="/links.html">Resources</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
-    <button class="nv-hamburger" id="nv-menu-toggle" type="button">
-      ☰
-    </button>
-
-    <nav class="nv-nav-menu" id="nv-nav">
-      <a href="/index.html">Home</a>
-      <a href="/start-here.html">Start Here</a>
-      <a href="/guides.html">NeuroVibe Guides</a>
-      <a href="/beautyhub.html">Beauty Hub</a>
-      <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
-      <a href="/links.html">Resources</a>
-      <a href="/shop.html">Shop</a>
-      <a href="/about.html">About</a>
-    </nav>
-
-  </div>
-</header>
-
-  <!-- PAGE HEADER BANNER -->
   <div class="nv-page-header">
     <img
       src="images/headers/resources-header.PNG"
@@ -70,7 +154,6 @@
   <main class="nv-shop-main">
     <div class="nv-container">
 
-      <!-- PAGE INTRO -->
       <section class="nv-section">
         <div class="nv-section-head">
           <h1 class="nv-h1">Resource Library</h1>
@@ -84,7 +167,6 @@
         </div>
       </section>
 
-      <!-- NEUROVIBE TOOLS -->
       <section id="neurovibe-tools" class="nv-section">
         <div class="nv-section-head">
           <h2>🧠 NeuroVibe Digital Tools</h2>
@@ -118,7 +200,6 @@
         </div>
       </section>
 
-      <!-- WELLNESS -->
       <section id="wellness" class="nv-section">
         <div class="nv-section-head">
           <h2>🌿 Wellness</h2>
@@ -161,7 +242,6 @@
         </div>
       </section>
       
-      <!-- BEAUTY -->
       <section id="beauty" class="nv-section">
         <div class="nv-section-head">
           <h2>💄 Beauty + Self Care</h2>
@@ -193,7 +273,6 @@
         </div>
       </section>
 
-      <!-- HOME + DEALS -->
       <section id="home-deals" class="nv-section">
         <div class="nv-section-head">
           <h2>🛒 Home + Deals</h2>
@@ -237,7 +316,6 @@
         </div>
       </section>
 
-      <!-- APPS + PLATFORMS -->
       <section id="apps-tools" class="nv-section">
         <div class="nv-section-head">
           <h2>🚀 Apps + Platforms</h2>
@@ -292,7 +370,6 @@
         </div>
       </section>
 
-      <!-- EXTRA INCOME -->
       <section id="extra-income" class="nv-section">
         <div class="nv-section-head">
           <h2>✨ Extra Income Ideas</h2>
@@ -320,7 +397,6 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
   <footer class="nv-shop-footer glass">
     <div class="nv-container nv-footer-inner">
       <p class="nv-footer-text">
@@ -343,16 +419,20 @@
   </footer>
 
   <script>
-    const nvMenuToggle = document.getElementById('nvMenuToggle');
-    const nvMobileMenu = document.getElementById('nvMobileMenu');
+    const toggle = document.getElementById("nv-menu-toggle");
+    const nav = document.getElementById("nv-nav");
 
-    nvMenuToggle.addEventListener('click', () => {
-      nvMenuToggle.classList.toggle('active');
-      nvMobileMenu.classList.toggle('open');
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
 
-      const expanded = nvMenuToggle.classList.contains('active');
-      nvMenuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    });
+      document.addEventListener("click", (e) => {
+        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+          nav.classList.remove("active");
+        }
+      });
+    }
   </script>
 </body>
 </html>

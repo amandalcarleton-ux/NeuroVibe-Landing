@@ -2169,4 +2169,23 @@ body.resource-vault .nv-btn-row{
 .nv-nav-menu a:hover{
   background: rgba(198,168,255,0.18);
   color: var(--nv-purple-deep);
+}/* =========================
+   MAILERLITE POPUP FIX
+   ========================= */
+
+.ml-form-popupOverlay,
+.ml-form-popupWrapper,
+.ml-form-embedContainer,
+.ml-form-popupBody,
+[data-testid="form_container"]{
+  z-index: 999999 !important;
+}
+
+.ml-form-popupBody{
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+}
+
+body.ml-form-popup-open{
+  overflow: hidden;
 }

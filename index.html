@@ -37,14 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-<!-- PAGE HEADER IMAGE -->
-<div class="nv-page-header">
-  <img
-    src="images/headers/wellco-header-2.PNG"
-    alt="NeuroVibe WellCo Community"
-    class="nv-header-img"
-  />
-</div>
+
   <!-- Favicons -->
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
@@ -58,54 +51,141 @@
     })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2150381');
   </script>
+
+  <style>
+    .nv-header{
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.45);
+      box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
+    }
+
+    .nv-nav-container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .nv-logo{
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #4b2e83;
+      text-decoration: none;
+    }
+
+    .nv-hamburger{
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.34);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      line-height: 1;
+      color: #4b2e83;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-hamburger:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
+    }
+
+    .nv-nav-menu{
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 18px;
+      min-width: 240px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 20px;
+      padding: 14px;
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .nv-nav-menu.active{
+      display: flex;
+    }
+
+    .nv-nav-menu a{
+      display: block;
+      padding: 12px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #101018;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nv-nav-menu a:hover{
+      background: rgba(198,168,255,0.18);
+      color: #4b2e83;
+    }
+  </style>
 </head>
 
 <body class="nv-y2k">
 
-  <!-- HEADER / MOBILE NAV -->
+  <header class="nv-header">
+    <div class="nv-nav-container">
+      <a href="/index.html" class="nv-logo">NeuroVibe</a>
 
-   <header class="nv-header">
-  <div class="nv-nav-container">
+      <button class="nv-hamburger" id="nv-menu-toggle" type="button" aria-label="Open menu">
+        ☰
+      </button>
 
-    <a href="/index.html" class="nv-logo">NeuroVibe</a>
-
-    <button class="nv-hamburger" id="nv-menu-toggle" type="button">
-      ☰
-    </button>
-
-    <nav class="nv-nav-menu" id="nv-nav">
-      <a href="/index.html">Home</a>
-      <a href="/start-here.html">Start Here</a>
-      <a href="/guides.html">NeuroVibe Guides</a>
-      <a href="/beautyhub.html">Beauty Hub</a>
-      <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
-      <a href="/links.html">Resources</a>
-      <a href="/shop.html">Shop</a>
-      <a href="/about.html">About</a>
-    </nav>
-
-  </div>
-</header>
+      <nav class="nv-nav-menu" id="nv-nav">
+        <a href="/index.html">Home</a>
+        <a href="/start-here.html">Start Here</a>
+        <a href="/guides.html">NeuroVibe Guides</a>
+        <a href="/beautyhub.html">Beauty Hub</a>
+        <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
+        <a href="/links.html">Resources</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="nv-page">
     <div class="nv-wrap">
 
-      <!-- HERO -->
       <section class="hero hero-overlay glass">
         <div class="hero-grid">
 
-          <!-- LEFT SIDE -->
           <div class="hero-left">
             <div class="hero-overlay-content">
 
-   <div class="hero-logo">
-  <img
-    src="images/butterfly-aura.PNG"
-    alt="NeuroVibe butterfly"
-    class="site-logo"
-    loading="eager"
-  />
-</div>
+              <div class="hero-logo">
+                <img
+                  src="images/butterfly-aura.PNG"
+                  alt="NeuroVibe butterfly"
+                  class="site-logo"
+                  loading="eager"
+                />
+              </div>
 
               <p class="nv-kicker">NeuroVibe Wellness Collective</p>
               <h1>Grounded parenting support for neurodivergent families</h1>
@@ -120,7 +200,6 @@
                 <a class="nv-btn ghost" href="links.html">Browse resources</a>
               </div>
 
-              <!-- EMAIL SIGNUP IMAGE BUTTON -->
               <div class="nv-email">
                 <img
                   src="images/calm-reset-button.PNG"
@@ -157,7 +236,6 @@
             </div>
           </div>
 
-          <!-- RIGHT SIDE -->
           <div class="hero-right">
             <img
               src="images/CPS-Guide.PNG"
@@ -185,13 +263,9 @@
         </div>
       </section>
 
-      <!-- Divider after HERO -->
       <div class="nv-glow-divider"></div>
-
-      <!-- Divider before footer CTA -->
       <div class="nv-glitter-divider"></div>
 
-      <!-- FOOTER CTA -->
       <footer class="glass nv-card nv-footer-cta">
         <h2 class="nv-h2">Want the free reset?</h2>
         <p class="nv-copy">A quick calm tool for overwhelmed moments — delivered by email.</p>
@@ -221,16 +295,20 @@
   </script>
 
   <script>
-    const nvMenuToggle = document.getElementById('nvMenuToggle');
-    const nvMobileMenu = document.getElementById('nvMobileMenu');
+    const toggle = document.getElementById("nv-menu-toggle");
+    const nav = document.getElementById("nv-nav");
 
-    nvMenuToggle.addEventListener('click', () => {
-      nvMenuToggle.classList.toggle('active');
-      nvMobileMenu.classList.toggle('open');
+    if (toggle && nav) {
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
 
-      const expanded = nvMenuToggle.classList.contains('active');
-      nvMenuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    });
+      document.addEventListener("click", (e) => {
+        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+          nav.classList.remove("active");
+        }
+      });
+    }
   </script>
 </body>
 </html>

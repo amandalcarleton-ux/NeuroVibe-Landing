@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Shop | NeuroVibe</title>
-  <meta name="description" content="The NeuroVibe Shop — curated tools for calm homes, supported moms, and practical digital resources." />
+  <meta name="description" content="The NeuroVibe Shop — calm digital support for real life. Start with the Calm Reset Guide while more products are being added." />
   <link rel="canonical" href="https://neurovibe.site/shop.html" />
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
@@ -20,37 +20,6 @@
     n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2150381');
-  </script>
-
-  <!-- Inline form handler -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const form = document.querySelector('#digital-resources .nv-ml-inline');
-      if (!form) return;
-
-      const status = form.querySelector('.nv-ml-status');
-      const button = form.querySelector('button[type="submit"]');
-
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-        if (status) status.textContent = 'Sending...';
-        if (button) button.disabled = true;
-
-        try {
-          await fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            mode: 'no-cors'
-          });
-          if (status) status.textContent = '✅ Check your email — your reset is on the way!';
-          form.reset();
-        } catch (err) {
-          if (status) status.textContent = 'Hmm — that didn’t go through. Try again in a moment.';
-        } finally {
-          if (button) button.disabled = false;
-        }
-      });
-    });
   </script>
 
   <style>
@@ -144,6 +113,20 @@
       background: rgba(198,168,255,0.18);
       color: #4b2e83;
     }
+
+    .nv-shop-update{
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.62);
+      box-shadow: 0 10px 24px rgba(75, 46, 131, 0.08);
+      line-height: 1.7;
+    }
+
+    .nv-shop-update strong{
+      color: #4b2e83;
+    }
   </style>
 </head>
 
@@ -153,10 +136,18 @@
     <div class="nv-nav-container">
       <a href="/index.html" class="nv-logo">NeuroVibe</a>
 
-      <button class="nv-hamburger" id="nv-menu-toggle" type="button" aria-label="Open menu">
+      <button
+        class="nv-hamburger"
+        id="nv-menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nv-nav"
+      >
         ☰
       </button>
-<nav class="nv-nav-menu" id="nv-nav">
+
+      <nav class="nv-nav-menu" id="nv-nav">
         <a href="/index.html">Home</a>
         <a href="/start-here.html">Start Here</a>
         <a href="/guides.html">Guides</a>
@@ -184,7 +175,7 @@
       <p class="nv-eyebrow">NEUROVIBE</p>
       <h1>The NeuroVibe Shop</h1>
       <p class="nv-subtext">
-        Curated digital tools, family supports, and featured wellness-friendly picks for real life.
+        Calm digital support for real life.
       </p>
     </div>
   </section>
@@ -194,20 +185,18 @@
 
       <section class="glass nv-card nv-digital-track">
         <p class="nv-kicker">Digital Track</p>
-        <h2 class="nv-h2">Start free → choose your next step</h2>
+        <h2 class="nv-h2">One live product for today</h2>
         <p class="nv-copy nv-copy-narrow">
-          If you’re overwhelmed, start with the free reset. When you’re ready, pick the guide that matches your season.
+          I’m currently updating the NeuroVibe shop. For now, the Calm Reset Guide is the featured live product while more items are being added.
         </p>
 
         <div class="nv-actions">
-          <a class="nv-btn primary" href="#digital-resources">Get the Free Reset</a>
-          <a class="nv-btn ghost" href="start-here.html">Need the “what first?” path</a>
+          <a class="nv-btn primary" href="https://payhip.com/b/nd98g" target="_blank" rel="noopener">Get the Calm Reset Guide – $7</a>
+          <a class="nv-btn ghost" href="/guides.html">View Guides Page</a>
         </div>
 
-        <div class="nv-actions nv-actions-wrap">
-          <a class="nv-btn ghost" href="https://neurovibes.gumroad.com/l/cmuzy" target="_blank" rel="noopener">7-Page Calm Reset</a>
-          <a class="nv-btn ghost" href="https://neurovibes.gumroad.com/l/xtwoe" target="_blank" rel="noopener">CPS Survival Guide</a>
-          <a class="nv-btn ghost" href="https://neurovibes.gumroad.com/l/wobmjl" target="_blank" rel="noopener">Bundle & Save</a>
+        <div class="nv-shop-update">
+          <strong>Shop update:</strong> Additional products are being migrated into the new store. This temporary setup keeps checkout working while I finish updating everything.
         </div>
 
         <p class="nv-disclosure">
@@ -219,22 +208,44 @@
           <a href="#digital-resources">Digital Resources</a>
           <a href="#featured">Featured This Week</a>
           <a href="#neuro-support">Neurodivergent Support</a>
-          <a href="#calm-workspaces">Calm Workspaces</a>
-          <a href="#creator-tools">Creator Tools</a>
-          <a href="#mom-essentials">Mom Life Essentials</a>
-          <a href="#renter-home">Renter-Friendly Home</a>
-          <a href="#smart-savings">Smart Savings</a>
         </nav>
       </section>
 
       <section id="digital-resources" class="nv-section">
         <div class="nv-section-head">
           <h2>Digital Resources</h2>
-          <p class="nv-muted">Free + paid tools designed for real-life overwhelm — regulation support and CPS problem-solving.</p>
+          <p class="nv-muted">The Calm Reset Guide is the only live NeuroVibe digital product available right now while the rest of the shop is being updated.</p>
         </div>
 
         <div class="nv-grid">
           <article class="nv-card nv-featured-card">
+            <div class="nv-card-media">
+              <img src="/images/calm-reset-7page-cover.PNG" alt="Calm Reset Guide 7-Page Cover" loading="lazy" onerror="this.style.display='none';" />
+            </div>
+
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Available Now</span>
+              <h3 class="nv-card-title">Calm Reset Guide (7-Page)</h3>
+              <p class="nv-card-text">
+                A gentle, practical reset for overstimulation, burnout, and real-life overwhelm.
+                Simple support you can come back to again and again.
+              </p>
+
+              <ul class="nv-bullets">
+                <li>Simple routines that don’t require perfection</li>
+                <li>Support for overstimulation and burnout</li>
+                <li>Clear steps you can actually use</li>
+              </ul>
+
+              <div class="nv-btn-row">
+                <a class="nv-btn nv-deal-btn" href="https://payhip.com/b/nd98g" target="_blank" rel="noopener">Get the Calm Reset Guide – $7</a>
+              </div>
+
+              <p class="nv-card-note">Secure checkout • instant digital delivery</p>
+            </div>
+          </article>
+
+          <article class="nv-card nv-featured-card" style="display:none;">
             <div class="nv-card-media nv-logo-card">
               <div class="nv-coming-soon">
                 <div class="nv-coming-title">Free 1-Page Reset</div>
@@ -246,26 +257,12 @@
               <span class="nv-featured-badge">Free Resource</span>
               <h3 class="nv-card-title">NeuroVibe 1-Page Digital Reset</h3>
               <p class="nv-card-text">
-                A simple, nervous-system-friendly reset you can use when everything feels overwhelming —
-                fast, realistic, and designed for real life.
+                A simple, nervous-system-friendly reset you can use when everything feels overwhelming.
               </p>
-
-              <form class="nv-ml-inline"
-                    action="https://assets.mailerlite.com/jsonp/2150381/forms/180676720202876289/subscribe"
-                    method="post">
-                <label class="sr-only" for="nv-ml-email">Email</label>
-                <input id="nv-ml-email" type="email" name="fields[email]" placeholder="Email address" autocomplete="email" required>
-                <input type="hidden" name="ml-submit" value="1">
-                <input type="hidden" name="anticsrf" value="true">
-                <button type="submit" class="nv-btn">Send Me The Reset 💜</button>
-                <div class="nv-ml-status" aria-live="polite"></div>
-              </form>
-
-              <p class="nv-card-note">Delivered by email • Join the NeuroVibe list</p>
             </div>
           </article>
 
-          <article class="nv-card nv-featured-card nv-bundle-card">
+          <article class="nv-card nv-featured-card nv-bundle-card" style="display:none;">
             <div class="nv-card-media nv-logo-card">
               <div class="nv-coming-soon">
                 <div class="nv-coming-title">Bundle &amp; Save</div>
@@ -275,25 +272,7 @@
 
             <div class="nv-card-body">
               <span class="nv-featured-badge">Best Value</span>
-              <div class="nv-savings-chip">💚 Save $5 • Bundle $21</div>
-
               <h3 class="nv-card-title">CPS + Calm Reset Bundle</h3>
-
-              <ul class="nv-bullets">
-                <li><strong>7-Page Calm Reset</strong> ($7) — gentle structure for overwhelm</li>
-                <li><strong>CPS Survival Guide</strong> ($19) — collaboration over conflict</li>
-                <li>Instant download • yours forever</li>
-              </ul>
-
-              <p class="nv-bundle-price"><strong>Bundle price:</strong> $21 <span>(Save $5)</span></p>
-
-              <div class="nv-btn-row">
-                <a class="nv-btn nv-deal-btn" href="https://neurovibes.gumroad.com/l/wobmjl" target="_blank" rel="noopener">Get the Bundle ($21)</a>
-                <a class="nv-btn" href="https://neurovibes.gumroad.com/l/cmuzy" target="_blank" rel="noopener">7-Page Reset ($7)</a>
-                <a class="nv-btn" href="https://neurovibes.gumroad.com/l/xtwoe" target="_blank" rel="noopener">CPS Survival Guide ($19)</a>
-              </div>
-
-              <p class="nv-card-note">Gumroad checkout • secure payment • instant download</p>
             </div>
           </article>
         </div>
@@ -380,49 +359,47 @@
               <span class="nv-featured-badge">Growing Collection</span>
               <h3 class="nv-card-title">Executive Function & Regulation Tools</h3>
               <p class="nv-card-text">I’m building out this section intentionally — visual supports and regulation-friendly resources are on the way.</p>
-              <a class="nv-btn" href="links.html">Join the List for Updates</a>
+              <a class="nv-btn" href="/links.html">Join the List for Updates</a>
               <p class="nv-card-note">NeuroVibe digital tools + curated resources launching soon.</p>
             </div>
           </article>
         </div>
       </section>
-<section class="nv-ecosystem">
 
-  <h2>Explore the NeuroVibe Ecosystem</h2>
-  <p class="nv-ecosystem-sub">
-    Different paths for different needs. Explore the areas of NeuroVibe that support you most.
-  </p>
+      <section class="nv-ecosystem">
+        <h2>Explore the NeuroVibe Ecosystem</h2>
+        <p class="nv-ecosystem-sub">
+          Different paths for different needs. Explore the areas of NeuroVibe that support you most.
+        </p>
 
-  <div class="nv-ecosystem-grid">
+        <div class="nv-ecosystem-grid">
+          <a href="/guides.html" class="nv-eco-card">
+            <h3>📚 Guides</h3>
+            <p>Digital guides for nervous system support and real-life overwhelm.</p>
+          </a>
 
-    <a href="/guides.html" class="nv-eco-card">
-      <h3>📚 Guides</h3>
-      <p>Digital guides for nervous system support and real-life overwhelm.</p>
-    </a>
+          <a href="/wellco.html" class="nv-eco-card">
+            <h3>🌿 WellCo</h3>
+            <p>Wellness routines and products that support energy and balance.</p>
+          </a>
 
-    <a href="/wellco.html" class="nv-eco-card">
-      <h3>🌿 WellCo</h3>
-      <p>Wellness routines and products that support energy and balance.</p>
-    </a>
+          <a href="/beautyhub.html" class="nv-eco-card">
+            <h3>✨ Beauty Hub</h3>
+            <p>Self-care favorites, beauty finds, and curated nail collections.</p>
+          </a>
 
-    <a href="/beautyhub.html" class="nv-eco-card">
-      <h3>✨ Beauty Hub</h3>
-      <p>Self-care favorites, beauty finds, and curated nail collections.</p>
-    </a>
+          <a href="/shop.html" class="nv-eco-card">
+            <h3>🛍️ Shop</h3>
+            <p>Curated tools and products that support calm homes and routines.</p>
+          </a>
 
-    <a href="/shop.html" class="nv-eco-card">
-      <h3>🛍️ Shop</h3>
-      <p>Curated tools and products that support calm homes and routines.</p>
-    </a>
+          <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
+            <h3>🌙 Publishing</h3>
+            <p>Stories and books created through NeuroVibe Publishing.</p>
+          </a>
+        </div>
+      </section>
 
-    <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
-      <h3>🌙 Publishing</h3>
-      <p>Stories and books created through NeuroVibe Publishing.</p>
-    </a>
-
-  </div>
-
-</section>
       <footer class="nv-shop-footer glass">
         <div class="nv-container nv-footer-inner">
           <p class="nv-footer-text">
@@ -432,9 +409,9 @@
             Disclosure: Some links on this page are affiliate links. If you buy through them, I may earn a commission at no extra cost to you.
           </p>
           <div class="footer-nav" aria-label="Footer navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
           </div>
         </div>
       </footer>
@@ -448,12 +425,14 @@
 
     if (toggle && nav) {
       toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        const isOpen = nav.classList.toggle("active");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
 
       document.addEventListener("click", (e) => {
         if (!toggle.contains(e.target) && !nav.contains(e.target)) {
           nav.classList.remove("active");
+          toggle.setAttribute("aria-expanded", "false");
         }
       });
     }

@@ -8,7 +8,7 @@
 
 <meta
 name="description"
-content="Browse NeuroVibe guides and toolkits for regulation, CPS strategies, and overwhelmed-parent support. Start with a free reset, then choose your next step."
+content="Browse NeuroVibe guides and toolkits for regulation, CPS strategies, and overwhelmed-parent support. Start with the Calm Reset Guide while more products are being added."
 />
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -46,11 +46,9 @@ body.nv-y2k.guides-page{
 margin:0;
 font-family:"Poppins",sans-serif;
 color:var(--nv-ink);
-
 background:
 radial-gradient(circle at top left, rgba(255,255,255,0.45), transparent 30%),
 linear-gradient(135deg,#6b5cff 0%, #c6a8ff 36%, #ffb6e1 70%, #7ee6ff 100%);
-
 min-height:100vh;
 }
 
@@ -59,11 +57,9 @@ position:sticky;
 top:0;
 z-index:999;
 width:100%;
-
 background:rgba(255,255,255,0.78);
 backdrop-filter:blur(16px);
 -webkit-backdrop-filter:blur(16px);
-
 border-bottom:1px solid rgba(255,255,255,0.45);
 box-shadow:0 10px 30px rgba(75,46,131,0.10);
 }
@@ -72,11 +68,9 @@ box-shadow:0 10px 30px rgba(75,46,131,0.10);
 max-width:1200px;
 margin:0 auto;
 padding:16px 18px;
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
 position:relative;
 }
 
@@ -91,27 +85,19 @@ text-decoration:none;
 .nv-hamburger{
 width:52px;
 height:52px;
-
 border:1px solid rgba(255,255,255,0.55);
 border-radius:16px;
-
 background:rgba(255,255,255,0.36);
 backdrop-filter:blur(10px);
 -webkit-backdrop-filter:blur(10px);
-
 display:flex;
 align-items:center;
 justify-content:center;
-
 font-size:28px;
 line-height:1;
-
 color:var(--nv-purple-deep);
-
 cursor:pointer;
-
 box-shadow:0 8px 20px rgba(75,46,131,0.12);
-
 transition:transform .2s ease, box-shadow .2s ease;
 }
 
@@ -122,25 +108,17 @@ box-shadow:0 12px 24px rgba(75,46,131,0.16);
 
 .nv-nav-menu{
 display:none;
-
 position:absolute;
 top:calc(100% + 10px);
 right:18px;
-
 min-width:255px;
-
 background:rgba(255,255,255,0.97);
-
 border:1px solid rgba(255,255,255,0.65);
 border-radius:20px;
-
 padding:14px;
-
 box-shadow:0 18px 40px rgba(75,46,131,0.16);
-
 backdrop-filter:blur(14px);
 -webkit-backdrop-filter:blur(14px);
-
 flex-direction:column;
 gap:4px;
 }
@@ -151,17 +129,12 @@ display:flex;
 
 .nv-nav-menu a{
 display:block;
-
 padding:12px 14px;
-
 border-radius:12px;
-
 text-decoration:none;
 font-size:1rem;
 font-weight:600;
-
 color:var(--nv-ink);
-
 transition:background .2s ease, color .2s ease;
 }
 
@@ -179,71 +152,51 @@ padding:26px 16px 0;
 .nv-page-header-img{
 width:100%;
 display:block;
-
 border-radius:24px;
-
 box-shadow:0 18px 40px rgba(75,46,131,0.15);
-
 margin:0 0 18px;
 }
 
 .nv-guides-hero-card{
-
 margin-top:18px;
-
 border-radius:32px;
 padding:34px 28px;
-
 background:linear-gradient(
 135deg,
 rgba(255,255,255,0.30),
 rgba(255,255,255,0.18)
 );
-
 border:1px solid rgba(255,255,255,0.42);
-
 box-shadow:0 22px 50px rgba(75,46,131,0.16);
-
 backdrop-filter:blur(12px);
 -webkit-backdrop-filter:blur(12px);
-
 overflow:hidden;
 position:relative;
 }
 
 .nv-kicker{
 margin:0 0 10px;
-
 font-size:.88rem;
 font-weight:700;
-
 letter-spacing:.08em;
 text-transform:uppercase;
-
 color:var(--nv-purple-deep);
 }
 
 .nv-guides-hero-card h1{
 margin:0 0 14px;
-
 font-size:clamp(2.2rem,5vw,4rem);
-
 line-height:1.02;
 letter-spacing:-0.04em;
-
 color:var(--nv-ink);
-
 max-width:780px;
 }
 
 .nv-guides-hero-card .nv-lead{
 max-width:760px;
-
 font-size:1.1rem;
 line-height:1.75;
-
 margin:0 0 22px;
-
 color:rgba(16,16,24,0.95);
 }
 
@@ -251,23 +204,18 @@ color:rgba(16,16,24,0.95);
 display:flex;
 flex-wrap:wrap;
 gap:12px;
-}.nv-btn{
+}
+
+.nv-btn{
 display:inline-flex;
 align-items:center;
 justify-content:center;
-
 min-height:54px;
-
 padding:14px 24px;
-
 border-radius:999px;
-
 font-weight:700;
-
 text-decoration:none;
-
 transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
-
 border:none;
 }
 
@@ -277,19 +225,14 @@ transform:translateY(-2px);
 
 .nv-btn.primary{
 color:#fff;
-
 background:linear-gradient(135deg,#6b5cff 0%, #7ee6ff 100%);
-
 box-shadow:0 14px 30px rgba(107,92,255,0.26);
 }
 
 .nv-btn.ghost{
 color:var(--nv-purple-deep);
-
 background:rgba(255,255,255,0.86);
-
 border:1px solid rgba(198,168,255,0.55);
-
 box-shadow:0 10px 24px rgba(75,46,131,0.08);
 }
 
@@ -301,80 +244,55 @@ padding:28px 16px 54px;
 
 .nv-section{
 margin-top:28px;
-
 background:var(--nv-glass);
-
 border:1px solid var(--nv-border);
-
 border-radius:30px;
-
 padding:26px;
-
 box-shadow:var(--nv-shadow);
-
 backdrop-filter:blur(10px);
 -webkit-backdrop-filter:blur(10px);
 }
 
 .nv-section-head{
 text-align:center;
-
 max-width:760px;
-
 margin:0 auto 20px;
 }
 
 .nv-h2{
 margin:0 0 10px;
-
 font-size:clamp(1.7rem,3vw,2.4rem);
-
 color:var(--nv-ink);
-
 letter-spacing:-0.03em;
 }
 
 .nv-sub2{
 margin:0;
-
 line-height:1.7;
-
 font-size:1.02rem;
-
 color:rgba(16,16,24,0.92);
 }
 
 .nv-grid{
 display:grid;
-
 grid-template-columns:repeat(2,minmax(0,1fr));
-
 gap:18px;
 }
 
 .nv-card{
 display:flex;
-
 flex-direction:column;
-
 background:var(--nv-glass-strong);
-
 border:1px solid rgba(255,255,255,0.72);
-
 border-radius:24px;
-
 overflow:hidden;
-
 box-shadow:0 14px 30px rgba(75,46,131,0.12);
 }
 
 .nv-card.featured{
 grid-column:1 / -1;
-
 display:grid;
-
 grid-template-columns:280px 1fr;
-
 align-items:stretch;
 }
 
@@ -384,9 +302,7 @@ background:linear-gradient(
 rgba(107,92,255,0.14),
 rgba(255,255,255,0.35)
 );
-
 padding:18px;
-
 display:flex;
 align-items:center;
 justify-content:center;
@@ -395,13 +311,9 @@ justify-content:center;
 .nv-card-media img{
 width:100%;
 max-width:240px;
-
 border-radius:18px;
-
 display:block;
-
 box-shadow:0 14px 28px rgba(75,46,131,0.16);
-
 object-fit:cover;
 }
 
@@ -411,48 +323,33 @@ padding:24px;
 
 .nv-tag{
 display:inline-block;
-
 margin-bottom:12px;
-
 padding:8px 12px;
-
 border-radius:999px;
-
 background:rgba(107,92,255,0.12);
-
 color:var(--nv-purple-deep);
-
 font-size:.82rem;
 font-weight:700;
-
 letter-spacing:.03em;
 }
 
 .nv-h3{
 margin:0 0 10px;
-
 font-size:1.45rem;
-
 line-height:1.2;
-
 color:var(--nv-purple-deep);
-
 letter-spacing:-0.02em;
 }
 
 .nv-copy{
 margin:0 0 14px;
-
 line-height:1.75;
-
 color:rgba(16,16,24,0.95);
 }
 
 .nv-bullets{
 margin:0 0 18px 18px;
-
 padding:0;
-
 line-height:1.75;
 }
 
@@ -469,41 +366,29 @@ align-items:center;
 
 .nv-note-inline{
 font-size:.95rem;
-
 color:var(--nv-purple-deep);
-
 font-weight:600;
 }
 
 .nv-faq{
 max-width:860px;
-
 margin:0 auto;
-
 display:grid;
-
 gap:12px;
 }
 
 .nv-faq details{
 background:rgba(255,255,255,0.86);
-
 border:1px solid rgba(255,255,255,0.72);
-
 border-radius:20px;
-
 padding:18px 20px;
-
 box-shadow:0 10px 24px rgba(75,46,131,0.08);
 }
 
 .nv-faq summary{
 cursor:pointer;
-
 font-weight:700;
-
 color:var(--nv-purple-deep);
-
 list-style:none;
 }
 
@@ -513,6 +398,81 @@ display:none;
 
 .nv-faq p{
 margin-top:12px;
+}
+
+.nv-ecosystem{
+margin-top:28px;
+background:var(--nv-glass);
+border:1px solid var(--nv-border);
+border-radius:30px;
+padding:26px;
+box-shadow:var(--nv-shadow);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+}
+
+.nv-ecosystem h2{
+margin:0 0 10px;
+text-align:center;
+font-size:clamp(1.7rem,3vw,2.4rem);
+letter-spacing:-0.03em;
+}
+
+.nv-ecosystem-sub{
+max-width:760px;
+margin:0 auto 20px;
+text-align:center;
+line-height:1.7;
+color:rgba(16,16,24,0.92);
+}
+
+.nv-ecosystem-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:18px;
+}
+
+.nv-eco-card{
+display:block;
+text-decoration:none;
+color:var(--nv-ink);
+background:rgba(255,255,255,0.86);
+border:1px solid rgba(255,255,255,0.72);
+border-radius:22px;
+padding:20px;
+box-shadow:0 10px 24px rgba(75,46,131,0.08);
+transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.nv-eco-card:hover{
+transform:translateY(-3px);
+box-shadow:0 16px 30px rgba(75,46,131,0.12);
+}
+
+.nv-eco-card h3{
+margin:0 0 8px;
+color:var(--nv-purple-deep);
+}
+
+.nv-eco-card p{
+margin:0;
+line-height:1.65;
+}
+
+.footer{
+text-align:center;
+padding:28px 16px 40px;
+color:var(--nv-ink);
+font-weight:600;
+}
+
+@media (max-width:860px){
+.nv-card.featured{
+grid-template-columns:1fr;
+}
+.nv-grid{
+grid-template-columns:1fr;
+}
 }
 
 </style>
@@ -537,7 +497,6 @@ aria-controls="nv-nav"
 </button>
 
 <nav class="nv-nav-menu" id="nv-nav">
-
 <a href="/index.html">Home</a>
 <a href="/start-here.html">Start Here</a>
 <a href="/guides.html">Guides</a>
@@ -548,8 +507,8 @@ aria-controls="nv-nav"
 <a href="/links.html">Resources</a>
 <a href="/about.html">About</a>
 <a href="/contact.html">Contact</a>
-
 </nav>
+
 </div>
 </header>
 
@@ -569,18 +528,23 @@ loading="eager"
 <h1>You don’t need more pressure. You need regulation.</h1>
 
 <p class="nv-lead">
-Start with a simple nervous system reset, then choose the support that fits your next step.
-Gentle tools for overwhelmed moms, neurodivergent families, and real life.
+Start with a simple nervous system reset and come back later for more.
+I’m currently updating the store, so only the Calm Reset Guide is live right now.
 </p>
 
 <div class="nv-guides-hero-actions">
 
-<a class="nv-btn primary" href="#free">
-Start Free
+<a
+class="nv-btn primary"
+target="_blank"
+rel="noopener"
+href="https://payhip.com/b/nd98g"
+>
+Get the Calm Reset Guide – $7
 </a>
 
-<a class="nv-btn ghost" href="#bundle">
-See Best Value Bundle
+<a class="nv-btn ghost" href="#available-now">
+Available Now
 </a>
 
 </div>
@@ -589,7 +553,7 @@ See Best Value Bundle
 
 <main class="nv-wrap">
 
-<section id="free" class="nv-section">
+<section id="free" class="nv-section" style="display:none;">
 
 <div class="nv-section-head">
 
@@ -603,6 +567,7 @@ Start with one grounded reset and give your nervous system something gentler to 
 </p>
 
 </div>
+
 <div class="nv-grid">
 
 <article class="nv-card featured">
@@ -643,7 +608,7 @@ calming, and simple enough to use when your brain is fried.
 class="nv-btn primary"
 target="_blank"
 rel="noopener"
-href="https://store.neurovibe.site/l/lpeduq"
+href="https://payhip.com/b/nd98g"
 >
 Download Free
 </a>
@@ -658,7 +623,7 @@ Next: Best Value Bundle
 </div>
 </section>
 
-<section id="bundle" class="nv-section">
+<section id="bundle" class="nv-section" style="display:none;">
 
 <div class="nv-section-head">
 
@@ -714,7 +679,7 @@ Built for real-life overwhelm — quick to use and easy to return to.
 class="nv-btn primary"
 target="_blank"
 rel="noopener"
-href="https://store.neurovibe.site/l/uobjgj"
+href="https://payhip.com/b/nd98g"
 >
 Get the Parent Support Bundle
 </a>
@@ -729,7 +694,72 @@ Compare Other Options
 </div>
 </section>
 
-<section id="paid" class="nv-section">
+<section id="available-now" class="nv-section">
+
+<div class="nv-section-head">
+
+<h2 class="nv-h2">
+Available now
+</h2>
+
+<p class="nv-sub2">
+The shop is currently being updated while more guides are added.
+For now, the Calm Reset Guide is the only live product.
+</p>
+
+</div>
+
+<div class="nv-grid">
+
+<article class="nv-card featured">
+
+<div class="nv-card-media">
+<img
+src="/images/calm-reset-7page-cover.PNG"
+alt="Calm Reset Guide 7-Page Cover"
+loading="lazy"
+onerror="this.style.display='none';"
+/>
+</div>
+
+<div class="nv-card-body">
+
+<div class="nv-tag">$7 • AVAILABLE NOW</div>
+
+<h3 class="nv-h3">
+Calm Reset Guide (7-Page)
+</h3>
+
+<p class="nv-copy">
+A deeper reset with gentle shifts you can actually repeat daily —
+for a more regulated home.
+</p>
+
+<ul class="nv-bullets">
+<li>Simple routines that don’t require perfection</li>
+<li>Support for overstimulation and burnout</li>
+<li>Clear, doable steps</li>
+</ul>
+
+<div class="nv-actions">
+
+<a
+class="nv-btn primary"
+target="_blank"
+rel="noopener"
+href="https://payhip.com/b/nd98g"
+>
+Get the 7-Page Guide
+</a>
+
+</div>
+</div>
+</article>
+
+</div>
+</section>
+
+<section id="paid" class="nv-section" style="display:none;">
 
 <div class="nv-section-head">
 
@@ -782,7 +812,7 @@ for a more regulated home.
 class="nv-btn primary"
 target="_blank"
 rel="noopener"
-href="https://store.neurovibe.site/l/cmuzy"
+href="https://payhip.com/b/nd98g"
 >
 Get the 7-Page Guide
 </a>
@@ -951,16 +981,14 @@ Get the Bundle
 <details>
 <summary>What should I start with?</summary>
 <p class="nv-copy">
-Start with the free Reset Guide first. If you already know you
-want fuller support, the Parent Support Bundle is the best value.
+Start with the Calm Reset Guide. More NeuroVibe products are being added soon.
 </p>
 </details>
 
 <details>
 <summary>Do I buy on your website or through the NeuroVibe Store?</summary>
 <p class="nv-copy">
-Your purchase is securely delivered through the NeuroVibe Store
-powered by Gumroad.
+Your purchase is securely delivered through the NeuroVibe Store. While the shop is being updated, only selected products may be live.
 </p>
 </details>
 
@@ -1017,37 +1045,22 @@ document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 <script>
-
 const toggle = document.getElementById("nv-menu-toggle");
 const nav = document.getElementById("nv-nav");
 
 if(toggle && nav){
+  toggle.addEventListener("click", () => {
+    const isOpen = nav.classList.toggle("active");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
 
-toggle.addEventListener("click",()=>{
-
-const isOpen = nav.classList.toggle("active");
-
-toggle.setAttribute(
-"aria-expanded",
-isOpen ? "true" : "false"
-);
-
-});
-
-document.addEventListener("click",(e)=>{
-
-if(!toggle.contains(e.target) && !nav.contains(e.target)){
-
-nav.classList.remove("active");
-
-toggle.setAttribute("aria-expanded","false");
-
+  document.addEventListener("click", (e) => {
+    if(!toggle.contains(e.target) && !nav.contains(e.target)){
+      nav.classList.remove("active");
+      toggle.setAttribute("aria-expanded","false");
+    }
+  });
 }
-
-});
-
-}
-
 </script>
 
 </body>

@@ -408,6 +408,61 @@
       .nv-section-box{
         padding: 20px;
       }
+    }    .nv-page-header-img{
+      width:100%;
+      display:block;
+      border-radius:24px;
+      box-shadow:0 18px 40px rgba(75,46,131,0.15);
+      margin:0 0 18px;
+    }
+
+    .nv-ecosystem{
+      max-width:1000px;
+      margin:28px auto 0;
+      padding:30px;
+      background:rgba(255,255,255,0.75);
+      border-radius:24px;
+      box-shadow:0 18px 40px rgba(75,46,131,0.12);
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.55);
+    }
+
+    .nv-ecosystem-sub{
+      max-width:600px;
+      margin:0 auto 24px;
+      line-height:1.7;
+    }
+
+    .nv-ecosystem-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .nv-eco-card{
+      background:white;
+      padding:20px;
+      border-radius:18px;
+      text-decoration:none;
+      color:#101018;
+      box-shadow:0 10px 20px rgba(75,46,131,0.08);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .nv-eco-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 28px rgba(75,46,131,0.12);
+    }
+
+    .nv-eco-card h3{
+      margin:0 0 8px;
+      color:var(--nv-purple-deep);
+    }
+
+    .nv-eco-card p{
+      margin:0;
+      line-height:1.65;
     }
   </style>
 </head>

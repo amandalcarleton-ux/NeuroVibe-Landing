@@ -12,113 +12,126 @@
   />
 
   <link rel="stylesheet" href="/style.css?v=101" />
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
   <style>
     .nv-header{
-      position:sticky;
-      top:0;
-      background:white;
-      z-index:999;
-      border-bottom:1px solid rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 999;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
     }
 
     .nv-page-hero{
-      padding-top:80px;
+      padding-top: 80px;
     }
 
     .nv-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
-      margin-top:30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 24px;
+      margin-top: 30px;
     }
 
     .nv-preview-card{
-      transition:transform .25s ease, box-shadow .25s ease;
+      transition: transform .25s ease, box-shadow .25s ease;
     }
 
     .nv-preview-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 20px 45px rgba(0,0,0,0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.15);
     }
 
     .nv-publisher-label{
-      text-align:center;
-      font-size:18px;
-      font-weight:600;
-      color:#6b5cff;
-      margin:18px 0 12px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      color: #6b5cff;
+      margin: 18px 0 12px;
     }
 
     .nv-presents{
-      font-size:14px;
-      font-weight:400;
-      opacity:0.7;
+      font-size: 14px;
+      font-weight: 400;
+      opacity: 0.7;
     }
 
     .nv-nav-container{
-      max-width:1100px;
-      margin:auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px 20px;
-      position:relative;
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      position: relative;
     }
 
     .rotm-cover{
-      width:100%;
-      max-width:420px;
-      border-radius:24px;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 24px;
       box-shadow:
         0 25px 60px rgba(0,0,0,0.25),
         0 0 80px rgba(198,168,255,0.35);
+      display: block;
+      margin: 24px auto 0;
     }
 
     .nv-logo{
-      font-weight:700;
-      font-size:20px;
-      color:#4b2e83;
-      text-decoration:none;
+      font-weight: 700;
+      font-size: 20px;
+      color: #4b2e83;
+      text-decoration: none;
     }
 
     .nv-hamburger{
-      font-size:26px;
-      background:none;
-      border:none;
-      cursor:pointer;
-      display:block;
+      font-size: 26px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: block;
     }
 
     .nv-nav-menu{
-      display:none;
+      display: none;
     }
 
     .nv-nav-menu a{
-      text-decoration:none;
-      color:#333;
-      font-weight:500;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
     }
 
     .nv-nav-menu.active{
-      display:flex;
-      flex-direction:column;
-      position:absolute;
-      top:60px;
-      right:20px;
-      background:white;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 10px 25px rgba(0,0,0,0.15);
-      gap:16px;
-      min-width:220px;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      gap: 16px;
+      min-width: 220px;
+      z-index: 1000;
     }
 
     .nv-preview-card img{
-      width:100%;
-      border-radius:18px;
-      display:block;
-      margin-bottom:12px;
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .nv-cta{
+      margin-top: 18px;
+    }
+
+    .nv-cta .nv-btn{
+      display: inline-block;
     }
   </style>
 </head>
@@ -129,7 +142,14 @@
     <div class="nv-nav-container">
       <a href="/index.html" class="nv-logo">NeuroVibe</a>
 
-      <button class="nv-hamburger" id="nv-menu-toggle" type="button" aria-label="Open menu">
+      <button
+        class="nv-hamburger"
+        id="nv-menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nv-nav"
+      >
         ☰
       </button>
 
@@ -140,7 +160,7 @@
         <a href="/beautyhub.html">Beauty Hub</a>
         <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
         <a href="/links.html">Resources</a>
-        <a href="/shop.html">Shop</a>
+        <a href="https://store.neurovibe.site" target="_blank" rel="noopener">Shop</a>
       </nav>
     </div>
   </header>
@@ -269,12 +289,18 @@
         calm, and support.
       </p>
 
-<div class="nv-cta">
-  <a href="https://a.co/d/00yAaJmQ" target="_blank" class="nv-btn">
-    Buy The Rhythm of the Moon
-  </a>
-</div>
-</section>
+      <div class="nv-cta">
+        <a
+          href="https://a.co/d/00yAaJmQ"
+          target="_blank"
+          rel="noopener"
+          class="nv-btn"
+        >
+          Buy The Rhythm of the Moon
+        </a>
+      </div>
+    </div>
+  </section>
 
   <script>
     const toggle = document.getElementById("nv-menu-toggle");
@@ -282,7 +308,15 @@
 
     if (toggle && nav) {
       toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        const isOpen = nav.classList.toggle("active");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+          nav.classList.remove("active");
+          toggle.setAttribute("aria-expanded", "false");
+        }
       });
     }
   </script>

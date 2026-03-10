@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css?v=101" />
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
@@ -268,7 +268,14 @@
     <div class="nv-nav-container">
       <a href="/index.html" class="nv-logo">NeuroVibe</a>
 
-      <button class="nv-hamburger" id="nv-menu-toggle" type="button" aria-label="Open menu">
+      <button
+        class="nv-hamburger"
+        id="nv-menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nv-nav"
+      >
         ☰
       </button>
 
@@ -276,10 +283,10 @@
         <a href="/index.html">Home</a>
         <a href="/start-here.html">Start Here</a>
         <a href="/guides.html">Guides</a>
-        <a href="/shop.html">Shop</a>
+        <a href="https://store.neurovibe.site" target="_blank" rel="noopener">Shop</a>
         <a href="/beautyhub.html">Beauty Hub</a>
         <a href="/wellco.html">WellCo</a>
-        <a href="/ROTM/">🌙 Rhythm of the Moon</a>
+        <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
         <a href="/links.html">Resources</a>
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact</a>
@@ -298,7 +305,7 @@
 
               <div class="hero-logo">
                 <img
-                  src="images/butterfly-aura.PNG"
+                  src="/images/butterfly-aura.PNG"
                   alt="NeuroVibe butterfly"
                   class="site-logo"
                   loading="eager"
@@ -314,14 +321,14 @@
               </p>
 
               <div class="nv-actions">
-                <a class="nv-btn primary" href="start-here.html">Start here (free calm tools)</a>
-                <a class="nv-btn ghost" href="links.html">Browse resources</a>
+                <a class="nv-btn primary" href="/start-here.html">Start here (free calm tools)</a>
+                <a class="nv-btn ghost" href="/links.html">Browse resources</a>
               </div>
 
               <div class="nv-email">
                 <div class="nv-reset-section">
                   <img
-                    src="images/calm-reset-button.PNG"
+                    src="/images/calm-reset-button.PNG"
                     alt="Build Calm in 5 Minutes"
                     class="nv-reset-image"
                   />
@@ -353,10 +360,13 @@
                     A gentle story about growing up, emotions, and understanding your body —
                     created to support meaningful conversations with kids and families.
                   </p>
-<div class="nv-actions" style="justify-content:center; margin-top:12px;">
-  <a href="/ROTM/index.html" class="nv-btn primary">View the Book</a>
-  <a href="https://a.co/d/00yAaJmQ" target="_blank" rel="noopener" class="nv-btn ghost">Buy on Amazon</a>
-</div>
+
+                  <div class="nv-actions" style="justify-content:center; margin-top:12px;">
+                    <a href="/ROTM/rhythm-of-the-moon.html" class="nv-btn primary">View the Book</a>
+                    <a href="https://a.co/d/00yAaJmQ" target="_blank" rel="noopener" class="nv-btn ghost">Buy on Amazon</a>
+                  </div>
+                </div>
+              </section>
 
               <section class="nv-wellco-highlight">
                 <h2>Support Your Nervous System From the Inside Out 🌿</h2>
@@ -372,7 +382,7 @@
                   nervous system education and family routines.
                 </p>
 
-                <a href="wellco.html" class="nv-wellco-btn">
+                <a href="/wellco.html" class="nv-wellco-btn">
                   Explore NeuroVibe WellCo ✨
                 </a>
               </section>
@@ -386,7 +396,7 @@
 
           <div class="hero-right">
             <img
-              src="images/CPS-Guide.PNG"
+              src="/images/CPS-Guide.PNG"
               alt="Navigating CPS guide cover"
               class="nv-guide-image"
               loading="lazy"
@@ -394,15 +404,13 @@
 
             <div class="hero-actions" style="margin-top:14px;">
               <a
-                href="https://neurovibes.gumroad.com/l/xtwoe"
-                target="_blank"
-                rel="noopener"
+                href="/guides.html"
                 class="nv-btn primary"
               >
                 Get the CPS Parent Support Guide 📔
               </a>
 
-              <a href="shop.html" class="nv-btn ghost">
+              <a href="https://store.neurovibe.site" target="_blank" rel="noopener" class="nv-btn ghost">
                 See everything in the shop
               </a>
             </div>
@@ -419,7 +427,7 @@
         <p class="nv-copy">A quick calm tool for overwhelmed moments — delivered by email.</p>
 
         <div class="nv-actions" style="justify-content:center;">
-          <a class="nv-btn primary" href="start-here.html">Get the free reset</a>
+          <a class="nv-btn primary" href="/start-here.html">Get the free reset</a>
           <a
             class="nv-btn ghost"
             href="https://www.facebook.com/share/g/1Azf7DbaxY/?mibextid=wwXIfr"
@@ -452,12 +460,12 @@
               <p>Self-care favorites, beauty finds, and curated nail collections.</p>
             </a>
 
-            <a href="/shop.html" class="nv-eco-card">
+            <a href="https://store.neurovibe.site" target="_blank" rel="noopener" class="nv-eco-card">
               <h3>🛍️ Shop</h3>
               <p>Curated tools and products that support calm homes and routines.</p>
             </a>
 
-            <a href="/ROTM/" class="nv-eco-card">
+            <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
               <h3>🌙 Publishing</h3>
               <p>Stories and books created through NeuroVibe Publishing.</p>
             </a>
@@ -482,12 +490,14 @@
 
     if (toggle && nav) {
       toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        const isOpen = nav.classList.toggle("active");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
 
       document.addEventListener("click", (e) => {
         if (!toggle.contains(e.target) && !nav.contains(e.target)) {
           nav.classList.remove("active");
+          toggle.setAttribute("aria-expanded", "false");
         }
       });
     }

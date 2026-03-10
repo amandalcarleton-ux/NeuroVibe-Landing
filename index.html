@@ -4,26 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Primary SEO -->
   <title>NeuroVibe | Neurodivergent Parenting, Executive Function &amp; Family Wellness</title>
   <meta name="description" content="NeuroVibe supports neurodivergent families by building executive functioning skills and promoting health and wellness. Community, resources, and coaching for parents and caregivers." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://neurovibe.site/" />
 
-  <!-- Social sharing (Open Graph) -->
   <meta property="og:title" content="NeuroVibe | Neurodivergent Parenting &amp; Family Wellness" />
   <meta property="og:description" content="Transforming lives through neurodivergent parenting skills, executive functioning support, and wellness initiatives." />
   <meta property="og:url" content="https://neurovibe.site/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://neurovibe.site/og-image.jpg" />
 
-  <!-- Twitter/X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NeuroVibe | Neurodivergent Parenting &amp; Family Wellness" />
   <meta name="twitter:description" content="Supporting families through executive functioning skills and wellness initiatives." />
   <meta name="twitter:image" content="https://neurovibe.site/og-image.jpg" />
 
-  <!-- Google Analytics (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N6SZXHDX0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,17 +28,14 @@
     gtag('config', 'G-5N6SZXHDX0');
   </script>
 
-  <!-- Fonts + Site CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Favicons -->
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
-  <!-- MailerLite Universal -->
   <script>
     (function(w,d,e,u,f,l,n){
       w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);};
@@ -53,238 +46,219 @@
   </script>
 
   <style>
- .nv-header{
-  position: sticky;
-  top: 0;
-  z-index: 3000;
-  width: 100%;
-  background: rgba(255,255,255,0.72);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255,255,255,0.45);
-  box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
-  overflow: visible;
-}
+    .nv-header{
+      position: sticky;
+      top: 0;
+      z-index: 3000;
+      width: 100%;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.45);
+      box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
+      overflow: visible;
+    }
 
-.nv-nav-container{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  overflow: visible;
-}
+    .nv-nav-container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: visible;
+    }
 
-.nv-logo{
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  color: #4b2e83;
-  text-decoration: none;
-}
+    .nv-logo{
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #4b2e83;
+      text-decoration: none;
+    }
 
-.nv-hamburger{
-  width: 52px;
-  height: 52px;
-  border: 1px solid rgba(255,255,255,0.55);
-  border-radius: 16px;
-  background: rgba(255,255,255,0.34);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  line-height: 1;
-  color: #4b2e83;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    .nv-hamburger{
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.34);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      line-height: 1;
+      color: #4b2e83;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-.nv-hamburger:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
-}
+    .nv-hamburger:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
+    }
 
-.nv-nav-menu{
-  display: none;
-  position: absolute;
-  top: calc(100% + 10px);
-  right: 18px;
-  min-width: 240px;
-  background: rgba(255,255,255,0.96);
-  border: 1px solid rgba(255,255,255,0.65);
-  border-radius: 20px;
-  padding: 14px;
-  box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  flex-direction: column;
-  gap: 4px;
-  z-index: 2000;
-}
+    .nv-nav-menu{
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 18px;
+      min-width: 240px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 20px;
+      padding: 14px;
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      flex-direction: column;
+      gap: 4px;
+      z-index: 2000;
+    }
 
-.nv-nav-menu.active{
-  display: flex !important;
-}
+    .nv-nav-menu.active{
+      display: flex !important;
+    }
 
-.nv-nav-menu a{
-  display: block;
-  padding: 12px 14px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #101018;
-  background: transparent;
-  transition: background 0.2s ease, color 0.2s ease;
-}
+    .nv-nav-menu a{
+      display: block;
+      padding: 12px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #101018;
+      background: transparent;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
 
-.nv-nav-menu a:hover{
-  background: rgba(198,168,255,0.18);
-  color: #4b2e83;
-}.ml-form-popupOverlay,
-.ml-form-popupWrapper,
-.ml-form-embedContainer,
-.ml-form-popupBody{
-  z-index: 99999 !important;
-}
-.ml-form-popupBody{
-  max-height: 90vh !important;
-  overflow-y: auto !important;
-}
+    .nv-nav-menu a:hover{
+      background: rgba(198,168,255,0.18);
+      color: #4b2e83;
+    }
 
-body.ml-form-popup-open{
-  overflow: hidden;
-}.nv-popup-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 16px auto 0;
-  padding: 15px 28px;
-  border-radius: 999px;
-  border: 2px solid rgba(255,255,255,0.45);
-  background: linear-gradient(135deg, #6b5cff, #7ee6ff, #ffb6e1);
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.01em;
-  box-shadow: 0 14px 34px rgba(75, 46, 131, 0.25);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-}
+    .ml-form-popupOverlay,
+    .ml-form-popupWrapper,
+    .ml-form-embedContainer,
+    .ml-form-popupBody{
+      z-index: 99999 !important;
+    }
 
-.nv-popup-btn:hover{
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 18px 42px rgba(75, 46, 131, 0.32);
-  filter: saturate(1.05);
-}.nv-reset-section{
-  text-align: center;
-  margin: 26px auto 40px;
-  max-width: 560px;
-  padding: 0 16px;
-}
+    .ml-form-popupBody{
+      max-height: 90vh !important;
+      overflow-y: auto !important;
+    }
 
-.nv-reset-image{
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto 18px;
-  display: block;
-  border-radius: 22px;
-  box-shadow: 0 12px 40px rgba(60,30,120,.25);
-}
+    body.ml-form-popup-open{
+      overflow: hidden;
+    }
 
-.nv-reset-popup-btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: min(100%, 360px);
-  min-height: 54px;
-  padding: 14px 24px;
-  margin: 0 auto;
+    .nv-reset-section{
+      text-align: center;
+      margin: 26px auto 40px;
+      max-width: 560px;
+      padding: 0 16px;
+    }
 
-  appearance: none;
-  -webkit-appearance: none;
-  border: 2px solid rgba(255,255,255,0.38);
-  border-radius: 999px;
-  background: linear-gradient(135deg, #6b5cff, #7ee6ff, #ffb6e1);
-  color: #ffffff;
+    .nv-reset-image{
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto 18px;
+      display: block;
+      border-radius: 22px;
+      box-shadow: 0 12px 40px rgba(60,30,120,.25);
+    }
 
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.2;
-  text-align: center;
+    .nv-reset-popup-btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: min(100%, 360px);
+      min-height: 54px;
+      padding: 14px 24px;
+      margin: 0 auto;
+      appearance: none;
+      -webkit-appearance: none;
+      border: 2px solid rgba(255,255,255,0.38);
+      border-radius: 999px;
+      background: linear-gradient(135deg, #6b5cff, #7ee6ff, #ffb6e1);
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(75,46,131,.24);
+      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+    }
 
-  cursor: pointer;
-  box-shadow: 0 14px 30px rgba(75,46,131,.24);
-  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-}
+    .nv-reset-popup-btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(75,46,131,.30);
+      filter: saturate(1.05);
+    }
 
-.nv-reset-popup-btn:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 18px 38px rgba(75,46,131,.30);
-  filter: saturate(1.05);
-}
+    .nv-reset-popup-btn:active{
+      transform: translateY(0);
+    }
 
-.nv-reset-popup-btn:active{
-  transform: translateY(0);
-}
+    .nv-reset-popup-btn:focus{
+      outline: none;
+      box-shadow:
+        0 0 0 4px rgba(255,255,255,.35),
+        0 14px 30px rgba(75,46,131,.24);
+    }
 
-.nv-reset-popup-btn:focus{
-  outline: none;
-  box-shadow:
-    0 0 0 4px rgba(255,255,255,.35),
-    0 14px 30px rgba(75,46,131,.24);
-}.nv-book-feature{
-  padding: 20px 0 10px;
-}
+    .nv-book-feature{
+      padding: 20px 0 10px;
+    }
 
-.nv-book-card{
-  background: rgba(255,255,255,0.10);
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 24px;
-  padding: 24px 20px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
+    .nv-book-card{
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 24px;
+      padding: 24px 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
 
-.nv-book-kicker{
-  font-size: 2rem;
-  line-height: 1.1;
-  margin: 0 0 18px;
-}
+    .nv-book-kicker{
+      font-size: 2rem;
+      line-height: 1.1;
+      margin: 0 0 18px;
+    }
 
-.nv-book-cover{
-  display: block;
-  width: 100%;
-  max-width: 260px;
-  margin: 0 auto 18px;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-}
+    .nv-book-cover{
+      display: block;
+      width: 100%;
+      max-width: 260px;
+      margin: 0 auto 18px;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    }
 
-.nv-book-title{
-  font-size: 1.9rem;
-  line-height: 1.15;
-  margin: 0 0 12px;
-}
+    .nv-book-title{
+      font-size: 1.9rem;
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
 
-.nv-book-text{
-  font-size: 1.1rem;
-  line-height: 1.7;
-  max-width: 32ch;
-  margin: 0 auto 22px;
-}
+    .nv-book-text{
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 32ch;
+      margin: 0 auto 22px;
+    }
 
-.nv-book-card .nv-btn{
-  display: inline-block;
-}
+    .nv-book-card .nv-btn{
+      display: inline-block;
+    }
   </style>
 </head>
 
@@ -297,14 +271,15 @@ body.ml-form-popup-open{
       <button class="nv-hamburger" id="nv-menu-toggle" type="button" aria-label="Open menu">
         ☰
       </button>
-  <nav class="nv-nav-menu" id="nv-nav">
+
+      <nav class="nv-nav-menu" id="nv-nav">
         <a href="/index.html">Home</a>
         <a href="/start-here.html">Start Here</a>
         <a href="/guides.html">Guides</a>
         <a href="/shop.html">Shop</a>
         <a href="/beautyhub.html">Beauty Hub</a>
         <a href="/wellco.html">WellCo</a>
-        <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
+        <a href="/ROTM/">🌙 Rhythm of the Moon</a>
         <a href="/links.html">Resources</a>
         <a href="/about.html">About</a>
         <a href="/contact.html">Contact</a>
@@ -344,34 +319,44 @@ body.ml-form-popup-open{
               </div>
 
               <div class="nv-email">
-    
+                <div class="nv-reset-section">
+                  <img
+                    src="images/calm-reset-button.PNG"
+                    alt="Build Calm in 5 Minutes"
+                    class="nv-reset-image"
+                  />
 
-<div class="nv-reset-section">
-  <img
-    src="images/calm-reset-button.PNG"
-    alt="Build Calm in 5 Minutes"
-    class="nv-reset-image"
-  >
+                  <button
+                    type="button"
+                    class="nv-reset-popup-btn"
+                    onclick="ml('show', 'k3V7x5', true)">
+                    Get the Free Digital Reset ✨
+                  </button>
+                </div>
+              </div>
 
-  <button
-    type="button"
-    class="nv-reset-popup-btn"
-    onclick="ml('show', 'k3V7x5', true)">
-    Get the Free Digital Reset ✨
-  </button>
-</div>
-</div>
-<section class="nv-book-feature">
-  <div class="nv-book-card">
-    <h2 class="nv-book-kicker">Now Available on Amazon</h2>
+              <section class="nv-book-feature">
+                <div class="nv-book-card">
+                  <h2 class="nv-book-kicker">Now Available on Amazon</h2>
 
-    <img
-      src="/images/books/rhythm-of-the-moon-cover.JPG"
-      alt="The Rhythm of the Moon book cover by Amanda L. Carleton"
-      class="nv-book-cover"
-      loading="lazy"
-      onerror="this.style.display='none';"
-    /></section>
+                  <img
+                    src="/images/books/rhythm-of-the-moon-cover.JPG"
+                    alt="The Rhythm of the Moon book cover by Amanda L. Carleton"
+                    class="nv-book-cover"
+                    loading="lazy"
+                    onerror="this.style.display='none';"
+                  />
+
+                  <h3 class="nv-book-title">The Rhythm of the Moon</h3>
+
+                  <p class="nv-book-text">
+                    A gentle story about growing up, emotions, and understanding your body —
+                    created to support meaningful conversations with kids and families.
+                  </p>
+
+                  <a href="/ROTM/" class="nv-btn primary">View the Book</a>
+                </div>
+              </section>
 
               <section class="nv-wellco-highlight">
                 <h2>Support Your Nervous System From the Inside Out 🌿</h2>
@@ -444,43 +429,41 @@ body.ml-form-popup-open{
             Join the NeuroVibe FB group!
           </a>
         </div>
-<section class="nv-ecosystem">
 
-  <h2>Explore the NeuroVibe Ecosystem</h2>
-  <p class="nv-ecosystem-sub">
-    Different paths for different needs. Explore the areas of NeuroVibe that support you most.
-  </p>
+        <section class="nv-ecosystem">
+          <h2>Explore the NeuroVibe Ecosystem</h2>
+          <p class="nv-ecosystem-sub">
+            Different paths for different needs. Explore the areas of NeuroVibe that support you most.
+          </p>
 
-  <div class="nv-ecosystem-grid">
+          <div class="nv-ecosystem-grid">
+            <a href="/guides.html" class="nv-eco-card">
+              <h3>📚 Guides</h3>
+              <p>Digital guides for nervous system support and real-life overwhelm.</p>
+            </a>
 
-    <a href="/guides.html" class="nv-eco-card">
-      <h3>📚 Guides</h3>
-      <p>Digital guides for nervous system support and real-life overwhelm.</p>
-    </a>
+            <a href="/wellco.html" class="nv-eco-card">
+              <h3>🌿 WellCo</h3>
+              <p>Wellness routines and products that support energy and balance.</p>
+            </a>
 
-    <a href="/wellco.html" class="nv-eco-card">
-      <h3>🌿 WellCo</h3>
-      <p>Wellness routines and products that support energy and balance.</p>
-    </a>
+            <a href="/beautyhub.html" class="nv-eco-card">
+              <h3>✨ Beauty Hub</h3>
+              <p>Self-care favorites, beauty finds, and curated nail collections.</p>
+            </a>
 
-    <a href="/beautyhub.html" class="nv-eco-card">
-      <h3>✨ Beauty Hub</h3>
-      <p>Self-care favorites, beauty finds, and curated nail collections.</p>
-    </a>
+            <a href="/shop.html" class="nv-eco-card">
+              <h3>🛍️ Shop</h3>
+              <p>Curated tools and products that support calm homes and routines.</p>
+            </a>
 
-    <a href="/shop.html" class="nv-eco-card">
-      <h3>🛍️ Shop</h3>
-      <p>Curated tools and products that support calm homes and routines.</p>
-    </a>
+            <a href="/ROTM/" class="nv-eco-card">
+              <h3>🌙 Publishing</h3>
+              <p>Stories and books created through NeuroVibe Publishing.</p>
+            </a>
+          </div>
+        </section>
 
-    <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
-      <h3>🌙 Publishing</h3>
-      <p>Stories and books created through NeuroVibe Publishing.</p>
-    </a>
-
-  </div>
-
-</section>
         <p style="margin-top:14px; font-size:12px; opacity:.75;">
           © <span id="year"></span> NeuroVibe Wellness Collective • Affiliate links may earn commission.
         </p>

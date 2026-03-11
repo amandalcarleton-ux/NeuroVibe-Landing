@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>NeuroVibe | Resource Library</title>
-  <meta name="description" content="A curated collection of tools, platforms, partner links, and the featured NeuroVibe digital guide currently available." />
+  <meta name="description" content="A curated collection of NeuroVibe favorites, wellness products, digital guides, platforms, partner links, and supportive tools I personally use and recommend." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://neurovibe.site/links.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=302" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css?v=303" />
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
@@ -131,6 +131,59 @@
     .nv-links-update strong{
       color: #4b2e83;
     }
+
+    .nv-feature-hub{
+      margin-top: 18px;
+    }
+
+    .nv-feature-hub .nv-grid{
+      align-items: stretch;
+    }
+
+    .nv-hub-card{
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nv-hub-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(135deg, rgba(216,240,255,0.18), rgba(255,214,234,0.18));
+      pointer-events:none;
+    }
+
+    .nv-hub-card .nv-card-body{
+      position: relative;
+      z-index: 1;
+    }
+
+    .nv-section-jump{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .nv-jump{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.58);
+      text-decoration:none;
+      font-weight:600;
+      color:#4b2e83;
+      box-shadow: 0 8px 18px rgba(75, 46, 131, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-jump:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 22px rgba(75, 46, 131, 0.12);
+    }
   </style>
 </head>
 
@@ -156,6 +209,8 @@
         <a href="/start-here.html">Start Here</a>
         <a href="/guides.html">Guides</a>
         <a href="/shop.html">Shop</a>
+        <a href="/favorites">Favorites</a>
+        <a href="/livegood">My Wellness Stack</a>
         <a href="/beautyhub.html">Beauty Hub</a>
         <a href="/wellco.html">WellCo</a>
         <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
@@ -182,17 +237,68 @@
         <div class="nv-section-head">
           <h1 class="nv-h1">Resource Library</h1>
           <p class="nv-sub2">
-            A curated collection of tools, platforms, and partner links I personally use and recommend.
+            A curated collection of NeuroVibe favorites, tools, platforms, partner links, and supportive resources I personally use and recommend.
           </p>
 
           <div class="nv-links-update">
-            <strong>Quick update:</strong> the NeuroVibe digital shop is being refreshed right now, so the main live digital product available today is the Calm Reset Guide.
+            <strong>Quick update:</strong> NeuroVibe now has dedicated pages for my Favorites hub and My Wellness Stack, so this library is becoming the central place that connects the whole ecosystem.
           </div>
 
           <p class="nv-disclosure" style="margin-top:10px;">
             Heads up: Some links here are affiliate/partner links. If you purchase through them,
             I may earn a commission at no extra cost to you. I only share what fits NeuroVibe values 💜
           </p>
+
+          <div class="nv-section-jump">
+            <a class="nv-jump" href="#featured-paths">Featured Paths</a>
+            <a class="nv-jump" href="#neurovibe-tools">Digital Tools</a>
+            <a class="nv-jump" href="#wellness">Wellness</a>
+            <a class="nv-jump" href="#beauty">Beauty</a>
+            <a class="nv-jump" href="#home-deals">Home + Deals</a>
+            <a class="nv-jump" href="#apps-tools">Apps + Platforms</a>
+            <a class="nv-jump" href="#extra-income">Extra Income</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="featured-paths" class="nv-section nv-feature-hub">
+        <div class="nv-section-head">
+          <h2>✨ Featured Paths</h2>
+          <p class="nv-muted">Start here if you want the clearest path into the new NeuroVibe structure.</p>
+        </div>
+
+        <div class="nv-grid">
+          <article class="nv-card nv-featured-card nv-hub-card">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">New Hub</span>
+              <h3 class="nv-card-title">NeuroVibe Favorites</h3>
+              <p class="nv-card-text">
+                A curated hub for the products, tools, resources, and pages I personally use, recommend, or build around.
+              </p>
+              <div class="nv-btn-row">
+                <a class="nv-btn nv-deal-btn" href="/favorites">
+                  Open Favorites Hub
+                </a>
+              </div>
+              <p class="nv-card-note">Internal NeuroVibe page</p>
+            </div>
+          </article>
+
+          <article class="nv-card nv-featured-card nv-hub-card">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Wellness Page</span>
+              <h3 class="nv-card-title">My Wellness Stack</h3>
+              <p class="nv-card-text">
+                A softer landing page for the wellness products I personally use, with more context before heading out to LiveGood.
+              </p>
+              <div class="nv-btn-row">
+                <a class="nv-btn nv-deal-btn" href="/livegood">
+                  View My Wellness Stack
+                </a>
+              </div>
+              <p class="nv-card-note">Internal NeuroVibe page</p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -237,12 +343,28 @@
         </div>
 
         <div class="nv-grid">
+          <article class="nv-card nv-featured-card">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Start Here</span>
+              <h3 class="nv-card-title">My Wellness Stack</h3>
+              <p class="nv-card-text">
+                Visit my dedicated NeuroVibe wellness page first for a more personal, guided path into the products I use.
+              </p>
+              <div class="nv-btn-row">
+                <a class="nv-btn nv-deal-btn" href="/livegood">
+                  Open My Wellness Stack
+                </a>
+              </div>
+              <p class="nv-card-note">Internal NeuroVibe page</p>
+            </div>
+          </article>
+
           <article class="nv-card">
             <div class="nv-card-body">
               <h3 class="nv-card-title">LiveGood Wellness</h3>
-              <p class="nv-card-text">Affordable wellness products + optional membership savings.</p>
+              <p class="nv-card-text">Browse LiveGood directly for affordable wellness products and optional membership savings.</p>
               <a class="nv-btn" href="https://www.livegoodtour.com/NeuroVibe" target="_blank" rel="noopener sponsored">
-                Check Out LiveGood
+                Go to LiveGood
               </a>
               <p class="nv-card-note">Affiliate link • Always consult your provider for supplements</p>
             </div>
@@ -386,17 +508,17 @@
             </div>
           </article>
 
-        <article class="nv-card nv-featured-card">
-  <div class="nv-card-body">
-    <span class="nv-featured-badge">Shop NeuroVibe</span>
-    <h3 class="nv-card-title">NeuroVibe Digital Shop</h3>
-    <p class="nv-card-text">Browse NeuroVibe digital guides, calming tools, and new resources now available through the refreshed shop.</p>
-    <a class="nv-btn nv-deal-btn" href="https://payhip.com/b/nd98g" target="_blank" rel="noopener">
-      Shop the Calm Reset Guide
-    </a>
-    <p class="nv-card-note">Secure checkout • instant digital delivery</p>
-  </div>
-</article>
+          <article class="nv-card nv-featured-card">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Shop NeuroVibe</span>
+              <h3 class="nv-card-title">NeuroVibe Digital Shop</h3>
+              <p class="nv-card-text">Browse NeuroVibe digital guides, calming tools, and new resources now available through the refreshed shop.</p>
+              <a class="nv-btn nv-deal-btn" href="https://payhip.com/b/nd98g" target="_blank" rel="noopener">
+                Shop the Calm Reset Guide
+              </a>
+              <p class="nv-card-note">Secure checkout • instant digital delivery</p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -431,6 +553,16 @@
         </p>
 
         <div class="nv-ecosystem-grid">
+          <a href="/favorites" class="nv-eco-card">
+            <h3>⭐ Favorites</h3>
+            <p>My curated hub for trusted tools, products, pages, and recommendations.</p>
+          </a>
+
+          <a href="/livegood" class="nv-eco-card">
+            <h3>🌿 Wellness Stack</h3>
+            <p>A dedicated page for the wellness products I personally use and share.</p>
+          </a>
+
           <a href="/guides.html" class="nv-eco-card">
             <h3>📚 Guides</h3>
             <p>Digital guides for nervous system support and real-life overwhelm.</p>
@@ -464,7 +596,7 @@
   <footer class="nv-shop-footer glass">
     <div class="nv-container nv-footer-inner">
       <p class="nv-footer-text">
-        Quick note: This page is a partner links hub. If you shop through these links, it helps support NeuroVibe 💜
+        Quick note: This page is a partner links hub and ecosystem directory. If you shop through these links, it helps support NeuroVibe 💜
       </p>
       <p class="nv-footer-mini">
         Disclosure: Some links are affiliate/partner links. If you buy through them, I may earn a commission at no extra cost to you.
@@ -472,6 +604,8 @@
 
       <div class="footer-nav" aria-label="Footer navigation">
         <a href="/index.html">Home</a>
+        <a href="/favorites">Favorites</a>
+        <a href="/livegood">Wellness Stack</a>
         <a href="/shop.html">Shop</a>
         <a href="/contact.html">Contact</a>
       </div>

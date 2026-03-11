@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>NeuroVibe | Neurodivergent Parenting, Executive Function &amp; Family Wellness</title>
-  <meta name="description" content="NeuroVibe supports neurodivergent families by building executive functioning skills and promoting health and wellness. Community, resources, and coaching for parents and caregivers." />
+  <meta name="description" content="NeuroVibe supports neurodivergent families with grounded parenting support, nervous system tools, executive function help, and real-life wellness resources." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://neurovibe.site/" />
 
   <meta property="og:title" content="NeuroVibe | Neurodivergent Parenting &amp; Family Wellness" />
-  <meta property="og:description" content="Transforming lives through neurodivergent parenting skills, executive functioning support, and wellness initiatives." />
+  <meta property="og:description" content="Grounded parenting support, calm tools, and wellness resources for neurodivergent families." />
   <meta property="og:url" content="https://neurovibe.site/" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://neurovibe.site/og-image.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="NeuroVibe | Neurodivergent Parenting &amp; Family Wellness" />
-  <meta name="twitter:description" content="Supporting families through executive functioning skills and wellness initiatives." />
+  <meta name="twitter:description" content="Grounded parenting support, calm tools, and wellness resources for neurodivergent families." />
   <meta name="twitter:image" content="https://neurovibe.site/og-image.jpg" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N6SZXHDX0"></script>
@@ -35,7 +35,6 @@
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
-
 
   <style>
     .nv-header{
@@ -133,22 +132,6 @@
       color: #4b2e83;
     }
 
-    .ml-form-popupOverlay,
-    .ml-form-popupWrapper,
-    .ml-form-embedContainer,
-    .ml-form-popupBody{
-      z-index: 99999 !important;
-    }
-
-    .ml-form-popupBody{
-      max-height: 90vh !important;
-      overflow-y: auto !important;
-    }
-
-    body.ml-form-popup-open{
-      overflow: hidden;
-    }
-
     .nv-reset-section{
       text-align: center;
       margin: 26px auto 40px;
@@ -184,6 +167,7 @@
       font-weight: 700;
       line-height: 1.2;
       text-align: center;
+      text-decoration: none;
       cursor: pointer;
       box-shadow: 0 14px 30px rgba(75,46,131,.24);
       transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
@@ -204,6 +188,39 @@
       box-shadow:
         0 0 0 4px rgba(255,255,255,.35),
         0 14px 30px rgba(75,46,131,.24);
+    }
+
+    .nv-founder-card{
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 24px;
+      padding: 22px 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .nv-founder-photo{
+      display: block;
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto 18px;
+      border-radius: 22px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.16);
+      object-fit: cover;
+    }
+
+    .nv-founder-title{
+      font-size: 1.8rem;
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+
+    .nv-founder-text{
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 34ch;
+      margin: 0 auto 18px;
     }
 
     .nv-book-feature{
@@ -250,53 +267,55 @@
 
     .nv-book-card .nv-btn{
       display: inline-block;
-    }.nv-blog-highlight{
-  margin-top: 28px;
-  background: rgba(255,255,255,0.68);
-  border: 1px solid rgba(255,255,255,0.42);
-  border-radius: 28px;
-  padding: 24px;
-  box-shadow: 0 18px 40px rgba(75,46,131,0.10);
-  text-align: center;
-}
+    }
 
-.nv-blog-highlight h3{
-  margin: 0 0 8px;
-  color: #6b5cff;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
+    .nv-blog-highlight{
+      margin-top: 28px;
+      background: rgba(255,255,255,0.68);
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 18px 40px rgba(75,46,131,0.10);
+      text-align: center;
+    }
 
-.nv-blog-highlight h2{
-  margin: 0 0 12px;
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
-  color: #101018;
-}
+    .nv-blog-highlight h3{
+      margin: 0 0 8px;
+      color: #6b5cff;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
 
-.nv-blog-highlight p{
-  max-width: 700px;
-  margin: 0 auto 16px;
-  line-height: 1.7;
-  color: #101018;
-}
+    .nv-blog-highlight h2{
+      margin: 0 0 12px;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      color: #101018;
+    }
 
-.nv-blog-highlight a{
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  background: linear-gradient(135deg,#6b5cff,#9c7dff);
-  color: #ffffff;
-  box-shadow: 0 10px 24px rgba(107,92,255,0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+    .nv-blog-highlight p{
+      max-width: 700px;
+      margin: 0 auto 16px;
+      line-height: 1.7;
+      color: #101018;
+    }
 
-.nv-blog-highlight a:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(107,92,255,0.30);
-}
+    .nv-blog-highlight a{
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      background: linear-gradient(135deg,#6b5cff,#9c7dff);
+      color: #ffffff;
+      box-shadow: 0 10px 24px rgba(107,92,255,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-blog-highlight a:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(107,92,255,0.30);
+    }
   </style>
 </head>
 
@@ -317,19 +336,19 @@
         ☰
       </button>
 
-<nav class="nv-nav-menu" id="nv-nav">
-  <a href="/index.html">Home</a>
-  <a href="/start-here.html">Start Here</a>
-  <a href="/guides.html">Guides</a>
-  <a href="/shop.html">Shop</a>
-  <a href="/beautyhub.html">Beauty Hub</a>
-  <a href="/wellco.html">WellCo</a>
-  <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
-  <a href="/links.html">Resources</a>
-  <a href="https://blog.neurovibe.site">Blog</a>
-  <a href="/about.html">About</a>
-  <a href="/contact.html">Contact</a>
-</nav>
+      <nav class="nv-nav-menu" id="nv-nav">
+        <a href="/index.html">Home</a>
+        <a href="/start-here.html">Start Here</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/beautyhub.html">Beauty Hub</a>
+        <a href="/wellco.html">WellCo</a>
+        <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
+        <a href="/links.html">Resources</a>
+        <a href="https://blog.neurovibe.site">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
@@ -360,32 +379,28 @@
               </p>
 
               <a
-href="https://store.neurovibe.site/b/2FfBV"
-class="nv-reset-popup-btn"
-target="_blank"
-rel="noopener"
->
-Get the Free Digital Reset ✨
-</a>
-              
+                href="https://store.neurovibe.site/b/2FfBV"
+                class="nv-reset-popup-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                Get the Free Digital Reset ✨
+              </a>
+
               <section class="nv-blog-highlight">
+                <h3>Latest Post</h3>
 
-<h3>Latest Post</h3>
+                <h2>When School Support Comes to Your Door</h2>
 
-<h2>
-When School Support Comes to Your Door
-</h2>
+                <p>
+                  A real story about IEP advocacy, school support visits, and parenting a
+                  neurodivergent child.
+                </p>
 
-<p>
-A real story about IEP advocacy, school support visits, and parenting a
-neurodivergent child.
-</p>
-
-<a href="https://blog.neurovibe.site/when-school-support-comes-to-your-door-a-real-day-parenting-a-neurodivergent-child/">
-Read the Story
-</a>
-
-</section>
+                <a href="https://blog.neurovibe.site/when-school-support-comes-to-your-door-a-real-day-parenting-a-neurodivergent-child/">
+                  Read the Story
+                </a>
+              </section>
 
               <section class="nv-book-feature">
                 <div class="nv-book-card">
@@ -440,24 +455,28 @@ Read the Story
           </div>
 
           <div class="hero-right">
-            <img
-              src="/images/CPS-Guide.PNG"
-              alt="Navigating CPS guide cover"
-              class="nv-guide-image"
-              loading="lazy"
-            />
+            <div class="nv-founder-card">
+              <img
+                src="/images/about-me-photo.PNG"
+                alt="Amanda L. Carleton, founder of NeuroVibe"
+                class="nv-founder-photo"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
 
-            <div class="hero-actions" style="margin-top:14px;">
-              <a
-                href="/guides.html"
-                class="nv-btn primary"
-              >
-                Get the CPS Parent Support Guide 📔
-              </a>
+              <h2 class="nv-founder-title">Meet the Heart Behind NeuroVibe</h2>
 
-              <a href="https://store.neurovibe.site" target="_blank" rel="noopener" class="nv-btn ghost">
-                See everything in the shop
-              </a>
+              <p class="nv-founder-text">
+                NeuroVibe was created to offer grounded support, practical tools, and a
+                softer way forward for overwhelmed families navigating real life.
+              </p>
+
+              <div class="hero-actions" style="margin-top:14px;">
+                <a href="/about.html" class="nv-btn primary">Meet Amanda</a>
+                <a href="https://store.neurovibe.site/b/2FfBV" target="_blank" rel="noopener" class="nv-btn ghost">
+                  Get the Free Reset
+                </a>
+              </div>
             </div>
           </div>
 
@@ -469,10 +488,18 @@ Read the Story
 
       <footer class="glass nv-card nv-footer-cta">
         <h2 class="nv-h2">Want the free reset?</h2>
-        <p class="nv-copy">A quick calm tool for overwhelmed moments — delivered by email.</p>
+        <p class="nv-copy">A quick calm tool for overwhelmed moments — ready to download instantly.</p>
 
         <div class="nv-actions" style="justify-content:center;">
-          <a class="nv-btn primary" href="/start-here.html">Get the free reset</a>
+          <a
+            class="nv-btn primary"
+            href="https://store.neurovibe.site/b/2FfBV"
+            target="_blank"
+            rel="noopener"
+          >
+            Get the free reset
+          </a>
+
           <a
             class="nv-btn ghost"
             href="https://www.facebook.com/share/g/1Azf7DbaxY/?mibextid=wwXIfr"
@@ -518,7 +545,7 @@ Read the Story
         </section>
 
         <p style="margin-top:14px; font-size:12px; opacity:.75;">
-          © <span id="year"></span> NeuroVibe Wellness Collective • Affiliate links may earn commission.
+          © <span id="year"></span> NeuroVibe Wellco Community • Affiliate links may earn commission.
         </p>
       </footer>
 

@@ -1,1 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>My Wellness Stack | NeuroVibe</title>
+  <meta
+    name="description"
+    content="Explore the wellness products I personally use and recommend through NeuroVibe. A simple, supportive routine for energy, balance, and everyday wellness."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://neurovibe.site/livegood" />
+
+  <meta property="og:title" content="My Wellness Stack | NeuroVibe" />
+  <meta
+    property="og:description"
+    content="Explore the products I personally use for simple, realistic daily wellness support."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neurovibe.site/livegood" />
+  <meta property="og:image" content="https://neurovibe.site/images/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/style.css?v=101" />
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
+
+  <style>
+    :root{
+      --nv-purple:#6f58ff;
+      --nv-purple-deep:#4e34c8;
+      --nv-lilac:#efe8ff;
+      --nv-pink:#ffd7ee;
+      --nv-blue:#dff4ff;
+      --nv-text:#241f3d;
+      --nv-muted:#564f78;
+      --nv-white:rgba(255,255,255,0.72);
+      --nv-border:rgba(255,255,255,0.38);
+      --nv-shadow:0 18px 50px rgba(67, 42, 140, 0.18);
+      --nv-radius:28px;
+      --nv-radius-sm:22px;
+      --nv-max:1150px;
+    }
+
+    *{box-sizing:border-box;}
+
+    html{scroll-behavior:smooth;}
+
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      color:var(--nv-text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.92), rgba(255,255,255,0) 30%),
+        radial-gradient(circle at top right, rgba(255,215,238,0.65), rgba(255,255,255,0) 28%),
+        linear-gradient(180deg, #efeaff 0%, #b79cff 48%, #9a82ff 100%);
+      min-height:100vh;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .nv-wrap{
+      width:min(var(--nv-max), calc(100% - 28px));
+      margin:0 auto;
+    }
+
+    .nv-header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      padding:14px 0;
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      background:rgba(245,242,255,0.72);
+      border-bottom:1px solid rgba(255,255,255,0.32);
+    }
+
+    .nv-nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .nv-brand{
+      font-size:clamp(1.7rem, 4vw, 2.5rem);
+      font-weight:800;
+      color:var(--nv-purple-deep);
+      letter-spacing:-0.03em;
+      line-height:1;
+    }
+
+    .nv-nav-links{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .nv-pill-link{
+      padding:12px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.55);
+      border:1px solid rgba(255,255,255,0.45);
+      font-size:0.95rem;
+      font-weight:600;
+      color:var(--nv-text);
+      transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
+    }
+
+    .nv-pill-link:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 24px rgba(56,39,119,.12);
+      background:rgba(255,255,255,0.72);
+    }
+
+    .nv-page{
+      padding:40px 0 80px;
+    }
+
+    .nv-hero{
+      position:relative;
+      overflow:hidden;
+      padding:34px;
+      border-radius:34px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.38)),
+        linear-gradient(135deg, rgba(223,244,255,0.42), rgba(255,215,238,0.34));
+      border:1px solid rgba(255,255,255,0.4);
+      box-shadow:var(--nv-shadow);
+      margin-bottom:26px;
+    }
+
+    .nv-hero::before,
+    .nv-hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      filter:blur(4px);
+      pointer-events:none;
+    }
+
+    .nv-hero::before{
+      width:240px;
+      height:240px;
+      right:-80px;
+      top:-60px;
+      background:rgba(255,255,255,0.22);
+    }
+
+    .nv-hero::after{
+      width:180px;
+      height:180px;
+      left:-40px;
+      bottom:-60px;
+      background:rgba(223,244,255,0.2);
+    }
+
+    .nv-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 15px;
+      border-radius:999px;
+      font-size:0.92rem;
+      font-weight:700;
+      color:var(--nv-purple-deep);
+      background:rgba(255,255,255,0.62);
+      border:1px solid rgba(255,255,255,0.42);
+      margin-bottom:16px;
+    }
+
+    .nv-h1{
+      margin:0 0 14px;
+      font-size:clamp(2.25rem, 6vw, 4.5rem);
+      line-height:1.04;
+      letter-spacing:-0.04em;
+      font-weight:800;
+      max-width:10ch;
+    }
+
+    .nv-sub{
+      margin:0;
+      max-width:720px;
+      font-size:clamp(1rem, 2.2vw, 1.18rem);
+      line-height:1.8;
+      color:var(--nv-muted);
+    }
+
+    .nv-hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:26px;
+    }
+
+    .nv-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:56px;
+      padding:14px 24px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:1rem;
+      transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease;
+    }
+
+    .nv-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 24px rgba(60, 41, 140, 0.16);
+    }
+
+    .nv-btn-primary{
+      color:#1f153d;
+      background:linear-gradient(90deg, #d9efff 0%, #ffd9ee 100%);
+      border:3px solid rgba(96,65,170,0.82);
+    }
+
+    .nv-btn-secondary{
+      color:var(--nv-purple-deep);
+      background:rgba(255,255,255,0.58);
+      border:1px solid rgba(255,255,255,0.5);
+    }
+
+    .nv-note{
+      margin-top:18px;
+      font-size:0.93rem;
+      line-height:1.65;
+      color:var(--nv-muted);
+    }
+
+    .nv-grid{
+      display:grid;
+      grid-template-columns:1.12fr .88fr;
+      gap:22px;
+      margin-bottom:22px;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.26);
+      border:1px solid rgba(255,255,255,0.36);
+      border-radius:var(--nv-radius);
+      box-shadow:var(--nv-shadow);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+
+    .nv-card{
+      padding:28px;
+    }
+
+    .nv-h2{
+      margin:0 0 14px;
+      font-size:clamp(1.5rem, 3.4vw, 2.2rem);
+      line-height:1.15;
+      letter-spacing:-0.03em;
+      font-weight:800;
+    }
+
+    .nv-p{
+      margin:0;
+      color:var(--nv-muted);
+      line-height:1.85;
+      font-size:1rem;
+    }
+
+    .nv-bullets{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .nv-bullet{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,0.42);
+      border:1px solid rgba(255,255,255,0.4);
+      color:var(--nv-text);
+    }
+
+    .nv-bullet strong{
+      display:block;
+      margin-bottom:2px;
+      font-size:0.98rem;
+    }
+
+    .nv-bullet span{
+      font-size:0.93rem;
+      color:var(--nv-muted);
+      line-height:1.65;
+    }
+
+    .nv-stack{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .nv-product{
+      padding:22px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.56), rgba(255,255,255,0.34));
+      border:1px solid rgba(255,255,255,0.4);
+      min-height:100%;
+    }
+
+    .nv-product .emoji{
+      font-size:1.7rem;
+      margin-bottom:10px;
+    }
+
+    .nv-product h3{
+      margin:0 0 8px;
+      font-size:1.22rem;
+      line-height:1.25;
+      letter-spacing:-0.02em;
+    }
+
+    .nv-product p{
+      margin:0;
+      color:var(--nv-muted);
+      line-height:1.75;
+      font-size:0.96rem;
+    }
+
+    .nv-routine{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+      margin-top:20px;
+    }
+
+    .nv-routine-card{
+      padding:22px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.42);
+      border:1px solid rgba(255,255,255,0.4);
+    }
+
+    .nv-routine-card h3{
+      margin:0 0 12px;
+      font-size:1.15rem;
+      letter-spacing:-0.02em;
+    }
+
+    .nv-routine-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
+    }
+
+    .nv-routine-list li{
+      padding:10px 14px;
+      background:rgba(255,255,255,0.46);
+      border-radius:14px;
+      font-size:0.96rem;
+      color:var(--nv-text);
+    }
+
+    .nv-cta{
+      margin-top:22px;
+      text-align:center;
+      padding:30px;
+      border-radius:32px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
+        linear-gradient(90deg, rgba(223,244,255,0.28), rgba(255,215,238,0.25));
+      border:1px solid rgba(255,255,255,0.38);
+      box-shadow:var(--nv-shadow);
+    }
+
+    .nv-cta p{
+      max-width:700px;
+      margin:12px auto 0;
+      color:var(--nv-muted);
+      line-height:1.85;
+    }
+
+    .nv-footer{
+      padding:18px 0 10px;
+      color:rgba(36,31,61,0.82);
+      font-size:0.92rem;
+      text-align:center;
+    }
+
+    .nv-footer a{
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    @media (max-width: 960px){
+      .nv-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 720px){
+      .nv-page{
+        padding:24px 0 60px;
+      }
+
+      .nv-hero{
+        padding:24px 20px;
+        border-radius:28px;
+      }
+
+      .nv-card{
+        padding:22px 18px;
+      }
+
+      .nv-stack,
+      .nv-routine{
+        grid-template-columns:1fr;
+      }
+
+      .nv-nav{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .nv-nav-links{
+        width:100%;
+        justify-content:flex-start;
+      }
+
+      .nv-pill-link{
+        padding:10px 14px;
+        font-size:0.9rem;
+      }
+
+      .nv-btn{
+        width:100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nv-header">
+    <div class="nv-wrap">
+      <nav class="nv-nav" aria-label="Primary">
+        <a class="nv-brand" href="/">NeuroVibe</a>
+
+        <div class="nv-nav-links">
+          <a class="nv-pill-link" href="/">Home</a>
+          <a class="nv-pill-link" href="/links.html">Resource Library</a>
+          <a class="nv-pill-link" href="/guides.html">Guides</a>
+          <a class="nv-pill-link" href="/start-here.html">Start Here</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="nv-page">
+    <div class="nv-wrap">
+
+      <section class="nv-hero">
+        <div class="nv-kicker">🌿 Wellness • Real Life • Personally Used</div>
+
+        <h1 class="nv-h1">My Wellness Stack</h1>
+
+        <p class="nv-sub">
+          This is a simple collection of wellness products I personally use and recommend.
+          I wanted one calm, easy place to share what supports my energy, routine, and
+          everyday balance without making it feel overwhelming.
+        </p>
+
+        <div class="nv-hero-actions">
+          <a href="#stack" class="nv-btn nv-btn-secondary">See What I Use</a>
+
+          <!-- REPLACE THE # BELOW WITH YOUR ACTUAL LIVEGOOD AFFILIATE LINK -->
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+            class="nv-btn nv-btn-primary"
+          >
+            Explore LiveGood Products
+          </a>
+        </div>
+
+        <p class="nv-note">
+          Some links on this page may be affiliate links, which means I may earn a commission at no
+          extra cost to you. I only share products that fit the kind of support I want NeuroVibe to represent.
+        </p>
+      </section>
+
+      <section class="nv-grid">
+        <div class="glass nv-card">
+          <h2 class="nv-h2">Why I made this page</h2>
+          <p class="nv-p">
+            Instead of sending people straight to a product site with no context, I wanted a
+            softer and more transparent way to share what I personally use. This page gives you
+            the bigger picture first, so you can explore at your own pace and decide what feels
+            supportive for your life and routine.
+          </p>
+
+          <div class="nv-bullets">
+            <div class="nv-bullet">
+              <div>✨</div>
+              <div>
+                <strong>Simple over overwhelming</strong>
+                <span>I’m building around realistic routines, not perfection.</span>
+              </div>
+            </div>
+
+            <div class="nv-bullet">
+              <div>🌿</div>
+              <div>
+                <strong>Personally chosen</strong>
+                <span>This page is meant to reflect what I actually use and keep coming back to.</span>
+              </div>
+            </div>
+
+            <div class="nv-bullet">
+              <div>💜</div>
+              <div>
+                <strong>Aligned with NeuroVibe</strong>
+                <span>Gentle support, clear guidance, and practical options for real life.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass nv-card">
+          <h2 class="nv-h2">A realistic routine</h2>
+          <p class="nv-p">
+            I’m not interested in a complicated stack that takes over my whole day. I prefer
+            support that feels easy to keep up with. This page can grow over time, but the goal
+            stays the same: simple products, practical use, and honest sharing.
+          </p>
+
+          <div class="nv-routine">
+            <div class="nv-routine-card">
+              <h3>☀️ Morning</h3>
+              <ul class="nv-routine-list">
+                <li>Greens or foundational support</li>
+                <li>Coffee or energy support</li>
+                <li>Daily basics</li>
+              </ul>
+            </div>
+
+            <div class="nv-routine-card">
+              <h3>🌙 Evening</h3>
+              <ul class="nv-routine-list">
+                <li>Magnesium support</li>
+                <li>Simple wind-down routine</li>
+                <li>Consistency over perfection</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="glass nv-card">
+        <h2 class="nv-h2">Products I personally use</h2>
+        <p class="nv-p">
+          You can customize these product cards to reflect your actual favorites. I set them up so
+          you can quickly swap the wording later as your routine evolves.
+        </p>
+
+        <div class="nv-stack">
+          <article class="nv-product">
+            <div class="emoji">🥬</div>
+            <h3>Daily Greens</h3>
+            <p>
+              A simple way to support daily nutrition and keep my routine feeling more grounded.
+            </p>
+          </article>
+
+          <article class="nv-product">
+            <div class="emoji">☕</div>
+            <h3>Coffee or Energy Support</h3>
+            <p>
+              Something easy to build into the morning without making wellness feel complicated.
+            </p>
+          </article>
+
+          <article class="nv-product">
+            <div class="emoji">🧴</div>
+            <h3>Foundational Daily Support</h3>
+            <p>
+              A basic part of the day that helps keep the routine simple, steady, and realistic.
+            </p>
+          </article>
+
+          <article class="nv-product">
+            <div class="emoji">🌙</div>
+            <h3>Magnesium</h3>
+            <p>
+              A calm evening favorite that fits naturally into a softer wind-down routine.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="nv-cta">
+        <div class="nv-kicker">Ready to explore?</div>
+        <h2 class="nv-h2">See the products behind my wellness routine</h2>
+        <p>
+          If you want to browse the products I’m highlighting here, you can head over to LiveGood
+          and explore them directly. Take what supports you, skip what doesn’t, and move at your own pace.
+        </p>
+
+        <div class="nv-hero-actions" style="justify-content:center;">
+          <!-- REPLACE THE # BELOW WITH YOUR ACTUAL LIVEGOOD AFFILIATE LINK -->
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+            class="nv-btn nv-btn-primary"
+          >
+            Explore LiveGood Products
+          </a>
+
+          <a href="/links.html" class="nv-btn nv-btn-secondary">Back to Resource Library</a>
+        </div>
+
+        <p class="nv-note" style="max-width:760px; margin-left:auto; margin-right:auto;">
+          Wellness products are not medical advice. Always use your own judgment and consult a qualified
+          healthcare professional when needed, especially if you are pregnant, nursing, taking medication,
+          or managing a health condition.
+        </p>
+      </section>
+
+      <footer class="nv-footer">
+        <p>
+          © NeuroVibe • Wellness shared with care •
+          <a href="/links.html">Visit the Resource Library</a>
+        </p>
+      </footer>
+
+    </div>
+  </main>
+</body>
+</html>

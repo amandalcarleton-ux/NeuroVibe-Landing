@@ -171,6 +171,80 @@
       transform: translateY(-2px);
     }
 
+    .nv-hub-section{
+      margin-top: 28px;
+      background: rgba(255,255,255,0.68);
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 18px 40px rgba(75,46,131,0.10);
+    }
+
+    .nv-hub-section h2{
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      text-align: center;
+      color: #101018;
+    }
+
+    .nv-hub-sub{
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 22px;
+      line-height: 1.6;
+      color: #101018;
+    }
+
+    .nv-hub-grid{
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .nv-hub-card{
+      display: block;
+      text-decoration: none;
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(255,255,255,0.75);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 12px 28px rgba(75,46,131,0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      color: inherit;
+    }
+
+    .nv-hub-card:hover{
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px rgba(75,46,131,0.18);
+    }
+
+    .nv-hub-label{
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: #6b5cff;
+      text-transform: uppercase;
+    }
+
+    .nv-hub-card h3{
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+      color: #4b2e83;
+    }
+
+    .nv-hub-card p{
+      margin: 0 0 12px;
+      line-height: 1.6;
+      color: #101018;
+    }
+
+    .nv-hub-card span{
+      font-weight: 700;
+      color: #4b2e83;
+    }
+
     .nv-funnel{
       margin-top: 28px;
       background: rgba(255,255,255,0.68);
@@ -376,7 +450,64 @@
       color: #101018;
     }
 
+    .nv-page-header-img{
+      width:100%;
+      display:block;
+      border-radius:24px;
+      box-shadow:0 18px 40px rgba(75,46,131,0.15);
+      margin:0 0 18px;
+    }
+
+    .nv-blog-highlight{
+      margin-top: 28px;
+      background: rgba(255,255,255,0.68);
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 28px;
+      padding: 24px;
+      box-shadow: 0 18px 40px rgba(75,46,131,0.10);
+      text-align: center;
+    }
+
+    .nv-blog-highlight h3{
+      margin: 0 0 8px;
+      color: #6b5cff;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .nv-blog-highlight h2{
+      margin: 0 0 12px;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      color: #101018;
+    }
+
+    .nv-blog-highlight p{
+      max-width: 700px;
+      margin: 0 auto 16px;
+      line-height: 1.7;
+      color: #101018;
+    }
+
+    .nv-blog-highlight a{
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      background: linear-gradient(135deg,#6b5cff,#9c7dff);
+      color: #ffffff;
+      box-shadow: 0 10px 24px rgba(107,92,255,0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-blog-highlight a:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(107,92,255,0.30);
+    }
+
     @media (max-width: 1000px){
+      .nv-hub-grid,
       .nv-funnel-grid,
       .nv-grid-4{
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -393,6 +524,7 @@
     }
 
     @media (max-width: 720px){
+      .nv-hub-grid,
       .nv-funnel-grid,
       .nv-grid-4,
       .nv-grid-2{
@@ -404,115 +536,12 @@
       }
 
       .nv-start-intro,
+      .nv-hub-section,
       .nv-funnel,
       .nv-section-box{
         padding: 20px;
       }
     }
-
-    .nv-page-header-img{
-      width:100%;
-      display:block;
-      border-radius:24px;
-      box-shadow:0 18px 40px rgba(75,46,131,0.15);
-      margin:0 0 18px;
-    }
-
-    .nv-ecosystem{
-      max-width:1000px;
-      margin:28px auto 0;
-      padding:30px;
-      background:rgba(255,255,255,0.75);
-      border-radius:24px;
-      box-shadow:0 18px 40px rgba(75,46,131,0.12);
-      text-align:center;
-      border:1px solid rgba(255,255,255,0.55);
-    }
-
-    .nv-ecosystem-sub{
-      max-width:600px;
-      margin:0 auto 24px;
-      line-height:1.7;
-    }
-
-    .nv-ecosystem-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-      gap:16px;
-      margin-top:20px;
-    }
-
-    .nv-eco-card{
-      background:white;
-      padding:20px;
-      border-radius:18px;
-      text-decoration:none;
-      color:#101018;
-      box-shadow:0 10px 20px rgba(75,46,131,0.08);
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-
-    .nv-eco-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 14px 28px rgba(75,46,131,0.12);
-    }
-
-    .nv-eco-card h3{
-      margin:0 0 8px;
-      color:var(--nv-purple-deep);
-    }
-
-    .nv-eco-card p{
-      margin:0;
-      line-height:1.65;
-    }
-    .nv-blog-highlight{
-  margin-top: 28px;
-  background: rgba(255,255,255,0.68);
-  border: 1px solid rgba(255,255,255,0.42);
-  border-radius: 28px;
-  padding: 24px;
-  box-shadow: 0 18px 40px rgba(75,46,131,0.10);
-  text-align: center;
-}
-
-.nv-blog-highlight h3{
-  margin: 0 0 8px;
-  color: #6b5cff;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.nv-blog-highlight h2{
-  margin: 0 0 12px;
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
-  color: #101018;
-}
-
-.nv-blog-highlight p{
-  max-width: 700px;
-  margin: 0 auto 16px;
-  line-height: 1.7;
-  color: #101018;
-}
-
-.nv-blog-highlight a{
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  background: linear-gradient(135deg,#6b5cff,#9c7dff);
-  color: #ffffff;
-  box-shadow: 0 10px 24px rgba(107,92,255,0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.nv-blog-highlight a:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(107,92,255,0.30);
-}
   </style>
 </head>
 
@@ -534,18 +563,11 @@
       </button>
 
       <nav class="nv-nav-menu" id="nv-nav">
-  <a href="/index.html">Home</a>
-  <a href="/start-here.html">Start Here</a>
-  <a href="/guides.html">Guides</a>
-  <a href="/shop.html">Shop</a>
-  <a href="/beautyhub.html">Beauty Hub</a>
-  <a href="/wellco.html">WellCo</a>
-  <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
-  <a href="/links.html">Resources</a>
-  <a href="https://blog.neurovibe.site">Blog</a>
-  <a href="/about.html">About</a>
-  <a href="/contact.html">Contact</a>
-</nav>
+        <a href="/index.html">Home</a>
+        <a href="/start-here.html">Start Here</a>
+        <a href="https://store.neurovibe.site" target="_blank" rel="noopener">Shop</a>
+        <a href="/about.html">About</a>
+      </nav>
     </div>
   </header>
 
@@ -572,28 +594,88 @@
       </p>
 
       <div class="nv-start-actions">
-        <a href="#choose-your-path" class="nv-start-btn primary">Choose Your Path</a>
-        <a href="/guides.html" class="nv-start-btn ghost">Browse Guides</a>
+        <a href="#explore-hubs" class="nv-start-btn primary">Explore the Hubs</a>
+        <a href="https://store.neurovibe.site" target="_blank" rel="noopener" class="nv-start-btn ghost">Open Shop</a>
       </div>
     </section>
+
+    <section class="nv-hub-section" id="explore-hubs">
+      <h2>Explore the NeuroVibe Hubs</h2>
+      <p class="nv-hub-sub">
+        Think of this page as the map of NeuroVibe. Each hub offers a different kind of support,
+        from guides and nervous system tools to wellness, beauty, publishing, and curated favorites.
+      </p>
+
+      <div class="nv-hub-grid">
+        <a href="/guides.html" class="nv-hub-card">
+          <span class="nv-hub-label">Core Support</span>
+          <h3>📚 Guides</h3>
+          <p>Practical digital guides, nervous system tools, and grounded support for real-life overwhelm.</p>
+          <span>Browse Guides →</span>
+        </a>
+
+        <a href="/wellco.html" class="nv-hub-card">
+          <span class="nv-hub-label">Wellness</span>
+          <h3>🌿 WellCo</h3>
+          <p>Daily wellness support, routines, and products that help with balance, energy, and feeling more grounded.</p>
+          <span>Visit WellCo →</span>
+        </a>
+
+        <a href="/beautyhub.html" class="nv-hub-card">
+          <span class="nv-hub-label">Self-Care</span>
+          <h3>✨ Beauty Hub</h3>
+          <p>Beauty finds, self-care favorites, and softer everyday picks that bring confidence and joy.</p>
+          <span>Explore Beauty Hub →</span>
+        </a>
+
+        <a href="/wellnessstack.html" class="nv-hub-card">
+          <span class="nv-hub-label">Tools + Routines</span>
+          <h3>💊 Wellness Stack</h3>
+          <p>Supportive staples, daily tools, and stack-style recommendations that fit into real life.</p>
+          <span>Open Wellness Stack →</span>
+        </a>
+
+        <a href="/favorites.html" class="nv-hub-card">
+          <span class="nv-hub-label">Curated Picks</span>
+          <h3>🩷 Favorites</h3>
+          <p>A curated collection of products, tools, and everyday things personally loved inside the NeuroVibe world.</p>
+          <span>See Favorites →</span>
+        </a>
+
+        <a href="/links.html" class="nv-hub-card">
+          <span class="nv-hub-label">Resources</span>
+          <h3>🔗 Resources</h3>
+          <p>Helpful links, featured pages, and quick-access resources for the next step you need most.</p>
+          <span>Open Resources →</span>
+        </a>
+
+        <a href="/ROTM/rhythm-of-the-moon.html" class="nv-hub-card">
+          <span class="nv-hub-label">Publishing</span>
+          <h3>🌙 Rhythm of the Moon</h3>
+          <p>Explore NeuroVibe Publishing through a gentle story centered on growth, understanding, and connection.</p>
+          <span>Visit Publishing →</span>
+        </a>
+
+        <a href="https://store.neurovibe.site" target="_blank" rel="noopener" class="nv-hub-card">
+          <span class="nv-hub-label">Shop</span>
+          <h3>🛍️ Store</h3>
+          <p>Go straight to the NeuroVibe store for digital tools, featured products, and supportive resources.</p>
+          <span>Open Store →</span>
+        </a>
+      </div>
+    </section>
+
     <section class="nv-blog-highlight">
-
-<h3>Latest Post</h3>
-
-<h2>
-When School Support Comes to Your Door
-</h2>
-
-<p>
-A real story about IEP advocacy, school support visits, and parenting a
-neurodivergent child.
-</p>
-
-<a href="https://blog.neurovibe.site/when-school-support-comes-to-your-door-a-real-day-parenting-a-neurodivergent-child/">
-Read the Story
-</a>
-
-</section>
+      <h3>Latest Post</h3>
+      <h2>When School Support Comes to Your Door</h2>
+      <p>
+        A real story about IEP advocacy, school support visits, and parenting a
+        neurodivergent child.
+      </p>
+      <a href="https://blog.neurovibe.site/when-school-support-comes-to-your-door-a-real-day-parenting-a-neurodivergent-child/">
+        Read the Story
+      </a>
+    </section>
 
     <section class="nv-funnel" id="choose-your-path">
       <div class="nv-funnel-head">
@@ -713,50 +795,16 @@ Read the Story
           <span>Open Resources →</span>
         </a>
 
-        <a href="/contact.html" class="nv-link-card">
+        <a href="/about.html" class="nv-link-card">
           <h3>💌 Contact</h3>
-          <p>Reach out for support, questions, or collaboration opportunities.</p>
-          <span>Visit Contact →</span>
+          <p>Reach out for support, questions, or collaboration opportunities through the About page.</p>
+          <span>Go to About →</span>
         </a>
 
         <a href="/index.html" class="nv-link-card">
           <h3>🏠 Home</h3>
           <p>Return to the main NeuroVibe homepage and explore the wider brand.</p>
           <span>Go Home →</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="nv-ecosystem">
-      <h2>Explore the NeuroVibe Ecosystem</h2>
-      <p class="nv-ecosystem-sub">
-        Different paths for different needs. Explore the areas of NeuroVibe that support you most.
-      </p>
-
-      <div class="nv-ecosystem-grid">
-        <a href="/guides.html" class="nv-eco-card">
-          <h3>📚 Guides</h3>
-          <p>Digital guides for nervous system support and real-life overwhelm.</p>
-        </a>
-
-        <a href="/wellco.html" class="nv-eco-card">
-          <h3>🌿 WellCo</h3>
-          <p>Wellness routines and products that support energy and balance.</p>
-        </a>
-
-        <a href="/beautyhub.html" class="nv-eco-card">
-          <h3>✨ Beauty Hub</h3>
-          <p>Self-care favorites, beauty finds, and curated nail collections.</p>
-        </a>
-
-        <a href="/shop.html" class="nv-eco-card">
-          <h3>🛍️ Shop</h3>
-          <p>Curated tools and products that support calm homes and routines.</p>
-        </a>
-
-        <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
-          <h3>🌙 Publishing</h3>
-          <p>Stories and books created through NeuroVibe Publishing.</p>
         </a>
       </div>
     </section>

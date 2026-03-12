@@ -1,163 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroVibe Favorites | Tools & Resources</title>
+  <meta
+    name="description"
+    content="A curated list of wellness products, tools, and resources I personally use and recommend through NeuroVibe."
+  />
 
-<title>NeuroVibe Favorites | Tools & Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css?v=102" />
 
-<meta name="description" content="A curated list of wellness products, tools, and resources I personally use and recommend through NeuroVibe." />
+  <style>
+    *{
+      box-sizing:border-box;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=101">
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(180deg,#efeaff,#bba8ff);
+      margin:0;
+      padding:0;
+      color:#2b244d;
+    }
 
-<style>
+    .nv-wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:40px 20px 70px;
+    }
 
-body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#efeaff,#bba8ff);
-margin:0;
-padding:0;
-color:#2b244d;
-}
+    .nv-hero{
+      background:rgba(255,255,255,0.72);
+      border:1px solid rgba(255,255,255,0.55);
+      border-radius:28px;
+      padding:32px 24px;
+      box-shadow:0 18px 40px rgba(75,46,131,0.12);
+      text-align:center;
+      margin-bottom:28px;
+    }
 
-.nv-wrap{
-max-width:1000px;
-margin:auto;
-padding:30px 20px 60px;
-}
+    .nv-kicker{
+      margin:0 0 10px;
+      font-size:0.9rem;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:#6b5cff;
+    }
 
-.nv-header{
-font-size:32px;
-font-weight:800;
-color:#5b48d6;
-margin-bottom:20px;
-}
+    .nv-header{
+      margin:0 0 12px;
+      font-size:clamp(2rem,4vw,3rem);
+      font-weight:800;
+      color:#5b48d6;
+      line-height:1.1;
+    }
 
-.nv-sub{
-color:#4f4a77;
-line-height:1.7;
-margin-bottom:30px;
-}
+    .nv-sub{
+      max-width:760px;
+      margin:0 auto;
+      color:#4f4a77;
+      line-height:1.8;
+      font-size:1rem;
+    }
 
-.nv-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
+    .nv-section{
+      margin-top:28px;
+      background:rgba(255,255,255,0.68);
+      border:1px solid rgba(255,255,255,0.42);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:0 18px 40px rgba(75,46,131,0.10);
+    }
 
-.nv-card{
-background:white;
-padding:22px;
-border-radius:18px;
-box-shadow:0 12px 30px rgba(0,0,0,0.08);
-}
+    .nv-section h2{
+      margin:0 0 8px;
+      font-size:clamp(1.5rem,2.8vw,2.2rem);
+      color:#2f2763;
+      text-align:center;
+    }
 
-.nv-card h3{
-margin-top:0;
-font-size:20px;
-}
+    .nv-section-sub{
+      max-width:760px;
+      margin:0 auto 20px;
+      text-align:center;
+      line-height:1.7;
+      color:#4f4a77;
+    }
 
-.nv-btn{
-display:inline-block;
-margin-top:14px;
-padding:10px 18px;
-border-radius:999px;
-background:linear-gradient(90deg,#d8f0ff,#ffd6ea);
-border:2px solid #6a59d1;
-font-weight:700;
-text-decoration:none;
-color:#2b244d;
-}
+    .nv-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
+    }
 
-</style>
+    .nv-card{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      min-height:220px;
+      background:white;
+      padding:24px;
+      border-radius:22px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.08);
+      text-decoration:none;
+      color:inherit;
+      border:1px solid rgba(255,255,255,0.7);
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
+    .nv-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 18px 36px rgba(75,46,131,0.14);
+    }
+
+    .nv-label{
+      display:inline-block;
+      margin-bottom:10px;
+      font-size:0.78rem;
+      font-weight:700;
+      letter-spacing:0.05em;
+      text-transform:uppercase;
+      color:#6b5cff;
+    }
+
+    .nv-card h3{
+      margin:0 0 10px;
+      font-size:1.3rem;
+      color:#2f2763;
+      line-height:1.3;
+    }
+
+    .nv-card p{
+      margin:0 0 16px;
+      line-height:1.7;
+      color:#4f4a77;
+      flex-grow:1;
+    }
+
+    .nv-btn,
+    .nv-card span{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:fit-content;
+      margin-top:auto;
+      padding:11px 18px;
+      border-radius:999px;
+      background:linear-gradient(90deg,#d8f0ff,#ffd6ea);
+      border:2px solid #6a59d1;
+      font-weight:700;
+      text-decoration:none;
+      color:#2b244d;
+    }
+
+    @media (max-width: 780px){
+      .nv-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nv-wrap{
+        padding:24px 14px 50px;
+      }
+
+      .nv-hero,
+      .nv-section{
+        padding:20px;
+        border-radius:24px;
+      }
+
+      .nv-card{
+        min-height:auto;
+        padding:20px;
+      }
+
+      .nv-btn,
+      .nv-card span{
+        width:100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="nv-wrap">
+  <div class="nv-wrap">
 
-<div class="nv-header">NeuroVibe Favorites</div>
+    <section class="nv-hero">
+      <p class="nv-kicker">Curated Favorites</p>
+      <h1 class="nv-header">NeuroVibe Favorites</h1>
+      <p class="nv-sub">
+        This page is a collection of products, tools, books, and resources I personally use,
+        love, or recommend. Instead of sharing links all over the place, everything lives here
+        in one simple space.
+      </p>
+    </section>
 
-<p class="nv-sub">
-This page is a collection of products, tools, and resources I personally use or recommend.
-Instead of sharing links all over the place, everything lives here in one simple space.
-</p>
+    <section class="nv-section">
+      <h2>Wellness + NeuroVibe Resources</h2>
+      <p class="nv-section-sub">
+        Explore supportive wellness picks, practical guides, and creator resources connected to the NeuroVibe world.
+      </p>
 
-<div class="nv-grid">
+      <div class="nv-grid">
+        <a href="/livegood/" class="nv-card">
+          <span class="nv-label">Wellness</span>
+          <h3>🌿 My Wellness Stack</h3>
+          <p>
+            A closer look at the wellness products I personally use in my routine.
+          </p>
+          <span>Explore Wellness Stack →</span>
+        </a>
 
-<div class="nv-card">
-<h3>🌿 My Wellness Stack</h3>
-<p>
-A closer look at the wellness products I personally use in my routine.
-</p>
-<a class="nv-btn" href="/livegood">Explore Wellness Stack</a>
-</div>
+        <a href="/guides.html" class="nv-card">
+          <span class="nv-label">Digital Support</span>
+          <h3>📚 NeuroVibe Guides</h3>
+          <p>
+            Digital tools and guides designed to support neurodivergent families.
+          </p>
+          <span>View Guides →</span>
+        </a>
 
-<div class="nv-card">
-<h3>📚 NeuroVibe Guides</h3>
-<p>
-Digital tools and guides designed to support neurodivergent families.
-</p>
-<a class="nv-btn" href="/guides.html">View Guides</a>
-</div>
+        <a href="/links.html" class="nv-card">
+          <span class="nv-label">Resources</span>
+          <h3>💻 Creator Tools</h3>
+          <p>
+            Platforms, tools, and resources I use to build NeuroVibe.
+          </p>
+          <span>See Resource Library →</span>
+        </a>
 
-<a href="https://www.amazon.com/hz/wishlist/ls/1CU6QZIGPAAHJ?ref_=wl_share"
+        <a href="https://neurovibewell.bravenlyglobal.com"
 target="_blank"
 rel="noopener sponsored nofollow"
-class="nv-favorite-card">
+class="nv-card">
+          <span class="nv-label">WellCo</span>
+          <h3>🌿 Bravenly + WellCo</h3>
+          <p>
+            Wellness support, daily staples, and feel-good products featured inside my WellCo world.
+          </p>
+          <span>Shop Bravenly Favorites →</span>
+        </a>
+      </div>
+    </section>
 
-📚 NeuroVibe Reading Shelf
-Books that helped me understand regulation, sensory needs, and parenting through connection.
-<p>
-Books that support parenting, emotional growth, nervous system
-understanding, and gentle personal development.
-</p>
+    <section class="nv-section">
+      <h2>NeuroVibe Reading Shelf</h2>
+      <p class="nv-section-sub">
+        Books that support parenting, emotional growth, nervous system understanding, sensory needs, and gentle personal development.
+      </p>
 
-<span>Browse My Favorite Books →</span>
+      <div class="nv-grid">
+        <a
+          href="https://www.amazon.com/hz/wishlist/ls/1CU6QZIGPAAHJ?ref_=wl_share"
+          target="_blank"
+          rel="noopener sponsored nofollow"
+          class="nv-card"
+        >
+          <span class="nv-label">Amazon List</span>
+          <h3>📚 NeuroVibe Reading Shelf</h3>
+          <p>
+            Browse my curated Amazon book list with supportive reads for parenting, regulation, sensory needs, and growth.
+          </p>
+          <span>Browse My Favorite Books →</span>
+        </a>
 
-</a>
+        <a
+          href="https://amzn.to/4ur57vu"
+          target="_blank"
+          rel="noopener sponsored nofollow"
+          class="nv-card"
+        >
+          <span class="nv-label">My Book</span>
+          <h3>🌙 My Kindle Book</h3>
+          <p>
+            A gentle story about growth, emotions, and understanding the natural rhythm of change.
+          </p>
+          <span>Read on Amazon →</span>
+        </a>
 
-<a href="https://amzn.to/4ur57vu"
+        <a
+          href="https://amzn.to/4s8ohoA"
+          target="_blank"
+          rel="noopener sponsored nofollow"
+          class="nv-card"
+        >
+          <span class="nv-label">Recommended Read</span>
+          <h3>🧠 Raising a Sensory Smart Child</h3>
+          <p>
+            A practical and compassionate guide for parents navigating sensory processing challenges, everyday routines, and emotional regulation.
+          </p>
+          <span>Listen on Audible →</span>
+        </a>
+      </div>
+    </section>
+<a
+href="https://amzn.to/4sHfJ7W"
 target="_blank"
 rel="noopener sponsored nofollow"
-class="nv-favorite-card">
+class="nv-card">
 
-<h3>📚 My Kindle Book</h3>
+<span class="nv-label">Recommended Read</span>
 
-<p>
-A gentle story about growth, emotions, and understanding the natural rhythm of change.
-</p>
-
-<span>Read on Amazon →</span>
-<a href="https://amzn.to/4s8ohoA"
-target="_blank"
-rel="noopener sponsored nofollow"
-class="nv-favorite-card">
-
-<h3>🧠 Raising a Sensory Smart Child</h3>
+<h3>🧠 The Explosive Child</h3>
 
 <p>
-A practical and compassionate guide for parents navigating sensory processing challenges. 
-Full of strategies for everyday routines, emotional regulation, and supporting sensory needs.
+A powerful parenting guide by Dr. Ross Greene that introduces the
+Collaborative & Proactive Solutions approach for supporting children
+who struggle with frustration, flexibility, and emotional regulation.
 </p>
 
 <span>Listen on Audible →</span>
 
 </a>
-</a>
-<div class="nv-card">
-<h3>💻 Creator Tools</h3>
-<p>
-Platforms and tools I use to build NeuroVibe.
-</p>
-<a class="nv-btn" href="/links.html">See Resource Library</a>
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </body>
 </html>

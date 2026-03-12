@@ -70,23 +70,23 @@
       box-shadow: 0 12px 24px rgba(75,46,131,0.16);
     }
 
-    .nv-nav-menu{
-      display: none !important;
-      position: absolute;
-      top: calc(100% + 10px);
-      right: 18px;
-      min-width: 250px;
-      background: rgba(255,255,255,0.97);
-      border: 1px solid rgba(255,255,255,0.65);
-      border-radius: 20px;
-      padding: 14px;
-      box-shadow: 0 18px 40px rgba(75,46,131,0.16);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      flex-direction: column;
-      gap: 4px;
-    }
-
+.nv-nav-menu{
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 18px;
+  min-width: 250px;
+  background: rgba(255,255,255,0.97);
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 18px 40px rgba(75,46,131,0.16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2000;
+}
     .nv-nav-menu.active{
       display: flex !important;
     }

@@ -181,7 +181,60 @@
       .nv-card span{
         width:100%;
       }
-    }
+    }.nv-bookshelf{
+margin-top:40px;
+text-align:center;
+}
+
+.nv-bookshelf-sub{
+max-width:620px;
+margin:0 auto 28px;
+color:#4f4a77;
+line-height:1.6;
+}
+
+.nv-books-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:26px;
+margin-top:20px;
+}
+
+.nv-book-card{
+background:white;
+padding:18px;
+border-radius:18px;
+box-shadow:0 10px 26px rgba(0,0,0,0.08);
+text-decoration:none;
+color:#2b244d;
+transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.nv-book-card:hover{
+transform:translateY(-4px);
+box-shadow:0 18px 36px rgba(75,46,131,0.18);
+}
+
+.nv-book-card img{
+width:100%;
+border-radius:10px;
+margin-bottom:12px;
+}
+
+.nv-book-card h3{
+font-size:16px;
+margin-bottom:10px;
+}
+
+.nv-book-card span{
+display:inline-block;
+padding:8px 14px;
+border-radius:999px;
+background:linear-gradient(90deg,#d8f0ff,#ffd6ea);
+border:2px solid #6a59d1;
+font-weight:700;
+font-size:13px;
+}
   </style>
 </head>
 <body>
@@ -298,13 +351,8 @@ and parenting through connection.
 
 <span>Listen on Audible →</span>
 
-</a>
-
-</div>
-
 </section>
-</a>
-</a>
+
   </div>
 
 </body>

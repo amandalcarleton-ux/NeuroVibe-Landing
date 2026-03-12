@@ -7,15 +7,14 @@
   <title>Shop | NeuroVibe</title>
   <meta
     name="description"
-    content="The NeuroVibe Shop — calm digital support for real life, curated wellness picks, and practical resources for everyday balance."
+    content="The NeuroVibe Shop — calm digital support, curated wellness picks, and practical resources for everyday balance."
   />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://neurovibe.site/shop.html" />
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
-
-  <link rel="stylesheet" href="/style.css?v=102" />
+  <link rel="stylesheet" href="/style.css?v=103" />
 
   <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -131,14 +130,26 @@
       color: #4b2e83;
     }
 
-    .nv-wellness-banner{
-      margin-top: 24px;
-      text-align: center;
+    .nv-paths-section .nv-grid{
+      align-items: stretch;
     }
 
-    .nv-wellness-banner .nv-copy{
-      max-width: 760px;
-      margin: 0 auto 16px;
+    .nv-path-card{
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nv-path-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: linear-gradient(135deg, rgba(216,240,255,0.16), rgba(255,214,234,0.18));
+      pointer-events:none;
+    }
+
+    .nv-path-card .nv-card-body{
+      position: relative;
+      z-index: 1;
     }
 
     .nv-soft-note{
@@ -206,10 +217,10 @@
     <div class="nv-container">
 
       <section class="glass nv-card nv-digital-track">
-        <p class="nv-kicker">Digital Track</p>
-        <h2 class="nv-h2">One live digital product for today</h2>
+        <p class="nv-kicker">Shop Overview</p>
+        <h2 class="nv-h2">A softer storefront for real-life support</h2>
         <p class="nv-copy nv-copy-narrow">
-          I’m currently updating the NeuroVibe shop. For now, the Calm Reset Guide is the featured live product while more items are being added.
+          The NeuroVibe Shop is designed to help you find the right kind of support without digging through clutter. Start with digital guides, browse my wellness stack, or explore curated favorites and learning tools.
         </p>
 
         <div class="nv-actions">
@@ -220,79 +231,63 @@
         </div>
 
         <div class="nv-shop-update">
-          <strong>Shop update:</strong> Additional products are being migrated into the new store. This temporary setup keeps checkout working while I finish updating everything.
+          <strong>Shop update:</strong> The digital side of NeuroVibe is still being expanded, so the Calm Reset Guide is the featured live product right now while additional resources are being added.
         </div>
 
         <p class="nv-disclosure">
-          Disclosure: This page may contain affiliate links. If you purchase through a link, I may earn a commission at no extra cost to you.
-          I only share products I genuinely recommend.
+          Disclosure: This page may contain affiliate links. If you purchase through a link, I may earn a commission at no extra cost to you. I only share products and resources that genuinely fit the NeuroVibe ecosystem.
         </p>
 
         <nav class="nv-shop-nav" aria-label="Shop sections">
-          <a href="#wellness-stack-feature">Wellness Stack</a>
-          <a href="#digital-resources">Digital Resources</a>
+          <a href="#choose-your-path">Choose Your Path</a>
           <a href="#featured">Featured This Week</a>
+          <a href="#learning-tools">Learning & Skill Building</a>
           <a href="#neuro-support">Neurodivergent Support</a>
         </nav>
       </section>
 
-      <section id="wellness-stack-feature" class="glass nv-card nv-wellness-banner">
-        <p class="nv-kicker">🌿 Personal Picks</p>
-        <h2 class="nv-h2">Explore My Wellness Stack</h2>
-        <p class="nv-copy nv-copy-narrow">
-          Looking for the wellness products I personally use and recommend? I put them all in one calm, simple place so you can browse them without digging through random links.
-        </p>
-
-        <div class="nv-actions" style="justify-content:center;">
-          <a class="nv-btn primary" href="/livegood/">See What I Use</a>
-          <a class="nv-btn ghost" href="/favorites/">Browse Favorites</a>
-        </div>
-
-        <p class="nv-soft-note">
-          This section includes curated wellness picks and partner links that fit the NeuroVibe ecosystem.
-        </p>
-      </section>
-
-      <section id="digital-resources" class="nv-section">
+      <section id="choose-your-path" class="nv-section nv-paths-section">
         <div class="nv-section-head">
-          <h2>Digital Resources</h2>
+          <h2>Choose Your Path</h2>
           <p class="nv-muted">
-            The Calm Reset Guide is the only live NeuroVibe digital product available right now while the rest of the shop is being updated.
+            Start with the area that fits what you need most right now.
           </p>
         </div>
 
         <div class="nv-grid">
-          <article class="nv-card nv-featured-card">
-            <div class="nv-card-media">
-              <img
-                src="/images/calm-reset-7page-cover.PNG"
-                alt="Calm Reset Guide 7-Page Cover"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-
+          <article class="nv-card nv-featured-card nv-path-card">
             <div class="nv-card-body">
-              <span class="nv-featured-badge">Available Now</span>
-              <h3 class="nv-card-title">Calm Reset Guide (7-Page)</h3>
+              <span class="nv-featured-badge">Digital Support</span>
+              <h3 class="nv-card-title">NeuroVibe Guides</h3>
               <p class="nv-card-text">
-                A gentle, practical reset for overstimulation, burnout, and real-life overwhelm.
-                Simple support you can come back to again and again.
+                Calm digital tools for overwhelm, nervous system support, and real-life reset routines.
               </p>
+              <a class="nv-btn nv-deal-btn" href="/guides.html">Explore Guides</a>
+              <p class="nv-card-note">Digital resources created through NeuroVibe</p>
+            </div>
+          </article>
 
-              <ul class="nv-bullets">
-                <li>Simple routines that don’t require perfection</li>
-                <li>Support for overstimulation and burnout</li>
-                <li>Clear steps you can actually use</li>
-              </ul>
+          <article class="nv-card nv-featured-card nv-path-card">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Wellness Picks</span>
+              <h3 class="nv-card-title">My Wellness Stack</h3>
+              <p class="nv-card-text">
+                The wellness products I personally use and recommend, gathered in one simple place.
+              </p>
+              <a class="nv-btn" href="/livegood/">See What I Use</a>
+              <p class="nv-card-note">Curated wellness lane inside NeuroVibe</p>
+            </div>
+          </article>
 
-              <div class="nv-btn-row">
-                <a class="nv-btn nv-deal-btn" href="https://payhip.com/b/nd98g" target="_blank" rel="noopener">
-                  Get the Calm Reset Guide – $7
-                </a>
-              </div>
-
-              <p class="nv-card-note">Secure checkout • instant digital delivery</p>
+          <article class="nv-card nv-featured-card nv-path-card">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Curated Favorites</span>
+              <h3 class="nv-card-title">Favorites Hub</h3>
+              <p class="nv-card-text">
+                Browse trusted recommendations, resources, and product picks across the NeuroVibe ecosystem.
+              </p>
+              <a class="nv-btn" href="/favorites/">Browse Favorites</a>
+              <p class="nv-card-note">A broader mix of tools, products, and resources</p>
             </div>
           </article>
         </div>
@@ -302,50 +297,39 @@
         <div class="nv-section-head">
           <h2>Featured This Week</h2>
           <p class="nv-muted">
-            A curated mix of digital support, wellness favorites, and gentle everyday tools that fit the current NeuroVibe direction.
+            A rotating mix of digital support, wellness favorites, and gentle everyday tools that fit the current NeuroVibe direction.
           </p>
         </div>
 
         <div class="nv-grid">
           <article class="nv-card nv-featured-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/cbd-life-wellness.PNG"
+                alt="CBD Life hemp wellness products"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
 
-  <div class="nv-card-media">
-    <img
-      src="/images/cbd-life-wellness.PNG"
-      alt="CBD Life hemp wellness products"
-      loading="lazy"
-      onerror="this.style.display='none';"
-    />
-  </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Wellness Pick</span>
+              <h3 class="nv-card-title">CBD Life Wellness</h3>
+              <p class="nv-card-text">
+                Hemp-based wellness products designed to support relaxation, recovery, and everyday balance.
+              </p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://imp.i295461.net/dyaQdk"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Explore CBD Life
+              </a>
+              <p class="nv-card-note">Affiliate link • Hemp-derived wellness products</p>
+            </div>
+          </article>
 
-  <div class="nv-card-body">
-
-    <span class="nv-featured-badge">Wellness Pick</span>
-
-    <h3 class="nv-card-title">CBD Life Wellness</h3>
-
-    <p class="nv-card-text">
-      Hemp-based wellness products designed to support relaxation, recovery,
-      and everyday balance. A popular option for people exploring natural
-      wellness support.
-    </p>
-
-    <a
-      class="nv-btn nv-deal-btn"
-      href="https://imp.i295461.net/dyaQdk"
-      target="_blank"
-      rel="noopener sponsored nofollow"
-    >
-      Explore CBD Life
-    </a>
-
-    <p class="nv-card-note">
-      Affiliate link • Hemp-derived wellness products
-    </p>
-
-  </div>
-
-</article>
           <article class="nv-card nv-featured-card">
             <div class="nv-card-media">
               <img
@@ -359,7 +343,7 @@
               <span class="nv-featured-badge">Featured Wellness Pick</span>
               <h3 class="nv-card-title">Organic Super Greens</h3>
               <p class="nv-card-text">
-                A simple daily greens blend I’m highlighting as part of my current wellness stack for digestion, daily support, and natural energy.
+                A daily greens blend I’m highlighting as part of my current wellness stack for digestion, daily support, and natural energy.
               </p>
               <a class="nv-btn" href="/livegood/">View Pick</a>
               <p class="nv-card-note">Curated wellness pick • Opens my Wellness Stack page first</p>
@@ -409,60 +393,111 @@
           </article>
         </div>
       </section>
-<section id="learning-tools" class="nv-section">
 
-  <div class="nv-section-head">
-    <h2>Learning & Skill Building</h2>
-    <p class="nv-muted">
-      Tools and platforms that help people build practical skills, explore new careers,
-      and create more flexibility in their lives.
+      <section id="learning-tools" class="nv-section">
+        <div class="nv-section-head">
+          <h2>Learning &amp; Skill Building</h2>
+          <p class="nv-muted">
+            Tools and platforms that help people build practical skills, explore new careers, and create more flexibility in their lives.
+          </p>
+        </div>
+
+        <div class="nv-grid">
+          <article class="nv-card nv-featured-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/codelabs-academy-promo.PNG"
+                alt="CodeLabs Academy online coding and tech bootcamps"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Skill Building</span>
+              <h3 class="nv-card-title">CodeLabs Academy</h3>
+              <p class="nv-card-text">
+                Beginner-friendly online bootcamps for people interested in software development, cybersecurity, UX/UI design, or data science.
+              </p>
+              <a
+                class="nv-btn"
+                href="https://codelabsacademy.sjv.io/aNnqoM"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Explore CodeLabs Academy
+              </a>
+              <p class="nv-card-note">Affiliate link • Learning platform recommendation</p>
+            </div>
+          </article>
+
+          <article class="nv-card nv-featured-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/ultimate-bundles-promo.png"
+                alt="Ultimate Bundles courses tools and guidance promo"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Bundle Deal</span>
+              <h3 class="nv-card-title">Ultimate Bundles</h3>
+              <p class="nv-card-text">
+                Curated bundles packed with courses, tools, and practical resources at steep discounts.
+              </p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://imp.i295461.net/dyaQdk"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Explore Ultimate Bundles
+              </a>
+              <p class="nv-card-note">Affiliate link • Limited-time bundle offers may vary</p>
+            </div>
+          </article>
+        </div>
+      </section><article class="nv-card nv-featured-card">
+
+  <div class="nv-card-media">
+    <img
+      src="/images/gearup-productivity.png"
+      alt="GearUp productivity and organization tools"
+      loading="lazy"
+      onerror="this.style.display='none';"
+    />
+  </div>
+
+  <div class="nv-card-body">
+
+    <span class="nv-featured-badge">Productivity Tools</span>
+
+    <h3 class="nv-card-title">GearUp Productivity</h3>
+
+    <p class="nv-card-text">
+      Practical digital tools designed to help with organization, productivity,
+      and building better daily systems for work and life.
     </p>
-  </div>
 
-  <div class="nv-grid">
+    <a
+      class="nv-btn nv-deal-btn"
+      href="https://gearup.sjv.io/rEQZYG"
+      target="_blank"
+      rel="noopener sponsored nofollow"
+    >
+      Explore GearUp
+    </a>
 
-    <article class="nv-card nv-featured-card">
-
-      <div class="nv-card-media">
-        <img
-          src="/images/codelabs-academy-promo.PNG"
-          alt="CodeLabs Academy online coding and tech bootcamps"
-          loading="lazy"
-          onerror="this.style.display='none';"
-        />
-      </div>
-
-      <div class="nv-card-body">
-        <span class="nv-featured-badge">Skill Building</span>
-
-        <h3 class="nv-card-title">CodeLabs Academy</h3>
-
-        <p class="nv-card-text">
-          Beginner-friendly online bootcamps for people interested in learning
-          software development, cybersecurity, UX/UI design, or data science.
-          A flexible way to start building real tech skills.
-        </p>
-
-        <a
-          class="nv-btn"
-          href="https://codelabsacademy.sjv.io/aNnqoM"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          Explore CodeLabs Academy
-        </a>
-
-        <p class="nv-card-note">
-          Affiliate link • Learning platform recommendation
-        </p>
-
-      </div>
-
-    </article>
+    <p class="nv-card-note">
+      Affiliate link • Productivity and organization tools
+    </p>
 
   </div>
 
-</section>
+</article>
+
       <section id="neuro-support" class="nv-section">
         <div class="nv-section-head">
           <h2>Neurodivergent Support</h2>

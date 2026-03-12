@@ -158,6 +158,152 @@
       font-size: 0.95rem;
       line-height: 1.7;
     }
+
+    .nv-curated-section{
+      margin-top: 28px;
+      padding: 26px;
+      border-radius: 30px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.76), rgba(240,233,255,0.72)),
+        linear-gradient(135deg, rgba(126,230,255,0.18), rgba(255,182,225,0.18));
+      border: 1px solid rgba(255,255,255,0.62);
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.10);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .nv-curated-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      padding: 18px 20px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.62);
+      border: 1px solid rgba(255,255,255,0.72);
+      box-shadow: 0 10px 24px rgba(75, 46, 131, 0.08);
+    }
+
+    .nv-curated-copy h2{
+      margin: 0 0 6px;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      color: #4b2e83;
+      letter-spacing: -0.03em;
+    }
+
+    .nv-curated-copy p{
+      margin: 0;
+      color: #4f4a72;
+      line-height: 1.7;
+      max-width: 720px;
+    }
+
+    .nv-curated-btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, #c06cff 0%, #6ec8ff 100%);
+      box-shadow: 0 12px 26px rgba(107,92,255,0.24);
+      white-space: nowrap;
+    }
+
+    .nv-curated-grid{
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .nv-curated-card{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(255,255,255,0.78);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 14px 28px rgba(75,46,131,0.10);
+    }
+
+    .nv-curated-card .nv-card-media{
+      padding: 14px;
+      background: linear-gradient(135deg, rgba(198,168,255,0.18), rgba(126,230,255,0.14));
+    }
+
+    .nv-curated-card .nv-card-media img{
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 10px 22px rgba(75,46,131,0.12);
+    }
+
+    .nv-curated-card .nv-card-body{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 18px;
+    }
+
+    .nv-curated-card .nv-featured-badge{
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .nv-curated-card .nv-card-title{
+      margin-bottom: 10px;
+    }
+
+    .nv-curated-card .nv-card-text{
+      flex-grow: 1;
+    }
+
+    .nv-curated-card .nv-btn{
+      margin-top: 8px;
+    }
+
+    .nv-curated-footer{
+      display: flex;
+      justify-content: center;
+      margin-top: 22px;
+    }
+
+    .nv-curated-footer a{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #4b2e83;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.76);
+      box-shadow: 0 10px 24px rgba(75,46,131,0.08);
+    }
+
+    @media (max-width: 1100px){
+      .nv-curated-grid{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px){
+      .nv-curated-grid{
+        grid-template-columns: 1fr;
+      }
+
+      .nv-curated-top{
+        padding: 16px;
+      }
+    }
   </style>
 </head>
 
@@ -240,8 +386,8 @@
 
         <nav class="nv-shop-nav" aria-label="Shop sections">
           <a href="#choose-your-path">Choose Your Path</a>
+          <a href="#curated-picks">Curated Everyday Picks</a>
           <a href="#featured">Featured This Week</a>
-          <a href="#parent-tools">Parent Tools</a>
           <a href="#learning-tools">Learning & Skill Building</a>
           <a href="#neuro-support">Neurodivergent Support</a>
         </nav>
@@ -291,6 +437,137 @@
               <p class="nv-card-note">A broader mix of tools, products, and resources</p>
             </div>
           </article>
+        </div>
+      </section>
+
+      <section id="curated-picks" class="nv-curated-section">
+        <div class="nv-curated-top">
+          <div class="nv-curated-copy">
+            <h2>✨ Curated Everyday Picks</h2>
+            <p>
+              A growing collection of wellness picks, family tools, and skill-building resources for everyday life.
+            </p>
+          </div>
+
+          <a href="#featured" class="nv-curated-btn">Explore All Picks →</a>
+        </div>
+
+        <div class="nv-curated-grid">
+          <article class="nv-curated-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/baby-sunnies.PNG"
+                alt="Baby Sunnies Kids Sunglasses"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">☀️ Parent Favorite</span>
+              <h3 class="nv-card-title">Baby Sunnies</h3>
+              <p class="nv-card-text">
+                UV-protected, flexible kids sunglasses for sunny family outings and everyday outdoor play.
+              </p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://babysunnies.pxf.io/YV95Nm"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Shop Baby Sunnies
+              </a>
+              <p class="nv-card-note">Affiliate link • Family outdoor essential</p>
+            </div>
+          </article>
+
+          <article class="nv-curated-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/meplus-routine-planner.PNG"
+                alt="Me+ Daily Routine Planner App"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">✅ Routine Support</span>
+              <h3 class="nv-card-title">Me+ Daily Routine Planner</h3>
+              <p class="nv-card-text">
+                Plan daily routines and habits for more supportive, organized days.
+              </p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://me.sjv.io/WOqjdG"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Build Your Daily Routine
+              </a>
+              <p class="nv-card-note">Affiliate link • Daily planning app</p>
+            </div>
+          </article>
+
+          <article class="nv-curated-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/marketxls-tool.PNG"
+                alt="MarketXLS Excel Stock Market Analysis Tool"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">📈 Financial Skill Building</span>
+              <h3 class="nv-card-title">MarketXLS</h3>
+              <p class="nv-card-text">
+                Excel add-in for real-time stock data, investing tools, and financial analysis.
+              </p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://marketxls.pxf.io/6keaVr"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Explore MarketXLS
+              </a>
+              <p class="nv-card-note">Affiliate link • Excel investing tool</p>
+            </div>
+          </article>
+
+          <article class="nv-curated-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/southwest-rewards.PNG"
+                alt="Southwest Rapid Rewards Travel Points"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">✈️ Travel Rewards</span>
+              <h3 class="nv-card-title">Southwest Rapid Rewards</h3>
+              <p class="nv-card-text">
+                Earn travel points and rewards that can help build more flexibility for future trips.
+              </p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://swa.eyjo.net/jRrE4a"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Explore Rapid Rewards
+              </a>
+              <p class="nv-card-note">Affiliate link • Travel points program</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="nv-curated-footer">
+          <a href="#featured">Browse All Curated Tools →</a>
         </div>
       </section>
 
@@ -401,77 +678,6 @@
         </div>
       </section>
 
-      <section id="parent-tools" class="nv-section">
-        <div class="nv-section-head">
-          <h2>Parent Tools</h2>
-          <p class="nv-muted">
-            Practical tools for everyday family life, routines, and supportive systems that make real life feel a little easier.
-          </p>
-        </div>
-
-        <div class="nv-grid">
-          <article class="nv-card nv-featured-card">
-            <div class="nv-card-media">
-              <img
-                src="/images/baby-sunnies.PNG"
-                alt="Baby Sunnies Kids Sunglasses"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">Parent Favorite</span>
-              <h3 class="nv-card-title">Baby Sunnies</h3>
-              <p class="nv-card-text">
-                Flexible polarized sunglasses designed for babies and kids with UV protection for everyday play, outdoor time, and sunny family outings.
-              </p>
-              <a
-                class="nv-btn nv-deal-btn"
-                href="https://babysunnies.pxf.io/YV95Nm"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Shop Baby Sunnies
-              </a>
-              <p class="nv-card-note">Affiliate link • Family outdoor essential</p>
-            </div>
-          </article>
-
-          <article class="nv-card nv-featured-card">
-            <div class="nv-card-media">
-              <img
-                src="/images/meplus-routine-planner.PNG"
-                alt="Me+ Daily Routine Planner App"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">Routine Support</span>
-              <h3 class="nv-card-title">Me+ Daily Routine Planner</h3>
-              <p class="nv-card-text">
-                A daily routine planner and habit tracker designed to help build healthier habits, organize the day, and create more supportive structure.
-              </p>
-              <a
-                class="nv-btn nv-deal-btn"
-                href="https://me.sjv.io/WOqjdG"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Try Me+
-              </a>
-              <p class="nv-card-note">Affiliate link • Routines, habits, and daily planning</p>
-            </div>
-          </article>
-        </div>
-
-        <p class="nv-soft-note">
-          This section is growing intentionally with practical family tools, routine supports, and gentle everyday essentials that fit the NeuroVibe ecosystem.
-        </p>
-      </section>
-
       <section id="learning-tools" class="nv-section">
         <div class="nv-section-head">
           <h2>Learning &amp; Skill Building</h2>
@@ -512,44 +718,71 @@
               </p>
             </div>
           </article>
-<article class="nv-card nv-featured-card">
 
-<div class="nv-card-media">
-<img
-src="/images/marketxls-tool.PNG"
-alt="MarketXLS Excel Stock Market Analysis Tool"
-loading="lazy"
-onerror="this.style.display='none';"
-/>
-</div>
+          <article class="nv-card nv-featured-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/marketxls-tool.PNG"
+                alt="MarketXLS Excel Stock Market Analysis Tool"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
 
-<div class="nv-card-body">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Financial Skill Building</span>
+              <h3 class="nv-card-title">MarketXLS</h3>
+              <p class="nv-card-text">
+                An advanced Excel add-in that helps investors analyze stocks, track portfolios, and pull real-time market data directly into spreadsheets.
+              </p>
 
-<span class="nv-featured-badge">Financial Skill Building</span>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://marketxls.pxf.io/6keaVr"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Explore MarketXLS
+              </a>
 
-<h3 class="nv-card-title">MarketXLS</h3>
+              <p class="nv-card-note">
+                Affiliate link • Excel investing and financial analysis tool
+              </p>
+            </div>
+          </article>
 
-<p class="nv-card-text">
-An advanced Excel add-in that helps investors analyze stocks, track portfolios,
-and pull real-time market data directly into spreadsheets.
-</p>
+          <article class="nv-card nv-featured-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/southwest-rewards.PNG"
+                alt="Southwest Rapid Rewards Travel Points"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
 
-<a
-class="nv-btn nv-deal-btn"
-href="https://marketxls.pxf.io/6keaVr"
-target="_blank"
-rel="noopener sponsored nofollow"
->
-Explore MarketXLS
-</a>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">Travel Rewards</span>
+              <h3 class="nv-card-title">Southwest Rapid Rewards</h3>
+              <p class="nv-card-text">
+                Earn or purchase Rapid Rewards points that can be used toward flights, travel rewards, and added flexibility for future trips.
+              </p>
 
-<p class="nv-card-note">
-Affiliate link • Excel investing and financial analysis tool
-</p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://swa.eyjo.net/jRrE4a"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Explore Rapid Rewards
+              </a>
 
-</div>
+              <p class="nv-card-note">
+                Affiliate link • Travel points and rewards program
+              </p>
+            </div>
+          </article>
 
-</article>
           <article class="nv-card nv-featured-card">
             <div class="nv-card-media">
               <img

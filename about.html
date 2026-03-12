@@ -7,7 +7,7 @@
   <title>About | NeuroVibe</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=101" />
+  <link rel="stylesheet" href="/style.css?v=102" />
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
@@ -23,6 +23,7 @@
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255,255,255,0.45);
     box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
+    overflow: visible;
   }
 
   .nv-nav-container{
@@ -33,6 +34,7 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    overflow: visible;
   }
 
   .nv-logo{
@@ -82,10 +84,11 @@
     -webkit-backdrop-filter: blur(14px);
     flex-direction: column;
     gap: 4px;
+    z-index: 2000;
   }
 
   .nv-nav-menu.active{
-    display: flex;
+    display: flex !important;
   }
 
   .nv-nav-menu a{
@@ -153,47 +156,47 @@
       overflow-wrap: break-word;
     }
   }
-  /* STRONGER ABOUT MOBILE FIX */
-@media (max-width: 768px){
-  .nv-about .nv-grid{
-    grid-template-columns: 1fr !important;
-  }
 
-  .nv-about .nv-card,
-  .nv-about .nv-card.featured{
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
+  @media (max-width: 768px){
+    .nv-about .nv-grid{
+      grid-template-columns: 1fr !important;
+    }
 
-  .nv-about .nv-card-media,
-  .nv-about .nv-card.featured .nv-card-media{
-    display: block !important;
-    width: 100% !important;
-    max-width: 320px !important;
-    margin: 0 auto 16px !important;
-  }
+    .nv-about .nv-card,
+    .nv-about .nv-card.featured{
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
 
-  .nv-about .nv-card-body,
-  .nv-about .nv-card.featured .nv-card-body{
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 16px !important;
-  }
+    .nv-about .nv-card-media,
+    .nv-about .nv-card.featured .nv-card-media{
+      display: block !important;
+      width: 100% !important;
+      max-width: 320px !important;
+      margin: 0 auto 16px !important;
+    }
 
-  .nv-about .nv-family-photo{
-    width: 100% !important;
-    height: auto !important;
-  }
+    .nv-about .nv-card-body,
+    .nv-about .nv-card.featured .nv-card-body{
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 16px !important;
+    }
 
-  .nv-about h2,
-  .nv-about p,
-  .nv-about li{
-    overflow-wrap: anywhere;
-    word-break: normal;
+    .nv-about .nv-family-photo{
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .nv-about h2,
+    .nv-about p,
+    .nv-about li{
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
   }
-}
 </style>
 </head>
 
@@ -203,21 +206,22 @@
     <div class="nv-nav-container">
       <a href="/index.html" class="nv-logo">NeuroVibe</a>
 
-      <button class="nv-hamburger" id="nv-menu-toggle" type="button" aria-label="Open menu">
+      <button
+        class="nv-hamburger"
+        id="nv-menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nv-nav"
+      >
         ☰
       </button>
 
-  <nav class="nv-nav-menu" id="nv-nav">
+      <nav class="nv-nav-menu" id="nv-nav">
         <a href="/index.html">Home</a>
         <a href="/start-here.html">Start Here</a>
-        <a href="/guides.html">Guides</a>
-        <a href="/shop.html">Shop</a>
-        <a href="/beautyhub.html">Beauty Hub</a>
-        <a href="/wellco.html">WellCo</a>
-        <a href="/ROTM/rhythm-of-the-moon.html">🌙 Rhythm of the Moon</a>
-        <a href="/links.html">Resources</a>
+        <a href="https://store.neurovibe.site" target="_blank" rel="noopener">Shop</a>
         <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -264,7 +268,7 @@
             </div>
 
             <div class="nv-actions" style="justify-content:center;">
-              <a class="nv-btn primary" href="/shop.html#digital-resources">
+              <a class="nv-btn primary" href="https://store.neurovibe.site/b/2FfBV" target="_blank" rel="noopener">
                 Get the Free Reset
               </a>
 
@@ -367,6 +371,16 @@
           </a>
         </section>
 
+        <section class="glass" style="padding:22px; text-align:center; margin-top:18px;">
+          <h2 class="nv-h2">Contact</h2>
+          <p>
+            Questions, collaborations, or partnership inquiries? Reach out and I’d love to connect.
+          </p>
+          <p style="margin-bottom:0;">
+            <a href="mailto:hello@neurovibe.site">hello@neurovibe.site</a>
+          </p>
+        </section>
+
       </section>
 
     </div>
@@ -378,12 +392,14 @@
 
     if (toggle && nav) {
       toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        const isOpen = nav.classList.toggle("active");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
 
       document.addEventListener("click", (e) => {
         if (!toggle.contains(e.target) && !nav.contains(e.target)) {
           nav.classList.remove("active");
+          toggle.setAttribute("aria-expanded", "false");
         }
       });
     }

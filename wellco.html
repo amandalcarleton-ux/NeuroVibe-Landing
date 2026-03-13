@@ -359,7 +359,50 @@
       .wellco-btn{
         width: 100%;
       }
-    }
+    }<style>
+  .wellco-card{
+    background: rgba(255,255,255,0.88);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 14px 30px rgba(75, 46, 131, 0.10);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .wellco-card img{
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  .wellco-card h3{
+    margin: 18px 18px 10px;
+    font-size: 1.08rem;
+    color: #4b2e83;
+  }
+
+  .wellco-card p{
+    margin: 0 18px 18px;
+    flex-grow: 1;
+    line-height: 1.65;
+  }
+
+  .wellco-btn{
+    display: inline-block;
+    margin: 0 18px 20px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #4b2e83;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
+  }
+</style>
   </style>
 </head>
 

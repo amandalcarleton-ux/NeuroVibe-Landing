@@ -25,6 +25,15 @@
   </script>
 
   <style>
+    html, body{
+      margin: 0;
+      padding: 0;
+    }
+
+    #nav-placeholder{
+      width: 100%;
+    }
+
     .nv-header{
       position: sticky;
       top: 0;
@@ -906,6 +915,9 @@
             <a href="/about.html">About</a>
             <a href="/contact.html">Contact</a>
           </div>
+          <p class="nv-footer-mini" style="margin-top:14px;">
+            © <span id="year"></span> NeuroVibe
+          </p>
         </div>
       </footer>
 
@@ -913,44 +925,32 @@
   </main>
 
   <script>
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
-
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("active");
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-<script>
-fetch("/components/nav.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("nav-placeholder").innerHTML = data;
 
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
 
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
         }
       });
-    }
-  });
-</script>
+  </script>
 </body>
 </html>

@@ -43,8 +43,16 @@ content="Browse NeuroVibe guides and toolkits for regulation, CPS strategies, me
 box-sizing:border-box;
 }
 
-body.nv-y2k.guides-page{
+html, body{
 margin:0;
+padding:0;
+}
+
+#nav-placeholder{
+width:100%;
+}
+
+body.nv-y2k.guides-page{
 font-family:"Poppins",sans-serif;
 color:var(--nv-ink);
 background:
@@ -487,13 +495,7 @@ grid-template-columns:1fr;
 
 <body class="nv-y2k guides-page">
 
-<header class="nv-header">
-<div class="nv-nav-container">
-
-<a href="/index.html" class="nv-logo">NeuroVibe</a>
 <div id="nav-placeholder"></div>
-</div>
-</header>
 
 <section class="nv-guides-hero">
 
@@ -904,24 +906,6 @@ document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 <script>
-const toggle = document.getElementById("nv-menu-toggle");
-const nav = document.getElementById("nv-nav");
-
-if(toggle && nav){
-  toggle.addEventListener("click", () => {
-    const isOpen = nav.classList.toggle("active");
-    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  });
-
-  document.addEventListener("click", (e) => {
-    if(!toggle.contains(e.target) && !nav.contains(e.target)){
-      nav.classList.remove("active");
-      toggle.setAttribute("aria-expanded","false");
-    }
-  });
-}
-</script>
-<script>
 fetch("/components/nav.html")
   .then(response => response.text())
   .then(data => {
@@ -932,12 +916,14 @@ fetch("/components/nav.html")
 
     if (toggle && nav) {
       toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        const isOpen = nav.classList.toggle("active");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
       });
 
       document.addEventListener("click", (e) => {
         if (!toggle.contains(e.target) && !nav.contains(e.target)) {
           nav.classList.remove("active");
+          toggle.setAttribute("aria-expanded","false");
         }
       });
     }

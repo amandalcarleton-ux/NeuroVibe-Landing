@@ -50,7 +50,9 @@
     }
 
     *{box-sizing:border-box;}
-    html{scroll-behavior:smooth;}
+    html{
+      scroll-behavior:smooth;
+    }
 
     body{
       margin:0;
@@ -61,6 +63,10 @@
         radial-gradient(circle at top right, rgba(255,215,238,0.65), rgba(255,255,255,0) 28%),
         linear-gradient(180deg, #efeaff 0%, #b79cff 48%, #9a82ff 100%);
       min-height:100vh;
+    }
+
+    #nav-placeholder{
+      width:100%;
     }
 
     a{
@@ -89,44 +95,84 @@
       border-bottom:1px solid rgba(255,255,255,0.32);
     }
 
-    .nv-nav{
+    .nv-nav-container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:16px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:16px;
+      position:relative;
     }
 
-    .nv-brand{
-      font-size:clamp(1.7rem, 4vw, 2.5rem);
-      font-weight:800;
-      color:var(--nv-purple-deep);
+    .nv-logo{
+      font-size:1.8rem;
+      font-weight:700;
       letter-spacing:-0.03em;
-      line-height:1;
+      color:var(--nv-purple-deep);
+      text-decoration:none;
     }
 
-    .nv-nav-links{
+    .nv-hamburger{
+      width:52px;
+      height:52px;
+      border:1px solid rgba(255,255,255,0.55);
+      border-radius:16px;
+      background:rgba(255,255,255,0.34);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
       display:flex;
       align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
+      justify-content:center;
+      font-size:28px;
+      line-height:1;
+      color:var(--nv-purple-deep);
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(75,46,131,0.12);
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .nv-pill-link{
-      padding:12px 16px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.55);
-      border:1px solid rgba(255,255,255,0.45);
-      font-size:0.95rem;
+    .nv-hamburger:hover{
+      transform:translateY(-1px);
+      box-shadow:0 12px 24px rgba(75,46,131,0.16);
+    }
+
+    .nv-nav-menu{
+      display:none;
+      position:absolute;
+      top:calc(100% + 10px);
+      right:18px;
+      min-width:240px;
+      background:rgba(255,255,255,0.96);
+      border:1px solid rgba(255,255,255,0.65);
+      border-radius:20px;
+      padding:14px;
+      box-shadow:0 18px 40px rgba(75,46,131,0.16);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      flex-direction:column;
+      gap:4px;
+      z-index:2000;
+    }
+
+    .nv-nav-menu.active{
+      display:flex;
+    }
+
+    .nv-nav-menu a{
+      display:block;
+      padding:12px 14px;
+      border-radius:12px;
+      text-decoration:none;
+      font-size:1rem;
       font-weight:600;
-      color:var(--nv-text);
-      transition:transform .22s ease, box-shadow .22s ease, background .22s ease;
+      color:#101018;
+      transition:background 0.2s ease, color 0.2s ease;
     }
 
-    .nv-pill-link:hover{
-      transform:translateY(-2px);
-      box-shadow:0 12px 24px rgba(56,39,119,.12);
-      background:rgba(255,255,255,0.72);
+    .nv-nav-menu a:hover{
+      background:rgba(198,168,255,0.18);
+      color:var(--nv-purple-deep);
     }
 
     .nv-page{
@@ -365,18 +411,6 @@
       color:var(--nv-text);
     }
 
-    .nv-feature-list{
-      margin:14px 0 0;
-      padding-left:18px;
-      color:var(--nv-muted);
-      line-height:1.8;
-      font-size:0.95rem;
-    }
-
-    .nv-feature-list li{
-      margin-bottom:2px;
-    }
-
     .nv-product-button{
       margin-top:18px;
     }
@@ -473,43 +507,15 @@
         grid-template-columns:1fr;
       }
 
-      .nv-nav{
-        align-items:flex-start;
-        flex-direction:column;
-      }
-
-      .nv-nav-links{
-        width:100%;
-        justify-content:flex-start;
-      }
-
-      .nv-pill-link{
-        padding:10px 14px;
-        font-size:0.9rem;
-      }
-
       .nv-btn{
         width:100%;
       }
     }
   </style>
 </head>
-<body>
-  <header class="nv-header">
-    <div class="nv-wrap">
-      <nav class="nv-nav" aria-label="Primary">
-        <a class="nv-brand" href="/">NeuroVibe</a>
+<body class="nv-y2k">
 
-        <div class="nv-nav-links">
-          <a class="nv-pill-link" href="/">Home</a>
-          <a class="nv-pill-link" href="/favorites/">Favorites</a>
-          <a class="nv-pill-link" href="/links.html">Resource Library</a>
-          <a class="nv-pill-link" href="/guides.html">Guides</a>
-          <a class="nv-pill-link" href="/start-here.html">Start Here</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+  <div id="nav-placeholder"></div>
 
   <main class="nv-page">
     <div class="nv-wrap">
@@ -890,12 +896,41 @@
 
       <footer class="nv-footer">
         <p>
-          © NeuroVibe • Wellness shared with care •
+          © <span id="year"></span> NeuroVibe • Wellness shared with care •
           <a href="/links.html">Visit the Resource Library</a>
         </p>
       </footer>
 
     </div>
   </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
+
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+  </script>
 </body>
 </html>

@@ -262,6 +262,7 @@
     .wellco-card p{
       margin: 0 18px 18px;
       flex-grow: 1;
+      line-height: 1.65;
     }
 
     .wellco-btn{
@@ -359,50 +360,7 @@
       .wellco-btn{
         width: 100%;
       }
-    }<style>
-  .wellco-card{
-    background: rgba(255,255,255,0.88);
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 14px 30px rgba(75, 46, 131, 0.10);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .wellco-card img{
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    display: block;
-  }
-
-  .wellco-card h3{
-    margin: 18px 18px 10px;
-    font-size: 1.08rem;
-    color: #4b2e83;
-  }
-
-  .wellco-card p{
-    margin: 0 18px 18px;
-    flex-grow: 1;
-    line-height: 1.65;
-  }
-
-  .wellco-btn{
-    display: inline-block;
-    margin: 0 18px 20px;
-    padding: 12px 18px;
-    border-radius: 999px;
-    background: #4b2e83;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
-  }
-</style>
+    }
   </style>
 </head>
 
@@ -506,7 +464,12 @@
 
           <div class="wellco-grid">
             <div class="wellco-card">
-              <img src="/images/Bravenly/balance-support.PNG" alt="Bravenly Balance Daily Nutrition Support" />
+              <img
+                src="/images/Bravenly/balance-support.PNG"
+                alt="Bravenly Balance Daily Nutrition Support"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
               <h3>Balance 🌿</h3>
               <p>
                 Balance is one of the easiest places to start if you want a simple foundation product
@@ -525,101 +488,154 @@
         </section>
 
         <section class="wellco-stack-group">
-  <div class="wellco-stack-group-head">
-    <h3>Energy + Focus</h3>
-    <p>For mornings or busy parts of the day when you want support for momentum and routine.</p>
-  </div>
+          <div class="wellco-stack-group-head">
+            <h3>Energy + Focus</h3>
+            <p>For mornings or busy parts of the day when you want support for momentum and routine.</p>
+          </div>
 
-  <div class="wellco-grid">
-    <div class="wellco-card">
-      <img
-        src="/images/Bravenly/brew-extreme.PNG"
-        alt="Bravenly Brew Extreme Nootropic Coffee"
-        loading="lazy"
-        onerror="this.style.display='none';"
-      />
-      <h3>Brew Extreme ☕</h3>
-      <p>
-        Brew Extreme fits naturally into a morning rhythm for people who enjoy coffee and want
-        an option that feels easy to work into their day.
-      </p>
-      <a
-        href="https://neurovibewell.bravenlyglobal.com/brew-extreme/"
-        class="wellco-btn"
-        target="_blank"
-        rel="noopener sponsored nofollow"
-      >
-        Browse Brew Extreme
-      </a>
-    </div>
+          <div class="wellco-grid">
+            <div class="wellco-card">
+              <img
+                src="/images/Bravenly/brew-extreme.PNG"
+                alt="Bravenly Brew Extreme Nootropic Coffee"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+              <h3>Brew Extreme ☕</h3>
+              <p>
+                Brew Extreme fits naturally into a morning rhythm for people who enjoy coffee and want
+                an option that feels easy to work into their day.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com/brew-extreme/"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Browse Brew Extreme
+              </a>
+            </div>
 
-  <div class="wellco-card">
-  <img
-    src="/images/Bravenly/rush-support.PNG"
-    alt="Bravenly Rush Blue Raspberry Energy Mix"
-    loading="lazy"
-    onerror="this.style.display='none';"
-  />
-  <h3>Bravenly Rush ⚡</h3>
-  <p>
-    A blue raspberry energy drink mix designed to support focus, steady energy,
-    and daily performance.
-  </p>
-  <a
-    href="https://neurovibewell.bravenlyglobal.com/blue-raspberry-rush/"
-    class="wellco-btn"
-    target="_blank"
-    rel="noopener sponsored nofollow"
-  >
-    Browse Bravenly Rush
-  </a>
-</div>
+            <div class="wellco-card">
+              <img
+                src="/images/Bravenly/rush-support.PNG"
+                alt="Bravenly Rush Blue Raspberry Energy Mix"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+              <h3>Bravenly Rush ⚡</h3>
+              <p>
+                A blue raspberry energy drink mix designed to support focus, steady energy,
+                and daily performance.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com/blue-raspberry-rush/"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Browse Bravenly Rush
+              </a>
+            </div>
 
-    <div class="wellco-card">
-      <img
-        src="/images/Bravenly/rush-extreme.PNG"
-        alt="Bravenly Rush Extreme energy support"
-        loading="lazy"
-        onerror="this.style.display='none';"
-      />
-      <h3>Rush Extreme ⚡</h3>
-      <p>
-        Rush Extreme is a stronger energy-and-focus option for people building a more layered
-        daytime wellness stack.
-      </p>
-      <a
-        href="https://neurovibewell.bravenlyglobal.com/bravenly-rush-extreme/"
-        class="wellco-btn"
-        target="_blank"
-        rel="noopener sponsored nofollow"
-      >
-        Browse Rush Extreme
-      </a>
-    </div>
+            <div class="wellco-card">
+              <img
+                src="/images/Bravenly/rush-extreme.PNG"
+                alt="Bravenly Rush Extreme energy support"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+              <h3>Rush Extreme ⚡</h3>
+              <p>
+                Rush Extreme is a stronger energy-and-focus option for people building a more layered
+                daytime wellness stack.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com/bravenly-rush-extreme/"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Browse Rush Extreme
+              </a>
+            </div>
 
-    <div class="wellco-card">
-      <img
-        src="/images/Bravenly/ignite.PNG"
-        alt="Bravenly Ignite metabolism support"
-        loading="lazy"
-        onerror="this.style.display='none';"
-      />
-      <h3>Ignite 🔥</h3>
-      <p>
-        Ignite fits best as part of a daytime routine for people building out a more layered
-        wellness stack.
-      </p>
-      <a
-        href="https://neurovibewell.bravenlyglobal.com/bravenly-ignite/"
-        class="wellco-btn"
-        target="_blank"
-        rel="noopener sponsored nofollow"
-      >
-        Browse Ignite
-      </a>
-    </div>
-  </div>
-</section>
+            <div class="wellco-card">
+              <img
+                src="/images/Bravenly/ignite.PNG"
+                alt="Bravenly Ignite metabolism support"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+              <h3>Ignite 🔥</h3>
+              <p>
+                Ignite fits best as part of a daytime routine for people building out a more layered
+                wellness stack.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com/bravenly-ignite/"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Browse Ignite
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="wellco-stack-group">
+          <div class="wellco-stack-group-head">
+            <h3>Hydration + Daily Support</h3>
+            <p>Supportive everyday products that fit into a practical routine.</p>
+          </div>
+
+          <div class="wellco-grid">
+            <div class="wellco-card">
+              <img
+                src="/images/Bravenly/hydrate-support.PNG"
+                alt="Bravenly Hydrate Electrolyte Support"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+              <h3>Hydrate 💧</h3>
+              <p>
+                Hydrate is one of the easiest products to work into a daily routine, especially on busy days
+                when replenishment and consistency matter.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com/hydrate-my/"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Browse Hydrate
+              </a>
+            </div>
+
+            <div class="wellco-card">
+              <img
+                src="/images/Bravenly/gold-support.PNG"
+                alt="Bravenly Gold turmeric wellness support"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+              <h3>Gold ✨</h3>
+              <p>
+                Gold fits into the daily support side of a wellness stack and works well for people
+                who want to build a more rounded routine over time.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com/bravenly-gold/"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Browse Gold
+              </a>
+            </div>
+          </div>
+        </section>
 
         <section class="wellco-stack-group">
           <div class="wellco-stack-group-head">
@@ -629,7 +645,12 @@
 
           <div class="wellco-grid">
             <div class="wellco-card">
-              <img src="/images/Bravenly/bravenly-calm.PNG" alt="Bravenly Calm stress and mood support" />
+              <img
+                src="/images/Bravenly/bravenly-calm.PNG"
+                alt="Bravenly Calm stress and mood support"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
               <h3>Calm 🌙</h3>
               <p>
                 Calm fits naturally into an evening or wind-down routine for people who want a softer,
@@ -655,7 +676,12 @@
 
           <div class="wellco-grid">
             <div class="wellco-card">
-              <img src="/images/Bravenly/IMG_7946.jpeg" alt="NeuroVibe WellCo Bravenly shop preview" />
+              <img
+                src="/images/Bravenly/IMG_7946.jpeg"
+                alt="NeuroVibe WellCo Bravenly shop preview"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
               <h3>Full Bravenly Wellness Page 🛍️</h3>
               <p>
                 Browse the full lineup, explore product details, and shop the collection in one place.

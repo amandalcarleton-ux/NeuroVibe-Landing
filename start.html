@@ -30,6 +30,10 @@
       color:#101018;
     }
 
+    #nav-placeholder{
+      width:100%;
+    }
+
     .nv-header{
       position:sticky;
       top:0;
@@ -552,7 +556,7 @@
 
 <body class="nv-y2k">
 
-<div id="nav-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <section class="nv-page-hero">
     <img
@@ -778,10 +782,10 @@
           <span>Open Resources →</span>
         </a>
 
-        <a href="/about.html" class="nv-link-card">
+        <a href="/contact.html" class="nv-link-card">
           <h3>💌 Contact</h3>
-          <p>Reach out for support, questions, or collaboration opportunities through the About page.</p>
-          <span>Go to About →</span>
+          <p>Reach out for support, questions, or collaboration opportunities.</p>
+          <span>Contact NeuroVibe →</span>
         </a>
 
         <a href="/index.html" class="nv-link-card">
@@ -799,48 +803,36 @@
   </main>
 
   <footer class="nv-footer">
-    <p>© 2026 NeuroVibe</p>
+    <p>© <span id="year"></span> NeuroVibe</p>
   </footer>
 
   <script>
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
-
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("active");
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      });
-    }
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-<script>
-fetch("/components/nav.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("nav-placeholder").innerHTML = data;
 
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
 
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
         }
       });
-    }
-  });
-</script>
+  </script>
 </body>
 </html>

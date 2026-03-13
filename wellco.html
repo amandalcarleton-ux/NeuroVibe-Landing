@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NeuroVibe WellCo | Wellness for Modern Families</title>
+  <title>NeuroVibe WellCo | My Wellness Stack</title>
   <meta
     name="description"
-    content="NeuroVibe WellCo shares simple wellness tools, routines, and supportive products that help modern families build steadier energy, nervous system balance, and everyday wellness."
+    content="Explore Amanda's wellness stack through NeuroVibe WellCo. Simple routines, favorite products, and supportive wellness tools for energy, hydration, focus, and everyday balance."
   />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=102" />
+  <link rel="stylesheet" href="/style.css?v=103" />
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
@@ -127,7 +127,8 @@
     }
 
     .wellco-intro,
-    .wellco-disclaimer{
+    .wellco-disclaimer,
+    .wellco-subcopy{
       max-width: 760px;
       margin: 0 auto 16px;
       text-align: center;
@@ -138,7 +139,9 @@
       opacity: 0.84;
     }
 
-    .wellco-hero-cta{
+    .wellco-hero-cta,
+    .wellco-start,
+    .wellco-routine{
       max-width: 900px;
       margin: 28px auto 34px;
       padding: 28px 22px;
@@ -148,12 +151,23 @@
       text-align: center;
     }
 
-    .wellco-hero-cta h3{
+    .wellco-routine{
+      background: rgba(255,255,255,0.78);
+      text-align: left;
+      max-width: 850px;
+      box-shadow: 0 14px 34px rgba(75, 46, 131, 0.08);
+    }
+
+    .wellco-hero-cta h3,
+    .wellco-start h3,
+    .wellco-routine h3,
+    .wellco-stack-group h3{
       margin-bottom: 12px;
       color: #4b2e83;
     }
 
-    .wellco-hero-cta p{
+    .wellco-hero-cta p,
+    .wellco-start p{
       max-width: 700px;
       margin: 0 auto 18px;
     }
@@ -198,24 +212,21 @@
       transform: translateY(-2px);
     }
 
-    .wellco-routine{
-      max-width: 850px;
-      margin: 0 auto 34px;
-      padding: 24px 22px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.72);
-      box-shadow: 0 14px 34px rgba(75, 46, 131, 0.08);
-    }
-
-    .wellco-routine h3{
-      margin-bottom: 10px;
-      color: #4b2e83;
-    }
-
-    .wellco-routine-list{
+    .wellco-routine-list,
+    .wellco-start-list{
       margin: 16px 0 0;
       padding-left: 18px;
       line-height: 1.8;
+    }
+
+    .wellco-stack-group{
+      margin-top: 40px;
+    }
+
+    .wellco-stack-group-head{
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 20px;
     }
 
     .wellco-grid{
@@ -333,7 +344,9 @@
     }
 
     @media (max-width: 640px){
-      .wellco-hero-cta{
+      .wellco-hero-cta,
+      .wellco-start,
+      .wellco-routine{
         padding: 22px 16px;
       }
 
@@ -368,29 +381,28 @@
     <div class="nv-wrap">
 
       <section class="wellco-section">
-        <h2 class="wellco-title">Daily Wellness Supports I Personally Use 🌿</h2>
+        <h2 class="wellco-title">My Wellness Stack 🌿</h2>
 
         <p class="wellco-intro">
-          NeuroVibe WellCo is my wellness corner for simple routines, supportive products,
-          and everyday tools that help me care for my energy, focus, hydration, and nervous system.
+          Welcome to my wellness stack through NeuroVibe WellCo. This is where I share the products
+          I personally use and rotate into my routine for energy, hydration, focus, and everyday support.
         </p>
 
-        <p class="wellco-intro">
-          Instead of sending you straight to a generic company storefront, this page helps you
-          understand what I use, why I use it, and where it may fit into a realistic daily rhythm.
+        <p class="wellco-subcopy">
+          I like keeping things simple, realistic, and easy to fit into real life, so this page is
+          organized more like a daily rhythm than a generic storefront.
         </p>
 
         <p class="wellco-disclaimer">
-          Transparency matters to me. Some products shared here are partner links. I only share
-          products I personally use, genuinely like, or feel comfortable recommending as part of
-          a balanced wellness routine.
+          Transparency matters to me. Some links on this page are partner links. I only share products
+          I personally use, genuinely enjoy, or feel comfortable recommending as part of a balanced wellness routine.
         </p>
 
         <section class="wellco-hero-cta">
-          <h3>Explore My Bravenly Wellness Page</h3>
+          <h3>Browse My Bravenly Wellness Page</h3>
           <p>
-            When you’re ready to browse the full collection, visit my Bravenly page for product details,
-            shopping options, and the current wellness lineup.
+            If you already know what you’re looking for, you can head straight to my Bravenly page
+            to browse the full collection and current product lineup.
           </p>
 
           <div class="wellco-btn-row">
@@ -400,7 +412,7 @@
               target="_blank"
               rel="noopener sponsored"
             >
-              Visit My Bravenly Page →
+              Browse My Wellness Stack →
             </a>
 
             <a
@@ -412,129 +424,216 @@
           </div>
         </section>
 
-        <section class="wellco-routine">
-          <h3>Build Your Daily Wellness Routine ✨</h3>
-
+        <section class="wellco-start">
+          <h3>New Here? Start Simple ✨</h3>
           <p>
-            Many of these wellness tools work best as part of a simple, repeatable rhythm. Here’s one
-            example of how someone might build a supportive daily wellness stack:
+            If you’re building a basic routine, I’d start with a few foundation products first and
+            keep it easy. These are great starting points for a simple daily stack:
+          </p>
+
+          <ul class="wellco-start-list">
+            <li>🌿 Balance for a foundational daily routine</li>
+            <li>💧 Hydrate for hydration and replenishment</li>
+            <li>☕ Brew Extreme or ⚡ Rush for energy and focus support</li>
+          </ul>
+        </section>
+
+        <section class="wellco-routine">
+          <h3>How I Think About a Simple Daily Stack</h3>
+          <p>
+            Many of these products fit best into a repeatable daily rhythm. Here’s one simple way to
+            think about building a wellness stack:
           </p>
 
           <ul class="wellco-routine-list">
             <li>🌿 Morning foundation — Balance</li>
-            <li>⚡ Energy + focus — Rush or Brew Extreme</li>
-            <li>🔥 Metabolism support — Ignite</li>
-            <li>💧 Hydration + recovery — Hydrate</li>
-            <li>✨ Gut + immune support — Gold</li>
-            <li>🌙 Stress + evening support — Calm</li>
+            <li>☕ Energy + focus — Brew Extreme or Rush</li>
+            <li>🔥 Midday metabolism support — Ignite</li>
+            <li>💧 Hydration + replenishment — Hydrate</li>
+            <li>✨ Daily gut + immune support — Gold</li>
+            <li>🌙 Evening wind-down support — Calm</li>
           </ul>
         </section>
 
-        <div class="wellco-grid">
-
-          <div class="wellco-card">
-            <img src="/images/Bravenly/balance-support.PNG" alt="Bravenly Balance Daily Nutrition Support" />
-            <h3>Daily Nutrition + Whole Body Support 🌿</h3>
-            <p>
-              Balance is a daily nutrition blend designed to support gut health, immune function,
-              energy, and overall wellness in one simple routine.
-            </p>
-            <a
-              href="https://neurovibewell.bravenlyglobal.com"
-              class="wellco-btn"
-              target="_blank"
-              rel="noopener sponsored"
-            >
-              Shop Through My Bravenly Page
-            </a>
+        <section class="wellco-stack-group">
+          <div class="wellco-stack-group-head">
+            <h3>Morning Foundation</h3>
+            <p>Start with supportive basics that fit into a steady morning routine.</p>
           </div>
 
-          <div class="wellco-card">
-            <img src="/images/Bravenly/brew-extreme.PNG" alt="Bravenly Brew Extreme Nootropic Coffee" />
-            <h3>Focus + Coffee Support ☕</h3>
-            <p>
-              Brew Extreme is a mushroom-infused coffee option created to support smoother energy,
-              focus, and daily momentum with functional ingredients.
-            </p>
-            <a
-              href="https://neurovibewell.bravenlyglobal.com"
-              class="wellco-btn"
-              target="_blank"
-              rel="noopener sponsored"
-            >
-              Shop Through My Bravenly Page
-            </a>
+          <div class="wellco-grid">
+            <div class="wellco-card">
+              <img src="/images/Bravenly/balance-support.PNG" alt="Bravenly Balance Daily Nutrition Support" />
+              <h3>Balance 🌿</h3>
+              <p>
+                Balance is one of the easiest places to start if you want a simple foundation product
+                in your daily routine. I think of it as part of the “start here” layer of a wellness stack.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Browse Balance
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="wellco-stack-group">
+          <div class="wellco-stack-group-head">
+            <h3>Energy + Focus</h3>
+            <p>For mornings or busy parts of the day when you want support for momentum and routine.</p>
           </div>
 
-          <div class="wellco-card">
-            <img src="/images/Bravenly/hydrate-support.PNG" alt="Bravenly Hydrate Electrolyte Support" />
-            <h3>Hydration + Recovery Support 💧</h3>
-            <p>
-              Hydrate supports daily hydration, recovery, and steady energy with a blend designed
-              for busy days, replenishment, and routine support.
-            </p>
-            <a
-              href="https://neurovibewell.bravenlyglobal.com"
-              class="wellco-btn"
-              target="_blank"
-              rel="noopener sponsored"
-            >
-              Shop Through My Bravenly Page
-            </a>
+          <div class="wellco-grid">
+            <div class="wellco-card">
+              <img src="/images/Bravenly/brew-extreme.PNG" alt="Bravenly Brew Extreme Nootropic Coffee" />
+              <h3>Brew Extreme ☕</h3>
+              <p>
+                Brew Extreme fits naturally into a morning rhythm for people who enjoy coffee and want
+                an option that feels easy to work into their day.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Browse Brew Extreme
+              </a>
+            </div>
+
+            <div class="wellco-card">
+              <img src="/images/Bravenly/IMG_7946.jpeg" alt="NeuroVibe WellCo Bravenly shop preview" />
+              <h3>Rush ⚡</h3>
+              <p>
+                Rush is another product people often look at when building an energy and focus part
+                of their wellness stack.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Browse Rush
+              </a>
+            </div>
+
+            <div class="wellco-card">
+              <img src="/images/Bravenly/IMG_7946.jpeg" alt="Bravenly Ignite metabolism support" />
+              <h3>Ignite 🔥</h3>
+              <p>
+                Ignite fits best as part of a daytime routine for people building out a more layered
+                wellness stack.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Browse Ignite
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="wellco-stack-group">
+          <div class="wellco-stack-group-head">
+            <h3>Hydration + Daily Support</h3>
+            <p>Supportive everyday products that fit into a practical routine.</p>
           </div>
 
-          <div class="wellco-card">
-            <img src="/images/Bravenly/gold-support.PNG" alt="Bravenly Gold Turmeric Wellness Support" />
-            <h3>Gut + Immune Support ✨</h3>
-            <p>
-              GOLD is a turmeric-based wellness blend often used for gut support, immune support,
-              and overall daily wellness.
-            </p>
-            <a
-              href="https://neurovibewell.bravenlyglobal.com"
-              class="wellco-btn"
-              target="_blank"
-              rel="noopener sponsored"
-            >
-              Shop Through My Bravenly Page
-            </a>
+          <div class="wellco-grid">
+            <div class="wellco-card">
+              <img src="/images/Bravenly/hydrate-support.PNG" alt="Bravenly Hydrate Electrolyte Support" />
+              <h3>Hydrate 💧</h3>
+              <p>
+                Hydrate is one of the easiest products to work into a daily routine, especially on busy days
+                when replenishment and consistency matter.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Browse Hydrate
+              </a>
+            </div>
+
+            <div class="wellco-card">
+              <img src="/images/Bravenly/gold-support.PNG" alt="Bravenly Gold turmeric wellness support" />
+              <h3>Gold ✨</h3>
+              <p>
+                Gold fits into the daily support side of a wellness stack and works well for people
+                who want to build a more rounded routine over time.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Browse Gold
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="wellco-stack-group">
+          <div class="wellco-stack-group-head">
+            <h3>Evening Wind-Down</h3>
+            <p>A calmer close to the day for people who like having a gentle evening routine.</p>
           </div>
 
-          <div class="wellco-card">
-            <img src="/images/Bravenly/bravenly-calm.PNG" alt="Bravenly Calm Stress and Mood Support" />
-            <h3>Stress + Mood Support 🌙</h3>
-            <p>
-              Calm is designed to support stress response, relaxation, and a steadier mood as part
-              of an evening or daily support routine.
-            </p>
-            <a
-              href="https://neurovibewell.bravenlyglobal.com"
-              class="wellco-btn"
-              target="_blank"
-              rel="noopener sponsored"
-            >
-              Shop Through My Bravenly Page
-            </a>
+          <div class="wellco-grid">
+            <div class="wellco-card">
+              <img src="/images/Bravenly/bravenly-calm.PNG" alt="Bravenly Calm stress and mood support" />
+              <h3>Calm 🌙</h3>
+              <p>
+                Calm fits naturally into an evening or wind-down routine for people who want a softer,
+                steadier close to the day.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Browse Calm
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="wellco-stack-group">
+          <div class="wellco-stack-group-head">
+            <h3>Browse the Full Collection</h3>
+            <p>If you want to see everything in one place, head to my full Bravenly page.</p>
           </div>
 
-          <div class="wellco-card">
-            <img src="/images/Bravenly/IMG_7946.jpeg" alt="NeuroVibe WellCo Bravenly shop preview" />
-            <h3>Browse the Full Wellness Collection 🛍️</h3>
-            <p>
-              Want to see the full lineup? Visit my Bravenly page to browse available products,
-              learn more, and shop the collection in one place.
-            </p>
-            <a
-              href="https://neurovibewell.bravenlyglobal.com"
-              class="wellco-btn"
-              target="_blank"
-              rel="noopener sponsored"
-            >
-              Visit My Full Bravenly Page
-            </a>
+          <div class="wellco-grid">
+            <div class="wellco-card">
+              <img src="/images/Bravenly/IMG_7946.jpeg" alt="NeuroVibe WellCo Bravenly shop preview" />
+              <h3>Full Bravenly Wellness Page 🛍️</h3>
+              <p>
+                Browse the full lineup, explore product details, and shop the collection in one place.
+              </p>
+              <a
+                href="https://neurovibewell.bravenlyglobal.com"
+                class="wellco-btn"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Visit My Full Bravenly Page
+              </a>
+            </div>
           </div>
-
-        </div>
+        </section>
 
         <section class="nv-ecosystem">
           <h2>Explore the NeuroVibe Ecosystem</h2>
@@ -543,7 +642,6 @@
           </p>
 
           <div class="nv-ecosystem-grid">
-
             <a href="/guides.html" class="nv-eco-card">
               <h3>📚 Guides</h3>
               <p>Digital guides for nervous system support and real-life overwhelm.</p>
@@ -568,7 +666,6 @@
               <h3>🌙 Publishing</h3>
               <p>Stories and books created through NeuroVibe Publishing.</p>
             </a>
-
           </div>
         </section>
       </section>

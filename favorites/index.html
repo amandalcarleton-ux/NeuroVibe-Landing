@@ -13,17 +13,118 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css?v=102" />
 
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
+
   <style>
     *{
       box-sizing:border-box;
     }
 
+    html, body{
+      margin:0;
+      padding:0;
+    }
+
     body{
       font-family:'Poppins',sans-serif;
       background:linear-gradient(180deg,#efeaff,#bba8ff);
-      margin:0;
-      padding:0;
       color:#2b244d;
+    }
+
+    #nav-placeholder{
+      width:100%;
+    }
+
+    .nv-header{
+      position:sticky;
+      top:0;
+      z-index:999;
+      width:100%;
+      background:rgba(255,255,255,0.78);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(255,255,255,0.45);
+      box-shadow:0 10px 30px rgba(75,46,131,0.10);
+    }
+
+    .nv-nav-container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:16px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      position:relative;
+    }
+
+    .nv-logo{
+      font-size:1.8rem;
+      font-weight:700;
+      letter-spacing:-0.03em;
+      color:#4b2e83;
+      text-decoration:none;
+    }
+
+    .nv-hamburger{
+      width:52px;
+      height:52px;
+      border:1px solid rgba(255,255,255,0.55);
+      border-radius:16px;
+      background:rgba(255,255,255,0.34);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      line-height:1;
+      color:#4b2e83;
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(75,46,131,0.12);
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-hamburger:hover{
+      transform:translateY(-1px);
+      box-shadow:0 12px 24px rgba(75,46,131,0.16);
+    }
+
+    .nv-nav-menu{
+      display:none;
+      position:absolute;
+      top:calc(100% + 10px);
+      right:18px;
+      min-width:240px;
+      background:rgba(255,255,255,0.96);
+      border:1px solid rgba(255,255,255,0.65);
+      border-radius:20px;
+      padding:14px;
+      box-shadow:0 18px 40px rgba(75,46,131,0.16);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      flex-direction:column;
+      gap:4px;
+    }
+
+    .nv-nav-menu.active{
+      display:flex;
+    }
+
+    .nv-nav-menu a{
+      display:block;
+      padding:12px 14px;
+      border-radius:12px;
+      text-decoration:none;
+      font-size:1rem;
+      font-weight:600;
+      color:#101018;
+      transition:background 0.2s ease, color 0.2s ease;
+    }
+
+    .nv-nav-menu a:hover{
+      background:rgba(198,168,255,0.18);
+      color:#4b2e83;
     }
 
     .nv-wrap{
@@ -51,7 +152,7 @@
       color:#6b5cff;
     }
 
-    .nv-header{
+    .nv-header-title{
       margin:0 0 12px;
       font-size:clamp(2rem,4vw,3rem);
       font-weight:800;
@@ -141,176 +242,180 @@
       flex-grow:1;
     }
 
-   .nv-btn,
-.nv-card span{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:fit-content;
-  margin-top:auto;
-  padding:11px 18px;
-  border-radius:999px;
-  background:linear-gradient(90deg,#d8f0ff,#ffd6ea);
-  border:2px solid #6a59d1;
-  font-weight:700;
-  text-decoration:none;
-  color:#2b244d;
-}
+    .nv-btn,
+    .nv-card span{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:fit-content;
+      margin-top:auto;
+      padding:11px 18px;
+      border-radius:999px;
+      background:linear-gradient(90deg,#d8f0ff,#ffd6ea);
+      border:2px solid #6a59d1;
+      font-weight:700;
+      text-decoration:none;
+      color:#2b244d;
+    }
 
-.nv-bookshelf{
-  margin-top:28px;
-  background:rgba(255,255,255,0.68);
-  border:1px solid rgba(255,255,255,0.42);
-  border-radius:28px;
-  padding:24px;
-  box-shadow:0 18px 40px rgba(75,46,131,0.10);
-  text-align:center;
-}
+    .nv-bookshelf{
+      margin-top:28px;
+      background:rgba(255,255,255,0.68);
+      border:1px solid rgba(255,255,255,0.42);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:0 18px 40px rgba(75,46,131,0.10);
+      text-align:center;
+    }
 
-.nv-bookshelf h2{
-  margin:0 0 8px;
-  font-size:clamp(1.5rem,2.8vw,2.2rem);
-  color:#2f2763;
-}
+    .nv-bookshelf h2{
+      margin:0 0 8px;
+      font-size:clamp(1.5rem,2.8vw,2.2rem);
+      color:#2f2763;
+    }
 
-.nv-bookshelf-sub{
-  max-width:620px;
-  margin:0 auto 28px;
-  color:#4f4a77;
-  line-height:1.7;
-}
+    .nv-bookshelf-sub{
+      max-width:620px;
+      margin:0 auto 28px;
+      color:#4f4a77;
+      line-height:1.7;
+    }
 
-.nv-books-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-  gap:24px;
-}
+    .nv-books-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+      gap:24px;
+    }
 
-.nv-book-card{
-  background:white;
-  padding:18px;
-  border-radius:20px;
-  box-shadow:0 10px 26px rgba(0,0,0,0.08);
-  text-decoration:none;
-  color:#2b244d;
-  transition:transform .2s ease, box-shadow .2s ease;
-  display:flex;
-  flex-direction:column;
-  height:100%;
-}
+    .nv-book-card{
+      background:white;
+      padding:18px;
+      border-radius:20px;
+      box-shadow:0 10px 26px rgba(0,0,0,0.08);
+      text-decoration:none;
+      color:#2b244d;
+      transition:transform .2s ease, box-shadow .2s ease;
+      display:flex;
+      flex-direction:column;
+      height:100%;
+    }
 
-.nv-book-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 18px 36px rgba(75,46,131,0.18);
-}
+    .nv-book-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 18px 36px rgba(75,46,131,0.18);
+    }
 
-.nv-book-card img{
-  width:100%;
-  aspect-ratio:2 / 3;
-  object-fit:cover;
-  border-radius:12px;
-  margin-bottom:14px;
-  display:block;
-}
+    .nv-book-card img{
+      width:100%;
+      aspect-ratio:2 / 3;
+      object-fit:cover;
+      border-radius:12px;
+      margin-bottom:14px;
+      display:block;
+    }
 
-.nv-book-card h3{
-  font-size:16px;
-  line-height:1.4;
-  margin:0 0 12px;
-  color:#2f2763;
-  flex-grow:1;
-}
+    .nv-book-card h3{
+      font-size:16px;
+      line-height:1.4;
+      margin:0 0 12px;
+      color:#2f2763;
+      flex-grow:1;
+    }
 
-.nv-book-card span{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:fit-content;
-  margin:0 auto;
-  padding:8px 14px;
-  border-radius:999px;
-  background:linear-gradient(90deg,#d8f0ff,#ffd6ea);
-  border:2px solid #6a59d1;
-  font-weight:700;
-  font-size:13px;
-  color:#2b244d;
-}
+    .nv-book-card span{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:fit-content;
+      margin:0 auto;
+      padding:8px 14px;
+      border-radius:999px;
+      background:linear-gradient(90deg,#d8f0ff,#ffd6ea);
+      border:2px solid #6a59d1;
+      font-weight:700;
+      font-size:13px;
+      color:#2b244d;
+    }
 
-@media (max-width: 780px){
-  .nv-grid{
-    grid-template-columns:1fr;
-  }
+    .nv-footer{
+      margin-top:40px;
+      padding:30px 20px;
+      text-align:center;
+    }
 
-  .nv-wrap{
-    padding:24px 14px 50px;
-  }
+    .nv-home-btn{
+      display:inline-block;
+      padding:14px 26px;
+      border-radius:999px;
+      background:white;
+      border:2px solid #6a59d1;
+      font-weight:700;
+      text-decoration:none;
+      color:#2b244d;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
 
-  .nv-hero,
-  .nv-section,
-  .nv-bookshelf{
-    padding:20px;
-    border-radius:24px;
-  }
+    .nv-home-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 14px 30px rgba(0,0,0,0.15);
+    }
 
-  .nv-card{
-    min-height:auto;
-    padding:20px;
-  }
+    .nv-footer-note{
+      margin-top:16px;
+      font-size:13px;
+      color:#4f4a77;
+    }
 
-  .nv-btn,
-  .nv-card span,
-  .nv-book-card span{
-    width:100%;
-  }
+    @media (max-width: 780px){
+      .nv-grid{
+        grid-template-columns:1fr;
+      }
 
-  .nv-books-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    gap:18px;
-  }
-}
+      .nv-wrap{
+        padding:24px 14px 50px;
+      }
 
-@media (max-width: 560px){
-  .nv-books-grid{
-    grid-template-columns:1fr;
-  }
-}.nv-footer{
-  margin-top:40px;
-  padding:30px 20px;
-  text-align:center;
-}
+      .nv-hero,
+      .nv-section,
+      .nv-bookshelf{
+        padding:20px;
+        border-radius:24px;
+      }
 
-.nv-home-btn{
-  display:inline-block;
-  padding:14px 26px;
-  border-radius:999px;
-  background:white;
-  border:2px solid #6a59d1;
-  font-weight:700;
-  text-decoration:none;
-  color:#2b244d;
-  box-shadow:0 8px 22px rgba(0,0,0,0.08);
-  transition:transform .2s ease, box-shadow .2s ease;
-}
+      .nv-card{
+        min-height:auto;
+        padding:20px;
+      }
 
-.nv-home-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 14px 30px rgba(0,0,0,0.15);
-}
+      .nv-btn,
+      .nv-card span,
+      .nv-book-card span{
+        width:100%;
+      }
 
-.nv-footer-note{
-  margin-top:16px;
-  font-size:13px;
-  color:#4f4a77;
-}
+      .nv-books-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:18px;
+      }
+    }
+
+    @media (max-width: 560px){
+      .nv-books-grid{
+        grid-template-columns:1fr;
+      }
+    }
   </style>
 </head>
-<body>
+<body class="nv-y2k">
+
+  <div id="nav-placeholder"></div>
 
   <div class="nv-wrap">
 
     <section class="nv-hero">
       <p class="nv-kicker">Curated Favorites</p>
-      <h1 class="nv-header">NeuroVibe Favorites</h1>
+      <h1 class="nv-header-title">NeuroVibe Favorites</h1>
       <p class="nv-sub">
         This page is a collection of products, tools, books, and resources I personally use,
         love, or recommend. Instead of sharing links all over the place, everything lives here
@@ -351,71 +456,94 @@
           </p>
           <span>See Resource Library →</span>
         </a>
-<a href="/wellco.html" class="nv-card">
 
-<span class="nv-label">WellCo</span>
+        <a href="/wellco.html" class="nv-card">
+          <span class="nv-label">WellCo</span>
+          <h3>🌿 Bravenly + WellCo</h3>
+          <p>
+            Wellness support, daily staples, and feel-good products featured inside my WellCo world.
+          </p>
+          <span>Explore WellCo Wellness →</span>
+        </a>
+      </div>
+    </section>
 
-<h3>🌿 Bravenly + WellCo</h3>
+    <section class="nv-bookshelf">
+      <h2>📚 NeuroVibe Reading Shelf</h2>
 
-<p>
-Wellness support, daily staples, and feel-good products featured inside my WellCo world.
-</p>
+      <p class="nv-bookshelf-sub">
+        Books that helped me understand sensory needs, emotional regulation,
+        and parenting through connection.
+      </p>
 
-<span>Explore WellCo Wellness →</span>
+      <div class="nv-books-grid">
 
-</div>
-</section>
+        <a href="https://amzn.to/4ur57vu" target="_blank" rel="noopener sponsored nofollow" class="nv-book-card">
+          <img src="/images/rhythm-of-the-moon.jpg" alt="The Rhythm of the Moon">
+          <h3>The Rhythm of the Moon</h3>
+          <span>Read on Amazon →</span>
+        </a>
 
-<section class="nv-bookshelf">
-  <h2>📚 NeuroVibe Reading Shelf</h2>
+        <a href="https://amzn.to/4s8ohoA" target="_blank" rel="noopener sponsored nofollow" class="nv-book-card">
+          <img src="/images/raising-sensory-smart-child.jpg" alt="Raising a Sensory Smart Child">
+          <h3>Raising a Sensory Smart Child</h3>
+          <span>Listen on Audible →</span>
+        </a>
 
-  <p class="nv-bookshelf-sub">
-    Books that helped me understand sensory needs, emotional regulation,
-    and parenting through connection.
-  </p>
+        <a href="https://amzn.to/4sHfJ7W" target="_blank" rel="noopener sponsored nofollow" class="nv-book-card">
+          <img src="/images/explosive-child.jpg" alt="The Explosive Child book cover">
+          <h3>The Explosive Child</h3>
+          <span>Listen on Audible →</span>
+        </a>
 
-  <div class="nv-books-grid">
+        <a href="https://amzn.to/4upIQOH" target="_blank" rel="noopener sponsored nofollow" class="nv-book-card">
+          <img src="/images/out-of-sync-child.jpg" alt="The Out-of-Sync Child">
+          <h3>The Out-of-Sync Child</h3>
+          <span>Listen on Audible →</span>
+        </a>
 
-    <a href="https://amzn.to/4ur57vu" target="_blank" rel="noopener sponsored nofollow" class="nv-book-card">
-      <img src="/images/rhythm-of-the-moon.jpg" alt="The Rhythm of the Moon">
-      <h3>The Rhythm of the Moon</h3>
-      <span>Read on Amazon →</span>
-    </a>
+      </div>
+    </section>
 
-    <a href="https://amzn.to/4s8ohoA" target="_blank" rel="noopener sponsored nofollow" class="nv-book-card">
-      <img src="/images/raising-sensory-smart-child.jpg" alt="Raising a Sensory Smart Child">
-      <h3>Raising a Sensory Smart Child</h3>
-      <span>Listen on Audible →</span>
-    </a>
+    <footer class="nv-footer">
+      <a href="/index.html" class="nv-home-btn">
+        ⬅ Return to NeuroVibe Home
+      </a>
 
-    <a href="https://amzn.to/4sHfJ7W" target="_blank" rel="noopener sponsored nofollow" class="nv-book-card">
-  <img src="/images/explosive-child.jpg" alt="The Explosive Child book cover">
-  <h3>The Explosive Child</h3>
-  <span>Listen on Audible →</span>
-</a>
-
-    <a href="https://amzn.to/4upIQOH" target="_blank" rel="noopener sponsored nofollow" class="nv-book-card">
-      <img src="/images/out-of-sync-child.jpg" alt="The Out-of-Sync Child">
-      <h3>The Out-of-Sync Child</h3>
-      <span>Listen on Audible →</span>
-    </a>
+      <p class="nv-footer-note">
+        © <span id="year"></span> NeuroVibe • Curated tools, wellness resources, and support for real life
+      </p>
+    </footer>
 
   </div>
-</section>
-</div>
-<footer class="nv-footer">
 
-  <a href="/index.html" class="nv-home-btn">
-    ⬅ Return to NeuroVibe Home
-  </a>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
-  <p class="nv-footer-note">
-    © 2026 NeuroVibe • Curated tools, wellness resources, and support for real life
-  </p>
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-</footer>
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
+
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+  </script>
 </body>
 </html>
-
-
-

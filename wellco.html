@@ -7,11 +7,11 @@
   <title>NeuroVibe WellCo | Wellness for Modern Families</title>
   <meta
     name="description"
-    content="NeuroVibe WellCo shares simple wellness tools that support nervous system balance, mental clarity, and everyday nourishment for modern families."
+    content="NeuroVibe WellCo shares simple wellness tools, routines, and supportive products that help modern families build steadier energy, nervous system balance, and everyday wellness."
   />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=101" />
+  <link rel="stylesheet" href="/style.css?v=102" />
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
@@ -108,22 +108,235 @@
       color: #4b2e83;
     }
 
-    .wellco-footer-logo{
-      text-align: center;
-      margin: 30px auto 10px;
+    .wellco-section{
+      padding: 8px 0 22px;
     }
 
-    .wellco-footer-img{
-      max-width: 280px;
+    .wellco-title{
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .wellco-intro,
+    .wellco-disclaimer{
+      max-width: 760px;
+      margin: 0 auto 16px;
+      text-align: center;
+    }
+
+    .wellco-disclaimer{
+      font-size: 0.95rem;
+      opacity: 0.84;
+    }
+
+    .wellco-hero-cta{
+      max-width: 900px;
+      margin: 28px auto 34px;
+      padding: 28px 22px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(240,232,255,0.88));
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.10);
+      text-align: center;
+    }
+
+    .wellco-hero-cta h3{
+      margin-bottom: 12px;
+      color: #4b2e83;
+    }
+
+    .wellco-hero-cta p{
+      max-width: 700px;
+      margin: 0 auto 18px;
+    }
+
+    .wellco-btn-row{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .wellco-btn-main,
+    .wellco-btn-secondary{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .wellco-btn-main{
+      background: #4b2e83;
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.18);
+    }
+
+    .wellco-btn-main:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 30px rgba(75, 46, 131, 0.22);
+    }
+
+    .wellco-btn-secondary{
+      background: rgba(255,255,255,0.88);
+      color: #4b2e83;
+      border: 1px solid rgba(75, 46, 131, 0.12);
+    }
+
+    .wellco-btn-secondary:hover{
+      transform: translateY(-2px);
+    }
+
+    .wellco-routine{
+      max-width: 850px;
+      margin: 0 auto 34px;
+      padding: 24px 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.72);
+      box-shadow: 0 14px 34px rgba(75, 46, 131, 0.08);
+    }
+
+    .wellco-routine h3{
+      margin-bottom: 10px;
+      color: #4b2e83;
+    }
+
+    .wellco-routine-list{
+      margin: 16px 0 0;
+      padding-left: 18px;
+      line-height: 1.8;
+    }
+
+    .wellco-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 26px;
+    }
+
+    .wellco-card{
+      background: rgba(255,255,255,0.88);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 14px 30px rgba(75, 46, 131, 0.10);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .wellco-card img{
       width: 100%;
-      height: auto;
-      display: inline-block;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
     }
 
-    .wellco-store-text{
+    .wellco-card h3{
+      margin: 18px 18px 10px;
+      font-size: 1.08rem;
+      color: #4b2e83;
+    }
+
+    .wellco-card p{
+      margin: 0 18px 18px;
+      flex-grow: 1;
+    }
+
+    .wellco-btn{
+      display: inline-block;
+      margin: 0 18px 20px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: #4b2e83;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
       text-align: center;
-      margin-top: 10px;
-      opacity: 0.9;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
+    }
+
+    .wellco-btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 28px rgba(75, 46, 131, 0.22);
+    }
+
+    .wellco-note{
+      font-size: 0.92rem;
+      opacity: 0.76;
+      margin-top: -8px;
+    }
+
+    .nv-ecosystem{
+      margin-top: 42px;
+    }
+
+    .nv-ecosystem h2,
+    .nv-ecosystem-sub{
+      text-align: center;
+    }
+
+    .nv-ecosystem-sub{
+      max-width: 700px;
+      margin: 0 auto 24px;
+    }
+
+    .nv-ecosystem-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .nv-eco-card{
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      padding: 22px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.86);
+      box-shadow: 0 12px 28px rgba(75, 46, 131, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-eco-card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(75, 46, 131, 0.12);
+    }
+
+    .nv-eco-card h3{
+      margin-bottom: 10px;
+      color: #4b2e83;
+    }
+
+    .nv-bravenly-cta{
+      margin-top: 36px;
+    }
+
+    .nv-bravenly-banner{
+      display: block;
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      border-radius: 24px;
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.10);
+    }
+
+    @media (max-width: 640px){
+      .wellco-hero-cta{
+        padding: 22px 16px;
+      }
+
+      .wellco-btn-row{
+        flex-direction: column;
+      }
+
+      .wellco-btn-main,
+      .wellco-btn-secondary,
+      .wellco-btn{
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -138,7 +351,7 @@
         ☰
       </button>
 
-   <nav class="nv-nav-menu" id="nv-nav">
+      <nav class="nv-nav-menu" id="nv-nav">
         <a href="/index.html">Home</a>
         <a href="/start-here.html">Start Here</a>
         <a href="/guides.html">Guides</a>
@@ -155,7 +368,7 @@
 
   <section class="nv-page-hero">
     <img
-      src="images/headers/wellco-header-3.PNG"
+      src="/images/headers/wellco-header-3.PNG"
       alt="NeuroVibe WellCo"
       class="nv-page-header-img"
       loading="eager"
@@ -170,31 +383,53 @@
         <h2 class="wellco-title">Daily Wellness Supports I Personally Use 🌿</h2>
 
         <p class="wellco-intro">
-          Alongside nervous system education and parenting resources, I also
-          share a few wellness tools that support my own daily routines.
-          These are products I personally use to support energy, focus,
-          and everyday balance.
+          NeuroVibe WellCo is my wellness corner for simple routines, supportive products,
+          and everyday tools that help me care for my energy, focus, hydration, and nervous system.
         </p>
 
         <p class="wellco-intro">
-          My goal with NeuroVibe WellCo is simple: to share practical wellness
-          supports that help families build steady rhythms, clearer thinking,
-          and sustainable routines.
+          Instead of sending you straight to a generic company storefront, this page helps you
+          understand what I use, why I use it, and where it may fit into a realistic daily rhythm.
         </p>
 
         <p class="wellco-disclaimer">
-          Transparency matters to me. Some of the wellness tools shared here
-          may be affiliate or partner products. I only share products I
-          personally use or feel comfortable recommending as part of a
-          balanced wellness routine.
+          Transparency matters to me. Some products shared here are partner links. I only share
+          products I personally use, genuinely like, or feel comfortable recommending as part of
+          a balanced wellness routine.
         </p>
+
+        <section class="wellco-hero-cta">
+          <h3>Explore My Bravenly Wellness Page</h3>
+          <p>
+            When you’re ready to browse the full collection, visit my Bravenly page for product details,
+            shopping options, and the current wellness lineup.
+          </p>
+
+          <div class="wellco-btn-row">
+            <a
+              href="https://bravenlyglobal.fluid.app/my/2927c7"
+              class="wellco-btn-main"
+              target="_blank"
+              rel="noopener sponsored"
+            >
+              Visit My Bravenly Page →
+            </a>
+
+            <a
+              href="/start-here.html"
+              class="wellco-btn-secondary"
+            >
+              Back to Start Here
+            </a>
+          </div>
+        </section>
 
         <section class="wellco-routine">
           <h3>Build Your Daily Wellness Routine ✨</h3>
 
           <p>
-            Many of the wellness tools here work best when used as part of a simple
-            daily rhythm. Here’s how many people structure their routine:
+            Many of these wellness tools work best as part of a simple, repeatable rhythm. Here’s one
+            example of how someone might build a supportive daily wellness stack:
           </p>
 
           <ul class="wellco-routine-list">
@@ -203,176 +438,168 @@
             <li>🔥 Metabolism support — Ignite</li>
             <li>💧 Hydration + recovery — Hydrate</li>
             <li>✨ Gut + immune support — Gold</li>
-            <li>🌙 Stress + sleep support — Calm</li>
+            <li>🌙 Stress + evening support — Calm</li>
           </ul>
         </section>
 
         <div class="wellco-grid">
 
           <div class="wellco-card">
-            <img src="images/Bravenly/balance-support.PNG" alt="Bravenly Balance Daily Nutrition Support">
+            <img src="/images/Bravenly/balance-support.PNG" alt="Bravenly Balance Daily Nutrition Support" />
             <h3>Daily Nutrition + Whole Body Support 🌿</h3>
             <p>
-              Balance is a comprehensive daily nutrition blend with over 50 carefully
-              selected ingredients across 10 functional blends. It supports gut health,
-              immune function, energy, and overall wellness in one simple daily drink.
+              Balance is a daily nutrition blend designed to support gut health, immune function,
+              energy, and overall wellness in one simple routine.
             </p>
             <a
-              href="https://neurovibewell.bravenlyglobal.com/bravenly-balance/"
+              href="https://bravenlyglobal.fluid.app/my/2927c7"
               class="wellco-btn"
               target="_blank"
-              rel="noopener"
+              rel="noopener sponsored"
             >
-              Explore Balance
+              Shop Through My Bravenly Page
             </a>
           </div>
 
           <div class="wellco-card">
-            <img src="images/Bravenly/brew-extreme.PNG" alt="Bravenly Brew Extreme Nootropic Coffee">
+            <img src="/images/Bravenly/brew-extreme.PNG" alt="Bravenly Brew Extreme Nootropic Coffee" />
             <h3>Focus + Coffee Support ☕</h3>
             <p>
-              Brew Extreme is an organic mushroom-infused instant coffee designed
-              to support focus, metabolism, and steady energy. Crafted with
-              adaptogens, nootropics, and functional ingredients for a smoother
-              daily coffee experience.
+              Brew Extreme is a mushroom-infused coffee option created to support smoother energy,
+              focus, and daily momentum with functional ingredients.
             </p>
             <a
-              href="https://neurovibewell.bravenlyglobal.com/brew-extreme/"
+              href="https://bravenlyglobal.fluid.app/my/2927c7"
               class="wellco-btn"
               target="_blank"
-              rel="noopener"
+              rel="noopener sponsored"
             >
-              Explore Brew Extreme
+              Shop Through My Bravenly Page
             </a>
           </div>
 
           <div class="wellco-card">
-            <img src="images/Bravenly/hydrate-support.PNG" alt="Bravenly Hydrate Electrolyte Support">
+            <img src="/images/Bravenly/hydrate-support.PNG" alt="Bravenly Hydrate Electrolyte Support" />
             <h3>Hydration + Recovery Support 💧</h3>
             <p>
-              Hydration plays a big role in how our bodies feel and function day
-              to day. Bravenly Hydrate supports hydration, recovery, and steady
-              energy with electrolytes, BCAAs, and L-Theanine.
+              Hydrate supports daily hydration, recovery, and steady energy with a blend designed
+              for busy days, replenishment, and routine support.
             </p>
             <a
-              href="https://neurovibewell.bravenlyglobal.com/hydrate-my/"
+              href="https://bravenlyglobal.fluid.app/my/2927c7"
               class="wellco-btn"
               target="_blank"
-              rel="noopener"
+              rel="noopener sponsored"
             >
-              Explore Hydrate
+              Shop Through My Bravenly Page
             </a>
           </div>
 
           <div class="wellco-card">
-            <img src="images/Bravenly/gold-support.PNG" alt="Bravenly Gold Turmeric Wellness Support">
+            <img src="/images/Bravenly/gold-support.PNG" alt="Bravenly Gold Turmeric Wellness Support" />
             <h3>Gut + Immune Support ✨</h3>
             <p>
-              GOLD is a premium turmeric blend designed to support gut health,
-              immune function, and overall wellness. Formulated with turmeric,
-              black pepper for enhanced absorption, and cinnamon for a smooth
-              balanced flavor.
+              GOLD is a turmeric-based wellness blend often used for gut support, immune support,
+              and overall daily wellness.
             </p>
             <a
-              href="https://neurovibewell.bravenlyglobal.com/bravenly-gold/"
+              href="https://bravenlyglobal.fluid.app/my/2927c7"
               class="wellco-btn"
               target="_blank"
-              rel="noopener"
+              rel="noopener sponsored"
             >
-              Explore GOLD
+              Shop Through My Bravenly Page
             </a>
           </div>
 
           <div class="wellco-card">
-            <img src="images/Bravenly/bravenly-calm.PNG" alt="Bravenly Calm Stress and Mood Support">
+            <img src="/images/Bravenly/bravenly-calm.PNG" alt="Bravenly Calm Stress and Mood Support" />
             <h3>Stress + Mood Support 🌙</h3>
             <p>
-              Calm is an adaptogenic formula designed to help support stress
-              response, mental clarity, and mood balance. This capsule blend
-              uses antioxidant-rich ingredients that help counter daily stress
-              while supporting relaxation and restful sleep.
+              Calm is designed to support stress response, relaxation, and a steadier mood as part
+              of an evening or daily support routine.
             </p>
             <a
-              href="https://neurovibewell.bravenlyglobal.com/bravenly-calm/"
+              href="https://bravenlyglobal.fluid.app/my/2927c7"
               class="wellco-btn"
               target="_blank"
-              rel="noopener"
+              rel="noopener sponsored"
             >
-              Explore Calm
+              Shop Through My Bravenly Page
             </a>
           </div>
 
           <div class="wellco-card">
-            <img src="images/Bravenly/IMG_7946.jpeg" alt="NeuroVibe WellCo store">
-            <h3>Explore the Full WellCo Store 🛍️</h3>
+            <img src="/images/Bravenly/IMG_7946.jpeg" alt="NeuroVibe WellCo Bravenly shop preview" />
+            <h3>Browse the Full Wellness Collection 🛍️</h3>
             <p>
-              Browse the full NeuroVibe WellCo collection for additional wellness
-              supports, daily routines, and simple products that fit real life.
+              Want to see the full lineup? Visit my Bravenly page to browse available products,
+              learn more, and shop the collection in one place.
             </p>
             <a
-              href="https://neurovibewell.bravenlyglobal.com/"
+              href="https://bravenlyglobal.fluid.app/my/2927c7"
               class="wellco-btn"
               target="_blank"
-              rel="noopener"
+              rel="noopener sponsored"
             >
-              Visit the Full Store
+              Visit My Full Bravenly Page
             </a>
           </div>
-<section class="nv-ecosystem">
 
-  <h2>Explore the NeuroVibe Ecosystem</h2>
-  <p class="nv-ecosystem-sub">
-    Different paths for different needs. Explore the areas of NeuroVibe that support you most.
-  </p>
-
-  <div class="nv-ecosystem-grid">
-
-    <a href="/guides.html" class="nv-eco-card">
-      <h3>📚 Guides</h3>
-      <p>Digital guides for nervous system support and real-life overwhelm.</p>
-    </a>
-
-    <a href="/wellco.html" class="nv-eco-card">
-      <h3>🌿 WellCo</h3>
-      <p>Wellness routines and products that support energy and balance.</p>
-    </a>
-
-    <a href="/beautyhub.html" class="nv-eco-card">
-      <h3>✨ Beauty Hub</h3>
-      <p>Self-care favorites, beauty finds, and curated nail collections.</p>
-    </a>
-
-    <a href="/shop.html" class="nv-eco-card">
-      <h3>🛍️ Shop</h3>
-      <p>Curated tools and products that support calm homes and routines.</p>
-    </a>
-
-    <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
-      <h3>🌙 Publishing</h3>
-      <p>Stories and books created through NeuroVibe Publishing.</p>
-    </a>
-
-  </div>
-
-</section>
         </div>
+
+        <section class="nv-ecosystem">
+          <h2>Explore the NeuroVibe Ecosystem</h2>
+          <p class="nv-ecosystem-sub">
+            Different paths for different needs. Explore the areas of NeuroVibe that support you most.
+          </p>
+
+          <div class="nv-ecosystem-grid">
+
+            <a href="/guides.html" class="nv-eco-card">
+              <h3>📚 Guides</h3>
+              <p>Digital guides for nervous system support and real-life overwhelm.</p>
+            </a>
+
+            <a href="/wellco.html" class="nv-eco-card">
+              <h3>🌿 WellCo</h3>
+              <p>Wellness routines and products that support energy and balance.</p>
+            </a>
+
+            <a href="/beautyhub.html" class="nv-eco-card">
+              <h3>✨ Beauty Hub</h3>
+              <p>Self-care favorites, beauty finds, and curated nail collections.</p>
+            </a>
+
+            <a href="/shop.html" class="nv-eco-card">
+              <h3>🛍️ Shop</h3>
+              <p>Curated tools and products that support calm homes and routines.</p>
+            </a>
+
+            <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
+              <h3>🌙 Publishing</h3>
+              <p>Stories and books created through NeuroVibe Publishing.</p>
+            </a>
+
+          </div>
+        </section>
       </section>
 
-<section class="nv-bravenly-cta">
-  <a
-    href="https://shop.bydesign.com/Bravenly/#/shop/createAccount/from/B6927629"
-    target="_blank"
-    rel="noopener"
-  >
-    <img
-      src="/images/headers/bravenly-cta-banner.PNG"
-      alt="Join Bravenly as a Free Customer"
-      class="nv-bravenly-banner"
-      loading="lazy"
-      decoding="async"
-    />
-  </a>
-</section>
+      <section class="nv-bravenly-cta">
+        <a
+          href="https://bravenlyglobal.fluid.app/my/2927c7"
+          target="_blank"
+          rel="noopener sponsored"
+        >
+          <img
+            src="/images/headers/bravenly-cta-banner.PNG"
+            alt="Explore Amanda Carleton's Bravenly wellness page"
+            class="nv-bravenly-banner"
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      </section>
 
       <footer class="footer" style="margin-top:22px;">
         <p>© <span id="year"></span> NeuroVibe</p>

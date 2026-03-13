@@ -17,6 +17,15 @@
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
   <style>
+    html, body{
+      margin: 0;
+      padding: 0;
+    }
+
+    #nav-placeholder{
+      width: 100%;
+    }
+
     .nv-header{
       position: sticky;
       top: 0;
@@ -343,7 +352,7 @@
 
 <body class="nv-y2k">
 
-<div id="nav-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <section class="nv-page-hero">
     <img
@@ -395,7 +404,7 @@
             </a>
 
             <a
-              href="/start-here.html"
+              href="/start.html"
               class="wellco-btn-secondary"
             >
               Back to Start Here
@@ -592,41 +601,28 @@
   </script>
 
   <script>
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
 
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
         }
       });
-    }
   </script>
-<script>
-fetch("/components/nav.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("nav-placeholder").innerHTML = data;
-
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
-
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
-        }
-      });
-    }
-  });
-</script></body>
+</body>
 </html>

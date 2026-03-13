@@ -12,213 +12,207 @@
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
-<style>
-  .nv-header{
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    width: 100%;
-    background: rgba(255,255,255,0.72);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255,255,255,0.45);
-    box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
-    overflow: visible;
-  }
-
-  .nv-nav-container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 16px 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    overflow: visible;
-  }
-
-  .nv-logo{
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: #4b2e83;
-    text-decoration: none;
-  }
-
-  .nv-hamburger{
-    width: 52px;
-    height: 52px;
-    border: 1px solid rgba(255,255,255,0.55);
-    border-radius: 16px;
-    background: rgba(255,255,255,0.34);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    line-height: 1;
-    color: #4b2e83;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .nv-hamburger:hover{
-    transform: translateY(-1px);
-    box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
-  }
-
-  .nv-nav-menu{
-    display: none;
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 18px;
-    min-width: 240px;
-    background: rgba(255,255,255,0.96);
-    border: 1px solid rgba(255,255,255,0.65);
-    border-radius: 20px;
-    padding: 14px;
-    box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    flex-direction: column;
-    gap: 4px;
-    z-index: 2000;
-  }
-
-  .nv-nav-menu.active{
-    display: flex !important;
-  }
-
-  .nv-nav-menu a{
-    display: block;
-    padding: 12px 14px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #101018;
-    transition: background 0.2s ease, color 0.2s ease;
-  }
-
-  .nv-nav-menu a:hover{
-    background: rgba(198,168,255,0.18);
-    color: #4b2e83;
-  }
-
-  .nv-about-portrait{
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto;
-    box-shadow: 0 14px 35px rgba(60,30,120,0.20);
-  }
-
-  .nv-subtitle{
-    font-size: 1.05rem;
-    opacity: 0.95;
-  }
-
-  .nv-about .nv-grid{
-    align-items: start;
-  }
-
-  .nv-family-photo{
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 18px;
-  }
-
-  @media (max-width: 768px){
-    .nv-about .nv-card,
-    .nv-about .nv-card.featured{
-      grid-template-columns: 1fr !important;
+  <style>
+    html, body{
+      margin: 0;
+      padding: 0;
     }
 
-    .nv-about .nv-card-media{
+    #nav-placeholder{
       width: 100%;
-      max-width: 340px;
-      margin: 0 auto 14px;
     }
 
-    .nv-about .nv-card-body{
-      padding: 16px;
+    .nv-header{
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.45);
+      box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
+      overflow: visible;
     }
 
-    .nv-about .nv-h2,
-    .nv-about .nv-copy,
-    .nv-about p,
-    .nv-about li{
-      word-break: normal;
-      overflow-wrap: break-word;
+    .nv-nav-container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: visible;
     }
-  }
 
-  @media (max-width: 768px){
+    .nv-logo{
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #4b2e83;
+      text-decoration: none;
+    }
+
+    .nv-hamburger{
+      width: 52px;
+      height: 52px;
+      border: 1px solid rgba(255,255,255,0.55);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.34);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      line-height: 1;
+      color: #4b2e83;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-hamburger:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
+    }
+
+    .nv-nav-menu{
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      right: 18px;
+      min-width: 240px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(255,255,255,0.65);
+      border-radius: 20px;
+      padding: 14px;
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      flex-direction: column;
+      gap: 4px;
+      z-index: 2000;
+    }
+
+    .nv-nav-menu.active{
+      display: flex !important;
+    }
+
+    .nv-nav-menu a{
+      display: block;
+      padding: 12px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #101018;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nv-nav-menu a:hover{
+      background: rgba(198,168,255,0.18);
+      color: #4b2e83;
+    }
+
+    .nv-about-portrait{
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto;
+      box-shadow: 0 14px 35px rgba(60,30,120,0.20);
+    }
+
+    .nv-subtitle{
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
     .nv-about .nv-grid{
-      grid-template-columns: 1fr !important;
+      align-items: start;
     }
 
-    .nv-about .nv-card,
-    .nv-about .nv-card.featured{
-      display: block !important;
-      width: 100% !important;
-      max-width: 100% !important;
+    .nv-family-photo{
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 18px;
     }
 
-    .nv-about .nv-card-media,
-    .nv-about .nv-card.featured .nv-card-media{
-      display: block !important;
-      width: 100% !important;
-      max-width: 320px !important;
-      margin: 0 auto 16px !important;
+    @media (max-width: 768px){
+      .nv-about .nv-card,
+      .nv-about .nv-card.featured{
+        grid-template-columns: 1fr !important;
+      }
+
+      .nv-about .nv-card-media{
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto 14px;
+      }
+
+      .nv-about .nv-card-body{
+        padding: 16px;
+      }
+
+      .nv-about .nv-h2,
+      .nv-about .nv-copy,
+      .nv-about p,
+      .nv-about li{
+        word-break: normal;
+        overflow-wrap: break-word;
+      }
     }
 
-    .nv-about .nv-card-body,
-    .nv-about .nv-card.featured .nv-card-body{
-      display: block !important;
-      width: 100% !important;
-      max-width: 100% !important;
-      padding: 16px !important;
-    }
+    @media (max-width: 768px){
+      .nv-about .nv-grid{
+        grid-template-columns: 1fr !important;
+      }
 
-    .nv-about .nv-family-photo{
-      width: 100% !important;
-      height: auto !important;
-    }
+      .nv-about .nv-card,
+      .nv-about .nv-card.featured{
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
 
-    .nv-about h2,
-    .nv-about p,
-    .nv-about li{
-      overflow-wrap: anywhere;
-      word-break: normal;
+      .nv-about .nv-card-media,
+      .nv-about .nv-card.featured .nv-card-media{
+        display: block !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto 16px !important;
+      }
+
+      .nv-about .nv-card-body,
+      .nv-about .nv-card.featured .nv-card-body{
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 16px !important;
+      }
+
+      .nv-about .nv-family-photo{
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .nv-about h2,
+      .nv-about p,
+      .nv-about li{
+        overflow-wrap: anywhere;
+        word-break: normal;
+      }
     }
-  }
-</style>
+  </style>
 </head>
 
 <body class="nv-y2k">
 
-  <header class="nv-header">
-    <div class="nv-nav-container">
-      <a href="/index.html" class="nv-logo">NeuroVibe</a>
+  <div id="nav-placeholder"></div>
 
-      <button
-        class="nv-hamburger"
-        id="nv-menu-toggle"
-        type="button"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="nv-nav"
-      >
-        ☰
-      </button>
-
-     <div id="nav-placeholder"></div>
-      
   <div class="nv-page-header">
     <img
       src="/images/headers/neurovibe-about-header.PNG"
@@ -227,275 +221,243 @@
     />
   </div>
 
-<main class="nv-page">
-  <div class="nv-wrap">
+  <main class="nv-page">
+    <div class="nv-wrap">
 
-    <section class="nv-about">
+      <section class="nv-about">
 
-      <!-- HERO -->
-      <section class="nv-hero glass" style="text-align:center;">
-        <div class="nv-hero-inner">
+        <section class="nv-hero glass" style="text-align:center;">
+          <div class="nv-hero-inner">
 
-          <p class="nv-kicker">NeuroVibe Wellness Collective</p>
+            <p class="nv-kicker">NeuroVibe Wellness Collective</p>
 
-          <img
-            src="/images/Amanda-Portrait.PNG"
-            alt="Amanda L. Carleton"
-            class="nv-about-portrait"
-          />
+            <img
+              src="/images/Amanda-Portrait.PNG"
+              alt="Amanda L. Carleton"
+              class="nv-about-portrait"
+            />
 
-          <h1 class="nv-h1" style="margin-top:14px;">
-            Hi, I’m Amanda L. Carleton 👋
-          </h1>
+            <h1 class="nv-h1" style="margin-top:14px;">
+              Hi, I’m Amanda L. Carleton 👋
+            </h1>
 
-          <p class="nv-subtitle" style="max-width:70ch; margin:0 auto;">
-            Founder of NeuroVibe and author of <em>The Rhythm of the Moon</em>.  
-            I create calm, practical tools for neurodivergent families and overwhelmed parents — designed for real life, not perfection.
+            <p class="nv-subtitle" style="max-width:70ch; margin:0 auto;">
+              Founder of NeuroVibe and author of <em>The Rhythm of the Moon</em>.
+              I create calm, practical tools for neurodivergent families and overwhelmed parents — designed for real life, not perfection.
+            </p>
+
+            <div class="glass" style="margin:16px auto 12px; max-width:720px; padding:16px;">
+              <p style="margin:0; font-weight:800;">
+                Start here: Free 1-Page Digital Reset 💜
+              </p>
+              <p style="margin:6px 0 0; opacity:.92;">
+                A quick nervous-system-friendly reset for the moments when everything feels like “too much.”
+              </p>
+            </div>
+
+            <div class="nv-actions" style="justify-content:center;">
+              <a
+                class="nv-btn primary"
+                href="https://store.neurovibe.site/b/2FfBV"
+                target="_blank"
+                rel="noopener"
+              >
+                Get the Free Reset
+              </a>
+
+              <a
+                class="nv-btn ghost"
+                href="https://www.facebook.com/share/g/1EKWVkZnF9/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener"
+              >
+                Join the Facebook Group
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="nv-section glass" style="padding:24px; margin-top:18px;">
+          <h2 class="nv-h2">Why NeuroVibe Exists</h2>
+
+          <p>
+            NeuroVibe began as a response to real life.
           </p>
 
-          <div class="glass" style="margin:16px auto 12px; max-width:720px; padding:16px;">
-            <p style="margin:0; font-weight:800;">
-              Start here: Free 1-Page Digital Reset 💜
-            </p>
-            <p style="margin:6px 0 0; opacity:.92;">
-              A quick nervous-system-friendly reset for the moments when everything feels like “too much.”
-            </p>
+          <p>
+            Like many families navigating neurodivergence, I found myself overwhelmed by advice,
+            systems, and parenting strategies that sounded good on paper but didn’t actually work
+            in the middle of everyday life.
+          </p>
+
+          <p>
+            What families often need isn’t perfection.
+          </p>
+
+          <p>
+            We need tools that help when a child is melting down, when the day feels chaotic,
+            when school meetings are overwhelming, and when parents are simply exhausted.
+          </p>
+
+          <p>
+            NeuroVibe was created to offer calm, practical support — the kind that fits into real
+            life and helps families feel more capable and grounded.
+          </p>
+        </section>
+
+        <section class="nv-section">
+          <div class="nv-grid">
+
+            <article class="nv-card">
+              <div class="nv-card-body">
+                <h2 class="nv-h2">What You’ll Find Here</h2>
+
+                <p>
+                  NeuroVibe focuses on simple support systems that help families feel calmer,
+                  clearer, and more supported.
+                </p>
+
+                <ul class="nv-bullets">
+                  <li>🧠 Nervous system tools that help reduce overwhelm</li>
+                  <li>🗂️ practical school and meeting support resources</li>
+                  <li>🌿 everyday wellness habits that support calmer homes</li>
+                </ul>
+
+                <p>
+                  Everything here is designed to be simple enough to use in the middle of real life.
+                </p>
+              </div>
+            </article>
+
+            <article class="nv-card">
+              <div class="nv-card-body">
+
+                <h2 class="nv-h2">Who NeuroVibe Is For</h2>
+
+                <ul class="nv-bullets">
+                  <li>You’re juggling a million responsibilities</li>
+                  <li>You feel stuck in survival mode</li>
+                  <li>You’re parenting a neurodivergent child</li>
+                  <li>You want support that doesn't add more pressure</li>
+                </ul>
+
+                <p style="font-weight:700;">
+                  If that sounds like you — you’re in the right place. 💜
+                </p>
+
+              </div>
+            </article>
+
+            <article class="nv-card featured">
+
+              <div class="nv-card-media">
+                <img
+                  src="/images/Family-Photo-About.PNG"
+                  alt="Amanda and her family"
+                  class="nv-family-photo"
+                />
+              </div>
+
+              <div class="nv-card-body">
+
+                <h2 class="nv-h2">Behind NeuroVibe</h2>
+
+                <p>
+                  I’m Amanda — a mom, advocate, and wellness educator passionate about helping
+                  neurodivergent families feel calm, capable, and supported.
+                </p>
+
+                <p>
+                  My kids are my biggest teachers. They’ve shaped the way I approach regulation,
+                  routines, and real-life support. Everything I create comes from lived experience,
+                  not theory alone.
+                </p>
+
+                <p>
+                  My partner Michael supports this vision behind the scenes, helping turn NeuroVibe
+                  into something meaningful for families everywhere.
+                </p>
+
+                <p style="font-weight:700;">
+                  NeuroVibe isn’t just a brand — it’s our real life. 💫
+                </p>
+
+              </div>
+            </article>
+
           </div>
+        </section>
 
-          <div class="nv-actions" style="justify-content:center;">
-            <a
-              class="nv-btn primary"
-              href="https://store.neurovibe.site/b/2FfBV"
-              target="_blank"
-              rel="noopener"
-            >
-              Get the Free Reset
+        <section class="glass" style="padding:22px; text-align:center; margin-top:18px;">
+          <h2 class="nv-h2">Explore the NeuroVibe Ecosystem</h2>
+
+          <p>
+            NeuroVibe includes several hubs designed to support different areas of everyday life.
+          </p>
+
+          <p style="margin-top:10px;">
+            📚 Guides • 🌿 WellCo • ✨ Beauty Hub • 🌙 Publishing
+          </p>
+
+          <div style="margin-top:14px;">
+            <a class="nv-btn primary" href="/start.html">
+              Explore Everything
             </a>
+          </div>
+        </section>
 
+        <section class="glass" style="padding:22px; text-align:center; margin-top:18px;">
+          <h2 class="nv-h2">Connect With NeuroVibe</h2>
+
+          <p>
+            Questions, collaborations, or partnership opportunities?
+          </p>
+
+          <p style="margin-bottom:8px;">
+            📧 <a href="mailto:hello@neurovibe.site">hello@neurovibe.site</a>
+          </p>
+
+          <div style="margin-top:10px;">
             <a
               class="nv-btn ghost"
-              href="https://www.facebook.com/share/g/1EKWVkZnF9/?mibextid=wwXIfr"
+              href="https://www.facebook.com/share/g/1AGfG6suS8/?mibextid=wwXIfr"
               target="_blank"
               rel="noopener"
             >
-              Join the Facebook Group
+              Join the Community
             </a>
           </div>
-
-        </div>
-      </section>
-
-
-      <!-- WHY NEUROVIBE EXISTS -->
-      <section class="nv-section glass" style="padding:24px; margin-top:18px;">
-        <h2 class="nv-h2">Why NeuroVibe Exists</h2>
-
-        <p>
-          NeuroVibe began as a response to real life.
-        </p>
-
-        <p>
-          Like many families navigating neurodivergence, I found myself overwhelmed by advice,
-          systems, and parenting strategies that sounded good on paper but didn’t actually work
-          in the middle of everyday life.
-        </p>
-
-        <p>
-          What families often need isn’t perfection.
-        </p>
-
-        <p>
-          We need tools that help when a child is melting down, when the day feels chaotic,
-          when school meetings are overwhelming, and when parents are simply exhausted.
-        </p>
-
-        <p>
-          NeuroVibe was created to offer calm, practical support — the kind that fits into real
-          life and helps families feel more capable and grounded.
-        </p>
-      </section>
-
-
-      <!-- WHAT NEUROVIBE OFFERS -->
-      <section class="nv-section">
-        <div class="nv-grid">
-
-          <article class="nv-card">
-            <div class="nv-card-body">
-              <h2 class="nv-h2">What You’ll Find Here</h2>
-
-              <p>
-                NeuroVibe focuses on simple support systems that help families feel calmer,
-                clearer, and more supported.
-              </p>
-
-              <ul class="nv-bullets">
-                <li>🧠 Nervous system tools that help reduce overwhelm</li>
-                <li>🗂️ practical school and meeting support resources</li>
-                <li>🌿 everyday wellness habits that support calmer homes</li>
-              </ul>
-
-              <p>
-                Everything here is designed to be simple enough to use in the middle of real life.
-              </p>
-
-            </div>
-          </article>
-
-
-          <!-- WHO IT'S FOR -->
-          <article class="nv-card">
-            <div class="nv-card-body">
-
-              <h2 class="nv-h2">Who NeuroVibe Is For</h2>
-
-              <ul class="nv-bullets">
-                <li>You’re juggling a million responsibilities</li>
-                <li>You feel stuck in survival mode</li>
-                <li>You’re parenting a neurodivergent child</li>
-                <li>You want support that doesn't add more pressure</li>
-              </ul>
-
-              <p style="font-weight:700;">
-                If that sounds like you — you’re in the right place. 💜
-              </p>
-
-            </div>
-          </article>
-
-
-          <!-- BEHIND THE BRAND -->
-          <article class="nv-card featured">
-
-            <div class="nv-card-media">
-              <img
-                src="/images/Family-Photo-About.PNG"
-                alt="Amanda and her family"
-                class="nv-family-photo"
-              />
-            </div>
-
-            <div class="nv-card-body">
-
-              <h2 class="nv-h2">Behind NeuroVibe</h2>
-
-              <p>
-                I’m Amanda — a mom, advocate, and wellness educator passionate about helping
-                neurodivergent families feel calm, capable, and supported.
-              </p>
-
-              <p>
-                My kids are my biggest teachers. They’ve shaped the way I approach regulation,
-                routines, and real-life support. Everything I create comes from lived experience,
-                not theory alone.
-              </p>
-
-              <p>
-                My partner Michael supports this vision behind the scenes, helping turn NeuroVibe
-                into something meaningful for families everywhere.
-              </p>
-
-              <p style="font-weight:700;">
-                NeuroVibe isn’t just a brand — it’s our real life. 💫
-              </p>
-
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-
-      <!-- ECOSYSTEM -->
-      <section class="glass" style="padding:22px; text-align:center; margin-top:18px;">
-        <h2 class="nv-h2">Explore the NeuroVibe Ecosystem</h2>
-
-        <p>
-          NeuroVibe includes several hubs designed to support different areas of everyday life.
-        </p>
-
-        <p style="margin-top:10px;">
-          📚 Guides • 🌿 WellCo • ✨ Beauty Hub • 🌙 Publishing
-        </p>
-
-        <div style="margin-top:14px;">
-          <a class="nv-btn primary" href="/start-here.html">
-            Explore Everything
-          </a>
-        </div>
-      </section>
-
-
-      <!-- CONTACT -->
-      <section class="glass" style="padding:22px; text-align:center; margin-top:18px;">
-
-        <h2 class="nv-h2">Connect With NeuroVibe</h2>
-
-        <p>
-          Questions, collaborations, or partnership opportunities?
-        </p>
-
-        <p style="margin-bottom:8px;">
-          📧 <a href="mailto:hello@neurovibe.site">hello@neurovibe.site</a>
-        </p>
-
-        <div style="margin-top:10px;">
-          <a
-            class="nv-btn ghost"
-            href="https://www.facebook.com/share/g/1AGfG6suS8/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener"
-          >
-            Join the Community
-          </a>
-        </div>
+        </section>
 
       </section>
 
-    </section>
-
-  </div>
-</main>
+    </div>
+  </main>
 
   <script>
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("active");
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      });
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
 
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
-          toggle.setAttribute("aria-expanded", "false");
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
         }
       });
-    }
   </script>
-<script>
-fetch("/components/nav.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("nav-placeholder").innerHTML = data;
-
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
-
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
-        }
-      });
-    }
-  });
-</script>
-    </body>
+</body>
 </html>

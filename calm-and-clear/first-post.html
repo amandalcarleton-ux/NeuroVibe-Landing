@@ -1,60 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Calm & Clear | NeuroVibe</title>
+  <meta
+    name="description"
+    content="Welcome to Calm & Clear by NeuroVibe — a gentle space for reflections, wellness, nervous system support, and real-life encouragement."
+  />
 
-<title>Welcome to Calm & Clear | NeuroVibe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css?v=103" />
 
-<link rel="stylesheet" href="/style.css?v=103">
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
-<style>
+  <style>
+    .post-wrap{
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 36px 20px 80px;
+    }
 
-.post-container{
-max-width:800px;
-margin:auto;
-padding:60px 20px;
-line-height:1.7;
-}
+    .post-back{
+      display: inline-block;
+      margin-bottom: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #6b5cff;
+    }
 
-.post-container h1{
-font-size:40px;
-margin-bottom:20px;
-}
+    .post-card{
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 28px;
+      padding: 32px 24px;
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.10);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
 
-.post-container p{
-margin-bottom:20px;
-font-size:18px;
-}
+    .post-eyebrow{
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+      color: #6b5cff;
+      margin-bottom: 10px;
+    }
 
-</style>
+    .post-card h1{
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.08;
+      margin: 0 0 18px;
+      color: #1f1637;
+    }
 
+    .post-card p{
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #3e4450;
+      margin: 0 0 18px;
+    }
+  </style>
 </head>
 
-<body>
+<body class="nv-y2k">
 
-<div class="post-container">
+  <div id="nav-placeholder"></div>
 
-<h1>Welcome to Calm & Clear</h1>
+  <main class="post-wrap">
+    <a class="post-back" href="/calm-and-clear.html">← Back to Calm &amp; Clear</a>
 
-<p>
-Calm & Clear is a space inside NeuroVibe for slower thoughts, honest reflections, and simple tools that support nervous system balance in everyday life.
-</p>
+    <article class="post-card">
+      <p class="post-eyebrow">NeuroVibe Journal</p>
+      <h1>Welcome to Calm &amp; Clear</h1>
 
-<p>
-Life can feel overwhelming sometimes. This space exists to share gentle ideas, routines, and resources that make things feel a little steadier.
-</p>
+      <p>
+        Calm &amp; Clear is a space inside NeuroVibe for slower thoughts, honest reflections,
+        and simple tools that support nervous system balance in everyday life.
+      </p>
 
-<p>
-You’ll find reflections on wellness, motherhood, sensory life, and the small practices that help bring things back into balance.
-</p>
+      <p>
+        Life can feel heavy, noisy, and overstimulating. This space exists to offer gentler
+        rhythms, practical encouragement, and supportive ideas that help things feel a little
+        more grounded.
+      </p>
 
-<p>
-Thank you for being here.
-</p>
+      <p>
+        Here you’ll find reflections on wellness, motherhood, sensory life, emotional
+        regulation, and the small practices that can help bring a sense of steadiness back
+        into the day.
+      </p>
 
-</div>
-<a href="/calm-and-clear.html">← Back to Calm & Clear</a>
+      <p>
+        Thank you for being here. I’m really glad you found your way to this corner of NeuroVibe.
+      </p>
+    </article>
+  </main>
+
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
+
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+            }
+          });
+        }
+      });
+  </script>
+
 </body>
 </html>

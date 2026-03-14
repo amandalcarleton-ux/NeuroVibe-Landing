@@ -87,7 +87,44 @@ transition:.2s;
 .nv-reset-popup-btn:hover{
 transform:translateY(-2px);
 }
+.nv-book-grid{
+display:grid;
+grid-template-columns:220px 1fr;
+gap:26px;
+align-items:center;
+}
 
+.nv-book-image{
+text-align:center;
+}
+
+.nv-book-cover{
+width:100%;
+max-width:200px;
+border-radius:16px;
+box-shadow:0 18px 36px rgba(75,46,131,0.20);
+}
+
+.nv-book-title{
+font-size:1.5rem;
+margin:6px 0 10px;
+color:#4b2e83;
+}
+
+.nv-book-text{
+line-height:1.7;
+color:#3e4450;
+margin-bottom:14px;
+}
+
+@media (max-width:720px){
+
+.nv-book-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+}
 </style>
 
 </head>
@@ -163,7 +200,9 @@ Read the First Post
 
 <div class="nv-book-card">
 
-<h2 class="nv-book-kicker">Now Available on Amazon</h2>
+<div class="nv-book-grid">
+
+<div class="nv-book-image">
 
 <img
 src="/images/rhythm-of-the-moon.jpg"
@@ -173,6 +212,12 @@ loading="lazy"
 onerror="this.style.display='none';"
 />
 
+</div>
+
+<div class="nv-book-content">
+
+<h2 class="nv-book-kicker">Now Available on Amazon</h2>
+
 <h3 class="nv-book-title">The Rhythm of the Moon</h3>
 
 <p class="nv-book-text">
@@ -180,15 +225,23 @@ A gentle story about growing up, emotions, and understanding your body —
 created to support meaningful conversations with kids and families.
 </p>
 
-<div class="nv-actions" style="justify-content:center;margin-top:12px;">
+<div class="nv-actions">
 
 <a href="/ROTM/rhythm-of-the-moon.html"
-class="nv-btn primary">View the Book</a>
+class="nv-btn primary">
+View the Book
+</a>
 
 <a href="https://a.co/d/00yAaJmQ"
 target="_blank"
 rel="noopener"
-class="nv-btn ghost">Buy on Amazon</a>
+class="nv-btn ghost">
+Buy on Amazon
+</a>
+
+</div>
+
+</div>
 
 </div>
 

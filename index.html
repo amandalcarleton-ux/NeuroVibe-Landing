@@ -1,390 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NeuroVibe | Neurodivergent Parenting, Executive Function & Family Wellness</title>
 
-<title>NeuroVibe | Neurodivergent Parenting, Executive Function & Family Wellness</title>
+  <meta name="description" content="NeuroVibe supports neurodivergent families with grounded parenting support, nervous system tools, executive function help, and real-life wellness resources."/>
+  <meta name="robots" content="index,follow"/>
+  <link rel="canonical" href="https://neurovibe.site/"/>
 
-<meta name="description" content="NeuroVibe supports neurodivergent families with grounded parenting support, nervous system tools, executive function help, and real-life wellness resources."/>
+  <meta property="og:title" content="NeuroVibe | Neurodivergent Parenting & Family Wellness"/>
+  <meta property="og:description" content="Grounded parenting support, calm tools, and wellness resources for neurodivergent families."/>
+  <meta property="og:url" content="https://neurovibe.site/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://neurovibe.site/og-image.jpg"/>
 
-<meta name="robots" content="index,follow"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="NeuroVibe | Neurodivergent Parenting & Family Wellness"/>
+  <meta name="twitter:description" content="Grounded parenting support, calm tools, and wellness resources for neurodivergent families."/>
+  <meta name="twitter:image" content="https://neurovibe.site/og-image.jpg"/>
 
-<link rel="canonical" href="https://neurovibe.site/"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5N6SZXHDX0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5N6SZXHDX0');
+  </script>
 
-<meta property="og:title" content="NeuroVibe | Neurodivergent Parenting & Family Wellness"/>
-<meta property="og:description" content="Grounded parenting support, calm tools, and wellness resources for neurodivergent families."/>
-<meta property="og:url" content="https://neurovibe.site/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="https://neurovibe.site/og-image.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/style.css?v=104"/>
 
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="NeuroVibe | Neurodivergent Parenting & Family Wellness"/>
-<meta name="twitter:description" content="Grounded parenting support, calm tools, and wellness resources for neurodivergent families."/>
-<meta name="twitter:image" content="https://neurovibe.site/og-image.jpg"/>
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG"/>
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG"/>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5N6SZXHDX0"></script>
+  <style>
+    html, body{
+      margin:0;
+      padding:0;
+    }
 
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-5N6SZXHDX0');
-</script>
+    #nav-placeholder{
+      width:100%;
+    }
 
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    main{
+      display:block;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+    .nv-reset-section{
+      text-align:center;
+      margin:0 auto 24px;
+      max-width:680px;
+      padding:24px 18px;
+    }
 
-<link rel="stylesheet" href="/style.css?v=104"/>
+    .nv-reset-popup-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:min(100%,360px);
+      min-height:54px;
+      padding:14px 24px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#6b5cff,#7ee6ff,#ffb6e1);
+      color:#fff;
+      font-family:'Poppins',sans-serif;
+      font-size:1rem;
+      font-weight:700;
+      text-decoration:none;
+      cursor:pointer;
+      box-shadow:0 14px 30px rgba(75,46,131,.24);
+      transition:.2s;
+    }
 
-<link rel="icon" type="image/png" href="/images/nv-favicon.PNG"/>
-<link rel="apple-touch-icon" href="/images/nv-favicon.PNG"/>
+    .nv-reset-popup-btn:hover{
+      transform:translateY(-2px);
+    }
 
-<style>
+    .nv-home-section{
+      margin:0 0 22px;
+    }
 
-html,body{
-margin:0;
-padding:0;
-}
+    .nv-home-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:18px;
+    }
 
-#nav-placeholder{
-width:100%;
-}
+    .nv-home-card{
+      padding:22px;
+      border-radius:22px;
+      background:rgba(255,255,255,0.72);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+      box-shadow:0 16px 36px rgba(75,46,131,.10);
+      border:1px solid rgba(255,255,255,0.55);
+    }
 
-main{
-display:block;
-}
+    .nv-home-card h3{
+      margin:8px 0 10px;
+      color:#4b2e83;
+      font-size:1.2rem;
+    }
 
-.nv-reset-section{
-text-align:center;
-margin:26px auto 40px;
-max-width:560px;
-padding:0 16px;
-}
+    .nv-home-card p{
+      margin:0 0 14px;
+      line-height:1.7;
+      color:#3e4450;
+    }
 
-.nv-reset-popup-btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:min(100%,360px);
-min-height:54px;
-padding:14px 24px;
-border-radius:999px;
-background:linear-gradient(135deg,#6b5cff,#7ee6ff,#ffb6e1);
-color:#fff;
-font-family:'Poppins',sans-serif;
-font-size:1rem;
-font-weight:700;
-text-decoration:none;
-cursor:pointer;
-box-shadow:0 14px 30px rgba(75,46,131,.24);
-transition:.2s;
-}
+    .nv-book-grid{
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:26px;
+      align-items:center;
+    }
 
-.nv-reset-popup-btn:hover{
-transform:translateY(-2px);
-}
+    .nv-book-image{
+      text-align:center;
+    }
 
-.nv-book-grid{
-display:grid;
-grid-template-columns:220px 1fr;
-gap:26px;
-align-items:center;
-}
+    .nv-book-cover{
+      width:100%;
+      max-width:200px;
+      border-radius:16px;
+      box-shadow:0 18px 36px rgba(75,46,131,0.20);
+    }
 
-.nv-book-image{
-text-align:center;
-}
+    .nv-book-kicker{
+      font-size:.9rem;
+      font-weight:700;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      color:#7a4a8c;
+      margin:0 0 8px;
+    }
 
-.nv-book-cover{
-width:100%;
-max-width:200px;
-border-radius:16px;
-box-shadow:0 18px 36px rgba(75,46,131,0.20);
-}
+    .nv-book-title{
+      font-size:1.5rem;
+      margin:6px 0 10px;
+      color:#4b2e83;
+    }
 
-.nv-book-title{
-font-size:1.5rem;
-margin:6px 0 10px;
-color:#4b2e83;
-}
+    .nv-book-text{
+      line-height:1.7;
+      color:#3e4450;
+      margin-bottom:14px;
+    }
 
-.nv-book-text{
-line-height:1.7;
-color:#3e4450;
-margin-bottom:14px;
-}
+    .nv-founder-split{
+      display:grid;
+      grid-template-columns:320px 1fr;
+      gap:24px;
+      align-items:center;
+    }
 
-@media (max-width:720px){
+    .nv-founder-photo-wrap{
+      text-align:center;
+    }
 
-.nv-book-grid{
-grid-template-columns:1fr;
-text-align:center;
-}
+    .nv-founder-photo{
+      width:100%;
+      max-width:300px;
+      border-radius:24px;
+      box-shadow:0 18px 38px rgba(75,46,131,.16);
+      display:block;
+      margin:0 auto;
+    }
 
-}
-</style>
+    .nv-founder-title{
+      margin:0 0 12px;
+      color:#4b2e83;
+      font-size:1.8rem;
+    }
 
+    .nv-founder-text{
+      line-height:1.8;
+      color:#3e4450;
+      margin:0 0 16px;
+    }
+
+    @media (max-width: 920px){
+      .nv-home-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nv-founder-split{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width:720px){
+      .nv-book-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+    }
+  </style>
 </head>
 
 <body class="nv-y2k">
-
-<div id="nav-placeholder"></div>
-
-<main class="nv-page">
-
-<div class="nv-wrap">
-
-<section class="hero hero-overlay glass">
-
-<div class="hero-grid">
-
-<div class="hero-left">
-
-<div class="hero-overlay-content">
-
-<div class="hero-logo">
-<img src="/images/butterfly-aura.PNG"
-alt="NeuroVibe butterfly"
-class="site-logo"
-loading="eager"/>
-</div>
-
-<p class="nv-kicker">NeuroVibe Wellness Collective</p>
-
-<h1>Grounded parenting support for neurodivergent families</h1>
-
-<p>
-Simple regulation tools, executive function support, and calm routines —
-built for real life, not perfection.
-</p>
-
-<a href="https://store.neurovibe.site/b/2FfBV"
-class="nv-reset-popup-btn"
-target="_blank"
-rel="noopener">
-Get the Free Digital Reset ✨
-</a>
-
-<section class="nv-blog-highlight">
-
-<h3>Featured Journal</h3>
-
-<h2>Calm &amp; Clear</h2>
-
-<p>
-A softer space inside NeuroVibe for reflections on motherhood,
-nervous system support, emotional regulation, and the rhythms
-of real life.
-</p>
-
-<div class="nv-actions" style="justify-content:center;margin-top:12px;">
-
-<a href="/calm-and-clear/" class="nv-btn primary">
-Explore Calm &amp; Clear
-</a>
-
-<a href="/calm-and-clear/first-post.html" class="nv-btn ghost">
-Read the First Post
-</a>
-
-</div>
-
-</section>
-
-<section class="nv-book-feature">
-
-<div class="nv-book-card">
-
-<div class="nv-book-grid">
-
-<div class="nv-book-image">
-
-<img
-src="/images/rhythm-of-the-moon.jpg"
-alt="The Rhythm of the Moon book cover"
-class="nv-book-cover"
-loading="lazy"
-onerror="this.style.display='none';"
-/>
-
-</div>
-
-<div class="nv-book-content">
-
-<h2 class="nv-book-kicker">Now Available on Amazon</h2>
-
-<h3 class="nv-book-title">The Rhythm of the Moon</h3>
-
-<p class="nv-book-text">
-A gentle story about growing up, emotions, and understanding your body —
-created to support meaningful conversations with kids and families.
-</p>
-
-<div class="nv-actions">
-
-<a href="/ROTM/rhythm-of-the-moon.html"
-class="nv-btn primary">
-View the Book
-</a>
-
-<a href="https://a.co/d/00yAaJmQ"
-target="_blank"
-rel="noopener"
-class="nv-btn ghost">
-Buy on Amazon
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="nv-wellco-highlight">
-
-<h2>Support Your Nervous System From the Inside Out 🌿</h2>
-
-<p>
-Learning how regulation works is powerful — but our bodies also need
-support. NeuroVibe WellCo shares simple wellness tools I personally
-use to support energy, focus, gut health, and everyday balance.
-</p>
-
-<a href="/wellco.html" class="nv-wellco-btn">
-Explore NeuroVibe WellCo ✨
-</a>
-
-</section>
-
-</div>
-
-</div>
-
-<div class="hero-right">
-
-<div class="nv-founder-card">
-
-<img
-src="/images/Amanda-Portrait.PNG"
-alt="Amanda L Carleton"
-class="nv-founder-photo"
-loading="lazy"/>
-
-<h2 class="nv-founder-title">
-Meet the Heart Behind NeuroVibe
-</h2>
-
-<p class="nv-founder-text">
-NeuroVibe was created to offer grounded support,
-practical tools, and a softer way forward for overwhelmed families.
-</p>
-
-<div class="hero-actions" style="margin-top:14px;">
-
-<a href="/about.html" class="nv-btn primary">
-Meet Amanda
-</a>
-
-<a href="https://store.neurovibe.site/b/2FfBV"
-target="_blank"
-rel="noopener"
-class="nv-btn ghost">
-Get the Free Reset
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer class="glass nv-card nv-footer-cta">
-
-<h2 class="nv-h2">Want the free reset?</h2>
-
-<p class="nv-copy">
-A quick calm tool for overwhelmed moments — ready to download instantly.
-</p>
-
-<div class="nv-actions" style="justify-content:center;">
-
-<a class="nv-btn primary"
-href="https://store.neurovibe.site/b/2FfBV"
-target="_blank"
-rel="noopener">
-
-Get the free reset
-
-</a>
-
-</div>
-
-<p style="margin-top:14px;font-size:12px;opacity:.75;">
-© <span id="year"></span> NeuroVibe
-</p>
-
-</footer>
-
-</div>
-
-</main>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-<script>
-
-fetch("/components/nav.html")
-
-.then(response=>response.text())
-
-.then(data=>{
-
-document.getElementById("nav-placeholder").innerHTML=data;
-
-const toggle=document.getElementById("nv-menu-toggle");
-const nav=document.getElementById("nv-nav");
-
-if(toggle&&nav){
-
-toggle.addEventListener("click",()=>{
-
-const open=nav.classList.toggle("active");
-
-toggle.setAttribute("aria-expanded",open?"true":"false");
-
-});
-
-document.addEventListener("click",(e)=>{
-
-if(!toggle.contains(e.target)&&!nav.contains(e.target)){
-
-nav.classList.remove("active");
-
-toggle.setAttribute("aria-expanded","false");
-
-}
-
-});
-
-}
-
-});
-
-</script>
-
+  <div id="nav-placeholder"></div>
+
+  <main class="nv-page">
+    <div class="nv-wrap">
+
+      <section class="hero hero-overlay glass nv-home-section">
+        <div class="hero-grid">
+
+          <div class="hero-left">
+            <div class="hero-overlay-content">
+              <div class="hero-logo">
+                <img
+                  src="/images/butterfly-aura.PNG"
+                  alt="NeuroVibe butterfly"
+                  class="site-logo"
+                  loading="eager"
+                />
+              </div>
+
+              <p class="nv-kicker">NeuroVibe Wellness Collective</p>
+
+              <h1>Grounded parenting support for neurodivergent families</h1>
+
+              <p>
+                Simple regulation tools, executive function support, and calm routines —
+                built for real life, not perfection.
+              </p>
+
+              <div class="nv-actions" style="justify-content:flex-start; margin-top:16px;">
+                <a
+                  href="https://store.neurovibe.site/b/2FfBV"
+                  class="nv-reset-popup-btn"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Get the Free Digital Reset ✨
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <div class="glass nv-card" style="padding:22px; text-align:center;">
+              <img
+                src="/images/Amanda-Portrait.PNG"
+                alt="Amanda L Carleton"
+                class="nv-founder-photo"
+                loading="lazy"
+              />
+
+              <h2 class="nv-founder-title" style="font-size:1.4rem; margin-top:16px;">
+                Meet the Heart Behind NeuroVibe
+              </h2>
+
+              <p class="nv-founder-text">
+                NeuroVibe was created to offer grounded support, practical tools,
+                and a softer way forward for overwhelmed families.
+              </p>
+
+              <div class="hero-actions" style="margin-top:14px;">
+                <a href="/about.html" class="nv-btn primary">Meet Amanda</a>
+                <a
+                  href="https://store.neurovibe.site/b/2FfBV"
+                  target="_blank"
+                  rel="noopener"
+                  class="nv-btn ghost"
+                >
+                  Get the Free Reset
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="glass nv-reset-section nv-home-section">
+        <p class="nv-kicker">Start here</p>
+        <h2 class="nv-h2">Grab the free digital reset</h2>
+        <p class="nv-copy" style="max-width:60ch; margin:0 auto 14px;">
+          A quick, calming tool for overwhelmed moments — designed to help you reset,
+          regroup, and take the next step with a little more ease.
+        </p>
+
+        <a
+          href="https://store.neurovibe.site/b/2FfBV"
+          class="nv-reset-popup-btn"
+          target="_blank"
+          rel="noopener"
+        >
+          Get the Free Digital Reset ✨
+        </a>
+      </section>
+
+      <section class="nv-home-section">
+        <div class="nv-home-grid">
+
+          <article class="nv-home-card">
+            <p class="nv-kicker">Support</p>
+            <h3>Guides & Resources</h3>
+            <p>
+              Practical digital tools for emotional regulation, executive function,
+              and calmer daily life.
+            </p>
+            <a href="/guides.html" class="nv-btn primary">Explore Guides</a>
+          </article>
+
+          <article class="nv-home-card">
+            <p class="nv-kicker">Wellness</p>
+            <h3>NeuroVibe WellCo</h3>
+            <p>
+              Everyday wellness tools that support energy, focus, gut health,
+              and nervous system balance.
+            </p>
+            <a href="/wellco.html" class="nv-btn primary">Explore WellCo</a>
+          </article>
+
+          <article class="nv-home-card">
+            <p class="nv-kicker">Self-Care</p>
+            <h3>BeautyHub</h3>
+            <p>
+              Curated beauty finds, nail favorites, and feel-good products that
+              bring a little softness to real life.
+            </p>
+            <a href="/beautyhub.html" class="nv-btn primary">Explore BeautyHub</a>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="glass nv-home-section nv-blog-highlight" style="padding:24px; text-align:center;">
+        <p class="nv-kicker">Featured Journal</p>
+        <h2 class="nv-h2">Calm &amp; Clear</h2>
+
+        <p class="nv-copy" style="max-width:60ch; margin:0 auto;">
+          A softer space inside NeuroVibe for reflections on motherhood,
+          nervous system support, emotional regulation, and the rhythms
+          of real life.
+        </p>
+
+        <div class="nv-actions" style="justify-content:center; margin-top:12px;">
+          <a href="/calm-and-clear/" class="nv-btn primary">Explore Calm &amp; Clear</a>
+          <a href="/calm-and-clear/first-post.html" class="nv-btn ghost">Read the First Post</a>
+        </div>
+      </section>
+
+      <section class="glass nv-home-section nv-book-feature" style="padding:26px;">
+        <div class="nv-book-card">
+          <div class="nv-book-grid">
+
+            <div class="nv-book-image">
+              <img
+                src="/images/rhythm-of-the-moon.jpg"
+                alt="The Rhythm of the Moon book cover"
+                class="nv-book-cover"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+
+            <div class="nv-book-content">
+              <p class="nv-book-kicker">Now Available on Amazon</p>
+              <h2 class="nv-book-title">The Rhythm of the Moon</h2>
+
+              <p class="nv-book-text">
+                A gentle story about growing up, emotions, and understanding your body —
+                created to support meaningful conversations with kids and families.
+              </p>
+
+              <div class="nv-actions">
+                <a href="/ROTM/rhythm-of-the-moon.html" class="nv-btn primary">View the Book</a>
+                <a
+                  href="https://a.co/d/00yAaJmQ"
+                  target="_blank"
+                  rel="noopener"
+                  class="nv-btn ghost"
+                >
+                  Buy on Amazon
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="glass nv-home-section nv-wellco-highlight" style="padding:24px; text-align:center;">
+        <p class="nv-kicker">Wellness Support</p>
+        <h2 class="nv-h2">Support Your Nervous System From the Inside Out 🌿</h2>
+
+        <p class="nv-copy" style="max-width:62ch; margin:0 auto 14px;">
+          Learning how regulation works is powerful — but our bodies also need support.
+          NeuroVibe WellCo shares simple wellness tools I personally use to support
+          energy, focus, gut health, and everyday balance.
+        </p>
+
+        <a href="/wellco.html" class="nv-btn primary">Explore NeuroVibe WellCo ✨</a>
+      </section>
+
+      <footer class="glass nv-card nv-footer-cta">
+        <h2 class="nv-h2">Want the free reset?</h2>
+
+        <p class="nv-copy">
+          A quick calm tool for overwhelmed moments — ready to download instantly.
+        </p>
+
+        <div class="nv-actions" style="justify-content:center;">
+          <a
+            class="nv-btn primary"
+            href="https://store.neurovibe.site/b/2FfBV"
+            target="_blank"
+            rel="noopener"
+          >
+            Get the free reset
+          </a>
+        </div>
+
+        <p style="margin-top:14px;font-size:12px;opacity:.75;">
+          © <span id="year"></span> NeuroVibe
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
+
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const open = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      });
+  </script>
 </body>
 </html>

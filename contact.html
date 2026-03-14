@@ -8,103 +8,12 @@
   <meta name="description" content="Contact NeuroVibe for questions, partnerships, support, or collaboration." />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=101" />
+  <link rel="stylesheet" href="/style.css?v=103" />
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
   <style>
-    .nv-header{
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      width: 100%;
-      background: rgba(255,255,255,0.72);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,0.45);
-      box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
-    }
-
-    .nv-nav-container{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-    }
-
-    .nv-logo{
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: #4b2e83;
-      text-decoration: none;
-    }
-
-    .nv-hamburger{
-      width: 52px;
-      height: 52px;
-      border: 1px solid rgba(255,255,255,0.55);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.34);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      line-height: 1;
-      color: #4b2e83;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .nv-hamburger:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
-    }
-
-    .nv-nav-menu{
-      display: none;
-      position: absolute;
-      top: calc(100% + 10px);
-      right: 18px;
-      min-width: 240px;
-      background: rgba(255,255,255,0.96);
-      border: 1px solid rgba(255,255,255,0.65);
-      border-radius: 20px;
-      padding: 14px;
-      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .nv-nav-menu.active{
-      display: flex;
-    }
-
-    .nv-nav-menu a{
-      display: block;
-      padding: 12px 14px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #101018;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .nv-nav-menu a:hover{
-      background: rgba(198,168,255,0.18);
-      color: #4b2e83;
-    }
-
     .nv-contact-form{
       display: grid;
       gap: 14px;
@@ -132,6 +41,7 @@
       box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
       outline: none;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
     }
 
     .nv-contact-form input:focus,
@@ -157,10 +67,6 @@
       margin-top: 6px;
     }
 
-    .nv-hidden{
-      display: none;
-    }
-
     @media (max-width: 768px){
       .nv-form-grid{
         grid-template-columns: 1fr;
@@ -171,11 +77,7 @@
 
 <body class="nv-y2k">
 
-  <header class="nv-header">
-    <div class="nv-nav-container">
-      <a href="/index.html" class="nv-logo">NeuroVibe</a>
-
-   <div id="nav-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
   <section class="nv-page-hero">
     <img
@@ -206,7 +108,6 @@
 
     <section class="nv-contact-info">
       <div class="nv-container">
-
         <div class="nv-contact-card">
           <h2>Get In Touch</h2>
 
@@ -221,14 +122,13 @@
 
           <p>
             <strong>Business Line:</strong>
-            <a href="tel:+17812777137">(781) 277–7137</a>
+            <a href="tel:+17812777137">(781) 277-7137</a>
           </p>
 
           <p class="nv-muted">
             This is a monitored business line. Voicemail and text available.
           </p>
         </div>
-
       </div>
     </section>
 
@@ -291,41 +191,27 @@
   </script>
 
   <script>
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
 
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+            }
+          });
         }
       });
-    }
   </script>
-<script>
-fetch("/components/nav.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("nav-placeholder").innerHTML = data;
 
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
-
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
-        }
-      });
-    }
-  });
-</script></body>
+</body>
 </html>

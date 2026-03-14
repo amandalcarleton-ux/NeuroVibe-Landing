@@ -1,119 +1,176 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Calm & Clear | NeuroVibe</title>
+  <title>Calm & Clear | NeuroVibe</title>
+  <meta
+    name="description"
+    content="Calm & Clear by NeuroVibe — gentle reflections, nervous system support, and simple tools for calmer days and clearer next steps."
+  />
 
-<meta name="description" content="Calm & Clear by NeuroVibe — gentle reflections, nervous system support, and simple tools for calmer days and clearer next steps.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css?v=103" />
 
-<link rel="stylesheet" href="/style.css?v=103">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
-<style>
+  <style>
+    .cc-wrap{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
 
-.cc-container{
-max-width:1100px;
-margin:auto;
-padding:60px 20px;
-}
+    .cc-hero{
+      text-align: center;
+      padding: 48px 20px 28px;
+    }
 
-.cc-header{
-text-align:center;
-margin-bottom:60px;
-}
+    .cc-eyebrow{
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #6b5cff;
+      margin-bottom: 10px;
+    }
 
-.cc-header h1{
-font-size:42px;
-margin-bottom:10px;
-}
+    .cc-hero h1{
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.05;
+      margin: 0 0 14px;
+      color: #1f1637;
+    }
 
-.cc-header p{
-color:#666;
-font-size:18px;
-}
+    .cc-hero p{
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: #5f6470;
+    }
 
-.cc-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
+    .cc-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+    }
 
-.cc-card{
-background:white;
-border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.06);
-overflow:hidden;
-transition:0.25s;
-}
+    .cc-card{
+      display: block;
+      text-decoration: none;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.10);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
 
-.cc-card:hover{
-transform:translateY(-5px);
-}
+    .cc-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 24px 48px rgba(75, 46, 131, 0.14);
+    }
 
-.cc-card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
+    .cc-card img{
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
 
-.cc-body{
-padding:20px;
-}
+    .cc-card-body{
+      padding: 24px;
+    }
 
-.cc-body h3{
-margin-bottom:10px;
-}
+    .cc-card-body h2{
+      font-size: 1.45rem;
+      color: #1f1637;
+      margin: 0 0 10px;
+    }
 
-.cc-body p{
-font-size:14px;
-color:#555;
-}
+    .cc-card-body p{
+      margin: 0 0 16px;
+      font-size: 0.98rem;
+      line-height: 1.7;
+      color: #5f6470;
+    }
 
-.cc-read{
-display:inline-block;
-margin-top:12px;
-color:#6b5cff;
-font-weight:600;
-}
+    .cc-read{
+      font-weight: 700;
+      color: #6b5cff;
+      font-size: 0.96rem;
+    }
 
-</style>
+    .cc-note{
+      margin-top: 42px;
+      text-align: center;
+      color: #5f6470;
+      font-size: 0.96rem;
+    }
+  </style>
 </head>
 
-<body>
+<body class="nv-y2k">
 
-<section class="cc-container">
+  <div id="nav-placeholder"></div>
 
-<div class="cc-header">
-<h1>Calm & Clear</h1>
-<p>Support for calmer days and clearer next steps.</p>
-</div>
+  <main class="cc-wrap">
+    <section class="cc-hero">
+      <p class="cc-eyebrow">NeuroVibe</p>
+      <h1>Calm &amp; Clear</h1>
+      <p>
+        A gentle space for reflections, nervous system support, motherhood, wellness,
+        and real-life tools for calmer days and clearer next steps.
+      </p>
+    </section>
 
-<div class="cc-grid">
+    <section class="cc-grid">
+      <a href="/calm-and-clear/first-post.html" class="cc-card">
+        <img src="/images/contact-header.PNG" alt="Welcome to Calm and Clear by NeuroVibe" />
+        <div class="cc-card-body">
+          <h2>Welcome to Calm &amp; Clear</h2>
+          <p>
+            Why I created this space inside NeuroVibe, what you’ll find here,
+            and the kind of support I hope it offers.
+          </p>
+          <span class="cc-read">Read article →</span>
+        </div>
+      </a>
+    </section>
 
-<a href="/calm-and-clear/first-post.html" class="cc-card">
+    <p class="cc-note">
+      More reflections and gentle resources are coming soon.
+    </p>
+  </main>
 
-<img src="/images/calm-reset.jpg">
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-<div class="cc-body">
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
 
-<h3>Welcome to Calm & Clear</h3>
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+          });
 
-<p>
-Why I created Calm & Clear and what you’ll find inside this space.
-</p>
-
-<span class="cc-read">Read Article →</span>
-
-</div>
-
-</a>
-
-</div>
-
-</section>
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+            }
+          });
+        }
+      });
+  </script>
 
 </body>
 </html>

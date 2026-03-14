@@ -149,6 +149,7 @@
     }
 
     .nv-start-intro,
+    .nv-featured-spotlight,
     .nv-hub-section,
     .nv-funnel,
     .nv-section-box{
@@ -225,6 +226,57 @@
 
     .nv-start-btn:hover{
       transform:translateY(-2px);
+    }
+
+    .nv-featured-spotlight{
+      margin-top:28px;
+      background:linear-gradient(135deg, rgba(107,92,255,0.12), rgba(156,125,255,0.18));
+      border:1px solid rgba(198,168,255,0.40);
+      text-align:center;
+    }
+
+    .nv-featured-spotlight h3{
+      margin:0 0 8px;
+      color:#6b5cff;
+      font-size:0.92rem;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+      font-weight:700;
+    }
+
+    .nv-featured-spotlight h2{
+      margin:0 0 12px;
+      font-size:clamp(1.8rem, 3vw, 2.5rem);
+      line-height:1.2;
+      color:#101018;
+    }
+
+    .nv-featured-spotlight p{
+      max-width:720px;
+      margin:0 auto 22px;
+      line-height:1.7;
+      color:#101018;
+      font-size:1rem;
+    }
+
+    .nv-featured-spotlight a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:12px 22px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      background:linear-gradient(135deg,#6b5cff,#9c7dff);
+      color:#fff;
+      box-shadow:0 10px 24px rgba(107,92,255,0.25);
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .nv-featured-spotlight a:hover{
+      transform:translateY(-2px);
+      box-shadow:0 14px 28px rgba(107,92,255,0.30);
     }
 
     .nv-hub-section,
@@ -451,6 +503,7 @@
       }
 
       .nv-start-intro,
+      .nv-featured-spotlight,
       .nv-hub-section,
       .nv-funnel,
       .nv-section-box{
@@ -470,7 +523,8 @@
       }
 
       .nv-start-btn,
-      .nv-back-btn{
+      .nv-back-btn,
+      .nv-featured-spotlight a{
         width:100%;
       }
 
@@ -511,7 +565,8 @@
       .nv-start-intro p,
       .nv-hub-sub,
       .nv-section-sub,
-      .nv-funnel-head p{
+      .nv-funnel-head p,
+      .nv-featured-spotlight p{
         font-size:0.98rem;
       }
     }
@@ -532,15 +587,7 @@
     />
   </section>
 
-  <main class<section class="nv-featured-spotlight">
-  <h3>Featured Support</h3>
-  <h2>Calm &amp; Clear</h2>
-  <p>
-    A gentle place to begin with calming support, practical tools, and simple next
-    steps for everyday overwhelm.
-  </p>
-  <a href="/calm-and-clear.html">Explore Calm &amp; Clear</a>
-</section>="nv-start-wrap">
+  <main class="nv-start-wrap">
 
     <section class="nv-start-intro">
       <p class="nv-kicker">Welcome to NeuroVibe</p>
@@ -556,6 +603,16 @@
         <a href="#explore-hubs" class="nv-start-btn primary">Explore the Hubs</a>
         <a href="https://store.neurovibe.site" target="_blank" rel="noopener" class="nv-start-btn ghost">Open Shop</a>
       </div>
+    </section>
+
+    <section class="nv-featured-spotlight">
+      <h3>Featured Support</h3>
+      <h2>Calm &amp; Clear</h2>
+      <p>
+        A gentle place to begin with calming support, practical tools, and simple next
+        steps for everyday overwhelm.
+      </p>
+      <a href="/calm-and-clear.html">Explore Calm &amp; Clear</a>
     </section>
 
     <section class="nv-hub-section" id="explore-hubs">

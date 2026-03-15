@@ -292,6 +292,82 @@ margin:16px 0;
 text-decoration:none;
 color:inherit;
 }
+    .nv-footer-stack{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  margin-top:10px;
+}
+
+.nv-footer-card{
+  padding:28px 24px;
+  border-radius:28px;
+}
+
+.nv-reset-card{
+  text-align:center;
+}
+
+.nv-social-panel{
+  text-align:center;
+}
+
+.nv-social-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+  margin-top:10px;
+  text-align:left;
+}
+
+.nv-social-card{
+  display:block;
+  margin:0;
+  padding:16px 0;
+  text-decoration:none;
+  color:inherit;
+  border-top:1px solid rgba(75,46,131,.10);
+}
+
+.nv-social-card:first-child{
+  border-top:none;
+  padding-top:8px;
+}
+
+.nv-social-card h3{
+  margin:0 0 6px;
+  color:#17142b;
+  font-size:1.1rem;
+}
+
+.nv-social-card p{
+  margin:0 0 6px;
+  color:#2c2840;
+  line-height:1.5;
+}
+
+.nv-social-card span{
+  color:#4b2e83;
+  font-weight:600;
+}
+
+.nv-social-card:hover{
+  opacity:.92;
+}
+
+.nv-footer-copy{
+  margin:0;
+  text-align:center;
+  font-size:12px;
+  opacity:.75;
+}
+
+@media (max-width:640px){
+  .nv-footer-card{
+    padding:22px 18px;
+    border-radius:24px;
+  }
+}
   </style>
 </head>
 
@@ -482,84 +558,95 @@ color:inherit;
       </section>
 
 
-      <footer class="glass nv-card nv-footer-cta">
-        <h2 class="nv-h2">Want the free reset?</h2>
 
-        <p class="nv-copy">
-          A quick calm tool for overwhelmed moments — ready to download instantly.
-        </p>
+      <section class="nv-footer-stack">
 
-        <div class="nv-actions" style="justify-content:center;">
-          <a
-            class="nv-btn primary"
-            href="https://store.neurovibe.site/b/2FfBV"
-            target="_blank"
-            rel="noopener"
-          >
-            Get the free reset
-          </a>
-        </div>
-<section class="nv-social-panel">
-<p class="nv-kicker">Stay Connected</p>
-<h2 class="nv-h2">Follow NeuroVibe ✨</h2>
+  <footer class="glass nv-card nv-footer-card nv-reset-card">
+    <h2 class="nv-h2">Want the free reset?</h2>
 
-  <p class="nv-copy" style="max-width:60ch; margin:0 auto;">
-    I share real-life moments, beauty favorites, wellness routines, and everyday NeuroVibe life across my socials.
-  ✨ I'm most active on Threads
+    <p class="nv-copy">
+      A quick calm tool for overwhelmed moments — ready to download instantly.
+    </p>
+
+    <div class="nv-actions" style="justify-content:center;">
+      <a
+        class="nv-btn primary"
+        href="https://store.neurovibe.site/b/2FfBV"
+        target="_blank"
+        rel="noopener"
+      >
+        Get the free reset
+      </a>
+    </div>
+  </footer>
+
+  <section class="glass nv-card nv-footer-card nv-social-panel">
+    <p class="nv-kicker">Stay Connected</p>
+    <h2 class="nv-h2">Follow NeuroVibe ✨</h2>
+
+    <p class="nv-copy" style="max-width:60ch; margin:0 auto 10px;">
+      I share real-life moments, beauty favorites, wellness routines, and everyday NeuroVibe life across my socials.
+    </p>
+
+    <p class="nv-mini-note" style="text-align:center; margin-bottom:8px;">
+      ✨ I’m most active on Threads
+    </p>
+
+    <div class="nv-social-grid">
+
+      <a
+        href="https://www.threads.com/@neurovibemama?invite=0"
+        target="_blank"
+        rel="noopener"
+        class="nv-social-card"
+      >
+        <h3>🧵 Threads</h3>
+        <p>@neurovibemama</p>
+        <span>Follow my threads &amp; replies →</span>
+      </a>
+
+      <a
+        href="https://www.facebook.com/share/17CYFsYeo3/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener"
+        class="nv-social-card"
+      >
+        <h3>💬 Facebook</h3>
+        <p>NeuroVibe Community</p>
+        <span>Follow the page →</span>
+      </a>
+
+      <a
+        href="https://instagram.com/neurovibemama"
+        target="_blank"
+        rel="noopener"
+        class="nv-social-card"
+      >
+        <h3>📸 Instagram</h3>
+        <p>@neurovibemama</p>
+        <span>Follow daily posts →</span>
+      </a>
+
+      <a
+        href="https://www.pinterest.com/neurovibemama/"
+        target="_blank"
+        rel="noopener"
+        class="nv-social-card"
+      >
+        <h3>📌 Pinterest</h3>
+        <p>@neurovibemama</p>
+        <span>Browse inspiration →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <p class="nv-footer-copy">
+    © <span id="year"></span> NeuroVibe
   </p>
 
-  <div class="nv-social-grid">
-
-    <a
-      href="https://www.threads.com/@neurovibemama?invite=0"
-      target="_blank"
-      rel="noopener"
-      class="nv-social-card"
-    >
-      <h3>🧵 Threads</h3>
-      <p>@neurovibemama</p>
-      <span>Follow my threads & replies →</span>
-    </a>
-    <a
-  href="https://www.facebook.com/share/17CYFsYeo3/?mibextid=wwXIfr"
-  target="_blank"
-  rel="noopener"
-  class="nv-social-card"
->
-  <h3>💬 Facebook</h3>
-  <p>NeuroVibe Community</p>
-  <span>Follow the page →</span>
-</a>
-
-    <a
-      href="https://instagram.com/neurovibemama"
-      target="_blank"
-      rel="noopener"
-      class="nv-social-card"
-    >
-      <h3>📸 Instagram</h3>
-      <p>@neurovibemama</p>
-      <span>Follow daily posts →</span>
-    </a>
-
-    <a
-  href="https://www.pinterest.com/neurovibemama/"
-  target="_blank"
-  rel="noopener"
-  class="nv-social-card"
->
-  <h3>📌 Pinterest</h3>
-  <p>@neurovibemama</p>
-  <span>Browse inspiration →</span>
-</a>
-
-  </div>
 </section>
-        <p style="margin-top:14px;font-size:12px;opacity:.75;">
-          © <span id="year"></span> NeuroVibe
-        </p>
-      </footer>
-
+       
     </div>
   </main>
 

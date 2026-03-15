@@ -152,26 +152,6 @@
       margin-bottom:14px;
     }
 
-    .nv-founder-split{
-      display:grid;
-      grid-template-columns:320px 1fr;
-      gap:24px;
-      align-items:center;
-    }
-
-    .nv-founder-photo-wrap{
-      text-align:center;
-    }
-
-    .nv-founder-photo{
-      width:100%;
-      max-width:300px;
-      border-radius:24px;
-      box-shadow:0 18px 38px rgba(75,46,131,.16);
-      display:block;
-      margin:0 auto;
-    }
-
     .nv-founder-title{
       margin:0 0 12px;
       color:#4b2e83;
@@ -186,15 +166,15 @@
 
     @media (max-width: 920px){
       .nv-home-grid{
-        grid-template-columns:1fr;
-      }
-
-      .nv-founder-split{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2, minmax(0,1fr));
       }
     }
 
     @media (max-width:720px){
+      .nv-home-grid{
+        grid-template-columns:1fr;
+      }
+
       .nv-book-grid{
         grid-template-columns:1fr;
         text-align:center;
@@ -299,38 +279,66 @@
       </section>
 
       <section class="nv-home-section">
-        <div class="nv-home-grid">
+        <div class="glass" style="padding:24px;">
+          <p class="nv-kicker" style="text-align:center;">Explore the ecosystem</p>
+          <h2 class="nv-h2" style="text-align:center; margin-bottom:10px;">Start where you need support most</h2>
+          <p class="nv-copy" style="text-align:center; max-width:64ch; margin:0 auto 22px;">
+            Different paths for different needs — from parenting support and wellness tools to beauty finds, curated shop favorites, and publishing.
+          </p>
 
-          <article class="nv-home-card">
-            <p class="nv-kicker">Support</p>
-            <h3>Guides & Resources</h3>
-            <p>
-              Practical digital tools for emotional regulation, executive function,
-              and calmer daily life.
-            </p>
-            <a href="/guides.html" class="nv-btn primary">Explore Guides</a>
-          </article>
+          <div class="nv-home-grid">
 
-          <article class="nv-home-card">
-            <p class="nv-kicker">Wellness</p>
-            <h3>NeuroVibe WellCo</h3>
-            <p>
-              Everyday wellness tools that support energy, focus, gut health,
-              and nervous system balance.
-            </p>
-            <a href="/wellco.html" class="nv-btn primary">Explore WellCo</a>
-          </article>
+            <article class="nv-home-card">
+              <p class="nv-kicker">Support</p>
+              <h3>Guides</h3>
+              <p>
+                Practical digital tools for emotional regulation, executive function,
+                and calmer daily life.
+              </p>
+              <a href="/guides.html" class="nv-btn primary">Explore Guides</a>
+            </article>
 
-          <article class="nv-home-card">
-            <p class="nv-kicker">Self-Care</p>
-            <h3>BeautyHub</h3>
-            <p>
-              Curated beauty finds, nail favorites, and feel-good products that
-              bring a little softness to real life.
-            </p>
-            <a href="/beautyhub.html" class="nv-btn primary">Explore BeautyHub</a>
-          </article>
+            <article class="nv-home-card">
+              <p class="nv-kicker">Wellness</p>
+              <h3>WellCo</h3>
+              <p>
+                Everyday wellness tools that support energy, focus, gut health,
+                and nervous system balance.
+              </p>
+              <a href="/wellco.html" class="nv-btn primary">Explore WellCo</a>
+            </article>
 
+            <article class="nv-home-card">
+              <p class="nv-kicker">Self-Care</p>
+              <h3>BeautyHub</h3>
+              <p>
+                Curated beauty finds, nail favorites, and feel-good products that
+                bring a little softness to real life.
+              </p>
+              <a href="/beautyhub.html" class="nv-btn primary">Explore BeautyHub</a>
+            </article>
+
+            <article class="nv-home-card">
+              <p class="nv-kicker">Favorites</p>
+              <h3>Shop</h3>
+              <p>
+                Curated tools, books, home supports, and everyday products that fit
+                real family life.
+              </p>
+              <a href="/shop.html" class="nv-btn primary">Explore Shop</a>
+            </article>
+
+            <article class="nv-home-card">
+              <p class="nv-kicker">Stories</p>
+              <h3>Publishing</h3>
+              <p>
+                Books, creative projects, and gentle storytelling created through
+                NeuroVibe Publishing.
+              </p>
+              <a href="/ROTM/rhythm-of-the-moon.html" class="nv-btn primary">Explore Publishing</a>
+            </article>
+
+          </div>
         </div>
       </section>
 

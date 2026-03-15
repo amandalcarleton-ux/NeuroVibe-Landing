@@ -32,7 +32,6 @@ connection, and meaningful conversations for families.
 
 </section>
 
-
 <section class="glass nv-card" style="padding:34px;margin-top:26px;">
 
 <div class="nv-book-grid">
@@ -84,7 +83,6 @@ Buy on Amazon
 
 </section>
 
-
 <section class="glass nv-card" style="padding:30px;margin-top:24px;text-align:center;">
 
 <h2>More Stories Coming Soon</h2>
@@ -127,12 +125,6 @@ fetch("/components/nav.html")
   .catch(error => {
     console.error("Error loading nav:", error);
   });
-</script>
-fetch("/components/nav.html")
-.then(response=>response.text())
-.then(data=>{
-document.getElementById("nav-placeholder").innerHTML=data;
-});
 </script>
 
 </body>

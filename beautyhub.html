@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>BeautyHub | NeuroVibe</title>
+  <title>Beauty Hub | NeuroVibe</title>
 
   <meta
     name="description"
-    content="BeautyHub by NeuroVibe — beauty, self-care, and everyday favorites curated with softness and real life in mind."
+    content="Beauty Hub by NeuroVibe — beauty, self-care, and everyday favorites curated with softness and real life in mind."
   />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=101" />
+  <link rel="stylesheet" href="/style.css?v=103" />
 
   <link rel="icon" type="image/png" href="/images/logos/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/logos/nv-favicon.PNG" />
@@ -117,77 +117,56 @@
       margin: 0 0 18px;
     }
 
-    .nv-ecosystem{
-      max-width:1000px;
-      margin:28px auto 0;
-      padding:30px;
-      background:rgba(255,255,255,0.75);
-      border-radius:24px;
-      box-shadow:0 18px 40px rgba(75,46,131,0.12);
-      text-align:center;
-      border:1px solid rgba(255,255,255,0.55);
+    .nv-hero-card{
+      text-align: center;
+      padding: 24px;
+      margin-bottom: 18px;
     }
 
-    .nv-ecosystem-sub{
-      max-width:600px;
-      margin:0 auto 24px;
-      line-height:1.7;
-    }
-
-    .nv-ecosystem-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-      gap:16px;
-      margin-top:20px;
-    }
-
-    .nv-eco-card{
-      background:white;
-      padding:20px;
-      border-radius:18px;
-      text-decoration:none;
-      color:#101018;
-      box-shadow:0 10px 20px rgba(75,46,131,0.08);
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-
-    .nv-eco-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 14px 28px rgba(75,46,131,0.12);
-    }
-
-    .nv-eco-card h3{
-      margin:0 0 8px;
-      color:var(--nv-purple-deep);
-    }
-
-    .nv-eco-card p{
-      margin:0;
-      line-height:1.65;
+    .nv-feature-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-bottom: 22px;
     }
 
     .nv-product-card{
-      max-width: 360px;
-      margin: 0 auto 22px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       padding: 20px;
-      border-radius: 18px;
-      background: linear-gradient(145deg,#f6e7ff,#ffd6ec);
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,.12);
+      border-radius: 22px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(248,241,255,0.94));
+      box-shadow: 0 20px 40px rgba(75,46,131,0.10);
+      border: 1px solid rgba(255,255,255,0.7);
+      text-align: left;
     }
 
     .nv-product-card img{
       width: 100%;
-      max-width: 260px;
-      margin: auto;
-      display: block;
       border-radius: 18px;
+      display: block;
+      margin-bottom: 14px;
+      box-shadow: 0 12px 28px rgba(75,46,131,0.10);
+    }
+
+    .nv-product-badge{
+      display: inline-block;
+      align-self: flex-start;
+      margin-bottom: 10px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #f2ebff;
+      color: #6b5cff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .02em;
     }
 
     .nv-product-card h3{
-      font-size: 22px;
-      margin-top: 12px;
-      margin-bottom: 6px;
+      margin: 0 0 6px;
+      font-size: 1.3rem;
+      color: #2b2140;
     }
 
     .nv-sub{
@@ -195,98 +174,150 @@
       color: #7a4a8c;
     }
 
+    .nv-product-price{
+      margin: 10px 0 6px;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: #5d43b3;
+    }
+
+    .nv-product-type{
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #7a4a8c;
+    }
+
     .nv-desc{
       font-size: 14px;
-      margin: 10px 0 16px;
-      line-height: 1.65;
+      margin: 0 0 14px;
+      line-height: 1.7;
+      color: #2e2b38;
     }
 
     .nv-btn{
-      display:inline-block;
-      padding:10px 16px;
-      border-radius:12px;
-      background:#7a4a8c;
-      color:white;
-      text-decoration:none;
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: #7a4a8c;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nv-btn:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(75,46,131,0.14);
+      opacity: 0.96;
+    }
+
+    .nv-card-note{
+      margin-top: 12px;
+      font-size: 12px;
+      color: #7a718a;
+    }
+
+    .nv-mini-note{
+      margin-top: 10px;
+      font-size: 13px;
+      color: #6d6579;
+      line-height: 1.65;
+    }
+
+    .nv-section-head{
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .nv-section-title{
+      margin: 6px 0 8px;
+    }
+
+    .nv-product-tags{
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 4px 0 12px;
+    }
+
+    .nv-product-tags span{
+      background: #f2f0ff;
+      color: #6b5cff;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .nv-soft-cta{
+      text-align: center;
+      padding: 22px;
+      margin-bottom: 22px;
+    }
+
+    .nv-ecosystem{
+      max-width: 1000px;
+      margin: 28px auto 0;
+      padding: 30px;
+      background: rgba(255,255,255,0.75);
+      border-radius: 24px;
+      box-shadow: 0 18px 40px rgba(75,46,131,0.12);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.55);
+    }
+
+    .nv-ecosystem-sub{
+      max-width: 600px;
+      margin: 0 auto 24px;
+      line-height: 1.7;
+    }
+
+    .nv-ecosystem-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .nv-eco-card{
+      background: white;
+      padding: 20px;
+      border-radius: 18px;
+      text-decoration: none;
+      color: #101018;
+      box-shadow: 0 10px 20px rgba(75,46,131,0.08);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .nv-eco-card:hover{
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(75,46,131,0.12);
+    }
+
+    .nv-eco-card h3{
+      margin: 0 0 8px;
+      color: var(--nv-purple-deep, #4b2e83);
+    }
+
+    .nv-eco-card p{
+      margin: 0;
+      line-height: 1.65;
     }
 
     @media (max-width: 768px){
-      .product-card.featured-stpatty{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+      .nv-hero-card{
+        padding: 20px 16px;
       }
 
-      .product-card.featured-stpatty .product-gallery{
-        width: 100%;
-        max-width: 420px;
-        margin-bottom: 16px;
+      .nv-product-card{
+        padding: 18px;
       }
 
-      .product-card.featured-stpatty .product-title,
-      .product-card.featured-stpatty .product-price,
-      .product-card.featured-stpatty .product-type,
-      .product-card.featured-stpatty .product-note{
-        text-align: center;
+      .nv-product-card h3{
+        font-size: 1.18rem;
       }
-
-      .product-card.featured-stpatty .product-desc{
-        text-align: left;
-      }
-
-      .product-card.featured-stpatty .product-btn{
-        display: inline-flex;
-        justify-content: center;
-      }
-
-      .nv-card.featured{
-        display: flex;
-        flex-direction: column;
-      }
-
-      .nv-card-media{
-        width: 100%;
-        margin-bottom: 16px;
-      }
-
-      .nv-card-media img{
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .nv-card-body{
-        width: 100%;
-      }
-
-      .nv-card-title,
-      .nv-featured-badge,
-      .nv-product-price,
-      .nv-actions{
-        text-align: left;
-      }
-
-      .nv-card-text{
-        width: 100%;
-        max-width: 100%;
-        word-break: normal;
-        overflow-wrap: break-word;
-      }
-    }.nv-product-tags{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:8px;
-}
-
-.nv-product-tags span{
-  background:#f2f0ff;
-  color:#6b5cff;
-  padding:4px 10px;
-  border-radius:12px;
-  font-size:12px;
-}
+    }
   </style>
 </head>
 
@@ -306,19 +337,19 @@
   <main class="nv-page">
     <div class="nv-wrap">
 
-      <section class="glass" style="padding:22px; margin-bottom:18px; text-align:center;">
+      <section class="glass nv-hero-card">
         <p class="nv-kicker">Beauty • Self-Care • Everyday Favorites</p>
-        <h1 class="nv-h1" style="margin:8px 0 10px;">Welcome to NeuroVibe Kolor ✨</h1>
+        <h1 class="nv-h1" style="margin:8px 0 10px;">Welcome to the NeuroVibe Beauty Hub ✨</h1>
         <p class="nv-sub" style="max-width:72ch; margin:0 auto;">
-          A curated space for beauty favorites, self-care finds, and everyday products that add a little softness, confidence, and glow to real life.
+          A curated space for beauty favorites, self-care finds, and everyday products that add a little softness, confidence, and glow to real life — with Kleo Kolor as my featured nail pick.
         </p>
       </section>
 
       <section class="glass" style="padding:20px; margin-bottom:18px;">
         <p class="nv-kicker">A softer side of NeuroVibe</p>
-        <h2 class="nv-h2" style="margin:6px 0 10px;">What BeautyHub is all about</h2>
+        <h2 class="nv-h2" style="margin:6px 0 10px;">What Beauty Hub is all about</h2>
         <p class="nv-copy">
-          BeautyHub is my space for sharing beauty, self-care, and feel-good favorites I genuinely enjoy. This page is all about simple products, pretty finds, and everyday little things that help life feel lighter.
+          Beauty Hub is my space for sharing beauty, self-care, and feel-good favorites I genuinely enjoy. This page is all about simple products, pretty finds, and everyday little things that help life feel lighter.
         </p>
         <p class="nv-copy" style="margin-top:10px;">
           It’s not about perfection. It’s about finding routines and favorites that help you feel a little more refreshed, confident, and cared for.
@@ -329,11 +360,11 @@
         <a
           href="https://kleokolor.com/?ref=neurovibekolor"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener sponsored nofollow"
         >
           <img
             src="/images/headers/kleo-kolor-header-2.PNG"
-            alt="Shop NeuroVibe Kolor"
+            alt="Shop Kleo Kolor"
             class="nv-header-img"
             loading="eager"
             decoding="async"
@@ -343,386 +374,258 @@
       </div>
 
       <section class="glass" style="padding:18px; margin-bottom:20px; text-align:center;">
-        <p class="nv-kicker">Shop by style</p>
-        <h2 class="nv-h2">Kleo Kolor Favorites</h2>
+        <p class="nv-kicker">Featured beauty brand</p>
+        <h2 class="nv-h2">Featured Kleo Kolor Favorites</h2>
         <p class="nv-copy" style="max-width:65ch; margin:0 auto;">
-          A curated mix of press-ons, LED gel strips, and monthly mani favorites — all in one place.
+          A curated mix of press-ons, LED gel strips, and current favorites — all in one place.
         </p>
       </section>
 
-      <section class="glass" style="padding:22px; margin-bottom:22px; text-align:center;">
-        <p class="nv-kicker">Featured Pick</p>
-
-        <div class="nv-product-card">
-          <img src="/images/nails/sweet-sangria-square.PNG" alt="Sweet Sangria Long Coffin magnetic ombre nails" />
+      <section class="nv-feature-grid">
+        <article class="nv-product-card">
+          <img
+            src="/images/nails/sweet-sangria-square.PNG"
+            alt="Sweet Sangria Long Coffin magnetic ombre nails"
+            loading="lazy"
+          />
+          <span class="nv-product-badge">Featured Pick</span>
           <h3>Sweet Sangria</h3>
-          <p class="nv-sub">Long Coffin</p>
-
+          <p class="nv-product-price">$16</p>
+          <p class="nv-product-type">Press-On Gel Nail • Long Coffin</p>
           <p class="nv-desc">
             A deep magenta wine magnetic ombré that fades into a rich dark finish. Bold, glossy, and perfect for spring nights.
           </p>
-
           <a
             href="https://kleokolor.com/products/press-on-intro-set-spring-bolds?ref=neurovibekolor"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener sponsored nofollow"
             class="nv-btn"
           >
-            Shop This Style →
+            Shop Sweet Sangria →
           </a>
-        </div>
+          <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
+        </article>
+
+        <article class="nv-product-card">
+          <img
+            src="/images/nails/soft-shift-main.PNG"
+            alt="The Soft Shift LED Gel Strip Mix"
+            loading="lazy"
+          />
+          <span class="nv-product-badge">Save 30%</span>
+          <h3>The Soft Shift</h3>
+          <p class="nv-product-price">$26 <span style="opacity:.55; text-decoration:line-through; margin-left:8px;">$38</span></p>
+          <p class="nv-product-type">LED Gel Strip Mix</p>
+          <div class="nv-product-tags">
+            <span>Seafoam Slide</span>
+            <span>Lune Bleue</span>
+          </div>
+          <p class="nv-desc">
+            A cool-toned LED gel strip mix pairing soft seafoam metallic ombré with vivid teal magnetic cat-eye shine. Quietly confident, dimensional, and over 30% off retail.
+          </p>
+          <a
+            href="https://kleokolor.com/products/the-soft-shift?ref=neurovibekolor"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+            class="nv-btn"
+          >
+            Shop The Soft Shift →
+          </a>
+          <p class="nv-card-note">Affiliate link • LED lamp required to cure LED Gel Strips</p>
+        </article>
+
+        <article class="nv-product-card">
+          <img
+            src="/images/nails/money-moves-1.PNG"
+            alt="Money Moves LED Gel Strip"
+            loading="lazy"
+          />
+          <span class="nv-product-badge">March Pick</span>
+          <h3>Money Moves</h3>
+          <p class="nv-product-price">$19</p>
+          <p class="nv-product-type">LED Gel Strip</p>
+          <p class="nv-desc">
+            A luxe magnetic green with a soft velvet glow and rich depth. Bold, polished, and quietly striking.
+          </p>
+          <a
+            href="https://kleokolor.com/products/money-moves?_pos=2&_fid=497334ea5&_ss=c&ref=neurovibekolor"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+            class="nv-btn"
+          >
+            Shop Money Moves →
+          </a>
+          <p class="nv-card-note">Affiliate link • Kleo Kolor LED Gel Strip</p>
+        </article>
+
+        <article class="nv-product-card">
+          <img
+            src="/images/nails/shifting-aura.PNG"
+            alt="Kleo Kolor Shifting Aura LED Gel Nail Strips"
+            loading="lazy"
+          />
+          <span class="nv-product-badge">Kleo Kolor</span>
+          <h3>Shifting Aura</h3>
+          <p class="nv-product-price">$19</p>
+          <p class="nv-product-type">LED Gel Strip</p>
+          <p class="nv-desc">
+            A dreamy blend of pink, peach, lilac, and sky blue gradients. Each nail carries its own soft transition, creating a colorful aura-inspired look perfect for spring.
+          </p>
+          <a
+            class="nv-btn"
+            href="https://kleokolor.com/products/shifting-aura?ref=neurovibekolor"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+          >
+            Shop Shifting Aura →
+          </a>
+          <p class="nv-card-note">Affiliate link • Kleo Kolor LED Gel Strips</p>
+        </article>
       </section>
 
-<div class="product-card featured-softshift">
-  <div class="product-badge">Save 30%</div>
-
-  <div class="product-gallery">
-    <img
-      src="/images/nails/soft-shift-main.PNG"
-      alt="The Soft Shift LED Gel Strip Mix"
-      class="main-img"
-    />
-
-    <div class="thumb-row">
-      <img src="/images/nails/soft-shift-lune-bleue.PNG" alt="Lune Bleue LED Gel Strip" />
-      <img src="/images/nails/soft-shift-seafoam-slide.PNG" alt="Seafoam Slide LED Gel Strip" />
-    </div>
-  </div>
-
-  <h3 class="product-title">The Soft Shift</h3>
-
-  <p class="product-price">
-    <span style="font-weight:700;">$26</span>
-    <span style="opacity:.6; text-decoration:line-through; margin-left:8px;">$38</span>
-  </p>
-
-  <p class="product-type">LED Gel Strip Mix</p>
-
-  <p class="product-desc">
-    A cool-toned LED gel strip mix pairing soft seafoam metallic ombré with vivid teal magnetic cat-eye shine.
-  </p>
-
-  <p class="product-desc">
-    Quietly confident, dimensional, and over 30% off retail.
-  </p>
-
-  <p class="product-note">
-    Includes: <strong>Seafoam Slide</strong> and <strong>Lune Bleue</strong><br>
-    LED lamp required to cure LED Gel Strips.
-  </p>
-
-  <a
-    href="https://kleokolor.com/products/the-soft-shift?ref=neurovibekolor"
-    target="_blank"
-    rel="noopener sponsored nofollow"
-    class="product-btn"
-  >
-    Shop The Soft Shift
-  </a>
-</div>
-          <div class="product-card featured-stpatty">
-            <div class="product-badge">March Pick</div>
-
-            <div class="product-gallery">
-              <img
-                src="/images/nails/money-moves-1.PNG"
-                alt="Money Moves LED Gel Strip"
-                class="main-img"
-              />
-
-              <div class="thumb-row">
-                <img src="/images/nails/money-moves-2.PNG" alt="Money Moves nails view 2" />
-                <img src="/images/nails/money-moves-3.PNG" alt="Money Moves lifestyle view" />
-                <img src="/images/nails/money-moves-4.PNG" alt="Money Moves kit contents" />
-              </div>
-            </div>
-
-            <h3 class="product-title">Money Moves</h3>
-            <p class="product-price">$19</p>
-            <p class="product-type">LED Gel Strip</p>
-
-            <p class="product-desc">
-              A luxe magnetic green with a soft velvet glow and rich depth. Bold, polished, and quietly striking.
-            </p>
-
-            <a
-              href="https://kleokolor.com/products/money-moves?_pos=2&_fid=497334ea5&_ss=c&ref=neurovibekolor"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="product-btn"
-            >
-              Shop Money Moves
-            </a>
-          </div>
-<div class="nv-card nv-product-card">
-  
-  <div class="nv-card-media">
-    <img 
-      src="/images/nails/shifting-aura.PNG" 
-      alt="Kleo Kolor Shifting Aura LED Gel Nail Strips"
-      loading="lazy"
-    />
-  </div>
-
-  <div class="nv-card-body">
-    <span class="nv-product-badge">Kleo Kolor</span>
-
-    <h3 class="nv-card-title">Shifting Aura</h3>
-
-    <p class="nv-card-text">
-      A dreamy blend of pink, peach, lilac, and sky blue gradients. Each nail carries its own soft transition, creating a colorful aura-inspired look perfect for spring.
-    </p>
-
-    <p class="nv-product-price">$19</p>
-
-    <a 
-      class="nv-btn"
-      href="https://kleokolor.com/products/shifting-aura?ref=neurovibekolor"
-      target="_blank"
-      rel="noopener sponsored nofollow"
-    >
-      Shop Shifting Aura →
-    </a>
-
-    <p class="nv-card-note">Affiliate link • Kleo Kolor LED Gel Strips</p>
-  </div>
-
-</div>
-          <div class="product-card">
-            <img src="/images/nails/metamorphic-magic.JPG" alt="Metamorphic Magic LED Gel Strip" class="main-img" />
-            <h3 class="product-title">Metamorphic Magic</h3>
-            <p class="product-price">$19</p>
-            <p class="product-type">LED Gel Strip</p>
-            <p class="product-desc">
-              A dramatic black base paired with iridescent butterfly-inspired art creates a design that feels alive with color and motion.
-            </p>
-            <a
-              class="product-btn"
-              href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Shop Monthly Mani
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="beauty-section">
-        <h2 class="beauty-section-title">Press-On Nail Favorites</h2>
-        <p class="beauty-section-subtitle">
-          Easy beauty favorites that make everyday glam simple.
+      <section class="glass" style="padding:18px; margin-bottom:20px; text-align:center;">
+        <p class="nv-kicker">Press-on favorites</p>
+        <h2 class="nv-h2">Easy Beauty, Elevated</h2>
+        <p class="nv-copy" style="max-width:65ch; margin:0 auto;">
+          Easy press-on styles that make everyday beauty feel polished, playful, and low effort.
         </p>
-
-        <div class="beauty-grid">
-          <div class="product-card">
-            <img src="/images/nails/galaxy-gala.PNG" alt="Galaxy Gala Press-On Gel Nail" class="main-img" />
-            <h3 class="product-title">Galaxy Gala</h3>
-            <p class="product-price">$16</p>
-            <p class="product-type">Press-On Gel Nail</p>
-            <p class="product-desc">
-              Deep indigo, violet, and midnight tones create sweeping magnetic ribbons of light across each nail. Inspired by a starlit sky, this set is bold, luminous, and perfect for moments that deserve a little sparkle.
-            </p>
-            <a
-              class="product-btn"
-              href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Shop Monthly Mani
-            </a>
-          </div>
-
-          <div class="nv-card nv-product-card">
-
-  <div class="nv-card-media">
-    <img 
-      src="/images/nails/violette.PNG" 
-      alt="Kleo Kolor Violette Press-On Gel Nails"
-      loading="lazy"
-    />
-  </div>
-
-  <div class="nv-card-body">
-    <span class="nv-product-badge">Kleo Kolor</span>
-
-    <h3 class="nv-card-title">Violette</h3>
-
-    <p class="nv-card-text">
-      A Paris-meets-cosmic manicure. Violette blends a creamy lilac base with a cool-toned shimmering tip that shifts softly in the light. Chic, delicate, and a fresh twist on a French-inspired style.
-    </p>
-
-    <p class="nv-product-price">$16</p>
-
-    <a 
-      class="nv-btn"
-      href="https://kleokolor.com/products/violette?ref=neurovibekolor"
-      target="_blank"
-      rel="noopener sponsored nofollow"
-    >
-      Shop Violette →
-    </a>
-
-    <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
-  </div>
-
-</div>
-          <div class="product-card">
-            <img src="/images/nails/monochrome-mood.PNG" alt="Monochrome Mood Press-On Gel Nail" class="main-img" />
-            <h3 class="product-title">Monochrome Mood</h3>
-            <p class="product-price">$16</p>
-            <p class="product-type">Press-On Gel Nail • Short Squoval</p>
-            <p class="product-desc">
-              Black, milky white, and silver shimmer come together in a crisp monochrome palette. The clean shape and subtle finish contrast create a modern look that’s simple but striking.
-            </p>
-            <a
-              class="product-btn"
-              href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Shop Monthly Mani
-            </a>
-          </div>
-
-          <div class="product-card">
-            <div class="product-gallery">
-              <img
-                src="/images/nails/springscape-nails.PNG"
-                alt="Springscape Press-On Nails"
-                class="main-img"
-              />
-
-              <div class="thumb-row">
-                <img src="/images/nails/springscape-nails-2.PNG" alt="Springscape nails view 2" />
-                <img src="/images/nails/springscape-nails-3.PNG" alt="Springscape nails view 3" />
-              </div>
-            </div>
-
-            <h3 class="product-title">Springscape</h3>
-            <p class="product-price">$16</p>
-            <p class="product-type">Press-On Gel Nail • Short Round</p>
-
-            <p class="product-desc">
-              Lavender, mint, blush, and sky blue blend into a dreamy watercolor marble. A soft pastel set that captures the playful energy of early spring.
-            </p>
-
-            <a
-              href="https://kleokolor.com/products/springscape?ref=neurovibekolor"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="product-btn"
-            >
-              Shop Now
-            </a>
-          </div>
-        </div>
       </section>
 
-      <section class="glass" style="padding:22px; margin-bottom:22px; text-align:center;">
+      <section class="nv-feature-grid">
+        <article class="nv-product-card">
+          <img
+            src="/images/nails/galaxy-gala.PNG"
+            alt="Galaxy Gala Press-On Gel Nail"
+            loading="lazy"
+          />
+          <span class="nv-product-badge">Press-On Favorite</span>
+          <h3>Galaxy Gala</h3>
+          <p class="nv-product-price">$16</p>
+          <p class="nv-product-type">Press-On Gel Nail</p>
+          <p class="nv-desc">
+            Deep indigo, violet, and midnight tones create sweeping magnetic ribbons of light across each nail. Inspired by a starlit sky, this set is bold, luminous, and perfect for moments that deserve a little sparkle.
+          </p>
+          <a
+            class="nv-btn"
+            href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+          >
+            Shop Monthly Mani →
+          </a>
+          <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
+        </article>
+
+        <article class="nv-product-card">
+          <img
+            src="/images/nails/violette.PNG"
+            alt="Kleo Kolor Violette Press-On Gel Nails"
+            loading="lazy"
+          />
+          <span class="nv-product-badge">Kleo Kolor</span>
+          <h3>Violette</h3>
+          <p class="nv-product-price">$16</p>
+          <p class="nv-product-type">Press-On Gel Nail</p>
+          <div class="nv-product-tags">
+            <span>Long Square</span>
+            <span>Magnetic French</span>
+          </div>
+          <p class="nv-desc">
+            A Paris-meets-cosmic manicure. Violette blends a creamy lilac base with a cool-toned shimmering tip that shifts softly in the light. Chic, delicate, and a fresh twist on a French-inspired style.
+          </p>
+          <a
+            class="nv-btn"
+            href="https://kleokolor.com/products/violette?ref=neurovibekolor"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+          >
+            Shop Violette →
+          </a>
+          <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
+        </article>
+
+        <article class="nv-product-card">
+          <img
+            src="/images/nails/monochrome-mood.PNG"
+            alt="Monochrome Mood Press-On Gel Nail"
+            loading="lazy"
+          />
+          <span class="nv-product-badge">Press-On Favorite</span>
+          <h3>Monochrome Mood</h3>
+          <p class="nv-product-price">$16</p>
+          <p class="nv-product-type">Press-On Gel Nail • Short Squoval</p>
+          <p class="nv-desc">
+            Black, milky white, and silver shimmer come together in a crisp monochrome palette. The clean shape and subtle finish contrast create a modern look that’s simple but striking.
+          </p>
+          <a
+            class="nv-btn"
+            href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+          >
+            Shop Monthly Mani →
+          </a>
+          <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
+        </article>
+
+        <article class="nv-product-card">
+          <img
+            src="/images/nails/springscape-nails.PNG"
+            alt="Springscape Press-On Nails"
+            loading="lazy"
+          />
+          <span class="nv-product-badge">Spring Favorite</span>
+          <h3>Springscape</h3>
+          <p class="nv-product-price">$16</p>
+          <p class="nv-product-type">Press-On Gel Nail • Short Round</p>
+          <p class="nv-desc">
+            Lavender, mint, blush, and sky blue blend into a dreamy watercolor marble. A soft pastel set that captures the playful energy of early spring.
+          </p>
+          <a
+            href="https://kleokolor.com/products/springscape?ref=neurovibekolor"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+            class="nv-btn"
+          >
+            Shop Springscape →
+          </a>
+          <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
+        </article>
+      </section>
+
+      <section class="glass nv-soft-cta">
         <p class="nv-kicker">Kleo Kolor</p>
         <h2 class="nv-h2">Monthly Mani Club 💅</h2>
-
         <p class="nv-copy" style="max-width:70ch; margin:0 auto;">
-          Get exclusive nail styles each month at a discounted subscription price.
+          Explore exclusive nail styles and rotating monthly favorites at a discounted subscription price.
         </p>
-
         <div class="nv-actions" style="margin-top:14px; justify-content:center;">
           <a
             class="nv-btn primary"
             href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener sponsored nofollow"
           >
             Browse Monthly Mani
           </a>
         </div>
       </section>
 
-      <div class="nv-page-header">
-        <a
-          href="https://redaspenlove.com/?pws=amandacarleton"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="/images/headers/red-aspen-banner.png"
-            alt="Shop Red Aspen Beauty"
-            class="nv-header-img"
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </div>
-
-      <section class="nv-section">
-        <div class="nv-section-head">
-          <h2 class="nv-h2">Browse by category</h2>
-          <p class="nv-sub2">
-            Explore beauty favorites from lashes to skincare and makeup.
-          </p>
-        </div>
-
-        <div class="nv-grid">
-          <article class="nv-card">
-            <div class="nv-card-body">
-              <div class="nv-tag">CATEGORY</div>
-              <h3 class="nv-h3">Lashes</h3>
-              <p class="nv-copy">
-                Lightweight, reusable lashes designed to elevate everyday beauty.
-              </p>
-              <div class="nv-actions">
-                <a
-                  class="nv-btn primary"
-                  href="https://redaspenlove.com/collections/lashes?pws=amandacarleton"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Shop Lashes
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="nv-card">
-            <div class="nv-card-body">
-              <div class="nv-tag">CATEGORY</div>
-              <h3 class="nv-h3">Skincare</h3>
-              <p class="nv-copy">
-                Gentle skincare favorites for a fresh, glowy routine.
-              </p>
-              <div class="nv-actions">
-                <a
-                  class="nv-btn primary"
-                  href="https://redaspenlove.com/collections/skincare?pws=amandacarleton"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Shop Skincare
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="nv-card">
-            <div class="nv-card-body">
-              <div class="nv-tag">CATEGORY</div>
-              <h3 class="nv-h3">Makeup</h3>
-              <p class="nv-copy">
-                Easy beauty favorites that fit real everyday life.
-              </p>
-              <div class="nv-actions">
-                <a
-                  class="nv-btn primary"
-                  href="https://redaspenlove.com/collections/makeup?pws=amandacarleton"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Shop Makeup
-                </a>
-              </div>
-            </div>
-          </article>
+      <section class="glass nv-soft-cta">
+        <p class="nv-kicker">Other Beauty Favorite</p>
+        <h2 class="nv-h2">Red Aspen Beauty</h2>
+        <p class="nv-copy" style="max-width:68ch; margin:0 auto;">
+          While Kleo Kolor is my main beauty focus here, I also keep one simple Red Aspen link for anyone who wants to browse more beauty favorites in one place.
+        </p>
+        <div class="nv-actions" style="margin-top:16px; justify-content:center;">
+          <a
+            class="nv-btn"
+            href="https://www.redaspenlove.com/party/NeuroNails/"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+          >
+            Shop Red Aspen Beauty →
+          </a>
         </div>
       </section>
 

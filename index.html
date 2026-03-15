@@ -51,6 +51,10 @@
       display:block;
     }
 
+    .nv-home-section{
+      margin:0 0 22px;
+    }
+
     .nv-reset-section{
       text-align:center;
       margin:0 auto 24px;
@@ -81,8 +85,56 @@
       transform:translateY(-2px);
     }
 
-    .nv-home-section{
-      margin:0 0 22px;
+    .nv-home-hero{
+      margin:0 0 26px;
+    }
+
+    .nv-home-hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.35fr) minmax(280px,.78fr);
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .nv-home-hero-main,
+    .nv-home-hero-side{
+      border-radius:28px;
+      padding:18px;
+      background:rgba(255,255,255,0.18);
+      border:1px solid rgba(255,255,255,0.42);
+      box-shadow:0 18px 44px rgba(75,46,131,.14);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .nv-home-hero-image{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:22px;
+      box-shadow:0 18px 42px rgba(75,46,131,.16);
+      margin:0;
+    }
+
+    .nv-home-hero-actions{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:flex-start;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .nv-home-hero-actions .nv-reset-popup-btn{
+      width:auto;
+      min-width:280px;
+    }
+
+    .nv-home-hero-side{
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
     }
 
     .nv-home-grid{
@@ -158,13 +210,37 @@
       font-size:1.8rem;
     }
 
+    .nv-founder-title-home{
+      margin:8px 0 12px;
+      color:#4b2e83;
+      font-size:1.5rem;
+      line-height:1.2;
+    }
+
     .nv-founder-text{
       line-height:1.8;
       color:#3e4450;
       margin:0 0 16px;
     }
 
+    .nv-founder-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin-top:10px;
+    }
+
     @media (max-width: 920px){
+      .nv-home-hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nv-home-hero-main,
+      .nv-home-hero-side{
+        padding:16px;
+      }
+
       .nv-home-grid{
         grid-template-columns:repeat(2, minmax(0,1fr));
       }
@@ -180,6 +256,37 @@
         text-align:center;
       }
     }
+
+    @media (max-width: 640px){
+      .nv-home-hero-main,
+      .nv-home-hero-side{
+        border-radius:24px;
+        padding:14px;
+      }
+
+      .nv-home-hero-image{
+        border-radius:18px;
+      }
+
+      .nv-home-hero-actions{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .nv-home-hero-actions .nv-reset-popup-btn,
+      .nv-home-hero-actions .nv-btn{
+        width:100%;
+        text-align:center;
+      }
+
+      .nv-founder-actions{
+        flex-direction:column;
+      }
+
+      .nv-founder-actions .nv-btn{
+        width:100%;
+      }
+    }
   </style>
 </head>
 
@@ -189,70 +296,66 @@
   <main class="nv-page">
     <div class="nv-wrap">
 
-      <section class="hero hero-overlay glass nv-home-section nv-hero-redesign">
-  <div class="hero-grid">
+      <section class="nv-home-hero">
+        <div class="nv-home-hero-grid">
 
-    <div class="hero-left">
-      <div class="hero-overlay-content nv-hero-copy">
+          <div class="nv-home-hero-main glass">
+            <img
+              src="/images/headers/neurovibe-wellco-community-header.PNG"
+              alt="NeuroVibe WellCo Community"
+              class="nv-home-hero-image"
+              loading="eager"
+            />
 
-        <img
-          src="/images/headers/neurovibe-wellco-community-header.PNG"
-          alt="NeuroVibe WellCo Community"
-          class="nv-hero-header-image"
-          loading="eager"
-        />
-        <p class="nv-hero-subtext">
-          Simple regulation tools, executive function support, and calm routines —
-          built for real life, not perfection.
-        </p>
+            <div class="nv-home-hero-actions">
+              <a
+                href="https://store.neurovibe.site/b/2FfBV"
+                class="nv-reset-popup-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                Get the Free Digital Reset ✨
+              </a>
 
-        <div class="nv-actions nv-hero-cta-row">
-          <a
-            href="https://store.neurovibe.site/b/2FfBV"
-            class="nv-reset-popup-btn"
-            target="_blank"
-            rel="noopener"
-          >
-            Get the Free Digital Reset ✨
-          </a>
+              <a href="/wellco.html" class="nv-btn ghost">
+                Explore WellCo
+              </a>
+            </div>
+          </div>
+
+          <aside class="nv-home-hero-side glass">
+            <img
+              src="/images/Amanda-Portrait.PNG"
+              alt="Amanda L Carleton"
+              class="nv-founder-photo"
+              loading="lazy"
+            />
+
+            <p class="nv-kicker">Meet the founder</p>
+
+            <h2 class="nv-founder-title-home">Meet the Heart Behind NeuroVibe</h2>
+
+            <p class="nv-founder-text">
+              NeuroVibe was created to offer grounded support, practical tools,
+              and a softer way forward for overwhelmed families.
+            </p>
+
+            <div class="nv-founder-actions">
+              <a href="/about.html" class="nv-btn primary">Meet Amanda</a>
+              <a
+                href="https://store.neurovibe.site/b/2FfBV"
+                target="_blank"
+                rel="noopener"
+                class="nv-btn ghost"
+              >
+                Get the Free Reset
+              </a>
+            </div>
+          </aside>
+
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="hero-right">
-      <div class="glass nv-card nv-founder-panel">
-        <img
-          src="/images/Amanda-Portrait.PNG"
-          alt="Amanda L Carleton"
-          class="nv-founder-photo"
-          loading="lazy"
-        />
-
-        <h2 class="nv-founder-title nv-founder-title-home">
-          Meet the Heart Behind NeuroVibe
-        </h2>
-
-        <p class="nv-founder-text">
-          NeuroVibe was created to offer grounded support, practical tools,
-          and a softer way forward for overwhelmed families.
-        </p>
-
-        <div class="hero-actions nv-founder-actions">
-          <a href="/about.html" class="nv-btn primary">Meet Amanda</a>
-          <a
-            href="https://store.neurovibe.site/b/2FfBV"
-            target="_blank"
-            rel="noopener"
-            class="nv-btn ghost"
-          >
-            Get the Free Reset
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
       <section class="nv-home-section">
         <div class="glass" style="padding:24px;">
           <p class="nv-kicker" style="text-align:center;">Explore the ecosystem</p>
@@ -310,9 +413,7 @@
                 Books, creative projects, and gentle storytelling created through
                 NeuroVibe Publishing.
               </p>
-    <a href="/ROTM/" class="nv-btn primary">
-Explore Publishing
-</a>
+              <a href="/ROTM/" class="nv-btn primary">Explore Publishing</a>
             </article>
 
           </div>

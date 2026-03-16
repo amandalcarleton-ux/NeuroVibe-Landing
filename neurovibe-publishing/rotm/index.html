@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+  <title>The Rhythm of the Moon | NeuroVibe Stories</title>
+
+  <meta
+    name="description"
+    content="The Rhythm of the Moon is a gentle NeuroVibe Story about emotions, body awareness, and growing understanding."
+  />
+
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+
+<body class="nv-y2k">
+  <div id="nav-placeholder"></div>
+
+  <main class="nv-page">
+    <div class="nv-wrap">
+
+      <section class="glass nv-card" style="padding:40px;text-align:center;">
+        <h1>The Rhythm of the Moon</h1>
+
+        <p style="max-width:640px;margin:auto;">
+          A gentle NeuroVibe Story about emotions, body awareness,
+          and growing understanding.
+        </p>
+      </section>
+
+      <section class="glass nv-card" style="padding:34px;margin-top:26px;">
+        <div class="nv-book-grid">
+
+          <div class="nv-book-image">
+            <img
+              src="/images/rhythm-of-the-moon.jpg"
+              alt="The Rhythm of the Moon book cover"
+              class="nv-book-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="nv-book-content">
+            <h2>The Story</h2>
+
+            <p>
+              The Rhythm of the Moon is a gentle story created to support
+              emotional understanding, self-awareness, and connection.
+            </p>
+
+            <p>
+              Through soft storytelling and thoughtful reflection, the book
+              encourages children and families to explore emotions, body cues,
+              and the importance of feeling safe, seen, and supported.
+            </p>
+
+            <p>
+              It is part of the NeuroVibe Stories collection by Amanda L Carleton.
+            </p>
+
+            <div class="nv-actions">
+              <a
+                href="https://a.co/d/00yAaJmQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="nv-btn primary"
+              >
+                Buy on Amazon
+              </a>
+
+              <a href="/neurovibe-publishing/" class="nv-btn ghost">
+                Back to Publishing
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="glass nv-card" style="padding:30px;margin-top:24px;text-align:center;">
+        <h2>Part of the NeuroVibe Stories Collection</h2>
+
+        <p style="max-width:620px;margin:auto;">
+          NeuroVibe Stories are designed to support emotional understanding,
+          self-awareness, and meaningful connection between children and the adults who care for them.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    fetch("/components/nav.html")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load nav");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        const placeholder = document.getElementById("nav-placeholder");
+        placeholder.innerHTML = data;
+
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
+
+        if (toggle && nav) {
+          toggle.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const open = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+
+          document.addEventListener("click", function (e) {
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
+
+          nav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            });
+          });
+        } else {
+          console.error("Nav toggle or nav container not found.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error loading nav:", error);
+      });
+  </script>
+</body>
+</html>

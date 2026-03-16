@@ -38,6 +38,38 @@
       padding-bottom:56px;
     }
 
+    .nv-shop-hero{
+      max-width:1100px;
+      margin:22px auto 0;
+      padding:0 16px;
+    }
+
+    .nv-shop-hero-img{
+      width:100%;
+      display:block;
+      border-radius:28px;
+      box-shadow:0 18px 40px rgba(75,46,131,0.14);
+    }
+
+    .nv-shop-hero-copy{
+      text-align:center;
+      padding:22px 12px 6px;
+    }
+
+    .nv-shop-hero-copy h1{
+      margin:0 0 10px;
+      font-size:clamp(2rem, 5vw, 3.2rem);
+      color:#1f1738;
+    }
+
+    .nv-shop-hero-copy p{
+      margin:0 auto;
+      max-width:760px;
+      color:#3c3555;
+      line-height:1.7;
+      font-size:1.05rem;
+    }
+
     .nv-section-card{
       margin-top:24px;
       padding:24px;
@@ -260,116 +292,30 @@
     .nv-curated-grid{
       display:grid;
       grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:18px;
+      gap:20px;
     }
 
-   .nv-curated-grid{
-  display:grid;
-  grid-template-columns:repeat(3, minmax(0,1fr));
-  gap:20px;
-}
+    .nv-curated-card{
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      border-radius:24px;
+      background:rgba(255,255,255,0.88);
+      border:1px solid rgba(255,255,255,0.72);
+      box-shadow:0 14px 28px rgba(75,46,131,0.08);
+      transition:transform .22s ease, box-shadow .22s ease;
+      min-height:100%;
+    }
 
-.nv-curated-card{
-  display:flex;
-  flex-direction:column;
-  overflow:hidden;
-  border-radius:24px;
-  background:rgba(255,255,255,0.88);
-  border:1px solid rgba(255,255,255,0.72);
-  box-shadow:0 14px 28px rgba(75,46,131,0.08);
-  transition:transform .22s ease, box-shadow .22s ease;
-  min-height:100%;
-}
+    .nv-curated-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 40px rgba(75,46,131,0.14);
+    }
 
-.nv-curated-card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(75,46,131,0.14);
-}
-
-.nv-card-media{
-  overflow:hidden;
-  background:linear-gradient(135deg, rgba(198,168,255,0.10), rgba(126,230,255,0.10));
-  padding:14px 14px 0;
-}
-
-.nv-card-media img{
-  display:block;
-  width:100%;
-  aspect-ratio:1 / 1;
-  object-fit:cover;
-  border-radius:18px;
-  box-shadow:0 10px 24px rgba(75,46,131,0.08);
-}
-
-.nv-logo-card{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:24px 16px 0;
-  min-height:240px;
-  background:linear-gradient(135deg, rgba(198,168,255,0.10), rgba(126,230,255,0.10));
-}
-
-.nv-logo-card img{
-  width:100%;
-  max-width:200px;
-  max-height:110px;
-  object-fit:contain;
-  aspect-ratio:auto;
-  border-radius:0;
-  box-shadow:none;
-}
-
-.nv-curated-card .nv-card-body{
-  display:flex;
-  flex-direction:column;
-  flex:1;
-  padding:18px 18px 20px;
-}
-
-.nv-curated-card .nv-featured-badge{
-  display:inline-flex;
-  align-items:center;
-  width:max-content;
-  margin-bottom:12px;
-  font-size:.78rem;
-  font-weight:700;
-  color:#6b4fb1;
-  background:rgba(198,168,255,0.20);
-  padding:7px 11px;
-  border-radius:999px;
-}
-
-.nv-curated-card .nv-card-title{
-  margin:0 0 8px;
-  font-size:1.2rem;
-  line-height:1.2;
-  color:#4f2d91;
-}
-
-.nv-curated-card .nv-card-text{
-  margin:0 0 16px;
-  line-height:1.65;
-  color:#433d5c;
-  flex-grow:1;
-  font-size:.98rem;
-}
-
-.nv-curated-card .nv-btn{
-  margin-top:auto;
-  width:100%;
-  justify-content:center;
-}
-
-.nv-curated-card .nv-card-note{
-  margin-top:12px;
-  font-size:.86rem;
-  color:#746f8d;
-  line-height:1.5;
-}
     .nv-card-media{
       overflow:hidden;
       background:linear-gradient(135deg, rgba(198,168,255,0.10), rgba(126,230,255,0.10));
+      padding:14px 14px 0;
     }
 
     .nv-card-media img{
@@ -377,30 +323,75 @@
       width:100%;
       aspect-ratio:1 / 1;
       object-fit:cover;
+      border-radius:18px;
+      box-shadow:0 10px 24px rgba(75,46,131,0.08);
     }
 
     .nv-logo-card{
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:28px;
-      min-height:220px;
+      padding:24px 16px 0;
+      min-height:240px;
       background:linear-gradient(135deg, rgba(198,168,255,0.10), rgba(126,230,255,0.10));
     }
 
     .nv-logo-card img{
       width:100%;
-      max-width:220px;
-      max-height:120px;
+      max-width:200px;
+      max-height:110px;
       object-fit:contain;
       aspect-ratio:auto;
+      border-radius:0;
+      box-shadow:none;
     }
 
     .nv-curated-card .nv-card-body{
-      padding:18px 18px 20px;
       display:flex;
       flex-direction:column;
-      height:100%;
+      flex:1;
+      padding:18px 18px 20px;
+    }
+
+    .nv-curated-card .nv-featured-badge{
+      display:inline-flex;
+      align-items:center;
+      width:max-content;
+      margin-bottom:12px;
+      font-size:.78rem;
+      font-weight:700;
+      color:#6b4fb1;
+      background:rgba(198,168,255,0.20);
+      padding:7px 11px;
+      border-radius:999px;
+    }
+
+    .nv-curated-card .nv-card-title{
+      margin:0 0 8px;
+      font-size:1.2rem;
+      line-height:1.2;
+      color:#4f2d91;
+    }
+
+    .nv-curated-card .nv-card-text{
+      margin:0 0 16px;
+      line-height:1.65;
+      color:#433d5c;
+      flex-grow:1;
+      font-size:.98rem;
+    }
+
+    .nv-curated-card .nv-btn{
+      margin-top:auto;
+      width:100%;
+      justify-content:center;
+    }
+
+    .nv-curated-card .nv-card-note{
+      margin-top:12px;
+      font-size:.86rem;
+      color:#746f8d;
+      line-height:1.5;
     }
 
     .nv-curated-footer{
@@ -508,6 +499,14 @@
         padding:18px;
       }
 
+      .nv-shop-hero{
+        padding:0 12px;
+      }
+
+      .nv-shop-hero-copy{
+        padding:18px 8px 2px;
+      }
+
       .nv-paths-grid,
       .nv-curated-grid,
       .nv-ecosystem-grid{
@@ -526,23 +525,23 @@
 
   <div id="nav-placeholder"></div>
 
-<section class="nv-shop-hero">
-  <img
-    src="/images/headers/NV-Shop-Logo.PNG"
-    alt="The NeuroVibe Shop"
-    class="nv-shop-hero-img"
-    loading="eager"
-    decoding="async"
-    onerror="this.style.display='none';"
-  />
+  <section class="nv-shop-hero">
+    <img
+      src="/images/headers/NV-Shop-Logo.PNG"
+      alt="The NeuroVibe Shop"
+      class="nv-shop-hero-img"
+      loading="eager"
+      decoding="async"
+      onerror="this.style.display='none';"
+    />
 
-  <div class="nv-shop-hero-copy">
-    <h1>The NeuroVibe Shop</h1>
-    <p>
-      Calm digital support, curated wellness picks, and practical resources for real life.
-    </p>
-  </div>
-</section>
+    <div class="nv-shop-hero-copy">
+      <h1>The NeuroVibe Shop</h1>
+      <p>
+        Calm digital support, curated wellness picks, and practical resources for real life.
+      </p>
+    </div>
+  </section>
 
   <main class="nv-shop-main">
     <div class="nv-container">
@@ -665,11 +664,9 @@
             <div class="nv-card-body">
               <span class="nv-featured-badge">☀️ Parent Favorite</span>
               <h3 class="nv-card-title">Baby Sunnies</h3>
-          
-    
-              </p><p class="nv-card-text">
-  Flexible, UV-protected sunglasses made for sunny outings, play days, and family adventures.
-</p>
+              <p class="nv-card-text">
+                Flexible, UV-protected sunglasses made for sunny outings, play days, and family adventures.
+              </p>
               <a class="nv-btn nv-deal-btn" href="https://babysunnies.pxf.io/YV95Nm" target="_blank" rel="noopener sponsored nofollow">
                 Shop Baby Sunnies
               </a>
@@ -690,9 +687,7 @@
               <span class="nv-featured-badge">✅ Routine Support</span>
               <h3 class="nv-card-title">Me+ Daily Routine Planner</h3>
               <p class="nv-card-text">
-                <p class="nv-card-text">
-  A supportive app for building routines, organizing tasks, and creating more structured days.
-</p>
+                A supportive app for building routines, organizing tasks, and creating more structured days.
               </p>
               <a class="nv-btn nv-deal-btn" href="https://me.sjv.io/WOqjdG" target="_blank" rel="noopener sponsored nofollow">
                 Build Your Daily Routine
@@ -714,9 +709,7 @@
               <span class="nv-featured-badge">🧩 Neuro Support</span>
               <h3 class="nv-card-title">Our Kids ASD</h3>
               <p class="nv-card-text">
-<p class="nv-card-text">
-  Autism-centered educational resources and family supports designed for real-life neurodivergent needs.
-</p>
+                Autism-centered educational resources and family supports designed for real-life neurodivergent needs.
               </p>
               <a class="nv-btn nv-deal-btn" href="https://ourkidsasd.sjv.io/6kbJyV" target="_blank" rel="noopener sponsored nofollow">
                 Explore Resources
@@ -822,6 +815,9 @@
             }
           });
         }
+      })
+      .catch(error => {
+        console.error("Error loading nav:", error);
       });
   </script>
 </body>

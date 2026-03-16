@@ -1,123 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lyra and the Wednesday Bridge | NeuroVibe Stories</title>
 
-<title>Lyra and the Wednesday Bridge | NeuroVibe Stories</title>
+  <meta
+    name="description"
+    content="Lyra and the Wednesday Bridge is a gentle NeuroVibe Story about brave mornings, supportive helpers, and crossing life’s bridges together."
+  />
 
-<meta name="description"
-content="Lyra and the Wednesday Bridge is a gentle NeuroVibe Story about brave mornings, supportive helpers, and crossing life's bridges together."/>
-
-<link rel="stylesheet" href="/style.css"/>
-
+  <link rel="stylesheet" href="/style.css"/>
 </head>
 
 <body class="nv-y2k">
+  <div id="nav-placeholder"></div>
 
-<div id="nav-placeholder"></div>
+  <main class="nv-page">
+    <div class="nv-wrap">
 
-<main class="nv-page">
+      <section class="glass nv-card" style="padding:40px;text-align:center;">
+        <h1>Lyra and the Wednesday Bridge</h1>
 
-<div class="nv-wrap">
+        <p style="max-width:640px;margin:auto;">
+          A gentle NeuroVibe Story about brave mornings,
+          supportive helpers, and crossing life’s bridges one
+          step at a time.
+        </p>
+      </section>
 
-<section class="glass nv-card" style="padding:40px;text-align:center;">
+      <section class="glass nv-card" style="padding:34px;margin-top:26px;">
+        <div class="nv-book-grid">
 
-<h1>Lyra and the Wednesday Bridge</h1>
+          <div class="nv-book-image">
+            <img
+              src="/images/lyra-wednesday-bridge.PNG"
+              alt="Lyra and the Wednesday Bridge book cover"
+              class="nv-book-cover"
+              loading="lazy"
+            />
+          </div>
 
-<p style="max-width:640px;margin:auto;">
-A gentle NeuroVibe Story about brave mornings,
-supportive helpers, and crossing life’s bridges one
-step at a time.
-</p>
+          <div class="nv-book-content">
+            <h2>The Story</h2>
 
-</section>
+            <p>
+              Some mornings can feel overwhelming, especially
+              when the day ahead feels uncertain.
+            </p>
 
+            <p>
+              Lyra and the Wednesday Bridge tells the story
+              of a young girl learning to cross difficult moments
+              with the help of caring adults, patient support,
+              and a loyal helper dog named Mochi.
+            </p>
 
-<section class="glass nv-card" style="padding:34px;margin-top:26px;">
+            <p>
+              Through gentle storytelling and calming imagery,
+              the book explores emotional regulation,
+              transitions, and the quiet courage children show
+              every day.
+            </p>
 
-<div class="nv-book-grid">
+            <div class="nv-actions">
+              <a href="/ROTM/" class="nv-btn primary">
+                Visit Publishing Hub
+              </a>
 
-<div class="nv-book-image">
+              <a href="/publishing.html" class="nv-btn ghost">
+                Back to Publishing
+              </a>
+            </div>
+          </div>
 
-<img
-src="/images/lyra-wednesday-bridge.PNG"
-alt="Lyra and the Wednesday Bridge book cover"
-class="nv-book-cover"
-loading="lazy"
-/>
+        </div>
+      </section>
 
-</div>
+      <section class="glass nv-card" style="padding:30px;margin-top:24px;text-align:center;">
+        <h2>Part of the NeuroVibe Stories Collection</h2>
 
-<div class="nv-book-content">
+        <p style="max-width:620px;margin:auto;">
+          NeuroVibe Stories are designed to support emotional
+          understanding, self-awareness, and connection
+          between children and the adults who care for them.
+        </p>
+      </section>
 
-<h2>The Story</h2>
+    </div>
+  </main>
 
-<p>
-Some mornings can feel overwhelming, especially
-when the day ahead feels uncertain.
-</p>
+  <script>
+    fetch("/components/nav.html")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to load nav");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        const placeholder = document.getElementById("nav-placeholder");
+        placeholder.innerHTML = data;
 
-<p>
-Lyra and the Wednesday Bridge tells the story
-of a young girl learning to cross difficult moments
-with the help of caring adults, patient support,
-and a loyal helper dog named Mochi.
-</p>
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
 
-<p>
-Through gentle storytelling and calming imagery,
-the book explores emotional regulation,
-transitions, and the quiet courage children show
-every day.
-</p>
+        if (toggle && nav) {
+          toggle.addEventListener("click", function (e) {
+            e.stopPropagation();
+            const open = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", open ? "true" : "false");
+          });
 
-<div class="nv-actions">
+          document.addEventListener("click", function (e) {
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
 
-<a href="#"
-class="nv-btn primary">
-Coming Soon on Amazon
-</a>
-
-<a href="/publishing.html"
-class="nv-btn ghost">
-Back to Publishing
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section class="glass nv-card"
-style="padding:30px;margin-top:24px;text-align:center;">
-
-<h2>Part of the NeuroVibe Stories Collection</h2>
-
-<p style="max-width:620px;margin:auto;">
-NeuroVibe Stories are designed to support emotional
-understanding, self-awareness, and connection
-between children and the adults who care for them.
-</p>
-
-</section>
-
-</div>
-
-</main>
-
-<script>
-fetch("/components/nav.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("nav-placeholder").innerHTML = data;
-  });
-</script>
-
+          nav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            });
+          });
+        } else {
+          console.error("Nav toggle or nav container not found.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error loading nav:", error);
+      });
+  </script>
 </body>
 </html>

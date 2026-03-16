@@ -157,7 +157,20 @@
     .nv-book-card p{
       margin-bottom: 16px;
     }
+.nv-book-card img{
+  width:100%;
+  max-width:220px;
+  border-radius:18px;
+  display:block;
+  margin:0 auto 18px;
+  box-shadow:0 14px 30px rgba(0,0,0,.14);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
 
+.nv-book-card:hover img{
+  transform:translateY(-6px) rotate(-1deg) scale(1.03);
+  box-shadow:0 24px 50px rgba(0,0,0,.22);
+}
     .nv-book-actions{
       display: flex;
       flex-wrap: wrap;

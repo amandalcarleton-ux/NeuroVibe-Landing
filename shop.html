@@ -263,12 +263,110 @@
       gap:18px;
     }
 
-    .nv-curated-card{
-      display:flex;
-      flex-direction:column;
-      overflow:hidden;
-    }
+   .nv-curated-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:20px;
+}
 
+.nv-curated-card{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  border-radius:24px;
+  background:rgba(255,255,255,0.88);
+  border:1px solid rgba(255,255,255,0.72);
+  box-shadow:0 14px 28px rgba(75,46,131,0.08);
+  transition:transform .22s ease, box-shadow .22s ease;
+  min-height:100%;
+}
+
+.nv-curated-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(75,46,131,0.14);
+}
+
+.nv-card-media{
+  overflow:hidden;
+  background:linear-gradient(135deg, rgba(198,168,255,0.10), rgba(126,230,255,0.10));
+  padding:14px 14px 0;
+}
+
+.nv-card-media img{
+  display:block;
+  width:100%;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 10px 24px rgba(75,46,131,0.08);
+}
+
+.nv-logo-card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px 16px 0;
+  min-height:240px;
+  background:linear-gradient(135deg, rgba(198,168,255,0.10), rgba(126,230,255,0.10));
+}
+
+.nv-logo-card img{
+  width:100%;
+  max-width:200px;
+  max-height:110px;
+  object-fit:contain;
+  aspect-ratio:auto;
+  border-radius:0;
+  box-shadow:none;
+}
+
+.nv-curated-card .nv-card-body{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding:18px 18px 20px;
+}
+
+.nv-curated-card .nv-featured-badge{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  margin-bottom:12px;
+  font-size:.78rem;
+  font-weight:700;
+  color:#6b4fb1;
+  background:rgba(198,168,255,0.20);
+  padding:7px 11px;
+  border-radius:999px;
+}
+
+.nv-curated-card .nv-card-title{
+  margin:0 0 8px;
+  font-size:1.2rem;
+  line-height:1.2;
+  color:#4f2d91;
+}
+
+.nv-curated-card .nv-card-text{
+  margin:0 0 16px;
+  line-height:1.65;
+  color:#433d5c;
+  flex-grow:1;
+  font-size:.98rem;
+}
+
+.nv-curated-card .nv-btn{
+  margin-top:auto;
+  width:100%;
+  justify-content:center;
+}
+
+.nv-curated-card .nv-card-note{
+  margin-top:12px;
+  font-size:.86rem;
+  color:#746f8d;
+  line-height:1.5;
+}
     .nv-card-media{
       overflow:hidden;
       background:linear-gradient(135deg, rgba(198,168,255,0.10), rgba(126,230,255,0.10));

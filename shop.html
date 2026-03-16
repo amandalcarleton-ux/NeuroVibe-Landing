@@ -35,38 +35,45 @@
     }
 
     .nv-shop-main{
-      padding-bottom:48px;
+      padding-bottom:56px;
+    }
+
+    .nv-section-card{
+      margin-top:24px;
+      padding:24px;
+      border-radius:28px;
+      background:rgba(255,255,255,0.82);
+      border:1px solid rgba(255,255,255,0.65);
+      box-shadow:0 14px 32px rgba(75,46,131,0.08);
     }
 
     .nv-shop-intro{
       margin-top:18px;
-      padding:26px;
-      border-radius:28px;
-      background:rgba(255,255,255,0.82);
-      border:1px solid rgba(255,255,255,0.62);
-      box-shadow:0 14px 32px rgba(75,46,131,0.08);
+      text-align:center;
       line-height:1.7;
     }
 
     .nv-shop-intro h2{
-      margin:0 0 10px;
-      font-size:clamp(1.8rem, 3vw, 2.4rem);
+      margin:0 0 12px;
+      font-size:clamp(1.9rem, 3vw, 2.5rem);
       color:#5b2ca0;
     }
 
     .nv-shop-intro p{
-      margin:0;
+      margin:0 auto;
+      max-width:760px;
       color:#3c3555;
     }
 
     .nv-shop-update{
-      margin-top:18px;
-      padding:16px 18px;
+      margin:18px auto 0;
+      max-width:760px;
+      padding:14px 16px;
       border-radius:18px;
-      background:rgba(255,255,255,0.82);
+      background:rgba(255,255,255,0.78);
       border:1px solid rgba(255,255,255,0.62);
-      box-shadow:0 10px 24px rgba(75, 46, 131, 0.08);
-      line-height:1.7;
+      color:#433d5c;
+      box-shadow:0 10px 24px rgba(75,46,131,0.06);
     }
 
     .nv-shop-update strong{
@@ -77,6 +84,7 @@
       margin-top:18px;
       display:flex;
       flex-wrap:wrap;
+      justify-content:center;
       gap:10px;
     }
 
@@ -90,32 +98,41 @@
       text-decoration:none;
       font-weight:600;
       color:#5b2ca0;
-      background:rgba(255,255,255,0.84);
+      background:rgba(255,255,255,0.86);
       border:1px solid rgba(255,255,255,0.7);
       box-shadow:0 8px 18px rgba(75,46,131,0.06);
     }
 
-    .nv-feature-hero{
+    .nv-soft-note{
+      margin:16px auto 0;
+      max-width:760px;
+      color:#5f5a80;
+      font-size:0.95rem;
+      line-height:1.7;
+      text-align:center;
+    }
+
+    .nv-featured{
       margin-top:30px;
       padding:28px;
       border-radius:32px;
       background:
-        linear-gradient(135deg, rgba(255,255,255,0.52), rgba(255,255,255,0.28)),
-        linear-gradient(135deg, rgba(198,168,255,0.35), rgba(126,230,255,0.18));
+        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
+        linear-gradient(135deg, rgba(198,168,255,0.30), rgba(126,230,255,0.18));
       border:1px solid rgba(255,255,255,0.52);
       box-shadow:0 18px 40px rgba(75,46,131,0.12);
       backdrop-filter:blur(12px);
       -webkit-backdrop-filter:blur(12px);
     }
 
-    .nv-feature-hero-inner{
+    .nv-featured-inner{
       display:grid;
-      grid-template-columns:minmax(0, 420px) minmax(0, 1fr);
+      grid-template-columns:minmax(0, 380px) minmax(0, 1fr);
       gap:28px;
       align-items:center;
     }
 
-    .nv-feature-hero-media img{
+    .nv-featured-media img{
       width:100%;
       display:block;
       border-radius:24px;
@@ -127,24 +144,24 @@
       margin-bottom:12px;
       padding:8px 12px;
       border-radius:999px;
-      background:rgba(255,255,255,0.76);
+      background:rgba(255,255,255,0.78);
       color:#6b4fb1;
-      font-size:.85rem;
+      font-size:.84rem;
       font-weight:700;
     }
 
-    .nv-feature-hero-copy h2{
+    .nv-featured-copy h2{
       margin:0 0 12px;
-      font-size:clamp(2rem, 4vw, 3rem);
+      font-size:clamp(2rem, 4vw, 2.9rem);
       line-height:1.08;
       color:#5b2ca0;
     }
 
-    .nv-feature-hero-copy p{
-      margin:0 0 18px;
+    .nv-featured-copy p{
+      margin:0 0 16px;
       color:#3a3550;
       line-height:1.8;
-      max-width:700px;
+      max-width:680px;
     }
 
     .nv-feature-points{
@@ -169,40 +186,46 @@
       gap:12px;
     }
 
+    .nv-section-head{
+      text-align:center;
+      margin-bottom:18px;
+    }
+
+    .nv-section-head h2{
+      margin:0 0 8px;
+      font-size:clamp(1.8rem, 3vw, 2.3rem);
+      color:#5b2ca0;
+    }
+
+    .nv-section-head p{
+      margin:0 auto;
+      max-width:720px;
+      color:#3c3555;
+      line-height:1.7;
+    }
+
     .nv-paths-grid{
       display:grid;
-      grid-template-columns:repeat(4, minmax(0,1fr));
+      grid-template-columns:repeat(3, minmax(0,1fr));
       gap:18px;
     }
 
-    .nv-path-card{
-      position:relative;
-      overflow:hidden;
-      border-radius:26px;
+    .nv-path-card,
+    .nv-curated-card,
+    .nv-eco-card{
+      border-radius:24px;
       background:rgba(255,255,255,0.82);
       border:1px solid rgba(255,255,255,0.7);
       box-shadow:0 14px 30px rgba(75,46,131,0.08);
-      min-height:100%;
     }
 
-    .nv-path-card::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(135deg, rgba(216,240,255,0.14), rgba(255,214,234,0.16));
-      pointer-events:none;
-    }
-
-    .nv-path-card .nv-card-body{
-      position:relative;
-      z-index:1;
+    .nv-path-card{
       padding:22px 20px;
       display:flex;
       flex-direction:column;
-      height:100%;
     }
 
-    .nv-path-card .nv-featured-badge{
+    .nv-featured-badge{
       display:inline-block;
       margin-bottom:10px;
       font-size:.82rem;
@@ -213,85 +236,30 @@
       border-radius:999px;
     }
 
-    .nv-path-card .nv-card-title{
+    .nv-card-title{
       margin:0 0 10px;
-      font-size:1.45rem;
+      font-size:1.35rem;
       line-height:1.15;
       color:#5b2ca0;
     }
 
-    .nv-path-card .nv-card-text{
+    .nv-card-text{
       margin:0 0 16px;
       line-height:1.7;
       color:#3a3550;
       flex-grow:1;
     }
 
-    .nv-path-card .nv-card-note{
+    .nv-card-note{
       margin-top:12px;
       font-size:.92rem;
       color:#6c6784;
       line-height:1.5;
     }
 
-    .nv-curated-section{
-      margin-top:36px;
-      padding:26px;
-      border-radius:32px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.48), rgba(255,255,255,0.24)),
-        linear-gradient(135deg, rgba(198,168,255,0.35), rgba(126,230,255,0.22));
-      border:1px solid rgba(255,255,255,0.46);
-      box-shadow:0 18px 40px rgba(75,46,131,0.12);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-    }
-
-    .nv-curated-header{
-      display:flex;
-      flex-wrap:wrap;
-      gap:16px;
-      justify-content:space-between;
-      align-items:center;
-      padding:22px 24px;
-      border-radius:28px;
-      background:rgba(255,255,255,0.72);
-      border:1px solid rgba(255,255,255,0.62);
-      box-shadow:0 12px 26px rgba(75,46,131,0.08);
-      margin-bottom:22px;
-    }
-
-    .nv-curated-copy h2{
-      margin:0 0 8px;
-      font-size:clamp(1.8rem, 3vw, 2.4rem);
-      color:#5b2ca0;
-    }
-
-    .nv-curated-copy p{
-      margin:0;
-      color:#3c3555;
-      line-height:1.7;
-      max-width:760px;
-    }
-
-    .nv-curated-cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:52px;
-      padding:12px 22px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:700;
-      color:#fff;
-      background:linear-gradient(135deg,#bf77ff,#7ecbff);
-      box-shadow:0 10px 24px rgba(107,92,255,0.24);
-      white-space:nowrap;
-    }
-
     .nv-curated-grid{
       display:grid;
-      grid-template-columns:repeat(4, minmax(0,1fr));
+      grid-template-columns:repeat(3, minmax(0,1fr));
       gap:18px;
     }
 
@@ -299,15 +267,9 @@
       display:flex;
       flex-direction:column;
       overflow:hidden;
-      border-radius:26px;
-      background:rgba(255,255,255,0.82);
-      border:1px solid rgba(255,255,255,0.72);
-      box-shadow:0 14px 30px rgba(75,46,131,0.10);
-      min-height:100%;
     }
 
     .nv-card-media{
-      border-radius:22px 22px 0 0;
       overflow:hidden;
       background:linear-gradient(135deg, rgba(198,168,255,0.10), rgba(126,230,255,0.10));
     }
@@ -337,50 +299,14 @@
     }
 
     .nv-curated-card .nv-card-body{
+      padding:18px 18px 20px;
       display:flex;
       flex-direction:column;
-      height:auto;
-      padding:18px 18px 20px;
-    }
-
-    .nv-curated-card .nv-featured-badge{
-      display:inline-block;
-      margin-bottom:10px;
-      font-size:.82rem;
-      font-weight:700;
-      color:#6b4fb1;
-      background:rgba(198,168,255,0.20);
-      padding:8px 12px;
-      border-radius:999px;
-    }
-
-    .nv-curated-card .nv-card-title{
-      margin:0 0 10px;
-      font-size:1.35rem;
-      line-height:1.15;
-      color:#5b2ca0;
-    }
-
-    .nv-curated-card .nv-card-text{
-      margin:0 0 16px;
-      line-height:1.7;
-      color:#3a3550;
-      flex-grow:0;
-    }
-
-    .nv-curated-card .nv-btn{
-      margin-top:0;
-    }
-
-    .nv-curated-card .nv-card-note{
-      margin-top:12px;
-      font-size:0.9rem;
-      color:#6c6784;
-      line-height:1.5;
+      height:100%;
     }
 
     .nv-curated-footer{
-      margin-top:22px;
+      margin-top:20px;
       text-align:center;
     }
 
@@ -388,43 +314,18 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      min-height:54px;
-      padding:14px 28px;
+      min-height:52px;
+      padding:12px 24px;
       border-radius:999px;
       text-decoration:none;
       font-weight:700;
       color:#6a3dc3;
-      background:rgba(255,255,255,0.82);
+      background:rgba(255,255,255,0.84);
       border:1px solid rgba(255,255,255,0.68);
       box-shadow:0 10px 24px rgba(75,46,131,0.08);
     }
 
-    .nv-ecosystem{
-      margin-top:36px;
-      padding:28px;
-      border-radius:32px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.38), rgba(255,255,255,0.18)),
-        linear-gradient(135deg, rgba(210,220,255,0.45), rgba(255,210,235,0.35));
-      border:1px solid rgba(255,255,255,0.45);
-      box-shadow:0 18px 36px rgba(75,46,131,0.10);
-    }
-
-    .nv-ecosystem h2{
-      margin:0 0 10px;
-      font-size:clamp(1.9rem, 3vw, 2.5rem);
-      color:#1f1738;
-    }
-
-    .nv-ecosystem-sub{
-      margin:0;
-      color:#3c3555;
-      line-height:1.7;
-      max-width:760px;
-    }
-
     .nv-ecosystem-grid{
-      margin-top:20px;
       display:grid;
       grid-template-columns:repeat(3, minmax(0,1fr));
       gap:16px;
@@ -434,10 +335,6 @@
       display:block;
       text-decoration:none;
       padding:20px;
-      border-radius:24px;
-      background:rgba(255,255,255,0.72);
-      border:1px solid rgba(255,255,255,0.65);
-      box-shadow:0 10px 24px rgba(75,46,131,0.06);
       color:#1a1730;
       transition:transform 0.2s ease, box-shadow 0.2s ease;
     }
@@ -449,7 +346,7 @@
 
     .nv-eco-card h3{
       margin:0 0 10px;
-      font-size:1.3rem;
+      font-size:1.2rem;
       color:#4b2e83;
     }
 
@@ -460,7 +357,7 @@
     }
 
     .nv-shop-footer{
-      margin-top:34px;
+      margin-top:28px;
       padding:28px 20px;
       border-radius:28px;
     }
@@ -481,45 +378,35 @@
       line-height:1.7;
     }
 
+    .footer-nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:12px;
+    }
+
     .footer-nav a{
       color:#4b2e83;
       font-weight:600;
       text-decoration:none;
     }
 
-    .nv-soft-note{
-      margin-top:14px;
-      color:#5f5a80;
-      font-size:0.95rem;
-      line-height:1.7;
-    }
-
     @media (max-width: 1100px){
-      .nv-feature-hero-inner{
+      .nv-featured-inner{
         grid-template-columns:1fr;
       }
 
       .nv-paths-grid,
-      .nv-curated-grid{
-        grid-template-columns:repeat(2, minmax(0,1fr));
-      }
-    }
-
-    @media (max-width: 900px){
+      .nv-curated-grid,
       .nv-ecosystem-grid{
         grid-template-columns:repeat(2, minmax(0,1fr));
       }
     }
 
-    @media (max-width: 680px){
-      .nv-shop-intro,
-      .nv-feature-hero,
-      .nv-curated-section,
-      .nv-ecosystem{
-        padding:18px;
-      }
-
-      .nv-curated-header{
+    @media (max-width: 700px){
+      .nv-section-card,
+      .nv-featured,
+      .nv-shop-footer{
         padding:18px;
       }
 
@@ -527,17 +414,6 @@
       .nv-curated-grid,
       .nv-ecosystem-grid{
         grid-template-columns:1fr;
-      }
-
-      .nv-curated-card,
-      .nv-path-card,
-      .nv-card{
-        min-height:auto !important;
-      }
-
-      .nv-curated-card .nv-card-body,
-      .nv-path-card .nv-card-body{
-        height:auto !important;
       }
 
       .nv-logo-card{
@@ -573,20 +449,20 @@
   <main class="nv-shop-main">
     <div class="nv-container">
 
-      <section class="nv-shop-intro glass">
+      <section class="nv-section-card nv-shop-intro glass">
         <h2>A softer storefront for real-life support</h2>
         <p>
-          The NeuroVibe Shop is designed to make support feel easier to find. Start with a digital guide, explore my wellness lane, or browse favorites and skill-building tools that fit everyday life.
+          The NeuroVibe Shop is a simple starting point for digital guides, wellness support, curated favorites, and practical tools that fit everyday life.
         </p>
 
         <div class="nv-shop-update">
-          <strong>Shop update:</strong> The Calm Reset Guide is the featured NeuroVibe digital product right now while more guides, supports, and curated tools are being added.
+          <strong>Right now:</strong> The Calm Reset Guide is the featured NeuroVibe digital product while more guides, supports, and curated resources are being added.
         </div>
 
         <nav class="nv-shop-nav" aria-label="Shop sections">
           <a href="#featured-guide">Featured Guide</a>
-          <a href="#shop-by-path">Shop by Path</a>
-          <a href="#curated-everyday-picks">Curated Picks</a>
+          <a href="#shop-paths">Shop by Path</a>
+          <a href="#curated-picks">Curated Picks</a>
           <a href="#ecosystem">Explore More</a>
         </nav>
 
@@ -595,9 +471,9 @@
         </p>
       </section>
 
-      <section id="featured-guide" class="nv-feature-hero">
-        <div class="nv-feature-hero-inner">
-          <div class="nv-feature-hero-media">
+      <section id="featured-guide" class="nv-featured">
+        <div class="nv-featured-inner">
+          <div class="nv-featured-media">
             <img
               src="/images/calm-reset-7page-cover.PNG"
               alt="Calm Reset Guide nervous system support resource"
@@ -606,17 +482,17 @@
             />
           </div>
 
-          <div class="nv-feature-hero-copy">
+          <div class="nv-featured-copy">
             <span class="nv-feature-kicker">Featured NeuroVibe Product</span>
             <h2>The Calm Reset Guide</h2>
             <p>
-              A gentle, practical digital resource designed for overwhelm, overstimulation, and nervous system recovery. Created for real life — not perfection.
+              A gentle, practical digital resource for overwhelm, overstimulation, and nervous system recovery — created for real life, not perfection.
             </p>
 
             <ul class="nv-feature-points">
               <li>Gentle support for high-overwhelm days</li>
-              <li>Easy to use when your brain already feels full</li>
-              <li>Digital, simple, and ready right away</li>
+              <li>Simple enough to use when your brain already feels full</li>
+              <li>Digital, practical, and available right away</li>
             </ul>
 
             <div class="nv-feature-actions">
@@ -629,75 +505,53 @@
         </div>
       </section>
 
-      <section id="shop-by-path" class="nv-section">
+      <section id="shop-paths" class="nv-section-card glass">
         <div class="nv-section-head">
           <h2>Shop by Path</h2>
-          <p class="nv-muted">
+          <p>
             Start with the lane that fits what you need most right now.
           </p>
         </div>
 
         <div class="nv-paths-grid">
           <article class="nv-path-card">
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">Digital Support</span>
-              <h3 class="nv-card-title">NeuroVibe Guides</h3>
-              <p class="nv-card-text">
-                Calm digital tools for overwhelm, nervous system support, and real-life reset routines.
-              </p>
-              <a class="nv-btn nv-deal-btn" href="/guides.html">Explore Guides</a>
-              <p class="nv-card-note">Created through NeuroVibe</p>
-            </div>
+            <span class="nv-featured-badge">Digital Support</span>
+            <h3 class="nv-card-title">NeuroVibe Guides</h3>
+            <p class="nv-card-text">
+              Calm digital tools for overwhelm, nervous system support, and real-life reset routines.
+            </p>
+            <a class="nv-btn nv-deal-btn" href="/guides.html">Explore Guides</a>
+            <p class="nv-card-note">Created through NeuroVibe</p>
           </article>
 
           <article class="nv-path-card">
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">Wellness</span>
-              <h3 class="nv-card-title">Wellness Stack</h3>
-              <p class="nv-card-text">
-                The wellness products and routines I personally use and recommend in one simple place.
-              </p>
-              <a class="nv-btn" href="/livegood/">See My Stack</a>
-              <p class="nv-card-note">Supplements, hydration, and everyday wellness picks</p>
-            </div>
+            <span class="nv-featured-badge">Wellness</span>
+            <h3 class="nv-card-title">Wellness Stack</h3>
+            <p class="nv-card-text">
+              The wellness products and routines I personally use and recommend in one simple place.
+            </p>
+            <a class="nv-btn" href="/livegood/">See My Stack</a>
+            <p class="nv-card-note">Supplements, hydration, and everyday wellness picks</p>
           </article>
 
           <article class="nv-path-card">
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">Curated Favorites</span>
-              <h3 class="nv-card-title">Favorites Hub</h3>
-              <p class="nv-card-text">
-                A growing collection of trusted recommendations, practical tools, family resources, and everyday finds.
-              </p>
-              <a class="nv-btn" href="/favorites/">Browse Favorites</a>
-              <p class="nv-card-note">A broader NeuroVibe resource hub</p>
-            </div>
-          </article>
-
-          <article class="nv-path-card">
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">Family &amp; Learning</span>
-              <h3 class="nv-card-title">Skill Building + Neuro Support</h3>
-              <p class="nv-card-text">
-                Tools, platforms, and supports that help with learning, productivity, and neurodivergent family life.
-              </p>
-              <a class="nv-btn" href="#curated-everyday-picks">See Picks</a>
-              <p class="nv-card-note">Learning resources, organization tools, and autism-centered supports</p>
-            </div>
+            <span class="nv-featured-badge">Curated Favorites</span>
+            <h3 class="nv-card-title">Favorites Hub</h3>
+            <p class="nv-card-text">
+              A growing collection of trusted recommendations, practical tools, family resources, and everyday finds.
+            </p>
+            <a class="nv-btn" href="/favorites/">Browse Favorites</a>
+            <p class="nv-card-note">A broader NeuroVibe resource hub</p>
           </article>
         </div>
       </section>
 
-      <section id="curated-everyday-picks" class="nv-curated-section">
-        <div class="nv-curated-header">
-          <div class="nv-curated-copy">
-            <h2>✨ Curated Everyday Picks</h2>
-            <p>
-              A few featured tools and favorites from across the NeuroVibe ecosystem.
-            </p>
-          </div>
-
-          <a href="/favorites/" class="nv-curated-cta">Explore All Picks →</a>
+      <section id="curated-picks" class="nv-section-card glass">
+        <div class="nv-section-head">
+          <h2>Curated Everyday Picks</h2>
+          <p>
+            A few featured tools and favorites from across the NeuroVibe ecosystem.
+          </p>
         </div>
 
         <div class="nv-curated-grid">
@@ -710,7 +564,6 @@
                 onerror="this.style.display='none';"
               />
             </div>
-
             <div class="nv-card-body">
               <span class="nv-featured-badge">☀️ Parent Favorite</span>
               <h3 class="nv-card-title">Baby Sunnies</h3>
@@ -733,7 +586,6 @@
                 onerror="this.style.display='none';"
               />
             </div>
-
             <div class="nv-card-body">
               <span class="nv-featured-badge">✅ Routine Support</span>
               <h3 class="nv-card-title">Me+ Daily Routine Planner</h3>
@@ -748,29 +600,6 @@
           </article>
 
           <article class="nv-curated-card">
-            <div class="nv-card-media">
-              <img
-                src="/images/marketxls-tool.PNG"
-                alt="MarketXLS Excel Stock Market Analysis Tool"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">📈 Skill Building</span>
-              <h3 class="nv-card-title">MarketXLS</h3>
-              <p class="nv-card-text">
-                Excel add-in for stock research, portfolio tracking, and financial analysis.
-              </p>
-              <a class="nv-btn nv-deal-btn" href="https://marketxls.pxf.io/6keaVr" target="_blank" rel="noopener sponsored nofollow">
-                Explore MarketXLS
-              </a>
-              <p class="nv-card-note">Affiliate link • Financial analysis tool</p>
-            </div>
-          </article>
-
-          <article class="nv-curated-card">
             <div class="nv-card-media nv-logo-card">
               <img
                 src="/images/ourkidsasd-logo.PNG"
@@ -779,7 +608,6 @@
                 onerror="this.style.display='none';"
               />
             </div>
-
             <div class="nv-card-body">
               <span class="nv-featured-badge">🧩 Neuro Support</span>
               <h3 class="nv-card-title">Our Kids ASD</h3>
@@ -799,11 +627,13 @@
         </div>
       </section>
 
-      <section id="ecosystem" class="nv-ecosystem">
-        <h2>Explore the NeuroVibe Ecosystem</h2>
-        <p class="nv-ecosystem-sub">
-          Different paths for different needs. Explore the area that supports you most.
-        </p>
+      <section id="ecosystem" class="nv-section-card glass">
+        <div class="nv-section-head">
+          <h2>Explore the NeuroVibe Ecosystem</h2>
+          <p>
+            Different paths for different needs. Explore the area that supports you most.
+          </p>
+        </div>
 
         <div class="nv-ecosystem-grid">
           <a href="/favorites/" class="nv-eco-card">
@@ -831,7 +661,7 @@
             <p>Self-care favorites, beauty finds, and curated nail collections.</p>
           </a>
 
-          <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
+          <a href="/neurovibe-publishing/" class="nv-eco-card">
             <h3>🌙 Publishing</h3>
             <p>Stories and books created through NeuroVibe Publishing.</p>
           </a>
@@ -841,7 +671,7 @@
       <footer class="nv-shop-footer glass">
         <div class="nv-container nv-footer-inner">
           <p class="nv-footer-text">
-            Want my weekly picks? Join the NeuroVibe email list for calm, practical wellness + real-life resources.
+            Want my weekly picks? Join the NeuroVibe email list for calm, practical wellness and real-life resources.
           </p>
           <p class="nv-footer-mini">
             Disclosure: Some links on this page are affiliate links. If you buy through them, I may earn a commission at no extra cost to you.

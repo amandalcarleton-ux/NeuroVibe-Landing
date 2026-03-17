@@ -458,6 +458,94 @@
         font-size:0.98rem;
       }
     }
+    .nv-social-header{
+  max-width:1100px;
+  margin:20px auto 0;
+  padding:0 16px;
+}
+
+.nv-social-header-inner{
+  background:rgba(255,255,255,0.72);
+  border:1px solid rgba(255,255,255,0.45);
+  border-radius:28px;
+  padding:28px;
+  box-shadow:0 18px 40px rgba(75,46,131,0.10);
+  text-align:center;
+}
+
+.nv-social-header-inner h2{
+  margin:0 0 10px;
+  font-size:clamp(1.8rem, 3vw, 2.4rem);
+  color:#101018;
+}
+
+.nv-social-sub{
+  max-width:700px;
+  margin:0 auto 22px;
+  line-height:1.7;
+  color:#101018;
+}
+
+.nv-social-grid{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:14px;
+}
+
+.nv-social-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:110px;
+  padding:18px 16px;
+  border-radius:22px;
+  text-decoration:none;
+  background:rgba(255,255,255,0.94);
+  border:1px solid rgba(255,255,255,0.75);
+  box-shadow:0 12px 28px rgba(75,46,131,0.10);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+  color:#4b2e83;
+}
+
+.nv-social-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 36px rgba(75,46,131,0.16);
+}
+
+.nv-social-icon{
+  font-size:1.7rem;
+  margin-bottom:10px;
+  line-height:1;
+}
+
+.nv-social-title{
+  font-size:1rem;
+  font-weight:700;
+  text-align:center;
+  line-height:1.35;
+}
+
+@media (max-width: 900px){
+  .nv-social-grid{
+    grid-template-columns:repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 720px){
+  .nv-social-header{
+    padding:0 14px;
+  }
+
+  .nv-social-header-inner{
+    padding:22px 18px;
+    border-radius:24px;
+  }
+
+  .nv-social-grid{
+    grid-template-columns:1fr;
+  }
+}
   </style>
 </head>
 
@@ -474,7 +562,47 @@
       onerror="this.style.display='none';"
     />
   </section>
+<section class="nv-social-header">
+  <div class="nv-social-header-inner">
+    <p class="nv-kicker">Connect with NeuroVibe</p>
+    <h2>Find me across socials</h2>
+    <p class="nv-social-sub">
+      Tap a platform below to connect with NeuroVibe across the community.
+    </p>
 
+    <div class="nv-social-grid">
+      <a href="https://www.facebook.com/share/g/1CSnRspmXs/" target="_blank" rel="noopener" class="nv-social-card">
+        <span class="nv-social-icon">💬</span>
+        <span class="nv-social-title">Facebook Group</span>
+      </a>
+
+      <a href="https://www.facebook.com/NeuroVibePageName" target="_blank" rel="noopener" class="nv-social-card">
+        <span class="nv-social-icon">📘</span>
+        <span class="nv-social-title">Facebook Page</span>
+      </a>
+
+      <a href=" https://www.threads.com/@neurovibemama?invite=0" target="_blank" rel="noopener" class="nv-social-card">
+        <span class="nv-social-icon">🧵</span>
+        <span class="nv-social-title">Threads</span>
+      </a>
+
+      <a href="https://www.instagram.com/NeuroVibeMama" target="_blank" rel="noopener" class="nv-social-card">
+        <span class="nv-social-icon">📸</span>
+        <span class="nv-social-title">Instagram</span>
+      </a>
+
+      <a href="https://pin.it/5ZVkJ5tij" target="_blank" rel="noopener" class="nv-social-card">
+        <span class="nv-social-icon">📌</span>
+        <span class="nv-social-title">Pinterest</span>
+      </a>
+
+      <a href="https://www.tiktok.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-card">
+        <span class="nv-social-icon">🎵</span>
+        <span class="nv-social-title">TikTok</span>
+      </a>
+    </div>
+  </div>
+</section>
   <main class="nv-start-wrap">
 
     <section class="nv-start-intro">

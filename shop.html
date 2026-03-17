@@ -38,38 +38,6 @@
       padding-bottom:56px;
     }
 
-    .nv-shop-hero{
-      max-width:1100px;
-      margin:22px auto 0;
-      padding:0 16px;
-    }
-
-    .nv-shop-hero-img{
-      width:100%;
-      display:block;
-      border-radius:28px;
-      box-shadow:0 18px 40px rgba(75,46,131,0.14);
-    }
-
-    .nv-shop-hero-copy{
-      text-align:center;
-      padding:22px 12px 6px;
-    }
-
-    .nv-shop-hero-copy h1{
-      margin:0 0 10px;
-      font-size:clamp(2rem, 5vw, 3.2rem);
-      color:#1f1738;
-    }
-
-    .nv-shop-hero-copy p{
-      margin:0 auto;
-      max-width:760px;
-      color:#3c3555;
-      line-height:1.7;
-      font-size:1.05rem;
-    }
-
     .nv-section-card{
       margin-top:24px;
       padding:24px;
@@ -289,7 +257,8 @@
       line-height:1.5;
     }
 
-    .nv-curated-grid{
+    .nv-curated-grid,
+    .nv-new-grid{
       display:grid;
       grid-template-columns:repeat(3, minmax(0,1fr));
       gap:20px;
@@ -394,6 +363,15 @@
       line-height:1.5;
     }
 
+    .nv-star-row{
+      display:flex;
+      gap:4px;
+      margin:-2px 0 10px;
+      color:#f4b400;
+      font-size:1rem;
+      line-height:1;
+    }
+
     .nv-curated-footer{
       margin-top:20px;
       text-align:center;
@@ -480,6 +458,90 @@
       text-decoration:none;
     }
 
+    .nv-shop-home-hero{
+      margin-top:22px;
+      padding:22px;
+      border-radius:34px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
+        linear-gradient(135deg, rgba(137,104,255,0.28), rgba(126,203,255,0.18));
+      border:1px solid rgba(255,255,255,0.45);
+      box-shadow:0 18px 42px rgba(75,46,131,0.12);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+
+    .nv-shop-home-hero-inner{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .nv-shop-home-hero-img{
+      width:100%;
+      display:block;
+      border-radius:28px;
+      box-shadow:0 18px 36px rgba(75,46,131,0.14);
+    }
+
+    .nv-shop-home-hero-copy{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto;
+    }
+
+    .nv-shop-home-hero-copy h1{
+      margin:0 0 10px;
+      font-size:clamp(2.2rem, 5vw, 3.4rem);
+      color:#1f1738;
+    }
+
+    .nv-shop-home-hero-copy p{
+      margin:0 auto;
+      color:#3c3555;
+      line-height:1.7;
+      font-size:1.05rem;
+    }
+
+    .nv-shop-home-actions{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+      max-width:760px;
+      margin:4px auto 0;
+    }
+
+    .nv-shop-home-btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:66px;
+      padding:16px 22px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:1.05rem;
+      text-align:center;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .nv-shop-home-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .nv-shop-home-btn.primary{
+      color:#fff;
+      background:linear-gradient(135deg,#6f63ff,#7edcff,#ffd8ea);
+      box-shadow:0 14px 30px rgba(107,92,255,0.22);
+    }
+
+    .nv-shop-home-btn.secondary{
+      color:#1f1738;
+      background:rgba(255,255,255,0.72);
+      border:1px solid rgba(255,255,255,0.58);
+      box-shadow:0 10px 24px rgba(75,46,131,0.08);
+    }
+
     @media (max-width: 1100px){
       .nv-featured-inner{
         grid-template-columns:1fr;
@@ -487,6 +549,7 @@
 
       .nv-paths-grid,
       .nv-curated-grid,
+      .nv-new-grid,
       .nv-ecosystem-grid{
         grid-template-columns:repeat(2, minmax(0,1fr));
       }
@@ -499,17 +562,11 @@
         padding:18px;
       }
 
-      .nv-shop-hero{
-        padding:0 12px;
-      }
-
-      .nv-shop-hero-copy{
-        padding:18px 8px 2px;
-      }
-
       .nv-paths-grid,
       .nv-curated-grid,
-      .nv-ecosystem-grid{
+      .nv-new-grid,
+      .nv-ecosystem-grid,
+      .nv-shop-home-actions{
         grid-template-columns:1fr;
       }
 
@@ -517,162 +574,74 @@
         min-height:180px;
         padding:22px;
       }
-    }.nv-shop-home-hero{
-  margin-top:22px;
-  padding:22px;
-  border-radius:34px;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
-    linear-gradient(135deg, rgba(137,104,255,0.28), rgba(126,203,255,0.18));
-  border:1px solid rgba(255,255,255,0.45);
-  box-shadow:0 18px 42px rgba(75,46,131,0.12);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-}
 
-.nv-shop-home-hero-inner{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
+      .nv-shop-home-hero{
+        padding:16px;
+        border-radius:28px;
+      }
 
-.nv-shop-home-hero-img{
-  width:100%;
-  display:block;
-  border-radius:28px;
-  box-shadow:0 18px 36px rgba(75,46,131,0.14);
-}
-
-.nv-shop-home-hero-copy{
-  text-align:center;
-  max-width:760px;
-  margin:0 auto;
-}
-
-.nv-shop-home-hero-copy h1{
-  margin:0 0 10px;
-  font-size:clamp(2.2rem, 5vw, 3.4rem);
-  color:#1f1738;
-}
-
-.nv-shop-home-hero-copy p{
-  margin:0 auto;
-  color:#3c3555;
-  line-height:1.7;
-  font-size:1.05rem;
-}
-
-.nv-shop-home-actions{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:14px;
-  max-width:760px;
-  margin:4px auto 0;
-}
-
-.nv-shop-home-btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:66px;
-  padding:16px 22px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:800;
-  font-size:1.05rem;
-  text-align:center;
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-
-.nv-shop-home-btn:hover{
-  transform:translateY(-2px);
-}
-
-.nv-shop-home-btn.primary{
-  color:#fff;
-  background:linear-gradient(135deg,#6f63ff,#7edcff,#ffd8ea);
-  box-shadow:0 14px 30px rgba(107,92,255,0.22);
-}
-
-.nv-shop-home-btn.secondary{
-  color:#1f1738;
-  background:rgba(255,255,255,0.72);
-  border:1px solid rgba(255,255,255,0.58);
-  box-shadow:0 10px 24px rgba(75,46,131,0.08);
-}
-
-@media (max-width: 700px){
-  .nv-shop-home-hero{
-    padding:16px;
-    border-radius:28px;
-  }
-
-  .nv-shop-home-actions{
-    grid-template-columns:1fr;
-  }
-
-  .nv-shop-home-btn{
-    min-height:60px;
-    font-size:1rem;
-  }
-}
+      .nv-shop-home-btn{
+        min-height:60px;
+        font-size:1rem;
+      }
+    }
   </style>
 </head>
 
 <body class="nv-y2k">
-
   <div id="nav-placeholder"></div>
 
   <main class="nv-shop-main">
-  <div class="nv-container">
+    <div class="nv-container">
 
-    <section class="nv-shop-home-hero glass">
-      <div class="nv-shop-home-hero-inner">
-        <img
-          src="/images/headers/NV-Shop-Logo.PNG"
-          alt="The NeuroVibe Shop"
-          class="nv-shop-home-hero-img"
-          loading="eager"
-          decoding="async"
-          onerror="this.style.display='none';"
-        />
+      <section class="nv-shop-home-hero glass">
+        <div class="nv-shop-home-hero-inner">
+          <img
+            src="/images/headers/NV-Shop-Logo.PNG"
+            alt="The NeuroVibe Shop"
+            class="nv-shop-home-hero-img"
+            loading="eager"
+            decoding="async"
+            onerror="this.style.display='none';"
+          />
 
-        <div class="nv-shop-home-hero-copy">
-          <p class="nv-eyebrow">NEUROVIBE WELLCO</p>
-          <h1>The NeuroVibe Shop</h1>
-          <p>
-            Calm digital support, curated wellness picks, and practical resources for real life.
-          </p>
+          <div class="nv-shop-home-hero-copy">
+            <p class="nv-eyebrow">NEUROVIBE WELLCO</p>
+            <h1>The NeuroVibe Shop</h1>
+            <p>
+              Calm digital support, curated wellness picks, and practical resources for real life.
+            </p>
+          </div>
+
+          <div class="nv-shop-home-actions">
+            <a href="#featured-guide" class="nv-shop-home-btn primary">Get the Calm Reset Guide ✨</a>
+            <a href="/wellco.html" class="nv-shop-home-btn secondary">Explore WellCo</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="nv-section-card nv-shop-intro glass">
+        <h2>A softer storefront for real-life support</h2>
+        <p>
+          The NeuroVibe Shop is a simple starting point for digital guides, wellness support, curated favorites, and practical tools that fit everyday life.
+        </p>
+
+        <div class="nv-shop-update">
+          <strong>Right now:</strong> The Calm Reset Guide is the featured NeuroVibe digital product while more guides, supports, and curated resources are being added.
         </div>
 
-        <div class="nv-shop-home-actions">
-          <a href="#featured-guide" class="nv-shop-home-btn primary">Get the Calm Reset Guide ✨</a>
-          <a href="/wellco.html" class="nv-shop-home-btn secondary">Explore WellCo</a>
-        </div>
-      </div>
-    </section>
+        <nav class="nv-shop-nav" aria-label="Shop sections">
+          <a href="#featured-guide">Featured Guide</a>
+          <a href="#shop-paths">Shop by Path</a>
+          <a href="#curated-picks">New in the Shop</a>
+          <a href="#ecosystem">Explore More</a>
+        </nav>
 
-    <section class="nv-section-card nv-shop-intro glass">
-      <h2>A softer storefront for real-life support</h2>
-      <p>
-        The NeuroVibe Shop is a simple starting point for digital guides, wellness support, curated favorites, and practical tools that fit everyday life.
-      </p>
+        <p class="nv-soft-note">
+          Disclosure: This page may contain affiliate links. If you purchase through a link, I may earn a commission at no extra cost to you. I only share products and resources that genuinely fit the NeuroVibe ecosystem.
+        </p>
+      </section>
 
-      <div class="nv-shop-update">
-        <strong>Right now:</strong> The Calm Reset Guide is the featured NeuroVibe digital product while more guides, supports, and curated resources are being added.
-      </div>
-
-      <nav class="nv-shop-nav" aria-label="Shop sections">
-        <a href="#featured-guide">Featured Guide</a>
-        <a href="#shop-paths">Shop by Path</a>
-        <a href="#curated-picks">Curated Picks</a>
-        <a href="#ecosystem">Explore More</a>
-      </nav>
-
-      <p class="nv-soft-note">
-        Disclosure: This page may contain affiliate links. If you purchase through a link, I may earn a commission at no extra cost to you. I only share products and resources that genuinely fit the NeuroVibe ecosystem.
-      </p>
-    </section>
       <section id="featured-guide" class="nv-featured">
         <div class="nv-featured-inner">
           <div class="nv-featured-media">
@@ -747,311 +716,154 @@
           </article>
         </div>
       </section>
-<section id="curated-picks" class="nv-section-card glass">
-  <div class="nv-section-head">
-    <h2>New in the Shop</h2>
-    <p>
-      Freshly added favorites from the NeuroVibe ecosystem — thoughtfully chosen and easy to explore.
-    </p>
-  </div>
 
-  <div class="nv-new-grid">
-    <article class="nv-curated-card nv-new-card">
-      <div class="nv-card-media">
-        <img
-          src="/images/parralellsdesktop.PNG"
-          alt="Parallels Desktop for Mac"
-          loading="lazy"
-          onerror="this.style.display='none';"
-        />
-      </div>
-      <div class="nv-card-body">
-        <span class="nv-featured-badge">⭐ New in Shop</span>
-        <div class="nv-star-row" aria-label="NeuroVibe approved">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      <section id="curated-picks" class="nv-section-card glass">
+        <div class="nv-section-head">
+          <h2>New in the Shop</h2>
+          <p>
+            Freshly added favorites from the NeuroVibe ecosystem — thoughtfully chosen and easy to explore.
+          </p>
         </div>
-        <h3 class="nv-card-title">Parallels Desktop</h3>
-        <p class="nv-card-text">
-          Run Windows on your Mac without restarting. A great fit for creators,
-          developers, and cross-platform workflows.
-        </p>
-        <a
-          class="nv-btn nv-deal-btn"
-          href="https://parallels.sjv.io/m4Ooge"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          Try Parallels
-        </a>
-        <p class="nv-card-note">Affiliate link • Creator productivity tool</p>
-      </div>
-    </article>
 
-    <article class="nv-curated-card nv-new-card">
-      <div class="nv-card-media">
-        <img
-          src="/images/pure-scentum.PNG"
-          alt="Pure Scentum fragrance and sensory wellness products"
-          loading="lazy"
-          onerror="this.style.display='none';"
-        />
-      </div>
-      <div class="nv-card-body">
-        <span class="nv-featured-badge">⭐ New in Shop</span>
-        <div class="nv-star-row" aria-label="NeuroVibe approved">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <div class="nv-new-grid">
+          <article class="nv-curated-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/parralellsdesktop.PNG"
+                alt="Parallels Desktop for Mac"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">⭐ New in Shop</span>
+              <div class="nv-star-row" aria-label="NeuroVibe approved">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <h3 class="nv-card-title">Parallels Desktop</h3>
+              <p class="nv-card-text">
+                Run Windows on your Mac without restarting. A great fit for creators,
+                developers, and cross-platform workflows.
+              </p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://parallels.sjv.io/m4Ooge"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Try Parallels
+              </a>
+              <p class="nv-card-note">Affiliate link • Creator productivity tool</p>
+            </div>
+          </article>
+
+          <article class="nv-curated-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/pure-scentum.PNG"
+                alt="Pure Scentum fragrance and sensory wellness products"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">⭐ New in Shop</span>
+              <div class="nv-star-row" aria-label="NeuroVibe approved">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <h3 class="nv-card-title">Pure Scentum</h3>
+              <p class="nv-card-text">
+                Thoughtful fragrance and sensory-inspired products that add softness,
+                calm, and everyday ritual to your space and self-care routine.
+              </p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://pure-scentum.pxf.io/R0G25g"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Shop Pure Scentum
+              </a>
+              <p class="nv-card-note">Affiliate link • Fragrance and sensory lifestyle pick</p>
+            </div>
+          </article>
+
+          <article class="nv-curated-card">
+            <div class="nv-card-media">
+              <img
+                src="/images/smile-makers.PNG"
+                alt="Smile Makers wellness and self-care products"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">⭐ New in Shop</span>
+              <div class="nv-star-row" aria-label="NeuroVibe approved">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <h3 class="nv-card-title">Smile Makers</h3>
+              <p class="nv-card-text">
+                A modern self-care brand centered on confidence, body positivity,
+                and thoughtful personal wellness.
+              </p>
+              <a
+                class="nv-btn nv-deal-btn"
+                href="https://smilemakers.pxf.io/PzOmOY"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Shop Smile Makers
+              </a>
+              <p class="nv-card-note">Affiliate link • Personal wellness and self-care pick</p>
+            </div>
+          </article>
         </div>
-        <h3 class="nv-card-title">Pure Scentum</h3>
-        <p class="nv-card-text">
-          Thoughtful fragrance and sensory-inspired products that add softness,
-          calm, and everyday ritual to your space and self-care routine.
-        </p>
-        <a
-          class="nv-btn nv-deal-btn"
-          href="https://pure-scentum.pxf.io/R0G25g"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          Shop Pure Scentum
-        </a>
-        <p class="nv-card-note">Affiliate link • Fragrance and sensory lifestyle pick</p>
-      </div>
-    </article>
 
-    <article class="nv-curated-card nv-new-card">
-      <div class="nv-card-media">
-        <img
-          src="/images/smile-makers.PNG"
-          alt="Smile Makers wellness and self-care products"
-          loading="lazy"
-          onerror="this.style.display='none';"
-        />
-      </div>
-      <div class="nv-card-body">
-        <span class="nv-featured-badge">⭐ New in Shop</span>
-        <div class="nv-star-row" aria-label="NeuroVibe approved">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        <div class="nv-section-head" style="margin-top:34px;">
+          <h2>Shop by Collection</h2>
+          <p>
+            Browse by category to find the kind of support, tools, and favorites that fit best right now.
+          </p>
         </div>
-        <h3 class="nv-card-title">Smile Makers</h3>
-        <p class="nv-card-text">
-          A modern self-care brand centered on confidence, body positivity,
-          and thoughtful personal wellness.
-        </p>
-        <a
-          class="nv-btn nv-deal-btn"
-          href="https://smilemakers.pxf.io/PzOmOY"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          Shop Smile Makers
-        </a>
-        <p class="nv-card-note">Affiliate link • Personal wellness and self-care pick</p>
-      </div>
-    </article>
-  </div>
 
-  <div class="nv-section-head" style="margin-top:34px;">
-    <h2>Shop by Collection</h2>
-    <p>
-      Browse by category to find the kind of support, tools, and favorites that fit best right now.
-    </p>
-  </div>
+        <div class="nv-ecosystem-grid">
+          <a href="/links.html" class="nv-eco-card">
+            <h3>💻 Creator Tools</h3>
+            <p>Helpful digital tools for workflow, content creation, and getting things done.</p>
+          </a>
 
-  <div class="nv-collection-stack">
-    <div class="nv-collection-block">
-      <div class="nv-collection-head">
-        <h3>💻 Creator Tools</h3>
-        <p>Helpful digital tools for workflow, content creation, and getting things done.</p>
-      </div>
+          <a href="/links.html" class="nv-eco-card">
+            <h3>✨ Wellness &amp; Self-Care</h3>
+            <p>Everyday sensory, beauty, and personal wellness favorites curated for softer living.</p>
+          </a>
 
-      <div class="nv-curated-grid">
-        <article class="nv-curated-card">
-          <div class="nv-card-media">
-            <img
-              src="/images/parralellsdesktop.PNG"
-              alt="Parallels Desktop for Mac"
-              loading="lazy"
-              onerror="this.style.display='none';"
-            />
-          </div>
-          <div class="nv-card-body">
-            <span class="nv-featured-badge">💻 Creator Tool</span>
-            <h3 class="nv-card-title">Parallels Desktop</h3>
-            <p class="nv-card-text">
-              Run Windows on your Mac without restarting for flexible cross-platform work.
-            </p>
-            <a
-              class="nv-btn nv-deal-btn"
-              href="https://parallels.sjv.io/m4Ooge"
-              target="_blank"
-              rel="noopener sponsored nofollow"
-            >
-              Try Parallels
-            </a>
-            <p class="nv-card-note">Affiliate link • Creator productivity tool</p>
-          </div>
-        </article>
-      </div>
-    </div>
+          <a href="/links.html" class="nv-eco-card">
+            <h3>☀️ Family &amp; Neuro Support</h3>
+            <p>Family-friendly tools and neurodivergent support resources for real life.</p>
+          </a>
 
-    <div class="nv-collection-block">
-      <div class="nv-collection-head">
-        <h3>✨ Wellness &amp; Self-Care</h3>
-        <p>Everyday sensory, beauty, and personal wellness favorites curated for softer living.</p>
-      </div>
+          <a href="/links.html" class="nv-eco-card">
+            <h3>✅ Routine &amp; Organization</h3>
+            <p>Supportive tools for planning, daily structure, and making routines feel more manageable.</p>
+          </a>
 
-      <div class="nv-curated-grid">
-        <article class="nv-curated-card">
-          <div class="nv-card-media">
-            <img
-              src="/images/pure-scentum.PNG"
-              alt="Pure Scentum fragrance and sensory wellness products"
-              loading="lazy"
-              onerror="this.style.display='none';"
-            />
-          </div>
-          <div class="nv-card-body">
-            <span class="nv-featured-badge">✨ Sensory Favorite</span>
-            <h3 class="nv-card-title">Pure Scentum</h3>
-            <p class="nv-card-text">
-              Fragrance and sensory-inspired products that bring softness and calm to everyday rituals.
-            </p>
-            <a
-              class="nv-btn nv-deal-btn"
-              href="https://pure-scentum.pxf.io/R0G25g"
-              target="_blank"
-              rel="noopener sponsored nofollow"
-            >
-              Shop Pure Scentum
-            </a>
-            <p class="nv-card-note">Affiliate link • Fragrance and sensory lifestyle pick</p>
-          </div>
-        </article>
+          <a href="/links.html" class="nv-eco-card">
+            <h3>⭐ Full Resource Library</h3>
+            <p>Browse the complete list of affiliate resources, tools, and recommendations.</p>
+          </a>
 
-        <article class="nv-curated-card">
-          <div class="nv-card-media">
-            <img
-              src="/images/smile-makers.PNG"
-              alt="Smile Makers wellness and self-care products"
-              loading="lazy"
-              onerror="this.style.display='none';"
-            />
-          </div>
-          <div class="nv-card-body">
-            <span class="nv-featured-badge">💕 Wellness Pick</span>
-            <h3 class="nv-card-title">Smile Makers</h3>
-            <p class="nv-card-text">
-              Thoughtful self-care products centered on confidence, comfort, and body-positive wellness.
-            </p>
-            <a
-              class="nv-btn nv-deal-btn"
-              href="https://smilemakers.pxf.io/PzOmOY"
-              target="_blank"
-              rel="noopener sponsored nofollow"
-            >
-              Shop Smile Makers
-            </a>
-            <p class="nv-card-note">Affiliate link • Personal wellness and self-care pick</p>
-          </div>
-        </article>
-      </div>
-    </div>
+          <a href="/favorites/" class="nv-eco-card">
+            <h3>💜 NeuroVibe Favorites</h3>
+            <p>Explore more trusted picks, curated tools, and everyday recommendations.</p>
+          </a>
+        </div>
 
-    <div class="nv-collection-block">
-      <div class="nv-collection-head">
-        <h3>☀️ Family &amp; Neuro Support</h3>
-        <p>Family-friendly tools and neurodivergent support resources for real life.</p>
-      </div>
+        <div class="nv-curated-footer">
+          <a href="/links.html">Browse the Full Resource Library →</a>
+        </div>
+      </section>
 
-      <div class="nv-curated-grid">
-        <article class="nv-curated-card">
-          <div class="nv-card-media">
-            <img
-              src="/images/baby-sunnies.PNG"
-              alt="Baby Sunnies Kids Sunglasses"
-              loading="lazy"
-              onerror="this.style.display='none';"
-            />
-          </div>
-          <div class="nv-card-body">
-            <span class="nv-featured-badge">☀️ Parent Favorite</span>
-            <h3 class="nv-card-title">Baby Sunnies</h3>
-            <p class="nv-card-text">
-              Flexible, UV-protected sunglasses made for sunny outings, play days, and family adventures.
-            </p>
-            <a class="nv-btn nv-deal-btn" href="https://babysunnies.pxf.io/YV95Nm" target="_blank" rel="noopener sponsored nofollow">
-              Shop Baby Sunnies
-            </a>
-            <p class="nv-card-note">Affiliate link • Family outdoor essential</p>
-          </div>
-        </article>
-
-        <article class="nv-curated-card">
-          <div class="nv-card-media nv-logo-card">
-            <img
-              src="/images/ourkidsasd-logo.PNG"
-              alt="Our Kids ASD autism resources"
-              loading="lazy"
-              onerror="this.style.display='none';"
-            />
-          </div>
-          <div class="nv-card-body">
-            <span class="nv-featured-badge">🧩 Neuro Support</span>
-            <h3 class="nv-card-title">Our Kids ASD</h3>
-            <p class="nv-card-text">
-              Autism-centered educational resources and family supports designed for real-life neurodivergent needs.
-            </p>
-            <a class="nv-btn nv-deal-btn" href="https://ourkidsasd.sjv.io/6kbJyV" target="_blank" rel="noopener sponsored nofollow">
-              Explore Resources
-            </a>
-            <p class="nv-card-note">Affiliate link • Family support resource</p>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <div class="nv-collection-block">
-      <div class="nv-collection-head">
-        <h3>✅ Routine &amp; Organization</h3>
-        <p>Supportive tools for planning, daily structure, and making routines feel more manageable.</p>
-      </div>
-
-      <div class="nv-curated-grid">
-        <article class="nv-curated-card">
-          <div class="nv-card-media">
-            <img
-              src="/images/meplus-routine-planner.PNG"
-              alt="Me+ Daily Routine Planner App"
-              loading="lazy"
-              onerror="this.style.display='none';"
-            />
-          </div>
-          <div class="nv-card-body">
-            <span class="nv-featured-badge">✅ Routine Support</span>
-            <h3 class="nv-card-title">Me+ Daily Routine Planner</h3>
-            <p class="nv-card-text">
-              A supportive app for building routines, organizing tasks, and creating more structured days.
-            </p>
-            <a class="nv-btn nv-deal-btn" href="https://me.sjv.io/WOqjdG" target="_blank" rel="noopener sponsored nofollow">
-              Build Your Daily Routine
-            </a>
-            <p class="nv-card-note">Affiliate link • Daily planning app</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-
-  <div class="nv-curated-footer">
-    <a href="/links.html">Browse the Full Resource Library →</a>
-  </div>
-</section>
-
-  <div class="nv-curated-footer">
-    <a href="/favorites/">Browse All Curated Tools →</a>
-  </div>
-</section>
-    
       <section id="ecosystem" class="nv-section-card glass">
         <div class="nv-section-head">
           <h2>Explore the NeuroVibe Ecosystem</h2>

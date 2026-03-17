@@ -28,7 +28,7 @@
     rel="stylesheet"
   />
 
-  <link rel="stylesheet" href="/style.css?v=101" />
+  <link rel="stylesheet" href="/style.css?v=103" />
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
@@ -41,15 +41,13 @@
       --nv-blue:#dff4ff;
       --nv-text:#241f3d;
       --nv-muted:#564f78;
-      --nv-white:rgba(255,255,255,0.72);
-      --nv-border:rgba(255,255,255,0.38);
       --nv-shadow:0 18px 50px rgba(67, 42, 140, 0.18);
       --nv-radius:28px;
-      --nv-radius-sm:22px;
       --nv-max:1150px;
     }
 
     *{box-sizing:border-box;}
+
     html{
       scroll-behavior:smooth;
     }
@@ -84,112 +82,34 @@
       margin:0 auto;
     }
 
-    .nv-header{
-      position:sticky;
-      top:0;
-      z-index:999;
-      padding:14px 0;
-      backdrop-filter:blur(16px);
-      -webkit-backdrop-filter:blur(16px);
-      background:rgba(245,242,255,0.72);
-      border-bottom:1px solid rgba(255,255,255,0.32);
-    }
-
-    .nv-nav-container{
-      max-width:1200px;
-      margin:0 auto;
-      padding:16px 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      position:relative;
-    }
-
-    .nv-logo{
-      font-size:1.8rem;
-      font-weight:700;
-      letter-spacing:-0.03em;
-      color:var(--nv-purple-deep);
-      text-decoration:none;
-    }
-
-    .nv-hamburger{
-      width:52px;
-      height:52px;
-      border:1px solid rgba(255,255,255,0.55);
-      border-radius:16px;
-      background:rgba(255,255,255,0.34);
-      backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:28px;
-      line-height:1;
-      color:var(--nv-purple-deep);
-      cursor:pointer;
-      box-shadow:0 8px 20px rgba(75,46,131,0.12);
-      transition:transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .nv-hamburger:hover{
-      transform:translateY(-1px);
-      box-shadow:0 12px 24px rgba(75,46,131,0.16);
-    }
-
-    .nv-nav-menu{
-      display:none;
-      position:absolute;
-      top:calc(100% + 10px);
-      right:18px;
-      min-width:240px;
-      background:rgba(255,255,255,0.96);
-      border:1px solid rgba(255,255,255,0.65);
-      border-radius:20px;
-      padding:14px;
-      box-shadow:0 18px 40px rgba(75,46,131,0.16);
-      backdrop-filter:blur(14px);
-      -webkit-backdrop-filter:blur(14px);
-      flex-direction:column;
-      gap:4px;
-      z-index:2000;
-    }
-
-    .nv-nav-menu.active{
-      display:flex;
-    }
-
-    .nv-nav-menu a{
-      display:block;
-      padding:12px 14px;
-      border-radius:12px;
-      text-decoration:none;
-      font-size:1rem;
-      font-weight:600;
-      color:#101018;
-      transition:background 0.2s ease, color 0.2s ease;
-    }
-
-    .nv-nav-menu a:hover{
-      background:rgba(198,168,255,0.18);
-      color:var(--nv-purple-deep);
-    }
-
     .nv-page{
-      padding:40px 0 80px;
+      padding:34px 0 80px;
+    }
+
+    .glass{
+      background:rgba(255,255,255,0.26);
+      border:1px solid rgba(255,255,255,0.36);
+      border-radius:var(--nv-radius);
+      box-shadow:var(--nv-shadow);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+
+    .nv-card{
+      padding:28px;
     }
 
     .nv-hero{
       position:relative;
       overflow:hidden;
-      padding:34px;
+      padding:36px;
       border-radius:34px;
       background:
         linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.38)),
         linear-gradient(135deg, rgba(223,244,255,0.42), rgba(255,215,238,0.34));
       border:1px solid rgba(255,255,255,0.4);
       box-shadow:var(--nv-shadow);
-      margin-bottom:26px;
+      margin-bottom:24px;
     }
 
     .nv-hero::before,
@@ -197,7 +117,6 @@
       content:"";
       position:absolute;
       border-radius:50%;
-      filter:blur(4px);
       pointer-events:none;
     }
 
@@ -233,8 +152,8 @@
 
     .nv-h1{
       margin:0 0 14px;
-      font-size:clamp(2.25rem, 6vw, 4.5rem);
-      line-height:1.04;
+      font-size:clamp(2.2rem, 6vw, 4.4rem);
+      line-height:1.03;
       letter-spacing:-0.04em;
       font-weight:800;
       max-width:12ch;
@@ -243,7 +162,7 @@
     .nv-sub{
       margin:0;
       max-width:720px;
-      font-size:clamp(1rem, 2.2vw, 1.18rem);
+      font-size:clamp(1rem, 2.2vw, 1.16rem);
       line-height:1.8;
       color:var(--nv-muted);
     }
@@ -252,7 +171,7 @@
       display:flex;
       flex-wrap:wrap;
       gap:14px;
-      margin-top:26px;
+      margin-top:24px;
     }
 
     .nv-btn{
@@ -260,14 +179,15 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      min-height:56px;
+      min-height:54px;
       padding:14px 24px;
       border-radius:999px;
       font-weight:800;
       font-size:1rem;
-      transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease;
+      transition:transform .22s ease, box-shadow .22s ease;
       border:none;
       cursor:pointer;
+      text-align:center;
     }
 
     .nv-btn:hover{
@@ -290,28 +210,15 @@
     .nv-note{
       margin-top:18px;
       font-size:0.93rem;
-      line-height:1.65;
+      line-height:1.7;
       color:var(--nv-muted);
     }
 
     .nv-grid{
       display:grid;
-      grid-template-columns:1.12fr .88fr;
+      grid-template-columns:1.08fr .92fr;
       gap:22px;
       margin-bottom:22px;
-    }
-
-    .glass{
-      background:rgba(255,255,255,0.26);
-      border:1px solid rgba(255,255,255,0.36);
-      border-radius:var(--nv-radius);
-      box-shadow:var(--nv-shadow);
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-    }
-
-    .nv-card{
-      padding:28px;
     }
 
     .nv-h2{
@@ -358,63 +265,6 @@
       line-height:1.65;
     }
 
-    .nv-stack{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0, 1fr));
-      gap:18px;
-      margin-top:22px;
-    }
-
-    .nv-product{
-      padding:22px;
-      border-radius:24px;
-      background:linear-gradient(180deg, rgba(255,255,255,0.56), rgba(255,255,255,0.34));
-      border:1px solid rgba(255,255,255,0.4);
-      min-height:100%;
-    }
-
-    .nv-product h3{
-      margin:0 0 8px;
-      font-size:1.22rem;
-      line-height:1.25;
-      letter-spacing:-0.02em;
-    }
-
-    .nv-product p{
-      margin:0;
-      color:var(--nv-muted);
-      line-height:1.75;
-      font-size:0.96rem;
-    }
-
-    .nv-product-img{
-      width:140px;
-      height:auto;
-      display:block;
-      margin:0 auto 14px auto;
-    }
-
-    .nv-price-row{
-      margin-top:14px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-
-    .nv-pill{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.52);
-      font-size:0.92rem;
-      font-weight:700;
-      color:var(--nv-text);
-    }
-
-    .nv-product-button{
-      margin-top:18px;
-    }
-
     .nv-routine{
       display:grid;
       grid-template-columns:repeat(2, minmax(0, 1fr));
@@ -449,6 +299,80 @@
       border-radius:14px;
       font-size:0.96rem;
       color:var(--nv-text);
+    }
+
+    .nv-stack-section{
+      margin-top:22px;
+    }
+
+    .nv-stack{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .nv-product{
+      display:flex;
+      flex-direction:column;
+      padding:22px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.56), rgba(255,255,255,0.34));
+      border:1px solid rgba(255,255,255,0.4);
+      min-height:100%;
+    }
+
+    .nv-product-img{
+      width:150px;
+      height:auto;
+      display:block;
+      margin:0 auto 16px auto;
+    }
+
+    .nv-product h3{
+      margin:0 0 8px;
+      font-size:1.22rem;
+      line-height:1.25;
+      letter-spacing:-0.02em;
+    }
+
+    .nv-product p{
+      margin:0;
+      color:var(--nv-muted);
+      line-height:1.75;
+      font-size:0.96rem;
+    }
+
+    .nv-price-row{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .nv-pill{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.52);
+      font-size:0.92rem;
+      font-weight:700;
+      color:var(--nv-text);
+    }
+
+    .nv-product-button{
+      margin-top:16px;
+    }
+
+    .nv-product-button .nv-btn{
+      width:100%;
+    }
+
+    .nv-mini-callout{
+      margin-top:10px;
+      font-size:0.88rem;
+      line-height:1.6;
+      color:var(--nv-muted);
     }
 
     .nv-cta{
@@ -509,6 +433,10 @@
 
       .nv-btn{
         width:100%;
+      }
+
+      .nv-h1{
+        max-width:none;
       }
     }
   </style>
@@ -661,7 +589,7 @@
         </div>
       </section>
 
-      <section id="stack" class="glass nv-card">
+      <section id="stack" class="glass nv-card nv-stack-section">
         <h2 class="nv-h2">Products I personally use</h2>
         <p class="nv-p">
           These are the products currently featured in my wellness stack. Each button takes you
@@ -676,20 +604,16 @@
               alt="LiveGood Bio-Active Complete Multivitamin for Women with Iron"
               class="nv-product-img"
             />
-
             <h3>Bio-Active Complete Multivitamin for Women</h3>
-
             <p>
               A daily multivitamin designed to help fill common nutritional gaps with 24 vitamins
               and minerals, including iron to support women’s everyday health.
             </p>
-
             <div class="nv-price-row">
               <span class="nv-pill">One-Time: $19.95</span>
               <span class="nv-pill">Member: $12.30</span>
               <span class="nv-pill">⭐ 4.79 Rating</span>
             </div>
-
             <div class="nv-product-button">
               <a
                 href="https://www.livegoodtour.com/NeuroVibe"
@@ -708,20 +632,16 @@
               alt="LiveGood Organic Vitamin D3 K2 supplement"
               class="nv-product-img"
             />
-
             <h3>Organic Vitamin D3 + K2</h3>
-
             <p>
               A simple daily supplement supporting immune health, bone strength,
               and proper calcium absorption using Vitamin D3 and K2 together.
             </p>
-
             <div class="nv-price-row">
               <span class="nv-pill">One-Time: $19.95</span>
               <span class="nv-pill">Member: $9.02</span>
               <span class="nv-pill">⭐ 5.0 Rating</span>
             </div>
-
             <div class="nv-product-button">
               <a
                 href="https://www.livegoodtour.com/NeuroVibe"
@@ -740,20 +660,16 @@
               alt="LiveGood Organic Super Greens powder supplement"
               class="nv-product-img"
             />
-
             <h3>Organic Super Greens</h3>
-
             <p>
               A nutrient-dense blend of organic superfoods designed to support digestion,
               immune function, and natural daily energy.
             </p>
-
             <div class="nv-price-row">
               <span class="nv-pill">One-Time: $34.95</span>
               <span class="nv-pill">Member: $18.95</span>
               <span class="nv-pill">⭐ 4.86 Rating</span>
             </div>
-
             <div class="nv-product-button">
               <a
                 href="https://www.livegoodtour.com/NeuroVibe"
@@ -772,20 +688,16 @@
               alt="LiveGood Factor4 Advanced Inflammation Management supplement"
               class="nv-product-img"
             />
-
             <h3>Factor4 – Advanced Inflammation Management</h3>
-
             <p>
               A powerful formula combining Fish Oil, Turmeric, CoQ10, and Garlic to
               support healthy inflammation response and cardiovascular wellness.
             </p>
-
             <div class="nv-price-row">
               <span class="nv-pill">One-Time: $29.95</span>
               <span class="nv-pill">Member: $18.95</span>
               <span class="nv-pill">⭐ 5.0 Rating</span>
             </div>
-
             <div class="nv-product-button">
               <a
                 href="https://www.livegoodtour.com/NeuroVibe"
@@ -804,20 +716,16 @@
               alt="LiveGood Collagen Peptides supplement"
               class="nv-product-img"
             />
-
             <h3>Collagen Peptides</h3>
-
             <p>
               Hydrolyzed collagen designed to support healthy skin, hair, nails,
               joints, and muscle recovery while promoting overall structural support.
             </p>
-
             <div class="nv-price-row">
               <span class="nv-pill">One-Time: $49.95</span>
               <span class="nv-pill">Member: $28.45</span>
               <span class="nv-pill">⭐ 5.0 Rating</span>
             </div>
-
             <div class="nv-product-button">
               <a
                 href="https://www.livegoodtour.com/NeuroVibe"
@@ -836,20 +744,16 @@
               alt="LiveGood Hydration Amplifier electrolyte drink mix"
               class="nv-product-img"
             />
-
             <h3>Hydration Amplifier</h3>
-
             <p>
               An electrolyte blend designed to improve hydration, mental clarity,
               energy, and athletic performance with clean ingredients.
             </p>
-
             <div class="nv-price-row">
               <span class="nv-pill">One-Time: $34.95</span>
               <span class="nv-pill">Member: $18.95</span>
               <span class="nv-pill">⭐ 4.75 Rating</span>
             </div>
-
             <div class="nv-product-button">
               <a
                 href="https://www.livegoodtour.com/NeuroVibe"
@@ -863,6 +767,10 @@
           </article>
 
         </div>
+
+        <p class="nv-mini-callout">
+          Looking for a simpler place to start? My essentials are the multivitamin, D3 + K2, greens, and hydration support.
+        </p>
       </section>
 
       <section class="nv-cta">
@@ -930,6 +838,9 @@
             }
           });
         }
+      })
+      .catch(error => {
+        console.error("Error loading nav:", error);
       });
   </script>
 </body>

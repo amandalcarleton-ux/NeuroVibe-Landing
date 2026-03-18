@@ -574,55 +574,114 @@
         min-height:180px;
         padding:22px;
       }
-
-      .nv-shop-home-hero{
-        padding:16px;
-        border-radius:28px;
-      }
-
-      .nv-shop-home-btn{
-        min-height:60px;
-        font-size:1rem;
-      }
-.nv-shop-hero{
-  margin:22px auto 20px;
-  max-width:1150px;
+.nv-shop-home-hero{
+  margin-top:22px;
+  padding:18px;
+  border-radius:34px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
+    linear-gradient(135deg, rgba(137,104,255,0.28), rgba(126,203,255,0.18));
+  border:1px solid rgba(255,255,255,0.45);
+  box-shadow:0 18px 42px rgba(75,46,131,0.12);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
 }
 
-.nv-shop-hero img{
+.nv-shop-home-hero-inner{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.nv-shop-home-hero-img{
   width:100%;
-  height:auto;
   display:block;
-  border-radius:0;
+  border-radius:26px;
   box-shadow:none;
+}
+
+.nv-shop-home-actions{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:14px;
+  max-width:760px;
+  margin:0 auto;
+  width:100%;
+}
+
+.nv-shop-home-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:66px;
+  padding:16px 22px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:800;
+  font-size:1.05rem;
+  text-align:center;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.nv-shop-home-btn:hover{
+  transform:translateY(-2px);
+}
+
+.nv-shop-home-btn.primary{
+  color:#fff;
+  background:linear-gradient(135deg,#6f63ff,#7edcff,#ffd8ea);
+  box-shadow:0 14px 30px rgba(107,92,255,0.22);
+}
+
+.nv-shop-home-btn.secondary{
+  color:#1f1738;
+  background:rgba(255,255,255,0.72);
+  border:1px solid rgba(255,255,255,0.58);
+  box-shadow:0 10px 24px rgba(75,46,131,0.08);
+}
+
+@media (max-width: 700px){
+  .nv-shop-home-hero{
+    padding:16px;
+    border-radius:28px;
+  }
+
+  .nv-shop-home-hero-img{
+    border-radius:22px;
+  }
+
+  .nv-shop-home-actions{
+    grid-template-columns:1fr;
+  }
+
+  .nv-shop-home-btn{
+    min-height:60px;
+    font-size:1rem;
+  }
 }
   </style>
 </head>
-<body class="nv-y2k">
-  <div id="nav-placeholder"></div>
+<section class="nv-shop-home-hero glass">
+  <div class="nv-shop-home-hero-inner">
 
-  <main class="nv-shop-main">
-    <div class="nv-container">
+    <img
+      src="/images/headers/neurovibe-shop-header.PNG"
+      alt="The NeuroVibe Shop – calm digital support and wellness resources"
+      class="nv-shop-home-hero-img"
+      loading="eager"
+      decoding="async"
+      onerror="this.style.display='none';"
+    />
 
-      <section class="nv-shop-hero">
-        <img
-          src="/images/headers/neurovibe-shop-header.PNG"
-          alt="The NeuroVibe Shop – calm digital support and wellness resources"
-        />
-      </section>
+    <div class="nv-shop-home-actions">
+      <a href="#featured-guide" class="nv-shop-home-btn primary">Get the Calm Reset Guide ✨</a>
+      <a href="/wellco.html" class="nv-shop-home-btn secondary">Explore WellCo</a>
+    </div>
 
-      <section class="nv-shop-home-hero glass">
-        <div class="nv-shop-home-hero-inner">
-          <div class="nv-shop-home-hero-copy">
-            <p class="nv-eyebrow">NEUROVIBE WELLCO</p>
-          </div>
+  </div>
+</section>
 
-          <div class="nv-shop-home-actions">
-            <a href="#featured-guide" class="nv-shop-home-btn primary">Get the Calm Reset Guide ✨</a>
-            <a href="/wellco.html" class="nv-shop-home-btn secondary">Explore WellCo</a>
-          </div>
-        </div>
-      </section>
+     
 
       <section class="nv-section-card nv-shop-intro glass">
         <h2>A softer storefront for real-life support</h2>

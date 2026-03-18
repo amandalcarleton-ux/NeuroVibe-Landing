@@ -547,7 +547,91 @@
       .nv-social-grid{
         grid-template-columns:1fr;
       }
-    }
+    }.nv-freebie-spotlight{
+  margin-top:28px;
+  padding:34px 26px;
+  text-align:center;
+  border-radius:30px;
+  background:
+    linear-gradient(135deg, rgba(74, 201, 190, 0.22), rgba(255, 170, 110, 0.24)),
+    rgba(255,255,255,0.84);
+  border:1px solid rgba(255,255,255,0.48);
+  box-shadow:
+    0 18px 40px rgba(75,46,131,0.12),
+    0 0 0 1px rgba(255,255,255,0.18) inset;
+}
+
+.nv-freebie-inner{
+  max-width:760px;
+  margin:0 auto;
+}
+
+.nv-freebie-kicker{
+  margin:0 0 10px;
+  color:#167a74;
+  font-size:0.85rem;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  font-weight:700;
+}
+
+.nv-freebie-spotlight h2{
+  margin:0 0 14px;
+  font-size:clamp(2rem, 4vw, 2.8rem);
+  line-height:1.15;
+  color:#101018;
+}
+
+.nv-freebie-text{
+  max-width:640px;
+  margin:0 auto 24px;
+  line-height:1.75;
+  color:#101018;
+  font-size:1.03rem;
+}
+
+.nv-freebie-btn-wrap{
+  max-width:540px;
+  margin:0 auto;
+  padding-top:8px;
+  border-top:1px solid rgba(255,255,255,0.28);
+}
+
+.nv-freebie-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  width:100%;
+  padding:14px 24px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+  background:linear-gradient(135deg, #19a79c, #ff9b5e);
+  color:#fff;
+  box-shadow:0 10px 24px rgba(25,167,156,0.20);
+  transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nv-freebie-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 28px rgba(25,167,156,0.26);
+}
+
+@media (max-width: 720px){
+  .nv-freebie-spotlight{
+    padding:22px 18px;
+    border-radius:24px;
+  }
+
+  .nv-freebie-btn{
+    width:100%;
+  }
+
+  .nv-freebie-text{
+    font-size:0.98rem;
+  }
+}
   </style>
 </head>
 
@@ -619,20 +703,28 @@
 
 <main class="nv-start-wrap">
 
-  <section class="nv-featured-spotlight">
-    <div class="nv-featured-inner">
-      <h3>Free Nervous System Support</h3>
-      <h2>Get the 5-Minute Nervous System Reset</h2>
-      <p>
-        Need a gentle reset? Download the free NeuroVibe guide for simple,
-        calming support you can return to anytime overwhelm hits.
-      </p>
+  <section class="nv-freebie-spotlight">
+  <div class="nv-freebie-inner">
+    <p class="nv-freebie-kicker">Free Nervous System Support</p>
+    <h2>Get the 5-Minute Nervous System Reset</h2>
+    <p class="nv-freebie-text">
+      Need a gentle reset? Download the free NeuroVibe guide for simple,
+      calming support you can return to anytime overwhelm hits — and take
+      your first step toward softer, more supported days.
+    </p>
 
-      <div class="nv-featured-btn-wrap">
-        <a href="https://store.neurovibe.site/b/2FfBV">Download the Free Reset Guide</a>
-      </div>
+    <div class="nv-freebie-btn-wrap">
+      <a
+        href="https://store.neurovibe.site/b/2FfBV"
+        target="_blank"
+        rel="noopener"
+        class="nv-freebie-btn"
+      >
+        Download the Free Reset Guide
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <section class="nv-featured-spotlight">
     <div class="nv-featured-inner">

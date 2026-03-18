@@ -11,7 +11,7 @@
   />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=103" />
+  <link rel="stylesheet" href="/style.css?v=112" />
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
@@ -383,77 +383,24 @@
       color:#101018;
     }
 
-    @media (max-width: 1100px){
-      .nv-hub-grid{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-      }
-    }
-.nv-section-box .nv-start-btn.primary{
-  background:linear-gradient(135deg,#ff9eb5,#ffb38f);
-  box-shadow:0 10px 24px rgba(255,150,120,0.25);
-}
-  .nv-section-box{
-  background:
-    radial-gradient(circle at top, rgba(255,255,255,0.5), transparent 60%),
-    linear-gradient(135deg, rgba(255, 244, 236, 0.95), rgba(255, 228, 218, 0.92));
-  border:1px solid rgba(255,255,255,0.7);
-  box-shadow:0 18px 40px rgba(200,150,130,0.16);
-}
-
-    @media (max-width: 720px){
-      .nv-page-hero{
-        padding:14px 14px 0;
-      }
-
-      .nv-start-wrap{
-        padding:18px 14px 46px;
-      }
-
-      .nv-start-intro,
-      .nv-featured-spotlight,
-      .nv-hub-section,
-      .nv-section-box{
-        padding:22px 18px;
-        border-radius:24px;
-      }
-
-      .nv-hub-grid,
-      .nv-bio-links{
-        grid-template-columns:1fr;
-      }
-
-      .nv-start-actions{
-        flex-direction:column;
-      }
-
-      .nv-start-btn,
-      .nv-back-btn,
-      .nv-featured-spotlight a{
-        width:100%;
-      }
+    .nv-section-box{
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.5), transparent 60%),
+        linear-gradient(135deg, rgba(255, 244, 236, 0.95), rgba(255, 228, 218, 0.92));
+      border:1px solid rgba(255,255,255,0.7);
+      box-shadow:0 18px 40px rgba(200,150,130,0.16);
     }
 
-    @media (max-width: 480px){
-      .nv-start-intro h1{
-        font-size:2rem;
-      }
+    .nv-section-box .nv-start-btn.primary{
+      background:linear-gradient(135deg,#ff9eb5,#ffb38f);
+      box-shadow:0 10px 24px rgba(255,150,120,0.25);
+    }
 
-      .nv-hub-card,
-      .nv-link-card{
-        padding:18px;
-      }
-
-      .nv-hub-card h3,
-      .nv-link-card h3{
-        font-size:1.2rem;
-      }
-
-      .nv-start-intro p,
-      .nv-hub-sub,
-      .nv-section-sub,
-      .nv-featured-spotlight p{
-        font-size:0.98rem;
-      }
+    .nv-section-box .nv-start-btn.ghost{
+      background:rgba(255,255,255,0.92);
+      color:#9a5474;
+      border:1px solid rgba(255, 194, 178, 0.55);
+      box-shadow:0 10px 24px rgba(200,150,130,0.10);
     }
 
     .nv-social-header{
@@ -524,13 +471,168 @@
       line-height:1.35;
     }
 
+    .nv-freebie-spotlight{
+      margin-top:28px;
+      padding:36px 26px;
+      text-align:center;
+      border-radius:32px;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.42), transparent 38%),
+        linear-gradient(135deg, rgba(255, 196, 214, 0.92) 0%, rgba(255, 184, 154, 0.92) 52%, rgba(255, 221, 188, 0.92) 100%);
+      border:1px solid rgba(255,255,255,0.55);
+      box-shadow:
+        0 22px 46px rgba(201, 127, 145, 0.20),
+        0 0 0 1px rgba(255,255,255,0.16) inset;
+    }
+
+    .nv-freebie-spotlight::after{
+      content:"";
+      position:absolute;
+      inset:auto -60px -60px auto;
+      width:180px;
+      height:180px;
+      background:radial-gradient(circle, rgba(255,255,255,0.24), transparent 70%);
+      pointer-events:none;
+    }
+
+    .nv-freebie-inner{
+      position:relative;
+      z-index:1;
+      max-width:760px;
+      margin:0 auto;
+    }
+
+    .nv-freebie-kicker{
+      margin:0 0 10px;
+      color:#9d4f7e;
+      font-size:0.84rem;
+      text-transform:uppercase;
+      letter-spacing:0.14em;
+      font-weight:700;
+    }
+
+    .nv-freebie-spotlight h2{
+      margin:0 0 14px;
+      font-size:clamp(2.1rem, 4vw, 3rem);
+      line-height:1.1;
+      color:#20152a;
+    }
+
+    .nv-freebie-text{
+      max-width:650px;
+      margin:0 auto 12px;
+      line-height:1.75;
+      color:#2d2337;
+      font-size:1.03rem;
+    }
+
+    .nv-freebie-hook{
+      max-width:620px;
+      margin:0 auto 24px;
+      font-size:0.98rem;
+      line-height:1.65;
+      font-weight:600;
+      color:#7d3d63;
+    }
+
+    .nv-freebie-btn-wrap{
+      max-width:560px;
+      margin:0 auto;
+    }
+
+    .nv-freebie-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:58px;
+      width:100%;
+      padding:16px 26px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:1rem;
+      letter-spacing:0.01em;
+      background:linear-gradient(135deg, #8f5bff, #ff8e9d);
+      color:#fff;
+      box-shadow:0 14px 30px rgba(143,91,255,0.26);
+      transition:transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .nv-freebie-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 34px rgba(143,91,255,0.32);
+      filter:saturate(1.05);
+    }
+
+    .nv-freebie-note{
+      margin-top:14px;
+      font-size:0.88rem;
+      color:rgba(45,35,55,0.72);
+      line-height:1.55;
+    }
+
+    @media (max-width: 1100px){
+      .nv-hub-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 900px){
       .nv-social-grid{
         grid-template-columns:repeat(2, minmax(0,1fr));
       }
     }
 
+    @media (max-width: 820px){
+      .nv-book-spotlight{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .nv-book-copy h2{
+        text-align:center;
+      }
+
+      .nv-book-copy .nv-start-actions{
+        justify-content:center;
+      }
+    }
+
     @media (max-width: 720px){
+      .nv-page-hero{
+        padding:14px 14px 0;
+      }
+
+      .nv-start-wrap{
+        padding:18px 14px 46px;
+      }
+
+      .nv-start-intro,
+      .nv-featured-spotlight,
+      .nv-hub-section,
+      .nv-section-box{
+        padding:22px 18px;
+        border-radius:24px;
+      }
+
+      .nv-hub-grid,
+      .nv-bio-links,
+      .nv-social-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nv-start-actions{
+        flex-direction:column;
+      }
+
+      .nv-start-btn,
+      .nv-back-btn,
+      .nv-featured-spotlight a{
+        width:100%;
+      }
+
       .nv-social-header{
         padding:0 14px;
       }
@@ -540,126 +642,43 @@
         border-radius:24px;
       }
 
-      .nv-social-grid{
-        grid-template-columns:1fr;
+      .nv-freebie-spotlight{
+        padding:24px 18px;
+        border-radius:24px;
       }
-   .nv-freebie-spotlight{
-  margin-top:28px;
-  padding:36px 26px;
-  text-align:center;
-  border-radius:32px;
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at top left, rgba(255,255,255,0.42), transparent 38%),
-    linear-gradient(135deg, rgba(255, 196, 214, 0.92) 0%, rgba(255, 184, 154, 0.92) 52%, rgba(255, 221, 188, 0.92) 100%);
-  border:1px solid rgba(255,255,255,0.55);
-  box-shadow:
-    0 22px 46px rgba(201, 127, 145, 0.20),
-    0 0 0 1px rgba(255,255,255,0.16) inset;
-}
 
-.nv-freebie-spotlight::after{
-  content:"";
-  position:absolute;
-  inset:auto -60px -60px auto;
-  width:180px;
-  height:180px;
-  background:radial-gradient(circle, rgba(255,255,255,0.24), transparent 70%);
-  pointer-events:none;
-}
+      .nv-freebie-spotlight h2{
+        font-size:2.15rem;
+      }
 
-.nv-freebie-inner{
-  position:relative;
-  z-index:1;
-  max-width:760px;
-  margin:0 auto;
-}
+      .nv-freebie-text,
+      .nv-freebie-hook{
+        font-size:0.98rem;
+      }
+    }
 
-.nv-freebie-kicker{
-  margin:0 0 10px;
-  color:#9d4f7e;
-  font-size:0.84rem;
-  text-transform:uppercase;
-  letter-spacing:0.14em;
-  font-weight:700;
-}
+    @media (max-width: 480px){
+      .nv-start-intro h1{
+        font-size:2rem;
+      }
 
-.nv-freebie-spotlight h2{
-  margin:0 0 14px;
-  font-size:clamp(2.1rem, 4vw, 3rem);
-  line-height:1.1;
-  color:#20152a;
-}
+      .nv-hub-card,
+      .nv-link-card{
+        padding:18px;
+      }
 
-.nv-freebie-text{
-  max-width:650px;
-  margin:0 auto 12px;
-  line-height:1.75;
-  color:#2d2337;
-  font-size:1.03rem;
-}
+      .nv-hub-card h3,
+      .nv-link-card h3{
+        font-size:1.2rem;
+      }
 
-.nv-freebie-hook{
-  max-width:620px;
-  margin:0 auto 24px;
-  font-size:0.98rem;
-  line-height:1.65;
-  font-weight:600;
-  color:#7d3d63;
-}
-
-.nv-freebie-btn-wrap{
-  max-width:560px;
-  margin:0 auto;
-}
-
-.nv-freebie-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:58px;
-  width:100%;
-  padding:16px 26px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:800;
-  font-size:1rem;
-  letter-spacing:0.01em;
-  background:linear-gradient(135deg, #8f5bff, #ff8e9d);
-  color:#fff;
-  box-shadow:0 14px 30px rgba(143,91,255,0.26);
-  transition:transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-}
-
-.nv-freebie-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 18px 34px rgba(143,91,255,0.32);
-  filter:saturate(1.05);
-}
-
-.nv-freebie-note{
-  margin-top:14px;
-  font-size:0.88rem;
-  color:rgba(45,35,55,0.72);
-  line-height:1.55;
-}
-
-@media (max-width: 720px){
-  .nv-freebie-spotlight{
-    padding:24px 18px;
-    border-radius:24px;
-  }
-
-  .nv-freebie-spotlight h2{
-    font-size:2.15rem;
-  }
-
-  .nv-freebie-text,
-  .nv-freebie-hook{
-    font-size:0.98rem;
-  }
-}
+      .nv-start-intro p,
+      .nv-hub-sub,
+      .nv-section-sub,
+      .nv-featured-spotlight p{
+        font-size:0.98rem;
+      }
+    }
   </style>
 </head>
 
@@ -677,97 +696,98 @@
     />
   </section>
 
- <section class="nv-social-header">
-  <div class="nv-social-header-inner">
-    <p class="nv-kicker">Connect with NeuroVibe</p>
-    <h2>Find me across socials</h2>
-    <p class="nv-social-sub">
-      Tap a platform below to connect with NeuroVibe across the community.
-    </p>
-
-    <div class="nv-social-grid">
-      <a href="https://t.me/Neurovibecommunity" target="_blank" rel="noopener" class="nv-social-card">
-        <span class="nv-social-icon">💜</span>
-        <span class="nv-social-title">Telegram Community</span>
-      </a>
-
-      <a href="https://www.facebook.com/share/g/1CSnRspmXs/" target="_blank" rel="noopener" class="nv-social-card">
-        <span class="nv-social-icon">💬</span>
-        <span class="nv-social-title">Facebook Group</span>
-      </a>
-
-      <a href="https://facebook.com/neurovibewellco" target="_blank" rel="noopener" class="nv-social-card">
-        <span class="nv-social-icon">📘</span>
-        <span class="nv-social-title">Facebook Page</span>
-      </a>
-
-      <a href="https://www.threads.com/@neurovibemama?invite=0" target="_blank" rel="noopener" class="nv-social-card">
-        <span class="nv-social-icon">🧵</span>
-        <span class="nv-social-title">Threads</span>
-      </a>
-
-      <a href="https://www.instagram.com/NeuroVibeMama" target="_blank" rel="noopener" class="nv-social-card">
-        <span class="nv-social-icon">📸</span>
-        <span class="nv-social-title">Instagram</span>
-      </a>
-
-      <a href="https://snapchat.com/add/neurovibelife" target="_blank" rel="noopener" class="nv-social-card">
-        <span class="nv-social-icon">👻</span>
-        <span class="nv-social-title">Snapchat</span>
-      </a>
-
-      <a href="https://pin.it/5ZVkJ5tij" target="_blank" rel="noopener" class="nv-social-card">
-        <span class="nv-social-icon">📌</span>
-        <span class="nv-social-title">Pinterest</span>
-      </a>
-
-      <a href="https://www.tiktok.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-card">
-        <span class="nv-social-icon">🎵</span>
-        <span class="nv-social-title">TikTok</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<main class="nv-start-wrap">
-
-  <section class="nv-freebie-spotlight">
-  <div class="nv-freebie-inner">
-    <p class="nv-freebie-kicker">Free Nervous System Support</p>
-    <h2>Get the 5-Minute Nervous System Reset</h2>
-    <p class="nv-freebie-text">
-      Need a gentle reset? Download the free NeuroVibe guide for simple,
-      calming support you can return to anytime overwhelm hits — and take
-      your first step toward softer, more supported days.
-    </p>
-
-    <div class="nv-freebie-btn-wrap">
-      <a
-        href="https://store.neurovibe.site/b/2FfBV"
-        target="_blank"
-        rel="noopener"
-        class="nv-freebie-btn"
-      >
-        Download the Free Reset Guide
-      </a>
-    </div>
-  </div>
-</section>
-
-  <section class="nv-featured-spotlight">
-    <div class="nv-featured-inner">
-      <h3>Featured Support</h3>
-      <h2>Calm &amp; Clear</h2>
-      <p>
-        A gentle place to begin with calming support, practical tools, and simple next
-        steps for everyday overwhelm.
+  <section class="nv-social-header">
+    <div class="nv-social-header-inner">
+      <p class="nv-kicker">Connect with NeuroVibe</p>
+      <h2>Find me across socials</h2>
+      <p class="nv-social-sub">
+        Tap a platform below to connect with NeuroVibe across the community.
       </p>
 
-      <div class="nv-featured-btn-wrap">
-        <a href="/calm-and-clear/">Start with Calm &amp; Clear</a>
+      <div class="nv-social-grid">
+        <a href="https://t.me/Neurovibecommunity" target="_blank" rel="noopener" class="nv-social-card">
+          <span class="nv-social-icon">💜</span>
+          <span class="nv-social-title">Telegram Community</span>
+        </a>
+
+        <a href="https://www.facebook.com/share/g/1CSnRspmXs/" target="_blank" rel="noopener" class="nv-social-card">
+          <span class="nv-social-icon">💬</span>
+          <span class="nv-social-title">Facebook Group</span>
+        </a>
+
+        <a href="https://facebook.com/neurovibewellco" target="_blank" rel="noopener" class="nv-social-card">
+          <span class="nv-social-icon">📘</span>
+          <span class="nv-social-title">Facebook Page</span>
+        </a>
+
+        <a href="https://www.threads.com/@neurovibemama?invite=0" target="_blank" rel="noopener" class="nv-social-card">
+          <span class="nv-social-icon">🧵</span>
+          <span class="nv-social-title">Threads</span>
+        </a>
+
+        <a href="https://www.instagram.com/NeuroVibeMama" target="_blank" rel="noopener" class="nv-social-card">
+          <span class="nv-social-icon">📸</span>
+          <span class="nv-social-title">Instagram</span>
+        </a>
+
+        <a href="https://snapchat.com/add/neurovibelife" target="_blank" rel="noopener" class="nv-social-card">
+          <span class="nv-social-icon">👻</span>
+          <span class="nv-social-title">Snapchat</span>
+        </a>
+
+        <a href="https://pin.it/5ZVkJ5tij" target="_blank" rel="noopener" class="nv-social-card">
+          <span class="nv-social-icon">📌</span>
+          <span class="nv-social-title">Pinterest</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-card">
+          <span class="nv-social-icon">🎵</span>
+          <span class="nv-social-title">TikTok</span>
+        </a>
       </div>
     </div>
   </section>
+
+  <main class="nv-start-wrap">
+
+    <section class="nv-freebie-spotlight">
+      <div class="nv-freebie-inner">
+        <p class="nv-freebie-kicker">Free Nervous System Support</p>
+        <h2>Get the 5-Minute Nervous System Reset</h2>
+        <p class="nv-freebie-text">
+          Need a gentle reset? Download the free NeuroVibe guide for simple,
+          calming support you can return to anytime overwhelm hits — and take
+          your first step toward softer, more supported days.
+        </p>
+
+        <div class="nv-freebie-btn-wrap">
+          <a
+            href="https://store.neurovibe.site/b/2FfBV"
+            target="_blank"
+            rel="noopener"
+            class="nv-freebie-btn"
+          >
+            Download the Free Reset Guide
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="nv-featured-spotlight">
+      <div class="nv-featured-inner">
+        <h3>Featured Support</h3>
+        <h2>Calm &amp; Clear</h2>
+        <p>
+          A gentle place to begin with calming support, practical tools, and simple next
+          steps for everyday overwhelm.
+        </p>
+
+        <div class="nv-featured-btn-wrap">
+          <a href="/calm-and-clear/">Start with Calm &amp; Clear</a>
+        </div>
+      </div>
+    </section>
+
     <section class="nv-hub-section" id="explore-hubs">
       <h2>Explore the NeuroVibe Hubs</h2>
       <p class="nv-hub-sub">

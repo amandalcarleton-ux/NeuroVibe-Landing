@@ -571,18 +571,21 @@
         font-size:1rem;
       }
     }
-  .nv-affiliate-note{
-    margin-top:14px;
-    font-size:0.9rem;
-    line-height:1.5;
-    opacity:0.75;
-  }
 .nv-diane-section{
-  margin: 28px 0 36px;
-  padding: 32px 24px;
+  margin-top: 30px;
+  padding: 30px 24px;
   border-radius: 28px;
-  background: linear-gradient(180deg, #a792ff 0%, #9f8cff 100%);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.40), rgba(255,255,255,0.16)),
+    linear-gradient(135deg, rgba(167,146,255,0.95), rgba(159,140,255,0.92));
+  border: 1px solid rgba(255,255,255,0.45);
   box-shadow: 0 18px 40px rgba(80, 52, 170, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nv-diane-inner{
+  max-width: 780px;
 }
 
 .nv-diane-section .nv-kicker{
@@ -591,7 +594,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(25, 18, 60, 0.8);
+  color: rgba(25, 18, 60, 0.82);
 }
 
 .nv-diane-section h2{
@@ -605,8 +608,8 @@
   margin: 0 0 16px;
   font-size: 1.05rem;
   line-height: 1.7;
-  color: rgba(18, 15, 43, 0.92);
   font-weight: 600;
+  color: rgba(18, 15, 43, 0.94);
 }
 
 .nv-diane-section p{
@@ -616,21 +619,27 @@
   color: rgba(18, 15, 43, 0.92);
 }
 
-.nv-diane-section .nv-start-actions{
+.nv-diane-actions{
   margin-top: 22px;
   margin-bottom: 14px;
+}
+
+.nv-diane-actions .nv-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nv-diane-section .nv-affiliate-note{
   margin-top: 14px;
   font-size: 0.92rem;
   line-height: 1.6;
-  color: rgba(18, 15, 43, 0.68);
+  color: rgba(18, 15, 43, 0.72);
 }
 
-@media (max-width: 640px){
+@media (max-width: 700px){
   .nv-diane-section{
-    padding: 26px 20px;
+    padding: 24px 20px;
     border-radius: 24px;
   }
 
@@ -914,44 +923,47 @@
           </article>
         </div>
       </section>
-      <section class="nv-section-box">
-  <div class="nv-book-spotlight">
-    <div class="nv-book-copy">
-      <p class="nv-kicker">NeuroVibe Recommended</p>
-      <h2>Emotional Learning Books for Kids</h2>
+<section class="nv-section-card nv-diane-section glass">
+  <div class="nv-diane-inner">
+    <p class="nv-kicker">NeuroVibe Recommended</p>
 
-      <p>
-        Some of the most meaningful tools for emotional growth start with
-        simple conversations. Diane Alber’s books help children explore
-        feelings like confidence, anxiety, anger, kindness, and self-awareness
-        in ways that feel approachable, visual, and supportive.
-      </p>
+    <h2>Emotional Learning Books for Kids</h2>
 
-      <p>
-        These are wonderful resources for families, caregivers, and educators
-        who want to help children better understand big feelings and build
-        emotional vocabulary in everyday life.
-      </p>
+    <p class="nv-intro">
+      Helping kids understand big feelings is one of the most powerful
+      things we can do as parents and caregivers.
+    </p>
 
-      <div class="nv-start-actions">
-        <a
-          href="https://www.dianealber.com/?ref=neurovibe"
-          target="_blank"
-          rel="noopener sponsored"
-          class="nv-start-btn primary"
-        >
-          Explore Diane Alber Books
-        </a>
-      </div>
+    <p>
+      Some of the most meaningful tools for emotional growth start with
+      simple conversations. Diane Alber’s books help children explore
+      feelings like confidence, anxiety, anger, kindness, and self-awareness
+      in ways that feel approachable, visual, and supportive.
+    </p>
 
-      <p class="nv-affiliate-note">
-        Disclosure: NeuroVibe may earn a small commission from qualifying
-        purchases made through this link, at no extra cost to you.
-      </p>
+    <p>
+      These are wonderful resources for families, caregivers, and educators
+      who want to help children better understand big feelings and build
+      emotional vocabulary in everyday life.
+    </p>
+
+    <div class="nv-diane-actions">
+      <a
+        href="https://www.dianealber.com/?ref=neurovibe"
+        target="_blank"
+        rel="noopener sponsored nofollow"
+        class="nv-btn primary"
+      >
+        Explore Diane Alber Books
+      </a>
     </div>
+
+    <p class="nv-affiliate-note">
+      Disclosure: NeuroVibe may earn a small commission from qualifying
+      purchases made through this link, at no extra cost to you.
+    </p>
   </div>
 </section>
-
       <section class="nv-section-card glass">
         <div id="curated-picks" class="nv-section-head">
           <h2>New in the Shop</h2>

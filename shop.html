@@ -112,6 +112,72 @@
       text-align:center;
     }
 
+    .nv-shop-home-hero{
+      margin-top:22px;
+      padding:18px;
+      border-radius:34px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
+        linear-gradient(135deg, rgba(137,104,255,0.28), rgba(126,203,255,0.18));
+      border:1px solid rgba(255,255,255,0.45);
+      box-shadow:0 18px 42px rgba(75,46,131,0.12);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+
+    .nv-shop-home-hero-inner{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .nv-shop-home-hero-img{
+      width:100%;
+      display:block;
+      border-radius:26px;
+      box-shadow:none;
+    }
+
+    .nv-shop-home-actions{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+      max-width:760px;
+      margin:0 auto;
+      width:100%;
+    }
+
+    .nv-shop-home-btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:66px;
+      padding:16px 22px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:1.05rem;
+      text-align:center;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .nv-shop-home-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .nv-shop-home-btn.primary{
+      color:#fff;
+      background:linear-gradient(135deg,#6f63ff,#7edcff,#ffd8ea);
+      box-shadow:0 14px 30px rgba(107,92,255,0.22);
+    }
+
+    .nv-shop-home-btn.secondary{
+      color:#1f1738;
+      background:rgba(255,255,255,0.72);
+      border:1px solid rgba(255,255,255,0.58);
+      box-shadow:0 10px 24px rgba(75,46,131,0.08);
+    }
+
     .nv-featured{
       margin-top:30px;
       padding:28px;
@@ -458,90 +524,6 @@
       text-decoration:none;
     }
 
-    .nv-shop-home-hero{
-      margin-top:22px;
-      padding:22px;
-      border-radius:34px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
-        linear-gradient(135deg, rgba(137,104,255,0.28), rgba(126,203,255,0.18));
-      border:1px solid rgba(255,255,255,0.45);
-      box-shadow:0 18px 42px rgba(75,46,131,0.12);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-    }
-
-    .nv-shop-home-hero-inner{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-
-    .nv-shop-home-hero-img{
-      width:100%;
-      display:block;
-      border-radius:28px;
-      box-shadow:0 18px 36px rgba(75,46,131,0.14);
-    }
-
-    .nv-shop-home-hero-copy{
-      text-align:center;
-      max-width:760px;
-      margin:0 auto;
-    }
-
-    .nv-shop-home-hero-copy h1{
-      margin:0 0 10px;
-      font-size:clamp(2.2rem, 5vw, 3.4rem);
-      color:#1f1738;
-    }
-
-    .nv-shop-home-hero-copy p{
-      margin:0 auto;
-      color:#3c3555;
-      line-height:1.7;
-      font-size:1.05rem;
-    }
-
-    .nv-shop-home-actions{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:14px;
-      max-width:760px;
-      margin:4px auto 0;
-    }
-
-    .nv-shop-home-btn{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:66px;
-      padding:16px 22px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:800;
-      font-size:1.05rem;
-      text-align:center;
-      transition:transform .2s ease, box-shadow .2s ease;
-    }
-
-    .nv-shop-home-btn:hover{
-      transform:translateY(-2px);
-    }
-
-    .nv-shop-home-btn.primary{
-      color:#fff;
-      background:linear-gradient(135deg,#6f63ff,#7edcff,#ffd8ea);
-      box-shadow:0 14px 30px rgba(107,92,255,0.22);
-    }
-
-    .nv-shop-home-btn.secondary{
-      color:#1f1738;
-      background:rgba(255,255,255,0.72);
-      border:1px solid rgba(255,255,255,0.58);
-      box-shadow:0 10px 24px rgba(75,46,131,0.08);
-    }
-
     @media (max-width: 1100px){
       .nv-featured-inner{
         grid-template-columns:1fr;
@@ -574,94 +556,22 @@
         min-height:180px;
         padding:22px;
       }
-.nv-shop-home-hero{
-  margin-top:22px;
-  padding:18px;
-  border-radius:34px;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
-    linear-gradient(135deg, rgba(137,104,255,0.28), rgba(126,203,255,0.18));
-  border:1px solid rgba(255,255,255,0.45);
-  box-shadow:0 18px 42px rgba(75,46,131,0.12);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-}
 
-.nv-shop-home-hero-inner{
-  display:flex;
-  flex-direction:column;
-  gap:18px;
-}
+      .nv-shop-home-hero{
+        padding:16px;
+        border-radius:28px;
+      }
 
-.nv-shop-home-hero-img{
-  width:100%;
-  display:block;
-  border-radius:26px;
-  box-shadow:none;
-}
+      .nv-shop-home-hero-img{
+        border-radius:22px;
+      }
 
-.nv-shop-home-actions{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:14px;
-  max-width:760px;
-  margin:0 auto;
-  width:100%;
-}
-
-.nv-shop-home-btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:66px;
-  padding:16px 22px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:800;
-  font-size:1.05rem;
-  text-align:center;
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-
-.nv-shop-home-btn:hover{
-  transform:translateY(-2px);
-}
-
-.nv-shop-home-btn.primary{
-  color:#fff;
-  background:linear-gradient(135deg,#6f63ff,#7edcff,#ffd8ea);
-  box-shadow:0 14px 30px rgba(107,92,255,0.22);
-}
-
-.nv-shop-home-btn.secondary{
-  color:#1f1738;
-  background:rgba(255,255,255,0.72);
-  border:1px solid rgba(255,255,255,0.58);
-  box-shadow:0 10px 24px rgba(75,46,131,0.08);
-}
-
-@media (max-width: 700px){
-  .nv-shop-home-hero{
-    padding:16px;
-    border-radius:28px;
-  }
-
-  .nv-shop-home-hero-img{
-    border-radius:22px;
-  }
-
-  .nv-shop-home-actions{
-    grid-template-columns:1fr;
-  }
-
-  .nv-shop-home-btn{
-    min-height:60px;
-    font-size:1rem;
-  }
-}
+      .nv-shop-home-btn{
+        min-height:60px;
+        font-size:1rem;
+      }
+    }
   </style>
-</head>
-</style>
 </head>
 
 <body class="nv-y2k">
@@ -672,7 +582,6 @@
 
       <section class="nv-shop-home-hero glass">
         <div class="nv-shop-home-hero-inner">
-
           <img
             src="/images/headers/neurovibe-shop-header.PNG"
             alt="The NeuroVibe Shop – calm digital support and wellness resources"
@@ -686,11 +595,8 @@
             <a href="#featured-guide" class="nv-shop-home-btn primary">Get the Calm Reset Guide ✨</a>
             <a href="/wellco.html" class="nv-shop-home-btn secondary">Explore WellCo</a>
           </div>
-
         </div>
       </section>
-
-     
 
       <section class="nv-section-card nv-shop-intro glass">
         <h2>A softer storefront for real-life support</h2>
@@ -811,19 +717,15 @@
 
             <div class="nv-card-body">
               <span class="nv-featured-badge">🍓 Wellness Pick</span>
-
               <div class="nv-star-row" aria-label="NeuroVibe approved">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
-
               <h3 class="nv-card-title">Bravenly Hydrate – Strawberry Kiwi</h3>
-
               <p class="nv-card-text">
                 A refreshing hydration drink mix designed to support energy, recovery,
                 and daily wellness. The Strawberry Kiwi flavor is light, fruity and
                 perfect for a quick mid-day boost.
               </p>
-
               <a
                 class="nv-btn nv-deal-btn"
                 href="https://neurovibewell.bravenlyglobal.com/hydrate-sk/"
@@ -832,7 +734,6 @@
               >
                 Shop Strawberry Kiwi Hydrate
               </a>
-
               <p class="nv-card-note">
                 Affiliate link • Hydration and daily wellness support
               </p>
@@ -851,19 +752,15 @@
 
             <div class="nv-card-body">
               <span class="nv-featured-badge">🌙 Wellness Pick</span>
-
               <div class="nv-star-row" aria-label="NeuroVibe approved">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
-
               <h3 class="nv-card-title">LiveGood Ultra Magnesium Complex</h3>
-
               <p class="nv-card-text">
                 Magnesium supports muscle relaxation, sleep, nervous system balance,
                 and overall daily wellness. A simple staple for recovery, calm, and
                 supporting the body during stressful days.
               </p>
-
               <a
                 class="nv-btn nv-deal-btn"
                 href="https://livegood.com/NeuroVibe"
@@ -872,7 +769,6 @@
               >
                 Shop LiveGood Magnesium
               </a>
-
               <p class="nv-card-note">
                 Affiliate link • Nervous system and sleep support
               </p>
@@ -1118,23 +1014,18 @@
                 onerror="this.style.display='none';"
               />
             </div>
-
             <div class="nv-card-body">
               <span class="nv-featured-badge">📷 Creator Gear</span>
-
               <div class="nv-star-row" aria-label="NeuroVibe approved">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
-
               <h3 class="nv-card-title">Focus Camera</h3>
-
               <p class="nv-card-text">
                 Cameras, creator gear, lighting, and accessories for photography,
                 content creation, and everyday lifestyle storytelling.
                 A great place to upgrade your setup for social media,
                 YouTube, or creative projects.
               </p>
-
               <a
                 class="nv-btn nv-deal-btn"
                 href="https://focuscamera.pxi6.net/QYj2XM"
@@ -1143,7 +1034,6 @@
               >
                 Shop Creator Gear
               </a>
-
               <p class="nv-card-note">
                 Affiliate link • Cameras, lighting, and creator tools
               </p>

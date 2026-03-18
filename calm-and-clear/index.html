@@ -92,6 +92,7 @@
       border-radius:30px;
       box-shadow:0 18px 40px rgba(75,46,131,0.14);
       background:#1f1637;
+      transition:transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .cc-feature-main img{
@@ -351,15 +352,15 @@
 
     <section class="cc-featured">
 
-      <a class="cc-feature-main" href="/calm-and-clear/when-sleep-becomes-a-battle.html">
-        <img src="/images/blog/when-sleep-becomes-a-battle.PNG" alt="Mother comforting child during a difficult bedtime" />
+      <a class="cc-feature-main" href="/calm-and-clear/when-the-morning-takes-three-hours.html">
+        <img src="/images/blog/when-the-morning-takes-three-hours.jpg" alt="Soft emotional parenting reflection image for a difficult morning" />
         <div class="cc-feature-overlay">
           <div class="cc-feature-copy">
             <span class="cc-label">Featured Reflection</span>
-            <h2>When Sleep Becomes a Battle</h2>
+            <h2>When the Morning Takes Three Hours</h2>
             <p>
-              Autism, overstimulation, and the long nights many neurodivergent families know well —
-              when bedtime becomes the hardest part of the day.
+              A gentle reflection on long nights, slow mornings, nervous system exhaustion,
+              and the invisible work of parenting through dysregulation.
             </p>
             <span class="cc-feature-read">Read the reflection →</span>
           </div>
@@ -367,6 +368,19 @@
       </a>
 
       <div class="cc-feature-stack">
+
+        <a class="cc-feature-side" href="/calm-and-clear/when-sleep-becomes-a-battle.html">
+          <img src="/images/blog/when-sleep-becomes-a-battle.PNG" alt="Mother comforting child during a difficult bedtime" />
+          <div class="cc-feature-side-body">
+            <div class="cc-post-meta">Calm &amp; Clear • March 2026 • 5 min read</div>
+            <h3>When Sleep Becomes a Battle</h3>
+            <p>
+              Autism, overstimulation, and the long nights many neurodivergent families know well —
+              when bedtime becomes the hardest part of the day.
+            </p>
+            <span class="cc-read">Read the reflection →</span>
+          </div>
+        </a>
 
         <a class="cc-feature-side" href="/calm-and-clear/when-sleep-disappears.html">
           <img src="/images/blog/when-sleep-disappears.jpg" alt="Soft nighttime themed blog image" />
@@ -377,18 +391,6 @@
               Parenting through sleepless nights, hard appointments, and the quiet weight of exhaustion.
             </p>
             <span class="cc-read">Read the reflection →</span>
-          </div>
-        </a>
-
-        <a class="cc-feature-side" href="/calm-and-clear/first-post.html">
-          <img src="/images/blog/calm-and-clear-welcome.jpg" alt="Soft pastel welcome image for Calm and Clear" />
-          <div class="cc-feature-side-body">
-            <div class="cc-post-meta">Calm &amp; Clear • March 2026 • 2 min read</div>
-            <h3>Welcome to Calm &amp; Clear</h3>
-            <p>
-              A gentle introduction to this space and the heart behind creating a slower, softer corner inside NeuroVibe.
-            </p>
-            <span class="cc-read">Read the post →</span>
           </div>
         </a>
 
@@ -407,6 +409,19 @@
       </div>
 
       <div class="cc-post-grid">
+
+        <a class="cc-post-card" href="/calm-and-clear/when-the-morning-takes-three-hours.html">
+          <img src="/images/blog/when-the-morning-takes-three-hours.jpg" alt="Soft emotional parenting image for difficult mornings" />
+          <div class="cc-post-body">
+            <div class="cc-post-meta">Calm &amp; Clear • March 2026 • 4 min read</div>
+            <h3>When the Morning Takes Three Hours</h3>
+            <p>
+              Some mornings are slow, heavy, and deeply exhausting. This reflection honors the quiet strength
+              it takes to support a dysregulated child through a long start to the day.
+            </p>
+            <span class="cc-read">Read the reflection →</span>
+          </div>
+        </a>
 
         <a class="cc-post-card" href="/calm-and-clear/when-sleep-becomes-a-battle.html">
           <img src="/images/blog/when-sleep-becomes-a-battle.PNG" alt="Mother and child at bedtime" />
@@ -475,6 +490,9 @@
             }
           });
         }
+      })
+      .catch(error => {
+        console.error("Navigation failed to load:", error);
       });
   </script>
 

@@ -367,9 +367,21 @@
       </div>
     </article>
   </main>
+</main>
 
-  <div id="footer-placeholder"></div>
+<!-- COMMENTS -->
+<div id="comments-placeholder"></div>
 
+<!-- FOOTER -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch('/components/comments.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('comments-placeholder').innerHTML = data;
+    })
+    .catch(err => console.log('Comments load error:', err));
+</script>
   <script>
     fetch('/components/nav.html')
       .then(res => {

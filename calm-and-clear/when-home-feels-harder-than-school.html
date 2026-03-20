@@ -141,4 +141,87 @@
 </head>
 
 <body class="nv-y2k">
+
+  <!-- NAV loads here -->
   <div id="nav-placeholder"></div>
+
+  <main class="cc-post-wrap">
+    <article class="cc-post-card">
+
+      <div class="cc-post-hero">
+        <img
+          src="/images/blog/when-home-feels-harder-than-school.PNG"
+          alt="When Home Feels Harder Than School"
+          onerror="this.style.display='none';"
+        />
+      </div>
+
+      <div class="cc-post-body">
+
+        <span class="cc-post-kicker">Calm &amp; Clear</span>
+
+        <h1 class="cc-post-title">When Home Feels Harder Than School</h1>
+
+        <p class="cc-post-subtitle">
+          Understanding why autistic children can appear regulated at school
+          and deeply overwhelmed at home.
+        </p>
+
+        <p class="cc-post-meta">
+          By NeuroVibe Wellness Collective
+        </p>
+
+        <p>There is often a version of a child the outside world sees, and a very different version that comes home.</p>
+
+        <p>At school, they may follow routines, participate, and appear calm. At home, everything can spill out through anxiety, aggression, emotional overwhelm, or shutdown.</p>
+
+        <div class="cc-post-highlight">
+          <p>The difference does not mean your child is “fine” at school and “choosing” to fall apart at home. Often, it means home is the place where the nervous system finally lets go.</p>
+        </div>
+
+        <h2>The structure at school can feel safer</h2>
+        <p>Many autistic children benefit from structure, routines, and predictability.</p>
+
+        <h2>“Doing well” can still require enormous effort</h2>
+        <p>What looks calm externally can be intense internal effort.</p>
+
+        <h2>Why home can feel so much harder</h2>
+        <ul>
+          <li>aggression</li>
+          <li>anxiety</li>
+          <li>meltdowns</li>
+          <li>irritability</li>
+        </ul>
+
+        <div class="cc-post-highlight">
+          <p>What looks like regression at home can sometimes be release.</p>
+        </div>
+
+        <div class="cc-post-closing">
+          <p>If home feels harder right now, you are not imagining it.</p>
+          <p class="cc-post-signoff">Keep going — but gently. 💜</p>
+        </div>
+
+      </div>
+    </article>
+  </main>
+
+  <!-- FOOTER loads here -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('/components/nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+
+    fetch('/components/footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

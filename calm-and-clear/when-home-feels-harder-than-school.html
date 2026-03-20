@@ -367,21 +367,14 @@
       </div>
     </article>
   </main>
-</main>
+  </main>
 
-<!-- COMMENTS -->
-<div id="comments-placeholder"></div>
+  <!-- COMMENTS -->
+  <div id="comments-placeholder"></div>
 
-<!-- FOOTER -->
-<div id="footer-placeholder"></div>
-<script>
-  fetch('/components/comments.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('comments-placeholder').innerHTML = data;
-    })
-    .catch(err => console.log('Comments load error:', err));
-</script>
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
   <script>
     fetch('/components/nav.html')
       .then(res => {
@@ -404,6 +397,34 @@
         }
       })
       .catch(err => console.log('Nav load error:', err));
+
+    fetch('/components/comments.html')
+      .then(res => {
+        if (!res.ok) throw new Error('Comments component not found');
+        return res.text();
+      })
+      .then(data => {
+        const commentsPlaceholder = document.getElementById('comments-placeholder');
+
+        if (commentsPlaceholder) {
+          commentsPlaceholder.innerHTML = data;
+
+          window.disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+
+          if (!document.getElementById('disqus-embed-script')) {
+            const d = document;
+            const s = d.createElement('script');
+            s.id = 'disqus-embed-script';
+            s.src = 'https://neurovibe.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          }
+        }
+      })
+      .catch(err => console.log('Comments load error:', err));
 
     fetch('/components/footer.html')
       .then(res => {

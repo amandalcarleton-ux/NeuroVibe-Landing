@@ -14,14 +14,17 @@
   <link rel="stylesheet" href="/style.css" />
 
   <style>
-    .nv-nav-menu{
-  display: none;
-}
+    @media (max-width: 768px){
+      .nv-nav-menu{
+        display: none;
+      }
 
-.nv-nav-menu.is-open{
-  display: flex;
-  flex-direction: column;
-}
+      .nv-nav-menu.is-open{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
     .cc-post-wrap{
       max-width: 860px;
       margin: 0 auto;
@@ -150,7 +153,6 @@
 
 <body class="nv-y2k">
 
-  <!-- NAV loads here -->
   <div id="nav-placeholder"></div>
 
   <main class="cc-post-wrap">
@@ -214,39 +216,40 @@
     </article>
   </main>
 
-  <!-- FOOTER loads here -->
   <div id="footer-placeholder"></div>
 
   <script>
-  fetch('/components/nav.html')
-    .then(res => {
-      if (!res.ok) throw new Error('Nav not found');
-      return res.text();
-    })
-    .then(data => {
-      document.getElementById('nav-placeholder').innerHTML = data;
+    fetch('/components/nav.html')
+      .then(res => {
+        if (!res.ok) throw new Error('Nav not found');
+        return res.text();
+      })
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
 
-      const toggle = document.getElementById('nv-menu-toggle');
-      const nav = document.getElementById('nv-nav');
+        const toggle = document.getElementById('nv-menu-toggle');
+        const nav = document.getElementById('nv-nav');
 
-      if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-          nav.classList.toggle('is-open');
+        if (toggle && nav) {
+          toggle.addEventListener('click', () => {
+            nav.classList.toggle('is-open');
 
-          const expanded = toggle.getAttribute('aria-expanded') === 'true';
-          toggle.setAttribute('aria-expanded', String(!expanded));
-        });
-      }
-    })
-    .catch(err => console.log('Nav load error:', err));
+            const expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!expanded));
+          });
+        }
+      })
+      .catch(err => console.log('Nav load error:', err));
 
-  fetch('/components/footer.html')
-    .then(res => {
-      if (!res.ok) throw new Error('Footer not found');
-      return res.text();
-    })
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    })
-    .catch(err => console.log('Footer load error:', err));
-</script>
+    fetch('/components/footer.html')
+      .then(res => {
+        if (!res.ok) throw new Error('Footer not found');
+        return res.text();
+      })
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(err => console.log('Footer load error:', err));
+  </script>
+</body>
+</html>

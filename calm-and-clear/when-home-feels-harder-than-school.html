@@ -210,18 +210,35 @@
   <div id="footer-placeholder"></div>
 
   <script>
-    fetch('/components/nav.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-      });
+  fetch('/components/nav.html')
+    .then(res => {
+      if (!res.ok) throw new Error('Nav not found');
+      return res.text();
+    })
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
 
-    fetch('/components/footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      });
-  </script>
+      const toggle = document.getElementById('nv-menu-toggle');
+      const nav = document.getElementById('nv-nav');
 
-</body>
-</html>
+      if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+          nav.classList.toggle('is-open');
+
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+        });
+      }
+    })
+    .catch(err => console.log('Nav load error:', err));
+
+  fetch('/components/footer.html')
+    .then(res => {
+      if (!res.ok) throw new Error('Footer not found');
+      return res.text();
+    })
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(err => console.log('Footer load error:', err));
+</script>

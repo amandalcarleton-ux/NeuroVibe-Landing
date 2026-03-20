@@ -371,11 +371,13 @@
   <div id="footer-placeholder"></div>
 
 <script>
-fetch('/nav.html')
-  .then(res => res.text())
+fetch('/components/nav.html')
+  .then(res => {
+    if (!res.ok) throw new Error('Nav not found');
+    return res.text();
+  })
   .then(data => {
     document.getElementById('nav-placeholder').innerHTML = data;
-  });
+  })
+  .catch(err => console.log('Nav load error:', err));
 </script>
-</body>
-</html>

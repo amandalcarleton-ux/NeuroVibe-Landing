@@ -379,35 +379,14 @@
 
 <script>
   fetch('/components/nav.html')
-    .then(res => {
-      if (!res.ok) throw new Error('Nav not found');
-      return res.text();
-    })
+    .then(res => res.text())
     .then(data => {
       document.getElementById('nav-placeholder').innerHTML = data;
-
-      const toggle = document.querySelector('.nv-menu-toggle');
-      const menu = document.querySelector('.nv-mobile-menu');
-
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          menu.classList.toggle('is-open');
-          toggle.classList.toggle('is-active');
-
-          const expanded = toggle.getAttribute('aria-expanded') === 'true';
-          toggle.setAttribute('aria-expanded', String(!expanded));
-        });
-      }
-    })
-    .catch(err => console.log('Nav load error:', err));
+    });
 
   fetch('/components/footer.html')
-    .then(res => {
-      if (!res.ok) throw new Error('Footer not found');
-      return res.text();
-    })
+    .then(res => res.text())
     .then(data => {
       document.getElementById('footer-placeholder').innerHTML = data;
-    })
-    .catch(err => console.log('Footer load error:', err));
+    });
 </script>

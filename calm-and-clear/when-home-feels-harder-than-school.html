@@ -136,10 +136,17 @@
       .cc-post-wrap{
         padding: 24px 12px 56px;
       }
-    }
+    }.nv-mobile-menu{
+  display: none;
+}
+
+.nv-mobile-menu.is-open{
+  display: block;
+}
   </style>
 </head>
-
+<button class="nv-menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="nv-mobile-menu">
 <body class="nv-y2k">
   <div id="nav-placeholder"></div>
 
@@ -370,26 +377,37 @@
 
   <div id="footer-placeholder"></div>
 
-  <script>
-    fetch('/components/nav.html')
-      .then(res => {
-        if (!res.ok) throw new Error('Nav not found');
-        return res.text();
-      })
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-      })
-      .catch(err => console.log('Nav load error:', err));
+<script>
+  fetch('/components/nav.html')
+    .then(res => {
+      if (!res.ok) throw new Error('Nav not found');
+      return res.text();
+    })
+    .then(data => {
+      document.getElementById('nav-placeholder').innerHTML = data;
 
-    fetch('/components/footer.html')
-      .then(res => {
-        if (!res.ok) throw new Error('Footer not found');
-        return res.text();
-      })
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-      })
-      .catch(err => console.log('Footer load error:', err));
-  </script>
-</body>
-</html>
+      const toggle = document.querySelector('.nv-menu-toggle');
+      const menu = document.querySelector('.nv-mobile-menu');
+
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('is-open');
+          toggle.classList.toggle('is-active');
+
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          toggle.setAttribute('aria-expanded', String(!expanded));
+        });
+      }
+    })
+    .catch(err => console.log('Nav load error:', err));
+
+  fetch('/components/footer.html')
+    .then(res => {
+      if (!res.ok) throw new Error('Footer not found');
+      return res.text();
+    })
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(err => console.log('Footer load error:', err));
+</script>

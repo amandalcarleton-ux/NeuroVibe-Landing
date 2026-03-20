@@ -1,1 +1,25 @@
+<section style="max-width:860px;margin:40px auto 0;padding:0 16px 40px;">
+  <h2 style="text-align:center;color:#5b2ca0;margin-bottom:12px;">
+    💬 You’re not alone — share your thoughts
+  </h2>
 
+  <p style="text-align:center;color:#5f5a80;max-width:680px;margin:0 auto 20px;line-height:1.7;">
+    If this resonated with you, you’re welcome to leave a comment.
+  </p>
+
+  <div id="disqus_thread"></div>
+</section>
+
+<script>
+  var disqus_config = function () {
+    this.page.url = window.location.href;
+    this.page.identifier = window.location.pathname;
+  };
+
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://neurovibe.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.body).appendChild(s);
+  })();
+</script>

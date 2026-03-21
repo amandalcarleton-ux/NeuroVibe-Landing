@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="/style.css?v=104"/>
+  <link rel="stylesheet" href="/style.css?v=105"/>
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG"/>
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG"/>
@@ -231,6 +231,81 @@
       margin-top:10px;
     }
 
+    .nv-footer-stack{
+      display:flex;
+      flex-direction:column;
+      gap:22px;
+      margin-top:10px;
+    }
+
+    .nv-footer-card{
+      padding:28px 24px;
+      border-radius:28px;
+    }
+
+    .nv-reset-card{
+      text-align:center;
+    }
+
+    .nv-footer-copy{
+      margin:0;
+      text-align:center;
+      font-size:12px;
+      opacity:.75;
+    }
+
+    .nv-social-float-wrap{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      justify-content:center;
+    }
+
+    .nv-social-float{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      width:fit-content;
+      max-width:100%;
+      padding:14px 18px;
+      background:rgba(255,255,255,0.30);
+      border:1px solid rgba(255,255,255,0.34);
+      border-radius:999px;
+      box-shadow:0 14px 32px rgba(75,46,131,0.12);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+    }
+
+    .nv-social-float-link{
+      width:48px;
+      height:48px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      text-decoration:none;
+      background:rgba(255,255,255,0.92);
+      border:1px solid rgba(255,255,255,0.78);
+      box-shadow:0 10px 24px rgba(75,46,131,0.10);
+      color:#4b2e83;
+      transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .nv-social-float-link:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 28px rgba(75,46,131,0.16);
+      background:#ffffff;
+    }
+
+    .nv-social-float-link img{
+      width:22px;
+      height:22px;
+      object-fit:contain;
+      display:block;
+    }
+
     @media (max-width: 920px){
       .nv-home-hero-grid{
         grid-template-columns:1fr;
@@ -254,6 +329,17 @@
       .nv-book-grid{
         grid-template-columns:1fr;
         text-align:center;
+      }
+
+      .nv-social-float{
+        gap:10px;
+        padding:12px 14px;
+        border-radius:24px;
+      }
+
+      .nv-social-float-link{
+        width:44px;
+        height:44px;
       }
     }
 
@@ -286,88 +372,12 @@
       .nv-founder-actions .nv-btn{
         width:100%;
       }
-    }.nv-social-card{
-display:block;
-margin:16px 0;
-text-decoration:none;
-color:inherit;
-}
-    .nv-footer-stack{
-  display:flex;
-  flex-direction:column;
-  gap:22px;
-  margin-top:10px;
-}
 
-.nv-footer-card{
-  padding:28px 24px;
-  border-radius:28px;
-}
-
-.nv-reset-card{
-  text-align:center;
-}
-
-.nv-social-panel{
-  text-align:center;
-}
-
-.nv-social-grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:0;
-  margin-top:10px;
-  text-align:left;
-}
-
-.nv-social-card{
-  display:block;
-  margin:0;
-  padding:16px 0;
-  text-decoration:none;
-  color:inherit;
-  border-top:1px solid rgba(75,46,131,.10);
-}
-
-.nv-social-card:first-child{
-  border-top:none;
-  padding-top:8px;
-}
-
-.nv-social-card h3{
-  margin:0 0 6px;
-  color:#17142b;
-  font-size:1.1rem;
-}
-
-.nv-social-card p{
-  margin:0 0 6px;
-  color:#2c2840;
-  line-height:1.5;
-}
-
-.nv-social-card span{
-  color:#4b2e83;
-  font-weight:600;
-}
-
-.nv-social-card:hover{
-  opacity:.92;
-}
-
-.nv-footer-copy{
-  margin:0;
-  text-align:center;
-  font-size:12px;
-  opacity:.75;
-}
-
-@media (max-width:640px){
-  .nv-footer-card{
-    padding:22px 18px;
-    border-radius:24px;
-  }
-}
+      .nv-footer-card{
+        padding:22px 18px;
+        border-radius:24px;
+      }
+    }
   </style>
 </head>
 
@@ -557,96 +567,71 @@ color:inherit;
         </div>
       </section>
 
-
-
       <section class="nv-footer-stack">
 
-  <footer class="glass nv-card nv-footer-card nv-reset-card">
-    <h2 class="nv-h2">Want the free reset?</h2>
+        <footer class="glass nv-card nv-footer-card nv-reset-card">
+          <h2 class="nv-h2">Want the free reset?</h2>
 
-    <p class="nv-copy">
-      A quick calm tool for overwhelmed moments — ready to download instantly.
-    </p>
+          <p class="nv-copy">
+            A quick calm tool for overwhelmed moments — ready to download instantly.
+          </p>
 
-    <div class="nv-actions" style="justify-content:center;">
-      <a
-        class="nv-btn primary"
-        href="https://store.neurovibe.site/b/2FfBV"
-        target="_blank"
-        rel="noopener"
-      >
-        Get the free reset
-      </a>
-    </div>
-  </footer>
+          <div class="nv-actions" style="justify-content:center;">
+            <a
+              class="nv-btn primary"
+              href="https://store.neurovibe.site/b/2FfBV"
+              target="_blank"
+              rel="noopener"
+            >
+              Get the free reset
+            </a>
+          </div>
+        </footer>
 
-  <section class="glass nv-card nv-footer-card nv-social-panel">
-    <p class="nv-kicker">Stay Connected</p>
-    <h2 class="nv-h2">Follow NeuroVibe ✨</h2>
+        <section class="nv-social-float-wrap" aria-label="NeuroVibe social links">
+          <div class="nv-social-float">
 
-    <p class="nv-copy" style="max-width:60ch; margin:0 auto 10px;">
-      I share real-life moments, beauty favorites, wellness routines, and everyday NeuroVibe life across my socials.
-    </p>
+            <a href="https://t.me/Neurovibecommunity" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Telegram">
+              <img src="/images/socials/telegram.png" alt="Telegram" />
+            </a>
 
-    <p class="nv-mini-note" style="text-align:center; margin-bottom:8px;">
-      ✨ I’m most active on Threads
-    </p>
+            <a href="https://facebook.com/neurovibewellco" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Facebook">
+              <img src="/images/socials/facebook.png" alt="Facebook" />
+            </a>
 
-    <div class="nv-social-grid">
+            <a href="https://www.instagram.com/NeuroVibeMama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Instagram">
+              <img src="/images/socials/instagram.png" alt="Instagram" />
+            </a>
 
-      <a
-        href="https://www.threads.com/@neurovibemama?invite=0"
-        target="_blank"
-        rel="noopener"
-        class="nv-social-card"
-      >
-        <h3>🧵 Threads</h3>
-        <p>@neurovibemama</p>
-        <span>Follow my threads &amp; replies →</span>
-      </a>
+            <a href="https://www.threads.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Threads">
+              <img src="/images/socials/threads.png" alt="Threads" />
+            </a>
 
-      <a
-        href="https://www.facebook.com/share/17CYFsYeo3/?mibextid=wwXIfr"
-        target="_blank"
-        rel="noopener"
-        class="nv-social-card"
-      >
-        <h3>💬 Facebook</h3>
-        <p>NeuroVibe Community</p>
-        <span>Follow the page →</span>
-      </a>
+            <a href="https://snapchat.com/add/neurovibelife" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Snapchat">
+              <img src="/images/socials/snapchat.png" alt="Snapchat" />
+            </a>
 
-      <a
-        href="https://instagram.com/neurovibemama"
-        target="_blank"
-        rel="noopener"
-        class="nv-social-card"
-      >
-        <h3>📸 Instagram</h3>
-        <p>@neurovibemama</p>
-        <span>Follow daily posts →</span>
-      </a>
+            <a href="https://pin.it/5ZVkJ5tij" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Pinterest">
+              <img src="/images/socials/pinterest.png" alt="Pinterest" />
+            </a>
 
-      <a
-        href="https://www.pinterest.com/neurovibemama/"
-        target="_blank"
-        rel="noopener"
-        class="nv-social-card"
-      >
-        <h3>📌 Pinterest</h3>
-        <p>@neurovibemama</p>
-        <span>Browse inspiration →</span>
-      </a>
+            <a href="https://www.tiktok.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="TikTok">
+              <img src="/images/socials/tiktok.png" alt="TikTok" />
+            </a>
 
-    </div>
-  </section>
+            <a href="https://youtube.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="YouTube">
+              <img src="/images/socials/youtube.png" alt="YouTube" />
+            </a>
 
-  <p class="nv-footer-copy">
-    © <span id="year"></span> NeuroVibe
-  </p>
+          </div>
+        </section>
 
-</section>
-       
+        <p class="nv-footer-copy">
+          © <span id="year"></span> NeuroVibe
+        </p>
+
+      </section>
+
     </div>
   </main>
 
@@ -676,6 +661,9 @@ color:inherit;
             }
           });
         }
+      })
+      .catch(error => {
+        console.error("Error loading nav:", error);
       });
   </script>
 </body>

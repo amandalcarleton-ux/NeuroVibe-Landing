@@ -4,205 +4,858 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NeuroVibe Elevated Stack | Bravenly</title>
+  <title>NeuroVibe Elevated Stack | Intentional Energy & Nervous System Support | NeuroVibe</title>
   <meta
     name="description"
-    content="The NeuroVibe Elevated Stack by NeuroVibe — intentional support for energy, hydration, and nervous system care with Bravenly."
+    content="Explore my NeuroVibe Elevated Stack through Bravenly — the products I personally use for intentional energy, hydration, and nervous system support."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://neurovibe.site/bravenly/" />
+
+  <meta property="og:title" content="NeuroVibe Elevated Stack | NeuroVibe" />
+  <meta
+    property="og:description"
+    content="Explore the Bravenly products I personally use to support energy, hydration, and nervous system balance in real life."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://neurovibe.site/bravenly/" />
+  <meta property="og:image" content="https://neurovibe.site/images/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
   />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css?v=103" />
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
   <style>
-    .stack-wrap{
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 40px 16px 72px;
+    :root{
+      --nv-purple:#6f58ff;
+      --nv-purple-deep:#4e34c8;
+      --nv-lilac:#efe8ff;
+      --nv-pink:#ffd7ee;
+      --nv-blue:#dff4ff;
+      --nv-text:#241f3d;
+      --nv-muted:#564f78;
+      --nv-shadow:0 18px 50px rgba(67, 42, 140, 0.18);
+      --nv-radius:28px;
+      --nv-max:1150px;
     }
 
-    .stack-hero{
-      text-align: center;
-      padding: 32px 20px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, #f6efff 0%, #fff8fc 100%);
-      margin-bottom: 28px;
-      box-shadow: 0 10px 30px rgba(70, 40, 120, 0.08);
+    *{box-sizing:border-box;}
+
+    html{
+      scroll-behavior:smooth;
     }
 
-    .stack-hero h1{
-      margin: 0 0 12px;
-      font-size: clamp(2rem, 5vw, 3rem);
-      line-height: 1.1;
-      color: #2d2240;
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      color:var(--nv-text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.92), rgba(255,255,255,0) 30%),
+        radial-gradient(circle at top right, rgba(255,215,238,0.65), rgba(255,255,255,0) 28%),
+        linear-gradient(180deg, #efeaff 0%, #b79cff 48%, #9a82ff 100%);
+      min-height:100vh;
     }
 
-    .stack-hero p{
-      margin: 0 auto;
-      max-width: 680px;
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #5f5870;
+    #nav-placeholder{
+      width:100%;
     }
 
-    .stack-grid{
-      display: grid;
-      gap: 20px;
+    a{
+      color:inherit;
+      text-decoration:none;
     }
 
-    .stack-card{
-      background: #fff;
-      border: 1px solid #eee6f8;
-      border-radius: 22px;
-      padding: 24px 20px;
-      box-shadow: 0 10px 25px rgba(40, 20, 80, 0.05);
+    img{
+      max-width:100%;
+      display:block;
     }
 
-    .stack-card h2{
-      margin: 0 0 10px;
-      font-size: 1.35rem;
-      color: #2d2240;
+    .nv-wrap{
+      width:min(var(--nv-max), calc(100% - 28px));
+      margin:0 auto;
     }
 
-    .stack-card p{
-      margin: 0 0 16px;
-      color: #5f5870;
-      line-height: 1.7;
+    .nv-page{
+      padding:34px 0 80px;
     }
 
-    .stack-list{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    .glass{
+      background:rgba(255,255,255,0.26);
+      border:1px solid rgba(255,255,255,0.36);
+      border-radius:var(--nv-radius);
+      box-shadow:var(--nv-shadow);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
     }
 
-    .stack-list li{
-      background: #f7f2ff;
-      color: #4e3d77;
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 600;
+    .nv-card{
+      padding:28px;
     }
 
-    .stack-signature{
-      margin-top: 24px;
-      padding: 22px 18px;
-      border-radius: 20px;
-      background: #faf7ff;
-      border: 1px solid #eee6f8;
-      text-align: center;
-      color: #4e3d77;
-      line-height: 1.8;
-      font-weight: 500;
+    .nv-hero{
+      position:relative;
+      overflow:hidden;
+      padding:36px;
+      border-radius:34px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.72), rgba(255,255,255,0.38)),
+        linear-gradient(135deg, rgba(223,244,255,0.42), rgba(255,215,238,0.34));
+      border:1px solid rgba(255,255,255,0.4);
+      box-shadow:var(--nv-shadow);
+      margin-bottom:24px;
     }
 
-    .stack-cta{
-      margin-top: 28px;
-      text-align: center;
-      padding: 28px 20px;
-      border-radius: 22px;
-      background: #2d2240;
-      color: #fff;
+    .nv-hero::before,
+    .nv-hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      pointer-events:none;
     }
 
-    .stack-cta h3{
-      margin: 0 0 10px;
-      font-size: 1.4rem;
+    .nv-hero::before{
+      width:240px;
+      height:240px;
+      right:-80px;
+      top:-60px;
+      background:rgba(255,255,255,0.22);
     }
 
-    .stack-cta p{
-      margin: 0 0 18px;
-      color: rgba(255,255,255,0.84);
-      line-height: 1.7;
+    .nv-hero::after{
+      width:180px;
+      height:180px;
+      left:-40px;
+      bottom:-60px;
+      background:rgba(223,244,255,0.2);
     }
 
-    .stack-btn{
-      display: inline-block;
-      padding: 14px 20px;
-      border-radius: 999px;
-      background: #cfa8ff;
-      color: #2d2240;
-      text-decoration: none;
-      font-weight: 700;
+    .nv-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 15px;
+      border-radius:999px;
+      font-size:0.92rem;
+      font-weight:700;
+      color:var(--nv-purple-deep);
+      background:rgba(255,255,255,0.62);
+      border:1px solid rgba(255,255,255,0.42);
+      margin-bottom:16px;
     }
 
-    .stack-btn:hover{
-      opacity: 0.92;
+    .nv-h1{
+      margin:0 0 14px;
+      font-size:clamp(2.2rem, 6vw, 4.4rem);
+      line-height:1.03;
+      letter-spacing:-0.04em;
+      font-weight:800;
+      max-width:12ch;
     }
 
-    .stack-note{
-      margin-top: 12px;
-      font-size: 0.92rem;
-      color: rgba(255,255,255,0.72);
+    .nv-sub{
+      margin:0;
+      max-width:720px;
+      font-size:clamp(1rem, 2.2vw, 1.16rem);
+      line-height:1.8;
+      color:var(--nv-muted);
+    }
+
+    .nv-hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:24px;
+    }
+
+    .nv-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:54px;
+      padding:14px 24px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:1rem;
+      transition:transform .22s ease, box-shadow .22s ease;
+      border:none;
+      cursor:pointer;
+      text-align:center;
+    }
+
+    .nv-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 24px rgba(60, 41, 140, 0.16);
+    }
+
+    .nv-btn-primary{
+      color:#1f153d;
+      background:linear-gradient(90deg, #d9efff 0%, #ffd9ee 100%);
+      border:3px solid rgba(96,65,170,0.82);
+    }
+
+    .nv-btn-secondary{
+      color:var(--nv-purple-deep);
+      background:rgba(255,255,255,0.58);
+      border:1px solid rgba(255,255,255,0.5);
+    }
+
+    .nv-note{
+      margin-top:18px;
+      font-size:0.93rem;
+      line-height:1.7;
+      color:var(--nv-muted);
+    }
+
+    .nv-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:22px;
+      margin-bottom:22px;
+    }
+
+    .nv-h2{
+      margin:0 0 14px;
+      font-size:clamp(1.5rem, 3.4vw, 2.2rem);
+      line-height:1.15;
+      letter-spacing:-0.03em;
+      font-weight:800;
+    }
+
+    .nv-p{
+      margin:0;
+      color:var(--nv-muted);
+      line-height:1.85;
+      font-size:1rem;
+    }
+
+    .nv-bullets{
+      display:grid;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .nv-bullet{
+      display:flex;
+      align-items:flex-start;
+      gap:12px;
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,0.42);
+      border:1px solid rgba(255,255,255,0.4);
+      color:var(--nv-text);
+    }
+
+    .nv-bullet strong{
+      display:block;
+      margin-bottom:2px;
+      font-size:0.98rem;
+    }
+
+    .nv-bullet span{
+      font-size:0.93rem;
+      color:var(--nv-muted);
+      line-height:1.65;
+    }
+
+    .nv-routine{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+      margin-top:20px;
+    }
+
+    .nv-routine-card{
+      padding:22px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.42);
+      border:1px solid rgba(255,255,255,0.4);
+    }
+
+    .nv-routine-card h3{
+      margin:0 0 12px;
+      font-size:1.15rem;
+      letter-spacing:-0.02em;
+    }
+
+    .nv-routine-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
+    }
+
+    .nv-routine-list li{
+      padding:10px 14px;
+      background:rgba(255,255,255,0.46);
+      border-radius:14px;
+      font-size:0.96rem;
+      color:var(--nv-text);
+    }
+
+    .nv-stack-section{
+      margin-top:22px;
+    }
+
+    .nv-stack{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .nv-product{
+      display:flex;
+      flex-direction:column;
+      padding:22px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.56), rgba(255,255,255,0.34));
+      border:1px solid rgba(255,255,255,0.4);
+      min-height:100%;
+    }
+
+    .nv-product-img{
+      width:150px;
+      height:auto;
+      display:block;
+      margin:0 auto 16px auto;
+    }
+
+    .nv-product h3{
+      margin:0 0 8px;
+      font-size:1.22rem;
+      line-height:1.25;
+      letter-spacing:-0.02em;
+    }
+
+    .nv-product p{
+      margin:0;
+      color:var(--nv-muted);
+      line-height:1.75;
+      font-size:0.96rem;
+    }
+
+    .nv-price-row{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .nv-pill{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.52);
+      font-size:0.92rem;
+      font-weight:700;
+      color:var(--nv-text);
+    }
+
+    .nv-product-button{
+      margin-top:16px;
+    }
+
+    .nv-product-button .nv-btn{
+      width:100%;
+    }
+
+    .nv-mini-callout{
+      margin-top:10px;
+      font-size:0.88rem;
+      line-height:1.6;
+      color:var(--nv-muted);
+    }
+
+    .nv-cta{
+      margin-top:22px;
+      text-align:center;
+      padding:30px;
+      border-radius:32px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
+        linear-gradient(90deg, rgba(223,244,255,0.28), rgba(255,215,238,0.25));
+      border:1px solid rgba(255,255,255,0.38);
+      box-shadow:var(--nv-shadow);
+    }
+
+    .nv-cta p{
+      max-width:700px;
+      margin:12px auto 0;
+      color:var(--nv-muted);
+      line-height:1.85;
+    }
+
+    .nv-footer{
+      padding:18px 0 10px;
+      color:rgba(36,31,61,0.82);
+      font-size:0.92rem;
+      text-align:center;
+    }
+
+    .nv-footer a{
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    @media (max-width: 960px){
+      .nv-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 720px){
+      .nv-page{
+        padding:24px 0 60px;
+      }
+
+      .nv-hero{
+        padding:24px 20px;
+        border-radius:28px;
+      }
+
+      .nv-card{
+        padding:22px 18px;
+      }
+
+      .nv-stack,
+      .nv-routine{
+        grid-template-columns:1fr;
+      }
+
+      .nv-btn{
+        width:100%;
+      }
+
+      .nv-h1{
+        max-width:none;
+      }
     }
   </style>
 </head>
-<body>
-  <main class="stack-wrap">
-    <section class="stack-hero">
-      <h1>NeuroVibe Elevated Stack ✨</h1>
-      <p>
-        My Bravenly wellness stack for intentional energy, hydration, and nervous system support.
-        This is the support I reach for when I want to stay steady, supported, and more regulated through the day.
-      </p>
-    </section>
+<body class="nv-y2k">
 
-    <section class="stack-grid">
-      <article class="stack-card">
-        <h2>🌅 Morning Energy + Focus</h2>
-        <p>
-          This is how I start my day supported — not just caffeinated. It helps me begin with more intention,
-          energy, and clarity.
+  <div id="nav-placeholder"></div>
+
+  <main class="nv-page">
+    <div class="nv-wrap">
+
+      <section class="nv-hero">
+        <div class="nv-kicker">✨ Wellness • Elevated Support • Personally Used</div>
+
+        <h1 class="nv-h1">NeuroVibe Elevated Stack</h1>
+
+        <p class="nv-sub">
+          This is my Bravenly wellness stack — the products I personally use for intentional energy,
+          hydration, and nervous system support. I wanted this page to feel like a clear, softer way
+          to share what helps me stay supported through real life.
         </p>
-        <ul class="stack-list">
-          <li>Ignite</li>
-          <li>Brew Extreme</li>
-          <li>Gold</li>
-        </ul>
-      </article>
 
-      <article class="stack-card">
-        <h2>⚡ Midday Energy + Hydration Reset</h2>
-        <p>
-          This is my midday support for hydration and momentum. It helps me reset, keep going,
-          and avoid that hard afternoon crash.
+        <div class="nv-hero-actions">
+          <a href="#stack" class="nv-btn nv-btn-secondary">See What I Use</a>
+
+          <a
+            href="YOUR-BRAVENLY-LINK-HERE"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+            class="nv-btn nv-btn-primary"
+          >
+            Explore Bravenly Products
+          </a>
+        </div>
+
+        <p class="nv-note">
+          Some links on this page may be affiliate links, which means I may earn a commission at no
+          extra cost to you. I only share products that fit the kind of support I want NeuroVibe to represent.
         </p>
-        <ul class="stack-list">
-          <li>Strawberry Kiwi Hydrate</li>
-          <li>Strawberry Rush</li>
-          <li>Piña Colada Rush Extreme</li>
-        </ul>
-      </article>
+      </section>
 
-      <article class="stack-card">
-        <h2>🌙 Evening Nervous System Support</h2>
-        <p>
-          This is what I reach for when I need to come back down and support my body after a full day.
+      <section class="nv-grid">
+        <div class="glass nv-card">
+          <h2 class="nv-h2">Why I made this page</h2>
+          <p class="nv-p">
+            Instead of dropping people into a product site with no context, I wanted a more intentional
+            and transparent way to share what I actually use. This page gives the bigger picture first,
+            so you can explore at your own pace and decide what feels supportive for your season of life.
+          </p>
+
+          <div class="nv-bullets">
+            <div class="nv-bullet">
+              <div>✨</div>
+              <div>
+                <strong>Intentional over intense</strong>
+                <span>I’m building around support that feels doable, useful, and realistic.</span>
+              </div>
+            </div>
+
+            <div class="nv-bullet">
+              <div>🥤</div>
+              <div>
+                <strong>Personally used</strong>
+                <span>This stack reflects the Bravenly products I actually reach for in daily life.</span>
+              </div>
+            </div>
+
+            <div class="nv-bullet">
+              <div>💜</div>
+              <div>
+                <strong>Aligned with NeuroVibe</strong>
+                <span>Gentle support, real-life honesty, and routines that meet you where you are.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass nv-card">
+          <h2 class="nv-h2">A realistic routine</h2>
+          <p class="nv-p">
+            I still want my routine to feel simple enough to actually keep up with, but this stack
+            leans more into support for energy, hydration, and regulation throughout the day.
+            It’s less about doing more and more about feeling more supported.
+          </p>
+
+          <div class="nv-routine">
+            <div class="nv-routine-card">
+              <h3>☀️ Morning</h3>
+              <ul class="nv-routine-list">
+                <li>Ignite</li>
+                <li>Brew Extreme</li>
+                <li>Gold</li>
+              </ul>
+            </div>
+
+            <div class="nv-routine-card">
+              <h3>🌤 Midday + Wind Down</h3>
+              <ul class="nv-routine-list">
+                <li>Strawberry Kiwi Hydrate</li>
+                <li>Strawberry Rush / Piña Colada Rush Extreme</li>
+                <li>Calm</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="glass nv-card">
+        <h2 class="nv-h2">Why these are part of my routine</h2>
+
+        <p class="nv-p">
+          I use this stack to support my day in a way that feels intentional but still realistic.
+          These products help me think about energy, hydration, and nervous system care as support,
+          not pressure.
         </p>
-        <ul class="stack-list">
-          <li>Calm</li>
-        </ul>
-      </article>
-    </section>
 
-    <section class="stack-signature">
-      This stack is not about doing more. It’s about supporting your body with more intention,
-      so you can carry your day with a little more capacity and a little less burnout. 💜
-    </section>
+        <div class="nv-bullets">
+          <div class="nv-bullet">
+            <div>⚡</div>
+            <div>
+              <strong>Intentional energy</strong>
+              <span>Ignite, Brew Extreme, and Rush help support momentum when I need it most.</span>
+            </div>
+          </div>
 
-    <section class="stack-cta">
-      <h3>Shop My Bravenly Stack</h3>
-      <p>
-        Explore the products in my NeuroVibe Elevated Stack and build your own support routine.
-      </p>
-      <a href="YOUR-BRAVENLY-LINK-HERE" target="_blank" rel="noopener" class="stack-btn">
-        Shop Bravenly ✨
-      </a>
-      <div class="stack-note">Replace the button link with your Bravenly referral link.</div>
-    </section>
+          <div class="nv-bullet">
+            <div>💧</div>
+            <div>
+              <strong>Hydration support</strong>
+              <span>Hydrate helps me stay replenished and more steady through the day.</span>
+            </div>
+          </div>
+
+          <div class="nv-bullet">
+            <div>🌙</div>
+            <div>
+              <strong>Regulation &amp; wind down</strong>
+              <span>Calm is part of how I support coming back down after a full day.</span>
+            </div>
+          </div>
+
+          <div class="nv-bullet">
+            <div>✨</div>
+            <div>
+              <strong>Daily support layer</strong>
+              <span>Gold is part of my regular rhythm for overall support and consistency.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stack" class="glass nv-card nv-stack-section">
+        <h2 class="nv-h2">Products I personally use</h2>
+        <p class="nv-p">
+          These are the products currently featured in my Bravenly stack. You can use this page as a
+          simple starting point, then explore more through my Bravenly link when you’re ready.
+        </p>
+
+        <div class="nv-stack">
+
+          <article class="nv-product">
+            <img
+              src="/images/bravenly-ignite.PNG"
+              alt="Bravenly Ignite"
+              class="nv-product-img"
+            />
+            <h3>Ignite</h3>
+            <p>
+              A product I use as part of my morning routine when I want to start the day with more
+              intention, energy, and momentum.
+            </p>
+            <div class="nv-price-row">
+              <span class="nv-pill">Morning Support</span>
+              <span class="nv-pill">Energy + Focus</span>
+            </div>
+            <div class="nv-product-button">
+              <a
+                href="YOUR-BRAVENLY-LINK-HERE"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+                class="nv-btn nv-btn-primary"
+              >
+                View on Bravenly
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-product">
+            <img
+              src="/images/bravenly-brew-extreme.PNG"
+              alt="Bravenly Brew Extreme"
+              class="nv-product-img"
+            />
+            <h3>Brew Extreme</h3>
+            <p>
+              Part of my morning stack when I want coffee with added support and a more intentional start.
+            </p>
+            <div class="nv-price-row">
+              <span class="nv-pill">Coffee Support</span>
+              <span class="nv-pill">Morning Routine</span>
+            </div>
+            <div class="nv-product-button">
+              <a
+                href="YOUR-BRAVENLY-LINK-HERE"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+                class="nv-btn nv-btn-primary"
+              >
+                View on Bravenly
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-product">
+            <img
+              src="/images/bravenly-gold.PNG"
+              alt="Bravenly Gold"
+              class="nv-product-img"
+            />
+            <h3>Gold</h3>
+            <p>
+              A consistent part of my stack that fits into my everyday support routine and overall rhythm.
+            </p>
+            <div class="nv-price-row">
+              <span class="nv-pill">Daily Support</span>
+              <span class="nv-pill">Consistency</span>
+            </div>
+            <div class="nv-product-button">
+              <a
+                href="YOUR-BRAVENLY-LINK-HERE"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+                class="nv-btn nv-btn-primary"
+              >
+                View on Bravenly
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-product">
+            <img
+              src="/images/bravenly-hydrate-strawberry-kiwi.PNG"
+              alt="Bravenly Strawberry Kiwi Hydrate"
+              class="nv-product-img"
+            />
+            <h3>Hydrate – Strawberry Kiwi</h3>
+            <p>
+              My hydration support option for staying replenished and helping the day feel a little steadier.
+            </p>
+            <div class="nv-price-row">
+              <span class="nv-pill">Hydration</span>
+              <span class="nv-pill">Midday Reset</span>
+            </div>
+            <div class="nv-product-button">
+              <a
+                href="YOUR-BRAVENLY-LINK-HERE"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+                class="nv-btn nv-btn-primary"
+              >
+                View on Bravenly
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-product">
+            <img
+              src="/images/bravenly-strawberry-rush.PNG"
+              alt="Bravenly Strawberry Rush"
+              class="nv-product-img"
+            />
+            <h3>Rush – Strawberry</h3>
+            <p>
+              One of the products I reach for when I want extra momentum and support later in the day.
+            </p>
+            <div class="nv-price-row">
+              <span class="nv-pill">Energy Boost</span>
+              <span class="nv-pill">Afternoon Support</span>
+            </div>
+            <div class="nv-product-button">
+              <a
+                href="YOUR-BRAVENLY-LINK-HERE"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+                class="nv-btn nv-btn-primary"
+              >
+                View on Bravenly
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-product">
+            <img
+              src="/images/bravenly-rush-extreme-pina-colada.PNG"
+              alt="Bravenly Piña Colada Rush Extreme"
+              class="nv-product-img"
+            />
+            <h3>Rush Extreme – Piña Colada</h3>
+            <p>
+              Another option in my stack for higher-energy support when I want something stronger in my routine.
+            </p>
+            <div class="nv-price-row">
+              <span class="nv-pill">Higher Energy</span>
+              <span class="nv-pill">Extra Support</span>
+            </div>
+            <div class="nv-product-button">
+              <a
+                href="YOUR-BRAVENLY-LINK-HERE"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+                class="nv-btn nv-btn-primary"
+              >
+                View on Bravenly
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-product">
+            <img
+              src="/images/bravenly-calm.PNG"
+              alt="Bravenly Calm"
+              class="nv-product-img"
+            />
+            <h3>Calm</h3>
+            <p>
+              My wind-down support for helping my body shift out of go-mode and into a softer ending to the day.
+            </p>
+            <div class="nv-price-row">
+              <span class="nv-pill">Wind Down</span>
+              <span class="nv-pill">Nervous System Support</span>
+            </div>
+            <div class="nv-product-button">
+              <a
+                href="YOUR-BRAVENLY-LINK-HERE"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+                class="nv-btn nv-btn-primary"
+              >
+                View on Bravenly
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="nv-mini-callout">
+          Looking for a simple place to start? My core Bravenly picks are Ignite, Gold, Hydrate, and Calm.
+        </p>
+      </section>
+
+      <section class="nv-cta">
+        <div class="nv-kicker">Ready to explore?</div>
+        <h2 class="nv-h2">See the products behind my elevated routine</h2>
+        <p>
+          If you want to browse the products I’m highlighting here, you can explore them through Bravenly
+          and see what feels like the right fit for your own routine.
+        </p>
+
+        <div class="nv-hero-actions" style="justify-content:center;">
+          <a
+            href="YOUR-BRAVENLY-LINK-HERE"
+            target="_blank"
+            rel="noopener sponsored nofollow"
+            class="nv-btn nv-btn-primary"
+          >
+            See My Bravenly Stack
+          </a>
+
+          <a href="/livegood/" class="nv-btn nv-btn-secondary">Explore NeuroVibe Basics</a>
+          <a href="/links.html" class="nv-btn nv-btn-secondary">Back to Resource Library</a>
+        </div>
+
+        <p class="nv-note" style="max-width:760px; margin-left:auto; margin-right:auto;">
+          Wellness products are not medical advice. Always use your own judgment and consult a qualified
+          healthcare professional when needed, especially if you are pregnant, nursing, taking medication,
+          or managing a health condition.
+        </p>
+      </section>
+
+      <footer class="nv-footer">
+        <p>
+          © <span id="year"></span> NeuroVibe • Wellness shared with care •
+          <a href="/links.html">Visit the Resource Library</a>
+        </p>
+      </footer>
+
+    </div>
   </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
+
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      })
+      .catch(error => {
+        console.error("Error loading nav:", error);
+      });
+  </script>
 </body>
 </html>

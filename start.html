@@ -633,14 +633,79 @@
         width:100%;
       }
 
-      .nv-social-header{
-        padding:0 14px;
-      }
+    .nv-social-float-wrap{
+  max-width:1100px;
+  margin:20px auto 0;
+  padding:0 16px;
+  display:flex;
+  justify-content:center;
+}
 
-      .nv-social-header-inner{
-        padding:22px 18px;
-        border-radius:24px;
-      }
+.nv-social-float{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  width:fit-content;
+  max-width:100%;
+  padding:14px 18px;
+  background:rgba(255,255,255,0.30);
+  border:1px solid rgba(255,255,255,0.34);
+  border-radius:999px;
+  box-shadow:0 14px 32px rgba(75,46,131,0.12);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+
+.nv-social-float-link{
+  width:48px;
+  height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  text-decoration:none;
+  background:rgba(255,255,255,0.92);
+  border:1px solid rgba(255,255,255,0.78);
+  box-shadow:0 10px 24px rgba(75,46,131,0.10);
+  color:#4b2e83;
+  transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.nv-social-float-link:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 28px rgba(75,46,131,0.16);
+  background:#ffffff;
+}
+
+.nv-social-float-text{
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.04em;
+  line-height:1;
+}
+
+@media (max-width: 720px){
+  .nv-social-float-wrap{
+    padding:0 14px;
+  }
+
+  .nv-social-float{
+    gap:10px;
+    padding:12px 14px;
+    border-radius:24px;
+  }
+
+  .nv-social-float-link{
+    width:44px;
+    height:44px;
+  }
+
+  .nv-social-float-text{
+    font-size:0.72rem;
+  }
+}
 
       .nv-freebie-spotlight{
         padding:24px 18px;
@@ -699,39 +764,39 @@
   <section class="nv-social-float-wrap">
   <div class="nv-social-float" aria-label="NeuroVibe social links">
     <a href="https://t.me/Neurovibecommunity" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Telegram Community" title="Telegram">
-      <span>💜</span>
+      <span class="nv-social-float-text">TG</span>
     </a>
 
     <a href="https://www.facebook.com/share/g/1CSnRspmXs/" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Facebook Group" title="Facebook Group">
-      <span>💬</span>
+      <span class="nv-social-float-text">FG</span>
     </a>
 
     <a href="https://facebook.com/neurovibewellco" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Facebook Page" title="Facebook Page">
-      <span>📘</span>
+      <span class="nv-social-float-text">FB</span>
     </a>
 
     <a href="https://www.threads.com/@neurovibemama?invite=0" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Threads" title="Threads">
-      <span>🧵</span>
+      <span class="nv-social-float-text">@</span>
     </a>
 
     <a href="https://www.instagram.com/NeuroVibeMama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Instagram" title="Instagram">
-      <span>📸</span>
+      <span class="nv-social-float-text">IG</span>
     </a>
 
     <a href="https://snapchat.com/add/neurovibelife" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Snapchat" title="Snapchat">
-      <span>👻</span>
+      <span class="nv-social-float-text">SC</span>
     </a>
 
     <a href="https://pin.it/5ZVkJ5tij" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Pinterest" title="Pinterest">
-      <span>📌</span>
+      <span class="nv-social-float-text">P</span>
     </a>
 
     <a href="https://www.tiktok.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="TikTok" title="TikTok">
-      <span>🎵</span>
+      <span class="nv-social-float-text">TT</span>
     </a>
 
     <a href="https://youtube.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="YouTube" title="YouTube">
-      <span>▶️</span>
+      <span class="nv-social-float-text">YT</span>
     </a>
   </div>
 </section>

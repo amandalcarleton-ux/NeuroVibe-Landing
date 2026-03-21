@@ -28,34 +28,6 @@
 
     #nav-placeholder{width:100%;}
 
-    .nv-header{
-      position:sticky;
-      top:0;
-      z-index:999;
-      width:100%;
-      background:rgba(255,255,255,0.78);
-      backdrop-filter:blur(16px);
-      border-bottom:1px solid rgba(255,255,255,0.45);
-      box-shadow:0 10px 30px rgba(75,46,131,0.10);
-    }
-
-    .nv-nav-container{
-      max-width:1200px;
-      margin:0 auto;
-      padding:16px 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      position:relative;
-    }
-
-    .nv-logo{
-      font-size:1.8rem;
-      font-weight:700;
-      color:#4b2e83;
-      text-decoration:none;
-    }
-
     .nv-wrap{
       max-width:1100px;
       margin:0 auto;
@@ -123,6 +95,9 @@
       box-shadow:0 12px 30px rgba(0,0,0,0.08);
       text-decoration:none;
       color:inherit;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
     }
 
     .nv-label{
@@ -133,14 +108,20 @@
 
     .nv-card h3{color:#2f2763;}
 
-    .nv-btn, .nv-card span{
-      margin-top:auto;
+    .nv-card p{
+      color:#4f4a77;
+      line-height:1.6;
+    }
+
+    .nv-card span{
+      margin-top:12px;
       padding:11px 18px;
       border-radius:999px;
       background:linear-gradient(90deg,#d8f0ff,#ffd6ea);
       border:2px solid #6a59d1;
       font-weight:700;
       display:inline-block;
+      width:fit-content;
     }
 
     /* FEATURED PICK */
@@ -155,6 +136,7 @@
     .nv-pick-card__img{
       width:100%;
       border-radius:20px;
+      box-shadow:0 10px 24px rgba(75,46,131,0.12);
     }
 
     .nv-pick-card__label{
@@ -224,20 +206,22 @@
 </section>
 
 <section class="nv-section">
-  <h2>Wellness + Resources</h2>
+  <h2>Wellness + NeuroVibe Resources</h2>
 
   <div class="nv-grid">
 
     <a href="/livegood/" class="nv-card">
       <span class="nv-label">Wellness</span>
-      <h3>🌿 My Wellness Stack</h3>
-      <span>Explore →</span>
+      <h3>🌿 NeuroVibe Basics</h3>
+      <p>Simple, foundational wellness support for everyday life.</p>
+      <span>Explore Basics →</span>
     </a>
 
-    <a href="/guides.html" class="nv-card">
-      <span class="nv-label">Guides</span>
-      <h3>📚 NeuroVibe Guides</h3>
-      <span>View →</span>
+    <a href="/wellco.html" class="nv-card">
+      <span class="nv-label">Wellness</span>
+      <h3>🌿 NeuroVibe Elevated</h3>
+      <p>Elevated wellness, routines, and supportive upgrades.</p>
+      <span>Explore Elevated →</span>
     </a>
 
   </div>
@@ -268,6 +252,24 @@
 </section>
 
 </div>
+
+<!-- NAV SCRIPT RESTORED -->
+<script>
+fetch("/components/nav.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
+
+    const toggle = document.getElementById("nv-menu-toggle");
+    const nav = document.getElementById("nv-nav");
+
+    if(toggle && nav){
+      toggle.addEventListener("click", ()=>{
+        nav.classList.toggle("active");
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

@@ -157,32 +157,60 @@
         You are growing into someone truly extraordinary, and I am so grateful to walk beside you on this journey.
       </p>
     </article>
+    <!-- COMMENTS -->
+<div id="comments-placeholder" style="margin-top:40px;"></div>
   </main>
 
-  <script>
-    fetch("/components/nav.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
+ <script>
+  // NAV
+  fetch("/components/nav.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("nav-placeholder").innerHTML = data;
 
-        const toggle = document.getElementById("nv-menu-toggle");
-        const nav = document.getElementById("nv-nav");
+      const toggle = document.getElementById("nv-menu-toggle");
+      const nav = document.getElementById("nv-nav");
 
-        if (toggle && nav) {
-          toggle.addEventListener("click", () => {
-            const isOpen = nav.classList.toggle("active");
-            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-          });
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("active");
+          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
 
-          document.addEventListener("click", (e) => {
-            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-              nav.classList.remove("active");
-              toggle.setAttribute("aria-expanded", "false");
-            }
-          });
+        document.addEventListener("click", (e) => {
+          if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+            nav.classList.remove("active");
+            toggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+    });
+
+  // COMMENTS (DISQUS)
+  fetch('/components/comments.html')
+    .then(res => res.text())
+    .then(data => {
+      const commentsPlaceholder = document.getElementById('comments-placeholder');
+
+      if (commentsPlaceholder) {
+        commentsPlaceholder.innerHTML = data;
+
+        window.disqus_config = function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.location.pathname;
+        };
+
+        if (!document.getElementById('disqus-embed-script')) {
+          const d = document;
+          const s = d.createElement('script');
+          s.id = 'disqus-embed-script';
+          s.src = 'https://neurovibe.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
         }
-      });
-  </script>
-
+      }
+    })
+    .catch(err => console.log('Comments load error:', err));
+</script>
 </body>
 </html>

@@ -42,105 +42,119 @@
       margin:0;
       padding:0;
     }
-.nv-freebie-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px 22px;
-  border-radius:999px;
-  background:linear-gradient(135deg, #8f5bff, #ff8e9d);
-  color:#fff;
-  text-decoration:none;
-  font-weight:700;
-  font-size:15px;
-  box-shadow:0 12px 28px rgba(143,91,255,0.25);
-  transition:all 0.2s ease;
-}
 
-.nv-freebie-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 16px 32px rgba(143,91,255,0.3);
-}
     #nav-placeholder{
       width:100%;
     }
 
     main{
       display:block;
-    }.nv-social-float-wrap{
-  max-width:1100px;
-  margin:18px auto 0;
-  padding:0 16px;
-  display:flex;
-  justify-content:center;
-}
+    }
 
-.nv-social-float{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-  width:auto;
-  max-width:100%;
-  padding:10px 14px;
-  background:rgba(255,255,255,0.22);
-  border:1px solid rgba(255,255,255,0.34);
-  border-radius:999px;
-  box-shadow:0 10px 24px rgba(75,46,131,0.10);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-}
+    .nv-home-hero-actions{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:14px;
+    }
 
-.nv-social-float-link{
-  width:36px;
-  height:36px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:10px;
-  text-decoration:none;
-  background:rgba(255,255,255,0.88);
-  border:1px solid rgba(255,255,255,0.72);
-  box-shadow:0 6px 16px rgba(75,46,131,0.08);
-  transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
+    .nv-freebie-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-height:54px;
+      padding:14px 22px;
+      border-radius:999px;
+      background:linear-gradient(135deg, #8f5bff, #ff8e9d);
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size:15px;
+      line-height:1.2;
+      box-shadow:0 12px 28px rgba(143,91,255,0.25);
+      transition:all 0.2s ease;
+    }
 
-.nv-social-float-link:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 20px rgba(75,46,131,0.14);
-  background:#ffffff;
-}
+    .nv-freebie-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 32px rgba(143,91,255,0.3);
+    }
 
-.nv-social-float img{
-  width:18px;
-  height:18px;
-  object-fit:contain;
-  display:block;
-}
+    .nv-social-float-wrap{
+      max-width:1100px;
+      margin:18px auto 0;
+      padding:0 16px;
+      display:flex;
+      justify-content:center;
+    }
 
-@media (max-width:720px){
-  .nv-social-float-wrap{
-    margin:16px auto 0;
-    padding:0 14px;
-  }
+    .nv-social-float{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      width:auto;
+      max-width:100%;
+      padding:10px 14px;
+      background:rgba(255,255,255,0.22);
+      border:1px solid rgba(255,255,255,0.34);
+      border-radius:999px;
+      box-shadow:0 10px 24px rgba(75,46,131,0.10);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+    }
 
-  .nv-social-float{
-    gap:8px;
-    padding:8px 12px;
-  }
+    .nv-social-float-link{
+      width:36px;
+      height:36px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:10px;
+      text-decoration:none;
+      background:rgba(255,255,255,0.88);
+      border:1px solid rgba(255,255,255,0.72);
+      box-shadow:0 6px 16px rgba(75,46,131,0.08);
+      transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
 
-  .nv-social-float-link{
-    width:32px;
-    height:32px;
-    border-radius:9px;
-  }
+    .nv-social-float-link:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 20px rgba(75,46,131,0.14);
+      background:#ffffff;
+    }
 
-  .nv-social-float img{
-    width:16px;
-    height:16px;
-  }
-}
+    .nv-social-float img{
+      width:18px;
+      height:18px;
+      object-fit:contain;
+      display:block;
+    }
+
+    @media (max-width:720px){
+      .nv-social-float-wrap{
+        margin:16px auto 0;
+        padding:0 14px;
+      }
+
+      .nv-social-float{
+        gap:8px;
+        padding:8px 12px;
+      }
+
+      .nv-social-float-link{
+        width:32px;
+        height:32px;
+        border-radius:9px;
+      }
+
+      .nv-social-float img{
+        width:16px;
+        height:16px;
+      }
+    }
   </style>
 </head>
 
@@ -162,14 +176,16 @@
               loading="eager"
             />
 
-            <a
-  href="https://store.neurovibe.site/b/2FfBV"
-  class="nv-btn primary"
-  target="_blank"
-  rel="noopener"
->
-  Get the Free Digital Reset ✨
-</a>
+            <div class="nv-home-hero-actions">
+              <a
+                href="https://store.neurovibe.site/b/2FfBV"
+                class="nv-freebie-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                Get the Free Digital Reset ✨
+              </a>
+
               <a href="/wellco.html" class="nv-btn ghost">
                 Explore WellCo
               </a>
@@ -210,7 +226,6 @@
 
       <section class="nv-social-float-wrap">
         <div class="nv-social-float">
-
           <a href="https://t.me/Neurovibecommunity" target="_blank" rel="noopener" class="nv-social-float-link">
             <img src="/images/socials/telegram.png" alt="Telegram" />
           </a>
@@ -242,7 +257,6 @@
           <a href="https://youtube.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link">
             <img src="/images/socials/youtube.png" alt="YouTube" />
           </a>
-
         </div>
       </section>
 

@@ -42,7 +42,25 @@
       margin:0;
       padding:0;
     }
+.nv-freebie-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px 22px;
+  border-radius:999px;
+  background:linear-gradient(135deg, #8f5bff, #ff8e9d);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:15px;
+  box-shadow:0 12px 28px rgba(143,91,255,0.25);
+  transition:all 0.2s ease;
+}
 
+.nv-freebie-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 16px 32px rgba(143,91,255,0.3);
+}
     #nav-placeholder{
       width:100%;
     }
@@ -144,16 +162,14 @@
               loading="eager"
             />
 
-            <div class="nv-home-hero-actions">
-              <a
-                href="https://store.neurovibe.site/b/2FfBV"
-                class="nv-reset-popup-btn"
-                target="_blank"
-                rel="noopener"
-              >
-                Get the Free Digital Reset ✨
-              </a>
-
+            <a
+  href="https://store.neurovibe.site/b/2FfBV"
+  class="nv-btn primary"
+  target="_blank"
+  rel="noopener"
+>
+  Get the Free Digital Reset ✨
+</a>
               <a href="/wellco.html" class="nv-btn ghost">
                 Explore WellCo
               </a>

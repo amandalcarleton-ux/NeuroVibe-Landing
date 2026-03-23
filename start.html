@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Start Here | NeuroVibe Support, Stories & Gentle Tools</title>
-<meta
-  name="description"
-  content="Start here with NeuroVibe for gentle nervous system support, practical tools, meaningful stories, and everyday resources for families."
-/>
+  <title>Start Here | NeuroVibe Support, Stories & Gentle Tools</title>
+  <meta
+    name="description"
+    content="Start here with NeuroVibe for gentle nervous system support, practical tools, meaningful stories, and everyday resources for families."
+  />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/style.css?v=112" />
@@ -48,6 +48,57 @@
       margin:0;
     }
 
+    .nv-social-float-wrap{
+      max-width:1100px;
+      margin:20px auto 0;
+      padding:0 16px;
+      display:flex;
+      justify-content:center;
+    }
+
+    .nv-social-float{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      width:fit-content;
+      max-width:100%;
+      padding:14px 18px;
+      background:rgba(255,255,255,0.30);
+      border:1px solid rgba(255,255,255,0.34);
+      border-radius:999px;
+      box-shadow:0 14px 32px rgba(75,46,131,0.12);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+    }
+
+    .nv-social-float a{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:48px;
+      height:48px;
+      border-radius:50%;
+      text-decoration:none;
+      background:rgba(255,255,255,0.92);
+      border:1px solid rgba(255,255,255,0.78);
+      box-shadow:0 10px 24px rgba(75,46,131,0.10);
+      transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .nv-social-float a:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 28px rgba(75,46,131,0.16);
+      background:#ffffff;
+    }
+
+    .nv-social-float img{
+      width:22px;
+      height:22px;
+      object-fit:contain;
+    }
+
     .nv-start-wrap{
       max-width:1100px;
       margin:0 auto;
@@ -67,7 +118,7 @@
 
     .nv-start-intro{
       text-align:center;
-      margin-top:22px;
+      margin-top:28px;
     }
 
     .nv-kicker{
@@ -163,8 +214,110 @@
       transform:translateY(-2px);
     }
 
-    .nv-featured-spotlight{
+    .nv-freebie-spotlight{
       margin-top:28px;
+      padding:36px 26px;
+      text-align:center;
+      border-radius:32px;
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.42), transparent 38%),
+        linear-gradient(135deg, rgba(255, 196, 214, 0.92) 0%, rgba(255, 184, 154, 0.92) 52%, rgba(255, 221, 188, 0.92) 100%);
+      border:1px solid rgba(255,255,255,0.55);
+      box-shadow:
+        0 22px 46px rgba(201, 127, 145, 0.20),
+        0 0 0 1px rgba(255,255,255,0.16) inset;
+    }
+
+    .nv-freebie-spotlight::after{
+      content:"";
+      position:absolute;
+      inset:auto -60px -60px auto;
+      width:180px;
+      height:180px;
+      background:radial-gradient(circle, rgba(255,255,255,0.24), transparent 70%);
+      pointer-events:none;
+    }
+
+    .nv-freebie-inner{
+      position:relative;
+      z-index:1;
+      max-width:760px;
+      margin:0 auto;
+    }
+
+    .nv-freebie-kicker{
+      margin:0 0 10px;
+      color:#9d4f7e;
+      font-size:0.84rem;
+      text-transform:uppercase;
+      letter-spacing:0.14em;
+      font-weight:700;
+    }
+
+    .nv-freebie-spotlight h2{
+      margin:0 0 14px;
+      font-size:clamp(2.1rem, 4vw, 3rem);
+      line-height:1.1;
+      color:#20152a;
+    }
+
+    .nv-freebie-text{
+      max-width:650px;
+      margin:0 auto 12px;
+      line-height:1.75;
+      color:#2d2337;
+      font-size:1.03rem;
+    }
+
+    .nv-freebie-hook{
+      max-width:620px;
+      margin:0 auto 24px;
+      font-size:0.98rem;
+      line-height:1.65;
+      font-weight:600;
+      color:#7d3d63;
+    }
+
+    .nv-freebie-btn-wrap{
+      max-width:560px;
+      margin:0 auto;
+    }
+
+    .nv-freebie-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:58px;
+      width:100%;
+      padding:16px 26px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:1rem;
+      letter-spacing:0.01em;
+      background:linear-gradient(135deg, #8f5bff, #ff8e9d);
+      color:#fff;
+      box-shadow:0 14px 30px rgba(143,91,255,0.26);
+      transition:transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .nv-freebie-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 34px rgba(143,91,255,0.32);
+      filter:saturate(1.05);
+    }
+
+    .nv-freebie-note{
+      margin-top:14px;
+      font-size:0.88rem;
+      color:rgba(45,35,55,0.72);
+      line-height:1.55;
+    }
+
+    .nv-featured-spotlight{
+      margin-top:34px;
       padding:34px 26px;
       text-align:center;
       border-radius:30px;
@@ -236,7 +389,7 @@
 
     .nv-hub-section,
     .nv-section-box{
-      margin-top:28px;
+      margin-top:34px;
     }
 
     .nv-hub-section h2,
@@ -403,189 +556,9 @@
       box-shadow:0 10px 24px rgba(200,150,130,0.10);
     }
 
-    .nv-social-header{
-      max-width:1100px;
-      margin:20px auto 0;
-      padding:0 16px;
-    }
-
-    .nv-social-header-inner{
-      background:rgba(255,255,255,0.72);
-      border:1px solid rgba(255,255,255,0.45);
-      border-radius:28px;
-      padding:28px;
-      box-shadow:0 18px 40px rgba(75,46,131,0.10);
-      text-align:center;
-    }
-
-    .nv-social-header-inner h2{
-      margin:0 0 10px;
-      font-size:clamp(1.8rem, 3vw, 2.4rem);
-      color:#101018;
-    }
-
-    .nv-social-sub{
-      max-width:700px;
-      margin:0 auto 22px;
-      line-height:1.7;
-      color:#101018;
-    }
-
-    .nv-social-grid{
-      display:grid;
-      grid-template-columns:repeat(4, minmax(0,1fr));
-      gap:14px;
-    }
-
-    .nv-social-card{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      min-height:110px;
-      padding:18px 16px;
-      border-radius:22px;
-      text-decoration:none;
-      background:rgba(255,255,255,0.94);
-      border:1px solid rgba(255,255,255,0.75);
-      box-shadow:0 12px 28px rgba(75,46,131,0.10);
-      transition:transform 0.2s ease, box-shadow 0.2s ease;
-      color:#4b2e83;
-    }
-
-    .nv-social-card:hover{
-      transform:translateY(-3px);
-      box-shadow:0 18px 36px rgba(75,46,131,0.16);
-    }
-
-    .nv-social-icon{
-      font-size:1.7rem;
-      margin-bottom:10px;
-      line-height:1;
-    }
-
-    .nv-social-title{
-      font-size:1rem;
-      font-weight:700;
-      text-align:center;
-      line-height:1.35;
-    }
-.nv-social-float img{
-  width:22px;
-  height:22px;
-  object-fit:contain;
-}
-    .nv-freebie-spotlight{
-      margin-top:28px;
-      padding:36px 26px;
-      text-align:center;
-      border-radius:32px;
-      position:relative;
-      overflow:hidden;
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.42), transparent 38%),
-        linear-gradient(135deg, rgba(255, 196, 214, 0.92) 0%, rgba(255, 184, 154, 0.92) 52%, rgba(255, 221, 188, 0.92) 100%);
-      border:1px solid rgba(255,255,255,0.55);
-      box-shadow:
-        0 22px 46px rgba(201, 127, 145, 0.20),
-        0 0 0 1px rgba(255,255,255,0.16) inset;
-    }
-
-    .nv-freebie-spotlight::after{
-      content:"";
-      position:absolute;
-      inset:auto -60px -60px auto;
-      width:180px;
-      height:180px;
-      background:radial-gradient(circle, rgba(255,255,255,0.24), transparent 70%);
-      pointer-events:none;
-    }
-
-    .nv-freebie-inner{
-      position:relative;
-      z-index:1;
-      max-width:760px;
-      margin:0 auto;
-    }
-
-    .nv-freebie-kicker{
-      margin:0 0 10px;
-      color:#9d4f7e;
-      font-size:0.84rem;
-      text-transform:uppercase;
-      letter-spacing:0.14em;
-      font-weight:700;
-    }
-
-    .nv-freebie-spotlight h2{
-      margin:0 0 14px;
-      font-size:clamp(2.1rem, 4vw, 3rem);
-      line-height:1.1;
-      color:#20152a;
-    }
-
-    .nv-freebie-text{
-      max-width:650px;
-      margin:0 auto 12px;
-      line-height:1.75;
-      color:#2d2337;
-      font-size:1.03rem;
-    }
-
-    .nv-freebie-hook{
-      max-width:620px;
-      margin:0 auto 24px;
-      font-size:0.98rem;
-      line-height:1.65;
-      font-weight:600;
-      color:#7d3d63;
-    }
-
-    .nv-freebie-btn-wrap{
-      max-width:560px;
-      margin:0 auto;
-    }
-
-    .nv-freebie-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:58px;
-      width:100%;
-      padding:16px 26px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:800;
-      font-size:1rem;
-      letter-spacing:0.01em;
-      background:linear-gradient(135deg, #8f5bff, #ff8e9d);
-      color:#fff;
-      box-shadow:0 14px 30px rgba(143,91,255,0.26);
-      transition:transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-    }
-
-    .nv-freebie-btn:hover{
-      transform:translateY(-2px);
-      box-shadow:0 18px 34px rgba(143,91,255,0.32);
-      filter:saturate(1.05);
-    }
-
-    .nv-freebie-note{
-      margin-top:14px;
-      font-size:0.88rem;
-      color:rgba(45,35,55,0.72);
-      line-height:1.55;
-    }
-
     @media (max-width: 1100px){
       .nv-hub-grid{
         grid-template-columns:repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 900px){
-      .nv-social-grid{
-        grid-template-columns:repeat(2, minmax(0,1fr));
       }
     }
 
@@ -609,6 +582,21 @@
         padding:14px 14px 0;
       }
 
+      .nv-social-float-wrap{
+        padding:0 14px;
+      }
+
+      .nv-social-float{
+        gap:10px;
+        padding:12px 14px;
+        border-radius:24px;
+      }
+
+      .nv-social-float a{
+        width:44px;
+        height:44px;
+      }
+
       .nv-start-wrap{
         padding:18px 14px 46px;
       }
@@ -622,8 +610,7 @@
       }
 
       .nv-hub-grid,
-      .nv-bio-links,
-      .nv-social-grid{
+      .nv-bio-links{
         grid-template-columns:1fr;
       }
 
@@ -636,80 +623,6 @@
       .nv-featured-spotlight a{
         width:100%;
       }
-
-    .nv-social-float-wrap{
-  max-width:1100px;
-  margin:20px auto 0;
-  padding:0 16px;
-  display:flex;
-  justify-content:center;
-}
-
-.nv-social-float{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-items:center;
-  gap:12px;
-  width:fit-content;
-  max-width:100%;
-  padding:14px 18px;
-  background:rgba(255,255,255,0.30);
-  border:1px solid rgba(255,255,255,0.34);
-  border-radius:999px;
-  box-shadow:0 14px 32px rgba(75,46,131,0.12);
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-}
-
-.nv-social-float-link{
-  width:48px;
-  height:48px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  text-decoration:none;
-  background:rgba(255,255,255,0.92);
-  border:1px solid rgba(255,255,255,0.78);
-  box-shadow:0 10px 24px rgba(75,46,131,0.10);
-  color:#4b2e83;
-  transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.nv-social-float-link:hover{
-  transform:translateY(-2px);
-  box-shadow:0 16px 28px rgba(75,46,131,0.16);
-  background:#ffffff;
-}
-
-.nv-social-float-text{
-  font-size:0.78rem;
-  font-weight:700;
-  letter-spacing:0.04em;
-  line-height:1;
-}
-
-@media (max-width: 720px){
-  .nv-social-float-wrap{
-    padding:0 14px;
-  }
-
-  .nv-social-float{
-    gap:10px;
-    padding:12px 14px;
-    border-radius:24px;
-  }
-
-  .nv-social-float-link{
-    width:44px;
-    height:44px;
-  }
-
-  .nv-social-float-text{
-    font-size:0.72rem;
-  }
-}
 
       .nv-freebie-spotlight{
         padding:24px 18px;
@@ -765,57 +678,56 @@
     />
   </section>
 
-<section class="nv-social-float-wrap">
-  <div class="nv-social-float">
+  <section class="nv-social-float-wrap">
+    <div class="nv-social-float">
+      <a href="https://t.me/Neurovibecommunity" target="_blank" rel="noopener">
+        <img src="/images/socials/telegram.png" alt="Telegram" />
+      </a>
 
-    <a href="https://t.me/Neurovibecommunity" target="_blank">
-      <img src="/images/socials/telegram.png" alt="Telegram" />
-    </a>
+      <a href="https://facebook.com/neurovibewellco" target="_blank" rel="noopener">
+        <img src="/images/socials/facebook.png" alt="Facebook" />
+      </a>
 
-    <a href="https://facebook.com/neurovibewellco" target="_blank">
-      <img src="/images/socials/facebook.png" alt="Facebook" />
-    </a>
+      <a href="https://www.instagram.com/NeuroVibeMama" target="_blank" rel="noopener">
+        <img src="/images/socials/instagram.png" alt="Instagram" />
+      </a>
 
-    <a href="https://www.instagram.com/NeuroVibeMama" target="_blank">
-      <img src="/images/socials/instagram.png" alt="Instagram" />
-    </a>
+      <a href="https://www.threads.com/@neurovibemama" target="_blank" rel="noopener">
+        <img src="/images/socials/threads.png" alt="Threads" />
+      </a>
 
-    <a href="https://www.threads.com/@neurovibemama" target="_blank">
-      <img src="/images/socials/threads.png" alt="Threads" />
-    </a>
+      <a href="https://snapchat.com/add/neurovibelife" target="_blank" rel="noopener">
+        <img src="/images/socials/snapchat.png" alt="Snapchat" />
+      </a>
 
-    <a href="https://snapchat.com/add/neurovibelife" target="_blank">
-      <img src="/images/socials/snapchat.png" alt="Snapchat" />
-    </a>
+      <a href="https://pin.it/5ZVkJ5tij" target="_blank" rel="noopener">
+        <img src="/images/socials/pinterest.png" alt="Pinterest" />
+      </a>
 
-    <a href="https://pin.it/5ZVkJ5tij" target="_blank">
-      <img src="/images/socials/pinterest.png" alt="Pinterest" />
-    </a>
+      <a href="https://www.tiktok.com/@neurovibemama" target="_blank" rel="noopener">
+        <img src="/images/socials/tiktok.png" alt="TikTok" />
+      </a>
 
-    <a href="https://www.tiktok.com/@neurovibemama" target="_blank">
-      <img src="/images/socials/tiktok.png" alt="TikTok" />
-    </a>
-
-    <a href="https://youtube.com/@neurovibemama" target="_blank">
-      <img src="/images/socials/youtube.png" alt="YouTube" />
-    </a>
-
-  </div>
-</section>
+      <a href="https://youtube.com/@neurovibemama" target="_blank" rel="noopener">
+        <img src="/images/socials/youtube.png" alt="YouTube" />
+      </a>
+    </div>
+  </section>
 
   <main class="nv-start-wrap">
 
     <section class="nv-freebie-spotlight">
       <div class="nv-freebie-inner">
-<p class="nv-freebie-kicker">Free Nervous System Support</p>
-<h2>Get the 5-Minute Nervous System Reset</h2>
-<p class="nv-freebie-text">
-  Feeling overstimulated, overwhelmed, or like you need a place to begin?
-  Start here with a simple NeuroVibe reset you can come back to anytime.
-</p>
-<p class="nv-freebie-hook">
-  A gentle first step for nervous system support, calmer moments, and more grounded days. 💜
-</p>
+        <p class="nv-freebie-kicker">Free Nervous System Support</p>
+        <h2>Get the 5-Minute Nervous System Reset</h2>
+        <p class="nv-freebie-text">
+          Feeling overstimulated, overwhelmed, or like you need a place to begin?
+          Start here with a simple NeuroVibe reset you can come back to anytime.
+        </p>
+        <p class="nv-freebie-hook">
+          A gentle first step for nervous system support, calmer moments, and more grounded days. 💜
+        </p>
+
         <div class="nv-freebie-btn-wrap">
           <a
             href="https://store.neurovibe.site/b/2FfBV"
@@ -828,31 +740,33 @@
         </div>
       </div>
     </section>
-<section class="nv-start-intro">
-  <p class="nv-kicker">Welcome to NeuroVibe</p>
-  <h1>Start with the support that fits your season</h1>
-  <p>
-    NeuroVibe is a gentle space for nervous system support, practical tools,
-    meaningful stories, and everyday resources for real life. If you are not
-    sure where to begin, start with the free reset guide or explore the paths below.
-  </p>
 
-  <div class="nv-start-actions">
-    <a href="https://store.neurovibe.site/b/2FfBV" target="_blank" rel="noopener" class="nv-start-btn primary">
-      Get the Free Reset Guide
-    </a>
-    <a href="#explore-hubs" class="nv-start-btn ghost">
-      Explore Your Path
-    </a>
-  </div>
-</section>
+    <section class="nv-start-intro">
+      <p class="nv-kicker">Welcome to NeuroVibe</p>
+      <h1>Start with the support that fits your season</h1>
+      <p>
+        NeuroVibe is a gentle space for nervous system support, practical tools,
+        meaningful stories, and everyday resources for real life. If you are not
+        sure where to begin, start with the free reset guide or explore the paths below.
+      </p>
+
+      <div class="nv-start-actions">
+        <a href="https://store.neurovibe.site/b/2FfBV" target="_blank" rel="noopener" class="nv-start-btn primary">
+          Get the Free Reset Guide
+        </a>
+        <a href="#explore-hubs" class="nv-start-btn ghost">
+          Explore Your Path
+        </a>
+      </div>
+    </section>
+
     <section class="nv-featured-spotlight">
       <div class="nv-featured-inner">
         <h3>Featured Support</h3>
         <h2>Calm &amp; Clear</h2>
         <p>
-          A gentle place to begin with calming support, practical tools, and simple next
-          steps for everyday overwhelm.
+          Start with Calm &amp; Clear for gentle support, practical tools, and simple next
+          steps when life feels heavy, overstimulating, or hard to sort through.
         </p>
 
         <div class="nv-featured-btn-wrap">
@@ -944,16 +858,18 @@
 
         <div class="nv-book-copy">
           <p class="nv-kicker">NeuroVibe Publishing</p>
-          <h2>Stories that support growth and connection</<p>
-  NeuroVibe Publishing shares gentle stories created to support emotional understanding,
-  brave moments, and meaningful connection for children and families.
-</p>
+          <h2>Stories that support growth and connection</h2>
 
-<p>
-  Explore stories like <em>The Rhythm of the Moon</em> and <em>Lyra and the Wednesday Bridge</em>,
-  and keep an eye out for <em>Lyra and the Gentle Pause</em> — a new story about support,
-  boundaries, and finding new rhythms beyond screens.
-</p>
+          <p>
+            NeuroVibe Publishing shares gentle stories created to support emotional understanding,
+            brave moments, and meaningful connection for children and families.
+          </p>
+
+          <p>
+            Explore stories like <em>The Rhythm of the Moon</em> and <em>Lyra and the Wednesday Bridge</em>,
+            and keep an eye out for <em>Lyra and the Gentle Pause</em> — a new story about support,
+            boundaries, and finding new rhythms beyond screens.
+          </p>
 
           <div class="nv-start-actions">
             <a href="/neurovibe-publishing/" class="nv-start-btn primary">

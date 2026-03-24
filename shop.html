@@ -314,7 +314,6 @@
 
     .nv-path-card,
     .nv-curated-card,
-    .nv-eco-card,
     .nv-style-card{
       border-radius:24px;
       background:rgba(255,255,255,0.82);
@@ -420,26 +419,6 @@
       line-height:1;
     }
 
-    .nv-curated-footer{
-      margin-top:20px;
-      text-align:center;
-    }
-
-    .nv-curated-footer a{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:52px;
-      padding:12px 24px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:700;
-      color:#6a3dc3;
-      background:rgba(255,255,255,0.84);
-      border:1px solid rgba(255,255,255,0.68);
-      box-shadow:0 10px 24px rgba(75,46,131,0.08);
-    }
-
     .nv-style-section{
       margin-top:30px;
       padding:28px;
@@ -494,37 +473,6 @@
       line-height:1.7;
     }
 
-    .nv-ecosystem-grid{
-      display:grid;
-      grid-template-columns:repeat(3, minmax(0,1fr));
-      gap:16px;
-    }
-
-    .nv-eco-card{
-      display:block;
-      text-decoration:none;
-      padding:20px;
-      color:#1a1730;
-      transition:transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .nv-eco-card:hover{
-      transform:translateY(-2px);
-      box-shadow:0 14px 28px rgba(75,46,131,0.10);
-    }
-
-    .nv-eco-card h3{
-      margin:0 0 10px;
-      font-size:1.2rem;
-      color:#4b2e83;
-    }
-
-    .nv-eco-card p{
-      margin:0;
-      line-height:1.65;
-      color:#3c3555;
-    }
-
     .nv-shop-footer{
       margin-top:28px;
       padding:28px 20px;
@@ -544,19 +492,6 @@
       line-height:1.7;
     }
 
-    .footer-nav{
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-      margin-top:12px;
-    }
-
-    .footer-nav a{
-      color:#4b2e83;
-      font-weight:600;
-      text-decoration:none;
-    }
-
     .nv-freebie-section{
       margin-top:30px;
       padding:30px 24px;
@@ -567,58 +502,6 @@
       border:1px solid rgba(255,255,255,0.42);
       box-shadow:0 18px 40px rgba(80, 52, 170, 0.18);
       text-align:center;
-    }
-
-    .nv-diane-section{
-      margin-top:30px;
-      padding:30px 24px;
-      border-radius:28px;
-      overflow:hidden;
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.34), transparent 38%),
-        linear-gradient(135deg, rgba(255, 214, 228, 0.94) 0%, rgba(255, 196, 168, 0.92) 52%, rgba(255, 224, 196, 0.92) 100%);
-      border:1px solid rgba(255,255,255,0.48);
-      box-shadow:0 18px 40px rgba(214, 146, 132, 0.18);
-    }
-
-    .nv-diane-inner{
-      max-width:780px;
-    }
-
-    .nv-diane-section .nv-kicker{
-      margin:0 0 12px;
-      font-size:0.9rem;
-      font-weight:700;
-      letter-spacing:0.14em;
-      text-transform:uppercase;
-      color:rgba(122, 70, 98, 0.88);
-    }
-
-    .nv-diane-section h2{
-      margin:0 0 16px;
-      font-size:clamp(2rem, 4vw, 3rem);
-      line-height:1.08;
-      color:#241726;
-    }
-
-    .nv-diane-section .nv-intro{
-      margin:0 0 16px;
-      font-size:1.05rem;
-      line-height:1.7;
-      font-weight:600;
-      color:rgba(36, 23, 38, 0.92);
-    }
-
-    .nv-diane-section p{
-      margin:0 0 16px;
-      font-size:1.02rem;
-      line-height:1.75;
-      color:rgba(36, 23, 38, 0.88);
-    }
-
-    .nv-diane-actions{
-      margin-top:22px;
-      margin-bottom:14px;
     }
 
     .nv-diane-btn{
@@ -641,13 +524,6 @@
       box-shadow:0 18px 34px rgba(217,139,179,0.28);
     }
 
-    .nv-affiliate-note{
-      margin-top:14px;
-      font-size:0.92rem;
-      line-height:1.6;
-      color:rgba(36, 23, 38, 0.68);
-    }
-
     @media (max-width: 1100px){
       .nv-featured-inner{
         grid-template-columns:1fr;
@@ -655,7 +531,6 @@
 
       .nv-paths-grid,
       .nv-new-grid,
-      .nv-ecosystem-grid,
       .nv-style-grid{
         grid-template-columns:repeat(2, minmax(0,1fr));
       }
@@ -665,7 +540,6 @@
       .nv-section-card,
       .nv-featured,
       .nv-shop-footer,
-      .nv-diane-section,
       .nv-freebie-section,
       .nv-style-section{
         padding:18px;
@@ -673,7 +547,6 @@
 
       .nv-paths-grid,
       .nv-new-grid,
-      .nv-ecosystem-grid,
       .nv-shop-home-actions,
       .nv-style-grid{
         grid-template-columns:1fr;
@@ -693,14 +566,11 @@
         font-size:1rem;
       }
 
-      .nv-diane-section h2,
       .nv-freebie-section h2,
       .nv-style-intro h2{
         font-size:2.1rem;
       }
 
-      .nv-diane-section p,
-      .nv-diane-section .nv-intro,
       .nv-freebie-section p,
       .nv-style-intro p{
         font-size:0.98rem;
@@ -751,7 +621,6 @@
           <a href="#daily-support">Daily Support</a>
           <a href="#mom-style">Mom Style</a>
           <a href="#curated-picks">New in the Shop</a>
-          <a href="#ecosystem">Explore More</a>
         </nav>
 
         <p class="nv-soft-note">
@@ -772,46 +641,6 @@
         >
           Download the Free Reset Guide
         </a>
-      </section>
-
-      <section class="nv-section-card glass" style="margin-top:30px;text-align:center;">
-        <h2 style="margin:0 0 12px;color:#5b2ca0;">NeuroVibe Amazon Picks</h2>
-
-        <p style="max-width:620px;margin:auto;color:#3c3555;line-height:1.7;">
-          Explore calming tools, sensory-friendly finds, parenting support resources, and everyday wellness products I personally love and recommend for the NeuroVibe community.
-        </p>
-
-        <div style="margin-top:20px;">
-          <a
-            href="https://www.amazon.com/shop/influencer-c21f1572"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-            class="nv-btn primary"
-          >
-            Visit the NeuroVibe Amazon Store
-          </a>
-        </div>
-
-        <div style="margin-top:25px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-          <a href="https://amzn.to/3NL9JMu" target="_blank" rel="noopener sponsored nofollow" class="nv-btn ghost">Calm Corner</a>
-          <a href="https://amzn.to/3NvTByq" target="_blank" rel="noopener sponsored nofollow" class="nv-btn ghost">Parenting Tools</a>
-          <a href="https://amzn.to/40GpbMT" target="_blank" rel="noopener sponsored nofollow" class="nv-btn ghost">Amanda's Favorites</a>
-        </div>
-
-        <div style="margin-top:22px;">
-          <a
-            href="https://amzn.to/4bxfXHI"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-            class="nv-btn primary"
-          >
-            Try Kindle Unlimited
-          </a>
-        </div>
-
-        <p style="max-width:680px;margin:16px auto 0;color:#5f5a80;line-height:1.7;font-size:.95rem;">
-          Love reading? Kindle Unlimited gives readers access to thousands of titles, including cozy and family-friendly reads. It’s a simple way to discover more books while supporting NeuroVibe through my affiliate link.
-        </p>
       </section>
 
       <section id="featured-guide" class="nv-featured">
@@ -1046,40 +875,6 @@
         </p>
       </section>
 
-      <section class="nv-diane-section" aria-label="Diane Alber recommendation">
-        <div class="nv-diane-inner">
-          <p class="nv-kicker">NeuroVibe Recommended</p>
-          <h2>Emotional Learning Books for Kids</h2>
-
-          <p class="nv-intro">
-            Helping kids understand big feelings is one of the most powerful things we can do as parents and caregivers.
-          </p>
-
-          <p>
-            Some of the most meaningful tools for emotional growth start with simple conversations. Diane Alber’s books help children explore feelings like confidence, anxiety, anger, kindness, and self-awareness in ways that feel approachable, visual, and supportive.
-          </p>
-
-          <p>
-            These are wonderful resources for families, caregivers, and educators who want to help children better understand big feelings and build emotional vocabulary in everyday life.
-          </p>
-
-          <div class="nv-diane-actions">
-            <a
-              href="https://www.dianealber.com/?ref=neurovibe"
-              target="_blank"
-              rel="noopener sponsored nofollow"
-              class="nv-diane-btn"
-            >
-              Explore Diane Alber Books
-            </a>
-          </div>
-
-          <p class="nv-affiliate-note">
-            Disclosure: NeuroVibe may earn a small commission from qualifying purchases made through this link, at no extra cost to you.
-          </p>
-        </div>
-      </section>
-
       <section class="nv-section-card glass">
         <div id="curated-picks" class="nv-section-head">
           <h2>New in the Shop</h2>
@@ -1258,122 +1053,28 @@
             </div>
           </article>
         </div>
-
-        <div class="nv-section-head" style="margin-top:34px;">
-          <h2>Shop by Collection</h2>
-          <p>
-            Browse by category to find the kind of support, tools, and favorites that fit best right now.
-          </p>
-        </div>
-
-        <div class="nv-ecosystem-grid">
-          <a href="/links.html" class="nv-eco-card">
-            <h3>💻 Creator Tools</h3>
-            <p>Helpful digital tools for workflow, content creation, and getting things done.</p>
-          </a>
-
-          <a href="/links.html" class="nv-eco-card">
-            <h3>✨ Wellness &amp; Self-Care</h3>
-            <p>Everyday sensory, beauty, and personal wellness favorites curated for softer living.</p>
-          </a>
-
-          <a href="/links.html" class="nv-eco-card">
-            <h3>☀️ Family &amp; Neuro Support</h3>
-            <p>Family-friendly tools and neurodivergent support resources for real life.</p>
-          </a>
-
-          <a href="#mom-style" class="nv-eco-card">
-            <h3>👚 Mom Style</h3>
-            <p>Comfort-based clothing, confidence-friendly pieces, and real-life wearable favorites.</p>
-          </a>
-
-          <a href="/links.html" class="nv-eco-card">
-            <h3>✅ Routine &amp; Organization</h3>
-            <p>Supportive tools for planning, daily structure, and making routines feel more manageable.</p>
-          </a>
-
-          <a href="/favorites/" class="nv-eco-card">
-            <h3>💜 NeuroVibe Favorites</h3>
-            <p>Explore more trusted picks, curated tools, and everyday recommendations.</p>
-          </a>
-        </div>
-
-        <div class="nv-curated-footer">
-          <a href="/links.html">Browse the Full Resource Library →</a>
-        </div>
       </section>
 
-      <section id="ecosystem" class="nv-section-card glass">
-        <div class="nv-section-head">
-          <h2>Explore the NeuroVibe Ecosystem</h2>
-          <p>
-            Different paths for different needs. Explore the area that supports you most.
+      <footer class="nv-shop-footer">
+        <div class="nv-container nv-footer-inner" style="text-align:center;">
+          <p class="nv-footer-text">
+            Want my weekly picks? Join the NeuroVibe email list for calm, practical wellness and real-life resources.
           </p>
-        </div>
 
-        <div class="nv-ecosystem-grid">
-          <a href="/favorites/" class="nv-eco-card">
-            <h3>⭐ Favorites</h3>
-            <p>Trusted tools, wellness picks, and everyday recommendations.</p>
-          </a>
+          <div style="margin-top:18px;">
+            <a
+              href="https://preview.mailerlite.io/forms/2150381/180676720202876289/share"
+              target="_blank"
+              rel="noopener"
+              class="nv-btn primary"
+            >
+              Join the Mailing List ✨
+            </a>
+          </div>
 
-          <a href="/livegood/" class="nv-eco-card">
-            <h3>🌿 Wellness Stack</h3>
-            <p>The supplements and wellness products I personally use and recommend.</p>
-          </a>
-
-          <a href="/guides.html" class="nv-eco-card">
-            <h3>📚 Guides</h3>
-            <p>Digital guides for nervous system support and real-life overwhelm.</p>
-          </a>
-
-          <a href="/wellco.html" class="nv-eco-card">
-            <h3>🌿 WellCo</h3>
-            <p>Wellness routines, product picks, and supportive everyday tools.</p>
-          </a>
-
-          <a href="/beautyhub.html" class="nv-eco-card">
-            <h3>✨ Beauty Hub</h3>
-            <p>Self-care favorites, beauty finds, and curated nail collections.</p>
-          </a>
-
-          <a href="/neurovibe-publishing/" class="nv-eco-card">
-            <h3>🌙 Publishing</h3>
-            <p>Stories and books created through NeuroVibe Publishing.</p>
-          </a>
-        </div>
-      </section>
-
-     
-
-         <footer class="nv-shop-footer">
-  <div class="nv-container nv-footer-inner" style="text-align:center;">
-    <p class="nv-footer-text">
-      Want my weekly picks? Join the NeuroVibe email list for calm, practical wellness and real-life resources.
-    </p>
-
-    <div style="margin-top:18px;">
-<a
-  href="https://preview.mailerlite.io/forms/2150381/180676720202876289/share"
-  target="_blank"
-  rel="noopener"
-  class="nv-btn primary"
->
-  Join the Mailing List ✨
-</a>
-        Join the Mailing List
-      </a>
-    </div>
-
-    <p class="nv-footer-mini" style="margin-top:16px;">
-      Disclosure: Some links on this page are affiliate links. If you buy through them, I may earn a commission at no extra cost to you.
-    </p>
-
-    <p class="nv-footer-mini" style="margin-top:14px;">
-      © <span id="year"></span> NeuroVibe
-    </p>
-  </div>
-</footer>
+          <p class="nv-footer-mini" style="margin-top:16px;">
+            Disclosure: Some links on this page are affiliate links. If you buy through them, I may earn a commission at no extra cost to you.
+          </p>
 
           <p class="nv-footer-mini" style="margin-top:14px;">
             © <span id="year"></span> NeuroVibe

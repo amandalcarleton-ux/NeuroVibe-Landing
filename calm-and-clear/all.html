@@ -1,1 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>All Posts | Calm &amp; Clear | NeuroVibe</title>
+
+  <meta name="description" content="Browse all Calm &amp; Clear posts from NeuroVibe — gentle reflections on autism parenting, nervous system support, emotional regulation, and everyday family life." />
+  <meta name="keywords" content="Calm and Clear, NeuroVibe blog, autism parenting blog, nervous system support, emotional regulation, family reflections" />
+  <meta name="author" content="NeuroVibe Wellness Collective" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <link rel="canonical" href="https://neurovibe.site/calm-and-clear/all.html" />
+  <link rel="stylesheet" href="/style.css?v=103" />
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+
+  <style>
+    :root{
+      --cc-bg-1:#8d6df2;
+      --cc-bg-2:#b39cff;
+      --cc-bg-3:#efeaff;
+      --cc-panel:rgba(255,255,255,0.74);
+      --cc-panel-strong:rgba(255,255,255,0.88);
+      --cc-border:rgba(255,255,255,0.42);
+      --cc-text:#191628;
+      --cc-soft:#5f547c;
+      --cc-accent:#6f5cff;
+      --cc-shadow:0 20px 60px rgba(52,31,109,0.18);
+      --cc-shadow-soft:0 12px 30px rgba(52,31,109,0.12);
+    }
+
+    *{box-sizing:border-box;}
+
+    body.nv-y2k{
+      margin:0;
+      color:var(--cc-text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.28), transparent 30%),
+        radial-gradient(circle at top right, rgba(255,255,255,0.22), transparent 24%),
+        linear-gradient(180deg, #b39cff 0%, #9a7df6 34%, #a88ef8 68%, #c8b8ff 100%);
+      min-height:100vh;
+    }
+
+    .cc-wrap{
+      max-width:1220px;
+      margin:0 auto;
+      padding:32px 16px 80px;
+    }
+
+    .cc-hero{
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(135deg, rgba(245,241,255,0.94), rgba(229,222,255,0.88));
+      border:1px solid var(--cc-border);
+      border-radius:36px;
+      padding:52px 28px 46px;
+      margin-bottom:30px;
+      text-align:center;
+      box-shadow:var(--cc-shadow);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .cc-hero::before,
+    .cc-hero::after{
+      content:"";
+      position:absolute;
+      border-radius:999px;
+      background:radial-gradient(circle, rgba(145,109,255,0.20) 0%, rgba(145,109,255,0) 72%);
+      pointer-events:none;
+    }
+
+    .cc-hero::before{
+      width:320px;
+      height:320px;
+      top:-120px;
+      left:-90px;
+    }
+
+    .cc-hero::after{
+      width:260px;
+      height:260px;
+      right:-70px;
+      bottom:-120px;
+    }
+
+    .cc-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.72);
+      border:1px solid rgba(111,92,255,0.15);
+      font-size:0.82rem;
+      font-weight:800;
+      letter-spacing:0.04em;
+      text-transform:uppercase;
+      color:var(--cc-accent);
+      margin:0 0 14px;
+    }
+
+    .cc-hero h1{
+      margin:0;
+      font-size:clamp(2.5rem, 6vw, 4.5rem);
+      line-height:0.96;
+      letter-spacing:-0.04em;
+      color:#140f23;
+    }
+
+    .cc-hero p{
+      max-width:760px;
+      margin:18px auto 0;
+      font-size:1.08rem;
+      line-height:1.8;
+      color:var(--cc-soft);
+    }
+
+    .cc-top-links{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:12px;
+      margin-top:24px;
+    }
+
+    .cc-pill-link{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      color:#1f1635;
+      font-weight:700;
+      background:rgba(255,255,255,0.74);
+      border:1px solid rgba(255,255,255,0.4);
+      box-shadow:var(--cc-shadow-soft);
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+    }
+
+    .cc-section{
+      margin-top:34px;
+    }
+
+    .cc-section-card{
+      background:rgba(255,255,255,0.50);
+      border:1px solid rgba(255,255,255,0.34);
+      border-radius:30px;
+      padding:24px;
+      box-shadow:var(--cc-shadow-soft);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
+    }
+
+    .cc-section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:20px;
+      margin-bottom:18px;
+    }
+
+    .cc-section-head h2{
+      margin:0;
+      font-size:1.9rem;
+      letter-spacing:-0.03em;
+      color:#181326;
+    }
+
+    .cc-section-head p{
+      margin:0;
+      max-width:520px;
+      color:var(--cc-soft);
+      line-height:1.7;
+    }
+
+    .cc-post-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:20px;
+    }
+
+    .cc-post-card{
+      background:var(--cc-panel-strong);
+      border:1px solid var(--cc-border);
+      border-radius:26px;
+      overflow:hidden;
+      text-decoration:none;
+      color:var(--cc-text);
+      box-shadow:var(--cc-shadow-soft);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      transition:transform 0.25s ease, box-shadow 0.25s ease;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+    }
+
+    .cc-post-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 18px 34px rgba(52,31,109,0.16);
+    }
+
+    .cc-post-card img{
+      width:100%;
+      height:230px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .cc-post-body{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      padding:18px 18px 22px;
+      flex:1;
+    }
+
+    .cc-post-meta{
+      font-size:0.78rem;
+      font-weight:800;
+      letter-spacing:0.04em;
+      text-transform:uppercase;
+      color:var(--cc-accent);
+    }
+
+    .cc-post-body h3{
+      margin:0;
+      font-size:1.42rem;
+      line-height:1.12;
+      letter-spacing:-0.03em;
+    }
+
+    .cc-post-body p{
+      margin:0;
+      color:var(--cc-soft);
+      line-height:1.7;
+      font-size:0.98rem;
+    }
+
+    .cc-empty{
+      margin-top:18px;
+      padding:18px 20px;
+      border-radius:20px;
+      background:rgba(255,255,255,0.7);
+      border:1px dashed rgba(111,92,255,0.24);
+      color:var(--cc-soft);
+      line-height:1.7;
+    }
+
+    .cc-back{
+      text-align:center;
+      margin-top:42px;
+    }
+
+    .cc-back a{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      text-decoration:none;
+      color:#1f1635;
+      font-weight:700;
+      padding:12px 18px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.74);
+      border:1px solid rgba(255,255,255,0.4);
+      box-shadow:var(--cc-shadow-soft);
+    }
+
+    @media (max-width: 980px){
+      .cc-post-grid{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+      }
+
+      .cc-section-head{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+
+    @media (max-width: 700px){
+      .cc-wrap{
+        padding:24px 14px 64px;
+      }
+
+      .cc-hero{
+        padding:40px 20px;
+        border-radius:28px;
+      }
+
+      .cc-post-grid{
+        grid-template-columns:1fr;
+      }
+
+      .cc-post-card{
+        border-radius:22px;
+      }
+
+      .cc-post-card img{
+        height:220px;
+      }
+
+      .cc-section-card{
+        padding:18px;
+        border-radius:24px;
+      }
+    }
+  </style>
+</head>
+
+<body class="nv-y2k">
+
+  <div id="nav-placeholder"></div>
+
+  <main class="cc-wrap">
+
+    <section class="cc-hero">
+      <p class="cc-kicker">NeuroVibe Journal Archive</p>
+      <h1>All Calm &amp; Clear Posts</h1>
+      <p>
+        Browse every reflection from Calm &amp; Clear — a gentle space for autism parenting,
+        nervous system support, emotional regulation, and the everyday realities of family life.
+      </p>
+
+      <div class="cc-top-links">
+        <a class="cc-pill-link" href="/calm-and-clear/">← Back to Calm &amp; Clear</a>
+        <a class="cc-pill-link" href="/start.html">Back to Start</a>
+      </div>
+    </section>
+
+    <section class="cc-section">
+      <div class="cc-section-card">
+        <div class="cc-section-head">
+          <div>
+            <h2>March 2026</h2>
+          </div>
+          <p>
+            Current reflections, hard-won moments, and gentle support for real family life.
+          </p>
+        </div>
+
+        <div class="cc-post-grid">
+          <a class="cc-post-card" href="/calm-and-clear/big-changes-at-home.html">
+            <img src="/images/blog/big-changes-at-home.PNG" alt="Big Changes at Home" />
+            <div class="cc-post-body">
+              <div class="cc-post-meta">March 2026</div>
+              <h3>Big Changes at Home</h3>
+              <p>Medication changes, school stress, and small wins in a hard season.</p>
+            </div>
+          </a>
+
+          <a class="cc-post-card" href="/calm-and-clear/when-home-feels-harder-than-school.html">
+            <img src="/images/blog/when-home-feels-harder-than-school.PNG" alt="When Home Feels Harder Than School" />
+            <div class="cc-post-body">
+              <div class="cc-post-meta">March 2026</div>
+              <h3>When Home Feels Harder Than School</h3>
+              <p>Understanding the after-school shift for autistic children and why home can hold the hardest moments.</p>
+            </div>
+          </a>
+
+          <a class="cc-post-card" href="/calm-and-clear/when-the-morning-takes-three-hours.html">
+            <img src="/images/blog/when-the-morning-takes-three-hours.PNG" alt="When the Morning Takes Three Hours" />
+            <div class="cc-post-body">
+              <div class="cc-post-meta">March 2026</div>
+              <h3>When the Morning Takes Three Hours</h3>
+              <p>A softer look at long mornings, transitions, and trying to stay grounded through the rush.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cc-section">
+      <div class="cc-section-card">
+        <div class="cc-section-head">
+          <div>
+            <h2>More Coming Soon</h2>
+          </div>
+          <p>
+            This archive will grow as new Calm &amp; Clear reflections are published.
+          </p>
+        </div>
+
+        <div class="cc-empty">
+          More posts can be added here by month as you publish them.  
+          Example sections could be <strong>April 2026</strong>, <strong>February 2026</strong>, or older archive categories whenever you're ready.
+        </div>
+      </div>
+    </section>
+
+    <div class="cc-back">
+      <a href="/calm-and-clear/">← Back to Calm &amp; Clear</a>
+    </div>
+
+  </main>
+
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        setTimeout(() => {
+          const toggle = document.getElementById("nv-menu-toggle");
+          const nav = document.getElementById("nv-nav");
+
+          if (toggle && nav) {
+            toggle.addEventListener("click", () => {
+              nav.classList.toggle("active");
+            });
+
+            document.addEventListener("click", (e) => {
+              if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+                nav.classList.remove("active");
+              }
+            });
+          } else {
+            console.error("Nav elements not found");
+          }
+        }, 100);
+      })
+      .catch(error => {
+        console.error("Navigation failed to load:", error);
+      });
+  </script>
+</body>
+</html>

@@ -196,9 +196,37 @@
 
 <script>
 fetch("/components/nav.html")
-.then(r=>r.text())
-.then(d=>{document.getElementById("nav-placeholder").innerHTML=d;});
-</script>
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
 
+    // Wait for nav to render
+    setTimeout(() => {
+      const toggle = document.getElementById("nv-menu-toggle");
+      const nav = document.getElementById("nv-nav");
+
+      if (toggle && nav) {
+
+        // Toggle menu
+        toggle.addEventListener("click", () => {
+          nav.classList.toggle("active");
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+          if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+            nav.classList.remove("active");
+          }
+        });
+
+      } else {
+        console.error("Nav elements not found");
+      }
+    }, 100);
+  })
+  .catch(error => {
+    console.error("Navigation failed to load:", error);
+  });
+</script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -14,9 +15,7 @@
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
   <style>
-    *{
-      box-sizing:border-box;
-    }
+    *{ box-sizing:border-box; }
 
     .nv-contact-main{
       max-width:1100px;
@@ -34,7 +33,6 @@
       border:1px solid rgba(255,255,255,0.45);
       box-shadow:0 18px 42px rgba(75,46,131,0.12);
       backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
     }
 
     .nv-contact-hero-inner{
@@ -44,28 +42,20 @@
       align-items:center;
     }
 
-    .nv-contact-copy{
-      min-width:0;
-    }
-
     .nv-contact-copy h1{
       margin:8px 0 12px;
       font-size:clamp(2.1rem, 4.6vw, 3.3rem);
-      line-height:1.1;
       color:#101018;
     }
 
     .nv-contact-copy p{
-      margin:0;
       max-width:60ch;
       line-height:1.75;
       color:#101018;
-      font-size:1.03rem;
     }
 
     .nv-contact-image{
       width:100%;
-      display:block;
       border-radius:24px;
       box-shadow:0 18px 36px rgba(75,46,131,0.16);
     }
@@ -81,26 +71,14 @@
     .nv-form-panel,
     .nv-mini-panel{
       background:rgba(255,255,255,0.78);
-      border:1px solid rgba(255,255,255,0.55);
       border-radius:28px;
       padding:26px;
       box-shadow:0 18px 40px rgba(75,46,131,0.10);
     }
 
     .nv-contact-panel h2,
-    .nv-form-panel h2,
-    .nv-mini-panel h2{
-      margin:0 0 10px;
-      color:#101018;
-      font-size:clamp(1.5rem, 2.5vw, 2rem);
-      line-height:1.2;
-    }
-
-    .nv-contact-panel p,
-    .nv-form-panel p,
-    .nv-mini-panel p{
-      margin:0 0 14px;
-      line-height:1.7;
+    .nv-form-panel h2{
+      margin-bottom:10px;
       color:#101018;
     }
 
@@ -111,55 +89,22 @@
     }
 
     .nv-contact-method{
-      padding:16px 18px;
+      padding:16px;
       border-radius:20px;
       background:rgba(255,255,255,0.88);
-      border:1px solid rgba(255,255,255,0.75);
-      box-shadow:0 10px 24px rgba(75,46,131,0.06);
     }
 
     .nv-contact-label{
-      display:block;
-      margin-bottom:6px;
-      font-size:.82rem;
-      font-weight:700;
-      letter-spacing:.05em;
+      font-size:.8rem;
       text-transform:uppercase;
       color:#6b5cff;
+      font-weight:700;
     }
 
     .nv-contact-method a{
       color:#4b2e83;
       font-weight:700;
       text-decoration:none;
-      word-break:break-word;
-    }
-
-    .nv-contact-method a:hover{
-      text-decoration:underline;
-    }
-
-    .nv-contact-note{
-      margin-top:8px;
-      font-size:.92rem;
-      color:#5f6470;
-      line-height:1.6;
-    }
-
-    .nv-success{
-      display:none;
-      margin-bottom:18px;
-      padding:14px 16px;
-      border-radius:18px;
-      background:rgba(233,255,244,0.92);
-      border:1px solid rgba(114,200,145,0.35);
-      color:#21543a;
-      line-height:1.65;
-      box-shadow:0 10px 22px rgba(36,110,72,0.08);
-    }
-
-    .nv-success.show{
-      display:block;
     }
 
     .nv-contact-form{
@@ -168,38 +113,11 @@
       margin-top:18px;
     }
 
-    .nv-contact-form label{
-      font-size:0.95rem;
-      font-weight:600;
-      color:#4b2e83;
-      margin-bottom:6px;
-      display:block;
-    }
-
     .nv-contact-form input,
     .nv-contact-form textarea{
-      width:100%;
-      border:1px solid rgba(75, 46, 131, 0.16);
       border-radius:16px;
-      padding:14px 16px;
-      font-family:'Poppins',sans-serif;
-      font-size:1rem;
-      color:#101018;
-      background:rgba(255,255,255,0.82);
-      box-shadow:inset 0 1px 2px rgba(0,0,0,0.03);
-      outline:none;
-      transition:border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .nv-contact-form input:focus,
-    .nv-contact-form textarea:focus{
-      border-color:rgba(107, 92, 255, 0.55);
-      box-shadow:0 0 0 4px rgba(198,168,255,0.18);
-    }
-
-    .nv-contact-form textarea{
-      min-height:180px;
-      resize:vertical;
+      padding:14px;
+      border:1px solid rgba(75,46,131,0.2);
     }
 
     .nv-form-grid{
@@ -208,309 +126,130 @@
       gap:14px;
     }
 
-    .nv-form-help{
-      font-size:0.92rem;
-      color:#5f6470;
-      margin-top:6px;
-    }
-
     .nv-contact-actions{
       display:flex;
-      flex-wrap:wrap;
       gap:12px;
       margin-top:14px;
     }
 
-    .nv-contact-actions .nv-btn{
-      min-height:48px;
-    }
-
-    .nv-contact-extra{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:18px;
-    }
-
-    .nv-contact-mini-title{
-      margin:0 0 8px;
-      font-size:1.08rem;
-      color:#4b2e83;
-      line-height:1.25;
-    }
-
-    .nv-contact-footer{
+    .nv-contact-calendly{
+      margin-top:32px;
+      padding:32px;
+      border-radius:32px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
+        linear-gradient(135deg, rgba(137,104,255,0.22), rgba(126,203,255,0.14));
+      box-shadow:0 18px 42px rgba(75,46,131,0.12);
+      backdrop-filter:blur(12px);
       text-align:center;
-      padding:24px 16px 40px;
-      color:#101018;
     }
 
-    @media (max-width: 920px){
-      .nv-contact-hero-inner,
-      .nv-contact-grid{
-        grid-template-columns:1fr;
-      }
-
-      .nv-contact-copy{
-        text-align:center;
-      }
-
-      .nv-contact-copy p{
-        margin:0 auto;
-      }
-
-      .nv-contact-extra{
-        grid-template-columns:1fr;
-      }
+    .nv-calendly-card{
+      border-radius:24px;
+      overflow:hidden;
+      margin-top:20px;
     }
 
-    @media (max-width: 768px){
-      .nv-form-grid{
-        grid-template-columns:1fr;
-      }
+    @media(max-width:920px){
+      .nv-contact-grid{ grid-template-columns:1fr; }
+      .nv-form-grid{ grid-template-columns:1fr; }
     }
-
-    @media (max-width: 720px){
-      .nv-contact-main{
-        padding:18px 14px 46px;
-      }
-
-      .nv-contact-hero-shell,
-      .nv-contact-panel,
-      .nv-form-panel,
-      .nv-mini-panel{
-        padding:20px 18px;
-        border-radius:24px;
-      }
-
-      .nv-contact-actions{
-        flex-direction:column;
-      }
-
-      .nv-contact-actions .nv-btn{
-        width:100%;
-      }
-    }
-.nv-contact-calendly {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #fdfcff 0%, #f4f0ff 100%);
-}
-
-.nv-contact-wrap {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.nv-contact-header h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #2d2a4a;
-}
-
-.nv-contact-header p {
-  color: #6e6a86;
-  max-width: 600px;
-  margin: 0 auto 30px;
-}
-
-.nv-eyebrow {
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #9a94c8;
-  margin-bottom: 10px;
-}
-
-.nv-calendly-card {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(140, 120, 255, 0.15);
-  background: #ffffff;
-  padding: 10px;
-}
   </style>
+
 </head>
 
 <body class="nv-y2k">
 
-  <div id="nav-placeholder"></div>
+<div id="nav-placeholder"></div>
 
-  <main class="nv-contact-main">
+<main class="nv-contact-main">
 
-    <section class="nv-contact-hero-shell glass">
-      <div class="nv-contact-hero-inner">
-        <div class="nv-contact-copy">
-          <p class="nv-eyebrow">NEUROVIBE</p>
-          <h1>Contact NeuroVibe</h1>
-          <p>
-            Questions, collaborations, partnerships, press, or support — you’re always welcome here.
-            Reach out in the way that feels easiest, and I’ll get back to you as soon as I can.
-          </p>
-        </div>
+  <!-- HERO -->
 
-        <img
-          src="/images/contact-header.PNG"
-          alt="Contact NeuroVibe"
-          class="nv-contact-image"
-          loading="eager"
-          onerror="this.style.display='none';"
-        />
-      </div>
-    </section>
-
-    <section class="nv-contact-grid">
-      <div class="nv-contact-panel glass">
-        <h2>Let’s connect</h2>
+  <section class="nv-contact-hero-shell">
+    <div class="nv-contact-hero-inner">
+      <div class="nv-contact-copy">
+        <p class="nv-eyebrow">NEUROVIBE</p>
+        <h1>Contact NeuroVibe</h1>
         <p>
-          For collaborations, partnerships, business questions, or general support, reach out below.
+          Questions, collaborations, partnerships, press, or support —
+          you’re always welcome here.
         </p>
-
-        <div class="nv-contact-stack">
-          <div class="nv-contact-method">
-            <span class="nv-contact-label">Email</span>
-            <a href="mailto:hello@neurovibe.site">hello@neurovibe.site</a>
-          </div>
-
-          <div class="nv-contact-method">
-            <span class="nv-contact-label">Business Line</span>
-            <a href="tel:+17812777137">(781) 277-7137</a>
-            <p class="nv-contact-note">This is a monitored business line. Voicemail and text are available.</p>
-          </div>
-        </div>
       </div>
-<section class="nv-contact-calendly">
-  <div class="nv-contact-wrap">
+      <img src="/images/contact-header.PNG" class="nv-contact-image">
+    </div>
+  </section>
 
-    <div class="nv-contact-header">
-      <p class="nv-eyebrow">NeuroVibe Support</p>
-      <h2>Book a gentle check-in 🌿</h2>
-      <p>
-        Whether you need support, guidance, or just a moment to reset —
-        this is a calm space to connect. No pressure, just real-life support.
-        Or if you are one of my Clients from MPF you can schedule a visit with me!
-      </p>
+  <!-- GRID -->
+
+  <section class="nv-contact-grid">
+
+```
+<div class="nv-contact-panel">
+  <h2>Let’s connect</h2>
+
+  <div class="nv-contact-stack">
+    <div class="nv-contact-method">
+      <span class="nv-contact-label">Email</span>
+      <a href="mailto:hello@neurovibe.site">hello@neurovibe.site</a>
     </div>
 
-    <div class="nv-calendly-card">
-      <div class="calendly-inline-widget"
-        data-url="https://calendly.com/amandalcarleton/30min"
-        style="min-width:320px;height:700px;">
-      </div>
+    <div class="nv-contact-method">
+      <span class="nv-contact-label">Business Line</span>
+      <a href="tel:+17812777137">(781) 277-7137</a>
     </div>
-
   </div>
-</section>
+</div>
+
+<div class="nv-form-panel">
+  <h2>Send a message</h2>
+
+  <form action="https://formsubmit.co/hello@neurovibe.site" method="POST" class="nv-contact-form">
+
+    <div class="nv-form-grid">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+    </div>
+
+    <input type="text" name="subject" placeholder="Subject" />
+
+    <textarea name="message" placeholder="Message..." required></textarea>
+
+    <button class="nv-btn">Send Message</button>
+  </form>
+</div>
+```
+
+  </section>
+
+  <!-- CALENDLY -->
+
+  <section class="nv-contact-calendly">
+    <p style="font-weight:600; color:#4b2e83;">
+      Not sure what to say? This is the easiest place to start 🌿
+    </p>
+
+```
+<h2>Book a gentle check-in</h2>
+
+<p>
+  A softer space to connect — whether you need support,
+  guidance, or just a moment to reset.
+</p>
+
+<div class="nv-calendly-card">
+  <div class="calendly-inline-widget"
+    data-url="https://calendly.com/amandalcarleton/30min"
+    style="min-width:320px;height:700px;">
+  </div>
+</div>
+```
+
+  </section>
+
+</main>
 
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      <div class="nv-form-panel glass">
-        <h2>Send a note to NeuroVibe</h2>
-        <p>
-          Have a question, collaboration idea, or just want to connect? I read every message and will respond as soon as I can.
-        </p>
-
-        <div id="nv-success-message" class="nv-success">
-          Your message was sent successfully. Thank you for reaching out to NeuroVibe.
-        </div>
-
-        <form
-          class="nv-contact-form"
-          action="https://formsubmit.co/hello@neurovibe.site"
-          method="POST"
-        >
-          <input type="hidden" name="_subject" value="New message from NeuroVibe contact form" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="https://www.neurovibe.site/contact.html?sent=true" />
-
-          <div class="nv-form-grid">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" type="text" name="name" placeholder="Your name" required />
-            </div>
-
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" name="email" placeholder="you@example.com" required />
-            </div>
-          </div>
-
-          <div>
-            <label for="subject">Subject</label>
-            <input id="subject" type="text" name="subject" placeholder="How can I help?" />
-          </div>
-
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-            <p class="nv-form-help">This message will be delivered directly to hello@neurovibe.site.</p>
-          </div>
-
-          <div class="nv-contact-actions">
-            <button class="nv-btn" type="submit">Send Message</button>
-            <a class="nv-btn ghost" href="/index.html">Return Home</a>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <section class="nv-contact-extra">
-      <div class="nv-mini-panel glass">
-        <h2 class="nv-contact-mini-title">Best reasons to reach out</h2>
-        <p>Partnerships, creator collaborations, media inquiries, customer support, and brand questions are all welcome here.</p>
-      </div>
-
-      <div class="nv-mini-panel glass">
-        <h2 class="nv-contact-mini-title">A gentle note</h2>
-        <p>If you’re reaching out while overwhelmed, that’s okay. You do not need a perfect message — simple is more than enough.</p>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="nv-contact-footer">
-    <p>© <span id="year"></span> NeuroVibe</p>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    const params = new URLSearchParams(window.location.search);
-    const successMessage = document.getElementById("nv-success-message");
-
-    if (params.get("sent") === "true" && successMessage) {
-      successMessage.classList.add("show");
-    }
-  </script>
-
-  <script>
-    fetch("/components/nav.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
-
-        const toggle = document.getElementById("nv-menu-toggle");
-        const nav = document.getElementById("nv-nav");
-
-        if (toggle && nav) {
-          toggle.addEventListener("click", () => {
-            const isOpen = nav.classList.toggle("active");
-            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-          });
-
-          document.addEventListener("click", (e) => {
-            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-              nav.classList.remove("active");
-              toggle.setAttribute("aria-expanded", "false");
-            }
-          });
-        }
-      })
-      .catch(error => {
-        console.error("Error loading nav:", error);
-      });
-  </script>
 
 </body>
 </html>

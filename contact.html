@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -69,7 +68,7 @@
 
     .nv-contact-panel,
     .nv-form-panel,
-    .nv-mini-panel{
+    .nv-booking-card{
       background:rgba(255,255,255,0.78);
       border-radius:28px;
       padding:26px;
@@ -126,13 +125,7 @@
       gap:14px;
     }
 
-    .nv-contact-actions{
-      display:flex;
-      gap:12px;
-      margin-top:14px;
-    }
-
-    .nv-contact-calendly{
+    .nv-booking-shell{
       margin-top:32px;
       padding:32px;
       border-radius:32px;
@@ -144,18 +137,49 @@
       text-align:center;
     }
 
-    .nv-calendly-card{
-      border-radius:24px;
-      overflow:hidden;
-      margin-top:20px;
+    .nv-booking-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+      margin-top:24px;
+    }
+
+    .nv-booking-card h3{
+      margin-bottom:10px;
+    }
+
+    .nv-btn{
+      display:inline-block;
+      padding:12px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#7b61ff,#58c7ff);
+      color:white;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .nv-btn-secondary{
+      display:inline-block;
+      padding:12px 18px;
+      border-radius:999px;
+      background:white;
+      color:#4b2e83;
+      border:1px solid rgba(75,46,131,0.2);
+      font-weight:700;
+      text-decoration:none;
     }
 
     @media(max-width:920px){
-      .nv-contact-grid{ grid-template-columns:1fr; }
-      .nv-form-grid{ grid-template-columns:1fr; }
+      .nv-contact-grid,
+      .nv-booking-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nv-form-grid{
+        grid-template-columns:1fr;
+      }
     }
   </style>
-
 </head>
 
 <body class="nv-y2k">
@@ -165,91 +189,108 @@
 <main class="nv-contact-main">
 
   <!-- HERO -->
-
   <section class="nv-contact-hero-shell">
     <div class="nv-contact-hero-inner">
       <div class="nv-contact-copy">
         <p class="nv-eyebrow">NEUROVIBE</p>
-        <h1>Contact NeuroVibe</h1>
+        <h1>Contact & Connect</h1>
         <p>
-          Questions, collaborations, partnerships, press, or support —
-          you’re always welcome here.
+          Whether you’re reaching out for support, collaboration,
+          or just a place to start — you’re welcome here.
         </p>
       </div>
       <img src="/images/contact-header.PNG" class="nv-contact-image">
     </div>
   </section>
 
-  <!-- GRID -->
-
+  <!-- CONTACT GRID -->
   <section class="nv-contact-grid">
 
-```
-<div class="nv-contact-panel">
-  <h2>Let’s connect</h2>
+    <div class="nv-contact-panel">
+      <h2>Let’s connect</h2>
 
-  <div class="nv-contact-stack">
-    <div class="nv-contact-method">
-      <span class="nv-contact-label">Email</span>
-      <a href="mailto:hello@neurovibe.site">hello@neurovibe.site</a>
+      <div class="nv-contact-stack">
+        <div class="nv-contact-method">
+          <span class="nv-contact-label">Email</span>
+          <a href="mailto:hello@neurovibe.site">hello@neurovibe.site</a>
+        </div>
+
+        <div class="nv-contact-method">
+          <span class="nv-contact-label">Business Line</span>
+          <a href="tel:+17812777137">(781) 277-7137</a>
+        </div>
+      </div>
     </div>
 
-    <div class="nv-contact-method">
-      <span class="nv-contact-label">Business Line</span>
-      <a href="tel:+17812777137">(781) 277-7137</a>
+    <div class="nv-form-panel">
+      <h2>Send a message</h2>
+
+      <form action="https://formsubmit.co/hello@neurovibe.site" method="POST" class="nv-contact-form">
+        <div class="nv-form-grid">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+
+        <input type="text" name="subject" placeholder="Subject" />
+        <textarea name="message" placeholder="Message..." required></textarea>
+
+        <button class="nv-btn">Send Message</button>
+      </form>
     </div>
-  </div>
-</div>
-
-<div class="nv-form-panel">
-  <h2>Send a message</h2>
-
-  <form action="https://formsubmit.co/hello@neurovibe.site" method="POST" class="nv-contact-form">
-
-    <div class="nv-form-grid">
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="email" placeholder="Email" required />
-    </div>
-
-    <input type="text" name="subject" placeholder="Subject" />
-
-    <textarea name="message" placeholder="Message..." required></textarea>
-
-    <button class="nv-btn">Send Message</button>
-  </form>
-</div>
-```
 
   </section>
 
-  <!-- CALENDLY -->
+  <!-- BOOKING -->
+  <section class="nv-booking-shell">
 
-  <section class="nv-contact-calendly">
-    <p style="font-weight:600; color:#4b2e83;">
-      Not sure what to say? This is the easiest place to start 🌿
+    <h2>Choose your booking path</h2>
+
+    <p>
+      This space supports both NeuroVibe sessions and Maine Parent Federation consultations.
+      Choose what fits your needs — and we’ll go from there.
     </p>
 
-```
-<h2>Book a gentle check-in</h2>
+    <div class="nv-booking-grid">
 
-<p>
-  A softer space to connect — whether you need support,
-  guidance, or just a moment to reset.
-</p>
+      <!-- NEUROVIBE -->
+      <div class="nv-booking-card">
+        <h3>🌿 NeuroVibe Support Session</h3>
+        <p>
+          Gentle support for overwhelmed moms navigating real-life challenges,
+          emotional regulation, and daily resets.
+        </p>
 
-<div class="nv-calendly-card">
-  <div class="calendly-inline-widget"
-    data-url="https://calendly.com/amandalcarleton/30min"
-    style="min-width:320px;height:700px;">
-  </div>
-</div>
-```
+        <a class="nv-btn"
+          href="https://calendly.com/amandalcarleton/neurovibe-support-session"
+          target="_blank">
+          Book NeuroVibe Session
+        </a>
+      </div>
+
+      <!-- MPF -->
+      <div class="nv-booking-card">
+        <h3>📋 MPF Parent Consultation</h3>
+        <p>
+          Parent support through Maine Parent Federation focused on advocacy,
+          school concerns, and navigating services.
+        </p>
+
+        <a class="nv-btn-secondary"
+          href="https://calendly.com/amandalcarleton/mpf-parent-consultation"
+          target="_blank">
+          Book MPF Consultation
+        </a>
+      </div>
+
+    </div>
+
+    <p style="margin-top:20px;">
+      You don’t need to prepare anything — just choose what fits and come as you are 🌿
+    </p>
 
   </section>
 
 </main>
-
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 </body>
 </html>

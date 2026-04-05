@@ -539,26 +539,67 @@
       box-shadow:0 18px 34px rgba(217,139,179,0.28);
     }
 
-    .nv-spotlight-section{
+    .nv-spotlight-section,
+    .nv-kleo-section,
+    .nv-softlife-section,
+    .nv-mood-section,
+    .nv-western-section,
+    .nv-extras-section,
+    .nv-gifts-section,
+    .nv-treats-section{
       margin-top:30px;
       padding:28px;
       border-radius:32px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
-        linear-gradient(135deg, rgba(198,168,255,0.24), rgba(126,230,255,0.16));
-      border:1px solid rgba(255,255,255,0.52);
+      border:1px solid rgba(255,255,255,0.55);
       box-shadow:0 18px 40px rgba(75,46,131,0.12);
     }
 
+    .nv-spotlight-section{
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
+        linear-gradient(135deg, rgba(198,168,255,0.24), rgba(126,230,255,0.16));
+    }
+
     .nv-kleo-section{
-      margin-top:30px;
-      padding:28px;
-      border-radius:32px;
       background:
         radial-gradient(circle at top left, rgba(255,255,255,0.32), transparent 36%),
         linear-gradient(135deg, rgba(232, 220, 255, 0.96) 0%, rgba(223, 235, 255, 0.92) 100%);
-      border:1px solid rgba(255,255,255,0.55);
-      box-shadow:0 18px 40px rgba(107,92,255,0.14);
+    }
+
+    .nv-softlife-section{
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.34), transparent 36%),
+        linear-gradient(135deg, rgba(255,245,233,0.96) 0%, rgba(255,236,246,0.92) 52%, rgba(245,240,255,0.92) 100%);
+    }
+
+    .nv-mood-section{
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.28), transparent 36%),
+        linear-gradient(135deg, rgba(255,232,243,0.96) 0%, rgba(242,232,255,0.92) 100%);
+    }
+
+    .nv-western-section{
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
+        linear-gradient(135deg, rgba(230,214,191,0.92), rgba(248,229,209,0.92));
+    }
+
+    .nv-extras-section{
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
+        linear-gradient(135deg, rgba(237,229,214,0.94), rgba(245,238,227,0.94));
+    }
+
+    .nv-gifts-section{
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.30), transparent 36%),
+        linear-gradient(135deg, rgba(242,234,255,0.96) 0%, rgba(255,239,247,0.92) 100%);
+    }
+
+    .nv-treats-section{
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.32), transparent 36%),
+        linear-gradient(135deg, rgba(255,237,248,0.96) 0%, rgba(255,247,226,0.92) 100%);
     }
 
     .nv-mom-intro{
@@ -616,7 +657,13 @@
       .nv-freebie-section,
       .nv-style-section,
       .nv-spotlight-section,
-      .nv-kleo-section{
+      .nv-kleo-section,
+      .nv-softlife-section,
+      .nv-mood-section,
+      .nv-western-section,
+      .nv-extras-section,
+      .nv-gifts-section,
+      .nv-treats-section{
         padding:18px;
       }
 
@@ -688,17 +735,23 @@
         </p>
 
         <div class="nv-shop-update">
-          <strong>Right now:</strong> Start with the free reset, choose your support path, then explore the core NeuroVibe lanes — Bravenly, LiveGood, Diane Alber, Kleo, and RB Mercantile.
+          <strong>Right now:</strong> Start with the free reset, choose your support path, then explore the core NeuroVibe lanes — Bravenly, LiveGood, Diane Alber, Kleo, and curated lifestyle picks.
         </div>
 
         <nav class="nv-shop-nav" aria-label="Shop sections">
-          <a href="#free-reset">Free Reset</a>
+          <a href="#free-reset">Start Here</a>
           <a href="#featured-guide">Featured Guide</a>
           <a href="#shop-paths">Support Paths</a>
           <a href="#wellness-picks">Wellness</a>
           <a href="#family-support">Family Support</a>
           <a href="#beauty-reset">Beauty Reset</a>
-          <a href="#mom-style">Mom Style</a>
+          <a href="#soft-life-essentials">Soft Life</a>
+          <a href="#mom-life-soft">Mom Life</a>
+          <a href="#mood-tees">Mood Tees</a>
+          <a href="#western-soul">Western Soul</a>
+          <a href="#little-extras">Extras</a>
+          <a href="#meaningful-gifts">Gifts</a>
+          <a href="#playful-treats">Treats</a>
         </nav>
 
         <p class="nv-soft-note">
@@ -770,9 +823,7 @@
             <p class="nv-card-text">
               A simple starting point for daily support, foundational wellness, and realistic consistency when you want to begin with the basics.
             </p>
-            <a class="nv-btn primary" href="/livegood/">
-              View Basic
-            </a>
+            <a class="nv-btn primary" href="/livegood/">View Basic</a>
             <p class="nv-card-note">
               Best for baseline support, simple routines, and getting started.
             </p>
@@ -784,23 +835,19 @@
             <p class="nv-card-text">
               A more elevated wellness lane for hydration, energy, and supportive products that fit a deeper everyday routine.
             </p>
-            <a class="nv-btn primary" href="/bravenly/">
-              View Elevated
-            </a>
+            <a class="nv-btn primary" href="/bravenly/">View Elevated</a>
             <p class="nv-card-note">
               Best for hydration, energy support, and a fuller wellness stack.
             </p>
           </article>
 
           <article class="nv-path-card">
-            <span class="nv-featured-badge">💛 Real-Life NeuroVibe</span>
-            <h3 class="nv-card-title">Soft Support That Fits You</h3>
+            <span class="nv-featured-badge">💛 Start Here</span>
+            <h3 class="nv-card-title">Gentle, Real-Life Support</h3>
             <p class="nv-card-text">
-              The rest of the shop is built around the categories that already fit the NeuroVibe world: family support, beauty resets, and mom-life style favorites.
+              Build your own path with wellness support, emotional tools, beauty resets, and soft lifestyle favorites that feel like you.
             </p>
-            <a class="nv-btn ghost" href="#wellness-picks">
-              Explore Core Picks
-            </a>
+            <a class="nv-btn ghost" href="#soft-life-essentials">Explore the Shop</a>
             <p class="nv-card-note">
               Start where you are and build from there ✨
             </p>
@@ -812,7 +859,7 @@
         <div class="nv-section-head">
           <h2>🌿 Wellness Support</h2>
           <p>
-            The products I want this shop to focus on for real-life support, hydration, and nervous system-friendly routines.
+            Everyday support for hydration, nervous system balance, and realistic routines that actually fit real life.
           </p>
         </div>
 
@@ -833,7 +880,7 @@
               </div>
               <h3 class="nv-card-title">Bravenly Hydrate – Strawberry Kiwi</h3>
               <p class="nv-card-text">
-                A refreshing hydration drink mix designed to support energy, recovery, and daily wellness. One of the clearest wellness lanes inside NeuroVibe right now.
+                A refreshing hydration drink mix designed to support energy, recovery, and daily wellness.
               </p>
               <a
                 class="nv-btn primary"
@@ -865,7 +912,7 @@
               </div>
               <h3 class="nv-card-title">LiveGood Ultra Magnesium Complex</h3>
               <p class="nv-card-text">
-                A simple support pick for sleep, muscle relaxation, nervous system balance, and daily wellness when you want something foundational and realistic.
+                A simple support pick for sleep, muscle relaxation, nervous system balance, and daily wellness.
               </p>
               <a
                 class="nv-btn primary"
@@ -882,10 +929,10 @@
           </article>
 
           <article class="nv-curated-card">
-            <div class="nv-card-media">
+            <div class="nv-card-media nv-promo-media">
               <img
                 src="/images/headers/neurovibe-shop-header.PNG"
-                alt="Explore NeuroVibe wellness support paths"
+                alt="Explore support paths in the NeuroVibe shop"
                 loading="lazy"
                 onerror="this.style.display='none';"
               />
@@ -895,16 +942,11 @@
               <div class="nv-star-row" aria-label="NeuroVibe approved">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
-              <h3 class="nv-card-title">Browse the Wellness Paths</h3>
+              <h3 class="nv-card-title">Browse the Support Paths</h3>
               <p class="nv-card-text">
-                Want the full picture? Explore the Basic and Elevated support lanes to find the NeuroVibe path that fits your current season best.
+                Want the full picture? Explore the Basic and Elevated paths to find the support lane that fits your current season best.
               </p>
-              <a
-                class="nv-btn ghost"
-                href="#shop-paths"
-              >
-                Go Back to Support Paths
-              </a>
+              <a class="nv-btn ghost" href="#shop-paths">Go Back to Support Paths</a>
               <p class="nv-card-note">
                 Start with a simple lane and build as needed
               </p>
@@ -944,7 +986,7 @@
               </div>
               <h3 class="nv-card-title">A Little Spot of Emotion Book Set</h3>
               <p class="nv-card-text">
-                A gentle, kid-friendly way to talk about emotions like anger, anxiety, love, and happiness. These books help make big feelings easier to understand — for both kids and parents.
+                A gentle, kid-friendly way to talk about emotions like anger, anxiety, love, and happiness.
               </p>
               <a
                 class="nv-btn primary"
@@ -982,7 +1024,7 @@
               </div>
               <h3 class="nv-card-title">Gentle Emotional Tools for Home</h3>
               <p class="nv-card-text">
-                A supportive lane for helping kids identify, name, and move through emotions in a way that feels gentle, visual, and approachable.
+                Visual, kid-friendly emotional tools that make big feelings easier to talk about at home.
               </p>
               <a
                 class="nv-btn ghost"
@@ -1035,12 +1077,7 @@
               <p class="nv-card-text">
                 Press-on and beauty-forward picks that fit the NeuroVibe reset vibe — low-effort, visual, and confidence-friendly.
               </p>
-              <a
-                class="nv-btn primary"
-                href="/beautyhub.html"
-              >
-                Shop Kleo Picks
-              </a>
+              <a class="nv-btn primary" href="/beautyhub.html">Shop Kleo Picks</a>
               <p class="nv-card-note">
                 Beauty resets that fit real life
               </p>
@@ -1067,183 +1104,466 @@
               <p class="nv-card-text">
                 This section is less about perfection and more about little resets that help you come back to yourself in a way that still feels doable.
               </p>
-              <a
-                class="nv-btn ghost"
-                href="/beautyhub.html"
-              >
-                Explore BeautyHub
-              </a>
+              <a class="nv-btn ghost" href="/beautyhub.html">Explore BeautyHub</a>
               <p class="nv-card-note">
                 A beauty lane that feels soft, simple, and wearable
               </p>
             </div>
           </article>
         </div>
-
-        <p class="nv-style-note">
-          You can swap one of these later for a direct featured Kleo product image if you want.
-        </p>
       </section>
 
-<section id="mom-style" class="nv-style-section" aria-label="Mom style and confidence section">
-  <div class="nv-style-intro">
-    <h2>🤠 Mom Style | RB Mercantile</h2>
-    <p>
-      Soft lifestyle pieces, comfort-first clothing, and wearable picks for the moments when you want to feel like yourself again.
-    </p>
-  </div>
-
-  <div class="nv-mom-intro">
-    <p>
-      I’ve been leaning into pieces that feel <strong>soft, easy, and grounding</strong> — not just cute, but actually wearable on hard days.
-    </p>
-    <p>
-      These are the kinds of pieces I reach for when I need a little reset but still have to show up 🤍
-    </p>
-  </div>
-
-  <div class="nv-style-grid">
-    <article class="nv-style-card">
-      <div class="nv-card-media">
-        <a
-          href="https://rbmercantile.com/products/lifes-a-beach-makes-some-waves-comfort-colors-tee?ref=neurovibe&variant=44256961101959"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          <img
-            src="/images/products/lifes-a-beach-makes-some-waves-tee.JPG"
-            alt="Lifes A Beach Makes Some Waves Comfort Colors Tee"
-            loading="lazy"
-            onerror="this.style.display='none';"
-          />
-        </a>
-      </div>
-
-      <div class="nv-card-body">
-        <span class="nv-featured-badge">🌊 Soft Western Pick</span>
-        <div class="nv-star-row" aria-label="NeuroVibe approved">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      <section id="soft-life-essentials" class="nv-softlife-section">
+        <div class="nv-section-head">
+          <h2>🌼 Soft Life Essentials</h2>
+          <p>
+            Little things that help you feel more like yourself again — soft, simple, and easy to reach for.
+          </p>
         </div>
-        <h3 class="nv-card-title">Lifes A Beach Makes Some Waves Comfort Colors Tee</h3>
-        <p class="nv-card-text">
-          A beachy comfort tee with a relaxed, throw-on feel for everyday mom life, soft style, and easygoing outfits.
-        </p>
-        <a
-          class="nv-btn primary"
-          href="https://rbmercantile.com/products/lifes-a-beach-makes-some-waves-comfort-colors-tee?ref=neurovibe&variant=44256961101959"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          Shop This Tee
-        </a>
-        <p class="nv-card-note">
-          Affiliate link • Comfort-first style pick
-        </p>
-      </div>
-    </article>
 
-    <article class="nv-style-card">
-      <div class="nv-card-media">
-        <a
-          href="https://rbmercantile.com/collections/candy-and-treats?ref=neurovibe"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          <img
-            src="/images/products/rb-candy-treats-card.PNG"
-            alt="RB Mercantile candy and treats collection"
-            loading="lazy"
-            onerror="this.style.display='none';"
-          />
-        </a>
-      </div>
+        <div class="nv-new-grid">
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-sunflower-tee.PNG"
+                alt="Sunflower tee soft life essential"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🌻 Soft Life Pick</span>
+              <h3 class="nv-card-title">Sunflower Tee</h3>
+              <p class="nv-card-text">
+                A soft, easy piece for slow days, simple outfits, and feeling a little more like yourself again.
+              </p>
+              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Shop Soft Life Picks
+              </a>
+              <p class="nv-card-note">Use your RB storefront or direct product link here</p>
+            </div>
+          </article>
 
-      <div class="nv-card-body">
-        <span class="nv-featured-badge">🍬 Treat Pick</span>
-        <div class="nv-star-row" aria-label="NeuroVibe approved">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-lucky-tee.PNG"
+                alt="Lucky tee soft life essential"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">✨ Feel-Good Pick</span>
+              <h3 class="nv-card-title">Lucky Tee</h3>
+              <p class="nv-card-text">
+                Soft energy, easy styling, and a little hopeful momentum wrapped into a cute everyday tee.
+              </p>
+              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Browse More Soft Styles
+              </a>
+              <p class="nv-card-note">Great for your soft aesthetic and identity-based content</p>
+            </div>
+          </article>
         </div>
-        <h3 class="nv-card-title">Candy + Treats Collection</h3>
-        <p class="nv-card-text">
-          A fun little collection of sweets and treat-worthy finds from RB Mercantile.
-          Great for gifting, seasonal fun, or adding a playful pick-me-up to everyday life.
-        </p>
-        <a
-          class="nv-btn primary"
-          href="https://rbmercantile.com/collections/candy-and-treats?ref=neurovibe"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          Shop Candy + Treats
-        </a>
-        <p class="nv-card-note">
-          Affiliate link • Sweet finds and fun extras
-        </p>
-      </div>
-    </article>
+      </section>
 
-    <article class="nv-style-card">
-      <div class="nv-card-media">
-        <a
-          href="https://rbmercantile.com/collections/tasty-%F0%9F%8D%B5-teas?ref=neurovibe"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          <img
-            src="/images/products/rb-tasty-teas-card.PNG"
-            alt="RB Mercantile tasty teas collection"
-            loading="lazy"
-            onerror="this.style.display='none';"
-          />
-        </a>
-      </div>
-
-      <div class="nv-card-body">
-        <span class="nv-featured-badge">🍹 Sip Pick</span>
-        <div class="nv-star-row" aria-label="NeuroVibe approved">
-          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+      <section id="mom-life-soft" class="nv-style-section">
+        <div class="nv-style-intro">
+          <h2>🤍 Mom Life (But Make It Soft)</h2>
+          <p>
+            For the moms doing their best — even on the hard days.
+          </p>
         </div>
-        <h3 class="nv-card-title">Tasty Teas Collection</h3>
-        <p class="nv-card-text">
-          Sweet, refreshing teas that bring a fun, energizing vibe to your day.
-          A perfect little pick-me-up when you want something colorful and feel-good.
-        </p>
-        <a
-          class="nv-btn primary"
-          href="https://rbmercantile.com/collections/tasty-%F0%9F%8D%B5-teas?ref=neurovibe"
-          target="_blank"
-          rel="noopener sponsored nofollow"
-        >
-          Shop Tasty Teas
-        </a>
-        <p class="nv-card-note">
-          Affiliate link • Fun, flavorful daily boost
-        </p>
-      </div>
-    </article>
-  </div>
 
-  <div class="nv-mom-why">
-    <h3>🌿 Why I Love These</h3>
-    <ul>
-      <li>soft fabrics that don’t add to sensory overload</li>
-      <li>easy to throw on when mornings feel chaotic</li>
-      <li>still feel like <em>you</em> — even on hard days</li>
-    </ul>
-  </div>
+        <div class="nv-mom-intro">
+          <p>
+            This lane is for the pieces that feel cozy, personal, wearable, and actually made for real-life motherhood.
+          </p>
+        </div>
 
-  <div class="nv-shop-cta" style="margin-top:22px;">
-    <a
-      href="https://rbmercantile.com/?ref=neurovibe"
-      class="nv-btn primary"
-      target="_blank"
-      rel="noopener sponsored nofollow"
-    >
-      🤠 Shop My RB Mercantile Picks
-    </a>
-  </div>
-</section>
-      
+        <div class="nv-style-grid">
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-custom-mama-sweatshirt.PNG"
+                alt="Custom mama sweatshirt"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🤍 Mom Favorite</span>
+              <h3 class="nv-card-title">Custom Mama Sweatshirt</h3>
+              <p class="nv-card-text">
+                A meaningful, cozy piece that feels personal, wearable, and giftable all at once.
+              </p>
+              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Shop Mom Picks
+              </a>
+              <p class="nv-card-note">Perfect for moms, gifting, and emotional connection posts</p>
+            </div>
+          </article>
+
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-mama-tee.PNG"
+                alt="Relatable mom tee"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">☁️ Real-Life Mom Pick</span>
+              <h3 class="nv-card-title">Cozy Mom-Life Styles</h3>
+              <p class="nv-card-text">
+                Relatable, oversized, and easygoing pieces for the moms who want comfort without losing themselves.
+              </p>
+              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Browse More Mom Styles
+              </a>
+              <p class="nv-card-note">Use this for oversized tees, sweatshirts, and cozy fits</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="mood-tees" class="nv-mood-section">
+        <div class="nv-section-head">
+          <h2>✨ Mood Tees + Attitude</h2>
+          <p>
+            A little bold, a little funny, and a little unhinged in the best way.
+          </p>
+        </div>
+
+        <div class="nv-new-grid">
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-the-hell-i-wont.PNG"
+                alt="The Hell I Won't tee"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🔥 Attitude Pick</span>
+              <h3 class="nv-card-title">The Hell I Won’t</h3>
+              <p class="nv-card-text">
+                A statement piece for the days you’re done shrinking yourself and ready to keep it real.
+              </p>
+              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Shop Mood Tees
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-you-look-like-you-love-me.PNG"
+                alt="You Look Like You Love Me tee"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">💋 Fun Pick</span>
+              <h3 class="nv-card-title">You Look Like You Love Me</h3>
+              <p class="nv-card-text">
+                Playful, flirty, funny, and perfect for content that leans into confidence and personality.
+              </p>
+              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Browse More Personality Picks
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-cadillac-black-jack-baby.PNG"
+                alt="Cadillac Black Jack Baby tee"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🎲 Personality Pick</span>
+              <h3 class="nv-card-title">Cadillac Black Jack Baby</h3>
+              <p class="nv-card-text">
+                Vintage-feeling, a little chaotic, and perfect for a fun identity-driven fashion moment.
+              </p>
+              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                See More Mood Styles
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="western-soul" class="nv-western-section">
+        <div class="nv-section-head">
+          <h2>🐎 Western Soul</h2>
+          <p>
+            Grounded, expressive pieces with that western edge I keep coming back to.
+          </p>
+        </div>
+
+        <div class="nv-new-grid">
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-cowboy-casino.PNG"
+                alt="Cowboy Casino tee"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🤠 Western Pick</span>
+              <h3 class="nv-card-title">Cowboy Casino Tee</h3>
+              <p class="nv-card-text">
+                A bold western graphic that feels vintage, expressive, and easy to build content around.
+              </p>
+              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Shop Western Picks
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-eat-more-beef.PNG"
+                alt="Eat More Beef tee"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🐄 Niche Pick</span>
+              <h3 class="nv-card-title">Eat More Beef Tee</h3>
+              <p class="nv-card-text">
+                A niche, strong identity piece that fits your western edge and stands out in a storefront.
+              </p>
+              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Browse More Western Styles
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-vintage-rodeo-collage.PNG"
+                alt="Vintage rodeo collage tee"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">⭐ Rodeo Pick</span>
+              <h3 class="nv-card-title">Vintage Rodeo Collage Tee</h3>
+              <p class="nv-card-text">
+                A statement western graphic with color, character, and great content potential.
+              </p>
+              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Explore Rodeo Vibes
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="little-extras" class="nv-extras-section">
+        <div class="nv-section-head">
+          <h2>🧢 Little Extras I Love</h2>
+          <p>
+            The smaller add-ons that make outfits, gifts, and everyday mood boosts more fun.
+          </p>
+        </div>
+
+        <div class="nv-new-grid">
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-hello-darlin-hat.PNG"
+                alt="Hello Darlin hat"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🧢 Easy Add-On</span>
+              <h3 class="nv-card-title">Hello Darlin’ Hat</h3>
+              <p class="nv-card-text">
+                One of those easy throw-on pieces that instantly makes an outfit feel more finished.
+              </p>
+              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Shop Extras
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-pink-giddy-up-hat.PNG"
+                alt="Pink Giddy Up hat"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">💖 Fun Extra</span>
+              <h3 class="nv-card-title">Pink Giddy Up Hat</h3>
+              <p class="nv-card-text">
+                Playful, western, and an easy impulse-buy style piece that still feels on-brand.
+              </p>
+              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Browse More Extras
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="meaningful-gifts" class="nv-gifts-section">
+        <div class="nv-section-head">
+          <h2>🎁 Meaningful Gifts</h2>
+          <p>
+            Thoughtful, personal, and giftable favorites that feel easy to love.
+          </p>
+        </div>
+
+        <div class="nv-new-grid">
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-custom-mama-sweatshirt.PNG"
+                alt="Personalized mama sweatshirt"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🎁 Gift Favorite</span>
+              <h3 class="nv-card-title">Personalized Mama Sweatshirt</h3>
+              <p class="nv-card-text">
+                Personal, cozy, memorable, and perfect for birthdays, holidays, or just-because gifting.
+              </p>
+              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Shop Giftable Picks
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <img
+                src="/images/products/rb-aztec-blanket.PNG"
+                alt="Western style blanket gift"
+                loading="lazy"
+                onerror="this.style.display='none';"
+              />
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🧺 Cozy Gift Pick</span>
+              <h3 class="nv-card-title">Cozy Western Blankets</h3>
+              <p class="nv-card-text">
+                A cozy home-style gift lane for people who love warmth, comfort, and a little western edge.
+              </p>
+              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
+                Browse More Gifts
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="playful-treats" class="nv-treats-section">
+        <div class="nv-section-head">
+          <h2>🍬 Playful Little Treats</h2>
+          <p>
+            Sweet finds, fun sips, and playful little extras for when you want something light mixed into real life.
+          </p>
+        </div>
+
+        <div class="nv-new-grid">
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <a
+                href="https://rbmercantile.com/collections/candy-and-treats?ref=neurovibe"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                <img
+                  src="/images/products/rb-candy-treats-card.PNG"
+                  alt="RB Mercantile candy and treats collection"
+                  loading="lazy"
+                  onerror="this.style.display='none';"
+                />
+              </a>
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🍬 Treat Pick</span>
+              <h3 class="nv-card-title">Candy + Treats Collection</h3>
+              <p class="nv-card-text">
+                A fun little collection of sweets and treat-worthy finds from RB Mercantile.
+              </p>
+              <a
+                class="nv-btn primary"
+                href="https://rbmercantile.com/collections/candy-and-treats?ref=neurovibe"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Shop Candy + Treats
+              </a>
+              <p class="nv-card-note">
+                Affiliate link • Sweet finds and fun extras
+              </p>
+            </div>
+          </article>
+
+          <article class="nv-style-card">
+            <div class="nv-card-media nv-promo-media">
+              <a
+                href="https://rbmercantile.com/collections/tasty-%F0%9F%8D%B5-teas?ref=neurovibe"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                <img
+                  src="/images/products/rb-tasty-teas-card.PNG"
+                  alt="RB Mercantile tasty teas collection"
+                  loading="lazy"
+                  onerror="this.style.display='none';"
+                />
+              </a>
+            </div>
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🍹 Sip Pick</span>
+              <h3 class="nv-card-title">Tasty Teas Collection</h3>
+              <p class="nv-card-text">
+                Sweet, refreshing teas that bring a fun, energizing vibe to your day.
+              </p>
+              <a
+                class="nv-btn primary"
+                href="https://rbmercantile.com/collections/tasty-%F0%9F%8D%B5-teas?ref=neurovibe"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Shop Tasty Teas
+              </a>
+              <p class="nv-card-note">
+                Affiliate link • Fun, flavorful daily boost
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
       <footer class="nv-shop-footer">
         <div class="nv-container nv-footer-inner" style="text-align:center;">
           <p class="nv-footer-text">

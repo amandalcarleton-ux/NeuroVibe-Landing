@@ -700,7 +700,110 @@
         font-size:0.98rem;
         line-height:1.7;
       }
-    }
+    }.nv-wellness-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,244,255,0.96));
+  border: 1px solid rgba(170, 140, 210, 0.22);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(66, 31, 87, 0.10);
+}
+
+.nv-product-media {
+  position: relative;
+  min-height: 100%;
+}
+
+.nv-product-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.nv-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(104, 76, 163, 0.88);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.nv-product-body {
+  padding: 1.4rem 1.35rem 1.35rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nv-product-kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8e6bb8;
+}
+
+.nv-product-body h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.4rem;
+  line-height: 1.15;
+}
+
+.nv-product-text {
+  margin: 0 0 0.9rem;
+  line-height: 1.65;
+  color: #4d4360;
+}
+
+.nv-product-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1rem;
+}
+
+.nv-product-meta span {
+  display: inline-flex;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(201, 184, 234, 0.22);
+  color: #654c92;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.nv-affiliate-note {
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: #7a7188;
+}
+
+@media (max-width: 768px) {
+  .nv-wellness-card {
+    grid-template-columns: 1fr;
+  }
+
+  .nv-product-body {
+    padding: 1.1rem 1rem 1.15rem;
+  }
+
+  .nv-product-media img {
+    min-height: 220px;
+  }
+}
   </style>
 </head>
 
@@ -979,7 +1082,51 @@
     </p>
   </div>
 </section>
+<article class="nv-product-card nv-wellness-card">
+  <div class="nv-product-media">
+    <a
+      href="https://www.cleannutra.com/neurovibe"
+      target="_blank"
+      rel="noopener sponsored"
+      aria-label="Shop NeuroVibe wellness support from Clean Nutra"
+    >
+      <img
+        src="/images/products/neurovibe-cleannutra-card.PNG"
+        alt="NeuroVibe wellness support liquid supplement by Clean Nutra"
+        loading="lazy"
+      />
+    </a>
+    <span class="nv-badge">NeuroVibe Elevated</span>
+  </div>
 
+  <div class="nv-product-body">
+    <p class="nv-product-kicker">Daily Support</p>
+    <h3>NeuroVibe Wellness Support</h3>
+    <p class="nv-product-text">
+      A simple way to support calm, focus, and steadier days when your brain feels
+      a little too loud. This is the kind of support that fits into real life —
+      easy, intentional, and made for your gentle reset era.
+    </p>
+
+    <div class="nv-product-meta">
+      <span>calm + clarity</span>
+      <span>daily nervous system support</span>
+    </div>
+
+    <a
+      class="nv-btn"
+      href="https://www.cleannutra.com/neurovibe"
+      target="_blank"
+      rel="noopener sponsored"
+    >
+      Shop Now
+    </a>
+
+    <p class="nv-affiliate-note">
+      Affiliate link. I only share tools and wellness picks that fit the NeuroVibe lifestyle.
+    </p>
+  </div>
+</article>
       <section id="family-support" class="nv-spotlight-section">
         <div class="nv-section-head">
           <h2>💛 Family + Emotional Support</h2>

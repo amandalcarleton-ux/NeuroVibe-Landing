@@ -213,7 +213,21 @@
 <footer class="footer">
 <p>© <span id="year"></span> NeuroVibe</p>
 </footer>
+<div id="disqus_thread" class="cc-post-wrap"></div>
 
+<script>
+  var disqus_config = function () {
+    this.page.url = "https://neurovibe.site/calm-and-clear/when-easter-doesnt-go-as-planned.html";
+    this.page.identifier = "when-easter-doesnt-go-as-planned";
+  };
+
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "https://neurovibe.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>

@@ -178,7 +178,84 @@
       .nv-form-grid{
         grid-template-columns:1fr;
       }
-    }
+    }@media (max-width:920px){
+  .nv-contact-hero-inner,
+  .nv-contact-grid,
+  .nv-booking-grid,
+  .nv-form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .nv-contact-main{
+    padding:18px 12px 40px;
+  }
+
+  .nv-contact-hero-shell{
+    padding:16px;
+    border-radius:24px;
+  }
+
+  .nv-contact-hero-inner{
+    gap:18px;
+  }
+
+  .nv-contact-copy{
+    text-align:center;
+  }
+
+  .nv-contact-copy p{
+    max-width:100%;
+  }
+
+  .nv-contact-image{
+    border-radius:18px;
+  }
+
+  .nv-contact-panel,
+  .nv-form-panel,
+  .nv-booking-card{
+    padding:20px;
+    border-radius:22px;
+  }
+
+  .nv-booking-shell{
+    margin-top:24px;
+    padding:22px 16px;
+    border-radius:24px;
+  }
+
+  .nv-btn,
+  .nv-btn-secondary{
+    width:100%;
+    text-align:center;
+  }
+
+  .nv-contact-method a{
+    word-break:break-word;
+  }
+}
+
+@media (max-width:560px){
+  .nv-contact-copy h1{
+    font-size:1.9rem;
+    line-height:1.1;
+  }
+
+  .nv-contact-copy p{
+    font-size:.98rem;
+    line-height:1.65;
+  }
+
+  .nv-contact-method{
+    padding:14px;
+  }
+
+  .nv-contact-form input,
+  .nv-contact-form textarea{
+    padding:13px;
+    font-size:16px;
+  }
+}
   </style>
 </head>
 

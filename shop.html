@@ -802,7 +802,30 @@
       .nv-product-info{
         padding:16px;
       }
-    }
+    }.nv-view-guides{
+  margin-top:24px;
+  text-align:center;
+}
+
+.nv-view-btn{
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:15px;
+  text-decoration:none;
+  color:#fff;
+
+  background: linear-gradient(135deg, #c6a8ff, #7ee6ff, #ffb3ec);
+  box-shadow: 0 8px 20px rgba(126, 230, 255, 0.35);
+
+  transition: all 0.25s ease;
+}
+
+.nv-view-btn:hover{
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(126, 230, 255, 0.5);
+}
   </style>
 </head>
 
@@ -897,7 +920,11 @@
           </div>
         </div>
       </section>
-
+<div class="nv-view-guides">
+  <a href="/guides.html" class="nv-view-btn">
+    💜 Find Your Support Tools
+  </a>
+</div>
       <section id="shop-paths" class="nv-section-card glass">
         <div class="nv-section-head">
           <h2>Choose Your Support Path</h2>

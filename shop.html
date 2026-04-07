@@ -184,80 +184,6 @@
       box-shadow:0 10px 24px rgba(75,46,131,0.08);
     }
 
-    .nv-featured{
-      margin-top:30px;
-      padding:28px;
-      border-radius:32px;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
-        linear-gradient(135deg, rgba(198,168,255,0.30), rgba(126,230,255,0.18));
-      border:1px solid rgba(255,255,255,0.52);
-      box-shadow:0 18px 40px rgba(75,46,131,0.12);
-      backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px);
-    }
-
-    .nv-featured-inner{
-      display:grid;
-      grid-template-columns:minmax(0, 380px) minmax(0, 1fr);
-      gap:28px;
-      align-items:center;
-    }
-
-    .nv-featured-media img{
-      width:100%;
-      display:block;
-      border-radius:24px;
-      box-shadow:0 16px 34px rgba(75,46,131,0.14);
-    }
-
-    .nv-feature-kicker{
-      display:inline-block;
-      margin-bottom:12px;
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.78);
-      color:#6b4fb1;
-      font-size:.84rem;
-      font-weight:700;
-    }
-
-    .nv-featured-copy h2{
-      margin:0 0 12px;
-      font-size:clamp(2rem, 4vw, 2.9rem);
-      line-height:1.08;
-      color:#5b2ca0;
-    }
-
-    .nv-featured-copy p{
-      margin:0 0 16px;
-      color:#3a3550;
-      line-height:1.8;
-      max-width:680px;
-    }
-
-    .nv-feature-points{
-      margin:0 0 22px;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
-    }
-
-    .nv-feature-points li{
-      padding:12px 14px;
-      border-radius:16px;
-      background:rgba(255,255,255,0.72);
-      border:1px solid rgba(255,255,255,0.62);
-      color:#433d5c;
-    }
-
-    .nv-feature-actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
     .nv-btn{
       display:inline-flex;
       align-items:center;
@@ -275,7 +201,8 @@
       transform:translateY(-2px);
     }
 
-    .nv-btn.primary{
+    .nv-btn.primary,
+    .nv-btn.nv-btn-primary{
       color:#fff;
       background:linear-gradient(135deg,#6f63ff,#7edcff);
       box-shadow:0 10px 24px rgba(107,92,255,0.18);
@@ -316,11 +243,13 @@
 
     .nv-path-card,
     .nv-curated-card,
-    .nv-style-card{
+    .nv-style-card,
+    .nv-product-card{
       border-radius:24px;
       background:rgba(255,255,255,0.82);
       border:1px solid rgba(255,255,255,0.7);
       box-shadow:0 14px 30px rgba(75,46,131,0.08);
+      transition:transform .22s ease, box-shadow .22s ease;
     }
 
     .nv-path-card{
@@ -328,6 +257,22 @@
       display:flex;
       flex-direction:column;
       min-height:100%;
+    }
+
+    .nv-curated-card,
+    .nv-style-card{
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      min-height:100%;
+    }
+
+    .nv-curated-card:hover,
+    .nv-style-card:hover,
+    .nv-path-card:hover,
+    .nv-product-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 40px rgba(75,46,131,0.14);
     }
 
     .nv-featured-badge{
@@ -348,7 +293,8 @@
       color:#5b2ca0;
     }
 
-    .nv-card-text{
+    .nv-card-text,
+    .nv-card-desc{
       margin:0 0 16px;
       line-height:1.7;
       color:#3a3550;
@@ -360,22 +306,6 @@
       font-size:.92rem;
       color:#6c6784;
       line-height:1.5;
-    }
-
-    .nv-curated-card,
-    .nv-style-card{
-      display:flex;
-      flex-direction:column;
-      overflow:hidden;
-      min-height:100%;
-      transition:transform .22s ease, box-shadow .22s ease;
-    }
-
-    .nv-curated-card:hover,
-    .nv-style-card:hover,
-    .nv-path-card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 20px 40px rgba(75,46,131,0.14);
     }
 
     .nv-card-media{
@@ -425,6 +355,38 @@
       justify-content:center;
     }
 
+    .nv-card-kicker{
+      margin:0 0 4px;
+      font-size:0.78rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+      color:#8e6bb8;
+    }
+
+    .nv-card-list{
+      margin:0 0 12px;
+      padding-left:18px;
+      color:#3a3550;
+      line-height:1.7;
+    }
+
+    .nv-card-list li{
+      margin-bottom:8px;
+    }
+
+    .nv-card-actions{
+      margin-top:auto;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .nv-card-actions .nv-btn{
+      width:100%;
+      justify-content:center;
+    }
+
     .nv-star-row{
       display:flex;
       gap:4px;
@@ -432,60 +394,6 @@
       color:#f4b400;
       font-size:1rem;
       line-height:1;
-    }
-
-    .nv-style-section{
-      margin-top:30px;
-      padding:28px;
-      border-radius:32px;
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.32), transparent 36%),
-        linear-gradient(135deg, rgba(255,225,240,0.96) 0%, rgba(255,205,230,0.92) 48%, rgba(255,233,243,0.92) 100%);
-      border:1px solid rgba(255,255,255,0.55);
-      box-shadow:0 18px 40px rgba(184, 104, 153, 0.16);
-    }
-
-    .nv-style-intro{
-      text-align:center;
-      max-width:760px;
-      margin:0 auto 22px;
-    }
-
-    .nv-style-intro h2{
-      margin:0 0 10px;
-      font-size:clamp(1.9rem, 3vw, 2.5rem);
-      color:#7b2f6b;
-    }
-
-    .nv-style-intro p{
-      margin:0;
-      line-height:1.75;
-      color:#4a3346;
-    }
-
-    .nv-style-card{
-      background:rgba(255,255,255,0.88);
-    }
-
-    .nv-style-card .nv-featured-badge{
-      color:#a04f87;
-      background:rgba(255, 214, 232, 0.72);
-    }
-
-    .nv-style-card .nv-card-title{
-      color:#7b2f6b;
-    }
-
-    .nv-style-card .nv-card-text{
-      color:#4a3346;
-    }
-
-    .nv-style-note{
-      margin-top:18px;
-      text-align:center;
-      color:#6c5470;
-      font-size:.95rem;
-      line-height:1.7;
     }
 
     .nv-shop-footer{
@@ -539,6 +447,7 @@
       box-shadow:0 18px 34px rgba(217,139,179,0.28);
     }
 
+    .nv-shop-section,
     .nv-spotlight-section,
     .nv-kleo-section,
     .nv-softlife-section,
@@ -546,12 +455,19 @@
     .nv-western-section,
     .nv-extras-section,
     .nv-gifts-section,
-    .nv-treats-section{
+    .nv-treats-section,
+    .nv-style-section{
       margin-top:30px;
       padding:28px;
       border-radius:32px;
       border:1px solid rgba(255,255,255,0.55);
       box-shadow:0 18px 40px rgba(75,46,131,0.12);
+    }
+
+    .nv-shop-section{
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
+        linear-gradient(135deg, rgba(198,168,255,0.24), rgba(126,230,255,0.16));
     }
 
     .nv-spotlight-section{
@@ -563,7 +479,7 @@
     .nv-kleo-section{
       background:
         radial-gradient(circle at top left, rgba(255,255,255,0.32), transparent 36%),
-        linear-gradient(135deg, rgba(232, 220, 255, 0.96) 0%, rgba(223, 235, 255, 0.92) 100%);
+        linear-gradient(135deg, rgba(232,220,255,0.96) 0%, rgba(223,235,255,0.92) 100%);
     }
 
     .nv-softlife-section{
@@ -602,6 +518,48 @@
         linear-gradient(135deg, rgba(255,237,248,0.96) 0%, rgba(255,247,226,0.92) 100%);
     }
 
+    .nv-style-section{
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.32), transparent 36%),
+        linear-gradient(135deg, rgba(255,225,240,0.96) 0%, rgba(255,205,230,0.92) 48%, rgba(255,233,243,0.92) 100%);
+      box-shadow:0 18px 40px rgba(184,104,153,0.16);
+    }
+
+    .nv-style-intro{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 22px;
+    }
+
+    .nv-style-intro h2{
+      margin:0 0 10px;
+      font-size:clamp(1.9rem, 3vw, 2.5rem);
+      color:#7b2f6b;
+    }
+
+    .nv-style-intro p{
+      margin:0;
+      line-height:1.75;
+      color:#4a3346;
+    }
+
+    .nv-style-card{
+      background:rgba(255,255,255,0.88);
+    }
+
+    .nv-style-card .nv-featured-badge{
+      color:#a04f87;
+      background:rgba(255,214,232,0.72);
+    }
+
+    .nv-style-card .nv-card-title{
+      color:#7b2f6b;
+    }
+
+    .nv-style-card .nv-card-text{
+      color:#4a3346;
+    }
+
     .nv-mom-intro{
       max-width:700px;
       margin:0 auto 24px;
@@ -611,38 +569,158 @@
       line-height:1.75;
     }
 
-    .nv-mom-why{
-      margin-top:28px;
-      text-align:center;
+    .nv-product-info{
+      padding:20px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.72);
+      border:1px solid rgba(255,255,255,0.62);
     }
 
-    .nv-mom-why h3{
-      margin:0 0 12px;
-      color:#7b2f6b;
-      font-size:1.2rem;
-    }
-
-    .nv-mom-why ul{
-      list-style:none;
-      padding:0;
+    .nv-benefits{
       margin:0;
+      padding-left:20px;
+      line-height:1.8;
+      color:#3a3550;
     }
 
-    .nv-mom-why li{
-      margin:8px 0;
-      color:#4a3346;
-      line-height:1.7;
+    .nv-benefits li{
+      margin-bottom:10px;
     }
 
-    .nv-shop-cta{
-      text-align:center;
+    .nv-product-embed{
+      padding:14px;
+      border-radius:24px;
+      background:rgba(255,255,255,0.72);
+      border:1px solid rgba(255,255,255,0.62);
+      min-width:0;
+      overflow:hidden;
+    }
+
+    .nv-shop-section > .nv-product-card{
+      display:grid;
+      grid-template-columns:minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap:24px;
+      padding:20px;
+      align-items:start;
+      overflow:visible;
+    }
+
+    .payhip-embed-page{
+      width:100%;
+      max-width:100%;
+    }
+
+    .payhip-embed-page h1,
+    .payhip-embed-page .product-title,
+    .payhip-embed-page h2{
+      font-size:clamp(1.7rem, 6vw, 2.4rem) !important;
+      line-height:1.2 !important;
+      word-break:break-word;
+      overflow-wrap:anywhere;
+    }
+
+    .payhip-embed-page .button,
+    .payhip-embed-page button,
+    .payhip-embed-page .btn{
+      width:100%;
+      max-width:320px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .nv-wellness-card{
+      display:grid;
+      grid-template-columns:240px 1fr;
+      gap:1.25rem;
+      align-items:stretch;
+      background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,244,255,0.96));
+      border:1px solid rgba(170,140,210,0.22);
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 14px 34px rgba(66,31,87,0.10);
+    }
+
+    .nv-product-media{
+      position:relative;
+      min-height:100%;
+    }
+
+    .nv-product-media img{
+      width:100%;
+      height:100%;
+      min-height:280px;
+      object-fit:cover;
+      display:block;
+    }
+
+    .nv-badge{
+      position:absolute;
+      top:14px;
+      left:14px;
+      display:inline-flex;
+      align-items:center;
+      padding:0.4rem 0.75rem;
+      border-radius:999px;
+      background:rgba(104,76,163,0.88);
+      color:#fff;
+      font-size:0.78rem;
+      font-weight:700;
+      letter-spacing:0.03em;
+    }
+
+    .nv-product-body{
+      padding:1.4rem 1.35rem 1.35rem 0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .nv-product-kicker{
+      margin:0 0 0.4rem;
+      font-size:0.78rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+      color:#8e6bb8;
+    }
+
+    .nv-product-body h3{
+      margin:0 0 0.7rem;
+      font-size:1.4rem;
+      line-height:1.15;
+      color:#5b2ca0;
+    }
+
+    .nv-product-text{
+      margin:0 0 0.9rem;
+      line-height:1.65;
+      color:#4d4360;
+    }
+
+    .nv-product-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.5rem;
+      margin:0 0 1rem;
+    }
+
+    .nv-product-meta span{
+      display:inline-flex;
+      padding:0.45rem 0.7rem;
+      border-radius:999px;
+      background:rgba(201,184,234,0.22);
+      color:#654c92;
+      font-size:0.82rem;
+      font-weight:600;
+    }
+
+    .nv-affiliate-note{
+      margin-top:0.85rem;
+      font-size:0.82rem;
+      color:#7a7188;
     }
 
     @media (max-width: 1100px){
-      .nv-featured-inner{
-        grid-template-columns:1fr;
-      }
-
       .nv-paths-grid,
       .nv-new-grid,
       .nv-style-grid{
@@ -650,12 +728,25 @@
       }
     }
 
+    @media (max-width: 768px){
+      .nv-wellness-card{
+        grid-template-columns:1fr;
+      }
+
+      .nv-product-body{
+        padding:1.1rem 1rem 1.15rem;
+      }
+
+      .nv-product-media img{
+        min-height:220px;
+      }
+    }
+
     @media (max-width: 700px){
       .nv-section-card,
-      .nv-featured,
       .nv-shop-footer,
       .nv-freebie-section,
-      .nv-style-section,
+      .nv-shop-section,
       .nv-spotlight-section,
       .nv-kleo-section,
       .nv-softlife-section,
@@ -663,7 +754,8 @@
       .nv-western-section,
       .nv-extras-section,
       .nv-gifts-section,
-      .nv-treats-section{
+      .nv-treats-section,
+      .nv-style-section{
         padding:18px;
       }
 
@@ -700,139 +792,17 @@
         font-size:0.98rem;
         line-height:1.7;
       }
-    }.nv-wellness-card {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 1.25rem;
-  align-items: stretch;
-  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,244,255,0.96));
-  border: 1px solid rgba(170, 140, 210, 0.22);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 14px 34px rgba(66, 31, 87, 0.10);
-}
 
-.nv-product-media {
-  position: relative;
-  min-height: 100%;
-}
+      .nv-shop-section > .nv-product-card{
+        grid-template-columns:1fr;
+        padding:16px;
+      }
 
-.nv-product-media img {
-  width: 100%;
-  height: 100%;
-  min-height: 280px;
-  object-fit: cover;
-  display: block;
-}
-
-.nv-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  display: inline-flex;
-  align-items: center;
-  padding: 0.4rem 0.75rem;
-  border-radius: 999px;
-  background: rgba(104, 76, 163, 0.88);
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
-.nv-product-body {
-  padding: 1.4rem 1.35rem 1.35rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.nv-product-kicker {
-  margin: 0 0 0.4rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #8e6bb8;
-}
-
-.nv-product-body h3 {
-  margin: 0 0 0.7rem;
-  font-size: 1.4rem;
-  line-height: 1.15;
-}
-
-.nv-product-text {
-  margin: 0 0 0.9rem;
-  line-height: 1.65;
-  color: #4d4360;
-}
-
-.nv-product-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0 0 1rem;
-}
-
-.nv-product-meta span {
-  display: inline-flex;
-  padding: 0.45rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(201, 184, 234, 0.22);
-  color: #654c92;
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-
-.nv-affiliate-note {
-  margin-top: 0.85rem;
-  font-size: 0.82rem;
-  color: #7a7188;
-}
-
-@media (max-width: 768px) {
-  .nv-wellness-card {
-    grid-template-columns: 1fr;
-  }
-
-  .nv-product-body {
-    padding: 1.1rem 1rem 1.15rem;
-  }
-
-  .nv-product-media img {
-    min-height: 220px;
-  }
-}.nv-guide-feature{
-  padding:80px 20px;
-  text-align:center;
-}
-
-.nv-guide-wrap{
-  max-width:800px;
-  margin:auto;
-}
-
-.nv-guide-wrap h1{
-  font-size:2rem;
-  background:linear-gradient(90deg,#c084fc,#60a5fa,#34d399);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.nv-guide-sub{
-  margin:15px 0 25px;
-  color:#666;
-}
-
-.nv-guide-box{
-  margin-top:30px;
-  padding:20px;
-  border-radius:20px;
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(10px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-}
+      .nv-product-embed,
+      .nv-product-info{
+        padding:16px;
+      }
+    }
   </style>
 </head>
 
@@ -906,33 +876,27 @@
         </a>
       </section>
 
-      <section class="nv-shop-section">
+      <section id="featured-guide" class="nv-shop-section">
+        <div class="nv-section-head">
+          <h2>✨ Focus &amp; Flow Reset System</h2>
+          <p>A gentle system for when your brain won’t cooperate 🤍</p>
+        </div>
 
-  <div class="nv-section-head">
-    <h2>✨ Focus & Flow Reset System</h2>
-    <p>A gentle system for when your brain won’t cooperate 🤍</p>
-  </div>
+        <div class="nv-product-card">
+          <div class="nv-product-info">
+            <ul class="nv-benefits">
+              <li>🧠 Start tasks without pressure</li>
+              <li>✨ Build momentum in small steps</li>
+              <li>🌿 Reset when you feel stuck</li>
+              <li>💛 Designed for real-life overwhelm</li>
+            </ul>
+          </div>
 
-  <div class="nv-product-card">
-
-    <div class="nv-product-info">
-      <ul class="nv-benefits">
-        <li>🧠 Start tasks without pressure</li>
-        <li>✨ Build momentum in small steps</li>
-        <li>🌿 Reset when you feel stuck</li>
-        <li>💛 Designed for real-life overwhelm</li>
-      </ul>
-    </div>
-
-    <div class="nv-product-embed">
-      <div class="payhip-embed-page" data-key="UVPFH"></div>
-    </div>
-
-  </div>
-
-</section>
-
-<script src="https://payhip.com/embed-page.js?v=24u68985"></script>
+          <div class="nv-product-embed">
+            <div class="payhip-embed-page" data-key="UVPFH"></div>
+          </div>
+        </div>
+      </section>
 
       <section id="shop-paths" class="nv-section-card glass">
         <div class="nv-section-head">
@@ -1054,102 +1018,102 @@
             </div>
           </article>
 
-          <section class="nv-card nv-product-card nv-bravenly-card">
-  <div class="nv-card-media">
-    <a
-      href="https://neurovibewell.bravenlyglobal.com/accelerate-trio-bundle/"
-      target="_blank"
-      rel="noopener sponsored"
-      aria-label="Shop the Bravenly Accelerate Trio"
-    >
-      <img
-        src="/images/Bravenly/bravenly-accelerate-trio-neurovibe.PNG"
-        alt="Bravenly Accelerate Trio Bundle featuring Rush, Ignite, and Gold supplements for energy, focus, and daily wellness"
-        loading="lazy"
-      />
-    </a>
-  </div>
+          <section class="nv-product-card nv-bravenly-card">
+            <div class="nv-card-media">
+              <a
+                href="https://neurovibewell.bravenlyglobal.com/accelerate-trio-bundle/"
+                target="_blank"
+                rel="noopener sponsored"
+                aria-label="Shop the Bravenly Accelerate Trio"
+              >
+                <img
+                  src="/images/Bravenly/bravenly-accelerate-trio-neurovibe.PNG"
+                  alt="Bravenly Accelerate Trio Bundle featuring Rush, Ignite, and Gold supplements for energy, focus, and daily wellness"
+                  loading="lazy"
+                />
+              </a>
+            </div>
 
-  <div class="nv-card-body">
-    <p class="nv-card-kicker">Wellness Pick</p>
+            <div class="nv-card-body">
+              <p class="nv-card-kicker">Wellness Pick</p>
+              <h3 class="nv-card-title">Daily support. Brighter tomorrows.</h3>
+              <p class="nv-card-desc">
+                The Accelerate Trio is part of my daily routine for steady energy,
+                better focus, and that “feel-good” momentum that makes real life easier.
+              </p>
 
-    <h3 class="nv-card-title">
-      Daily support. Brighter tomorrows.
-    </h3>
+              <ul class="nv-card-list">
+                <li>Clean, sustained energy (no crash)</li>
+                <li>Supports focus + mental clarity</li>
+                <li>Helps with metabolism + daily balance</li>
+                <li>Small daily steps, big impact</li>
+              </ul>
 
-    <p class="nv-card-desc">
-      The Accelerate Trio is part of my daily routine for steady energy,
-      better focus, and that “feel-good” momentum that makes real life easier.
-    </p>
+              <div class="nv-card-actions">
+                <a
+                  class="nv-btn nv-btn-primary"
+                  href="https://neurovibewell.bravenlyglobal.com/accelerate-trio-bundle/"
+                  target="_blank"
+                  rel="noopener sponsored"
+                >
+                  ✨ Shop the Accelerate Trio
+                </a>
+              </div>
 
-    <ul class="nv-card-list">
-      <li>Clean, sustained energy (no crash)</li>
-      <li>Supports focus + mental clarity</li>
-      <li>Helps with metabolism + daily balance</li>
-      <li>Small daily steps, big impact</li>
-    </ul>
+              <p class="nv-affiliate-note">
+                Affiliate link • Trusted products • Real-life support
+              </p>
+            </div>
+          </section>
 
-    <div class="nv-card-actions">
-      <a
-        class="nv-btn nv-btn-primary"
-        href="https://neurovibewell.bravenlyglobal.com/accelerate-trio-bundle/"
-        target="_blank"
-        rel="noopener sponsored"
-      >
-        ✨ Shop the Accelerate Trio
-      </a>
-    </div>
+          <article class="nv-product-card nv-wellness-card">
+            <div class="nv-product-media">
+              <a
+                href="https://www.cleannutra.com/neurovibe"
+                target="_blank"
+                rel="noopener sponsored"
+                aria-label="Shop NeuroVibe wellness support from Clean Nutra"
+              >
+                <img
+                  src="/images/products/neurovibe-cleannutra-card.PNG"
+                  alt="NeuroVibe wellness support liquid supplement by Clean Nutra"
+                  loading="lazy"
+                />
+              </a>
+              <span class="nv-badge">NeuroVibe Elevated</span>
+            </div>
 
-    <p class="nv-affiliate-note">
-      Affiliate link • Trusted products • Real-life support
-    </p>
-  </div>
-</section>
-<article class="nv-product-card nv-wellness-card">
-  <div class="nv-product-media">
-    <a
-      href="https://www.cleannutra.com/neurovibe"
-      target="_blank"
-      rel="noopener sponsored"
-      aria-label="Shop NeuroVibe wellness support from Clean Nutra"
-    >
-      <img
-        src="/images/products/neurovibe-cleannutra-card.PNG"
-        alt="NeuroVibe wellness support liquid supplement by Clean Nutra"
-        loading="lazy"
-      />
-    </a>
-    <span class="nv-badge">NeuroVibe Elevated</span>
-  </div>
+            <div class="nv-product-body">
+              <p class="nv-product-kicker">Daily Support</p>
+              <h3>NeuroVibe Wellness Support</h3>
+              <p class="nv-product-text">
+                A simple way to support calm, focus, and steadier days when your brain feels
+                a little too loud. This is the kind of support that fits into real life —
+                easy, intentional, and made for your gentle reset era.
+              </p>
 
-  <div class="nv-product-body">
-    <p class="nv-product-kicker">Daily Support</p>
-    <h3>NeuroVibe Wellness Support</h3>
-    <p class="nv-product-text">
-      A simple way to support calm, focus, and steadier days when your brain feels
-      a little too loud. This is the kind of support that fits into real life —
-      easy, intentional, and made for your gentle reset era.
-    </p>
+              <div class="nv-product-meta">
+                <span>calm + clarity</span>
+                <span>daily nervous system support</span>
+              </div>
 
-    <div class="nv-product-meta">
-      <span>calm + clarity</span>
-      <span>daily nervous system support</span>
-    </div>
+              <a
+                class="nv-btn primary"
+                href="https://www.cleannutra.com/neurovibe"
+                target="_blank"
+                rel="noopener sponsored"
+              >
+                Shop Now
+              </a>
 
-    <a
-      class="nv-btn"
-      href="https://www.cleannutra.com/neurovibe"
-      target="_blank"
-      rel="noopener sponsored"
-    >
-      Shop Now
-    </a>
+              <p class="nv-affiliate-note">
+                Affiliate link. I only share tools and wellness picks that fit the NeuroVibe lifestyle.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <p class="nv-affiliate-note">
-      Affiliate link. I only share tools and wellness picks that fit the NeuroVibe lifestyle.
-    </p>
-  </div>
-</article>
       <section id="family-support" class="nv-spotlight-section">
         <div class="nv-section-head">
           <h2>💛 Family + Emotional Support</h2>
@@ -1197,55 +1161,55 @@
             </div>
           </article>
 
-          <section class="nv-card nv-product-card nv-diane-card">
-  <div class="nv-card-media">
-    <a
-      href="https://www.dianealber.com/products/copy-of-a-little-spot-of-emotion-box-set-8-books-anger-anxiety-peaceful-happiness-sadness-confidence-love-scribble-emotion?ref=neurovibe&variant=42338432549055"
-      target="_blank"
-      rel="noopener sponsored"
-      aria-label="Shop A Little SPOT Emotional Regulation Box Set"
-    >
-      <img
-        src="/images/diane-emotional-regulation-box-set-neurovibe.PNG"
-        alt="A Little SPOT Emotional Regulation Box Set by Diane Alber styled in a NeuroVibe-inspired product graphic"
-        loading="lazy"
-      />
-    </a>
-  </div>
+          <section class="nv-product-card nv-diane-card">
+            <div class="nv-card-media">
+              <a
+                href="https://www.dianealber.com/products/copy-of-a-little-spot-of-emotion-box-set-8-books-anger-anxiety-peaceful-happiness-sadness-confidence-love-scribble-emotion?ref=neurovibe&amp;variant=42338432549055"
+                target="_blank"
+                rel="noopener sponsored"
+                aria-label="Shop A Little SPOT Emotional Regulation Box Set"
+              >
+                <img
+                  src="/images/diane-emotional-regulation-box-set-neurovibe.PNG"
+                  alt="A Little SPOT Emotional Regulation Box Set by Diane Alber styled in a NeuroVibe-inspired product graphic"
+                  loading="lazy"
+                />
+              </a>
+            </div>
 
-  <div class="nv-card-body">
-    <p class="nv-card-kicker">Diane Alber Pick</p>
+            <div class="nv-card-body">
+              <p class="nv-card-kicker">Diane Alber Pick</p>
+              <h3 class="nv-card-title">A Little SPOT Emotional Regulation Box Set</h3>
+              <p class="nv-card-desc">
+                We added this into our routine 🤍
+                A simple, visual way to help little ones name and navigate big feelings
+                without adding more overwhelm.
+              </p>
 
-    <h3 class="nv-card-title">A Little SPOT Emotional Regulation Box Set</h3>
+              <ul class="nv-card-list">
+                <li>Great for calm corners</li>
+                <li>Helpful for everyday emotional check-ins</li>
+                <li>A gentle tool for building emotional vocabulary</li>
+              </ul>
 
-    <p class="nv-card-desc">
-      We added this into our routine 🤍
-      A simple, visual way to help little ones name and navigate big feelings
-      without adding more overwhelm.
-    </p>
+              <div class="nv-card-actions">
+                <a
+                  class="nv-btn nv-btn-primary"
+                  href="https://www.dianealber.com/products/copy-of-a-little-spot-of-emotion-box-set-8-books-anger-anxiety-peaceful-happiness-sadness-confidence-love-scribble-emotion?ref=neurovibe&amp;variant=42338432549055"
+                  target="_blank"
+                  rel="noopener sponsored"
+                >
+                  Shop the Routine
+                </a>
+              </div>
 
-    <ul class="nv-card-list">
-      <li>Great for calm corners</li>
-      <li>Helpful for everyday emotional check-ins</li>
-      <li>A gentle tool for building emotional vocabulary</li>
-    </ul>
-
-    <div class="nv-card-actions">
-      <a
-        class="nv-btn nv-btn-primary"
-        href="https://www.dianealber.com/products/copy-of-a-little-spot-of-emotion-box-set-8-books-anger-anxiety-peaceful-happiness-sadness-confidence-love-scribble-emotion?ref=neurovibe&variant=42338432549055"
-        target="_blank"
-        rel="noopener sponsored"
-      >
-        Shop the Routine
-      </a>
-    </div>
-
-    <p class="nv-affiliate-note">
-      Affiliate link included. I only share tools and resources that fit real-life support.
-    </p>
-  </div>
-</section>
+              <p class="nv-affiliate-note">
+                Affiliate link included. I only share tools and resources that fit real-life support.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
 
       <section id="beauty-reset" class="nv-kleo-section" aria-label="Beauty reset section">
         <div class="nv-style-intro">
@@ -1798,6 +1762,8 @@
 
     </div>
   </main>
+
+  <script src="https://payhip.com/embed-page.js?v=24u68985"></script>
 
   <script>
     fetch('/components/nav.html')

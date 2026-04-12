@@ -175,8 +175,34 @@
     <div id="comments-placeholder"></div>
   </main>
 
-  <!-- NAV SCRIPT -->
-  <script src="/components/nav.js"></script>
+  <!-- NAV -->
+<div id="nav-placeholder"></div>
+
+<script>
+  fetch('/components/nav.html')
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Nav failed to load: ' + res.status);
+      }
+      return res.text();
+    })
+    .then(data => {
+      const navPlaceholder = document.getElementById('nav-placeholder');
+      navPlaceholder.innerHTML = data;
+
+      const toggle = navPlaceholder.querySelector('.nav-toggle, .hamburger, .menu-toggle');
+      const menu = navPlaceholder.querySelector('.nav-menu, .mobile-menu, .nav-links');
+
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          toggle.classList.toggle('active');
+          menu.classList.toggle('active');
+          menu.classList.toggle('is-open');
+        });
+      }
+    })
+    .catch(err => console.log('Nav load error:', err));
+</script>
 
   <!-- COMMENTS (DISQUS) -->
   <script>

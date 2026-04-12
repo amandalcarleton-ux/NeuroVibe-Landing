@@ -111,11 +111,14 @@
       font-weight: 600;
       color: #7b5ea7;
     }
+
+    #comments-placeholder {
+      margin-top: 2rem;
+    }
   </style>
 </head>
 
 <body class="nv-y2k">
-
   <!-- NAV -->
   <div id="nav-placeholder"></div>
 
@@ -168,32 +171,39 @@
       <p class="cc-signoff">— NeuroVibe Mama 🌿</p>
     </article>
 
-     // COMMENTS (DISQUS)
-  fetch('/components/comments.html')
-    .then(res => res.text())
-    .then(data => {
-      const commentsPlaceholder = document.getElementById('comments-placeholder');
+    <!-- COMMENTS -->
+    <div id="comments-placeholder"></div>
+  </main>
 
-      if (commentsPlaceholder) {
-        commentsPlaceholder.innerHTML = data;
+  <!-- NAV SCRIPT -->
+  <script src="/components/nav.js"></script>
 
-        window.disqus_config = function () {
-          this.page.url = window.location.href;
-          this.page.identifier = window.location.pathname;
-        };
+  <!-- COMMENTS (DISQUS) -->
+  <script>
+    fetch('/components/comments.html')
+      .then(res => res.text())
+      .then(data => {
+        const commentsPlaceholder = document.getElementById('comments-placeholder');
 
-        if (!document.getElementById('disqus-embed-script')) {
-          const d = document;
-          const s = d.createElement('script');
-          s.id = 'disqus-embed-script';
-          s.src = 'https://neurovibe.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
+        if (commentsPlaceholder) {
+          commentsPlaceholder.innerHTML = data;
+
+          window.disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = window.location.pathname;
+          };
+
+          if (!document.getElementById('disqus-embed-script')) {
+            const d = document;
+            const s = d.createElement('script');
+            s.id = 'disqus-embed-script';
+            s.src = 'https://neurovibe.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          }
         }
-      }
-    })
-    .catch(err => console.log('Comments load error:', err));
-</script>
-<!-- NAV SCRIPT -->
-  <script src="/components/nav.js"></script></body>
+      })
+      .catch(err => console.log('Comments load error:', err));
+  </script>
+</body>
 </html>

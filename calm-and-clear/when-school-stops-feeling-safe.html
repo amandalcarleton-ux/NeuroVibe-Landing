@@ -168,29 +168,32 @@
       <p class="cc-signoff">— NeuroVibe Mama 🌿</p>
     </article>
 
-    <!-- DISQUS COMMENTS -->
-    <section style="margin-top: 3rem;">
-      <div id="disqus_thread"></div>
-      <script>
-        var disqus_config = function () {
+     // COMMENTS (DISQUS)
+  fetch('/components/comments.html')
+    .then(res => res.text())
+    .then(data => {
+      const commentsPlaceholder = document.getElementById('comments-placeholder');
+
+      if (commentsPlaceholder) {
+        commentsPlaceholder.innerHTML = data;
+
+        window.disqus_config = function () {
           this.page.url = window.location.href;
-          this.page.identifier = "when-school-stops-feeling-safe";
+          this.page.identifier = window.location.pathname;
         };
 
-        (function () {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://YOUR-DISQUS-SHORTNAME.disqus.com/embed.js';  // ← REPLACE THIS
+        if (!document.getElementById('disqus-embed-script')) {
+          const d = document;
+          const s = d.createElement('script');
+          s.id = 'disqus-embed-script';
+          s.src = 'https://neurovibe.disqus.com/embed.js';
           s.setAttribute('data-timestamp', +new Date());
           (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the comments.</noscript>
-    </section>
-
-  </main>
-
-  <!-- NAV SCRIPT -->
-  <script src="/components/nav.js"></script>
-
-</body>
+        }
+      }
+    })
+    .catch(err => console.log('Comments load error:', err));
+</script>
+<!-- NAV SCRIPT -->
+  <script src="/components/nav.js"></script></body>
 </html>

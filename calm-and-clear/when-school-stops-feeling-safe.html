@@ -175,34 +175,38 @@
     <div id="comments-placeholder"></div>
   </main>
 
-  <!-- NAV -->
-<div id="nav-placeholder"></div>
-
 <script>
-  fetch('/components/nav.html')
-    .then(res => {
-      if (!res.ok) {
-        throw new Error('Nav failed to load: ' + res.status);
-      }
-      return res.text();
-    })
-    .then(data => {
-      const navPlaceholder = document.getElementById('nav-placeholder');
-      navPlaceholder.innerHTML = data;
+fetch("/components/nav.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("nav-placeholder").innerHTML = data;
 
-      const toggle = navPlaceholder.querySelector('.nav-toggle, .hamburger, .menu-toggle');
-      const menu = navPlaceholder.querySelector('.nav-menu, .mobile-menu, .nav-links');
+    setTimeout(() => {
+      const toggle = document.getElementById("nv-menu-toggle");
+      const nav = document.getElementById("nv-nav");
 
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          toggle.classList.toggle('active');
-          menu.classList.toggle('active');
-          menu.classList.toggle('is-open');
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("active");
+          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
+
+        document.addEventListener("click", (e) => {
+          if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+            nav.classList.remove("active");
+            toggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      } else {
+        console.warn("Nav elements not found");
       }
-    })
-    .catch(err => console.log('Nav load error:', err));
+    }, 100);
+  })
+  .catch(error => {
+    console.error("Nav failed to load:", error);
+  });
 </script>
+
 
   <!-- COMMENTS (DISQUS) -->
   <script>

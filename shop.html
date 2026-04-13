@@ -7,7 +7,7 @@
   <title>Shop | NeuroVibe</title>
   <meta
     name="description"
-    content="The NeuroVibe Shop — focused support paths, wellness tools, emotional support resources, beauty resets, and soft lifestyle favorites that actually fit real life."
+    content="The NeuroVibe Shop — a gentle storefront hub for wellness support, emotional tools, beauty resets, and curated lifestyle picks that fit real life."
   />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://neurovibe.site/shop.html" />
@@ -234,16 +234,21 @@
     }
 
     .nv-paths-grid,
-    .nv-new-grid,
-    .nv-style-grid{
+    .nv-new-grid{
       display:grid;
       grid-template-columns:repeat(3, minmax(0,1fr));
       gap:20px;
     }
 
+    .nv-lanes-grid{
+      display:grid;
+      grid-template-columns:repeat(5, minmax(0,1fr));
+      gap:18px;
+    }
+
     .nv-path-card,
     .nv-curated-card,
-    .nv-style-card,
+    .nv-lane-card,
     .nv-product-card{
       border-radius:24px;
       background:rgba(255,255,255,0.82);
@@ -252,15 +257,15 @@
       transition:transform .22s ease, box-shadow .22s ease;
     }
 
-    .nv-path-card{
+    .nv-path-card,
+    .nv-lane-card{
       padding:22px 20px;
       display:flex;
       flex-direction:column;
       min-height:100%;
     }
 
-    .nv-curated-card,
-    .nv-style-card{
+    .nv-curated-card{
       display:flex;
       flex-direction:column;
       overflow:hidden;
@@ -268,8 +273,8 @@
     }
 
     .nv-curated-card:hover,
-    .nv-style-card:hover,
     .nv-path-card:hover,
+    .nv-lane-card:hover,
     .nv-product-card:hover{
       transform:translateY(-6px);
       box-shadow:0 20px 40px rgba(75,46,131,0.14);
@@ -345,34 +350,15 @@
       flex-direction:column;
       gap:10px;
       padding:18px 18px 20px;
+      height:100%;
     }
 
     .nv-curated-card .nv-btn,
-    .nv-style-card .nv-btn,
-    .nv-path-card .nv-btn{
+    .nv-path-card .nv-btn,
+    .nv-lane-card .nv-btn{
       margin-top:10px;
       width:100%;
       justify-content:center;
-    }
-
-    .nv-card-kicker{
-      margin:0 0 4px;
-      font-size:0.78rem;
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:0.08em;
-      color:#8e6bb8;
-    }
-
-    .nv-card-list{
-      margin:0 0 12px;
-      padding-left:18px;
-      color:#3a3550;
-      line-height:1.7;
-    }
-
-    .nv-card-list li{
-      margin-bottom:8px;
     }
 
     .nv-card-actions{
@@ -448,15 +434,9 @@
     }
 
     .nv-shop-section,
-    .nv-spotlight-section,
+    .nv-preview-section,
     .nv-kleo-section,
-    .nv-softlife-section,
-    .nv-mood-section,
-    .nv-western-section,
-    .nv-extras-section,
-    .nv-gifts-section,
-    .nv-treats-section,
-    .nv-style-section{
+    .nv-rb-section{
       margin-top:30px;
       padding:28px;
       border-radius:32px;
@@ -464,13 +444,8 @@
       box-shadow:0 18px 40px rgba(75,46,131,0.12);
     }
 
-    .nv-shop-section{
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
-        linear-gradient(135deg, rgba(198,168,255,0.24), rgba(126,230,255,0.16));
-    }
-
-    .nv-spotlight-section{
+    .nv-shop-section,
+    .nv-preview-section{
       background:
         linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
         linear-gradient(135deg, rgba(198,168,255,0.24), rgba(126,230,255,0.16));
@@ -482,47 +457,10 @@
         linear-gradient(135deg, rgba(232,220,255,0.96) 0%, rgba(223,235,255,0.92) 100%);
     }
 
-    .nv-softlife-section{
+    .nv-rb-section{
       background:
         radial-gradient(circle at top left, rgba(255,255,255,0.34), transparent 36%),
         linear-gradient(135deg, rgba(255,245,233,0.96) 0%, rgba(255,236,246,0.92) 52%, rgba(245,240,255,0.92) 100%);
-    }
-
-    .nv-mood-section{
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.28), transparent 36%),
-        linear-gradient(135deg, rgba(255,232,243,0.96) 0%, rgba(242,232,255,0.92) 100%);
-    }
-
-    .nv-western-section{
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
-        linear-gradient(135deg, rgba(230,214,191,0.92), rgba(248,229,209,0.92));
-    }
-
-    .nv-extras-section{
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.56), rgba(255,255,255,0.28)),
-        linear-gradient(135deg, rgba(237,229,214,0.94), rgba(245,238,227,0.94));
-    }
-
-    .nv-gifts-section{
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.30), transparent 36%),
-        linear-gradient(135deg, rgba(242,234,255,0.96) 0%, rgba(255,239,247,0.92) 100%);
-    }
-
-    .nv-treats-section{
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.32), transparent 36%),
-        linear-gradient(135deg, rgba(255,237,248,0.96) 0%, rgba(255,247,226,0.92) 100%);
-    }
-
-    .nv-style-section{
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.32), transparent 36%),
-        linear-gradient(135deg, rgba(255,225,240,0.96) 0%, rgba(255,205,230,0.92) 48%, rgba(255,233,243,0.92) 100%);
-      box-shadow:0 18px 40px rgba(184,104,153,0.16);
     }
 
     .nv-style-intro{
@@ -540,23 +478,6 @@
     .nv-style-intro p{
       margin:0;
       line-height:1.75;
-      color:#4a3346;
-    }
-
-    .nv-style-card{
-      background:rgba(255,255,255,0.88);
-    }
-
-    .nv-style-card .nv-featured-badge{
-      color:#a04f87;
-      background:rgba(255,214,232,0.72);
-    }
-
-    .nv-style-card .nv-card-title{
-      color:#7b2f6b;
-    }
-
-    .nv-style-card .nv-card-text{
       color:#4a3346;
     }
 
@@ -587,158 +508,44 @@
       margin-bottom:10px;
     }
 
-    .nv-product-embed{
-      padding:14px;
-      border-radius:24px;
-      background:rgba(255,255,255,0.72);
-      border:1px solid rgba(255,255,255,0.62);
-      min-width:0;
-      overflow:hidden;
+    .nv-view-guides{
+      margin-top:24px;
+      text-align:center;
     }
 
-    .nv-shop-section > .nv-product-card{
-      display:grid;
-      grid-template-columns:minmax(0, 0.9fr) minmax(0, 1.1fr);
-      gap:24px;
-      padding:20px;
-      align-items:start;
-      overflow:visible;
-    }
-
-    .payhip-embed-page{
-      width:100%;
-      max-width:100%;
-    }
-
-    .payhip-embed-page h1,
-    .payhip-embed-page .product-title,
-    .payhip-embed-page h2{
-      font-size:clamp(1.7rem, 6vw, 2.4rem) !important;
-      line-height:1.2 !important;
-      word-break:break-word;
-      overflow-wrap:anywhere;
-    }
-
-    .payhip-embed-page .button,
-    .payhip-embed-page button,
-    .payhip-embed-page .btn{
-      width:100%;
-      max-width:320px;
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    .nv-wellness-card{
-      display:grid;
-      grid-template-columns:240px 1fr;
-      gap:1.25rem;
-      align-items:stretch;
-      background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,244,255,0.96));
-      border:1px solid rgba(170,140,210,0.22);
-      border-radius:24px;
-      overflow:hidden;
-      box-shadow:0 14px 34px rgba(66,31,87,0.10);
-    }
-
-    .nv-product-media{
-      position:relative;
-      min-height:100%;
-    }
-
-    .nv-product-media img{
-      width:100%;
-      height:100%;
-      min-height:280px;
-      object-fit:cover;
-      display:block;
-    }
-
-    .nv-badge{
-      position:absolute;
-      top:14px;
-      left:14px;
-      display:inline-flex;
-      align-items:center;
-      padding:0.4rem 0.75rem;
+    .nv-view-btn{
+      display:inline-block;
+      padding:14px 26px;
       border-radius:999px;
-      background:rgba(104,76,163,0.88);
-      color:#fff;
-      font-size:0.78rem;
-      font-weight:700;
-      letter-spacing:0.03em;
-    }
-
-    .nv-product-body{
-      padding:1.4rem 1.35rem 1.35rem 0;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-
-    .nv-product-kicker{
-      margin:0 0 0.4rem;
-      font-size:0.78rem;
-      font-weight:700;
-      text-transform:uppercase;
-      letter-spacing:0.08em;
-      color:#8e6bb8;
-    }
-
-    .nv-product-body h3{
-      margin:0 0 0.7rem;
-      font-size:1.4rem;
-      line-height:1.15;
-      color:#5b2ca0;
-    }
-
-    .nv-product-text{
-      margin:0 0 0.9rem;
-      line-height:1.65;
-      color:#4d4360;
-    }
-
-    .nv-product-meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:0.5rem;
-      margin:0 0 1rem;
-    }
-
-    .nv-product-meta span{
-      display:inline-flex;
-      padding:0.45rem 0.7rem;
-      border-radius:999px;
-      background:rgba(201,184,234,0.22);
-      color:#654c92;
-      font-size:0.82rem;
       font-weight:600;
+      font-size:15px;
+      text-decoration:none;
+      color:#fff;
+      background:linear-gradient(135deg, #c6a8ff, #7ee6ff, #ffb3ec);
+      box-shadow:0 8px 20px rgba(126, 230, 255, 0.35);
+      transition:all 0.25s ease;
     }
 
-    .nv-affiliate-note{
-      margin-top:0.85rem;
-      font-size:0.82rem;
-      color:#7a7188;
+    .nv-view-btn:hover{
+      transform:translateY(-2px) scale(1.03);
+      box-shadow:0 12px 28px rgba(126, 230, 255, 0.5);
+    }
+
+    .nv-cta-sub{
+      font-size:13px;
+      color:#5a4b7a;
+      margin-bottom:10px;
+      text-align:center;
     }
 
     @media (max-width: 1100px){
       .nv-paths-grid,
-      .nv-new-grid,
-      .nv-style-grid{
+      .nv-new-grid{
         grid-template-columns:repeat(2, minmax(0,1fr));
       }
-    }
 
-    @media (max-width: 768px){
-      .nv-wellness-card{
-        grid-template-columns:1fr;
-      }
-
-      .nv-product-body{
-        padding:1.1rem 1rem 1.15rem;
-      }
-
-      .nv-product-media img{
-        min-height:220px;
+      .nv-lanes-grid{
+        grid-template-columns:repeat(2, minmax(0,1fr));
       }
     }
 
@@ -747,22 +554,16 @@
       .nv-shop-footer,
       .nv-freebie-section,
       .nv-shop-section,
-      .nv-spotlight-section,
+      .nv-preview-section,
       .nv-kleo-section,
-      .nv-softlife-section,
-      .nv-mood-section,
-      .nv-western-section,
-      .nv-extras-section,
-      .nv-gifts-section,
-      .nv-treats-section,
-      .nv-style-section{
+      .nv-rb-section{
         padding:18px;
       }
 
       .nv-paths-grid,
       .nv-new-grid,
       .nv-shop-home-actions,
-      .nv-style-grid{
+      .nv-lanes-grid{
         grid-template-columns:1fr;
       }
 
@@ -793,44 +594,10 @@
         line-height:1.7;
       }
 
-      .nv-shop-section > .nv-product-card{
-        grid-template-columns:1fr;
-        padding:16px;
-      }
-
-      .nv-product-embed,
       .nv-product-info{
         padding:16px;
       }
-    }.nv-view-guides{
-  margin-top:24px;
-  text-align:center;
-}
-
-.nv-view-btn{
-  display:inline-block;
-  padding:14px 26px;
-  border-radius:999px;
-  font-weight:600;
-  font-size:15px;
-  text-decoration:none;
-  color:#fff;
-
-  background: linear-gradient(135deg, #c6a8ff, #7ee6ff, #ffb3ec);
-  box-shadow: 0 8px 20px rgba(126, 230, 255, 0.35);
-
-  transition: all 0.25s ease;
-}
-
-.nv-view-btn:hover{
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 12px 28px rgba(126, 230, 255, 0.5);
-}.nv-cta-sub{
-  font-size:13px;
-  color:#5a4b7a;
-  margin-bottom:10px;
-  text-align:center;
-}
+    }
   </style>
 </head>
 
@@ -853,7 +620,7 @@
 
           <div class="nv-shop-home-actions">
             <a href="#free-reset" class="nv-shop-home-btn primary">Get the Free Reset ✨</a>
-            <a href="#shop-paths" class="nv-shop-home-btn secondary">Start With a Support Path</a>
+            <a href="#shop-lanes" class="nv-shop-home-btn secondary">Explore the Shop Lanes</a>
           </div>
         </div>
       </section>
@@ -861,27 +628,21 @@
       <section class="nv-section-card nv-shop-intro glass">
         <h2>A softer storefront for real-life support</h2>
         <p>
-          The NeuroVibe Shop is built around the products and support paths I actually want to grow — simple support, emotional tools, beauty resets, and wearable favorites that fit real life.
+          The NeuroVibe Shop is now a simple place to start — a curated hub for wellness support, emotional tools, beauty resets, and lifestyle picks that fit real life.
         </p>
 
         <div class="nv-shop-update">
-          <strong>Right now:</strong> Start with the free reset, choose your support path, then explore the core NeuroVibe lanes — Bravenly, LiveGood, Diane Alber, Kleo, and curated lifestyle picks.
+          <strong>Start here:</strong> grab the free reset, choose your support path, then explore the part of NeuroVibe that fits what you need most right now.
         </div>
 
         <nav class="nv-shop-nav" aria-label="Shop sections">
           <a href="#free-reset">Start Here</a>
           <a href="#featured-guide">Featured Guide</a>
           <a href="#shop-paths">Support Paths</a>
-          <a href="#wellness-picks">Wellness</a>
-          <a href="#family-support">Family Support</a>
-          <a href="#beauty-reset">Beauty Reset</a>
-          <a href="#soft-life-essentials">Soft Life</a>
-          <a href="#mom-life-soft">Mom Life</a>
-          <a href="#mood-tees">Mood Tees</a>
-          <a href="#western-soul">Western Soul</a>
-          <a href="#little-extras">Extras</a>
-          <a href="#meaningful-gifts">Gifts</a>
-          <a href="#playful-treats">Treats</a>
+          <a href="#shop-lanes">Shop by Lane</a>
+          <a href="#family-support-preview">Family Support</a>
+          <a href="#beauty-reset-preview">Beauty Reset</a>
+          <a href="#rb-preview">RB Mercantile</a>
         </nav>
 
         <p class="nv-soft-note">
@@ -904,36 +665,37 @@
         </a>
       </section>
 
-     <section id="featured-guide" class="nv-shop-section">
-  <div class="nv-section-head">
-    <h2>✨ Focus &amp; Flow Reset System</h2>
-    <p>A gentle system for when your brain won’t cooperate 🤍</p>
-  </div>
+      <section id="featured-guide" class="nv-shop-section">
+        <div class="nv-section-head">
+          <h2>✨ Focus &amp; Flow Reset System</h2>
+          <p>A gentle system for when your brain won’t cooperate 🤍</p>
+        </div>
 
-  <div class="nv-product-card nv-featured-guide-card">
-    <div class="nv-product-info">
-      <ul class="nv-benefits">
-        <li>🧠 Start tasks without pressure</li>
-        <li>✨ Build momentum in small steps</li>
-        <li>🌿 Reset when you feel stuck</li>
-        <li>💛 Designed for real-life overwhelm</li>
-      </ul>
-<p class="nv-cta-sub">
-  Not sure where to start? This is a gentle place 💫
-</p>
-      <div class="nv-view-guides">
-        <a href="/guides.html" class="nv-view-btn">
-          💜 Find Your Support Tools
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="nv-product-card nv-featured-guide-card">
+          <div class="nv-product-info">
+            <ul class="nv-benefits">
+              <li>🧠 Start tasks without pressure</li>
+              <li>✨ Build momentum in small steps</li>
+              <li>🌿 Reset when you feel stuck</li>
+              <li>💛 Designed for real-life overwhelm</li>
+            </ul>
+            <p class="nv-cta-sub">
+              Not sure where to start? This is a gentle place 💫
+            </p>
+            <div class="nv-view-guides">
+              <a href="/guides.html" class="nv-view-btn">
+                💜 Find Your Support Tools
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="shop-paths" class="nv-section-card glass">
         <div class="nv-section-head">
           <h2>Choose Your Support Path</h2>
           <p>
-            Start with the lane that fits what you need most right now — simple baseline support or more elevated wellness support.
+            Start with the lane that fits what you need most right now — simple baseline support, more elevated wellness support, or a softer mix of real-life tools.
           </p>
         </div>
 
@@ -963,12 +725,12 @@
           </article>
 
           <article class="nv-path-card">
-            <span class="nv-featured-badge">💛 Start Here</span>
-            <h3 class="nv-card-title">Gentle, Real-Life Support</h3>
+            <span class="nv-featured-badge">💛 Gentle Support</span>
+            <h3 class="nv-card-title">Build Your Own Lane</h3>
             <p class="nv-card-text">
-              Build your own path with wellness support, emotional tools, beauty resets, and soft lifestyle favorites that feel like you.
+              Explore the parts of NeuroVibe that fit your real life — emotional tools, beauty resets, lifestyle favorites, and support that feels doable.
             </p>
-            <a class="nv-btn ghost" href="#soft-life-essentials">Explore the Shop</a>
+            <a class="nv-btn ghost" href="#shop-lanes">Explore the Lanes</a>
             <p class="nv-card-note">
               Start where you are and build from there ✨
             </p>
@@ -976,180 +738,67 @@
         </div>
       </section>
 
-      <section id="wellness-picks" class="nv-section-card glass">
+      <section id="shop-lanes" class="nv-section-card glass">
         <div class="nv-section-head">
-          <h2>🌿 Wellness Support</h2>
+          <h2>Shop by Lane</h2>
           <p>
-            Everyday support for hydration, nervous system balance, and realistic routines that actually fit real life.
+            Explore the part of NeuroVibe that fits what you need right now — foundational wellness, elevated support, family tools, beauty resets, or lifestyle picks.
           </p>
         </div>
 
-        <div class="nv-new-grid">
-          <article class="nv-curated-card">
-            <div class="nv-card-media">
-              <img
-                src="/images/Bravenly/bravenly-hydration-strawberry-kiwi.PNG"
-                alt="Bravenly Hydrate Strawberry Kiwi hydration drink mix"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">💧 Bravenly Pick</span>
-              <div class="nv-star-row" aria-label="NeuroVibe approved">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <h3 class="nv-card-title">Bravenly Hydrate – Strawberry Kiwi</h3>
-              <p class="nv-card-text">
-                A refreshing hydration drink mix designed to support energy, recovery, and daily wellness.
-              </p>
-              <a
-                class="nv-btn primary"
-                href="https://neurovibewell.bravenlyglobal.com/hydrate-sk/"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Shop Strawberry Kiwi Hydrate
-              </a>
-              <p class="nv-card-note">
-                Affiliate link • Hydration and daily wellness support
-              </p>
-            </div>
+        <div class="nv-lanes-grid">
+          <article class="nv-lane-card">
+            <span class="nv-featured-badge">🌿 Wellness Basics</span>
+            <h3 class="nv-card-title">LiveGood</h3>
+            <p class="nv-card-text">
+              Foundational daily support for simple routines, sleep support, and realistic consistency.
+            </p>
+            <a class="nv-btn primary" href="/livegood/">Explore LiveGood</a>
           </article>
 
-          <article class="nv-curated-card">
-            <div class="nv-card-media">
-              <img
-                src="/images/LG Magnesium.PNG"
-                alt="LiveGood Ultra Magnesium Complex supplement"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">🌙 LiveGood Pick</span>
-              <div class="nv-star-row" aria-label="NeuroVibe approved">
-                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-              </div>
-              <h3 class="nv-card-title">LiveGood Ultra Magnesium Complex</h3>
-              <p class="nv-card-text">
-                A simple support pick for sleep, muscle relaxation, nervous system balance, and daily wellness.
-              </p>
-              <a
-                class="nv-btn primary"
-                href="https://livegood.com/NeuroVibe"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Shop LiveGood Magnesium
-              </a>
-              <p class="nv-card-note">
-                Affiliate link • Nervous system and sleep support
-              </p>
-            </div>
+          <article class="nv-lane-card">
+            <span class="nv-featured-badge">✨ Elevated Wellness</span>
+            <h3 class="nv-card-title">Bravenly</h3>
+            <p class="nv-card-text">
+              Hydration, energy, and deeper daily support for a fuller wellness routine.
+            </p>
+            <a class="nv-btn primary" href="/bravenly/">Explore Bravenly</a>
           </article>
 
-          <section class="nv-product-card nv-bravenly-card">
-            <div class="nv-card-media">
-              <a
-                href="https://neurovibewell.bravenlyglobal.com/accelerate-trio-bundle/"
-                target="_blank"
-                rel="noopener sponsored"
-                aria-label="Shop the Bravenly Accelerate Trio"
-              >
-                <img
-                  src="/images/Bravenly/bravenly-accelerate-trio-neurovibe.PNG"
-                  alt="Bravenly Accelerate Trio Bundle featuring Rush, Ignite, and Gold supplements for energy, focus, and daily wellness"
-                  loading="lazy"
-                />
-              </a>
-            </div>
+          <article class="nv-lane-card">
+            <span class="nv-featured-badge">💛 Family Support</span>
+            <h3 class="nv-card-title">Emotional + Kid Support</h3>
+            <p class="nv-card-text">
+              Tools and resources for emotional learning, calm corners, and real-life family support.
+            </p>
+            <a class="nv-btn ghost" href="#family-support-preview">View Family Picks</a>
+          </article>
 
-            <div class="nv-card-body">
-              <p class="nv-card-kicker">Wellness Pick</p>
-              <h3 class="nv-card-title">Daily support. Brighter tomorrows.</h3>
-              <p class="nv-card-desc">
-                The Accelerate Trio is part of my daily routine for steady energy,
-                better focus, and that “feel-good” momentum that makes real life easier.
-              </p>
+          <article class="nv-lane-card">
+            <span class="nv-featured-badge">💅 Beauty Reset</span>
+            <h3 class="nv-card-title">Kleo Kolor</h3>
+            <p class="nv-card-text">
+              Small beauty resets that help you feel a little more like yourself again.
+            </p>
+            <a class="nv-btn primary" href="/beautyhub.html">Explore BeautyHub</a>
+          </article>
 
-              <ul class="nv-card-list">
-                <li>Clean, sustained energy (no crash)</li>
-                <li>Supports focus + mental clarity</li>
-                <li>Helps with metabolism + daily balance</li>
-                <li>Small daily steps, big impact</li>
-              </ul>
-
-              <div class="nv-card-actions">
-                <a
-                  class="nv-btn nv-btn-primary"
-                  href="https://neurovibewell.bravenlyglobal.com/accelerate-trio-bundle/"
-                  target="_blank"
-                  rel="noopener sponsored"
-                >
-                  ✨ Shop the Accelerate Trio
-                </a>
-              </div>
-
-              <p class="nv-affiliate-note">
-                Affiliate link • Trusted products • Real-life support
-              </p>
-            </div>
-          </section>
-
-          <article class="nv-product-card nv-wellness-card">
-            <div class="nv-product-media">
-              <a
-                href="https://www.cleannutra.com/neurovibe"
-                target="_blank"
-                rel="noopener sponsored"
-                aria-label="Shop NeuroVibe wellness support from Clean Nutra"
-              >
-                <img
-                  src="/images/products/neurovibe-cleannutra-card.PNG"
-                  alt="NeuroVibe wellness support liquid supplement by Clean Nutra"
-                  loading="lazy"
-                />
-              </a>
-              <span class="nv-badge">NeuroVibe Elevated</span>
-            </div>
-
-            <div class="nv-product-body">
-              <p class="nv-product-kicker">Daily Support</p>
-              <h3>NeuroVibe Wellness Support</h3>
-              <p class="nv-product-text">
-                A simple way to support calm, focus, and steadier days when your brain feels
-                a little too loud. This is the kind of support that fits into real life —
-                easy, intentional, and made for your gentle reset era.
-              </p>
-
-              <div class="nv-product-meta">
-                <span>calm + clarity</span>
-                <span>daily nervous system support</span>
-              </div>
-
-              <a
-                class="nv-btn primary"
-                href="https://www.cleannutra.com/neurovibe"
-                target="_blank"
-                rel="noopener sponsored"
-              >
-                Shop Now
-              </a>
-
-              <p class="nv-affiliate-note">
-                Affiliate link. I only share tools and wellness picks that fit the NeuroVibe lifestyle.
-              </p>
-            </div>
+          <article class="nv-lane-card">
+            <span class="nv-featured-badge">🤍 Style + Lifestyle</span>
+            <h3 class="nv-card-title">RB Mercantile Picks</h3>
+            <p class="nv-card-text">
+              Soft life styles, mom-life favorites, western pieces, gifts, and playful extras.
+            </p>
+            <a class="nv-btn primary" href="/rb-mercantile.html">Shop RB Mercantile</a>
           </article>
         </div>
       </section>
 
-      <section id="family-support" class="nv-spotlight-section">
+      <section id="family-support-preview" class="nv-preview-section">
         <div class="nv-section-head">
           <h2>💛 Family + Emotional Support</h2>
           <p>
-            A trust-building lane for emotional learning, big feelings, and practical support you can actually use with kids.
+            Gentle tools for emotional learning, big feelings, and practical support for real life with kids.
           </p>
         </div>
 
@@ -1170,13 +819,13 @@
               </a>
             </div>
             <div class="nv-card-body">
-              <span class="nv-featured-badge">📚 Diane Alber Pick</span>
+              <span class="nv-featured-badge">📚 Family Pick</span>
               <div class="nv-star-row" aria-label="NeuroVibe approved">
                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
               </div>
-              <h3 class="nv-card-title">A Little Spot of Emotion Book Set</h3>
+              <h3 class="nv-card-title">A Little Spot of Emotion</h3>
               <p class="nv-card-text">
-                A gentle, kid-friendly way to talk about emotions like anger, anxiety, love, and happiness.
+                A gentle, visual way to talk about feelings with kids in a way that feels approachable and supportive.
               </p>
               <a
                 class="nv-btn primary"
@@ -1184,65 +833,56 @@
                 target="_blank"
                 rel="noopener sponsored nofollow"
               >
-                Get 10% Off This Set
+                Shop Family Support
+              </a>
+            </div>
+          </article>
+
+          <article class="nv-curated-card">
+            <div class="nv-card-body">
+              <span class="nv-featured-badge">🌼 More Support</span>
+              <h3 class="nv-card-title">Explore More Emotional Tools</h3>
+              <p class="nv-card-text">
+                Browse the family support lane for practical tools that fit calm corners, emotional check-ins, and everyday support.
+              </p>
+              <a
+                class="nv-btn ghost"
+                href="https://www.dianealber.com/discount/AMANDACARLETONN?ref=neurovibe"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Browse Diane Alber Picks
               </a>
               <p class="nv-card-note">
-                Use code AMANDACARLETONN • Affiliate link
+                Gentle resources for real-life family support
               </p>
             </div>
           </article>
 
-          <section class="nv-product-card nv-diane-card">
-            <div class="nv-card-media">
-              <a
-                href="https://www.dianealber.com/products/copy-of-a-little-spot-of-emotion-box-set-8-books-anger-anxiety-peaceful-happiness-sadness-confidence-love-scribble-emotion?ref=neurovibe&amp;variant=42338432549055"
-                target="_blank"
-                rel="noopener sponsored"
-                aria-label="Shop A Little SPOT Emotional Regulation Box Set"
-              >
-                <img
-                  src="/images/diane-emotional-regulation-box-set-neurovibe.PNG"
-                  alt="A Little SPOT Emotional Regulation Box Set by Diane Alber styled in a NeuroVibe-inspired product graphic"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-
+          <article class="nv-curated-card">
             <div class="nv-card-body">
-              <p class="nv-card-kicker">Diane Alber Pick</p>
-              <h3 class="nv-card-title">A Little SPOT Emotional Regulation Box Set</h3>
-              <p class="nv-card-desc">
-                We added this into our routine 🤍
-                A simple, visual way to help little ones name and navigate big feelings
-                without adding more overwhelm.
+              <span class="nv-featured-badge">🧸 Everyday Help</span>
+              <h3 class="nv-card-title">Build a Softer Support Routine</h3>
+              <p class="nv-card-text">
+                Emotional vocabulary, regulation tools, and practical family resources that help hard days feel a little more manageable.
               </p>
-
-              <ul class="nv-card-list">
-                <li>Great for calm corners</li>
-                <li>Helpful for everyday emotional check-ins</li>
-                <li>A gentle tool for building emotional vocabulary</li>
-              </ul>
-
-              <div class="nv-card-actions">
-                <a
-                  class="nv-btn nv-btn-primary"
-                  href="https://www.dianealber.com/products/copy-of-a-little-spot-of-emotion-box-set-8-books-anger-anxiety-peaceful-happiness-sadness-confidence-love-scribble-emotion?ref=neurovibe&amp;variant=42338432549055"
-                  target="_blank"
-                  rel="noopener sponsored"
-                >
-                  Shop the Routine
-                </a>
-              </div>
-
-              <p class="nv-affiliate-note">
-                Affiliate link included. I only share tools and resources that fit real-life support.
+              <a
+                class="nv-btn ghost"
+                href="https://www.dianealber.com/discount/AMANDACARLETONN?ref=neurovibe"
+                target="_blank"
+                rel="noopener sponsored nofollow"
+              >
+                Explore the Family Lane
+              </a>
+              <p class="nv-card-note">
+                Real-life support for big feelings and everyday moments
               </p>
             </div>
-          </section>
+          </article>
         </div>
       </section>
 
-      <section id="beauty-reset" class="nv-kleo-section" aria-label="Beauty reset section">
+      <section id="beauty-reset-preview" class="nv-kleo-section" aria-label="Beauty reset preview">
         <div class="nv-style-intro">
           <h2>💅 Beauty Reset | Kleo Kolor</h2>
           <p>
@@ -1257,7 +897,7 @@
         </div>
 
         <div class="nv-new-grid">
-          <article class="nv-style-card">
+          <article class="nv-curated-card">
             <div class="nv-card-media nv-promo-media">
               <a href="/beautyhub.html">
                 <img
@@ -1278,13 +918,10 @@
                 Press-on and beauty-forward picks that fit the NeuroVibe reset vibe — low-effort, visual, and confidence-friendly.
               </p>
               <a class="nv-btn primary" href="/beautyhub.html">Shop Kleo Picks</a>
-              <p class="nv-card-note">
-                Beauty resets that fit real life
-              </p>
             </div>
           </article>
 
-          <article class="nv-style-card">
+          <article class="nv-curated-card">
             <div class="nv-card-media nv-promo-media">
               <a href="/beautyhub.html">
                 <img
@@ -1305,85 +942,21 @@
                 This section is less about perfection and more about little resets that help you come back to yourself in a way that still feels doable.
               </p>
               <a class="nv-btn ghost" href="/beautyhub.html">Explore BeautyHub</a>
-              <p class="nv-card-note">
-                A beauty lane that feels soft, simple, and wearable
-              </p>
             </div>
           </article>
         </div>
       </section>
 
-      <section id="soft-life-essentials" class="nv-softlife-section">
+      <section id="rb-preview" class="nv-rb-section">
         <div class="nv-section-head">
-          <h2>🌼 Soft Life Essentials</h2>
+          <h2>🤍 RB Mercantile Picks</h2>
           <p>
-            Little things that help you feel more like yourself again — soft, simple, and easy to reach for.
+            Soft style, western edge, mom-life favorites, gifts, and playful extras — all in one place.
           </p>
         </div>
 
         <div class="nv-new-grid">
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-sunflower-tee.JPG"
-                alt="Sunflower tee soft life essential"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">🌻 Soft Life Pick</span>
-              <h3 class="nv-card-title">Sunflower Tee</h3>
-              <p class="nv-card-text">
-                A soft, easy piece for slow days, simple outfits, and feeling a little more like yourself again.
-              </p>
-              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Shop Soft Life Picks
-              </a>
-              <p class="nv-card-note">Use your RB storefront or direct product link here</p>
-            </div>
-          </article>
-
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-lucky-tee.JPG"
-                alt="Lucky tee soft life essential"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">✨ Feel-Good Pick</span>
-              <h3 class="nv-card-title">Lucky Tee</h3>
-              <p class="nv-card-text">
-                Soft energy, easy styling, and a little hopeful momentum wrapped into a cute everyday tee.
-              </p>
-              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Browse More Soft Styles
-              </a>
-              <p class="nv-card-note">Great for your soft aesthetic and identity-based content</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="mom-life-soft" class="nv-style-section">
-        <div class="nv-style-intro">
-          <h2>🤍 Mom Life (But Make It Soft)</h2>
-          <p>
-            For the moms doing their best — even on the hard days.
-          </p>
-        </div>
-
-        <div class="nv-mom-intro">
-          <p>
-            This lane is for the pieces that feel cozy, personal, wearable, and actually made for real-life motherhood.
-          </p>
-        </div>
-
-        <div class="nv-style-grid">
-          <article class="nv-style-card">
+          <article class="nv-curated-card">
             <div class="nv-card-media nv-promo-media">
               <img
                 src="/images/products/rb-custom-mama-sweatshirt.JPG"
@@ -1393,126 +966,16 @@
               />
             </div>
             <div class="nv-card-body">
-              <span class="nv-featured-badge">🤍 Mom Favorite</span>
-              <h3 class="nv-card-title">Custom Mama Sweatshirt</h3>
+              <span class="nv-featured-badge">🤍 Featured Pick</span>
+              <h3 class="nv-card-title">RB Mercantile Style Picks</h3>
               <p class="nv-card-text">
-                A meaningful, cozy piece that feels personal, wearable, and giftable all at once.
+                Cozy, wearable, expressive pieces for real life — from soft mom styles to fun western finds and little extras.
               </p>
-              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Shop Mom Picks
-              </a>
-              <p class="nv-card-note">Perfect for moms, gifting, and emotional connection posts</p>
+              <a class="nv-btn primary" href="/rb-mercantile.html">Shop RB Mercantile</a>
             </div>
           </article>
 
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-mama-tee.PNG"
-                alt="Relatable mom tee"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">☁️ Real-Life Mom Pick</span>
-              <h3 class="nv-card-title">Cozy Mom-Life Styles</h3>
-              <p class="nv-card-text">
-                Relatable, oversized, and easygoing pieces for the moms who want comfort without losing themselves.
-              </p>
-              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Browse More Mom Styles
-              </a>
-              <p class="nv-card-note">Use this for oversized tees, sweatshirts, and cozy fits</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="mood-tees" class="nv-mood-section">
-        <div class="nv-section-head">
-          <h2>✨ Mood Tees + Attitude</h2>
-          <p>
-            A little bold, a little funny, and a little unhinged in the best way.
-          </p>
-        </div>
-
-        <div class="nv-new-grid">
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-the-hell-i-wont.JPG"
-                alt="The Hell I Won't tee"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">🔥 Attitude Pick</span>
-              <h3 class="nv-card-title">The Hell I Won’t</h3>
-              <p class="nv-card-text">
-                A statement piece for the days you’re done shrinking yourself and ready to keep it real.
-              </p>
-              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Shop Mood Tees
-              </a>
-            </div>
-          </article>
-
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-you-look-like-you-love-me.JPG"
-                alt="You Look Like You Love Me tee"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">💋 Fun Pick</span>
-              <h3 class="nv-card-title">You Look Like You Love Me</h3>
-              <p class="nv-card-text">
-                Playful, flirty, funny, and perfect for content that leans into confidence and personality.
-              </p>
-              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Browse More Personality Picks
-              </a>
-            </div>
-          </article>
-
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-cadillac-black-jack-baby.JPG"
-                alt="Cadillac Black Jack Baby tee"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">🎲 Personality Pick</span>
-              <h3 class="nv-card-title">Cadillac Black Jack Baby</h3>
-              <p class="nv-card-text">
-                Vintage-feeling, a little chaotic, and perfect for a fun identity-driven fashion moment.
-              </p>
-              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                See More Mood Styles
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="western-soul" class="nv-western-section">
-        <div class="nv-section-head">
-          <h2>🐎 Western Soul</h2>
-          <p>
-            Grounded, expressive pieces with that western edge I keep coming back to.
-          </p>
-        </div>
-
-        <div class="nv-new-grid">
-          <article class="nv-style-card">
+          <article class="nv-curated-card">
             <div class="nv-card-media nv-promo-media">
               <img
                 src="/images/products/rb-cowboy-casino.JPG"
@@ -1522,242 +985,25 @@
               />
             </div>
             <div class="nv-card-body">
-              <span class="nv-featured-badge">🤠 Western Pick</span>
-              <h3 class="nv-card-title">Cowboy Casino Tee</h3>
+              <span class="nv-featured-badge">🐎 Western Edge</span>
+              <h3 class="nv-card-title">Soft Style + Personality</h3>
               <p class="nv-card-text">
-                A bold western graphic that feels vintage, expressive, and easy to build content around.
+                Browse lifestyle picks with personality — western soul, mood tees, meaningful gifts, and playful add-ons.
               </p>
-              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Shop Western Picks
-              </a>
+              <a class="nv-btn ghost" href="/rb-mercantile.html">View All RB Picks</a>
             </div>
           </article>
 
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-eat-more-beef.JPG"
-                alt="Eat More Beef tee"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
+          <article class="nv-curated-card">
             <div class="nv-card-body">
-              <span class="nv-featured-badge">🐄 Niche Pick</span>
-              <h3 class="nv-card-title">Eat More Beef Tee</h3>
+              <span class="nv-featured-badge">✨ Full Lifestyle Lane</span>
+              <h3 class="nv-card-title">Explore the Full RB Page</h3>
               <p class="nv-card-text">
-                A niche, strong identity piece that fits your western edge and stands out in a storefront.
+                Head to the full RB Mercantile page to browse soft life styles, mom-life favorites, western pieces, gifts, treats, and extras.
               </p>
-              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Browse More Western Styles
-              </a>
-            </div>
-          </article>
-
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-vintage-rodeo-collage.JPG"
-                alt="Vintage rodeo collage tee"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">⭐ Rodeo Pick</span>
-              <h3 class="nv-card-title">Vintage Rodeo Collage Tee</h3>
-              <p class="nv-card-text">
-                A statement western graphic with color, character, and great content potential.
-              </p>
-              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Explore Rodeo Vibes
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="little-extras" class="nv-extras-section">
-        <div class="nv-section-head">
-          <h2>🧢 Little Extras I Love</h2>
-          <p>
-            The smaller add-ons that make outfits, gifts, and everyday mood boosts more fun.
-          </p>
-        </div>
-
-        <div class="nv-new-grid">
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-hello-darlin-hat.JPG"
-                alt="Hello Darlin hat"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">🧢 Easy Add-On</span>
-              <h3 class="nv-card-title">Hello Darlin’ Hat</h3>
-              <p class="nv-card-text">
-                One of those easy throw-on pieces that instantly makes an outfit feel more finished.
-              </p>
-              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Shop Extras
-              </a>
-            </div>
-          </article>
-
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-pink-giddy-up-hat.JPG"
-                alt="Pink Giddy Up hat"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">💖 Fun Extra</span>
-              <h3 class="nv-card-title">Pink Giddy Up Hat</h3>
-              <p class="nv-card-text">
-                Playful, western, and an easy impulse-buy style piece that still feels on-brand.
-              </p>
-              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Browse More Extras
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="meaningful-gifts" class="nv-gifts-section">
-        <div class="nv-section-head">
-          <h2>🎁 Meaningful Gifts</h2>
-          <p>
-            Thoughtful, personal, and giftable favorites that feel easy to love.
-          </p>
-        </div>
-
-        <div class="nv-new-grid">
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-custom-mama-sweatshirt.JPG"
-                alt="Personalized mama sweatshirt"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">🎁 Gift Favorite</span>
-              <h3 class="nv-card-title">Personalized Mama Sweatshirt</h3>
-              <p class="nv-card-text">
-                Personal, cozy, memorable, and perfect for birthdays, holidays, or just-because gifting.
-              </p>
-              <a class="nv-btn primary" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Shop Giftable Picks
-              </a>
-            </div>
-          </article>
-
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <img
-                src="/images/products/rb-aztec-blanket.JPG"
-                alt="Western style blanket gift"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">🧺 Cozy Gift Pick</span>
-              <h3 class="nv-card-title">Cozy Western Blankets</h3>
-              <p class="nv-card-text">
-                A cozy home-style gift lane for people who love warmth, comfort, and a little western edge.
-              </p>
-              <a class="nv-btn ghost" href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow">
-                Browse More Gifts
-              </a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="playful-treats" class="nv-treats-section">
-        <div class="nv-section-head">
-          <h2>🍬 Playful Little Treats</h2>
-          <p>
-            Sweet finds, fun sips, and playful little extras for when you want something light mixed into real life.
-          </p>
-        </div>
-
-        <div class="nv-new-grid">
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <a
-                href="https://rbmercantile.com/collections/candy-and-treats?ref=neurovibe"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                <img
-                  src="/images/products/rb-candy-treats-card.PNG"
-                  alt="RB Mercantile candy and treats collection"
-                  loading="lazy"
-                  onerror="this.style.display='none';"
-                />
-              </a>
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">🍬 Treat Pick</span>
-              <h3 class="nv-card-title">Candy + Treats Collection</h3>
-              <p class="nv-card-text">
-                A fun little collection of sweets and treat-worthy finds from RB Mercantile.
-              </p>
-              <a
-                class="nv-btn primary"
-                href="https://rbmercantile.com/collections/candy-and-treats?ref=neurovibe"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Shop Candy + Treats
-              </a>
+              <a class="nv-btn ghost" href="/rb-mercantile.html">Go to RB Mercantile</a>
               <p class="nv-card-note">
-                Affiliate link • Sweet finds and fun extras
-              </p>
-            </div>
-          </article>
-
-          <article class="nv-style-card">
-            <div class="nv-card-media nv-promo-media">
-              <a
-                href="https://rbmercantile.com/collections/tasty-%F0%9F%8D%B5-teas?ref=neurovibe"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                <img
-                  src="/images/products/rb-tasty-teas-card.PNG"
-                  alt="RB Mercantile tasty teas collection"
-                  loading="lazy"
-                  onerror="this.style.display='none';"
-                />
-              </a>
-            </div>
-            <div class="nv-card-body">
-              <span class="nv-featured-badge">🍹 Sip Pick</span>
-              <h3 class="nv-card-title">Tasty Teas Collection</h3>
-              <p class="nv-card-text">
-                Sweet, refreshing teas that bring a fun, energizing vibe to your day.
-              </p>
-              <a
-                class="nv-btn primary"
-                href="https://rbmercantile.com/collections/tasty-%F0%9F%8D%B5-teas?ref=neurovibe"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Shop Tasty Teas
-              </a>
-              <p class="nv-card-note">
-                Affiliate link • Fun, flavorful daily boost
+                A dedicated page for all your style and lifestyle picks
               </p>
             </div>
           </article>
@@ -1793,8 +1039,6 @@
 
     </div>
   </main>
-
-  <script src="https://payhip.com/embed-page.js?v=24u68985"></script>
 
   <script>
     fetch('/components/nav.html')

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Grow With Me | NeuroVibe</title>
+  <meta
+    name="description"
+    content="Explore flexible ways to grow with NeuroVibe through wellness, beauty, lifestyle, and affiliate opportunities that fit real life."
+  />
+
+  <link rel="stylesheet" href="/style.css?v=112" />
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+
+  <style>
+    body.nv-y2k{
+      margin:0;
+      font-family:Poppins, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,.45), transparent 30%),
+        linear-gradient(180deg, #f5ecff 0%, #efe5ff 45%, #f9f4ff 100%);
+      color:#231b35;
+    }
+
+    .nv-grow-wrap{
+      width:min(1150px, calc(100% - 24px));
+      margin:0 auto;
+      padding:32px 0 80px;
+    }
+
+    .nv-grow-hero{
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(114,79,170,.16);
+      border-radius:28px;
+      padding:34px 22px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.92), rgba(247,239,255,.92)),
+        linear-gradient(135deg, #f8f0ff, #e9dcff);
+      box-shadow:0 18px 50px rgba(86,52,131,.12);
+      margin-bottom:22px;
+    }
+
+    .nv-grow-hero::before{
+      content:"";
+      position:absolute;
+      inset:auto -90px -90px auto;
+      width:260px;
+      height:260px;
+      border-radius:50%;
+      background:radial-gradient(circle, rgba(204,167,255,.35), transparent 68%);
+      pointer-events:none;
+    }
+
+    .nv-grow-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(143,98,221,.1);
+      border:1px solid rgba(143,98,221,.14);
+      color:#6d46aa;
+      font-size:.86rem;
+      font-weight:700;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    .nv-grow-hero h1{
+      margin:0 0 10px;
+      font-size:clamp(2rem, 4vw, 3.3rem);
+      line-height:1.04;
+      color:#24153f;
+    }
+
+    .nv-grow-hero p{
+      margin:0;
+      max-width:760px;
+      font-size:1.05rem;
+      line-height:1.75;
+      color:#4a3c67;
+    }
+
+    .nv-grow-hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:20px;
+    }
+
+    .nv-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:700;
+      text-decoration:none;
+      transition:.2s ease;
+      border:1px solid transparent;
+    }
+
+    .nv-btn-primary{
+      background:linear-gradient(135deg, #8e63de, #c66fd8);
+      color:#fff;
+      box-shadow:0 12px 28px rgba(142,99,222,.24);
+    }
+
+    .nv-btn-primary:hover{
+      transform:translateY(-1px);
+      box-shadow:0 16px 32px rgba(142,99,222,.28);
+    }
+
+    .nv-btn-ghost{
+      background:#fff;
+      color:#6840a4;
+      border-color:rgba(129,88,192,.18);
+    }
+
+    .nv-btn-ghost:hover{
+      transform:translateY(-1px);
+      background:#faf7ff;
+    }
+
+    .nv-grow-grid{
+      display:grid;
+      gap:18px;
+      margin-top:22px;
+    }
+
+    .nv-grow-intro{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      margin-bottom:22px;
+    }
+
+    .nv-card{
+      background:rgba(255,255,255,.9);
+      border:1px solid rgba(118,86,173,.12);
+      border-radius:24px;
+      padding:22px;
+      box-shadow:0 10px 28px rgba(73,40,115,.08);
+      backdrop-filter:blur(6px);
+    }
+
+    .nv-card h2,
+    .nv-card h3{
+      margin:0 0 10px;
+      color:#2d1f4f;
+    }
+
+    .nv-card p{
+      margin:0;
+      line-height:1.75;
+      color:#53456f;
+    }
+
+    .nv-mini-list{
+      display:grid;
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .nv-mini-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:16px;
+      background:#f7f1ff;
+      border:1px solid rgba(137,100,202,.12);
+      color:#5a4388;
+      font-weight:600;
+    }
+
+    .nv-section{
+      margin-top:28px;
+    }
+
+    .nv-section-head{
+      margin-bottom:14px;
+    }
+
+    .nv-section-head h2{
+      margin:0 0 8px;
+      font-size:1.55rem;
+      color:#281c46;
+    }
+
+    .nv-section-head p{
+      margin:0;
+      color:#5a4c75;
+      line-height:1.75;
+    }
+
+    .nv-brand-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+    }
+
+    .nv-brand-card{
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .nv-brand-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .nv-brand-top h3{
+      margin:0;
+      font-size:1.18rem;
+    }
+
+    .nv-tag{
+      display:inline-flex;
+      align-items:center;
+      white-space:nowrap;
+      padding:7px 11px;
+      border-radius:999px;
+      background:#f4ecff;
+      color:#744bb6;
+      border:1px solid rgba(116,75,182,.14);
+      font-size:.78rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    .nv-brand-copy{
+      display:grid;
+      gap:10px;
+    }
+
+    .nv-brand-copy p{
+      margin:0;
+    }
+
+    .nv-brand-note{
+      padding:12px 14px;
+      border-radius:16px;
+      background:#fcf9ff;
+      border:1px solid rgba(125,86,182,.1);
+      color:#5a4a7a;
+      font-size:.96rem;
+    }
+
+    .nv-brand-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:auto;
+      padding-top:6px;
+    }
+
+    .nv-disclaimer{
+      background:linear-gradient(180deg, rgba(255,255,255,.95), rgba(248,242,255,.95));
+    }
+
+    .nv-start-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:16px;
+      margin-top:16px;
+    }
+
+    .nv-start-card{
+      border-radius:20px;
+      padding:18px;
+      background:#fff;
+      border:1px solid rgba(118,86,173,.12);
+      box-shadow:0 8px 22px rgba(73,40,115,.06);
+    }
+
+    .nv-start-card h3{
+      margin:0 0 8px;
+      color:#2f2150;
+      font-size:1.02rem;
+    }
+
+    .nv-start-card p{
+      margin:0;
+      color:#584a75;
+      line-height:1.7;
+      font-size:.97rem;
+    }
+
+    .nv-footer-note{
+      margin-top:22px;
+      text-align:center;
+      color:#6a5c88;
+      font-size:.95rem;
+    }
+
+    @media (max-width: 900px){
+      .nv-grow-intro,
+      .nv-brand-grid,
+      .nv-start-grid{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body class="nv-y2k">
+  <div id="nav-placeholder"></div>
+
+  <main class="nv-grow-wrap">
+    <section class="nv-grow-hero">
+      <div class="nv-grow-kicker">Grow With Me ✨</div>
+      <h1>Build something softer — at your own pace.</h1>
+      <p>
+        If you have been looking for a flexible way to share products you already love,
+        explore extra income streams, or grow something from home in a way that feels more
+        like real life and less like pressure, this is a gentle place to start.
+      </p>
+
+      <div class="nv-grow-hero-actions">
+        <a class="nv-btn nv-btn-primary" href="#choose-your-path">Choose Your Path</a>
+        <a class="nv-btn nv-btn-ghost" href="/start.html">Back to Start Here</a>
+      </div>
+    </section>
+
+    <section class="nv-grow-intro">
+      <div class="nv-card">
+        <h2>This page is for the ones trying to build gently.</h2>
+        <p>
+          NeuroVibe has always been about support that fits real life. That includes finding
+          softer, more flexible ways to earn, share, create, and grow. These are opportunities
+          I connect with through wellness, beauty, lifestyle, and everyday support brands.
+        </p>
+      </div>
+
+      <div class="nv-card">
+        <h3>What you will find here</h3>
+        <div class="nv-mini-list">
+          <div class="nv-mini-pill">🌿 Wellness-centered options</div>
+          <div class="nv-mini-pill">💅 Fun self-care brands</div>
+          <div class="nv-mini-pill">🛍️ Lifestyle and boutique paths</div>
+          <div class="nv-mini-pill">✨ Flexible options for real life</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nv-section" id="choose-your-path">
+      <div class="nv-section-head">
+        <h2>Choose Your Path</h2>
+        <p>
+          You do not need to do everything. Start with the lane that feels most natural for you,
+          then grow from there.
+        </p>
+      </div>
+
+      <div class="nv-brand-grid">
+        <article class="nv-card nv-brand-card">
+          <div class="nv-brand-top">
+            <h3>Sugar Shower Co.</h3>
+            <span class="nv-tag">Self-Care</span>
+          </div>
+
+          <div class="nv-brand-copy">
+            <p>
+              A playful self-care path built around sweet, feel-good products and content that is
+              easy to share.
+            </p>
+            <div class="nv-brand-note">
+              Great for: fun content, shower reset posts, treat-yourself energy, and soft lifestyle sharing.
+            </div>
+          </div>
+
+          <div class="nv-brand-actions">
+            <a class="nv-btn nv-btn-primary" href="https://sugarshower.goaffpro.com/create-account?ref=neurovibe" target="_blank" rel="noopener noreferrer">Join Sugar Shower</a>
+            <a class="nv-btn nv-btn-ghost" href="https://sugarshowerllc.com/?ref=neurovibe" target="_blank" rel="noopener noreferrer">Shop the Brand</a>
+          </div>
+        </article>
+
+        <article class="nv-card nv-brand-card">
+          <div class="nv-brand-top">
+            <h3>Kleo Kolor Rewards</h3>
+            <span class="nv-tag">Beauty</span>
+          </div>
+
+          <div class="nv-brand-copy">
+            <p>
+              A beauty-focused path for those who love sharing nails, color, confidence, and fun
+              little self-care moments.
+            </p>
+            <div class="nv-brand-note">
+              Great for: beauty creators, nail content, playful product shares, and community-style growth.
+            </div>
+          </div>
+
+          <div class="nv-brand-actions">
+            <a class="nv-btn nv-btn-primary" href="https://kleokolor.com/pages/rewards?ref=neurovibekolor" target="_blank" rel="noopener noreferrer">Join Kleo Rewards</a>
+            <a class="nv-btn nv-btn-ghost" href="/beautyhub.html">See BeautyHub</a>
+          </div>
+        </article>
+
+        <article class="nv-card nv-brand-card">
+          <div class="nv-brand-top">
+            <h3>The Apothecary Cabinet</h3>
+            <span class="nv-tag">Wellness</span>
+          </div>
+
+          <div class="nv-brand-copy">
+            <p>
+              A gentle wellness path for those drawn to herbal support, earthy routines, and a more
+              grounded kind of everyday care.
+            </p>
+            <div class="nv-brand-note">
+              Great for: herbal lifestyle content, calm rituals, wellness sharing, and softer routines.
+            </div>
+          </div>
+
+          <div class="nv-brand-actions">
+            <a class="nv-btn nv-btn-primary" href="https://kh.theapothecarycabinet.com/create-account?ref=neurovibe" target="_blank" rel="noopener noreferrer">Join Apothecary Cabinet</a>
+            <a class="nv-btn nv-btn-ghost" href="https://theapothecarycabinet.com/?ref=neurovibe" target="_blank" rel="noopener noreferrer">Shop the Brand</a>
+          </div>
+        </article>
+
+        <article class="nv-card nv-brand-card">
+          <div class="nv-brand-top">
+            <h3>RB Mercantile</h3>
+            <span class="nv-tag">Boutique</span>
+          </div>
+
+          <div class="nv-brand-copy">
+            <p>
+              A boutique-style path that fits lifestyle, shopping, soft mom era content, and curated
+              everyday favorites.
+            </p>
+            <div class="nv-brand-note">
+              Great for: boutique lovers, outfit content, lifestyle sharing, and curated product picks.
+            </div>
+          </div>
+
+          <div class="nv-brand-actions">
+            <a class="nv-btn nv-btn-primary" href="https://rbmercantile.goaffpro.com/create-account?ref=neurovibe" target="_blank" rel="noopener noreferrer">Join RB Mercantile</a>
+            <a class="nv-btn nv-btn-ghost" href="/shop.html">Visit the Shop</a>
+          </div>
+        </article>
+
+        <article class="nv-card nv-brand-card">
+          <div class="nv-brand-top">
+            <h3>Bravenly</h3>
+            <span class="nv-tag">Lifestyle Wellness</span>
+          </div>
+
+          <div class="nv-brand-copy">
+            <p>
+              A wellness-centered path for those who want to explore community, supportive routines,
+              and brand sharing in a lifestyle space.
+            </p>
+            <div class="nv-brand-note">
+              Great for: community builders, wellness-minded moms, and those wanting a flexible path forward.
+            </div>
+          </div>
+
+          <div class="nv-brand-actions">
+            <a class="nv-btn nv-btn-primary" href="https://extranet.bydesign.com/bravenly/signup/enrollnew.asp?Country=USA&ReptypeID=&RepDID=B6927629" target="_blank" rel="noopener noreferrer">Join Bravenly</a>
+          </div>
+        </article>
+
+        <article class="nv-card nv-brand-card">
+          <div class="nv-brand-top">
+            <h3>LiveGood</h3>
+            <span class="nv-tag">Wellness Membership</span>
+          </div>
+
+          <div class="nv-brand-copy">
+            <p>
+              A wellness and membership-based path for those interested in affordable wellness support
+              and building steadily over time.
+            </p>
+            <div class="nv-brand-note">
+              Great for: wellness-focused people who want a lower-entry option and a simple place to begin.
+            </div>
+          </div>
+
+          <div class="nv-brand-actions">
+            <a class="nv-btn nv-btn-primary" href="https://livegoodtour.com/NeuroVibe" target="_blank" rel="noopener noreferrer">Explore LiveGood</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="nv-section">
+      <div class="nv-card nv-disclaimer">
+        <h2>A gentle note from NeuroVibe</h2>
+        <p>
+          I only share opportunities that fit the kind of life and content I am building. You do not
+          need to join everything. You do not need to figure it all out today. This page is here to give
+          you options, not pressure. Start with what feels aligned, manageable, and real for your season.
+        </p>
+      </div>
+    </section>
+
+    <section class="nv-section">
+      <div class="nv-section-head">
+        <h2>Not sure where to start?</h2>
+        <p>
+          Here is the easiest way to choose based on your vibe.
+        </p>
+      </div>
+
+      <div class="nv-start-grid">
+        <div class="nv-start-card">
+          <h3>Start with fun + easy content</h3>
+          <p>
+            Go with <strong>Sugar Shower Co.</strong> or <strong>Kleo Kolor Rewards</strong> if you want
+            something playful, visual, and simple to share online.
+          </p>
+        </div>
+
+        <div class="nv-start-card">
+          <h3>Start with wellness</h3>
+          <p>
+            Go with <strong>The Apothecary Cabinet</strong>, <strong>Bravenly</strong>, or
+            <strong>LiveGood</strong> if your audience connects most with routines, support, and soft wellness.
+          </p>
+        </div>
+
+        <div class="nv-start-card">
+          <h3>Start with lifestyle + boutique</h3>
+          <p>
+            Go with <strong>RB Mercantile</strong> if you love style, curated picks, and a lifestyle-first path.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <p class="nv-footer-note">
+      Build gently. Start small. Choose what fits.
+    </p>
+  </main>
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("navToggle");
+  const menu = document.getElementById("navMenu");
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("is-open");
+      toggle.classList.toggle("is-open");
+    });
+  }
+});
+</body>
+</html>

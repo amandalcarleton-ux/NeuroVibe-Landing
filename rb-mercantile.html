@@ -5,280 +5,483 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>RB Mercantile Picks | NeuroVibe</title>
+  <meta name="description" content="Shop Amanda’s curated RB Mercantile picks — soft life styles, mom-life favorites, western pieces, mood tees, gifts, treats, and playful extras that fit real life." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://neurovibe.site/rb-mercantile.html" />
 
-  <meta name="description" content="Shop Amanda’s curated RB Mercantile picks — soft life styles, mom-life favorites, western pieces, mood tees, gifts, and playful extras that fit real life." />
-
-  <link rel="stylesheet" href="/style.css?v=107" />
+  <link rel="stylesheet" href="/style.css?v=113" />
   <link rel="icon" href="/images/nv-favicon.PNG"/>
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
   <style>
-    body{
-      font-family:Poppins,sans-serif;
-      background:linear-gradient(180deg,#c8b8ff,#f3ecff);
+    *{box-sizing:border-box;}
+
+    html, body{
       margin:0;
-      color:#2d2545;
+      padding:0;
+    }
+
+    body.nv-y2k.rb-spring{
+      font-family:Poppins, system-ui, sans-serif;
+      color:#4f3550;
+      background:
+        radial-gradient(circle at top left, rgba(255, 223, 205, 0.96) 0%, transparent 34%),
+        radial-gradient(circle at top right, rgba(255, 198, 214, 0.80) 0%, transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255, 188, 152, 0.34) 0%, transparent 28%),
+        linear-gradient(180deg, #fff8f3 0%, #fff2ed 38%, #ffe9e1 72%, #fff6f1 100%);
+      background-attachment:fixed;
+    }
+
+    #nav-placeholder{
+      width:100%;
     }
 
     .nv-wrap{
       max-width:1100px;
       margin:auto;
-      padding:20px;
+      padding:28px 16px 64px;
+    }
+
+    .nv-hero,
+    .nv-section,
+    .nv-card{
+      border:1px solid rgba(255,255,255,0.64);
+      box-shadow:0 18px 42px rgba(128,72,90,0.10);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
     }
 
     .nv-hero{
       text-align:center;
-      padding:40px 20px;
+      padding:38px 24px;
+      border-radius:32px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.54), rgba(255,255,255,0.24)),
+        linear-gradient(135deg, rgba(255,191,160,0.22), rgba(255,170,192,0.16));
+      margin-bottom:28px;
+    }
+
+    .nv-kicker{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255, 208, 198, 0.55);
+      color:#a35764;
+      border:1px solid rgba(255,255,255,0.64);
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:14px;
     }
 
     .nv-hero h1{
-      font-size:2.5rem;
-      color:#5b2ca0;
-      margin-bottom:10px;
+      font-size:clamp(2rem, 4vw, 3.2rem);
+      line-height:1.06;
+      color:#9b4f5d;
+      margin:0 0 12px;
     }
 
     .nv-hero p{
-      max-width:600px;
-      margin:auto;
-      line-height:1.7;
+      max-width:720px;
+      margin:0 auto;
+      line-height:1.75;
+      color:#5d4955;
+      font-size:1.05rem;
     }
 
-    .nv-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .nv-card{
-      background:#fff;
-      border-radius:20px;
-      padding:18px;
-      box-shadow:0 10px 24px rgba(0,0,0,0.06);
+    .nv-hero-actions{
       display:flex;
-      flex-direction:column;
-    }
-
-    .nv-card img{
-      width:100%;
-      border-radius:14px;
-      margin-bottom:12px;
-    }
-
-    .nv-card h3{
-      margin:0 0 8px;
-      color:#5b2ca0;
-    }
-
-    .nv-card p{
-      font-size:0.95rem;
-      line-height:1.6;
-      flex-grow:1;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+      margin-top:22px;
     }
 
     .nv-btn{
-      margin-top:12px;
-      text-align:center;
-      padding:12px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:14px 22px;
       border-radius:999px;
       text-decoration:none;
-      font-weight:600;
-      background:linear-gradient(135deg,#7e7bff,#7edcff);
+      font-weight:800;
+      text-align:center;
+      transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+
+    .nv-btn-primary{
+      background:linear-gradient(135deg, #ff9d7d, #ff8fb1, #ffbd94);
       color:#fff;
+      border:1px solid rgba(255,255,255,.34);
+      box-shadow:0 12px 24px rgba(255,143,177,.22);
+    }
+
+    .nv-btn-ghost{
+      background:rgba(255,255,255,.88);
+      color:#9b5361;
+      border:1px solid rgba(255,255,255,.72);
+      box-shadow:0 10px 24px rgba(148,95,112,.08);
+    }
+
+    .nv-btn:hover{
+      transform:translateY(-2px);
+      opacity:.97;
     }
 
     .nv-section{
-      margin-top:50px;
+      margin-top:28px;
+      padding:26px;
+      border-radius:30px;
+      background:rgba(255,255,255,.72);
     }
 
     .nv-section h2{
       text-align:center;
-      color:#5b2ca0;
-      margin-bottom:10px;
+      color:#9b4f5d;
+      margin:0 0 10px;
+      font-size:clamp(1.7rem, 3vw, 2.35rem);
     }
 
-    .nv-section p{
+    .nv-section > p{
       text-align:center;
-      max-width:600px;
-      margin:auto;
-      margin-bottom:20px;
+      max-width:700px;
+      margin:0 auto 20px;
+      color:#5d4955;
+      line-height:1.75;
+    }
+
+    .nv-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      margin-top:22px;
+    }
+
+    .nv-card{
+      background:rgba(255,255,255,.84);
+      border-radius:26px;
+      padding:18px;
+      display:flex;
+      flex-direction:column;
+      transition:transform .22s ease, box-shadow .22s ease;
+    }
+
+    .nv-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 22px 44px rgba(128,72,90,0.14);
+    }
+
+    .nv-card img{
+      width:100%;
+      border-radius:18px;
+      margin-bottom:14px;
+      background:rgba(255,255,255,.48);
+      box-shadow:0 12px 28px rgba(128,72,90,0.10);
+    }
+
+    .nv-card h3{
+      margin:0 0 8px;
+      color:#9b4f5d;
+      font-size:1.2rem;
+    }
+
+    .nv-card p{
+      font-size:.95rem;
+      line-height:1.65;
+      color:#5d4955;
+      flex-grow:1;
+      margin:0 0 12px;
+    }
+
+    .nv-card .nv-btn{
+      width:100%;
+      margin-top:auto;
+    }
+
+    .nv-note{
+      margin:28px auto 0;
+      max-width:780px;
+      text-align:center;
+      color:#7a6771;
+      line-height:1.7;
+      font-size:.94rem;
+    }
+
+    .nv-footer{
+      text-align:center;
+      padding:0 16px 44px;
+      color:#7a6771;
+    }
+
+    @media(max-width:720px){
+      .nv-wrap{
+        padding:22px 14px 54px;
+      }
+
+      .nv-hero,
+      .nv-section{
+        padding:22px 18px;
+        border-radius:26px;
+      }
+
+      .nv-btn{
+        width:100%;
+      }
+
+      .nv-hero-actions{
+        flex-direction:column;
+      }
     }
   </style>
 </head>
 
-<body>
+<body class="nv-y2k rb-spring">
+  <div id="nav-placeholder"></div>
 
-<div class="nv-wrap">
+  <main class="nv-wrap">
 
-  <section class="nv-hero">
-    <h1>RB Mercantile Picks 🤍</h1>
-    <p>
-      Soft style, real-life outfits, western edge, and little extras that make you feel more like yourself again.
-      This is the lifestyle side of NeuroVibe — wearable, cozy, expressive, and actually livable.
+    <section class="nv-hero">
+      <div class="nv-kicker">Style + Lifestyle Picks</div>
+      <h1>RB Mercantile Picks</h1>
+      <p>
+        Soft style, real-life outfits, western edge, meaningful gifts, playful treats,
+        and little extras that make you feel more like yourself again.
+        This is the lifestyle side of NeuroVibe — wearable, cozy, expressive, and actually livable.
+      </p>
+
+      <div class="nv-hero-actions">
+        <a
+          href="https://rbmercantile.com/?ref=neurovibe"
+          target="_blank"
+          rel="noopener sponsored nofollow"
+          class="nv-btn nv-btn-primary"
+        >
+          Shop RB Mercantile
+        </a>
+
+        <a href="/shop.html" class="nv-btn nv-btn-ghost">
+          Back to NeuroVibe Shop
+        </a>
+      </div>
+    </section>
+
+    <section class="nv-section">
+      <h2>Soft Life Essentials</h2>
+      <p>
+        Easy, wearable pieces for slow days, errands, cozy resets, and simple outfit wins.
+      </p>
+
+      <div class="nv-grid">
+        <article class="nv-card">
+          <img src="/images/products/rb-sunflower-tee.JPG" alt="RB Mercantile Sunflower Tee" loading="lazy" />
+          <h3>Sunflower Tee</h3>
+          <p>Soft, easy, and perfect for slow days and simple outfits.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Shop This Style</a>
+        </article>
+
+        <article class="nv-card">
+          <img src="/images/products/rb-lucky-tee.JPG" alt="RB Mercantile Lucky Tee" loading="lazy" />
+          <h3>Lucky Tee</h3>
+          <p>Feel-good energy in a wearable everyday piece.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Browse More</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="nv-section">
+      <h2>Mom Life, But Make It Soft</h2>
+      <p>
+        Cozy, meaningful pieces that fit real-life motherhood without trying too hard.
+      </p>
+
+      <div class="nv-grid">
+        <article class="nv-card">
+          <img src="/images/products/rb-custom-mama-sweatshirt.JPG" alt="RB Mercantile Custom Mama Sweatshirt" loading="lazy" />
+          <h3>Custom Mama Sweatshirt</h3>
+          <p>Cozy, meaningful, and made for real-life motherhood.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Shop Mom Picks</a>
+        </article>
+
+        <article class="nv-card">
+          <img src="/images/products/rb-mama-tee.PNG" alt="RB Mercantile Mama Tee" loading="lazy" />
+          <h3>Cozy Mom Styles</h3>
+          <p>Oversized, relatable, and easy-to-wear pieces.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Browse Mom Styles</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="nv-section">
+      <h2>Mood Tees + Attitude</h2>
+      <p>
+        Pieces with personality for the days when your shirt can say it for you.
+      </p>
+
+      <div class="nv-grid">
+        <article class="nv-card">
+          <img src="/images/products/rb-the-hell-i-wont.JPG" alt="The Hell I Won’t tee" loading="lazy" />
+          <h3>The Hell I Won’t</h3>
+          <p>Bold, expressive, and unapologetically you.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Shop Mood Tees</a>
+        </article>
+
+        <article class="nv-card">
+          <img src="/images/products/rb-you-look-like-you-love-me.JPG" alt="You Look Like You Love Me tee" loading="lazy" />
+          <h3>You Look Like You Love Me</h3>
+          <p>Playful and confident with personality.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Browse More</a>
+        </article>
+
+        <article class="nv-card">
+          <img src="/images/products/rb-cadillac-black-jack-baby.JPG" alt="Cadillac Black Jack Baby tee" loading="lazy" />
+          <h3>Cadillac Black Jack Baby</h3>
+          <p>Vintage chaos energy in the best way.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Explore Styles</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="nv-section">
+      <h2>Western Soul</h2>
+      <p>
+        A little country, a little bold, and very content-ready.
+      </p>
+
+      <div class="nv-grid">
+        <article class="nv-card">
+          <img src="/images/products/rb-cowboy-casino.JPG" alt="Cowboy Casino Tee" loading="lazy" />
+          <h3>Cowboy Casino Tee</h3>
+          <p>Bold western energy with personality.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Shop Western Picks</a>
+        </article>
+
+        <article class="nv-card">
+          <img src="/images/products/rb-eat-more-beef.JPG" alt="Eat More Beef tee" loading="lazy" />
+          <h3>Eat More Beef</h3>
+          <p>Niche and strong identity style.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Browse Western</a>
+        </article>
+
+        <article class="nv-card">
+          <img src="/images/products/rb-vintage-rodeo-collage.JPG" alt="Vintage Rodeo collage tee" loading="lazy" />
+          <h3>Vintage Rodeo</h3>
+          <p>Colorful, expressive, and content-ready.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Explore More</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="nv-section">
+      <h2>Little Extras</h2>
+      <p>
+        Easy add-on pieces that pull the outfit together.
+      </p>
+
+      <div class="nv-grid">
+        <article class="nv-card">
+          <img src="/images/products/rb-hello-darlin-hat.JPG" alt="Hello Darlin Hat" loading="lazy" />
+          <h3>Hello Darlin Hat</h3>
+          <p>Easy add-on piece that pulls everything together.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Shop Extras</a>
+        </article>
+
+        <article class="nv-card">
+          <img src="/images/products/rb-pink-giddy-up-hat.JPG" alt="Pink Giddy Up Hat" loading="lazy" />
+          <h3>Pink Giddy Up Hat</h3>
+          <p>Fun, playful, western energy.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Browse Hats</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="nv-section">
+      <h2>Meaningful Gifts</h2>
+      <p>
+        Cozy, personal, and thoughtful picks for gifting.
+      </p>
+
+      <div class="nv-grid">
+        <article class="nv-card">
+          <img src="/images/products/rb-custom-mama-sweatshirt.JPG" alt="Mama Sweatshirt" loading="lazy" />
+          <h3>Mama Sweatshirt</h3>
+          <p>Personal, cozy, and giftable.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Shop Gifts</a>
+        </article>
+
+        <article class="nv-card">
+          <img src="/images/products/rb-aztec-blanket.JPG" alt="Western Aztec Blanket" loading="lazy" />
+          <h3>Western Blankets</h3>
+          <p>Warm, cozy, and perfect for gifting.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Browse Gifts</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="nv-section">
+      <h2>Playful Treats</h2>
+      <p>
+        Fun extras for sweet moments, gifting, and little dopamine boosts.
+      </p>
+
+      <div class="nv-grid">
+        <article class="nv-card">
+          <img src="/images/products/rb-candy-treats-card.PNG" alt="Candy and Treats" loading="lazy" />
+          <h3>Candy + Treats</h3>
+          <p>Fun, sweet extras for everyday life.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Shop Treats</a>
+        </article>
+
+        <article class="nv-card">
+          <img src="/images/products/rb-tasty-teas-card.PNG" alt="Tasty Teas" loading="lazy" />
+          <h3>Tasty Teas</h3>
+          <p>Sweet sips with a vibe.</p>
+          <a href="https://rbmercantile.com/?ref=neurovibe" target="_blank" rel="noopener sponsored nofollow" class="nv-btn nv-btn-primary">Browse Teas</a>
+        </article>
+      </div>
+    </section>
+
+    <p class="nv-note">
+      Disclosure: This page contains affiliate links. If you shop through them, NeuroVibe may earn a commission at no extra cost to you.
     </p>
-  </section>
 
-  <!-- SOFT LIFE -->
-  <section class="nv-section">
-    <h2>🌼 Soft Life Essentials</h2>
+  </main>
 
-    <div class="nv-grid">
-      <div class="nv-card">
-        <img src="/images/products/rb-sunflower-tee.JPG"/>
-        <h3>Sunflower Tee</h3>
-        <p>Soft, easy, and perfect for slow days and simple outfits.</p>
-        <a href="https://rbmercantile.com/?ref=neurovibe" class="nv-btn">Shop</a>
-      </div>
+  <footer class="nv-footer">
+    <p>© <span id="year"></span> NeuroVibe</p>
+  </footer>
 
-      <div class="nv-card">
-        <img src="/images/products/rb-lucky-tee.JPG"/>
-        <h3>Lucky Tee</h3>
-        <p>Feel-good energy in a wearable everyday piece.</p>
-        <a href="https://rbmercantile.com/?ref=neurovibe" class="nv-btn">Browse More</a>
-      </div>
-    </div>
-  </section>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
-  <!-- MOM LIFE -->
-  <section class="nv-section">
-    <h2>🤍 Mom Life (But Make It Soft)</h2>
+  <script>
+    fetch("/components/nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-    <div class="nv-grid">
-      <div class="nv-card">
-        <img src="/images/products/rb-custom-mama-sweatshirt.JPG"/>
-        <h3>Custom Mama Sweatshirt</h3>
-        <p>Cozy, meaningful, and made for real-life motherhood.</p>
-        <a href="https://rbmercantile.com/?ref=neurovibe" class="nv-btn">Shop Mom Picks</a>
-      </div>
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
 
-      <div class="nv-card">
-        <img src="/images/products/rb-mama-tee.PNG"/>
-        <h3>Cozy Mom Styles</h3>
-        <p>Oversized, relatable, and easy-to-wear pieces.</p>
-        <a href="https://rbmercantile.com/?ref=neurovibe" class="nv-btn">Browse</a>
-      </div>
-    </div>
-  </section>
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          });
 
-  <!-- MOOD -->
-  <section class="nv-section">
-    <h2>✨ Mood Tees + Attitude</h2>
-
-    <div class="nv-grid">
-      <div class="nv-card">
-        <img src="/images/products/rb-the-hell-i-wont.JPG"/>
-        <h3>The Hell I Won’t</h3>
-        <p>Bold, expressive, and unapologetically you.</p>
-        <a href="https://rbmercantile.com/?ref=neurovibe" class="nv-btn">Shop</a>
-      </div>
-
-      <div class="nv-card">
-        <img src="/images/products/rb-you-look-like-you-love-me.JPG"/>
-        <h3>You Look Like You Love Me</h3>
-        <p>Playful and confident with personality.</p>
-        <a href="https://rbmercantile.com/?ref=neurovibe" class="nv-btn">Browse</a>
-      </div>
-
-      <div class="nv-card">
-        <img src="/images/products/rb-cadillac-black-jack-baby.JPG"/>
-        <h3>Cadillac Black Jack Baby</h3>
-        <p>Vintage chaos energy in the best way.</p>
-        <a href="https://rbmercantile.com/?ref=neurovibe" class="nv-btn">Explore</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WESTERN -->
-  <section class="nv-section">
-    <h2>🐎 Western Soul</h2>
-
-    <div class="nv-grid">
-      <div class="nv-card">
-        <img src="/images/products/rb-cowboy-casino.JPG"/>
-        <h3>Cowboy Casino Tee</h3>
-        <p>Bold western energy with personality.</p>
-        <a href="#" class="nv-btn">Shop</a>
-      </div>
-
-      <div class="nv-card">
-        <img src="/images/products/rb-eat-more-beef.JPG"/>
-        <h3>Eat More Beef</h3>
-        <p>Niche and strong identity style.</p>
-        <a href="#" class="nv-btn">Browse</a>
-      </div>
-
-      <div class="nv-card">
-        <img src="/images/products/rb-vintage-rodeo-collage.JPG"/>
-        <h3>Vintage Rodeo</h3>
-        <p>Colorful, expressive, content-ready.</p>
-        <a href="#" class="nv-btn">Explore</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXTRAS -->
-  <section class="nv-section">
-    <h2>🧢 Little Extras</h2>
-
-    <div class="nv-grid">
-      <div class="nv-card">
-        <img src="/images/products/rb-hello-darlin-hat.JPG"/>
-        <h3>Hello Darlin Hat</h3>
-        <p>Easy add-on piece that pulls everything together.</p>
-        <a href="#" class="nv-btn">Shop</a>
-      </div>
-
-      <div class="nv-card">
-        <img src="/images/products/rb-pink-giddy-up-hat.JPG"/>
-        <h3>Pink Giddy Up Hat</h3>
-        <p>Fun, playful, western energy.</p>
-        <a href="#" class="nv-btn">Browse</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GIFTS -->
-  <section class="nv-section">
-    <h2>🎁 Meaningful Gifts</h2>
-
-    <div class="nv-grid">
-      <div class="nv-card">
-        <img src="/images/products/rb-custom-mama-sweatshirt.JPG"/>
-        <h3>Mama Sweatshirt</h3>
-        <p>Personal, cozy, and giftable.</p>
-        <a href="#" class="nv-btn">Shop Gifts</a>
-      </div>
-
-      <div class="nv-card">
-        <img src="/images/products/rb-aztec-blanket.JPG"/>
-        <h3>Western Blankets</h3>
-        <p>Warm, cozy, and perfect for gifting.</p>
-        <a href="#" class="nv-btn">Browse</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TREATS -->
-  <section class="nv-section">
-    <h2>🍬 Playful Treats</h2>
-
-    <div class="nv-grid">
-      <div class="nv-card">
-        <img src="/images/products/rb-candy-treats-card.PNG"/>
-        <h3>Candy + Treats</h3>
-        <p>Fun, sweet extras for everyday life.</p>
-        <a href="#" class="nv-btn">Shop</a>
-      </div>
-
-      <div class="nv-card">
-        <img src="/images/products/rb-tasty-teas-card.PNG"/>
-        <h3>Tasty Teas</h3>
-        <p>Sweet sips with a vibe.</p>
-        <a href="#" class="nv-btn">Browse</a>
-      </div>
-    </div>
-  </section>
-
-</div>
-
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+      })
+      .catch(err => console.error("Nav load error:", err));
+  </script>
 </body>
 </html>

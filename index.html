@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="/style.css?v=105"/>
+  <link rel="stylesheet" href="/style.css?v=106"/>
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG"/>
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG"/>
@@ -43,6 +43,16 @@
       padding:0;
     }
 
+    body.nv-y2k.home-spring{
+      background:
+        radial-gradient(circle at top left, rgba(255, 223, 205, 0.96) 0%, transparent 34%),
+        radial-gradient(circle at top right, rgba(255, 198, 214, 0.80) 0%, transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255, 188, 152, 0.34) 0%, transparent 28%),
+        linear-gradient(180deg, #fff8f3 0%, #fff2ed 38%, #ffe9e1 72%, #fff6f1 100%);
+      background-attachment: fixed;
+      color: #4f3550;
+    }
+
     #nav-placeholder{
       width:100%;
     }
@@ -51,11 +61,68 @@
       display:block;
     }
 
+    .nv-page{
+      padding: 18px 14px 44px;
+    }
+
+    .nv-wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 8px 16px 40px;
+    }
+
+    .nv-home-hero{
+      margin-bottom: 28px;
+    }
+
+    .nv-home-hero-grid{
+      display:grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+      gap:20px;
+      align-items:stretch;
+    }
+
+    .nv-home-hero-main,
+    .nv-home-hero-side{
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.64);
+      box-shadow: 0 18px 42px rgba(128, 72, 90, 0.10);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .nv-home-hero-main{
+      padding: 18px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
+        linear-gradient(135deg, rgba(255,191,160,0.22), rgba(255,170,192,0.16));
+    }
+
+    .nv-home-hero-side{
+      padding: 24px 22px;
+      background: rgba(255,255,255,0.76);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      text-align:center;
+    }
+
+    .nv-home-hero-main{
+      margin-bottom: 16px;
+    }
+
+    .nv-home-hero-image{
+      width:100%;
+      display:block;
+      border-radius:24px;
+      margin-bottom:16px;
+    }
+
     .nv-home-hero-actions{
       display:flex;
       flex-direction:column;
-      gap:12px;
-      margin-top:14px;
+      gap:14px;
+      margin-top:12px;
     }
 
     .nv-freebie-btn{
@@ -63,27 +130,79 @@
       align-items:center;
       justify-content:center;
       width:100%;
-      min-height:54px;
+      min-height:56px;
       padding:14px 22px;
       border-radius:999px;
-      background:linear-gradient(135deg, #8f5bff, #ff8e9d);
+      background:linear-gradient(135deg, #ff9d7d, #ff8fb1, #ffbd94);
       color:#fff;
       text-decoration:none;
       font-weight:700;
       font-size:15px;
       line-height:1.2;
-      box-shadow:0 12px 28px rgba(143,91,255,0.25);
+      border:1px solid rgba(255,255,255,0.34);
+      box-shadow:0 12px 28px rgba(255,143,177,0.22);
       transition:all 0.2s ease;
     }
 
     .nv-freebie-btn:hover{
       transform:translateY(-2px);
-      box-shadow:0 16px 32px rgba(143,91,255,0.3);
+      box-shadow:0 16px 32px rgba(255,143,177,0.28);
+    }
+
+    .home-spring .nv-btn.primary{
+      color:#fff;
+      background:linear-gradient(135deg, #ff9d7d, #ff8fb1, #ffbd94);
+      border:1px solid rgba(255,255,255,0.34);
+      box-shadow:0 12px 24px rgba(255,143,177,0.22);
+    }
+
+    .home-spring .nv-btn.ghost{
+      color:#9b5361;
+      background:rgba(255,255,255,0.84);
+      border:1px solid rgba(255,255,255,0.72);
+      box-shadow:0 10px 24px rgba(148,95,112,0.08);
+    }
+
+    .nv-founder-photo{
+      width:min(220px, 72%);
+      margin:0 auto 16px;
+      border-radius:26px;
+      box-shadow:0 14px 28px rgba(128,72,90,0.12);
+    }
+
+    .nv-kicker{
+      margin:0 0 8px;
+      font-size:0.8rem;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      font-weight:700;
+      color:#a0626f;
+    }
+
+    .nv-founder-title-home{
+      margin:0 0 10px;
+      font-size:clamp(1.65rem, 3vw, 2.2rem);
+      line-height:1.12;
+      color:#9b4f5d;
+    }
+
+    .nv-founder-text{
+      margin:0 0 18px;
+      color:#5d4955;
+      line-height:1.72;
+      font-size:0.98rem;
+    }
+
+    .nv-founder-actions{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-top:6px;
     }
 
     .nv-social-float-wrap{
       max-width:1100px;
-      margin:18px auto 0;
+      margin:32px auto 0;
       padding:0 16px;
       display:flex;
       justify-content:center;
@@ -98,10 +217,10 @@
       width:auto;
       max-width:100%;
       padding:10px 14px;
-      background:rgba(255,255,255,0.22);
-      border:1px solid rgba(255,255,255,0.34);
+      background:rgba(255,255,255,0.50);
+      border:1px solid rgba(255,255,255,0.66);
       border-radius:999px;
-      box-shadow:0 10px 24px rgba(75,46,131,0.10);
+      box-shadow:0 10px 24px rgba(128,72,90,0.08);
       backdrop-filter:blur(14px);
       -webkit-backdrop-filter:blur(14px);
     }
@@ -114,15 +233,15 @@
       justify-content:center;
       border-radius:10px;
       text-decoration:none;
-      background:rgba(255,255,255,0.88);
-      border:1px solid rgba(255,255,255,0.72);
-      box-shadow:0 6px 16px rgba(75,46,131,0.08);
+      background:rgba(255,255,255,0.90);
+      border:1px solid rgba(255,255,255,0.78);
+      box-shadow:0 6px 16px rgba(128,72,90,0.08);
       transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
     }
 
     .nv-social-float-link:hover{
       transform:translateY(-2px);
-      box-shadow:0 10px 20px rgba(75,46,131,0.14);
+      box-shadow:0 10px 20px rgba(128,72,90,0.14);
       background:#ffffff;
     }
 
@@ -133,9 +252,48 @@
       display:block;
     }
 
+    .nv-footer{
+      margin-top:30px;
+      padding:20px 0 48px;
+      text-align:center;
+      color:#7a6771;
+      font-size:0.95rem;
+    }
+
+    @media (max-width: 900px){
+      .nv-home-hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nv-home-hero-side{
+        margin-top:0;
+      }
+    }
+
     @media (max-width:720px){
+      .nv-page{
+        padding:16px 12px 40px;
+      }
+
+      .nv-wrap{
+        padding:8px 12px 34px;
+      }
+
+      .nv-home-hero-main,
+      .nv-home-hero-side{
+        border-radius:26px;
+      }
+
+      .nv-home-hero-main{
+        padding:14px;
+      }
+
+      .nv-home-hero-side{
+        padding:20px 18px;
+      }
+
       .nv-social-float-wrap{
-        margin:16px auto 0;
+        margin:24px auto 0;
         padding:0 14px;
       }
 
@@ -154,47 +312,11 @@
         width:16px;
         height:16px;
       }
-    }/* Add breathing room between main sections */
-.nv-home-hero{
-  margin-bottom: 24px;
-}
-
-.nv-home-hero-main{
-  margin-bottom: 16px;
-}
-
-/* Space between image and buttons */
-.nv-home-hero-image{
-  margin-bottom: 16px;
-}
-
-/* Buttons spacing */
-.nv-home-hero-actions{
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  margin-top: 12px;
-}
-
-/* Space before founder section */
-.nv-home-hero-side{
-  margin-top: 20px;
-}
-
-/* Space before social bar */
-.nv-social-float-wrap{
-  margin: 32px auto 0;
-}
-
-/* Footer breathing room */
-.nv-footer{
-  margin-top: 28px;
-  padding-bottom: 48px;
-}
+    }
   </style>
 </head>
 
-<body class="nv-y2k">
+<body class="nv-y2k home-spring">
 
   <div id="nav-placeholder"></div>
 
@@ -204,7 +326,7 @@
       <section class="nv-home-hero">
         <div class="nv-home-hero-grid">
 
-          <div class="nv-home-hero-main glass">
+          <div class="nv-home-hero-main">
             <img
               src="/images/headers/neurovibe-wellco-community-header.PNG"
               alt="NeuroVibe WellCo Community"
@@ -228,7 +350,7 @@
             </div>
           </div>
 
-          <aside class="nv-home-hero-side glass">
+          <aside class="nv-home-hero-side">
             <img
               src="/images/Amanda-Portrait.PNG"
               alt="Amanda L Carleton"
@@ -260,37 +382,37 @@
         </div>
       </section>
 
-      <section class="nv-social-float-wrap">
+      <section class="nv-social-float-wrap" aria-label="Social links">
         <div class="nv-social-float">
-          <a href="https://t.me/Neurovibecommunity" target="_blank" rel="noopener" class="nv-social-float-link">
+          <a href="https://t.me/Neurovibecommunity" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Telegram">
             <img src="/images/socials/telegram.png" alt="Telegram" />
           </a>
 
-          <a href="https://facebook.com/neurovibewellco" target="_blank" rel="noopener" class="nv-social-float-link">
+          <a href="https://facebook.com/neurovibewellco" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Facebook">
             <img src="/images/socials/facebook.png" alt="Facebook" />
           </a>
 
-          <a href="https://www.instagram.com/NeuroVibeMama" target="_blank" rel="noopener" class="nv-social-float-link">
+          <a href="https://www.instagram.com/NeuroVibeMama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Instagram">
             <img src="/images/socials/instagram.png" alt="Instagram" />
           </a>
 
-          <a href="https://www.threads.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link">
+          <a href="https://www.threads.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Threads">
             <img src="/images/socials/threads.png" alt="Threads" />
           </a>
 
-          <a href="https://snapchat.com/add/neurovibelife" target="_blank" rel="noopener" class="nv-social-float-link">
+          <a href="https://snapchat.com/add/neurovibelife" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Snapchat">
             <img src="/images/socials/snapchat.png" alt="Snapchat" />
           </a>
 
-          <a href="https://pin.it/5ZVkJ5tij" target="_blank" rel="noopener" class="nv-social-float-link">
+          <a href="https://pin.it/5ZVkJ5tij" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="Pinterest">
             <img src="/images/socials/pinterest.png" alt="Pinterest" />
           </a>
 
-          <a href="https://www.tiktok.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link">
+          <a href="https://www.tiktok.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="TikTok">
             <img src="/images/socials/tiktok.png" alt="TikTok" />
           </a>
 
-          <a href="https://youtube.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link">
+          <a href="https://youtube.com/@neurovibemama" target="_blank" rel="noopener" class="nv-social-float-link" aria-label="YouTube">
             <img src="/images/socials/youtube.png" alt="YouTube" />
           </a>
         </div>

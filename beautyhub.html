@@ -4,370 +4,355 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Beauty Hub | NeuroVibe</title>
+  <title>Beauty Hub | NeuroVibe x Kleo Kolor</title>
 
   <meta
     name="description"
-    content="Beauty Hub by NeuroVibe — beauty, self-care, and everyday favorites curated with softness and real life in mind."
+    content="Beauty Hub by NeuroVibe — a Kleo Kolor focused space for press-on nails, LED gel strips, beauty resets, and soft confidence picks curated by NeuroVibe."
   />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://neurovibe.site/beautyhub.html" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=103" />
+  <link rel="stylesheet" href="/style.css?v=107" />
 
-  <link rel="icon" type="image/png" href="/images/logos/nv-favicon.PNG" />
-  <link rel="apple-touch-icon" href="/images/logos/nv-favicon.PNG" />
+  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
+  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
 
   <style>
-    .nv-header{
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      width: 100%;
-      background: rgba(255,255,255,0.72);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,0.45);
-      box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
+    html, body{
+      margin:0;
+      padding:0;
     }
 
-    .nv-nav-container{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
+    body.nv-y2k.beauty-spring{
+      background:
+        radial-gradient(circle at top left, rgba(255, 223, 205, 0.96) 0%, transparent 34%),
+        radial-gradient(circle at top right, rgba(255, 198, 214, 0.80) 0%, transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255, 188, 152, 0.34) 0%, transparent 28%),
+        linear-gradient(180deg, #fff8f3 0%, #fff2ed 38%, #ffe9e1 72%, #fff6f1 100%);
+      background-attachment:fixed;
+      color:#4f3550;
     }
 
-    .nv-logo{
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: #4b2e83;
-      text-decoration: none;
+    #nav-placeholder{
+      width:100%;
     }
 
-    .nv-hamburger{
-      width: 52px;
-      height: 52px;
-      border: 1px solid rgba(255,255,255,0.55);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.34);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      line-height: 1;
-      color: #4b2e83;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .nv-hamburger:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
-    }
-
-    .nv-nav-menu{
-      display: none;
-      position: absolute;
-      top: calc(100% + 10px);
-      right: 18px;
-      min-width: 240px;
-      background: rgba(255,255,255,0.96);
-      border: 1px solid rgba(255,255,255,0.65);
-      border-radius: 20px;
-      padding: 14px;
-      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .nv-nav-menu.active{
-      display: flex;
-    }
-
-    .nv-nav-menu a{
-      display: block;
-      padding: 12px 14px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #101018;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
-
-    .nv-nav-menu a:hover{
-      background: rgba(198,168,255,0.18);
-      color: #4b2e83;
+    .nv-page-header{
+      width:min(100%, 1100px);
+      margin:20px auto 12px;
+      padding:0 16px;
     }
 
     .nv-header-img{
-      width: 100%;
-      display: block;
-      border-radius: 24px;
-      box-shadow: 0 18px 40px rgba(75,46,131,0.15);
-      margin: 0 0 18px;
+      width:100%;
+      display:block;
+      border-radius:28px;
+      box-shadow:0 18px 42px rgba(128,72,90,0.10);
     }
 
-    .nv-hero-card{
-      text-align: center;
-      padding: 24px;
-      margin-bottom: 18px;
+    .nv-page{
+      padding:18px 14px 48px;
     }
 
-    .nv-feature-grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-bottom: 22px;
+    .nv-wrap{
+      max-width:1100px;
+      margin:0 auto;
+      padding:8px 16px 44px;
     }
 
-    .nv-product-card{
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      padding: 20px;
-      border-radius: 22px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(248,241,255,0.94));
-      box-shadow: 0 20px 40px rgba(75,46,131,0.10);
-      border: 1px solid rgba(255,255,255,0.7);
-      text-align: left;
-    }
-
-    .nv-product-card img{
-      width: 100%;
-      border-radius: 18px;
-      display: block;
-      margin-bottom: 14px;
-      box-shadow: 0 12px 28px rgba(75,46,131,0.10);
-    }
-
-    .nv-product-badge{
-      display: inline-block;
-      align-self: flex-start;
-      margin-bottom: 10px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: #f2ebff;
-      color: #6b5cff;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .02em;
-    }
-
-    .nv-product-card h3{
-      margin: 0 0 6px;
-      font-size: 1.3rem;
-      color: #2b2140;
-    }
-
-    .nv-sub{
-      font-weight: 600;
-      color: #7a4a8c;
-    }
-
-    .nv-product-price{
-      margin: 10px 0 6px;
-      font-size: 1.08rem;
-      font-weight: 700;
-      color: #5d43b3;
-    }
-
-    .nv-product-type{
-      margin: 0 0 10px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #7a4a8c;
-    }
-
-    .nv-desc{
-      font-size: 14px;
-      margin: 0 0 14px;
-      line-height: 1.7;
-      color: #2e2b38;
-    }
-
-    .nv-btn{
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 12px;
-      background: #7a4a8c;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-    }
-
-    .nv-btn:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 10px 20px rgba(75,46,131,0.14);
-      opacity: 0.96;
-    }
-
-    .nv-card-note{
-      margin-top: 12px;
-      font-size: 12px;
-      color: #7a718a;
-    }
-
-    .nv-mini-note{
-      margin-top: 10px;
-      font-size: 13px;
-      color: #6d6579;
-      line-height: 1.65;
-    }
-
-    .nv-section-head{
-      text-align: center;
-      margin-bottom: 18px;
-    }
-
-    .nv-section-title{
-      margin: 6px 0 8px;
-    }
-
-    .nv-product-tags{
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin: 4px 0 12px;
-    }
-
-    .nv-product-tags span{
-      background: #f2f0ff;
-      color: #6b5cff;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .nv-soft-cta{
-      text-align: center;
-      padding: 22px;
-      margin-bottom: 22px;
-    }
-
+    .beauty-spring .glass,
+    .beautyhub-card,
+    .beautyhub-section,
+    .beautyhub-rewards-card,
     .nv-ecosystem{
-      max-width: 1000px;
-      margin: 28px auto 0;
-      padding: 30px;
-      background: rgba(255,255,255,0.75);
-      border-radius: 24px;
-      box-shadow: 0 18px 40px rgba(75,46,131,0.12);
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.55);
+      background:rgba(255,255,255,0.76);
+      border:1px solid rgba(255,255,255,0.64);
+      box-shadow:0 18px 42px rgba(128,72,90,0.10);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
     }
 
-    .nv-ecosystem-sub{
-      max-width: 600px;
-      margin: 0 auto 24px;
-      line-height: 1.7;
+    .beautyhub-hero{
+      text-align:center;
+      padding:30px 24px;
+      margin-bottom:20px;
+      border-radius:32px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.54), rgba(255,255,255,0.24)),
+        linear-gradient(135deg, rgba(255,191,160,0.22), rgba(255,170,192,0.16));
     }
 
-    .nv-ecosystem-grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
-      margin-top: 20px;
+    .beauty-spring .nv-kicker{
+      margin:0 0 8px;
+      font-size:0.78rem;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      font-weight:800;
+      color:#a0626f;
     }
 
-    .nv-eco-card{
-      background: white;
-      padding: 20px;
-      border-radius: 18px;
-      text-decoration: none;
-      color: #101018;
-      box-shadow: 0 10px 20px rgba(75,46,131,0.08);
-      transition: transform .2s ease, box-shadow .2s ease;
+    .beauty-spring .nv-h1{
+      margin:8px 0 10px;
+      font-size:clamp(2rem, 4vw, 3rem);
+      line-height:1.08;
+      color:#9b4f5d;
     }
 
-    .nv-eco-card:hover{
-      transform: translateY(-4px);
-      box-shadow: 0 14px 28px rgba(75,46,131,0.12);
+    .beauty-spring .nv-h2,
+    .beautyhub-section h2,
+    .beautyhub-rewards-card h2,
+    .nv-ecosystem h2{
+      color:#9b4f5d;
+      margin:0 0 10px;
     }
 
-    .nv-eco-card h3{
-      margin: 0 0 8px;
-      color: var(--nv-purple-deep, #4b2e83);
+    .beauty-spring p,
+    .beauty-spring .nv-copy,
+    .beauty-spring .nv-sub{
+      color:#5d4955;
+      line-height:1.75;
     }
 
-    .nv-eco-card p{
-      margin: 0;
-      line-height: 1.65;
+    .beautyhub-section{
+      padding:24px;
+      margin-bottom:22px;
+      border-radius:30px;
+      text-align:center;
+    }
+
+    .beautyhub-section p{
+      max-width:72ch;
+      margin:0 auto;
+    }
+
+    .beautyhub-banner{
+      margin:22px auto;
     }
 
     .beautyhub-rewards{
-      margin: 20px 0 24px;
-      padding: 0 16px;
+      margin:20px 0 24px;
     }
 
     .beautyhub-rewards-card{
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 28px 24px;
-      border-radius: 22px;
-      text-align: center;
-      background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(245,235,255,0.96));
-      box-shadow: 0 16px 34px rgba(75, 46, 131, 0.12);
-      border: 1px solid rgba(180, 150, 255, 0.22);
+      max-width:780px;
+      margin:0 auto;
+      padding:28px 24px;
+      border-radius:28px;
+      text-align:center;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.82), rgba(255,238,232,0.70)),
+        linear-gradient(135deg, rgba(255,191,160,0.20), rgba(255,170,192,0.14));
     }
 
-    .beautyhub-rewards-card h2{
-      margin: 0 0 10px;
-      font-size: 1.75rem;
-      color: #2b2140;
+    .beautyhub-rewards-btn,
+    .beauty-spring .nv-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      color:#fff;
+      background:linear-gradient(135deg, #ff9d7d, #ff8fb1, #ffbd94);
+      border:1px solid rgba(255,255,255,0.34);
+      box-shadow:0 12px 24px rgba(255,143,177,0.22);
+      transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
     }
 
-    .beautyhub-rewards-card p{
-      margin: 0 0 18px;
-      font-size: 1rem;
-      line-height: 1.65;
-      color: #2e2b38;
+    .beautyhub-rewards-btn:hover,
+    .beauty-spring .nv-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 32px rgba(255,143,177,0.28);
+      opacity:.96;
     }
 
-    .beautyhub-rewards-btn{
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      background: #6b5cff;
-      color: #fff;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+    .nv-feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:20px;
+      margin-bottom:24px;
     }
 
-    .beautyhub-rewards-btn:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(107, 92, 255, 0.22);
-      opacity: 0.96;
+    .nv-product-card{
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      padding:20px;
+      border-radius:26px;
+      background:rgba(255,255,255,0.82);
+      box-shadow:0 16px 34px rgba(128,72,90,0.09);
+      border:1px solid rgba(255,255,255,0.72);
+      text-align:left;
+      transition:transform .22s ease, box-shadow .22s ease;
     }
 
-    @media (max-width: 768px){
-      .nv-hero-card{
-        padding: 20px 16px;
+    .nv-product-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 22px 44px rgba(128,72,90,0.14);
+    }
+
+    .nv-product-card img{
+      width:100%;
+      border-radius:20px;
+      display:block;
+      margin-bottom:14px;
+      box-shadow:0 12px 28px rgba(128,72,90,0.10);
+      background:rgba(255,255,255,0.48);
+    }
+
+    .nv-product-badge{
+      display:inline-block;
+      align-self:flex-start;
+      margin-bottom:10px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(255, 208, 198, 0.55);
+      color:#a35764;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .nv-product-card h3{
+      margin:0 0 6px;
+      font-size:1.3rem;
+      color:#9b4f5d;
+    }
+
+    .nv-product-price{
+      margin:8px 0 6px;
+      font-size:1.08rem;
+      font-weight:800;
+      color:#a15465;
+    }
+
+    .nv-product-type{
+      margin:0 0 10px;
+      font-size:.95rem;
+      font-weight:700;
+      color:#7d5a66;
+    }
+
+    .nv-desc{
+      font-size:14px;
+      margin:0 0 14px;
+      line-height:1.7;
+      color:#5d4955;
+      flex-grow:1;
+    }
+
+    .nv-product-tags{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin:4px 0 12px;
+    }
+
+    .nv-product-tags span{
+      background:rgba(255,238,232,0.90);
+      color:#a35764;
+      padding:5px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .nv-card-note{
+      margin-top:12px;
+      font-size:12px;
+      color:#7a6771;
+      line-height:1.55;
+    }
+
+    .nv-soft-cta{
+      text-align:center;
+      padding:26px 22px;
+      margin-bottom:24px;
+      border-radius:30px;
+    }
+
+    .nv-ecosystem{
+      max-width:1000px;
+      margin:28px auto 0;
+      padding:30px;
+      border-radius:30px;
+      text-align:center;
+    }
+
+    .nv-ecosystem-sub{
+      max-width:640px;
+      margin:0 auto 24px;
+      line-height:1.7;
+    }
+
+    .nv-ecosystem-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .nv-eco-card{
+      background:rgba(255,255,255,0.84);
+      padding:20px;
+      border-radius:20px;
+      text-decoration:none;
+      color:#4f3550;
+      box-shadow:0 10px 20px rgba(128,72,90,0.08);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .nv-eco-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 28px rgba(128,72,90,0.12);
+    }
+
+    .nv-eco-card h3{
+      margin:0 0 8px;
+      color:#9b4f5d;
+    }
+
+    .nv-eco-card p{
+      margin:0;
+      line-height:1.65;
+    }
+
+    .nv-footer{
+      margin-top:30px;
+      padding:20px 0 44px;
+      text-align:center;
+      color:#7a6771;
+    }
+
+    @media (max-width:768px){
+      .nv-wrap{
+        padding:8px 12px 36px;
+      }
+
+      .beautyhub-hero,
+      .beautyhub-section,
+      .beautyhub-rewards-card,
+      .nv-soft-cta,
+      .nv-ecosystem{
+        padding:20px 16px;
       }
 
       .nv-product-card{
-        padding: 18px;
+        padding:18px;
       }
 
       .nv-product-card h3{
-        font-size: 1.18rem;
+        font-size:1.18rem;
       }
     }
   </style>
 </head>
 
-<body class="nv-y2k">
+<body class="nv-y2k beauty-spring">
   <div id="nav-placeholder"></div>
 
   <div class="nv-page-header">
@@ -383,26 +368,26 @@
   <main class="nv-page">
     <div class="nv-wrap">
 
-      <section class="glass nv-hero-card">
-        <p class="nv-kicker">Beauty • Self-Care • Everyday Favorites</p>
-        <h1 class="nv-h1" style="margin:8px 0 10px;">Welcome to the NeuroVibe Beauty Hub ✨</h1>
+      <section class="beautyhub-hero glass">
+        <p class="nv-kicker">Kleo Kolor • Nail Reset • Soft Confidence</p>
+        <h1 class="nv-h1">Welcome to the NeuroVibe Beauty Hub</h1>
         <p class="nv-sub" style="max-width:72ch; margin:0 auto;">
-          A curated space for beauty favorites, self-care finds, and everyday products that add a little softness, confidence, and glow to real life — with Kleo Kolor as my featured nail pick.
+          A Kleo Kolor-focused space for press-on nails, LED gel strips, and small beauty resets that help you feel a little more like yourself again — low pressure, pretty, and real-life friendly.
         </p>
       </section>
 
-      <section class="glass" style="padding:20px; margin-bottom:18px;">
-        <p class="nv-kicker">A softer side of NeuroVibe</p>
-        <h2 class="nv-h2" style="margin:6px 0 10px;">What Beauty Hub is all about</h2>
-        <p class="nv-copy">
-          Beauty Hub is my space for sharing beauty, self-care, and feel-good favorites I genuinely enjoy. This page is all about simple products, pretty finds, and everyday little things that help life feel lighter.
+      <section class="beautyhub-section">
+        <p class="nv-kicker">A softer beauty reset</p>
+        <h2 class="nv-h2">Why Kleo Kolor fits NeuroVibe</h2>
+        <p>
+          BeautyHub is my dedicated Kleo Kolor corner — a place for nail sets, color stories, beauty resets, and little confidence boosts that fit real life.
         </p>
-        <p class="nv-copy" style="margin-top:10px;">
-          It’s not about perfection. It’s about finding routines and favorites that help you feel a little more refreshed, confident, and cared for.
+        <p style="margin-top:10px;">
+          This isn’t about perfection. It’s about having one small thing that helps you feel refreshed, playful, and put together without needing a full routine.
         </p>
       </section>
 
-      <div class="nv-page-header">
+      <div class="nv-page-header beautyhub-banner">
         <a
           href="https://kleokolor.com/?ref=neurovibekolor"
           target="_blank"
@@ -421,11 +406,10 @@
 
       <section class="beautyhub-rewards">
         <div class="beautyhub-rewards-card">
-          <p class="nv-kicker" style="margin-bottom:8px;">Kleo Kolor Perks</p>
-          <h2>Love Kleo? Get Rewarded ✨</h2>
+          <p class="nv-kicker">Kleo Kolor Perks</p>
+          <h2>Love Kleo? Get Rewarded</h2>
           <p>
-            Sign up for Kleo Rewards and start earning perks while you shop your
-            beauty favorites.
+            Sign up for Kleo Rewards and start earning perks while you shop your beauty favorites.
           </p>
           <a
             href="https://rwrd.io/ref_2W86HE5?c"
@@ -435,27 +419,23 @@
           >
             Join Kleo Rewards
           </a>
-          <p class="nv-card-note" style="margin-top:12px;">
+          <p class="nv-card-note">
             Referral link • Rewards and perks through Kleo Kolor
           </p>
         </div>
       </section>
 
-      <section class="glass" style="padding:18px; margin-bottom:20px; text-align:center;">
+      <section class="beautyhub-section">
         <p class="nv-kicker">Featured beauty brand</p>
-        <h2 class="nv-h2">Featured Kleo Kolor Favorites</h2>
-        <p class="nv-copy" style="max-width:65ch; margin:0 auto;">
-          A curated mix of press-ons, LED gel strips, and current favorites — all in one place.
+        <h2 class="nv-h2">Kleo Kolor Favorites</h2>
+        <p>
+          A curated mix of press-ons, LED gel strips, and current favorites — all in one soft beauty reset space.
         </p>
       </section>
 
       <section class="nv-feature-grid">
         <article class="nv-product-card">
-          <img
-            src="/images/nails/sweet-sangria-square.PNG"
-            alt="Sweet Sangria Long Coffin magnetic ombre nails"
-            loading="lazy"
-          />
+          <img src="/images/nails/sweet-sangria-square.PNG" alt="Sweet Sangria Long Coffin magnetic ombre nails" loading="lazy" />
           <span class="nv-product-badge">Featured Pick</span>
           <h3>Sweet Sangria</h3>
           <p class="nv-product-price">$16</p>
@@ -463,23 +443,14 @@
           <p class="nv-desc">
             A deep magenta wine magnetic ombré that fades into a rich dark finish. Bold, glossy, and perfect for spring nights.
           </p>
-          <a
-            href="https://kleokolor.com/products/press-on-intro-set-spring-bolds?ref=neurovibekolor"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-            class="nv-btn"
-          >
-            Shop Sweet Sangria →
+          <a href="https://kleokolor.com/products/press-on-intro-set-spring-bolds?ref=neurovibekolor" target="_blank" rel="noopener sponsored nofollow" class="nv-btn">
+            Shop Sweet Sangria
           </a>
           <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
         </article>
 
         <article class="nv-product-card">
-          <img
-            src="/images/nails/soft-shift-main.PNG"
-            alt="The Soft Shift LED Gel Strip Mix"
-            loading="lazy"
-          />
+          <img src="/images/nails/soft-shift-main.PNG" alt="The Soft Shift LED Gel Strip Mix" loading="lazy" />
           <span class="nv-product-badge">Save 30%</span>
           <h3>The Soft Shift</h3>
           <p class="nv-product-price">$26 <span style="opacity:.55; text-decoration:line-through; margin-left:8px;">$38</span></p>
@@ -491,106 +462,70 @@
           <p class="nv-desc">
             A cool-toned LED gel strip mix pairing soft seafoam metallic ombré with vivid teal magnetic cat-eye shine. Quietly confident, dimensional, and over 30% off retail.
           </p>
-          <a
-            href="https://kleokolor.com/products/the-soft-shift?ref=neurovibekolor"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-            class="nv-btn"
-          >
-            Shop The Soft Shift →
+          <a href="https://kleokolor.com/products/the-soft-shift?ref=neurovibekolor" target="_blank" rel="noopener sponsored nofollow" class="nv-btn">
+            Shop The Soft Shift
           </a>
           <p class="nv-card-note">Affiliate link • LED lamp required to cure LED Gel Strips</p>
         </article>
 
         <article class="nv-product-card">
-          <img
-            src="/images/nails/money-moves-1.PNG"
-            alt="Money Moves LED Gel Strip"
-            loading="lazy"
-          />
-          <span class="nv-product-badge">March Pick</span>
+          <img src="/images/nails/money-moves-1.PNG" alt="Money Moves LED Gel Strip" loading="lazy" />
+          <span class="nv-product-badge">Magnetic Glow</span>
           <h3>Money Moves</h3>
           <p class="nv-product-price">$19</p>
           <p class="nv-product-type">LED Gel Strip</p>
           <p class="nv-desc">
             A luxe magnetic green with a soft velvet glow and rich depth. Bold, polished, and quietly striking.
           </p>
-          <a
-            href="https://kleokolor.com/products/money-moves?_pos=2&_fid=497334ea5&_ss=c&ref=neurovibekolor"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-            class="nv-btn"
-          >
-            Shop Money Moves →
+          <a href="https://kleokolor.com/products/money-moves?_pos=2&_fid=497334ea5&_ss=c&ref=neurovibekolor" target="_blank" rel="noopener sponsored nofollow" class="nv-btn">
+            Shop Money Moves
           </a>
           <p class="nv-card-note">Affiliate link • Kleo Kolor LED Gel Strip</p>
         </article>
 
         <article class="nv-product-card">
-          <img
-            src="/images/nails/shifting-aura.PNG"
-            alt="Kleo Kolor Shifting Aura LED Gel Nail Strips"
-            loading="lazy"
-          />
-          <span class="nv-product-badge">Kleo Kolor</span>
+          <img src="/images/nails/shifting-aura.PNG" alt="Kleo Kolor Shifting Aura LED Gel Nail Strips" loading="lazy" />
+          <span class="nv-product-badge">Spring Aura</span>
           <h3>Shifting Aura</h3>
           <p class="nv-product-price">$19</p>
           <p class="nv-product-type">LED Gel Strip</p>
           <p class="nv-desc">
-            A dreamy blend of pink, peach, lilac, and sky blue gradients. Each nail carries its own soft transition, creating a colorful aura-inspired look perfect for spring.
+            A dreamy blend of pink, peach, lilac, and sky blue gradients. Each nail carries its own soft transition, creating a colorful aura-inspired look.
           </p>
-          <a
-            class="nv-btn"
-            href="https://kleokolor.com/products/shifting-aura?ref=neurovibekolor"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-          >
-            Shop Shifting Aura →
+          <a class="nv-btn" href="https://kleokolor.com/products/shifting-aura?ref=neurovibekolor" target="_blank" rel="noopener sponsored nofollow">
+            Shop Shifting Aura
           </a>
           <p class="nv-card-note">Affiliate link • Kleo Kolor LED Gel Strips</p>
         </article>
       </section>
 
-      <section class="glass" style="padding:18px; margin-bottom:20px; text-align:center;">
+      <section class="beautyhub-section">
         <p class="nv-kicker">Press-on favorites</p>
         <h2 class="nv-h2">Easy Beauty, Elevated</h2>
-        <p class="nv-copy" style="max-width:65ch; margin:0 auto;">
+        <p>
           Easy press-on styles that make everyday beauty feel polished, playful, and low effort.
         </p>
       </section>
 
       <section class="nv-feature-grid">
         <article class="nv-product-card">
-          <img
-            src="/images/nails/galaxy-gala.PNG"
-            alt="Galaxy Gala Press-On Gel Nail"
-            loading="lazy"
-          />
+          <img src="/images/nails/galaxy-gala.PNG" alt="Galaxy Gala Press-On Gel Nail" loading="lazy" />
           <span class="nv-product-badge">Press-On Favorite</span>
           <h3>Galaxy Gala</h3>
           <p class="nv-product-price">$16</p>
           <p class="nv-product-type">Press-On Gel Nail</p>
           <p class="nv-desc">
-            Deep indigo, violet, and midnight tones create sweeping magnetic ribbons of light across each nail. Inspired by a starlit sky, this set is bold, luminous, and perfect for moments that deserve a little sparkle.
+            Deep indigo, violet, and midnight tones create sweeping magnetic ribbons of light across each nail. Bold, luminous, and perfect for moments that deserve sparkle.
           </p>
-          <a
-            class="nv-btn"
-            href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-          >
-            Shop Monthly Mani →
+          <a class="nv-btn" href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor" target="_blank" rel="noopener sponsored nofollow">
+            Shop Monthly Mani
           </a>
           <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
         </article>
 
         <article class="nv-product-card">
-          <img
-            src="/images/nails/violette.PNG"
-            alt="Kleo Kolor Violette Press-On Gel Nails"
-            loading="lazy"
-          />
-          <span class="nv-product-badge">Kleo Kolor</span>
+          <img src="/images/nails/violette.PNG" alt="Kleo Kolor Violette Press-On Gel Nails" loading="lazy" />
+          <span class="nv-product-badge">Soft Chic</span>
           <h3>Violette</h3>
           <p class="nv-product-price">$16</p>
           <p class="nv-product-type">Press-On Gel Nail</p>
@@ -599,49 +534,31 @@
             <span>Magnetic French</span>
           </div>
           <p class="nv-desc">
-            A Paris-meets-cosmic manicure. Violette blends a creamy lilac base with a cool-toned shimmering tip that shifts softly in the light. Chic, delicate, and a fresh twist on a French-inspired style.
+            A creamy lilac base with a cool-toned shimmering tip that shifts softly in the light. Chic, delicate, and fresh.
           </p>
-          <a
-            class="nv-btn"
-            href="https://kleokolor.com/products/violette?ref=neurovibekolor"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-          >
-            Shop Violette →
+          <a class="nv-btn" href="https://kleokolor.com/products/violette?ref=neurovibekolor" target="_blank" rel="noopener sponsored nofollow">
+            Shop Violette
           </a>
           <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
         </article>
 
         <article class="nv-product-card">
-          <img
-            src="/images/nails/monochrome-mood.PNG"
-            alt="Monochrome Mood Press-On Gel Nail"
-            loading="lazy"
-          />
-          <span class="nv-product-badge">Press-On Favorite</span>
+          <img src="/images/nails/monochrome-mood.PNG" alt="Monochrome Mood Press-On Gel Nail" loading="lazy" />
+          <span class="nv-product-badge">Minimal Mood</span>
           <h3>Monochrome Mood</h3>
           <p class="nv-product-price">$16</p>
           <p class="nv-product-type">Press-On Gel Nail • Short Squoval</p>
           <p class="nv-desc">
-            Black, milky white, and silver shimmer come together in a crisp monochrome palette. The clean shape and subtle finish contrast create a modern look that’s simple but striking.
+            Black, milky white, and silver shimmer come together in a crisp monochrome palette. Simple, modern, and striking.
           </p>
-          <a
-            class="nv-btn"
-            href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-          >
-            Shop Monthly Mani →
+          <a class="nv-btn" href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor" target="_blank" rel="noopener sponsored nofollow">
+            Shop Monthly Mani
           </a>
           <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
         </article>
 
         <article class="nv-product-card">
-          <img
-            src="/images/nails/night-nebula.PNG"
-            alt="Kleo Kolor Night Nebula Press-On Gel Nail"
-            loading="lazy"
-          />
+          <img src="/images/nails/night-nebula.PNG" alt="Kleo Kolor Night Nebula Press-On Gel Nail" loading="lazy" />
           <span class="nv-product-badge">Sale Pick</span>
           <h3>Night Nebula</h3>
           <p class="nv-product-price">$12.48 <span style="opacity:.55; text-decoration:line-through; margin-left:8px;">$16</span></p>
@@ -649,37 +566,23 @@
           <p class="nv-desc">
             Midnight blue with rose gold glitter for a moody, cosmic finish that feels bold, sparkly, and effortlessly chic.
           </p>
-          <a
-            class="nv-btn"
-            href="https://kleokolor.com/products/night-nebula?ref=neurovibekolor"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-          >
-            Shop Night Nebula →
+          <a class="nv-btn" href="https://kleokolor.com/products/night-nebula?ref=neurovibekolor" target="_blank" rel="noopener sponsored nofollow">
+            Shop Night Nebula
           </a>
           <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
         </article>
 
         <article class="nv-product-card">
-          <img
-            src="/images/nails/springscape-nails.PNG"
-            alt="Springscape Press-On Nails"
-            loading="lazy"
-          />
+          <img src="/images/nails/springscape-nails.PNG" alt="Springscape Press-On Nails" loading="lazy" />
           <span class="nv-product-badge">Spring Favorite</span>
           <h3>Springscape</h3>
           <p class="nv-product-price">$16</p>
           <p class="nv-product-type">Press-On Gel Nail • Short Round</p>
           <p class="nv-desc">
-            Lavender, mint, blush, and sky blue blend into a dreamy watercolor marble. A soft pastel set that captures the playful energy of early spring.
+            Lavender, mint, blush, and sky blue blend into a dreamy watercolor marble. A soft pastel set with early spring energy.
           </p>
-          <a
-            href="https://kleokolor.com/products/springscape?ref=neurovibekolor"
-            target="_blank"
-            rel="noopener sponsored nofollow"
-            class="nv-btn"
-          >
-            Shop Springscape →
+          <a href="https://kleokolor.com/products/springscape?ref=neurovibekolor" target="_blank" rel="noopener sponsored nofollow" class="nv-btn">
+            Shop Springscape
           </a>
           <p class="nv-card-note">Affiliate link • Press-On Gel Nails</p>
         </article>
@@ -687,13 +590,13 @@
 
       <section class="glass nv-soft-cta">
         <p class="nv-kicker">Kleo Kolor</p>
-        <h2 class="nv-h2">Monthly Mani Club 💅</h2>
+        <h2 class="nv-h2">Monthly Mani Club</h2>
         <p class="nv-copy" style="max-width:70ch; margin:0 auto;">
           Explore exclusive nail styles and rotating monthly favorites at a discounted subscription price.
         </p>
-        <div class="nv-actions" style="margin-top:14px; justify-content:center;">
+        <div style="margin-top:16px;">
           <a
-            class="nv-btn primary"
+            class="nv-btn"
             href="https://kleokolor.com/collections/monthly-mani?ref=neurovibekolor"
             target="_blank"
             rel="noopener sponsored nofollow"
@@ -703,40 +606,6 @@
         </div>
       </section>
 
-      <section class="glass" style="padding:18px; margin-bottom:20px; text-align:center;">
-  <p class="nv-kicker">Other Beauty Favorite</p>
-  <h2 class="nv-h2">Red Aspen Beauty</h2>
-  <p class="nv-copy" style="max-width:68ch; margin:0 auto;">
-    A featured Red Aspen sale pick for anyone who wants an easy beauty deal alongside my main beauty favorites.
-  </p>
-</section>
-
-<section class="nv-feature-grid">
-  <article class="nv-product-card">
-    <img
-      src="/images/beauty/red-aspen-spring-sale.PNG"
-      alt="Red Aspen $10 Spring Dash Sale"
-      loading="lazy"
-    />
-    <span class="nv-product-badge">Limited-Time Sale</span>
-    <h3>Red Aspen Spring Dash Sale</h3>
-    <p class="nv-product-price">Everything $10</p>
-    <p class="nv-product-type">Spring Nail Sale</p>
-    <p class="nv-desc">
-      Shop 35+ spring dashes for $10 while supplies last. A fun seasonal sale pick for easy beauty and spring nail looks.
-    </p>
-    <a
-      href="https://redaspenlove.com/collections/spring-vault?utm_source=cordial&utm_medium=email&utm_campaign=260320_Spring_Dash_Sale_Launch"
-      target="_blank"
-      rel="noopener sponsored nofollow"
-      class="nv-btn"
-    >
-      Shop Spring Sale →
-    </a>
-    <p class="nv-card-note">Affiliate link • Limited-time Red Aspen sale</p>
-  </article>
-</section>
-
       <section class="nv-ecosystem">
         <h2>Explore the NeuroVibe Ecosystem</h2>
         <p class="nv-ecosystem-sub">
@@ -745,37 +614,36 @@
 
         <div class="nv-ecosystem-grid">
           <a href="/guides.html" class="nv-eco-card">
-            <h3>📚 Guides</h3>
+            <h3>Guides</h3>
             <p>Digital guides for nervous system support and real-life overwhelm.</p>
           </a>
 
           <a href="/wellco.html" class="nv-eco-card">
-            <h3>🌿 WellCo</h3>
+            <h3>WellCo</h3>
             <p>Wellness routines and products that support energy and balance.</p>
           </a>
 
-          <a href="/beautyhub.html" class="nv-eco-card">
-            <h3>✨ Beauty Hub</h3>
-            <p>Self-care favorites, beauty finds, and curated nail collections.</p>
-          </a>
-
           <a href="/shop.html" class="nv-eco-card">
-            <h3>🛍️ Shop</h3>
+            <h3>Shop</h3>
             <p>Curated tools and products that support calm homes and routines.</p>
           </a>
 
           <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
-            <h3>🌙 Publishing</h3>
+            <h3>Publishing</h3>
             <p>Stories and books created through NeuroVibe Publishing.</p>
           </a>
         </div>
       </section>
 
       <footer class="nv-footer">
-        <p>© 2026 NeuroVibe</p>
+        <p>© <span id="year"></span> NeuroVibe</p>
       </footer>
     </div>
   </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
   <script>
     fetch("/components/nav.html")
@@ -788,16 +656,19 @@
 
         if (toggle && nav) {
           toggle.addEventListener("click", () => {
-            nav.classList.toggle("active");
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
           });
 
           document.addEventListener("click", (e) => {
             if (!toggle.contains(e.target) && !nav.contains(e.target)) {
               nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
             }
           });
         }
-      });
+      })
+      .catch(err => console.error("Nav load error:", err));
   </script>
 </body>
 </html>

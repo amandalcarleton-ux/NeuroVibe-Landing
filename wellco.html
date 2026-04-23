@@ -1,788 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>NeuroVibe WellCo | My Wellness Stack</title>
-  <meta
-    name="description"
-    content="Explore Amanda's wellness stack through NeuroVibe WellCo. Simple routines, favorite products, and supportive wellness tools for energy, hydration, focus, and everyday balance."
-  />
+<title>NeuroVibe WellCo | My Wellness Stack</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=103" />
+<meta
+  name="description"
+  content="Explore Amanda's wellness stack through NeuroVibe WellCo. Simple routines, favorite products, and supportive wellness tools for energy, hydration, focus, and everyday balance."
+/>
 
-  <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
-  <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css?v=110" />
 
-  <style>
-    html, body{
-      margin: 0;
-      padding: 0;
-    }
+<link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
 
-    #nav-placeholder{
-      width: 100%;
-    }
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#f5ecff,#ffeaf3,#fff3e6);
+  color:#2b2140;
+}
 
-    .nv-header{
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      width: 100%;
-      background: rgba(255,255,255,0.72);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,0.45);
-      box-shadow: 0 10px 30px rgba(75, 46, 131, 0.10);
-    }
+/* WRAP */
+.nv-wrap{
+  max-width:1100px;
+  margin:0 auto;
+  padding:24px 16px 60px;
+}
 
-    .nv-nav-container{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 16px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-    }
+/* HERO */
+.nv-hero{
+  text-align:center;
+  margin-bottom:26px;
+}
 
-    .nv-logo{
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: #4b2e83;
-      text-decoration: none;
-    }
+.nv-hero h1{
+  font-size:2.4rem;
+  margin-bottom:10px;
+}
 
-    .nv-hamburger{
-      width: 52px;
-      height: 52px;
-      border: 1px solid rgba(255,255,255,0.55);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.34);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      line-height: 1;
-      color: #4b2e83;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(75, 46, 131, 0.12);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+.nv-hero p{
+  max-width:680px;
+  margin:0 auto;
+  line-height:1.7;
+}
 
-    .nv-hamburger:hover{
-      transform: translateY(-1px);
-      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
-    }
+/* FEATURE */
+.nv-feature{
+  background:linear-gradient(135deg,#ffffff,#f7ecff);
+  padding:26px;
+  border-radius:28px;
+  box-shadow:0 18px 40px rgba(75,46,131,0.12);
+  text-align:center;
+  margin-bottom:28px;
+}
 
-    .nv-nav-menu{
-      display: none;
-      position: absolute;
-      top: calc(100% + 10px);
-      right: 18px;
-      min-width: 240px;
-      background: rgba(255,255,255,0.96);
-      border: 1px solid rgba(255,255,255,0.65);
-      border-radius: 20px;
-      padding: 14px;
-      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.16);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      flex-direction: column;
-      gap: 4px;
-    }
+.nv-feature h2{
+  margin-bottom:10px;
+}
 
-    .nv-nav-menu.active{
-      display: flex;
-    }
+/* BUTTONS */
+.nv-btn{
+  display:inline-block;
+  padding:12px 18px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  margin:6px;
+}
 
-    .nv-nav-menu a{
-      display: block;
-      padding: 12px 14px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 600;
-      color: #101018;
-      transition: background 0.2s ease, color 0.2s ease;
-    }
+.nv-btn.primary{
+  background:#6b5cff;
+  color:#fff;
+}
 
-    .nv-nav-menu a:hover{
-      background: rgba(198,168,255,0.18);
-      color: #4b2e83;
-    }
+.nv-btn.secondary{
+  background:#fff;
+  border:1px solid #ccc;
+  color:#4b2e83;
+}
 
-    .wellco-section{
-      padding: 8px 0 22px;
-    }
+/* GRID */
+.nv-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  margin-top:20px;
+}
 
-    .wellco-title{
-      text-align: center;
-      margin-bottom: 16px;
-    }
+/* CARD */
+.nv-card{
+  background:#fff;
+  border-radius:22px;
+  padding:18px;
+  box-shadow:0 12px 28px rgba(75,46,131,0.08);
+}
 
-    .wellco-intro,
-    .wellco-disclaimer,
-    .wellco-subcopy{
-      max-width: 760px;
-      margin: 0 auto 16px;
-      text-align: center;
-    }
+.nv-card img{
+  width:100%;
+  border-radius:16px;
+  margin-bottom:10px;
+}
 
-    .wellco-disclaimer{
-      font-size: 0.95rem;
-      opacity: 0.84;
-    }
+.nv-card h3{
+  margin-bottom:8px;
+}
 
-    .wellco-hero-cta,
-    .wellco-start,
-    .wellco-routine{
-      max-width: 900px;
-      margin: 28px auto 34px;
-      padding: 28px 22px;
-      border-radius: 28px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(240,232,255,0.88));
-      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.10);
-      text-align: center;
-    }
+.nv-card p{
+  font-size:.95rem;
+  line-height:1.6;
+}
 
-    .wellco-routine{
-      background: rgba(255,255,255,0.78);
-      text-align: left;
-      max-width: 850px;
-      box-shadow: 0 14px 34px rgba(75, 46, 131, 0.08);
-    }
+/* SECTION */
+.nv-section{
+  margin-top:34px;
+}
 
-    .wellco-hero-cta h3,
-    .wellco-start h3,
-    .wellco-routine h3,
-    .wellco-stack-group h3{
-      margin-bottom: 12px;
-      color: #4b2e83;
-    }
+/* LIST */
+.nv-list{
+  line-height:1.8;
+}
 
-    .wellco-hero-cta p,
-    .wellco-start p{
-      max-width: 700px;
-      margin: 0 auto 18px;
-    }
-
-    .wellco-btn-row{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-    }
-
-    .wellco-btn-main,
-    .wellco-btn-secondary{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    }
-
-    .wellco-btn-main{
-      background: #4b2e83;
-      color: #fff;
-      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.18);
-    }
-
-    .wellco-btn-main:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 16px 30px rgba(75, 46, 131, 0.22);
-    }
-
-    .wellco-btn-secondary{
-      background: rgba(255,255,255,0.88);
-      color: #4b2e83;
-      border: 1px solid rgba(75, 46, 131, 0.12);
-    }
-
-    .wellco-btn-secondary:hover{
-      transform: translateY(-2px);
-    }
-
-    .wellco-routine-list,
-    .wellco-start-list{
-      margin: 16px 0 0;
-      padding-left: 18px;
-      line-height: 1.8;
-    }
-
-    .wellco-stack-group{
-      margin-top: 40px;
-    }
-
-    .wellco-stack-group-head{
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 20px;
-    }
-
-    .wellco-grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 22px;
-      margin-top: 26px;
-    }
-
-    .wellco-card{
-      background: rgba(255,255,255,0.88);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 14px 30px rgba(75, 46, 131, 0.10);
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .wellco-card img{
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      display: block;
-    }
-
-    .wellco-card h3{
-      margin: 18px 18px 10px;
-      font-size: 1.08rem;
-      color: #4b2e83;
-    }
-
-    .wellco-card p{
-      margin: 0 18px 18px;
-      flex-grow: 1;
-      line-height: 1.65;
-    }
-
-    .wellco-btn{
-      display: inline-block;
-      margin: 0 18px 20px;
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: #4b2e83;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 12px 24px rgba(75, 46, 131, 0.16);
-    }
-
-    .wellco-btn:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 16px 28px rgba(75, 46, 131, 0.22);
-    }
-
-    .wellco-note{
-      font-size: 0.92rem;
-      opacity: 0.76;
-      margin-top: -8px;
-    }
-
-    .nv-ecosystem{
-      margin-top: 42px;
-    }
-
-    .nv-ecosystem h2,
-    .nv-ecosystem-sub{
-      text-align: center;
-    }
-
-    .nv-ecosystem-sub{
-      max-width: 700px;
-      margin: 0 auto 24px;
-    }
-
-    .nv-ecosystem-grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-
-    .nv-eco-card{
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      padding: 22px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.86);
-      box-shadow: 0 12px 28px rgba(75, 46, 131, 0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .nv-eco-card:hover{
-      transform: translateY(-2px);
-      box-shadow: 0 16px 34px rgba(75, 46, 131, 0.12);
-    }
-
-    .nv-eco-card h3{
-      margin-bottom: 10px;
-      color: #4b2e83;
-    }
-
-    .nv-bravenly-cta{
-      margin-top: 36px;
-    }
-
-    .nv-bravenly-banner{
-      display: block;
-      width: 100%;
-      max-width: 980px;
-      margin: 0 auto;
-      border-radius: 24px;
-      box-shadow: 0 18px 40px rgba(75, 46, 131, 0.10);
-    }
-
-    @media (max-width: 640px){
-      .wellco-hero-cta,
-      .wellco-start,
-      .wellco-routine{
-        padding: 22px 16px;
-      }
-
-      .wellco-btn-row{
-        flex-direction: column;
-      }
-
-      .wellco-btn-main,
-      .wellco-btn-secondary,
-      .wellco-btn{
-        width: 100%;
-      }
-    }
-  </style>
+/* MOBILE */
+@media(max-width:600px){
+  .nv-hero h1{
+    font-size:2rem;
+  }
+}
+</style>
 </head>
 
-<body class="nv-y2k">
+<body>
 
-  <div id="nav-placeholder"></div>
+<div id="nav-placeholder"></div>
 
-  <section class="nv-page-hero">
-    <img
-      src="/images/headers/wellco-header-3.PNG"
-      alt="NeuroVibe WellCo"
-      class="nv-page-header-img"
-      loading="eager"
-      decoding="async"
-    />
-  </section>
+<div class="nv-wrap">
 
-  <main class="nv-page">
-    <div class="nv-wrap">
+<!-- HERO -->
+<section class="nv-hero">
+  <h1>My Wellness Stack 🌿</h1>
+  <p>
+    A simple, realistic wellness routine built for real life —
+    focused on energy, hydration, focus, and balance without overwhelm.
+  </p>
+</section>
 
-      <section class="wellco-section">
-        <h2 class="wellco-title">My Wellness Stack 🌿</h2>
+<!-- FEATURED -->
+<section class="nv-feature">
+  <h2>Start Here ✨</h2>
+  <p>
+    If you're new, keep it simple. These are my core daily foundations.
+  </p>
 
-        <p class="wellco-intro">
-          Welcome to my wellness stack through NeuroVibe WellCo. This is where I share the products
-          I personally use and rotate into my routine for energy, hydration, focus, and everyday support.
-        </p>
+  <div class="nv-list">
+    🌿 Balance (foundation) <br/>
+    💧 Hydrate (daily support) <br/>
+    ⚡ Rush or ☕ Brew (energy & focus)
+  </div>
 
-        <p class="wellco-subcopy">
-          I like keeping things simple, realistic, and easy to fit into real life, so this page is
-          organized more like a daily rhythm than a generic storefront.
-        </p>
+  <div>
+    <a href="https://neurovibewell.bravenlyglobal.com" class="nv-btn primary" target="_blank">
+      Browse Full Collection
+    </a>
 
-        <p class="wellco-disclaimer">
-          Transparency matters to me. Some links on this page are partner links. I only share products
-          I personally use, genuinely enjoy, or feel comfortable recommending as part of a balanced wellness routine.
-        </p>
+    <a href="/start.html" class="nv-btn secondary">
+      Back to Start
+    </a>
+  </div>
+</section>
 
-        <section class="wellco-hero-cta">
-          <h3>Browse My Bravenly Wellness Page</h3>
-          <p>
-            If you already know what you’re looking for, you can head straight to my Bravenly page
-            to browse the full collection and current product lineup.
-          </p>
+<!-- ROUTINE -->
+<section class="nv-section">
+  <h2>Simple Daily Flow</h2>
 
-          <div class="wellco-btn-row">
-            <a
-              href="https://neurovibewell.bravenlyglobal.com"
-              class="wellco-btn-main"
-              target="_blank"
-              rel="noopener sponsored"
-            >
-              Browse the Full Bravenly Collection →
-            </a>
+  <ul class="nv-list">
+    <li>🌿 Morning: Balance</li>
+    <li>☕ Energy: Brew or Rush</li>
+    <li>🔥 Midday: Ignite</li>
+    <li>💧 Hydrate: Throughout day</li>
+    <li>✨ Daily: Gold</li>
+    <li>🌙 Evening: Calm</li>
+  </ul>
+</section>
 
-            <a
-              href="/start.html"
-              class="wellco-btn-secondary"
-            >
-              Back to Start Here
-            </a>
-          </div>
-        </section>
+<!-- PRODUCTS -->
+<section class="nv-section">
+  <h2>Build Your Stack</h2>
 
-        <section class="wellco-start">
-          <h3>New Here? Start Simple ✨</h3>
-          <p>
-            If you’re building a basic routine, I’d start with a few foundation products first and
-            keep it easy. These are great starting points for a simple daily stack:
-          </p>
+  <div class="nv-grid">
 
-          <ul class="wellco-start-list">
-            <li>🌿 Balance for a foundational daily routine</li>
-            <li>💧 Hydrate for hydration and replenishment</li>
-            <li>☕ Brew Extreme or ⚡ Rush for energy and focus support</li>
-          </ul>
-        </section>
-
-        <section class="wellco-routine">
-          <h3>How I Think About a Simple Daily Stack</h3>
-          <p>
-            Many of these products fit best into a repeatable daily rhythm. Here’s one simple way to
-            think about building a wellness stack:
-          </p>
-
-          <ul class="wellco-routine-list">
-            <li>🌿 Morning foundation — Balance</li>
-            <li>☕ Energy + focus — Brew Extreme or Rush</li>
-            <li>🔥 Midday metabolism support — Ignite</li>
-            <li>💧 Hydration + replenishment — Hydrate</li>
-            <li>✨ Daily gut + immune support — Gold</li>
-            <li>🌙 Evening wind-down support — Calm</li>
-          </ul>
-        </section>
-
-        <section class="wellco-stack-group">
-          <div class="wellco-stack-group-head">
-            <h3>Morning Foundation</h3>
-            <p>Start with supportive basics that fit into a steady morning routine.</p>
-          </div>
-
-          <div class="wellco-grid">
-            <div class="wellco-card">
-              <img
-                src="/images/Bravenly/balance-support.PNG"
-                alt="Bravenly Balance Daily Nutrition Support"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-              <h3>Balance 🌿</h3>
-              <p>
-                Balance is one of the easiest places to start if you want a simple foundation product
-                in your daily routine. I think of it as part of the “start here” layer of a wellness stack.
-              </p>
-              <a
-                href="https://neurovibewell.bravenlyglobal.com/bravenly-balance/"
-                class="wellco-btn"
-                target="_blank"
-                rel="noopener sponsored"
-              >
-                Browse Balance
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="wellco-stack-group">
-          <div class="wellco-stack-group-head">
-            <h3>Energy + Focus</h3>
-            <p>For mornings or busy parts of the day when you want support for momentum and routine.</p>
-          </div>
-
-          <div class="wellco-grid">
-            <div class="wellco-card">
-              <img
-                src="/images/Bravenly/brew-extreme.PNG"
-                alt="Bravenly Brew Extreme Nootropic Coffee"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-              <h3>Brew Extreme ☕</h3>
-              <p>
-                Brew Extreme fits naturally into a morning rhythm for people who enjoy coffee and want
-                an option that feels easy to work into their day.
-              </p>
-              <a
-                href="https://neurovibewell.bravenlyglobal.com/brew-extreme/"
-                class="wellco-btn"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Browse Brew Extreme
-              </a>
-            </div>
-
-            <div class="wellco-card">
-              <img
-                src="/images/Bravenly/rush-support.PNG"
-                alt="Bravenly Rush Blue Raspberry Energy Mix"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-              <h3>Bravenly Rush ⚡</h3>
-              <p>
-                A blue raspberry energy drink mix designed to support focus, steady energy,
-                and daily performance.
-              </p>
-              <a
-                href="https://neurovibewell.bravenlyglobal.com/blue-raspberry-rush/"
-                class="wellco-btn"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Browse Bravenly Rush
-              </a>
-            </div>
-
-            <div class="wellco-card">
-              <img
-                src="/images/Bravenly/rush-extreme.PNG"
-                alt="Bravenly Rush Extreme energy support"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-              <h3>Rush Extreme ⚡</h3>
-              <p>
-                Rush Extreme is a stronger energy-and-focus option for people building a more layered
-                daytime wellness stack.
-              </p>
-              <a
-                href="https://neurovibewell.bravenlyglobal.com/bravenly-rush-extreme/"
-                class="wellco-btn"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Browse Rush Extreme
-              </a>
-            </div>
-
-            <div class="wellco-card">
-              <img
-                src="/images/Bravenly/ignite.PNG"
-                alt="Bravenly Ignite metabolism support"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-              <h3>Ignite 🔥</h3>
-              <p>
-                Ignite fits best as part of a daytime routine for people building out a more layered
-                wellness stack.
-              </p>
-              <a
-                href="https://neurovibewell.bravenlyglobal.com/bravenly-ignite/"
-                class="wellco-btn"
-                target="_blank"
-                rel="noopener sponsored nofollow"
-              >
-                Browse Ignite
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="wellco-stack-group">
-          <div class="wellco-stack-group-head">
-            <h3>Hydration + Daily Support</h3>
-            <p>Supportive everyday products that fit into a practical routine.</p>
-          </div>
-
-          <div class="wellco-grid">
-            <div class="wellco-card">
-              <img
-                src="/images/Bravenly/hydrate-support.PNG"
-                alt="Bravenly Hydrate Electrolyte Support"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-              <h3>Hydrate 💧</h3>
-              <p>
-                Hydrate is one of the easiest products to work into a daily routine, especially on busy days
-                when replenishment and consistency matter.
-              </p>
-              <a
-                href="https://neurovibewell.bravenlyglobal.com/hydrate-my/"
-                class="wellco-btn"
-                target="_blank"
-                rel="noopener sponsored"
-              >
-                Browse Hydrate
-              </a>
-            </div>
-
-            <div class="wellco-card">
-              <img
-                src="/images/Bravenly/gold-support.PNG"
-                alt="Bravenly Gold turmeric wellness support"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-              <h3>Gold ✨</h3>
-              <p>
-                Gold fits into the daily support side of a wellness stack and works well for people
-                who want to build a more rounded routine over time.
-              </p>
-              <a
-                href="https://neurovibewell.bravenlyglobal.com/bravenly-gold/"
-                class="wellco-btn"
-                target="_blank"
-                rel="noopener sponsored"
-              >
-                Browse Gold
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="wellco-stack-group">
-          <div class="wellco-stack-group-head">
-            <h3>Evening Wind-Down</h3>
-            <p>A calmer close to the day for people who like having a gentle evening routine.</p>
-          </div>
-
-          <div class="wellco-grid">
-            <div class="wellco-card">
-              <img
-                src="/images/Bravenly/bravenly-calm.PNG"
-                alt="Bravenly Calm stress and mood support"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-              <h3>Calm 🌙</h3>
-              <p>
-                Calm fits naturally into an evening or wind-down routine for people who want a softer,
-                steadier close to the day.
-              </p>
-              <a
-                href="https://neurovibewell.bravenlyglobal.com/bravenly-calm/"
-                class="wellco-btn"
-                target="_blank"
-                rel="noopener sponsored"
-              >
-                Browse Calm
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="wellco-stack-group">
-          <div class="wellco-stack-group-head">
-            <h3>Browse the Full Collection</h3>
-            <p>If you want to see everything in one place, head to my full Bravenly page.</p>
-          </div>
-
-          <div class="wellco-grid">
-            <div class="wellco-card">
-              <img
-                src="/images/Bravenly/IMG_7946.jpeg"
-                alt="NeuroVibe WellCo Bravenly shop preview"
-                loading="lazy"
-                onerror="this.style.display='none';"
-              />
-              <h3>Full Bravenly Wellness Page 🛍️</h3>
-              <p>
-                Browse the full lineup, explore product details, and shop the collection in one place.
-              </p>
-              <a
-                href="https://neurovibewell.bravenlyglobal.com"
-                class="wellco-btn"
-                target="_blank"
-                rel="noopener sponsored"
-              >
-                Visit My Full Bravenly Page
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="nv-ecosystem">
-          <h2>Explore the NeuroVibe Ecosystem</h2>
-          <p class="nv-ecosystem-sub">
-            Different paths for different needs. Explore the areas of NeuroVibe that support you most.
-          </p>
-
-          <div class="nv-ecosystem-grid">
-            <a href="/guides.html" class="nv-eco-card">
-              <h3>📚 Guides</h3>
-              <p>Digital guides for nervous system support and real-life overwhelm.</p>
-            </a>
-
-            <a href="/wellco.html" class="nv-eco-card">
-              <h3>🌿 WellCo</h3>
-              <p>Wellness routines and products that support energy and balance.</p>
-            </a>
-
-            <a href="/beautyhub.html" class="nv-eco-card">
-              <h3>✨ Beauty Hub</h3>
-              <p>Self-care favorites, beauty finds, and curated nail collections.</p>
-            </a>
-
-            <a href="/shop.html" class="nv-eco-card">
-              <h3>🛍️ Shop</h3>
-              <p>Curated tools and products that support calm homes and routines.</p>
-            </a>
-
-            <a href="/ROTM/rhythm-of-the-moon.html" class="nv-eco-card">
-              <h3>🌙 Publishing</h3>
-              <p>Stories and books created through NeuroVibe Publishing.</p>
-            </a>
-          </div>
-        </section>
-      </section>
-
-      <section class="nv-bravenly-cta">
-        <a
-          href="https://neurovibewell.bravenlyglobal.com"
-          target="_blank"
-          rel="noopener sponsored"
-        >
-          <img
-            src="/images/headers/bravenly-cta-banner.PNG"
-            alt="Explore Amanda Carleton's Bravenly wellness page"
-            class="nv-bravenly-banner"
-            loading="lazy"
-            decoding="async"
-          />
-        </a>
-      </section>
-
-      <footer class="footer" style="margin-top:22px;">
-        <p>© <span id="year"></span> NeuroVibe</p>
-      </footer>
-
+    <div class="nv-card">
+      <img src="/images/Bravenly/balance-support.PNG">
+      <h3>Balance</h3>
+      <p>Simple foundation support to start your routine.</p>
+      <a href="https://neurovibewell.bravenlyglobal.com/bravenly-balance/" class="nv-btn primary" target="_blank">Shop</a>
     </div>
-  </main>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <div class="nv-card">
+      <img src="/images/Bravenly/brew-extreme.PNG">
+      <h3>Brew Extreme</h3>
+      <p>Easy morning coffee with focus support.</p>
+      <a href="https://neurovibewell.bravenlyglobal.com/brew-extreme/" class="nv-btn primary" target="_blank">Shop</a>
+    </div>
 
-  <script>
-    fetch("/components/nav.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
+    <div class="nv-card">
+      <img src="/images/Bravenly/rush-support.PNG">
+      <h3>Rush</h3>
+      <p>Energy and focus without the crash feel.</p>
+      <a href="https://neurovibewell.bravenlyglobal.com/blue-raspberry-rush/" class="nv-btn primary" target="_blank">Shop</a>
+    </div>
 
-        const toggle = document.getElementById("nv-menu-toggle");
-        const nav = document.getElementById("nv-nav");
+    <div class="nv-card">
+      <img src="/images/Bravenly/hydrate-support.PNG">
+      <h3>Hydrate</h3>
+      <p>Daily hydration support for busy days.</p>
+      <a href="https://neurovibewell.bravenlyglobal.com/hydrate-my/" class="nv-btn primary" target="_blank">Shop</a>
+    </div>
 
-        if (toggle && nav) {
-          toggle.addEventListener("click", () => {
-            const isOpen = nav.classList.toggle("active");
-            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-          });
+    <div class="nv-card">
+      <img src="/images/Bravenly/gold-support.PNG">
+      <h3>Gold</h3>
+      <p>Daily wellness + immune support layer.</p>
+      <a href="https://neurovibewell.bravenlyglobal.com/bravenly-gold/" class="nv-btn primary" target="_blank">Shop</a>
+    </div>
 
-          document.addEventListener("click", (e) => {
-            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-              nav.classList.remove("active");
-              toggle.setAttribute("aria-expanded", "false");
-            }
-          });
-        }
-      });
-  </script>
+    <div class="nv-card">
+      <img src="/images/Bravenly/bravenly-calm.PNG">
+      <h3>Calm</h3>
+      <p>Evening wind-down support for softer nights.</p>
+      <a href="https://neurovibewell.bravenlyglobal.com/bravenly-calm/" class="nv-btn primary" target="_blank">Shop</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="nv-feature">
+  <h2>See Everything in One Place 🛍️</h2>
+  <p>Browse the full lineup, bundles, and new drops.</p>
+
+  <a href="https://neurovibewell.bravenlyglobal.com" class="nv-btn primary" target="_blank">
+    Visit My Full Page
+  </a>
+</section>
+
+</div>
+
+<script>
+fetch("/components/nav.html")
+.then(res => res.text())
+.then(data => document.getElementById("nav-placeholder").innerHTML = data);
+</script>
+
 </body>
 </html>

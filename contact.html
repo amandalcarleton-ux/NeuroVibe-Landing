@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Contact | NeuroVibe</title>
-  <meta name="description" content="Contact NeuroVibe for questions, partnerships, support, or collaboration." />
+  <meta name="description" content="Contact NeuroVibe for questions, partnerships, support, collaborations, or booking a support session." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://neurovibe.site/contact.html" />
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=103" />
+  <link rel="stylesheet" href="/style.css?v=113" />
 
   <link rel="icon" type="image/png" href="/images/nv-favicon.PNG" />
   <link rel="apple-touch-icon" href="/images/nv-favicon.PNG" />
@@ -16,10 +18,41 @@
   <style>
     *{ box-sizing:border-box; }
 
+    html, body{
+      margin:0;
+      padding:0;
+    }
+
+    body.nv-y2k.contact-spring{
+      font-family:'Poppins',sans-serif;
+      color:#4f3550;
+      background:
+        radial-gradient(circle at top left, rgba(255, 223, 205, 0.96) 0%, transparent 34%),
+        radial-gradient(circle at top right, rgba(255, 198, 214, 0.80) 0%, transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255, 188, 152, 0.34) 0%, transparent 28%),
+        linear-gradient(180deg, #fff8f3 0%, #fff2ed 38%, #ffe9e1 72%, #fff6f1 100%);
+      background-attachment:fixed;
+    }
+
+    #nav-placeholder{
+      width:100%;
+    }
+
     .nv-contact-main{
       max-width:1100px;
       margin:0 auto;
       padding:24px 16px 56px;
+    }
+
+    .nv-contact-hero-shell,
+    .nv-contact-panel,
+    .nv-form-panel,
+    .nv-booking-shell,
+    .nv-booking-card{
+      border:1px solid rgba(255,255,255,0.64);
+      box-shadow:0 18px 42px rgba(128,72,90,0.10);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px);
     }
 
     .nv-contact-hero-shell{
@@ -27,11 +60,8 @@
       padding:22px;
       border-radius:32px;
       background:
-        linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
-        linear-gradient(135deg, rgba(137,104,255,0.28), rgba(126,203,255,0.18));
-      border:1px solid rgba(255,255,255,0.45);
-      box-shadow:0 18px 42px rgba(75,46,131,0.12);
-      backdrop-filter:blur(12px);
+        linear-gradient(135deg, rgba(255,255,255,0.54), rgba(255,255,255,0.24)),
+        linear-gradient(135deg, rgba(255,191,160,0.22), rgba(255,170,192,0.16));
     }
 
     .nv-contact-hero-inner{
@@ -41,22 +71,36 @@
       align-items:center;
     }
 
+    .nv-eyebrow,
+    .nv-contact-label{
+      display:block;
+      margin:0 0 8px;
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#a0626f;
+    }
+
     .nv-contact-copy h1{
       margin:8px 0 12px;
       font-size:clamp(2.1rem, 4.6vw, 3.3rem);
-      color:#101018;
+      line-height:1.1;
+      color:#9b4f5d;
     }
 
     .nv-contact-copy p{
       max-width:60ch;
       line-height:1.75;
-      color:#101018;
+      color:#5d4955;
+      font-size:1.04rem;
     }
 
     .nv-contact-image{
       width:100%;
       border-radius:24px;
-      box-shadow:0 18px 36px rgba(75,46,131,0.16);
+      box-shadow:0 18px 36px rgba(128,72,90,0.14);
+      display:block;
     }
 
     .nv-contact-grid{
@@ -72,13 +116,22 @@
       background:rgba(255,255,255,0.78);
       border-radius:28px;
       padding:26px;
-      box-shadow:0 18px 40px rgba(75,46,131,0.10);
     }
 
     .nv-contact-panel h2,
-    .nv-form-panel h2{
-      margin-bottom:10px;
-      color:#101018;
+    .nv-form-panel h2,
+    .nv-booking-shell h2,
+    .nv-booking-card h3{
+      margin:0 0 10px;
+      color:#9b4f5d;
+    }
+
+    .nv-contact-panel p,
+    .nv-form-panel p,
+    .nv-booking-shell p,
+    .nv-booking-card p{
+      color:#5d4955;
+      line-height:1.7;
     }
 
     .nv-contact-stack{
@@ -91,18 +144,12 @@
       padding:16px;
       border-radius:20px;
       background:rgba(255,255,255,0.88);
-    }
-
-    .nv-contact-label{
-      font-size:.8rem;
-      text-transform:uppercase;
-      color:#6b5cff;
-      font-weight:700;
+      border:1px solid rgba(255,255,255,0.72);
     }
 
     .nv-contact-method a{
-      color:#4b2e83;
-      font-weight:700;
+      color:#9b5361;
+      font-weight:800;
       text-decoration:none;
     }
 
@@ -114,9 +161,26 @@
 
     .nv-contact-form input,
     .nv-contact-form textarea{
+      width:100%;
       border-radius:16px;
       padding:14px;
-      border:1px solid rgba(75,46,131,0.2);
+      border:1px solid rgba(154,83,97,0.20);
+      background:rgba(255,255,255,0.90);
+      color:#4f3550;
+      font-family:inherit;
+      font-size:1rem;
+      outline:none;
+    }
+
+    .nv-contact-form textarea{
+      min-height:150px;
+      resize:vertical;
+    }
+
+    .nv-contact-form input:focus,
+    .nv-contact-form textarea:focus{
+      border-color:rgba(255,143,177,0.75);
+      box-shadow:0 0 0 4px rgba(255,143,177,0.14);
     }
 
     .nv-form-grid{
@@ -130,11 +194,14 @@
       padding:32px;
       border-radius:32px;
       background:
-        linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
-        linear-gradient(135deg, rgba(137,104,255,0.22), rgba(126,203,255,0.14));
-      box-shadow:0 18px 42px rgba(75,46,131,0.12);
-      backdrop-filter:blur(12px);
+        linear-gradient(135deg, rgba(255,255,255,0.58), rgba(255,255,255,0.26)),
+        linear-gradient(135deg, rgba(255,190,172,0.22), rgba(255,193,213,0.18));
       text-align:center;
+    }
+
+    .nv-booking-shell > p{
+      max-width:760px;
+      margin:0 auto;
     }
 
     .nv-booking-grid{
@@ -142,255 +209,271 @@
       grid-template-columns:1fr 1fr;
       gap:20px;
       margin-top:24px;
+      text-align:left;
     }
 
-    .nv-booking-card h3{
-      margin-bottom:10px;
+    .nv-btn,
+    .nv-btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:50px;
+      padding:14px 22px;
+      border-radius:999px;
+      font-weight:800;
+      text-decoration:none;
+      cursor:pointer;
+      transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+      font-family:inherit;
+      font-size:1rem;
+      border:none;
     }
 
     .nv-btn{
-      display:inline-block;
-      padding:12px 18px;
-      border-radius:999px;
-      background:linear-gradient(135deg,#7b61ff,#58c7ff);
-      color:white;
-      font-weight:700;
-      text-decoration:none;
+      background:linear-gradient(135deg, #ff9d7d, #ff8fb1, #ffbd94);
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.34);
+      box-shadow:0 12px 24px rgba(255,143,177,0.22);
     }
 
     .nv-btn-secondary{
-      display:inline-block;
-      padding:12px 18px;
-      border-radius:999px;
-      background:white;
-      color:#4b2e83;
-      border:1px solid rgba(75,46,131,0.2);
-      font-weight:700;
-      text-decoration:none;
+      background:rgba(255,255,255,0.90);
+      color:#9b5361;
+      border:1px solid rgba(255,255,255,0.72);
+      box-shadow:0 10px 24px rgba(148,95,112,0.08);
+    }
+
+    .nv-btn:hover,
+    .nv-btn-secondary:hover{
+      transform:translateY(-2px);
+      opacity:.97;
+    }
+
+    .nv-footer{
+      text-align:center;
+      padding:24px 16px 42px;
+      color:#7a6771;
     }
 
     @media(max-width:920px){
+      .nv-contact-hero-inner,
       .nv-contact-grid,
-      .nv-booking-grid{
-        grid-template-columns:1fr;
-      }
-
+      .nv-booking-grid,
       .nv-form-grid{
         grid-template-columns:1fr;
       }
-    }@media (max-width:920px){
-  .nv-contact-hero-inner,
-  .nv-contact-grid,
-  .nv-booking-grid,
-  .nv-form-grid{
-    grid-template-columns:1fr;
-  }
 
-  .nv-contact-main{
-    padding:18px 12px 40px;
-  }
+      .nv-contact-main{
+        padding:18px 12px 40px;
+      }
 
-  .nv-contact-hero-shell{
-    padding:16px;
-    border-radius:24px;
-  }
+      .nv-contact-hero-shell{
+        padding:16px;
+        border-radius:24px;
+      }
 
-  .nv-contact-hero-inner{
-    gap:18px;
-  }
+      .nv-contact-copy{
+        text-align:center;
+      }
 
-  .nv-contact-copy{
-    text-align:center;
-  }
+      .nv-contact-copy p{
+        max-width:100%;
+      }
 
-  .nv-contact-copy p{
-    max-width:100%;
-  }
+      .nv-contact-panel,
+      .nv-form-panel,
+      .nv-booking-card{
+        padding:20px;
+        border-radius:22px;
+      }
 
-  .nv-contact-image{
-    border-radius:18px;
-  }
+      .nv-booking-shell{
+        margin-top:24px;
+        padding:22px 16px;
+        border-radius:24px;
+      }
 
-  .nv-contact-panel,
-  .nv-form-panel,
-  .nv-booking-card{
-    padding:20px;
-    border-radius:22px;
-  }
+      .nv-btn,
+      .nv-btn-secondary{
+        width:100%;
+        text-align:center;
+      }
 
-  .nv-booking-shell{
-    margin-top:24px;
-    padding:22px 16px;
-    border-radius:24px;
-  }
+      .nv-contact-method a{
+        word-break:break-word;
+      }
+    }
 
-  .nv-btn,
-  .nv-btn-secondary{
-    width:100%;
-    text-align:center;
-  }
+    @media(max-width:560px){
+      .nv-contact-copy h1{
+        font-size:1.95rem;
+      }
 
-  .nv-contact-method a{
-    word-break:break-word;
-  }
-}
+      .nv-contact-copy p{
+        font-size:.98rem;
+      }
 
-@media (max-width:560px){
-  .nv-contact-copy h1{
-    font-size:1.9rem;
-    line-height:1.1;
-  }
-
-  .nv-contact-copy p{
-    font-size:.98rem;
-    line-height:1.65;
-  }
-
-  .nv-contact-method{
-    padding:14px;
-  }
-
-  .nv-contact-form input,
-  .nv-contact-form textarea{
-    padding:13px;
-    font-size:16px;
-  }
-}
+      .nv-contact-form input,
+      .nv-contact-form textarea{
+        font-size:16px;
+      }
+    }
   </style>
 </head>
 
-<body class="nv-y2k">
+<body class="nv-y2k contact-spring">
 
-<div id="nav-placeholder"></div>
+  <div id="nav-placeholder"></div>
 
-<main class="nv-contact-main">
+  <main class="nv-contact-main">
 
-  <!-- HERO -->
-  <section class="nv-contact-hero-shell">
-    <div class="nv-contact-hero-inner">
-      <div class="nv-contact-copy">
-        <p class="nv-eyebrow">NEUROVIBE</p>
-        <h1>Contact & Connect</h1>
-        <p>
-          Whether you’re reaching out for support, collaboration,
-          or just a place to start — you’re welcome here.
-        </p>
-      </div>
-      <img src="/images/contact-header.PNG" class="nv-contact-image">
-    </div>
-  </section>
-
-  <!-- CONTACT GRID -->
-  <section class="nv-contact-grid">
-
-    <div class="nv-contact-panel">
-      <h2>Let’s connect</h2>
-
-      <div class="nv-contact-stack">
-        <div class="nv-contact-method">
-          <span class="nv-contact-label">Email</span>
-          <a href="mailto:hello@neurovibe.site">hello@neurovibe.site</a>
+    <section class="nv-contact-hero-shell">
+      <div class="nv-contact-hero-inner">
+        <div class="nv-contact-copy">
+          <p class="nv-eyebrow">NeuroVibe</p>
+          <h1>Contact &amp; Connect</h1>
+          <p>
+            Whether you’re reaching out for support, collaboration, partnership questions,
+            or just a place to start — you’re welcome here.
+          </p>
         </div>
 
-        <div class="nv-contact-method">
-          <span class="nv-contact-label">Business Line</span>
-          <a href="tel:+17812777137">(781) 277-7137</a>
-        </div>
+        <img
+          src="/images/contact-header.PNG"
+          alt="Contact NeuroVibe"
+          class="nv-contact-image"
+          loading="eager"
+          onerror="this.style.display='none';"
+        />
       </div>
-    </div>
+    </section>
 
-    <div class="nv-form-panel">
-      <h2>Send a message</h2>
-
-      <form action="https://formsubmit.co/hello@neurovibe.site" method="POST" class="nv-contact-form">
-        <div class="nv-form-grid">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="email" name="email" placeholder="Email" required />
-        </div>
-
-        <input type="text" name="subject" placeholder="Subject" />
-        <textarea name="message" placeholder="Message..." required></textarea>
-
-        <button class="nv-btn">Send Message</button>
-      </form>
-    </div>
-
-  </section>
-
-  <!-- BOOKING -->
-  <section class="nv-booking-shell">
-
-    <h2>Choose your booking path</h2>
-
-    <p>
-      This space supports both NeuroVibe sessions and Maine Parent Federation consultations.
-      Choose what fits your needs — and we’ll go from there.
-    </p>
-
-    <div class="nv-booking-grid">
-
-      <!-- NEUROVIBE -->
-      <div class="nv-booking-card">
-        <h3>🌿 NeuroVibe Support Session</h3>
+    <section class="nv-contact-grid">
+      <div class="nv-contact-panel">
+        <h2>Let’s connect</h2>
         <p>
-          Gentle support for overwhelmed moms navigating real-life challenges,
-          emotional regulation, and daily resets.
+          Use the options below for questions, partnerships, support, or collaboration.
         </p>
 
-        <a class="nv-btn"
-          href="https://calendly.com/amandalcarleton/neurovibe-support-session"
-          target="_blank">
-          Book NeuroVibe Session
-        </a>
+        <div class="nv-contact-stack">
+          <div class="nv-contact-method">
+            <span class="nv-contact-label">Email</span>
+            <a href="mailto:hello@neurovibe.site">hello@neurovibe.site</a>
+          </div>
+
+          <div class="nv-contact-method">
+            <span class="nv-contact-label">Business Line</span>
+            <a href="tel:+17812777137">(781) 277-7137</a>
+          </div>
+        </div>
       </div>
 
-      <!-- MPF -->
-      <div class="nv-booking-card">
-        <h3>📋 MPF Parent Consultation</h3>
+      <div class="nv-form-panel">
+        <h2>Send a message</h2>
         <p>
-          Parent support through Maine Parent Federation focused on advocacy,
-          school concerns, and navigating services.
+          Share a quick note and I’ll know where to start.
         </p>
 
-        <a class="nv-btn-secondary"
-          href="https://calendly.com/amandalcarleton/mpf-parent-consultation"
-          target="_blank">
-          Book MPF Consultation
-        </a>
+        <form action="https://formsubmit.co/hello@neurovibe.site" method="POST" class="nv-contact-form">
+          <input type="hidden" name="_subject" value="New NeuroVibe contact form message" />
+          <input type="hidden" name="_captcha" value="false" />
+
+          <div class="nv-form-grid">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+
+          <input type="text" name="subject" placeholder="Subject" />
+          <textarea name="message" placeholder="Message..." required></textarea>
+
+          <button type="submit" class="nv-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="nv-booking-shell">
+      <h2>Choose your booking path</h2>
+
+      <p>
+        This space supports both NeuroVibe sessions and Maine Parent Federation consultations.
+        Choose what fits your needs — and we’ll go from there.
+      </p>
+
+      <div class="nv-booking-grid">
+        <div class="nv-booking-card">
+          <h3>NeuroVibe Support Session</h3>
+          <p>
+            Gentle support for overwhelmed moms navigating real-life challenges,
+            emotional regulation, executive function, and daily resets.
+          </p>
+
+          <a
+            class="nv-btn"
+            href="https://calendly.com/amandalcarleton/neurovibe-support-session"
+            target="_blank"
+            rel="noopener"
+          >
+            Book NeuroVibe Session
+          </a>
+        </div>
+
+        <div class="nv-booking-card">
+          <h3>MPF Parent Consultation</h3>
+          <p>
+            Parent support through Maine Parent Federation focused on advocacy,
+            school concerns, services, and navigating next steps.
+          </p>
+
+          <a
+            class="nv-btn-secondary"
+            href="https://calendly.com/amandalcarleton/mpf-parent-consultation"
+            target="_blank"
+            rel="noopener"
+          >
+            Book MPF Consultation
+          </a>
+        </div>
       </div>
 
-    </div>
+      <p style="margin-top:22px;">
+        You don’t need to prepare anything — just choose what fits and come as you are.
+      </p>
+    </section>
 
-    <p style="margin-top:20px;">
-      You don’t need to prepare anything — just choose what fits and come as you are 🌿
-    </p>
+  </main>
 
-  </section>
+  <footer class="nv-footer">
+    <p>© <span id="year"></span> NeuroVibe</p>
+  </footer>
 
-</main>
-<script>
-fetch("/components/nav.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("nav-placeholder").innerHTML = data;
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
-    const toggle = document.getElementById("nv-menu-toggle");
-    const nav = document.getElementById("nv-nav");
+  <script>
+    fetch("/components/nav.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-    if (toggle && nav) {
-      toggle.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("active");
-        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      });
+        const toggle = document.getElementById("nv-menu-toggle");
+        const nav = document.getElementById("nv-nav");
 
-      document.addEventListener("click", (e) => {
-        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
-          nav.classList.remove("active");
-          toggle.setAttribute("aria-expanded","false");
+        if (toggle && nav) {
+          toggle.addEventListener("click", () => {
+            const isOpen = nav.classList.toggle("active");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+              nav.classList.remove("active");
+              toggle.setAttribute("aria-expanded", "false");
+            }
+          });
         }
-      });
-    }
-  });
-</script>
+      })
+      .catch(err => console.error("Nav load error:", err));
+  </script>
 </body>
 </html>

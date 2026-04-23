@@ -2298,3 +2298,181 @@ color:#4b2e83;
 margin:0;
 line-height:1.6;
 }
+/* =========================
+   SHOP PAGE — SPRING OVERRIDE
+   Add near bottom of style.css
+   ========================= */
+
+body.nv-y2k.shop-page{
+  background:
+    radial-gradient(circle at top left, rgba(255, 219, 201, 0.95) 0%, transparent 34%),
+    radial-gradient(circle at top right, rgba(255, 197, 213, 0.82) 0%, transparent 30%),
+    radial-gradient(circle at bottom left, rgba(255, 186, 150, 0.38) 0%, transparent 28%),
+    linear-gradient(180deg, #fff8f3 0%, #fff1eb 38%, #ffe7e0 72%, #fff6f1 100%);
+  background-attachment: fixed;
+}
+
+/* optional page-width wrapper if needed */
+.shop-page .nv-shop-main{
+  padding-bottom: 64px;
+}
+
+/* hero */
+.shop-page .nv-shop-home-hero{
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 34px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.34), rgba(255,255,255,0.16)),
+    linear-gradient(135deg, rgba(255,191,160,0.24), rgba(255,170,192,0.18));
+  border: 1px solid rgba(255,255,255,0.55);
+  box-shadow: 0 18px 42px rgba(128, 72, 90, 0.10);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.shop-page .nv-shop-home-btn.primary,
+.shop-page .nv-btn.primary,
+.shop-page .nv-btn.nv-btn-primary,
+.shop-page .nv-diane-btn,
+.shop-page .nv-view-btn{
+  color: #fff;
+  background: linear-gradient(135deg, #ff9d7d, #ff8fb1, #ffbd94);
+  border: 1px solid rgba(255,255,255,0.32);
+  box-shadow: 0 12px 26px rgba(255,143,177,0.22);
+}
+
+.shop-page .nv-shop-home-btn.secondary,
+.shop-page .nv-btn.ghost{
+  color: #9b5361;
+  background: rgba(255,255,255,0.84);
+  border: 1px solid rgba(255,255,255,0.72);
+  box-shadow: 0 10px 24px rgba(148,95,112,0.08);
+}
+
+/* intro / cards / sections */
+.shop-page .nv-section-card,
+.shop-page .nv-shop-section,
+.shop-page .nv-preview-section,
+.shop-page .nv-kleo-section,
+.shop-page .nv-rb-section,
+.shop-page .nv-freebie-section,
+.shop-page .nv-shop-footer{
+  border: 1px solid rgba(255,255,255,0.62);
+  box-shadow: 0 18px 42px rgba(128, 72, 90, 0.10);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.shop-page .nv-section-card{
+  background: rgba(255,255,255,0.76);
+  border-radius: 30px;
+}
+
+.shop-page .nv-shop-section,
+.shop-page .nv-preview-section{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.58), rgba(255,255,255,0.24)),
+    linear-gradient(135deg, rgba(255,190,172,0.22), rgba(255,193,213,0.18));
+  border-radius: 32px;
+}
+
+.shop-page .nv-kleo-section{
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.32), transparent 36%),
+    linear-gradient(135deg, rgba(255,233,241,0.96) 0%, rgba(255,241,232,0.92) 100%);
+  border-radius: 32px;
+}
+
+.shop-page .nv-rb-section{
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.34), transparent 36%),
+    linear-gradient(135deg, rgba(255,245,239,0.97) 0%, rgba(255,232,224,0.95) 50%, rgba(255,239,232,0.92) 100%);
+  border-radius: 32px;
+}
+
+.shop-page .nv-freebie-section{
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.20), rgba(255,255,255,0.10)),
+    linear-gradient(135deg, #ffb292 0%, #ff9eb3 52%, #ffd0a6 100%);
+  border-radius: 30px;
+  text-align: center;
+}
+
+/* headings + copy */
+.shop-page .nv-shop-intro h1,
+.shop-page .nv-section-head h2,
+.shop-page .nv-style-intro h2,
+.shop-page .nv-freebie-section h2{
+  color: #9e4e5e;
+}
+
+.shop-page .nv-shop-intro p,
+.shop-page .nv-section-head p,
+.shop-page .nv-style-intro p,
+.shop-page .nv-mom-intro,
+.shop-page .nv-freebie-section p,
+.shop-page .nv-card-text,
+.shop-page .nv-card-note{
+  color: #5d4955;
+}
+
+.shop-page .nv-shop-update{
+  background: rgba(255,255,255,0.74);
+  border: 1px solid rgba(255,255,255,0.65);
+  color: #644b57;
+  box-shadow: 0 10px 24px rgba(148,95,112,0.06);
+}
+
+.shop-page .nv-shop-update strong{
+  color: #a15465;
+}
+
+.shop-page .nv-shop-nav a{
+  color: #a15465;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.70);
+  box-shadow: 0 8px 18px rgba(148,95,112,0.06);
+}
+
+/* cards */
+.shop-page .nv-path-card,
+.shop-page .nv-curated-card,
+.shop-page .nv-lane-card,
+.shop-page .nv-product-card{
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(255,255,255,0.75);
+  box-shadow: 0 14px 30px rgba(128,72,90,0.08);
+}
+
+.shop-page .nv-card-title{
+  color: #9b4f5d;
+}
+
+.shop-page .nv-featured-badge{
+  color: #a35764;
+  background: rgba(255, 208, 198, 0.52);
+}
+
+.shop-page .nv-card-media{
+  background: linear-gradient(135deg, rgba(255,225,214,0.26), rgba(255,208,224,0.22));
+}
+
+.shop-page .nv-card-media img{
+  background: rgba(255,255,255,0.45);
+  box-shadow: 0 10px 24px rgba(128,72,90,0.08);
+}
+
+/* footer */
+.shop-page .nv-shop-footer{
+  background: rgba(255,255,255,0.76);
+  border-radius: 30px;
+}
+
+.shop-page .nv-footer-text{
+  color: #9a4f5d;
+}
+
+.shop-page .nv-footer-mini{
+  color: #7a6771;
+}
